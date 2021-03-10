@@ -4212,6 +4212,15 @@ TASKRAY__trOnboardingEndDate__c - TASKRAY__trOnboardingStartDate__c)</formula>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>copado_test_checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>copado test checkbox</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>dba__c</fullName>
         <caseSensitive>false</caseSensitive>
         <description>Doing business as</description>
