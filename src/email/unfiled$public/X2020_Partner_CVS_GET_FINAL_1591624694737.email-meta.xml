@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>letter to CVS clients announcing new 2021 program enhancements</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Partner_CVS_GET_Option 1</name>
+    <style>none</style>
+    <subject>Supporting [ACCOUNT NAME] employees who rely on Livongo</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

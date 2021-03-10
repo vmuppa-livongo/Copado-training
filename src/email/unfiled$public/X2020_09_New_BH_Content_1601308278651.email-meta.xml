@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>September New Behavioral Health Content email template to be leveraged for outreach to Clients by CSMs. Items in blue text are flyers pending Arena Approval.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_September New BH Content</name>
+    <style>none</style>
+    <subject>New behavioral health content from myStrength by Livongo</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

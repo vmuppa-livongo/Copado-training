@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>32.0</apiVersion>
+    <description>Shared component to handle creation of the TinderBox Document/Proposal from Salesforce1/mobile app.</description>
+    <label>Mobile Create Document</label>
+</ApexComponent>

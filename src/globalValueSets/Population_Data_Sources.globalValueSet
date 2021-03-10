@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Claims</fullName>
+        <default>false</default>
+        <label>Medical Claims</label>
+    </customValue>
+    <customValue>
+        <fullName>Pharmacy Claims</fullName>
+        <default>false</default>
+        <label>Pharmacy Claims</label>
+    </customValue>
+    <customValue>
+        <fullName>Eligibility File</fullName>
+        <default>false</default>
+        <label>Eligibility File</label>
+    </customValue>
+    <customValue>
+        <fullName>Predefined List from Pharmacy Claims</fullName>
+        <default>false</default>
+        <label>Predefined List from Pharmacy Claims</label>
+    </customValue>
+    <customValue>
+        <fullName>Predefined List from Medical Claims</fullName>
+        <default>false</default>
+        <label>Predefined List from Medical Claims</label>
+    </customValue>
+    <customValue>
+        <fullName>Predefined List from HRA</fullName>
+        <default>false</default>
+        <label>Predefined List from HRA</label>
+    </customValue>
+    <customValue>
+        <fullName>Predefined List from Biometric</fullName>
+        <default>false</default>
+        <label>Predefined List from Biometric</label>
+    </customValue>
+    <customValue>
+        <fullName>Predefined List from EMR</fullName>
+        <default>false</default>
+        <label>Predefined List from EMR</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A - No Livongo Marketing</fullName>
+        <default>false</default>
+        <label>N/A - No Livongo Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Census</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Census</label>
+    </customValue>
+    <customValue>
+        <fullName>Payer Claims</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Payer Claims</label>
+    </customValue>
+    <customValue>
+        <fullName>PBM Claims</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PBM Claims</label>
+    </customValue>
+    <customValue>
+        <fullName>Predefined List</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Predefined List</label>
+    </customValue>
+    <customValue>
+        <fullName>ESI Predefined List - PBM Rx only</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ESI Predefined List - PBM Rx only</label>
+    </customValue>
+    <customValue>
+        <fullName>ESI Predefined List - PBM Rx and Rational Med</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ESI Predefined List - PBM Rx and Rational Med</label>
+    </customValue>
+    <customValue>
+        <fullName>Biometric</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Biometric</label>
+    </customValue>
+    <customValue>
+        <fullName>EMR</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EMR</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct to Consumer (D2C)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Direct to Consumer (D2C)</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A - Client Managed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>N/A - Client Managed</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A - Study</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>N/A - Study</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A - No direct Marketing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>N/A - No direct Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>EMR / Biometric / HRA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EMR / Biometric / HRA</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Clearinghouse</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Data Clearinghouse</label>
+    </customValue>
+    <customValue>
+        <fullName>Eligibility File - Ongoing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Eligibility File - Ongoing</label>
+    </customValue>
+    <masterLabel>Population Data Sources</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

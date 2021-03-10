@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>General Sales_JMac</name>
+    <style>freeForm</style>
+    <subject>Important update from Livongo</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+As a professional managing a large employee population, you are keenly aware of the extremely high and growing cost of diabetes in your organization.  This is where we can help you!
+
+Livongo is a digital health company providing a innovative program designed to empower people with diabetes to live better.  Our offering will result in {!Account.Name} not only saving money, but will provide a better, world class service to your employees.
+
+There is no upfront investment and likely comparable to what you are paying today…….and your employees get unlimited strips.....Here is how it works:
+
+We use the industry’s first interactive, cellular-enabled blood glucose meter. We’ve turned the typical “dumb” glucometer into a smart device that doesn’t rely on wired or Bluetooth-based data uploads.   Our smart cloud captures information (numbers, behavior, activity), analyzes it in combination with other data about the individual, and provides that information in real-time to your employees care team – the person, the caretakers, physicians and the care managers.
+
+Our Smart Cloud also sends data to our Certified Diabetes Educators (CDE&apos;s).  Your employees will have direct 24/7/365 access to knowledgeable and friendly Certified Diabetes Educators who listen, motivate, and guide them on how to manage their disease more effectively.  These CDE&apos;s will call within 60-90 seconds if a reading is dangerously low/high-Providing a real time safety net.
+
+If you would like to learn more please do not hesitate to call or email at the contact information below.
+
+My very best regards,
+
+JASON MACALEER
+Vice President, Mid-Atlantic
+Livongo
+o: 267.324.5802 m: 610.724.8266
+e: jmacaleer@livongo.com
+a: 1804 Green Street, Philadelphia, PA 19130
+www.livongo.com
+The information contained in this transmission is confidential (including any attachments) and contains privileged information. It is intended only for the use of the person(s) named above. If you are not the intended recipient, you are hereby notified that any review, dissemination, distribution or duplication of this communication is strictly prohibited. If you are not the intended recipient, please contact the sender by reply email and destroy all copies of the original message. To reply to our email administrator directly, please send an email to admin@livongo.com.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

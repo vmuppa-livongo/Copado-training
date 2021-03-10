@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission allows a user to share board filters with other users.</description>
+    <isLicensed>false</isLicensed>
+    <label>Share Board Filters</label>
+</CustomPermission>

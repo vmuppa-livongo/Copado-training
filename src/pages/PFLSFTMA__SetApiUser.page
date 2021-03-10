@@ -1,0 +1,15 @@
+<apex:page standardController="User">
+  <script type="text/javascript" src="/canvas/sdk/js/32.0/controller.js"></script>
+  <script type="text/javascript" src="/soap/ajax/32.0/connection.js"></script>
+  <script type="text/javascript">
+                    Sfdc.canvas.controller.subscribe({
+                        name : 'PFLSFTMA.apiNavigation',
+                        onData : function (payload) {
+                                
+                                    window.top.location = payload.instanceUrl + '/apex/TMA_Tools';
+                                
+                        }
+                    });
+  </script>
+  <!-- <apex:canvasApp applicationName="{!$Setup.TMA_Constants__c.Canvas_App_Name__c}" entityFields="Id" parameters="{type:'apiuser'}" width="100%"/> -->
+</apex:page>

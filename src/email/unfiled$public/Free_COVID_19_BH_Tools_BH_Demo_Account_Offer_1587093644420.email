@@ -1,0 +1,22 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <meta content="text/html; charset=utf-8" /> 
+  <meta content="OneNote.File" name="ProgId" /> 
+  <meta content="Microsoft OneNote 15" name="Generator" /> 
+  <p style="font-family:Arial;font-size:11.0pt"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">Hi {{{Recipient.FirstName}}},</span></span></span></p> 
+  <p style="font-family:Arial;font-size:11.0pt"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">For many of us, distance learning, video conferencing, live streaming, and telehealth are the new normal in our contact-free world. While technology can help us feel a sense of normalcy, physical isolation can have long-term effects on our mental wellness. Research shows that loneliness and isolation impacts </span></span></span><a href="https://www.ahip.org/covid-19-addressing-loneliness-during-social-distancing/">all age groups</a> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"> and can be <a href="https://www.hrsa.gov/enews/past-issues/2019/january-17/loneliness-epidemic">as harmful as smoking 15 cigarettes a day</a> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">.</span></span></span></span></span></span></p> 
+  <p style="font-family:Arial;font-size:11.0pt"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">At Livongo, we empower people living with chronic conditions to live better and healthier lives, and in this time of crisis, <b>we’re proud to extend COVID-19 Mental Wellness resources – at no cost. </b>Based on timely clinical research, Member feedback, and analysis of Livongo Coaching interactions, the evidence-based tools offer strategies to manage heightened stress, parenting, social isolation, emotional wellness and more. We invite you to try these stigma-free web and mobile tools, built to foster long-term resilience, all in the privacy and safety of home:</span></span></span></p> 
+  <ul> 
+   <li style="margin: 0in; font-family: Arial; font-size: 11pt;"><a href="https://app.mystrength.com/act/coping_skills_during_the_covid19_pandemic/intro?o=covid19support&amp;pc=covid19support">Coping Skills During COVID-19</a></li> 
+   <li style="margin: 0in; font-family: Arial; font-size: 11pt; color: black;"><a href="https://app.mystrength.com/act/inner_calm_in_turbulent_times/intro?o=covid19support&amp;pc=covid19support"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="background:white">Inner Calm in Turbulent Times</span></span></span></a></li> 
+  </ul> 
+  <p style="font-family:Arial;font-size:11.0pt"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">Livongo for Behavioral Health (powered by myStrength) is a comprehensive behavioral health platform with proven support for depression, anxiety, stress, substance use, tobacco recovery, sleep, chronic pain, and more. We deliver precision digital behavioral health and live Coaching support that’s personalized and clinically-proven to drive rapid symptom reduction and improved clinical outcomes, while extending much-needed access to in-the-moment, cost-effective care.</span></span></span></p> 
+  <p style="font-family:Arial;font-size:11.0pt"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Please let me know if you're interested in extending the COVID-19 tools to your population or organization at no cost, and if I can set up a free demo account for you to explore our comprehensive suite of behavioral health resources.</span></span></p> 
+  <p><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Stay Healthy,</span></span></p> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}</span></span> 
+  <p><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.Signature}}}</span></span></p>
+ </body>
+</html>

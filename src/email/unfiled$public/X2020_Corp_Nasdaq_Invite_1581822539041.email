@@ -1,0 +1,20 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hello&nbsp;{{{Recipient.FirstName}}},</span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Join Livongo at the NASDAQ!<br /> <br /> This exclusive event will take place at the NASDAQ, a venue that is available to visit by invitation only, and we would love to see you there. We are excited for you to experience our solutions first-hand and see how Livongo works with our partners to empower people living with chronic conditions to live better and healthier lives. Drop by to socialize with industry peers, enjoy the fabulous view, delicious food, and a refreshing drink. We look forward to an engaging evening together.<br /> <br /> <b>Where</b>: <span style="text-align: left; color: rgb(0, 0, 0); text-transform: none; line-height: 1; text-indent: 0px; letter-spacing: 0.5px; font-style: inherit; font-variant: inherit; font-weight: 400; text-decoration: none; word-spacing: 0px; display: inline !important; white-space: normal; orphans: 2; font-size-adjust: none; font-stretch: inherit; float: none; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">NASDAQ MarketSite, 4 Times Square New York, 10th Floor</span><br /> <b>When</b>: Wednesday March 11, 2020<br /> <b>Time</b>: 6:00 - 8:00 PM<br /> <b>Dress:</b> Business Casual</span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Please RSVP </span></span> 
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdteznCDBj6EnfE-dkqXStdjwsyZnzU417rhi05M_RyQ61GXA/viewform?usp=sf_link"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">here</span></span></a> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">by Friday March 6, 2020. If you have questions, please feel free to reach out directly. We look forward to seeing you there.<br /> <br /> Best,<br /> {{{Sender.FirstName}}}</span></span> 
+  <br /> 
+  <br /> 
+  <br /> &nbsp;
+ </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>billing@livongo.com</email>
+    <name>Billing Unassigned</name>
+    <queueMembers>
+        <users>
+            <user>mvandenberg@livongo.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>TASKRAY__Project_Task__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>TASKRAY__Project__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>TASKRAY__trChecklistGroup__c</sobjectType>
+    </queueSobject>
+</Queue>

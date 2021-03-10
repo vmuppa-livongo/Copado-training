@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Tea Campaign_090617</name>
+    <style>freeForm</style>
+    <subject>Following up on the Livongo Tea Package</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I hope this note finds you well and you&apos;re settling into your post-Labor Day routine.
+
+I wanted to quickly check in to see if you received the tea package I sent your way?
+
+I hope all is well at {!Account.Name} and I hope to connect with you soon to discuss the possibility of offering Livongo to your employees with diabetes.
+
+Do you have a few minutes to connect over the next few weeks?
+
+Kind regards,
+
+ADAM CLAYPOOL
+Director of Commercial Operations
+Livongo
+m: 314.346.2964 o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Suite 2880, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

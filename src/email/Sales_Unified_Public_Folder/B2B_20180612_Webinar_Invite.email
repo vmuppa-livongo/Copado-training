@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" >
+<head>
+<!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml><![endif]-->
+<title>Livongo Webinars</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+      @font-face {
+        font-family: "TradeGothicLTPro";
+        src: url("http://www.livongo.com/fonts/TradeGothicLTPro.eot");
+        src: url("http://www.livongo.com/fonts/TradeGothicLTPro.eot?#iefix") format("embedded-opentype"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro.woff2") format("woff2"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro.woff") format("woff"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro.ttf") format("truetype"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro.svg#pf_din_text_cond_prolight") format("svg");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "TradeGothicLTPro";
+        src: url("http://www.livongo.com/fonts/TradeGothicLTPro-Light.eot");
+        src: url("http://www.livongo.com/fonts/TradeGothicLTPro-Light.eot?#iefix") format("embedded-opentype"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Light.woff2") format("woff2"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Light.woff") format("woff"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Light.ttf") format("truetype"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Light.svg#pf_din_text_cond_prolight") format("svg");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "TradeGothicLTPro";
+        src: url("http://www.livongo.com/fonts/TradeGothicLTPro-Bold.eot");
+        src: url("http://www.livongo.com/fonts/TradeGothicLTPro-Bold.eot?#iefix") format("embedded-opentype"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Bold.woff2") format("woff2"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Bold.woff") format("woff"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Bold.ttf") format("truetype"),
+        url("http://www.livongo.com/fonts/TradeGothicLTPro-Bold.svg#pf_din_text_cond_prolight") format("svg");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      a {
+        outline: none;
+        color: #fa5151;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        text-decoration: none !important;
+      }
+
+      .h-u a {
+        text-decoration: none;
+      }
+
+      .h-u a:hover {
+        text-decoration: underline !important;
+      }
+
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      a[href^="tel"]:hover {
+        text-decoration: none !important;
+      }
+
+      .active-i a:hover,
+      .active-t:hover {
+        opacity: 0.8;
+      }
+
+      .active-i a,
+      .active-t,
+      .btn-01 {
+        transition: all 0.3s ease;
+      }
+
+      a img {
+        border: none;
+      }
+
+      th {
+        padding: 0;
+      }
+
+      table td {
+        mso-line-height-rule: exactly;
+      }
+
+      ul {
+        Margin: 0 0 0 20px;
+        padding: 0;
+      }
+
+      .btn-01:hover {
+        background-color: #e8e7e6 !important;
+      }
+
+      @media only screen and (max-width: 375px) and (min-width: 374px) {
+        .gmail-fix {
+          min-width: 374px !important;
+        }
+      }
+
+      @media only screen and (max-width: 414px) and (min-width: 413px) {
+        .gmail-fix {
+          min-width: 413px !important;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        /* default style */
+        .flexible {
+          width: 100% !important;
+        }
+
+        .img-flex img {
+          width: 100% !important;
+          height: auto !important;
+        }
+
+        .table-holder {
+          display: table !important;
+          width: 100% !important;
+        }
+
+        .thead {
+          display: table-header-group !important;
+          width: 100% !important;
+        }
+
+        .tfoot {
+          display: table-footer-group !important;
+          width: 100% !important;
+        }
+
+        .tflex {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .hide {
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+          padding: 0 !important;
+          font-size: 0 !important;
+          line-height: 0 !important;
+        }
+
+        .p-0 {
+          padding: 0 !important;
+        }
+
+        .p-10 {
+          padding: 15px 10px !important;
+        }
+
+        .p-20 {
+          padding: 20px !important;
+        }
+
+        .p-25 {
+          padding: 25px !important;
+        }
+
+        .p-30 {
+          padding: 30px !important;
+        }
+
+        .plr-10 {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+
+        .plr-15 {
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+        }
+
+        .plr-20 {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+
+        .pt-20 {
+          padding-top: 20px !important;
+        }
+
+        .pt-25 {
+          padding-top: 25px !important;
+        }
+
+        .pb-15 {
+          padding-bottom: 15px !important;
+        }
+
+        .pb-20 {
+          padding-bottom: 20px !important;
+        }
+
+        .pb-25 {
+          padding-bottom: 25px !important;
+        }
+
+        .pb-30 {
+          padding-bottom: 30px !important;
+        }
+
+        /* custom style */
+        .bg-01 {
+          display: block !important;
+          width: 100% !important;
+          background: #f2f2f2 !important;
+        }
+
+        .aligncenter {
+          text-align: center !important;
+        }
+
+        .text-01 {
+          font-size: 26px !important;
+          line-height: 34px !important;
+        }
+
+        .text-02 {
+          font-size: 16px !important;
+          line-height: 22px !important;
+        }
+
+        .holder-01 {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+
+        .holder-02 {
+          padding: 15px 10px !important;
+        }
+
+        .logo1 img {
+          width: 100px !important;
+          height: auto !important;
+        }
+
+        .logo2 img {
+          width: 130px !important;
+          height: auto !important;
+        }
+
+        .h-0 {
+          height: 0 !important;
+        }
+
+        .nmb {
+          padding: 0 0 10px !important;
+        }
+
+        .nmb td {
+          text-align: center !important;
+          font-size: 20px !important;
+          line-height: 26px !important;
+          height: 50px !important;
+          width: 50px !important;
+          display: table-cell !important;
+        }
+
+        .pb-20 {
+          padding-bottom: 20px !important;
+        }
+
+        .fs-22 {
+          font-size: 22px !important;
+          line-height: 28px !important;
+        }
+
+        .fs-18 {
+          font-size: 18px !important;
+          line-height: 22px !important;
+        }
+
+        .fs-16 {
+          font-size: 16px !important;
+          line-height: 22px !important;
+        }
+
+        .h-10 {
+          height: 10px !important;
+        }
+
+        .tc {
+          margin: 0 auto !important;
+          float: none !important;
+        }
+
+      }
+</style>
+</head>
+<body bgcolor="#FFFFFF" style="margin:0; padding:0; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; " ><table class="gmail-fix" bgcolor="#FFFFFF" width="100%" style="min-width:320px; " cellspacing="0" cellpadding="0" ><tr ><td style="display:none; font-size:0; line-height:0; " ><div class="mktEditable" id="Preheader" style="color:#ffffff; font-size:1px; " >&nbsp;</div>
+<!-- Preheader --></td>
+</tr>
+<tr ><td ><table class="flexible" width="700" align="center" style="margin:0 auto; " cellpadding="0" cellspacing="0" ><tr ><td bgcolor="#FFFFFF" ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td class="p-10" style="padding:20px 40px 0px; " ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td ><div class="mktEditable" id="Logo" ><img src="http://image.email.livongo.com/lib/fe8c13727267057b7c/m/2/livongo-logo-3x.png" style="vertical-align:top; width:140px; height: auto;" border="0" width="140" alt="Livongo"></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td class="plr-10" style="padding:10px 40px 10px; " ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td class="pb-10 aligncenter" style="font:bold 29px/34px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#0060f8; padding:0 0 15px; " ><div class="mktEditable" id="Webinar-Title" style="font:bold 29px/34px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#0060f8; " ><p style="margin-bottom: 1em; font-size: 20px; line-height: 22px; text-align: center;">Personalized experiences using data science deliver positive health outcomes, lower costs, and help people thrive.</p></div>
+</td>
+</tr>
+<tr ><td class="img-flex pb-30" style="padding:0 0 40px; " ><div class="mktEditable" id="Banner" ><p><a href="https://zoom.us/webinar/register/WN_W8ugc1GtTfGuuLyLFbKqdg" target="_blank"><img src="http://start.retrofitme.com/rs/974-XEZ-058/images/header-wbn20180612.jpg" style="vertical-align: top; height: auto; width: 620px;" border="0" width="620" alt="Register Now: How Data Science Drives Personalized Healthcare" height="354" constrain="true" imagepreview="false" /></a></p></div>
+</td>
+</tr>
+<tr ><td class="fs-16 pb-30" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; padding:0 0 40px; " ><div class="mktEditable" id="Body" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " ><p style="margin-bottom: 1em;">How amazing would it&nbsp;be&nbsp;if&nbsp;each person&rsquo;s healthcare experience could be&nbsp;personalized to&nbsp;exactly what they need when they need it&nbsp;to&nbsp;optimize their health?</p>
+<p style="margin-bottom: 1em;">Using machine learning and data science, Livongo clusters data to&nbsp;understand behaviors and personalize our member experience.</p>
+<p style="margin-bottom: 1em;">Hear Dr. Jennifer Schneider discuss how data science insights can be&nbsp;leveraged to&nbsp;drive behavior change.</p></div>
+</td>
+</tr>
+<tr ><td class="pb-30" style="padding:0 0 40px; " ><table class="flexible" width="290" align="center" style="margin:0 auto; " cellpadding="0" cellspacing="0" ><tr ><td class="active-t" align="center" style="font:bold 20px/21px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#fffffe; mso-padding-alt:25px 20px; text-transform:uppercase; " bgcolor="#0060F8" ><div class="mktEditable" id="Button" ><p><a target="_blank" style="text-decoration: none; color: #fffffe; display: block; padding: 25px 20px;" href="https://zoom.us/webinar/register/WN_W8ugc1GtTfGuuLyLFbKqdg">REGISTER NOW</a></p></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td style="padding:0 0 40px; " ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><th class="tflex" width="150" align="left" style="vertical-align:top; padding:0; " ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td align="center" ><div class="mktEditable" id="Presenter-Pic" style="text-align:center; " ><p><a href="https://zoom.us/webinar/register/WN_W8ugc1GtTfGuuLyLFbKqdg" target="_blank" title="Presenter: Dr. Jennifer Schneider, MD, MS"><img src="http://start.retrofitme.com/rs/974-XEZ-058/images/livongo_dr_schneider_ds.jpg" style="vertical-align: top; height: auto; width: 150px;" border="0" width="150" alt="Dr. Schneider" /></a></p></div>
+</td>
+</tr>
+</table>
+</th>
+<th class="tflex" width="80" height="15" align="left" style="vertical-align:top; padding:0;"></th>
+<th class="tflex" width="390" align="left" style="vertical-align:top; padding:0; " ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td class="fs-16" style="font:bold 20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#0060f8; text-transform:uppercase; padding:0 0 10px; " ><div class="mktEditable" id="Webinar-Details-Head" style="font:bold 20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#0060f8; text-transform:uppercase; " >WEBINAR DETAILS:</div>
+</td>
+</tr>
+<tr ><td style="padding:0 0 8px; " ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td class="fs-16" valign="top" width="55" style="font:bold 20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family: Arial, Helvetica, sans-serif; color:#010101;">Host:</td>
+<td class="fs-16" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " ><div class="mktEditable" id="Webinar-Presenter" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " >Dr. Jennifer Schneider, MD, MS<br class="hide">
+Chief Medical Officer, Livongo</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td style="padding:0 0 4px; " ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td class="fs-16" valign="top" width="55" style="font:bold 20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " ><div class="mktEditable" id="Date-Head" style="font:bold 20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " >Date:</div>
+</td>
+<td class="fs-16" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " ><div class="mktEditable" id="Date" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " >Tuesday, June&nbsp;12,&nbsp;2018</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td ><table width="100%" cellpadding="0" cellspacing="0" ><tr ><td class="fs-16" valign="top" width="55" style="font:bold 20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " ><div class="mktEditable" id="Time-Head" style="font:bold 20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " >Time:</div>
+</td>
+<td class="fs-16" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " ><div class="mktEditable" id="Time" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " >11:30 AM&nbsp;-&nbsp;12PM PST</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</th>
+</tr>
+</table>
+</td>
+</tr>
+<tr ><td class="fs-16 pb-30" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; padding:0 0 40px; " ><div class="mktEditable" id="Footnote" style="font:20px/25px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family:Arial, Helvetica, sans-serif; color:#010101; " ><p>Can't make it? <a href="https://zoom.us/webinar/register/WN_W8ugc1GtTfGuuLyLFbKqdg" target="_blank" style="color: #0060f8; text-decoration: underline;">Register</a> anyway and you'll receive a&nbsp;link to&nbsp;the&nbsp;recording when it's available.</p></div>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<th class="tflex" width="515" align="left" style="vertical-align:top; padding:0;">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="aligncenter" style="font:12px/16px TradeGothicLTPro, Arial, Helvetica, sans-serif; mso-ascii-font-family: Arial, Helvetica, sans-serif; color:#686b71;">Livongo&nbsp;Health. 150&nbsp;W. Evelyn&nbsp;Ave., Suite&nbsp;150, Mountain&nbsp;View, CA&nbsp;94041</td>
+</tr>
+</table>
+</th>
+<th class="tflex" width="5" height="3" align="left" style="vertical-align:top; padding:0;"></th>
+<th class="tflex" width="100" align="left" style="vertical-align:top; padding:0;">
+<table width="100%" cellpadding="0" cellspacing="0">
+</table>
+</th>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td bgcolor="#36D664" height="12" style="font-size:1px; line-height:1px; color:#36d664;">.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

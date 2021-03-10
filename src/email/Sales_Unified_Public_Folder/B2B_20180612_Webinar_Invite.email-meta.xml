@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>June 12 Data Science Webinar Invite</name>
+    <style>none</style>
+    <subject>Join Our Webinar: How Data Science Drives Personalized Healthcare</subject>
+    <textOnly>Personalized experiences using data science deliver positive health outcomes, lower costs, and help people thrive.
+
+Register for our Webinar: Please reply to this email for details
+
+How Data Science Drives Personalized Healthcare
+
+A Discussion with Dr. Jenny Schneider, Chief Medical Officer at Livongo
+
+June 12th, 11:30am PDT
+
+How amazing would it be if each person’s healthcare experience could be personalized to exactly what they need when they need it to optimize their health?
+
+Using machine learning and data science, Livongo clusters data to understand behaviors and personalize our member experience.
+
+Hear Dr. Jennifer Schneider discuss how data science insights can be leveraged to drive behavior change.
+
+	
+WEBINAR DETAILS:
+
+Host: Dr. Jennifer Schneider, MD, MS, Chief Medical Officer, Livongo
+
+Date: Tuesday, June 12, 2018
+
+Time: 11:30 AM - 12PM PST
+
+Can&apos;t make it? Register anyway and you&apos;ll receive a link to the recording when it&apos;s available.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

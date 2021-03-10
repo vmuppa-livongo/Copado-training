@@ -1,0 +1,277 @@
+<!-- Copyright (c) 2011 JBara Software, Inc.  
+---- Purpose                    : This page is used to in CS360 for inserting and updating new alerts.
+----                              Included as iframe in Customer Success 360 panel.
+---- Other comments (optional)  : Some of the javaScript functions are directly called from the component because it is included. 
+----- 02/2014 : Created this page to display the tasks data for alerts in a iFrame as popup. 
+--> 
+
+<apex:page sidebar="false" showHeader="true">
+
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'miscscripts/jquery.limit-1.2.source.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles,'Alert/styles.css'))}"/>
+   
+    
+    <style type="text/css">  
+        body #AppBodyHeader {  
+            display: none;  
+        }     
+        body {
+            background: none !important;
+            background:transparent;         
+        }   
+        .ui-dialog-titlebar-close > .ui-icon-closethick{
+            background-color: #ffffff;
+            border-radius : 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;     
+        }   
+        .ui-widget-overlay {
+            background: url("images/ui-bg_flat_0_aaaaaa_40x100.png") repeat-x scroll 50% 50% #FFFFFF;
+            opacity: 0;
+        }
+        #comments-view{
+            max-height: 88px;
+            overflow-y: scroll;
+        }
+        .ui-dialog.ui-corner-all{
+            border-radius: 0px !important;
+        }
+        .ui-icon-myCloseButton {
+            background-image: url("{!URLFOR($Resource.appStyles)}/Events/images/close.png") !important;
+            background-position: left top !important;
+            margin: 0 !important;
+        }
+        .ui-dialog .ui-dialog-titlebar-close, .ui-icon-closethick {
+            height: 10px !important;
+        }
+        
+        .ui-dialog .ui-dialog-titlebar-close {
+            background: none !important;
+            border: none !important;
+        }
+        
+        .ui-dialog .ui-dialog-titlebar-close, .ui-dialog .ui-dialog-titlebar-close:hover {
+            padding-bottom: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 2px;
+        }
+        .ui-dialog-titlebar a:hover{
+            background: none repeat scroll 0 0 #CFE4F7;
+        } 
+        .taskalert{
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 30%;
+            text-align: center;
+        }     
+    </style> 
+     
+    <script type="text/javascript" language="javascript">
+        var j$ = jQuery.noConflict();
+        var alertLinkedToUsage;
+        var alertLinkedToNPS;
+        var viewAlertForm = false;
+        var isAlertFeedEnabled;
+        var is360 = '{!($CurrentPage.parameters.is360)}';
+        j$(document).ready(function () {
+            var alertIdFromParent = '{!($CurrentPage.parameters.alertId)}';
+            var customerIdFromParent = '{!($CurrentPage.parameters.customerId)}';
+            alertLinkedToUsage = '{!($CurrentPage.parameters.linkedToUsage)}';
+            alertLinkedToNPS = '{!($CurrentPage.parameters.linkedToNPS)}';
+            var customerNameFromParent = j$('#jbaraDummyAccountCS360Name', window.parent.document).html();
+            if(alertIdFromParent == ''){                    
+                showAlertInputForm(null);
+                onFrameCustomerChange('',customerIdFromParent);         
+            }else{
+                editAlertClicked(alertIdFromParent);
+            }
+            
+        });
+        
+        function onFrameCustomerChange(custName, custId) {
+            setAlertCustomerName(custId);
+            reRenderAlertsAssociatedDropDown(custId);
+            j$(".theHiddenCustomerId").val(custId);         
+        }
+        
+        function callBackAfterAlertSave(alertId){
+            try{
+                window.top['{!($CurrentPage.parameters.callbackAfterSave)}'](alertId);
+            }
+            catch(e){
+                console.error(e.message);
+            }
+        }
+        
+        function editAlertClicked(alertId){
+            getAlertProperties(alertId);
+            showAlertInputForm(alertId);    
+        }
+        function replaceToHtml(repalceStr){
+            var replacedText = repalceStr.replace(/&gt/g, '>').replace(/&lt/g, '<').replace(/<;/g, '<').replace(/>;/g, '>');
+            return replacedText
+        }
+         function showAlertInputForm(alertId) {         
+            if(alertId == null){
+                j$(".jbaraAlertAssObjItemsSelectCtrl").find('option').remove();
+                alertOpportunityId = '0';
+                j$(".jbaraAlertSelectInput").val('0');
+                j$("#jbaraAlertCmtInput").html('');
+                j$("#charsLeftAlertComment").html('4096');
+                j$("#jBaraAlertChatterContainer").hide();   
+                //j$("span#charsLeftComment,span#charsLeftNextComment").text(4096);
+            }
+            
+            j$("#jBaraAlertsErrorContainer").html("");
+            j$(".main-window-overlay").dialog({
+                dialogClass: 'alertFrameDialog',
+                title: 'Add Alert',
+                modal: true,
+                resizable : false,
+                position: 'top',
+                close: function() {
+                    callBackAfterCancel();
+                },
+                overlay: {
+                    background: '#FFFFFF',
+                    opacity: is360 ? 0 : .2
+                },
+                create: function(event, ui) {
+                    var widget = j$(this).dialog("widget");
+                    j$(".ui-dialog-titlebar-close span", widget).removeClass("ui-icon-closethick").addClass("ui-icon-myCloseButton").attr("title","Close");
+                },
+                /* 02/2014 : changed the minwidth:1000 to width :100% */
+                width: '100%',
+                buttons: {
+                        "Save & Add Task" : {
+                             text: "Save & Add Task",
+                             id: "saveAlertAndAddTaskIdBtn",
+                             click: function(){
+                                isAddMode = true;
+                                taskMode = 'saveAndAddTaskMode';                                                                
+                                constructAlert(null,taskMode);
+                             }   
+                          }, 
+                        "Save & Close" : {
+                             text: "Save & Close",
+                             id: "saveAlertAndCloseIdBtn",
+                             click: function(){
+                                 isAddMode = true;
+                                 taskMode = 'closeTaskMode';    
+                                 constructAlert(null,taskMode);
+                             }   
+                          }                           
+                    },
+            });
+            //j$(".main-window-overlay").parent().find(".ui-widget-header").removeClass("ui-widget-header").addClass("ui-widget-headernew");
+            j$(".main-window-overlay").parent().find(".ui-corner-all").removeClass("ui-corner-all");
+            /* 02/2014 : Removed the border */
+            j$(".main-window-overlay").parent().css({
+                'padding': '0em',
+                'border': '0px solid #83818E'
+            });
+            j$('.ui-dialog button:nth-child(1)').button('disable');
+            if(alertId == null){    
+                j$("#jbaraLinkedToUsageInput").val(alertLinkedToUsage);
+                j$("#jbaraLinkedToNPSInput").val(alertLinkedToNPS);
+                j$('.actionListingCls').html('<div align="center" class="taskalert">Tasks for the alert can be added after saving the alert.</div>');
+                j$(".jbaraAlertNextDateDiv,.jbaraAlertOwnerDiv,.nextStepCommentsDiv,.dummyEditAlertInfoCls,.taskHeaderCls, .assignowner_container").hide();                 
+                j$(".createTask-fullDiv,.taskListingClass,.loadPlaybookDiv").hide();
+                j$("#jBaraAlertChatterContainer").hide();
+              
+                if(alertLinkedToUsage == "true" || alertLinkedToNPS == "true"){
+                    var textName =  (alertLinkedToUsage == "true" ) ? 'Usage': 'NPS';
+                    var existingAlertComment =  j$("#jbaraAlertCmtInput").html();
+                      if(existingAlertComment.length > 0) {
+                          existingAlertComment +="\n \n"; 
+                      }                           
+                      existingAlertComment += "Alert associated with "+textName+"\n";
+                      existingAlertComment += "********************************";
+                      j$("#jbaraAlertCmtInput").html(existingAlertComment);
+                      j$("#charsLeftAlertComment").html(4096 - replaceToHtml(existingAlertComment).length);
+                }
+                if(viewAlertForm == true) {
+                    j$('.alert-view-form').show();
+                    j$(".main-window-overlay").parent().find('.ui-dialog-buttonpane').hide();   
+                    j$('.card-data-entry').hide();
+                } 
+                else {
+                    j$('.alert-view-form').hide();
+                    j$('.card-data-entry').show();  
+                }
+                j$('.saveEditClsDiv').hide();   
+                j$(".collaborationCls").appendTo(j$(".main-window-overlay").parent()).hide();
+                j$(".customer-entry-div").show();
+                j$(".collaborationCls").insertAfter(j$('.ui-dialog-buttonpane')).hide();    
+                j$("#noChatterDivId").hide();    
+            }
+            else{
+                j$(".lookupIcon").hide();   
+                j$(".customer-name-text").attr("disabled", 'disabled');
+                j$("#jbaraLinkedToUsageInput").val(alertLinkedToUsage);
+                j$("#jbaraLinkedToNPSInput").val(alertLinkedToNPS); 
+                j$('.taskListingClass,.actionListingCls').html('');
+                if(viewAlertForm == true) {
+                    j$('.ui-dialog #editAlertSaveIdBtn').hide();
+                    j$('.ui-dialog #editAlertCancelIdBtn').hide();
+                    j$('.alert-view-form').show();
+                    j$('.card-data-entry').hide();
+                    j$(".dummyEditAlertInfoCls").show();
+                } else {
+                    j$('.ui-dialog #editAlertSaveIdBtn').show();
+                    j$('.ui-dialog #editAlertCancelIdBtn').show();
+                    j$('.alert-view-form').hide();
+                    j$('.card-data-entry').show();
+                    j$('.saveEditClsDiv').show();                   
+                    j$(".main-window-overlay").parent().find('.ui-dialog-buttonpane').hide();                       
+                }
+                j$(".nextstepsdate-view-DisplayDiv,.nextstepsowner-view-DisplayDiv,.nextsetps-view-DisplayDiv").hide(); 
+                refreshTaskAfterAlertSave = false;
+                j$(".tasks-search").val('Search Tasks...');
+                j$(".collaborationCls").insertAfter(j$('.main-window-overlay')).show();             
+            }           
+                     
+         }     
+        
+        function callBackAfterSave(alertIdAfterUpdateOrCreate) {
+            try {
+                window.top['{!($CurrentPage.parameters.callbackAfterSave)}'](alertIdAfterUpdateOrCreate);
+            }
+            catch(e){
+                console.error(e.message);
+            }           
+        }
+        function callBack360AlertAfterSave(alertId, mode) {
+            try {
+                window.top['{!($CurrentPage.parameters.callBack360AlertAfterSave)}'](alertId, mode);
+            }
+            catch(e){
+                console.error(e.message);
+            }           
+        }
+        function callBackAfterCancel() {
+            window.top['{!($CurrentPage.parameters.callBackAfterCancel)}']();
+        }
+        
+     </script>
+        <!-- 02/2014 : added Jquerymoble property to div and changed the component -->
+        <div data-role="page">          
+            <!-- form html code starts here -->
+            <div class="main-window-overlay hide">  
+                <c:GSMobileAlertTasks />             
+            </div>
+        </div> 
+         <script> 
+            (function(){try{var a=navigator.userAgent; 
+            if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1 || a.indexOf('OS/9')!=-1||a.indexOf('OS 9')!=-1||a.indexOf('OS/10')!=-1||a.indexOf('OS 10')!=-1)&&(a.indexOf('Safari')==-1)){ 
+            var s=document.createElement('style'); 
+            s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+            document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+        </script>
+</apex:page>

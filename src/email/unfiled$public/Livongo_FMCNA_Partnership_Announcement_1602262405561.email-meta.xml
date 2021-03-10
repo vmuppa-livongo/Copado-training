@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Announcing our partnership and real-time care coordination services through Livongo Whole Person for CKD.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Livongo/FMCNA Partnership Announcement</name>
+    <style>none</style>
+    <subject>Livongo Partners with FMCNA to Empower People with Chronic Kidney Disease</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

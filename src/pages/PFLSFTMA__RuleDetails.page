@@ -1,0 +1,194 @@
+<apex:page standardController="PFLSFTMA__Rule__c" extensions="PFLSFTMA.RuleController" sidebar="false" title="TMA Rule">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <script>
+      __Zone_enable_cross_context_check = true;
+    </script>
+    <apex:includeScript value="{!$Resource.PFLSFTMA__SLDS100}/svgfix/svg4everybody.legacy.min.js"/>
+    <script>svg4everybody();</script>
+    <apex:slds />
+
+    <!--inject:depstyles-->
+    <link rel="stylesheet" href="{!URLFOR($Resource.tmatoolsng_min,'styles.d41d8cd98f00b204e980.bundle.css')}"/>
+    <!--endinject-->
+  </head>
+
+  <!--inject:apphtml-->
+  <script>
+  var href = document.location.pathname + '#';
+  document.write('<base href="' + href + '" />');
+</script>
+<link rel="stylesheet" href="{!URLFOR($Resource.TMAResources, 'chosenCSS/chosen.css')}"/>
+<link rel="stylesheet" href="{!URLFOR($Resource.TMAResources, 'jqUI/jquery-ui.css')}"/>
+<link rel="stylesheet" href="{!URLFOR($Resource.TMAResources, 'select2/css/select2.min.css')}"/>
+<link rel="stylesheet" href="{!URLFOR($Resource.TMAResources, 'datepicker/datetimepicker.css')}"/>
+<script src="{!URLFOR($Resource.TMAResources, 'jQuery/jquery-min.js')}"></script>
+
+<app-root></app-root>
+
+<script type="text/javascript">
+
+  var _self;
+
+  var resource = {
+    packagePrefix: "{!packagePrefix}",
+    logoIconPath: "{!URLFOR($Resource.boostrapsf1, 'icons/swagiq/pfllogo128.png')}",
+    closeIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#close",
+    helpIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#info",
+    nextIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#forward",
+    backIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/action-sprite/svg/symbols.svg#back",
+    saveIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/action-sprite/svg/symbols.svg#download",
+    cancelIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/action-sprite/svg/symbols.svg#reset_password",
+    findIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#search",
+    errorIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#error",
+    downArrowPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#down",
+    checkIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#check",
+    successIconPath: "{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#success",
+    touchConfigurationHelp: '{!$Label.touchConfigurationHelp}',
+    savingRuleLabel: '{!$Label.savingRuleLabel}',
+    saveButtonLabel: '{!$Label.saveButtonLabel}',
+    cancelButtonLabel: '{!$Label.cancelButtonLabel}',
+    nextButtonLabel: '{!$Label.nextButtonLabel}',
+    previousButtonLabel: '{!$Label.previousButtonLabel}',
+    changeObjectRequest: '{!$Label.changeObjectRequest}',
+    changeObjectInfo: '{!$Label.changeObjectInfo}',
+    errorLabelHelp: '{!$Label.errorLabelHelp}',
+    updateGiftInfo: '{!$Label.updateGiftInfo}',
+    updateGiftRequest: '{!$Label.updateGiftRequest}',
+    pageTitleLabel: '{!$Label.pageTitleLabel}',
+    emptySearchResult: '{!$Label.emptySearchResult}',
+    unsavedChangesLabel: '{!$Label.unsavedChangesLabel}',
+    saveChangesRequest: '{!$Label.saveChangesRequest}',
+    referenceIdWasRemoved: '{!$Label.referenceIdWasRemoved}',
+    leftIconPath: '{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#left',
+    rightIconPath: '{!URLFOR($Asset.SLDS)}/assets/icons/utility-sprite/svg/symbols.svg#right',
+    ruleCriteriaImage: "{!URLFOR($Resource.TMACriterionIcon, '1.png')}",
+    filterCriteriaImage: "{!URLFOR($Resource.boostrapsf1, 'icons/swagiq/report_boolean_filter.gif')}",
+    helpTextsModel: {
+      'ruleName': '{!$Label.namehelp}',
+      'description': '{!$Label.descriptionhelp}',
+      'isActive': '{!$Label.isactivehelp}',
+      'timeBasedCriteria': '{!$Label.timebasedduedateoffsethelp}',
+      'object': '{!$Label.ruleapiobjecthelp}',
+      'triggerType': '{!$Label.ruletriggerhelp}',
+      'recipientAddress': '{!$Label.recipientAddressHelp}',
+      'assignedToType': '{!$Label.assignedtotypehelp}',
+      'assignedTo': '{!$Label.assignedtotypefield}',
+      'priority': '{!$Label.priorityhelp}',
+      'giftSender': '{!$Label.giftsenderuserhelp}',
+      'evaluation': '{!$Label.ruleevalwhenhelp}',
+      'ruleCriteria': '{!$Label.rulecriteriahelp}',
+      'contactRole': '{!$Label.contactrolehelp}',
+      'campaignMember': '{!$Label.rulecamptypehelp}'
+    }
+
+  };
+
+
+  $(document).mouseup(function (e) {
+    var picklistContainer = $('.slds-combobox_container'),
+      menuContainers = $('.menu-component'),
+      infoContainer = $('.help-button'),
+      dateContainer = $('.slds-datepicker');
+    if (picklistContainer.has(e.target).length === 0 && menuContainers.has(e.target).length === 0) {
+      $('.slds-dropdown-trigger').removeClass('slds-is-open');
+      $('.slds-combobox_container').removeClass('slds-has-input-focus');
+    }
+    if (infoContainer.has(e.target).length === 0) {
+      $('.slds-popover').css('display', 'none');
+    }
+    if (dateContainer.has(e.target).length === 0) {
+      dateContainer.addClass('slds-hide');
+    }
+  });
+
+  $(document).ready(function () {
+    $('.slds-tabs_default__nav a').on('click', function () {
+      $('.slds-tabs_default__nav li').removeClass('slds-is-active');
+      $(this).parent().addClass('slds-is-active');
+    });
+  });
+
+  function showFilter() {
+    var displayStyle = $('.filter').css('display') === 'none' ? 'block' : 'none';
+    $('.filter').css('display', displayStyle === 'block' ? '' : displayStyle);
+  }
+
+  function showInfo(event, element) {
+    event.preventDefault();
+    element.parent().siblings('.slds-popover').toggle();
+  }
+
+  function onMouseOverHelpElement(){
+    $('#ruleCriteriaImageChoose').css('display', 'block');
+  }
+
+  function onMouseLeaveHelpElement(){
+    $('#ruleCriteriaImageChoose').css('display', 'none');
+  }
+
+  function onMouseOverFilter(){
+    $('#filterCriteriaImage').css('display', 'block');
+  }
+
+  function onMouseLeaveFilter(){
+    $('#filterCriteriaImage').css('display', 'none');
+  }
+
+  function showErrorsSaving() {
+    showSpinner();
+  }
+
+  function showSpinner() {
+    $('#spinner').show();
+    setTimeout(function () {
+      $('#spinner').hide();
+    }, 500);
+  }
+
+  function showDropdownPicklist(event, element) {
+    if (!event.target.classList.contains('slds-pill__remove')) {
+      closeDropdownList();
+      element.parents('.slds-combobox_container').find('.slds-dropdown-trigger').addClass('slds-is-open');
+      element.parents('.slds-combobox_container').addClass('slds-has-input-focus');
+    }
+  }
+
+  function showDatePicker(event, element) {
+      closeDatePicker();
+      element.parents('.slds-form-element').find('.slds-datepicker').removeClass('slds-hide');
+  }
+
+  function closeDatePicker() {
+    $('.slds-datepicker').addClass('slds-hide');
+  }
+
+  function closeDropdownList() {
+    $('.slds-dropdown-trigger').removeClass('slds-is-open');
+    $('.slds-combobox_container').removeClass('slds-has-input-focus');
+  }
+
+  function showDropdownComboBox(element) {
+    closeDropdownList();
+    element.parents('.slds-dropdown-trigger').addClass('slds-is-open');
+  }
+
+</script>
+
+  <!--endinject-->
+
+  <!--inject:jsdepsinline-->
+  <script type="text/javascript" src="{!URLFOR($Resource.tmatoolsng_min,'inline.da49a7fbfd19718b4721.bundle.js')}"></script>
+  <!--endinject-->
+  <!--inject:jsdepspoly-->
+  <script type="text/javascript" src="{!URLFOR($Resource.tmatoolsng_min,'polyfills.ff9a12b7e5b4b0d27571.bundle.js')}"></script>
+  <!--endinject-->
+  <!--inject:jsdepsmain-->
+  <script type="text/javascript" src="{!URLFOR($Resource.tmatoolsng_min,'main.1fbdde662b64351365cd.bundle.js')}"></script>
+  <!--endinject-->
+
+  </html>
+
+</apex:page>

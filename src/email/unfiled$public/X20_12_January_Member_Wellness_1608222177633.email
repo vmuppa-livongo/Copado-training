@@ -1,0 +1,116 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#E9EAEC;" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td align="Center" style="padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><img alt="CS_Jan EM Header_" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/CS_Jan_EM_Header?oid=00D4600000180Lw" style="max-width: 677.6667053222656px" title="January Member Wellness" /></span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br />
+												<br />
+												It’s time to say good-bye to 2020 and plan for a successful year ahead. We are happy to share our latest easy-to-use tools and resources to help your employees make healthier choices in the new year and beyond. Check out the below sample email template, including links to resources that anyone&nbsp;</span></span>–&nbsp;<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">including your employees with chronic conditions&nbsp;</span></span>–&nbsp;<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">may find valuable. Share them via email, on your company intranet, or through other communication channels.<br />
+												<br />
+												We are happy to share these seasonal HR kits once a month with you and the people you serve as part of our mission to help people live better, healthier lives.<br />
+												<br />
+												<i>[sample email content for your use]&nbsp;</i></span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:50px;padding-bottom:10px;padding-top:10px;padding-left:50px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i>Subject line: Here's to looking back and planning ahead &nbsp;<br />
+												<br />
+												[Hi Team,]<br />
+												&nbsp;<br />
+												For many, a new year presents an opportunity to reflect on where we’ve been and where we might want to go in the year ahead. Any time of year is a good time to make a change for the better, but sometimes, the freshness of a new year can help provide that extra dose of inspiration and motivation.&nbsp;<br />
+												<br />
+												This January, we’re sending along a few resources from Livongo that might help if you do decide to set some goals for yourself in the New Year. If you’re not making any New Year’s resolutions, that’s ok, too! We’ve included a warm and healthy winter beverage recipe you can try.</i></span></span>
+
+												<ul>
+													<li><a href="https://content.livongo.com/cp/smartGoals.pdf"><span style="font-size: 16px;">How to Set SMART Goals</span></a></li>
+													<li><a href="https://content.livongo.com/cp/6MoneySavingHomeCookHacks.pdf"><span style="font-size: 16px;">6 Money-Saving Home-Cook Tips</span></a></li>
+													<li><span style="font-size: 16px;"><a href="https://www.youtube.com/watch?v=pWnMiR6F3PE&amp;%3Bfeature=youtu.be">Healthier Peppermint Mocha Latte Recipe</a>&nbsp;</span><span style="font-size: 16px;">(VIDEO)</span></li>
+												</ul>
+												<br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i>[Livongo offers support for diabetes, blood pressure, weight, behavioral health, and more. If you’re not already a member, you can see if you’re eligible at <a href="http://enjoy.livongo.com/new">enjoy.livongo.com/new</a>].</i><br />
+												<br />
+												<i>[Livongo is offered at no cost to you and your family members with medical coverage through your medical plan.] If you have any questions, please call Livongo Member Support at (800) 945-4355.&nbsp;<br />
+												<br />
+												Be well,&nbsp;<br />
+												<br />
+												The HR team</i></span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:10px;padding-left:5px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i>[end sample email content] &nbsp;</i><br />
+												<br />
+												We continue to receive positive feedback on these seasonal HR kits and how they are driving enrollment and usage among Members. We hope that you and your employees will also find them valuable. Thank you for your continued support.&nbsp;&nbsp;&nbsp;<br />
+												<br />
+												Stay safe and healthy,&nbsp;<br />
+												{{{Sender.FirstName}}}<br />
+												<br />
+												{{{Sender.Signature}}}</span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table></body></html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Pre Conference Prospect Outreach: The Conference Board San Diego</name>
+    <style>freeForm</style>
+    <subject>Will you be attending The Conference Board?</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Will you be attending The Conference Board in San Diego on March 27th and 28th? If so, I would love to schedule time to catch up.
+
+For some background, Livongo is a consumer digital health company that empowers all people with chronic conditions, starting with diabetes, to live better and healthier lives. Here are some recent updates on Livongo:
+
+We’ve proven our approach to chronic conditions management: Our members love us! We have an NPS of 64, which compares to companies like Netflix and Amazon. Also, our members are getting healthier while our clients are saving. Members are showing a .9% reduction in A1c, and clients have demonstrated a cost savings of $83pppm.
+
+We’re expanding to heart disease: we hired renowned cardiologist, Dr. Bimal Shah, to lead our expansion to heart disease, starting with hypertension, and we will launch Livongo for Hypertension to our existing members early this year.
+
+We have almost 300 enterprise clients: We are working with the leading Fortune 100 employers, the largest PBMs, 4 of 7 most innovative health plans, and leading health systems.
+
+Our team is growing: Arnnon Geshuri, formerly of Tesla, recently joined as Chief People Officer
+
+While at the conference, we would love to see you at Livongo’s session, Proving Financial Impact and Business Model for Chronic Condition Management, on March 27th from 3:00 pm - 3:50 pm. Livongo Chief Commercial Officer, Jim Pursley, will join Magda Rusinowski, PepsiCo Director of US Health Benefits, as they discuss Livongo’s clinical outcomes and measurable financial impact.
+
+Looking forward to hearing back from you and I hope we can connect while in San Diego.
+
+Best regards,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

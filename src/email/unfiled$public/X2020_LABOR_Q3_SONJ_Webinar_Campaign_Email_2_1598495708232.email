@@ -1,0 +1,27 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi {{{Recipient.FirstName}}},</span></span></p> 
+   <p><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">The State of New Jersey supports a total active and early retiree population of 800,000, including a subset of 40,000 unionized employees. As COVID set in, the State realized the opportunity of a virtual, whole person approach to healthcare. With Livongo's digital platform, the State of New Jersey enables Members to stay out of harm's way at home and outside of the care system, while still empowering their Members to effectively and efficiently manage and monitor their health – all with no out-of-pocket costs for their Members.</span></span></p> 
+   <p><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">To learn more about the State of New Jersey's innovative approach to care for public sector employees, please join us for:</span></span></p> 
+   <p style="text-align: center;"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Bridging the Gap to Provide Virtual, Whole Person Care Amid a Pandemic<br /> 3:00 p.m. ET on Wednesday, September 2</b><br /> <br /> <a href="https://livongo.zoom.us/webinar/register/3115968232619/WN_F2ecK24wQIepHgo3vbQRrQ"><b>Click here to register</b></a><br /> Scheduling conflict? Register to receive the recording.</span></span></p> 
+   <p><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Attend this complimentary webinar to explore:</b></span></span></p> 
+   <ul> 
+    <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">How chronic conditions often overlap to drive significant long-term cost liabilities for both Members as well as health and welfare benefits providers</span></span></li> 
+    <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">The State's approach to collaborating with stakeholders and union leadership to achieve healthcare, not just sick care</span></span></li> 
+    <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">A new virtual care model that proved critical in addressing the alarming chronic condition trends for the State of New Jersey</span></span></li> 
+   </ul> 
+   <p><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">We hope you can join us, and please get in touch if you'd like to discuss further.</span></span></p> 
+   <p><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Stay Healthy and Safe,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span></p> 
+  </div>
+ </body>
+</html>

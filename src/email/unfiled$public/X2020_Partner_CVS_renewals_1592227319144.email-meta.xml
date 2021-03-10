@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to non-TDC clients for early renewal offer</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Partner_CVS_renewals</name>
+    <style>none</style>
+    <subject>Helping our clients navigate uncertain times</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

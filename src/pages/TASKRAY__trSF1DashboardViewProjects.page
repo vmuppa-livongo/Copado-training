@@ -1,0 +1,15 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false">
+  <html>
+
+  <head>
+
+  </head>
+
+  <body>
+    <div>
+      Deprecated Do Not Use
+    </div>
+  </body>
+
+  </html>
+</apex:page>

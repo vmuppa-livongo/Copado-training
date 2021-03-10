@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>112018 HCSC Deadline</name>
+    <style>freeForm</style>
+    <subject>Launching Livongo for 1/1 – Deadline Approaching</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+The deadline for launching your clients with Livongo for 1/1/19 is fast approaching!  Any client that is interested in Livongo for 1/1/19 will need to submit the Intake Form (see attached or find on Product Central) to Livongo by 11/28.  Attached you will find a flier that walks you through the process of taking your client from interested to ready to launch!
+
+If you have any questions, please do not hesitate to reach out to me at kcardinale@livongo.com.
+
+Hope you have a great Thanksgiving!
+
+KARA CARDINALE
+VP, Health Services Segment
+Livongo
+m: 773.551.4690
+e: kcardinale@livongo.com
+a: 444 N. Michigan Ave., Suite 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

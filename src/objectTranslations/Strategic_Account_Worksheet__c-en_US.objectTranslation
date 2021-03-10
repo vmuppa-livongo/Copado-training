@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Strategic Account Worksheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Strategic Account Worksheets</value>
+    </caseValues>
+    <fields>
+        <label><!-- ARR --></label>
+        <name>ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Owner --></label>
+        <name>Account_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- How we feel about our position with this strategic account --></help>
+        <label><!-- Adequacy of Current Position --></label>
+        <name>Adequacy_of_Current_Position__c</name>
+        <picklistValues>
+            <masterLabel>Comfort</masterLabel>
+            <translation><!-- Comfort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Concern</masterLabel>
+            <translation><!-- Concern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discomfort</masterLabel>
+            <translation><!-- Discomfort --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Euphoria</masterLabel>
+            <translation><!-- Euphoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fear</masterLabel>
+            <translation><!-- Fear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great</masterLabel>
+            <translation><!-- Great --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Panic</masterLabel>
+            <translation><!-- Panic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secure</masterLabel>
+            <translation><!-- Secure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Worry</masterLabel>
+            <translation><!-- Worry --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 1 Title --></label>
+        <name>Buting_Influencer_1_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 1 Action --></label>
+        <name>Buying_Influencer_1_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 1 Coverage --></label>
+        <name>Buying_Influencer_1_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>Good Coverage</masterLabel>
+            <translation><!-- Good Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimal / No Coverage</masterLabel>
+            <translation><!-- Minimal / No Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate Coverage</masterLabel>
+            <translation><!-- Moderate Coverage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 1 Influence --></label>
+        <name>Buying_Influencer_1_Influence__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 1 --></label>
+        <name>Buying_Influencer_1__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 2 Action --></label>
+        <name>Buying_Influencer_2_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 2 Coverage --></label>
+        <name>Buying_Influencer_2_Coverage2__c</name>
+        <picklistValues>
+            <masterLabel>Good Coverage</masterLabel>
+            <translation><!-- Good Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimal / No Coverage</masterLabel>
+            <translation><!-- Minimal / No Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate Coverage</masterLabel>
+            <translation><!-- Moderate Coverage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 2 Influence --></label>
+        <name>Buying_Influencer_2_Influence__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 2 Title --></label>
+        <name>Buying_Influencer_2_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 2 --></label>
+        <name>Buying_Influencer_2__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Buying Influencer 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 3 Action --></label>
+        <name>Buying_Influencer_3_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 3 Coverage --></label>
+        <name>Buying_Influencer_3_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>Good Coverage</masterLabel>
+            <translation><!-- Good Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimal / No Coverage</masterLabel>
+            <translation><!-- Minimal / No Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate Coverage</masterLabel>
+            <translation><!-- Moderate Coverage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 3 Influence --></label>
+        <name>Buying_Influencer_3_Influence__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 3 Title --></label>
+        <name>Buying_Influencer_3_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 3 --></label>
+        <name>Buying_Influencer_3__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Buying Influencer 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 4 Action --></label>
+        <name>Buying_Influencer_4_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 4 Coverage --></label>
+        <name>Buying_Influencer_4_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>Good Coverage</masterLabel>
+            <translation><!-- Good Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimal / No Coverage</masterLabel>
+            <translation><!-- Minimal / No Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate Coverage</masterLabel>
+            <translation><!-- Moderate Coverage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 4 Influence --></label>
+        <name>Buying_Influencer_4_Influence__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 4 Title --></label>
+        <name>Buying_Influencer_4_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 4 --></label>
+        <name>Buying_Influencer_4__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Buying Influencer 4) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 5 Action --></label>
+        <name>Buying_Influencer_5_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 5 Coverage --></label>
+        <name>Buying_Influencer_5_Coverage__c</name>
+        <picklistValues>
+            <masterLabel>Good Coverage</masterLabel>
+            <translation><!-- Good Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minimal / No Coverage</masterLabel>
+            <translation><!-- Minimal / No Coverage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moderate Coverage</masterLabel>
+            <translation><!-- Moderate Coverage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 5 Influence --></label>
+        <name>Buying_Influencer_5_Influence__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 5 Title --></label>
+        <name>Buying_Influencer_5_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Buying Influencer 5 --></label>
+        <name>Buying_Influencer_5__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Buying Influencer 5) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Close Date --></label>
+        <name>Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitive Vendor --></label>
+        <name>Competitive_Vendor__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Account) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Who are we competing against? --></help>
+        <label><!-- Competitor 1 --></label>
+        <name>Competitor_1__c</name>
+    </fields>
+    <fields>
+        <help><!-- Who are we competing against? --></help>
+        <label><!-- Competitor 2 --></label>
+        <name>Competitor_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Path --></label>
+        <name>Contract_Path__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Status --></label>
+        <name>Contract_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Position Strengths --></label>
+        <name>Current_Position_Strengths__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Position Weakness --></label>
+        <name>Current_Position_Weakness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunities Current Position --></label>
+        <name>Opportunities_Current_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunities Strategy Date --></label>
+        <name>Opportunities_Strategy_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunities Strategy --></label>
+        <name>Opportunities_Strategy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Update &amp; Next Steps --></label>
+        <name>Opportunity_Update_Next_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- How do we position ourselves to win vs. competition? --></help>
+        <label><!-- Our position vs. competition? --></label>
+        <name>Our_position_vs_competition__c</name>
+    </fields>
+    <fields>
+        <label><!-- PBM Partner Partner Coverage --></label>
+        <name>PBM_Partner_Partner_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Benefit Consultant Coverage --></label>
+        <name>Primary_Benefit_Consultant_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Client Health Plan Coverage --></label>
+        <name>Primary_Client_Health_Plan_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Other Partner Coverage --></label>
+        <name>Primary_Other_Partner_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Probability --></label>
+        <name>Probability__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product List --></label>
+        <name>Product_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risks Current Position --></label>
+        <name>Risks_Current_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risks Strategy Date --></label>
+        <name>Risks_Strategy_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risks Strategy --></label>
+        <name>Risks_Strategy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Benefit Consultant Coverage --></label>
+        <name>Secondary_Benefit_Consultant_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Client Health Plan Coverage --></label>
+        <name>Secondary_Client_Health_Plan_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Other Partner Coverage --></label>
+        <name>Secondary_Other_Partner_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Closed (They currently use one of our competitors)</masterLabel>
+            <translation><!-- Closed (They currently use one of our competitors) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contracting</masterLabel>
+            <translation><!-- Contracting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal</masterLabel>
+            <translation><!-- Proposal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Selling</masterLabel>
+            <translation><!-- Selling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOC</masterLabel>
+            <translation><!-- VOC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 1st Strategy to Win --></label>
+        <name>Strategy_to_Win__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strengths Strategy --></label>
+        <name>Strenghts_Strategy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strengths Current Position --></label>
+        <name>Strengths_Current_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strengths Strategy Date --></label>
+        <name>Strengths_Strategy_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tertiary Client Health Plan Coverage --></label>
+        <name>Tertiary_Client_Health_Plan_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weakness Current Position --></label>
+        <name>Weakness_Current_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weaknesses Strategy Date --></label>
+        <name>Weaknesses_Strategy_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weaknesses Strategy --></label>
+        <name>Weaknesses_Strategy__c</name>
+    </fields>
+    <fields>
+        <label><!-- 1st Strategy to Win Date --></label>
+        <name>X1st_Strategy_to_Win_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Strengths Strategy Owner --></label>
+        <name>X1st_Strategy_to_Win_Owner__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Strengths Strategy Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 2nd Strategy to Win Date --></label>
+        <name>X2nd_Strategy_to_Win_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weaknesses Strategy Owner --></label>
+        <name>X2nd_Strategy_to_Win_Owner__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Weaknesses Strategy Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 2nd Strategy to Win --></label>
+        <name>X2nd_Strategy_to_Win__c</name>
+    </fields>
+    <fields>
+        <label><!-- 3rd Strategy to Win Date --></label>
+        <name>X3rd_Strategy_to_Win_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunities Strategy Owner --></label>
+        <name>X3rd_Strategy_to_Win_Owner__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Opportunities Strategy Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 3rd Strategy to Win --></label>
+        <name>X3rd_Strategy_to_Win__c</name>
+    </fields>
+    <fields>
+        <label><!-- 4th Strategy to Win Date --></label>
+        <name>X4th_Strategy_to_Win_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risks Strategy Owner --></label>
+        <name>X4th_Strategy_to_Win_Owner__c</name>
+        <relationshipLabel><!-- Strategic Account Worksheets (Risks Strategy Owner) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- 4th Strategy to Win --></label>
+        <name>X4th_Strategy_to_Win__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

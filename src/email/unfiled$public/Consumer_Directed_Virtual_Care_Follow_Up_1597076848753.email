@@ -1,0 +1,19 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Hi&nbsp;{{{Recipient.FirstName}}}, 
+  <br /> 
+  <br /> I wanted to follow-up with you on my prior email regarding Consumer Directed Virtual Care. According to 
+  <a href="https://jamanetwork.com/journals/jama/fullarticle/2765184">JAMA</a> 78% of people admitted to the ICU with COVID-19 have an underlying chronic condition of diabetes, hypertension or obesity. Livongo has accelerated our virtual care model, and offers Whole Person Solutions that keep those most vulnerable safe, healthy and out of the brick-and-mortar healthcare system. 
+  <br /> 
+  <br /> You can take a quick look at our Whole Person Solutions&nbsp; 
+  <a href="https://creative.livongo.com/share/B71130CD-3A50-4E8D-8AA5A7DB646F46E6/">HERE</a>.&nbsp;Would you be interested in a 30 minute overview and demonstration? Please let me know and I can coordinate a calendar invite. 
+  <br /> 
+  <br /> In good health, 
+  <br /> {{{Sender.FirstName}}} 
+  <br /> 
+  <br /> {{{Sender.Signature}}}
+ </body>
+</html>

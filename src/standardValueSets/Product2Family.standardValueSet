@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Diabetes</fullName>
+        <default>false</default>
+        <label>Diabetes</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hypertension</fullName>
+        <default>false</default>
+        <label>Hypertension</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prediabetes</fullName>
+        <default>false</default>
+        <label>Prediabetes</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Weight Management</fullName>
+        <default>false</default>
+        <label>Weight Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nutrition</fullName>
+        <default>false</default>
+        <label>Nutrition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Behavioral Health</fullName>
+        <default>false</default>
+        <label>Behavioral Health</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Whole Person</fullName>
+        <default>false</default>
+        <label>Whole Person</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Teladoc</fullName>
+        <default>false</default>
+        <label>Teladoc</label>
+    </standardValue>
+</StandardValueSet>

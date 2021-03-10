@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://app.onelogin.com/saml/metadata/702375</issuer>
+    <loginUrl>https://livongo.onelogin.com/trust/saml2/http-post/sso/702375</loginUrl>
+    <name>OneLogin</name>
+    <oauthTokenEndpoint>https://livongohealth2ndorg--trnprod.my.salesforce.com/services/oauth2/token?so=00D0m0000001fb4</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P14R0000003FnY</requestSigningCertId>
+    <salesforceLoginUrl>https://livongohealth2ndorg--trnprod.my.salesforce.com?so=00D0m0000001fb4</salesforceLoginUrl>
+    <samlEntityId>https://saml.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIEojCCA4qgAwIBAgIUH7BYztTu1XV5G0Y4ujIZwOXaQ6owDQYJKoZIhvcNAQELBQAwgYQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1Nb3VudGFpbiBWaWV3MRAwDgYDVQQKDAdMaXZvbmdvMRUwEwYDVQQLDAxPbmVMb2dpbiBJZFAxHzAdBgNVBAMMFk9uZUxvZ2luIEFjY291bnQgOTk3NjMwHhcNMTcwNTMxMDQwNjE0WhcNMjIwNjAxMDQwNjE0WjCBhDELMAkGA1UEBhMCVVMxEzARBgNVBAgMCkNhbGlmb3JuaWExFjAUBgNVBAcMDU1vdW50YWluIFZpZXcxEDAOBgNVBAoMB0xpdm9uZ28xFTATBgNVBAsMDE9uZUxvZ2luIElkUDEfMB0GA1UEAwwWT25lTG9naW4gQWNjb3VudCA5OTc2MzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN/mKmEuA4+IV1H1Wco0ooiI7oWSzk6o25733C6srQ5xT3WqrK9mBi3zJNz8rd6tFmBmYx5QVPaIcFZ7zzZljFybHo6l8rpNXxGh+k6bzGMWEjMRYfN7rkbAaWJGiJmhqX/+hW4MtFB06xk+Nys+zeVP9PGPD6hUJYWtnRkdCWjw01fCzNEeY9RUSVE8Dt+non7cPWhv2Nvg4ds2Hrc5Zs0fEoXLUlteOYMZB9QR0IknYBw5RMySy/Ny/Q2tFdUTUwOqg7bKJF6K+0IdMZZfDGfSmJ8yN6C77GB0zOVjPoeo+eoTnb8Urd0cm/SEi0gZig8yryPrJn3Z8BJFzES4GxUCAwEAAaOCAQgwggEEMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFJQDWq8H+7uOdJJd7Ke23DOiHgkzMIHEBgNVHSMEgbwwgbmAFJQDWq8H+7uOdJJd7Ke23DOiHgkzoYGKpIGHMIGEMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNTW91bnRhaW4gVmlldzEQMA4GA1UECgwHTGl2b25nbzEVMBMGA1UECwwMT25lTG9naW4gSWRQMR8wHQYDVQQDDBZPbmVMb2dpbiBBY2NvdW50IDk5NzYzghQfsFjO1O7VdXkbRji6MhnA5dpDqjAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQELBQADggEBAC7wmeXKZ9lKUxc26gCgWffjUuCCWggx4/zqkwBTn0tYaHlKGECE6XD+PZkj75cbIdmPxhOBLbKhoZb/oFNBoaItSmY2s8xwzhWLZTHHggdhva70c9kCUfUykbkRkwecjmOBdRzlT+gk68XClv80LeHDMS3vRF/58ZIZ9Rm9OS6uus7Ir6/cU90z7wnn90zfRuL37HdFWblJ5PCuV/qoWyTdAWWwZdO50LUSwurvubv6jEpxkkN4mcyGn31KH459kvzcKS0kG5+Okt2+IvEAeJGss9PospgvqBK2z7E2brjWsRLBzjmU05F9wy7fasRLxFGtCPI0zSqJsnuNCLbd+tg=</validationCert>
+</SamlSsoConfig>

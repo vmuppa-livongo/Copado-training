@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows users to use the Advanced Scheduler feature (in premium edition).</description>
+    <isLicensed>false</isLicensed>
+    <label>TaskRay Advanced Scheduler</label>
+</CustomPermission>

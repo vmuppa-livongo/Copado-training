@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template should be leveraged to share the Med Adherence LinkedIn post and Poster with Prospects &amp; Clients.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>20_12_Medication Adherence_LI Post_v.2.12</name>
+    <style>none</style>
+    <subject>Dive into Livongo’s impact on medication adherence</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

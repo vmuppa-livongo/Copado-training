@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Jim Retrofit Outreach</name>
+    <style>freeForm</style>
+    <subject>Exciting News: Livongo Acquires Retrofit</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+You might have seen this morning’s announcement that Livongo has acquired Retrofit, a leading provider of weight-management and disease-prevention programs.
+
+We are extremely excited to welcome Retrofit into the Livongo family and expand our chronic conditions management platform. As you know, Livongo’s mission is to empower all people with chronic conditions to live better and healthier lives. By adding Retrofit’s 7+ years of data insights, expert coaches and access to a proprietary lifestyle factor segmentation, Livongo will now empower more people to better manage their nutrition and weight and make it easier to stay healthy.
+
+As of today, Livongo&apos;s signature offerings include Livongo for Diabetes, Livongo for Hypertension, and the newly offered Livongo Diabetes Prevention Program (DPP) Powered by Retrofit
+
+I would love to discuss more about Livongo DPP Powered by Retrofit and how Livongo is continually focused on building comprehensive consumer platform that cares for the whole person: physically, mentally, and emotionally.
+
+Thanks!
+
+Jim
+
+Jim Hartman
+Vice President of Sales, Health Systems
+Livongo
+m: 813-476-4188
+e: jhartman@livongo.com
+a:  444 N. Michigan Ave. Ste 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

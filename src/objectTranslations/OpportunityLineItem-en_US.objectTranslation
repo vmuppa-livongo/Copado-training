@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity Program</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity Programs</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Expected Program Amount</value>
+        </caseValues>
+        <name>opportunity_expected_product_amount</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Opportunity Program Description</value>
+        </caseValues>
+        <name>opportunity_product_description</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Opportunity Program Information</value>
+        </caseValues>
+        <name>opportunity_product_information</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Opportunity Program Report</value>
+        </caseValues>
+        <name>opportunity_product_report</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Program Term</value>
+        </caseValues>
+        <name>quantity_opportunitylineitem</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Bypass Sales Price Validation --></label>
+        <name>Bypass_Sales_Price_Validation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please refer to the ipos daily snapshot email. --></help>
+        <label><!-- Currently Enrolled Members --></label>
+        <name>Currently_Enrolled_Members__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated At-Risk PPPM --></label>
+        <name>Estimated_At_Risk_PPPM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Partner Admin Fees --></label>
+        <name>Estimated_Partner_Admin_Fees__c</name>
+    </fields>
+    <fields>
+        <help><!-- Do not use this field unless this is either a renewal opportunity, or a Whole Person Solution upgrade of an existing client to the Whole Person Solution of that product. Ex. Current DM customer is upgrading to DM 360 --></help>
+        <label><!-- Exclude Enrollment % --></label>
+        <name>Exclude_Enrollment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Program ARR Copy --></label>
+        <name>Gross_Program_ARR_Copy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Program ARR --></label>
+        <name>Gross_Program_ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Program EVA Copy --></label>
+        <name>Gross_Program_TCV_Copy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gross Program EVA --></label>
+        <name>Gross_Program_TCV__c</name>
+    </fields>
+    <fields>
+        <help><!-- The delta between the new WP Sales Price and Standalone Sales Price --></help>
+        <label><!-- Incremental Sales Price --></label>
+        <name>Incremental_Sales_Price__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checked by default.  When checked, will sync with Redshift &amp; Netsuite.  If an Opportunity with a Program is added to a Contract with an existing Opportunity and matching Program (Renewals, Expansions), UNCHECK this field on the OLD Opportunity Program. --></help>
+        <label><!-- Integrate Program --></label>
+        <name>IntegrateProgram__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated myStrength OLI --></label>
+        <name>Migrated_myStrength_OLI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Program TCV Copy --></label>
+        <name>Net_Program_TCV_Copy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Program TCV --></label>
+        <name>Net_Program_TCV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Product Name --></label>
+        <name>OpportunityProductName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Owner Role --></label>
+        <name>Opportunity_Owner_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Product ID --></label>
+        <name>Opportunity_Product_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Type --></label>
+        <name>Opportunity_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner of Opportunity --></label>
+        <name>Owner_of_Opportunity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only used for BH 2.0 product --></help>
+        <label><!-- PMPM --></label>
+        <name>PMPM__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO#_WholePerson --></label>
+        <name>PO_WholePerson__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Book ID --></label>
+        <name>Price_Book_ID__c</name>
+        <relationshipLabel><!-- Opportunity Program --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Updating Pricing Structure will overwrite the Sales Price, Estimated At-Risk PPPM, Estimated Partner Admin Fees, and Up Front Per Member fields. --></help>
+        <label><!-- Pricing Structure --></label>
+        <lookupFilter>
+            <errorMessage><!-- Pricing Structure is not available. --></errorMessage>
+        </lookupFilter>
+        <name>Pricing_Structure__c</name>
+        <relationshipLabel><!-- Opportunity Program --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Record type of the Program (e.g. Livongo for Diabetes is a &apos;Primary&apos; program; Livongo for Diabetes - Upfront Meter is a &apos;Secondary&apos; program). --></help>
+        <label><!-- Product Record Type --></label>
+        <name>ProductRecordType__c</name>
+    </fields>
+    <fields>
+        <help><!-- For new opportunities, enter estimated recruitables or rPwX. For renewals, enter enrolled members. --></help>
+        <label><!-- Program Participants (rPwX or Enrolled) --></label>
+        <name>Product_Participants__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Record Type --></label>
+        <name>Product_Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program ARR Copy --></label>
+        <name>Program_ARR_Copy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Program ARR --></label>
+        <name>Program_ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Family --></label>
+        <name>Program_Family__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program ID --></label>
+        <name>Program_ID__c</name>
+        <relationshipLabel><!-- Opportunity Program --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Commissionable Price --></label>
+        <name>Sales_Commissionable_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Up Front Per Member --></label>
+        <name>Up_Front_Per_Member__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is the year 2+ maintenance price. This currently only applies to Weight Management/Diabetes Prevention. You need to enter this in order for the DPP ROI model to properly populate --></help>
+        <label><!-- Year 2+ Price --></label>
+        <name>Year_2_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Item --></label>
+        <name>netsuite_conn__Discount_Item__c</name>
+        <relationshipLabel><!-- Opportunity Product --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>netsuite_conn__End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- From Contract Item Id --></label>
+        <name>netsuite_conn__From_Contract_Item_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Category --></label>
+        <name>netsuite_conn__Item_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Rate --></label>
+        <name>netsuite_conn__List_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Item Id [Import] --></label>
+        <name>netsuite_conn__NetSuite_Item_Id_Import__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Item Key Id --></label>
+        <name>netsuite_conn__NetSuite_Item_Key_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pushed From NetSuite --></label>
+        <name>netsuite_conn__Pushed_From_NetSuite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>netsuite_conn__Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term / Contract Pricing Type --></label>
+        <name>netsuite_conn__Term_Contract_Pricing_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Term --></label>
+        <name>netsuite_conn__Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Entered Sales Price --></label>
+        <name>netsuite_conn__User_Entered_Sales_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include Content --></label>
+        <name>tinderbox__Include_Content__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please add a Pricing Structure to update the sales price --></errorMessage>
+        <name>Cannot_Change_Price_without_Structure</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Existing Enrolled Program Participants and Incremental Sales Price cannot be edited for non Whole Person Solutions. --></errorMessage>
+        <name>Cannot_Update_Incre_Price_Enrolled_Parti</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Initial Sales Price must be 0. Please use the lookup &quot;Pricing Structure&quot; to alter this Sales price. Prices can be updated after creation. --></errorMessage>
+        <name>Initial_Price_must_be_0</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- PMPM should only be entered for Behavioral Health products --></errorMessage>
+        <name>PMPM_only_for_BH_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You&apos;re attempting to update the Sales Price outside of the defined range for this program. Please contact your Sales Admin to request an exception. --></errorMessage>
+        <name>Pricing_Must_be_in_Range</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You&apos;re attempting to update the Sales Price outside of the defined range for this program. --></errorMessage>
+        <name>WP_Programs_Pricing_Must_be_in_Range</name>
+    </validationRules>
+</CustomObjectTranslation>

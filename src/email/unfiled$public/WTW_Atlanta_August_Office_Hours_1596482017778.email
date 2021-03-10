@@ -1,0 +1,112 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <p class="p1"><span style="font-size: 12px; font-family: Arial, Helvetica, sans-serif; caret-color: rgb(0, 0, 0);">Hello&nbsp;{{{Recipient.FirstName}}},&nbsp;</span></p> 
+  <p class="p1"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">I hope you had a nice weekend! It was brought to my attention that some people were unable to access the link to register for the August office hours. Please find the Zoom meeting credentials below. This dial in can be used for both dates.</span></span></p> 
+  <p class="p1"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; float: none; display: inline !important;">Tuesday, August 4</span><sup style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">th</sup><span class="apple-converted-space" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">&nbsp;</span><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; float: none; display: inline !important;">at 10am EST and Tuesday, August 18, at 10am EST</span></span></span></p> 
+  <p class="MsoNormal" style="caret-color: rgb(0, 0, 0);font-variant-caps: normal;
+orphans: auto;text-align:start;widows: auto;-webkit-text-size-adjust: auto;
+-webkit-text-stroke-width: 0px;word-spacing:0px"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="display: none;">&nbsp;</span><span style="font-size:12px;"><span style="color:black">Join Zoom Meeting</span></span><span style="color:black"> </span></span><br /> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><span style="color:black"><span style="color:#0563C1"><a href="https://livongo.zoom.us/j/5128392717" title="https://livongo.zoom.us/j/5128392717">https://livongo.zoom.us/j/5128392717</a></span></span></span></span><br /> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><span style="color:black">Meeting ID: 512 839 2717</span></span></span></p> 
+  <p class="MsoNormal" style="caret-color: rgb(0, 0, 0);font-variant-caps: normal;
+orphans: auto;text-align:start;widows: auto;-webkit-text-size-adjust: auto;
+-webkit-text-stroke-width: 0px;word-spacing:0px"><br /> <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">In good health,<br /> <br /> Heather Wakefield &amp; Jim Robson</span></span></p> 
+  <p class="MsoNormal" style="caret-color: rgb(0, 0, 0);font-variant-caps: normal;
+orphans: auto;text-align:start;widows: auto;-webkit-text-size-adjust: auto;
+-webkit-text-stroke-width: 0px;word-spacing:0px">&nbsp;</p> 
+  <style type="text/css"><!--
+ /* Font Definitions */
+ @font-face
+           {font-family:"Cambria Math";
+           panose-1:2 4 5 3 5 4 6 3 2 4;
+           mso-font-charset:0;
+           mso-generic-font-family:roman;
+           mso-font-pitch:variable;
+           mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+           {font-family:Calibri;
+           panose-1:2 15 5 2 2 2 4 3 2 4;
+           mso-font-charset:0;
+           mso-generic-font-family:swiss;
+           mso-font-pitch:variable;
+           mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+           {mso-style-unhide:no;
+           mso-style-qformat:yes;
+           mso-style-parent:"";
+           margin:0in;
+           mso-pagination:widow-orphan;
+           font-size:12.0pt;
+           font-family:"Calibri",sans-serif;
+           mso-ascii-font-family:Calibri;
+           mso-ascii-theme-font:minor-latin;
+           mso-fareast-font-family:Calibri;
+           mso-fareast-theme-font:minor-latin;
+           mso-hansi-font-family:Calibri;
+           mso-hansi-theme-font:minor-latin;
+           mso-bidi-font-family:"Times New Roman";
+           mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+           {mso-style-noshow:yes;
+           mso-style-priority:99;
+           color:#0563C1;
+           mso-themecolor:hyperlink;
+           text-decoration:underline;
+           text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+           {mso-style-noshow:yes;
+           mso-style-priority:99;
+           color:#954F72;
+           mso-themecolor:followedhyperlink;
+           text-decoration:underline;
+           text-underline:single;}
+span.EmailStyle16
+           {mso-style-type:personal;
+           mso-style-noshow:yes;
+           mso-style-unhide:no;
+           mso-ansi-font-size:11.0pt;
+           mso-bidi-font-size:11.0pt;
+           font-family:"Calibri",sans-serif;
+           mso-ascii-font-family:Calibri;
+           mso-ascii-theme-font:minor-latin;
+           mso-fareast-font-family:Calibri;
+           mso-fareast-theme-font:minor-latin;
+           mso-hansi-font-family:Calibri;
+           mso-hansi-theme-font:minor-latin;
+           mso-bidi-font-family:"Times New Roman";
+           mso-bidi-theme-font:minor-bidi;
+           color:windowtext;}
+span.apple-converted-space
+           {mso-style-name:apple-converted-space;
+           mso-style-unhide:no;}
+.MsoChpDefault
+           {mso-style-type:export-only;
+           mso-default-props:yes;
+           font-size:12.0pt;
+           mso-ansi-font-size:12.0pt;
+           mso-bidi-font-size:12.0pt;
+           font-family:"Calibri",sans-serif;
+           mso-ascii-font-family:Calibri;
+           mso-ascii-theme-font:minor-latin;
+           mso-fareast-font-family:Calibri;
+           mso-fareast-theme-font:minor-latin;
+           mso-hansi-font-family:Calibri;
+           mso-hansi-theme-font:minor-latin;
+           mso-bidi-font-family:"Times New Roman";
+           mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+           {size:8.5in 11.0in;
+           margin:1.0in 1.0in 1.0in 1.0in;
+           mso-header-margin:.5in;
+           mso-footer-margin:.5in;
+           mso-paper-source:0;}
+div.WordSection1
+           {page:WordSection1;}
+-->
+
+
+  </style>
+ </body>
+</html>

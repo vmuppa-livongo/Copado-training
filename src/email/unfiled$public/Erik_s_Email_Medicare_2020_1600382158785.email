@@ -1,0 +1,35 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">Hi {{{Recipient.FirstName}}},</span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">I’m sure you and your team have been thinking about the value of remote patient monitoring for your senior members. We’ve been working closely with health plan leaders on their RPM/virtual care strategy.</span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">Livongo is producing great results for our Medicare partners:</span></span></span> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; High member engagement with an avg. of 18+ checks a month</span></span></span> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; An A1C reduction of 1.1 in the first 6 months</span></span></span> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">•&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NPS scores of +58</span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">I have included a short PowerPoint illustrating our program and the results. The Medicare information starts on slide 9.</span></span></span> 
+  <br /> 
+  <br /> 
+  <a href="https://presentations.yesware.com/a7f739eeab23017b514704c65186f48fe85a9f3a/3e5c5a14a27636c4c3aa5574aaab5bae/fa3a0a051d5efda503b31d0e28eb6749"><span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">Livongo For Medicare</span></span></span></a> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">Could we schedule a 30 minute call to discuss your strategy in the next couple of weeks?</span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">Stay Healthy,</span></span></span> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black">Jorie Stavropoulos</span></span></span> 
+  <br /> &nbsp;
+ </body>
+</html>

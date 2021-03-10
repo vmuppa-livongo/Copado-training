@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Complimentary Pass to The Conference Board 2019</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>181112 The Conference Board Invitation with Complimentary Pass</name>
+    <style>freeForm</style>
+    <subject>Be Our Guest at The Conference Board’s 2019 Employee Health Care Conference</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+We&apos;d like to offer you a complimentary pass to attend The Conference Board&apos;s 2019 Employee Health Care Conference being held March 19-20 in San Diego or April 4-5 in New York.
+
+
+Join industry leaders and your peers to learn about purpose-driven health care strategies and tactics that propel positive business outcomes and enhance the employee experience.
+
+
+Your complimentary registration, valued at $2,895, also includes the pre-conference workshop: The Journey to Something Better – The Life Cycle of Benefits Delivered Through Great Experiences, running 1 – 5 pm, March 18 in San Diego and April 3 in New York.
+
+
+
+If you&apos;d like to be our guest and take advantage of this complimentary pass, please
+
+1. let me know what city you’d like to travel to
+
+2. let me know if you’d also like to attend the pre-conference workshop
+
+3. include your contact details referenced below.
+
+a. Name
+
+b. Title
+
+c. Company
+
+d. Mailing Address (HQ is fine)
+
+e. Phone
+
+f. Email
+
+
+
+We will have you registered through The Conference Board and you will receive a confirmation directly from their customer service team.
+
+
+
+Best,
+
+[Rep Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

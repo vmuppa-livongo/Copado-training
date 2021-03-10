@@ -1,0 +1,224 @@
+<apex:page sidebar="false" showHeader="true" Controller="JBCXM.SurveyController" tabStyle="Survey__tab">
+    <!--<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-1.7.1.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-ui-1.8.18.custom.min.js'))}"/>
+   	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'jqGridLatest/js/i18n/grid.locale-en.js'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'jqGridLatest/js/jquery.jqGrid.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'js/jqgrid.Custom.Utility.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyUtil,'SurveyUtil.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.jqGrid, 'css/ui.jqgrid.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.SurveyJquery, 'css/redmond/jquery-ui-1.8.18.custom.css'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.CustomJS, 'CustomJS/date.format.js'))}" />
+    <style type="text/css">
+    	.gridLinkPreviewSurveyRes {
+			background:url("/img/icon/contracts16.png") no-repeat;
+		    background-position:center;	
+		    padding:10px;
+		    text-decoration:none;
+		    cursor:pointer;		     
+		}
+		.infoImageClass{
+            background-image: url('/img/msg_icons/info32.png');
+	        width:32px;
+	        height:32px;
+	        display:inline-block;
+        }
+        
+        a.surveyParticipantResponsePreviewLInk {
+			text-decoration:none;
+		}        
+    </style>
+    <script type="text/javascript">
+        var j$ = jQuery.noConflict();
+        j$.jgrid.no_legacy_api = true;
+        j$.jgrid.useJSON = true;    
+        var actualResponsesListJsonData;
+        var testResponseListJsonData;
+        var surveyId;
+        var responsedSurveyParticipantPropertiesList, responsedSurveyParticipantPropertiesObj;
+       	var userLocaleDateFormatMap,jqGridDateFormat,jqGridDateTimeFormat;
+        j$(document).ready(function(){
+        	userLocaleDateFormatMap =eval({!(userLocaleDateFormatMap)});
+			jqGridDateFormat 		=JBARAjqGridDateFormat(userLocaleDateFormatMap);
+			jqGridDateTimeFormat 	=JBARAjqGridDateTimeFormat(userLocaleDateFormatMap);
+			buildResponsesGird();
+		   if(testResponseListJsonData.length>0){
+	       		j$(".filterContainer").show();
+	       		j$(".surveyResponseFilters").show();	       		
+	       }
+	       
+	       
+        });
+		
+		/**
+		*Javascript Object to store the survey paricipant details properties.
+		*/ 
+		function ResponsedSurveyParticipantPropertiesClass(data) {
+		    this.Customer_link          			= data.Customer_link;
+		    this.DisplayName__c			         	= data.DisplayName__c;
+		    this.SentEmail__c                 		= data.SentEmail__c;
+		    this.Role__c				        	= data.Role__c;
+		    this.EmailSentDate__c				    = data.EmailSentDate__c;
+		    this.ResponseDate__c				    = data.ResponseDate__c;
+		    this.User_response_preview              = data.User_response_preview;
+		}
+		
+		function getResponsedSurveyParticipantPropertiesList(rawData) {
+			responsedSurveyParticipantPropertiesList = new Array();
+			for(var p = 0; p < rawData.length; p++) {
+				responsedSurveyParticipantPropertiesObj = new ResponsedSurveyParticipantPropertiesClass({
+					Customer_link 			: (rawData[p].Account__r == null) ? '' : ('<a title=\''+ (rawData[p].Account__r.Name).replace(/'/g, "&rsquo;") +'\' href=\'CustomerSuccess360?cid='+ rawData[p].Account__r.Id +'\' target=\'_top\'>'+ (rawData[p].Account__r.Name) +'</a>'),
+					DisplayName__c 			: rawData[p].DisplayName__c,
+					SentEmail__c 			: rawData[p].SentEmail__c,
+					Role__c 				: rawData[p].Role__c,
+					EmailSentDate__c 		: (rawData[p].EmailSentDate__c != null) ? JBARAAddOffSetTime(rawData[p].EmailSentDate__c,userLocaleDateFormatMap) : rawData[p].EmailSentDate__c,
+					ResponseDate__c 		: (rawData[p].ResponseDate__c != null) ? JBARAAddOffSetTime(rawData[p].ResponseDate__c,userLocaleDateFormatMap) : rawData[p].ResponseDate__c,
+					User_response_preview	: (rawData[p].Responsed__c) ? "<a href=SurveyResponsePreview?surveyId="+surveyId+"&participantId="+rawData[p].Id+" title='Preview' target ='_blank' class='surveyParticipantResponsePreviewLInk'><span class='gridLinkPreviewSurveyRes'>&nbsp;</span></a>" : "NA"
+				});
+				responsedSurveyParticipantPropertiesList.push(responsedSurveyParticipantPropertiesObj);
+			}
+			return responsedSurveyParticipantPropertiesList;
+		}
+   	
+	    
+		function bindSurveyTestResponsesListGrid(data) {
+	        var customDateFrmt = 'm/d/Y';
+	        var listData = data;
+	        var arrCols = getSurveyResponsesListColumns();
+	        var screenWidth = screen.width - 30;
+	        var gridParam = {
+	            'Id': 'SurveyTestResponsesList',
+	            'colnames': arrCols[0],
+	            'colmodel': arrCols[1],
+	            'data': listData,
+	            'pagerId': 'plistSurveyTestResponsesList',
+	            'sort': {
+	                'name': arrCols[2].name,
+	                'order': arrCols[2].order
+	            },
+	            'width': screenWidth-20,
+	            'height': '100%',
+	            'disableAutofilter': true,
+	            'userLocaleDateFormatMap' : userLocaleDateFormatMap  
+	        }
+	        j$("#SurveyTestResponsesList").html("");
+	        buildjqGrid('containerSurveyTestResponsesList', gridParam);
+	        j$(".ui-pg-div").hide();
+	        j$("#SurveyTestResponsesList").find("td").css({
+	            "overflow": "hidden",
+	            "white-space": "pre"
+	        });
+	        j$("#gbox_SurveyTestResponsesList").addClass("ui-corner-all ui-corner-bottom ui-corner-right");
+
+	    }	    
+	    
+    
+    	
+    	
+    	    //Construct all grid columns as an array
+	    function getSurveyResponsesListColumns(sortCol,sortOrder) {
+	        var colArray=new Array();
+	        var  colNames,colModel;
+	        colNames=['Account', 'Name', 'Email', 'Role', 'Sent ', 'Responded ', 'View']; 
+	        colModel=[
+	        		  {name:'Customer_link', width:150, searchoptions :{sopt:['cn']}},
+	                  {name:'DisplayName__c', index:'DisplayName__c', width:150, searchoptions :{sopt:['cn']}},
+	                  {name:'SentEmail__c', index:'SentEmail__c',width:180, searchoptions :{sopt:['cn']}},
+	                  {name:'Role__c', width:100, searchoptions :{sopt:['cn']}},
+	                  {name:'EmailSentDate__c', width:150, sorttype:'datetime', datefmt:'ISO8601Long', 'formatter':'date','formatoptions':{'srcformat': 'ISO8601Long', 'newformat':jqGridDateTimeFormat}},
+	                  {name:'ResponseDate__c', width:150, sorttype:'datetime', datefmt:'ISO8601Long', 'formatter':'date','formatoptions':{'srcformat': 'ISO8601Long', 'newformat':jqGridDateTimeFormat}},
+	                  {name:'User_response_preview', index:'User_response_preview', width:50,sortable: false, search:false, resizable:false}                
+	        ];
+	        sort={'name':sortCol ,'order': sortOrder};        
+	        colArray.push(colNames);
+	        colArray.push(colModel);
+	        colArray.push(sort);
+	        return colArray;
+	        
+	    }
+	    
+	</script>
+    
+    <apex:outputPanel id="suveyJSPanel">
+    	<script type="text/javascript">
+	    	function buildResponsesGird(){
+	        	testResponseListJsonData = eval({!(TestParticipantsJson)});        	
+	        	surveyId = "{!(surveyId)}";	        	
+	        	testResponseListJsonData = getResponsedSurveyParticipantPropertiesList(testResponseListJsonData);
+	           			j$(".message").hide();
+	       	   			loadResponseList(testResponseListJsonData);
+	       	   			if(testResponseListJsonData.length>0){
+       	   				j$("#btnDeleteTestResponse").removeAttr("disabled");
+	       	   				
+	       	   			}
+	       	}
+	    	
+    	</script>
+    </apex:outputPanel>
+    <apex:outputPanel id="suveyResponseJSPanel">
+    	<script type="text/javascript">
+   		   function loadResponseList(dataResponses){
+				if(dataResponses.length>0){
+						j$("#noSurveyResponsesMessage").hide();	                
+	                	j$("#containerSurveyTestResponsesList").show();
+	                	bindSurveyTestResponsesListGrid(testResponseListJsonData);
+	                	j$("#btnDeleteTestResponse").removeAttr("disabled","disabled");
+	            
+	            }
+	            else {
+	                j$("#noSurveyResponsesMessage").show();
+	                j$("#containerSurveyTestResponsesList").hide();
+	                j$("#btnDeleteTestResponse").attr("disabled","disabled");
+	            }
+	            
+			}
+			function deleteTestResponses(){
+				if (confirm('Are you sure ?')){
+					deleteTestParticipants(surveyId);
+				}
+			}
+		
+			function afterTestResponsesDelete(){
+					if({!validFlag} == true){
+						j$("#btnDeleteTestResponse").hide();
+						j$("#containerSurveyTestResponsesList").hide();
+					}
+			}
+	    	
+    	</script>
+    </apex:outputPanel>
+    	
+	<apex:sectionHeader title="Survey Responses" subtitle="{!surveyTitle}"/> 
+	 <a href="/apex/surveyList" style="text-decoration:none;height:25px;display:inline-block;">&nbsp;«&nbsp;Back</a>
+	<apex:form >
+	<apex:pageMessages id="jbaraResponsesErrorMessages" />
+    	<div id="responseContainerList">
+    		<div class="filterContainer" style="padding-right: 5px;float:right;height:20px;display:none;">
+				<input id="btnDeleteTestResponse" type="button" value="Delete Test Responses" onClick="deleteTestResponses();"/>
+			</div>
+			<div id="dummyDiv" style="clear:both;height:8px;"></div>
+    			<div id='containerSurveyTestResponsesList' class="ui-widget ui-corner-all" ></div>
+      		
+    	</div>
+    	
+     
+     	<div align="center" id='noSurveyResponsesMessage'  style="display:none;"> 
+     		<div class="ui-widget ui-widget-content ui-corner-all " style="width:70%;padding:10px;">   		
+	     		<span class="infoImageClass">&nbsp;</span>
+	            <span style="font-size: 110%;vertical-align:bottom; font-weight: bold;line-height: 32px;">
+	                There are no survey responses....
+	            </span> 
+            </div> 
+   		</div>    
+  		
+  		
+		
+  		
+  		<apex:actionFunction action="{!deleteTestResponses}" name="deleteTestParticipants" reRender="suveyResponseJSPanel,jbaraResponsesErrorMessages" onComplete="afterTestResponsesDelete();" >
+		    <apex:param name="fromSurveyId" value="" />
+		</apex:actionFunction>
+  		
+  			
+	</apex:form>-->
+	
+	
+</apex:page>

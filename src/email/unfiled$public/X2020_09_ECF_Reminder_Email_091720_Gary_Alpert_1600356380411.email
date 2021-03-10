@@ -1,0 +1,34 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  &nbsp; 
+  <div style="width: 600px; margin: 0px auto; text-align: center;"> 
+   <img alt="2020_Livongo_Executive_Client_Forum" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/X2020_Livongo_Executive_Client_Forum?oid=00D4600000180Lw" style="max-width: 600px" title="2020_Livongo_Executive_Client_Forum" /> 
+  </div> &nbsp; 
+  <div style="width: 600px; margin: 0px auto;"> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},&nbsp;<br /> <br /> I am following up to ask for your RSVP to Livongo’s upcoming </span></span> 
+   <a href="https://livongoecf.splashthat.com/" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold;">invitation-only Executive Client Forum</a>. 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>&nbsp;</b>As a senior executive at a select group of Livongo's key clients, you are very important to Livongo, and we really hope you can join us!<br /> <br /> At this special event, we will bring you up to speed on the latest news at Livongo, including our recently announced merger with Teladoc, and provide you with an opportunity to hear from Livongo's&nbsp;executive&nbsp;team, including our CEO and President.&nbsp; We will be sharing the latest information on our upcoming product road map and newest areas of focus, as well as dive into data-driven clinical insights,&nbsp;as Members navigate chronic conditions during this challenging time. Most importantly, we want to hear from you about what is most important to you and your employees, today and in the year ahead.<br /> <br /> We will also take time for a little entertainment and have several interactive experiences including a cooking demonstration with an award-winning writer, tastemaker and curator of good living and a performance by a famous, well known artist.&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></span> 
+  </div> &nbsp; 
+  <div style="width: 600px; margin: 0px auto;"> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Meeting Details</b></span></span> 
+   <ul> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Date: Tuesday, September 29</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Meeting Time: 2:00 PM – 6:00 PM CDT</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Attendance: By Invitation Only&nbsp;</span></span></li> 
+   </ul> 
+   <p dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">We would like to provide you with a pre-meeting package and <a href="https://livongoecf.splashthat.com/">kindly request your RSVP</a> as soon as possible, ideally no later than September 20, to ensure the delivery arrives on time.&nbsp;&nbsp;</span></span></p> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Please don’t hesitate to reach out with any questions. And as always, thank you for the privilege of working together!<br /> <br /> Warm Regards,<br /> Gary&nbsp;<br /> <br /> <b>Gary Alpert</b><br /> SVP, Client Success<br /> Livongo<br /> (415) 328-4697<br /> <a href="mailto:galpert@livongo.com">galpert@livongo.com</a></span></span> 
+  </div> 
+  <br /> 
+  <b id="docs-internal-guid-893b7bb9-7fff-3b24-2f47-353efff0a46a">&nbsp; </b>
+ </body>
+</html>

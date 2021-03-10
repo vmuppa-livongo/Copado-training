@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>CRM Requests response</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>CRM Request</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Open</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <replyToEmail>crmrequest@livongo.com</replyToEmail>
+            <senderEmail>sfdc-sales@livongo.com</senderEmail>
+            <senderName>No Reply - Livongo Salesforce</senderName>
+            <template>Automated_Email_Notifications/CRM_Case_Received</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

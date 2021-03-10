@@ -1,0 +1,281 @@
+<!-- Copyright (c) 2011 JBara Software, Inc.  
+---- Purpose                    : Displays all feature usage summary of a customer.
+---- Other comments (optional)  : User can see all the Feature Usage for customer.
+----
+-->
+<apex:page sidebar="false" tabStyle="Insights__tab" Controller="JBCXM.CustomerFeatures">
+     <!-- Static Resource Includes: Jquery and css files  -->
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid, 'css/ui.jqgrid.css'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'js/i18n/grid.locale-en.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'js/jquery.jqGrid.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'js/jqgrid.Custom.Utility.js'))}"/>        
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+	
+    <style>
+      	
+	    .featuresAlign{
+	    	 text-align: center;
+	    } 
+	    .featuresTd,.featurestableth{
+	    	padding:3px;
+	    }
+	    .featurestableth{ 
+	    	border: 1px solid #C5DBEC;
+	    }
+	    .ui-widget-content {
+	    	font-size:1em;
+	    }
+    </style>    
+    <script type="text/javascript" >
+    	var j$ = jQuery.noConflict();
+    	j$(document).ready(function() {
+    		j$(".featurestableDiv tr:odd").css("background-color", "#F5FAFE");    		
+    	});
+    </script>
+ 
+    <div class="bPageBlock bEditBlock secondaryPalette" style='min-width:500px;max-width:100%;background-color: #FFFFFF;'
+		 	 id="jbaracustomerByFeaturePage">
+            <div class="pbHeader" style='height:30px;padding-left:5px;color:#000;background-color: #FFFFFF;'>
+            	<img class="jbarahideListButton dummyHideFeatureUsageSummaryIcon" title="Hide Feature Usage Summary"
+				            style="cursor: pointer;" onclick="togglePanels('dummyHideFeatureUsageSummaryIcon','dummyFeatureUsageSummaryDetail');"
+				            src="/s.gif" />                
+                <h2>
+                   Feature Usage Summary
+                </h2>
+                <div style="clear:both;display:inline-block;Font-weight:bold;float:right;margin-right:20px;">
+                            Active Customers :  {!ActiveCustomersCount}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active Customers With Feature Data  :{!ActiveCustomersCountWithFeatures}
+                    </div>  
+            </div>
+            <div class="pbBody dummyFeatureUsageSummaryDetail" style="height:auto;max-width:100%;padding: 10px;background-color: #FFFFFF;">
+				
+				<div class="dummyFeaturesDetail" style='padding:0px 4px 4px 10px'>
+                     <apex:outputPanel rendered="{!CustomerFeaturesUsageSummary.size=0}">
+                    No Features found.
+                </apex:outputPanel>
+				
+				<apex:form >
+					<apex:actionFunction name="onclickCustomerFeatures" action="{!virtualRerenderFeatures}" reRender="customerFeaturesPanel" oncomplete="return buildCustomerFeaturesGrid();" >
+						<apex:param name="paramProductFeatureId" value="" />
+						<apex:param name="byProductName" value="" />
+					</apex:actionFunction>
+				</apex:form>
+				
+                <!--Output panel rendered when the active Features count is more than 0-->
+                <apex:outputPanel rendered="{!CustomerFeaturesUsageSummary.size!= 0}">
+                        <table class="featurestable ui-state-default" align="center" width="100%" style="border-collapse:collapse;table-layout:fixed ;">
+                            <thead>
+                                <tr>
+                                    <td class="featurestableth featuresTdName" style="border-Right:none;"></td>
+                                    <td class="featurestableth featuresTdName" style="border-left:none;"></td>
+                                    <td class="featurestableth featuresTdName featuresAlign" colspan="2" >Licensed</td>
+                                    <td class="featurestableth featuresTdName featuresAlign" colspan="2">Enabled</td>
+                                </tr>
+                                <tr>
+                                    <td class="featurestableth featuresTdName">Product</td>
+                                    <td class="featurestableth featuresTdName">Feature</td>
+                                    <td class="featurestableth featuresTdName featuresAlign"># Customers</td>
+                                    <td class="featurestableth featuresTdName featuresAlign"> %</td>
+                                    <td class="featurestableth featuresTdName featuresAlign"># Customers</td>
+                                    <td class="featurestableth featuresTdName featuresAlign"> %</td>
+                                </tr>
+                                
+                            </thead>
+                        </table>
+                    <div align="center" class="featurestableDiv" id="jbaraFeaturesUsageScroller" style="border-collapse:collapse;max-height:300px;overflow:auto; border-bottom: 1px solid #C5DBEC;">
+                        <table class="featurestable" align="center" width="100%" style="table-layout:fixed ;border: 1px solid #C5DBEC;border-top:none;" border="0">                            
+                            <tbody>
+                                 <apex:repeat value="{!CustomerFeaturesUsageSummary}" var="FeaturesUsageSummary">
+                                 
+                                    <tr>
+                                        <td class="featuresTd featuresTdName" valign="top">
+                                           <apex:outputtext rendered="{!If(FeaturesUsageSummary.product!='',true,false)}">
+                                            <a href="#"  style="cursor: pointer;" onclick="refreshCustomerFeaturesGrid('{!(FeaturesUsageSummary.featureId)}','true');return false;" >{!(FeaturesUsageSummary.product)}</a>
+                                           </apex:outputtext> 
+                                        </td>
+                                        <td class="featuresTd featuresTdName" valign="top" style="cursor: pointer;">
+                                            
+                                            <a href="#"  style="cursor: pointer;"  onclick="refreshCustomerFeaturesGrid('{!(FeaturesUsageSummary.featureId)}','false');return false;" >{!(FeaturesUsageSummary.feature)}</a>
+                                        </td>
+                                        <td class="featuresTd featuresTdName featuresAlign" valign="top">
+                                            {!FeaturesUsageSummary.licCustCount}
+                                        </td>
+                                        <td class="featuresTd featuresTdName featuresAlign" valign="top">
+                                            {!FeaturesUsageSummary.licCustPercent}
+                                        </td>                                           
+                                        <td class="featuresTd featuresTdName featuresAlign" valign="top">
+                                            {!FeaturesUsageSummary.enabCustCount}
+                                        </td>                                           
+                                        <td class="featuresTd featuresTdName featuresAlign" valign="top">
+                                            {!FeaturesUsageSummary.enabCustPercent}
+                                        </td>                                       
+                                    </tr>
+                                 </apex:repeat>
+                        </tbody>
+                        </table>                                            
+                    </div>
+                        
+                 </apex:outputPanel>                   
+                </div>	
+					
+				
+				
+		<script type="text/javascript">
+	    	var j$ = jQuery.noConflict();
+			j$.jgrid.no_legacy_api = true;
+			j$.jgrid.useJSON = true;
+			
+			var currencyConfigObject = eval({!(currencyConfigJSON)});
+			// We use a document ready jquery function.
+			function refreshCustomerFeaturesGrid(id, byproduct) {
+			    j$('.headerFeatureByCustomer').hide();
+			    j$('#containerCustomerFeaturesList').hide();
+			    j$('.analyticsAjaxLoadingButton').show();
+			    onclickCustomerFeatures(id, byproduct);
+			}
+			
+			function bindCustomerFeaturesGrid(data) {
+			    var customDateFrmt = 'm/d/Y';
+			    var listData = data;
+			    var arrCols = getCustomerFeaturesColumns();
+			    var screenWidth = screen.width - 60;
+			    var gridParam = {
+			        'Id': 'CustomerFeaturesList',
+			        'colnames': arrCols[0],
+			        'colmodel': arrCols[1],
+			        'data': listData,
+			        'pagerId': 'plistCustomerFeaturesList',
+			        'sort': {
+			            'name': arrCols[2].name,
+			            'order': arrCols[2].order
+			        },
+			        'width': screenWidth - 39,
+			        'height': 300,
+			        'gridComplete': funToCallAfterGridComplete
+			    }
+			    j$('#containerCustomerFeaturesList').show();
+			    buildjqGrid('containerCustomerFeaturesList', gridParam);
+			    j$(".ui-pg-div").hide();
+			    j$("#CustomerFeaturesList").find("td").css({
+			        "overflow": "hidden",
+			        "white-space": "pre"
+			    });
+			
+			    j$("#gbox_CustomerFeaturesList").removeClass("ui-corner-all").addClass("ui-corner-bottom");
+			    j$(".dummyGridTitleBar").css({
+			        "width": parseInt(screenWidth) - 49.5
+			    });
+			    j$('.analyticsAjaxLoadingButton').hide();
+			}
+			
+			function funToCallAfterGridComplete() {
+			    setCustomerFeaturesGridWrapping();
+			    j$('.analyticsAjaxLoadingButton').hide();
+			
+			    //To update or format the nps data.
+			    var formattedValue;
+			    j$("#CustomerFeaturesList").find("tr.jqgrow  td.NPScoreCls").each(function () {
+			        if (j$.trim(j$(this).text()).length > 0) {
+			            if (parseInt(j$(this).text().split(".")[1]) <= 0) {
+			                j$(this).text(j$(this).text().split(".")[0]);
+			                formattedValue = parseFloat(j$(this).text());
+			                if (formattedValue <= 6) {
+			                    j$(this).css("background", "#FF3737");
+			                } else if (formattedValue > 6 && formattedValue <= 8) {
+			                    j$(this).css("background", "#FFBC41");
+			                } else {
+			                    j$(this).css("background", "#66CC00");
+			                }
+			            }
+			        }
+			    });
+			
+			}
+			
+			//Attach click event to toggle wrapping in grid.
+			function setCustomerFeaturesGridWrapping() {
+			    if (j$("#CustomerFeaturesChkWrapText").attr("checked") == true) {
+			        j$("#CustomerFeaturesList").find("td").css({
+			            "overflow": "auto",
+			            "white-space": "normal"
+			        });
+			    } else {
+			        j$("#CustomerFeaturesList").find("td").css({
+			            "overflow": "hidden",
+			            "white-space": "pre"
+			        });
+			    }
+			}	
+	
+			//Construct all grid columns as an array
+			function getCustomerFeaturesColumns() {
+				var colArray=new Array();
+				var  colNames,colModel;
+				colNames=['Customer','Inudstry','Original Contract Date','Lifetime','MRR','ASV','Users','Alerts','NPS']; 
+				colModel=[
+						  {name:'customerLink',index:'customerLink', width:150,searchoptions :{sopt:['cn']}},
+						  {name:'industry',index:'industry', width:140,searchoptions :{sopt:['cn']}},
+						  {name:'OCD', width:120,sorttype:'date',formatter:'date',
+		                            formatoptions:{srcformat: 'm/d/Y', newformat: 'm/d/Y'}},	
+						  {name:'lifetime',index:'LifeTime',sorttype:'number',width:80,align:'right',formatter:'integer',formatoptions:{thousandsSeparator: ","}},                  
+		                  {name:'MRR',index:'MRR', width:80,align:'right',sorttype:'float',formatter:'currency',formatoptions:{
+		                           thousandsSeparator: ",", decimalPlaces: 0, prefix: currencyConfigObject.symbol+" "}},
+		                  {name:'ASV',index:'ASV', width:120,align:'right',sorttype:'float',formatter:'currency',formatoptions:{
+		                           thousandsSeparator: ",", decimalPlaces: 0, prefix: currencyConfigObject.symbol+" "}},
+		                  {name:'users',index:'users',sorttype:'number',width:80,align:'right',formatter:'integer',formatoptions:{thousandsSeparator: ","}},
+		                  {name:'actAlertCount',index:'actAlertCount',sorttype:'number',width:80,align:'right'},
+		                  {name:'NPS',index:'NPS',sorttype:'number',width:80,align:'right', classes:"NPScoreCls"},
+				];
+				sort={'name':'Date','order':'desc'};
+				colArray.push(colNames);
+				colArray.push(colModel);
+				colArray.push(sort);
+				return colArray;
+			}
+		</script>
+	
+		<div style=" padding: 5px;">
+		    <apex:outputPanel id="customerFeaturesPanel">
+		        <apex:outputPanel id="jsCustomerFeaturesPanel" rendered="{!renderByFeatureOrProduct}">
+		            <script type='text/javascript'>
+		                function buildCustomerFeaturesGrid() {
+		                    var customersByFeatureData = eval({!(CustomersByFeature)});
+		                    CustomerFeaturesJsonData = eval(customersByFeatureData);
+		                    bindCustomerFeaturesGrid(CustomerFeaturesJsonData);
+		                    j$('.headerFeatureByCustomer').show();
+		
+		                    j$("#CustomerFeaturesChkWrapText").bind("click", function () {
+		                        setCustomerFeaturesGridWrapping();
+		                    });
+		
+		                }
+		            </script>
+		            
+		            <!--Checkbox to filter the customer types-->
+		            <div style="padding:5px 0 5px 6px;;min-height:100px;">
+			            <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top dummyGridTitleBar headerFeatureByCustomer"
+			            	style="padding: 5px;display:none;">
+			                <span style="width: 80%;font-size: 0.8em;font-weight: normal;" class="headerName">Customers By : {!custByFeatureHdrLbl}</span>
+			                <div style="right: 20px; display: inline; float: right; color:#FFF;font-weight: normal;font-size: 0.75em;">
+			                    <input type="checkbox" id="chkWrapText" />Wrap Lines&nbsp;&nbsp;</div>
+			            </div>
+			            <div id='containerCustomerFeaturesList'></div>
+		            </div>
+		            
+		        </apex:outputPanel>
+		        
+		        <div class="analyticsAjaxLoadingButton" align="center" style="padding:20px 0px 100px 0px; display:none;">
+		            <div class="waitingHolder" style="width: 74px; top: 25.8px;">
+		                <img src="/img/loading.gif" class="waitingImage" title="Please Wait..."/>
+		                <span class="waitingDescription">Loading...</span>
+		            </div>
+		        </div>
+		        
+		    </apex:outputPanel>
+		</div>
+	</div>
+</div>
+</apex:page>

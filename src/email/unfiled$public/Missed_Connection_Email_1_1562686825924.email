@@ -1,0 +1,16 @@
+<span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Hey {{{Recipient.FirstName}}},</span></span></span><br />
+<span style="font-size:11pt"><span style="font-family:Calibri,sans-serif">&nbsp;</span></span><br />
+<span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">I hope this email finds you well. I understand that it is a very busy time of the year in the benefit&rsquo;s world, but figured I would pass along a recent article published by&nbsp;<i>Inc Magazine</i>&nbsp;about Livongo Health. The article does a good job of providing a high level overview of our platform, and conveying the mission behind our company. We want to help people live healthier lives, while improving clinical results and financial outcomes. I highly recommend checking out the article if you have not been happy with the rising cost of healthcare within your client&rsquo;s organizations.</span></span></span><br />
+<br />
+<span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Most people spend 1% of their lives in the doctor&rsquo;s office. Taking this into consideration, our unique approach uses data science, connected technology, and 24/7 coaching to support the individual during the other 99% of their lives.</span></span></span><br />
+<br />
+<span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><b><span style="color:black">Do you have time in the next couple weeks to connect for a quick strategy phone call to see if we align with any initiatives you have with your clients?</span></b></span></span><br />
+<br />
+<span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black">Healthy regards,<br />
+<br />
+{{{Sender.Name}}}<br />
+<b>Product Awareness Manager</b></span><br />
+<span style="color:#2980b9;"><b>Livongo&nbsp;</b></span><br />
+<span style="color:black">m: 815.762.8188<br />
+e:&nbsp;jakers@livongo.com</span></span></span><br />
+&nbsp;

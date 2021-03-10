@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>talking points for health plan AEs</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_healthplan_Teladoc_AE_TP</name>
+    <style>none</style>
+    <subject>Exciting News - Teladoc and Livongo</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

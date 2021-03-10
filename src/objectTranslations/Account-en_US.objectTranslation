@@ -1,0 +1,2136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Account Filter Fields --></label>
+        <name>MC4SF__Account_Filter_Fields</name>
+    </fieldSets>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Account Status</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Account Statuses</value>
+        </caseValues>
+        <name>account_type</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <label><!-- ACA Population --></label>
+        <name>ACA_Population__c</name>
+    </fields>
+    <fields>
+        <label><!-- ASO Population --></label>
+        <name>ASO_Population__c</name>
+    </fields>
+    <fields>
+        <label><!-- Accessible lives --></label>
+        <name>Accessible_lives__c</name>
+    </fields>
+    <fields>
+        <help><!-- Complete this field if account needs to be cleaned / reviewed for prospecting. --></help>
+        <label><!-- Account Clean Request --></label>
+        <name>Account_Clean_Request__c</name>
+        <picklistValues>
+            <masterLabel>Contacts</masterLabel>
+            <translation><!-- Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Headcount</masterLabel>
+            <translation><!-- Employee Headcount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Plan</masterLabel>
+            <translation><!-- Health Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partners</masterLabel>
+            <translation><!-- Partners --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Engagement Status --></label>
+        <name>Account_Engagement_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Grouping --></label>
+        <name>Account_Grouping__c</name>
+        <picklistValues>
+            <masterLabel>Aon - ARxC</masterLabel>
+            <translation><!-- Aon - ARxC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCBS Payer / Health Plan</masterLabel>
+            <translation><!-- BCBS Payer / Health Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ben Wire Cambia List 022319</masterLabel>
+            <translation><!-- Ben Wire Cambia List 022319 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biggest Swings</masterLabel>
+            <translation><!-- Biggest Swings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Census ISD Data</masterLabel>
+            <translation><!-- Census ISD Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cigna Premium</masterLabel>
+            <translation><!-- Cigna Premium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Sales - Enterprise</masterLabel>
+            <translation><!-- Client Sales - Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Covid-19 MyStrength Offer(s)</masterLabel>
+            <translation><!-- Covid-19 MyStrength Offer(s) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current CVS TDC/Aetna Clients</masterLabel>
+            <translation><!-- Current CVS TDC/Aetna Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Client w/ CVS PBM</masterLabel>
+            <translation><!-- Direct Client w/ CVS PBM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EGWP</masterLabel>
+            <translation><!-- EGWP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPIC Coalition - CVS</masterLabel>
+            <translation><!-- EPIC Coalition - CVS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESI - DCV</masterLabel>
+            <translation><!-- ESI - DCV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESI - Towers Coalition</masterLabel>
+            <translation><!-- ESI - Towers Coalition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESI Health Connect 360</masterLabel>
+            <translation><!-- ESI Health Connect 360 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESI Lifescan</masterLabel>
+            <translation><!-- ESI Lifescan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESI/WTW RxC</masterLabel>
+            <translation><!-- ESI/WTW RxC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Clients with CVS/Aetna with Risk</masterLabel>
+            <translation><!-- Existing Clients with CVS/Aetna with Risk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Glen Target Account</masterLabel>
+            <translation><!-- Glen Target Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCSC - BCBS IL</masterLabel>
+            <translation><!-- HCSC - BCBS IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCSC - BCBS OK</masterLabel>
+            <translation><!-- HCSC - BCBS OK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCSC - BCBS TX</masterLabel>
+            <translation><!-- HCSC - BCBS TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCSC - Empower</masterLabel>
+            <translation><!-- HCSC - Empower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCSC - Enable</masterLabel>
+            <translation><!-- HCSC - Enable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCSC - HAS</masterLabel>
+            <translation><!-- HCSC - HAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSS Top 100</masterLabel>
+            <translation><!-- HSS Top 100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>John Fox Target List</masterLabel>
+            <translation><!-- John Fox Target List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kara HCSC Downmarket Account List Downers Grove</masterLabel>
+            <translation><!-- Kara HCSC Downmarket Account List Downers Grove --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>March Madness</masterLabel>
+            <translation><!-- March Madness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicare Advantage list</masterLabel>
+            <translation><!-- Medicare Advantage list --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NFP</masterLabel>
+            <translation><!-- NFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business / Prospects (with CVS or Aetna) With Risk</masterLabel>
+            <translation><!-- New Business / Prospects (with CVS or Aetna) With Risk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non TDC - CVS Clients</masterLabel>
+            <translation><!-- Non TDC - CVS Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teladoc – Analysis</masterLabel>
+            <translation><!-- Teladoc – Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teladoc – Mutual Client</masterLabel>
+            <translation><!-- Teladoc – Mutual Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teladoc – Mutual Prospect</masterLabel>
+            <translation><!-- Teladoc – Mutual Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teladoc – New Prospect, Both Parties</masterLabel>
+            <translation><!-- Teladoc – New Prospect, Both Parties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teladoc – Single Company Client</masterLabel>
+            <translation><!-- Teladoc – Single Company Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teladoc – Single Company Prospect</masterLabel>
+            <translation><!-- Teladoc – Single Company Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 100 Cities/Counties</masterLabel>
+            <translation><!-- Top 100 Cities/Counties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Top 60 CVS/Aetna Client</masterLabel>
+            <translation><!-- Top 60 CVS/Aetna Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US State</masterLabel>
+            <translation><!-- US State --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UnionFacts Worksheet</masterLabel>
+            <translation><!-- UnionFacts Worksheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wave 1 COVID-19 Client</masterLabel>
+            <translation><!-- Wave 1 COVID-19 Client --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account ID_Long --></label>
+        <name>Account_ID_Long__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account NPS --></label>
+        <name>Account_NPS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Narrative --></label>
+        <name>Account_Narrative__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of entry and next steps to move account forward --></help>
+        <label><!-- Account Next Steps --></label>
+        <name>Account_Next_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Owner Active? --></label>
+        <name>Account_Owner_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Owner Role --></label>
+        <name>Account_Owner_Role__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date when the first Program Overview transitioned from Client Implementation to Client Success --></help>
+        <label><!-- Account Transition Date --></label>
+        <name>Account_Transition_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Status --></label>
+        <name>Account_Type__c</name>
+        <picklistValues>
+            <masterLabel>Active Partner</masterLabel>
+            <translation><!-- Active Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client</masterLabel>
+            <translation><!-- Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disqualified</masterLabel>
+            <translation><!-- Disqualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engaging</masterLabel>
+            <translation><!-- Engaging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Former Client</masterLabel>
+            <translation><!-- Former Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting - Expressed Interest</masterLabel>
+            <translation><!-- Prospecting - Expressed Interest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting – Not Currently Interested</masterLabel>
+            <translation><!-- Prospecting – Not Currently Interested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Study</masterLabel>
+            <translation><!-- Study --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account interested in following products --></label>
+        <name>Account_interested_in_following_products__c</name>
+        <picklistValues>
+            <masterLabel>Livongo for Diabetes</masterLabel>
+            <translation><!-- Livongo for Diabetes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Livongo for Hypertension</masterLabel>
+            <translation><!-- Livongo for Hypertension --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If checked, this Partner Account is used to set up Downmarket Cohorts --></help>
+        <label><!-- Account is used in Downmarket CMCs --></label>
+        <name>Account_is_used_in_Downmarket_CMCs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activated Percent (HTN) --></label>
+        <name>Activated_Percent_HTN__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Activated Total (Diabetes) --></label>
+        <name>Activated_Total_Diabetes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Activated Total (HTN) --></label>
+        <name>Activated_Total_HTN__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Activated Percent (Diabetes) --></label>
+        <name>Activation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Selecting this option allows users to activate multiple Client Overviews on the same contract path simultaneously. Leaving this option deselected enforces only one Client Overview is allowed to be &apos;Active&apos; at a time. --></help>
+        <label><!-- Allow multiple &apos;Active&apos; CO&apos;s per CP --></label>
+        <name>Allow_multiple_Active_Client_Overviews__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Required for Pilot Campaigns --></label>
+        <name>Approval_Required_for_Pilot_Campaigns__c</name>
+    </fields>
+    <fields>
+        <label><!-- BAA Signed --></label>
+        <name>BAA_Signed_del__c</name>
+    </fields>
+    <fields>
+        <help><!-- URL to the BOX Contract --></help>
+        <label><!-- BOX Contract URL --></label>
+        <name>BOX_Contract_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefit Plan Year --></label>
+        <name>Benefit_Plan_Year__c</name>
+    </fields>
+    <fields>
+        <help><!-- Through conversations with the client, we have identified this is the number of US-based benefits-eligible employees --></help>
+        <label><!-- Benefits-eligible Employees --></label>
+        <name>Benefits_eligible_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing --></label>
+        <name>Billing__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines the Client Member Code Prefix for downmarket clients --></help>
+        <label><!-- CMC Prefix --></label>
+        <name>CMC_Prefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Success Manager --></label>
+        <name>CSM__c</name>
+        <relationshipLabel><!-- Accounts (Client Success Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaign &amp; Risk Notes --></label>
+        <name>Campaign_Risk_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Client BoB ARR(Across all programs) --></help>
+        <label><!-- Client ARR --></label>
+        <name>Client_ARR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Implementation Manager --></label>
+        <name>Client_Implementation_Manager__c</name>
+        <relationshipLabel><!-- Accounts (Client Implementation Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Status = Terminated, Expired --></help>
+        <label><!-- Client Overview Count_Term/Exp --></label>
+        <name>Client_Overview_Count_Term_Exp__c</name>
+    </fields>
+    <fields>
+        <help><!-- Status = Active or Draft --></help>
+        <label><!-- Client Overview Count --></label>
+        <name>Client_Overview_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Health Notes --></label>
+        <name>Client_Risk_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Health Score --></label>
+        <name>Client_Risk__c</name>
+        <picklistValues>
+            <masterLabel>Black</masterLabel>
+            <translation><!-- Black --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue</masterLabel>
+            <translation><!-- Blue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client Segment --></label>
+        <name>Client_Segment__c</name>
+        <picklistValues>
+            <masterLabel>Enterprise - Gold</masterLabel>
+            <translation><!-- Enterprise - Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise - Silver</masterLabel>
+            <translation><!-- Enterprise - Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large Market</masterLabel>
+            <translation><!-- Large Market --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Contract Path/myStrength 1.0</masterLabel>
+            <translation><!-- Partner Contract Path/myStrength 1.0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platinum</masterLabel>
+            <translation><!-- Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Select Partner Accounts/Behavioral Health</masterLabel>
+            <translation><!-- Select Partner Accounts/Behavioral Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signature</masterLabel>
+            <translation><!-- Signature --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client Tier Comments --></label>
+        <name>Client_Tier_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Tier --></label>
+        <name>Client_Tier__c</name>
+        <picklistValues>
+            <masterLabel>Tier 1</masterLabel>
+            <translation><!-- Tier 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tier 2</masterLabel>
+            <translation><!-- Tier 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tier 3</masterLabel>
+            <translation><!-- Tier 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client approves use of logo --></label>
+        <name>Client_approves_use_of_logo__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client details regarding referrals --></label>
+        <name>Client_details_regarding_referrals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client has seen ngTDC? --></label>
+        <name>Client_has_seen_ngTDC__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client open to speaking engagements? --></label>
+        <name>Client_open_to_speaking_engagements__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closed Won Cross Sell Opp Count --></label>
+        <name>Closed_Won_Cross_Sell_Opp_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed Won Livongo for Diabetes PwD Sum --></label>
+        <name>Closed_Won_Livongo_For_Diabetes_PwD_Sum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed Won Opportunity Count --></label>
+        <name>Closed_Won_Opportunity_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conversation had with? --></label>
+        <name>Conversation_had_with__c</name>
+        <picklistValues>
+            <masterLabel>CVS/Aetna AE</masterLabel>
+            <translation><!-- CVS/Aetna AE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client - Decision Maker</masterLabel>
+            <translation><!-- Client - Decision Maker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultant</masterLabel>
+            <translation><!-- Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cost of diabetes testing supplies --></label>
+        <name>Cost_of_diabetes_testing_supplies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Covered Lives --></label>
+        <name>Covered_Lives__c</name>
+    </fields>
+    <fields>
+        <label><!-- CurrentUser_CIM --></label>
+        <name>CurrentUser_CIM__c</name>
+    </fields>
+    <fields>
+        <label><!-- CurrentUser_CSM --></label>
+        <name>CurrentUser_CSM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Diabetes Supply Spend PPPM --></label>
+        <name>Current_Diabetes_Supply_Spend_PPPM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom marketing requirements? --></label>
+        <name>Custom_marketing_requirements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom marketing requirements detail --></label>
+        <name>Custom_marketing_requirements_detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUNS Employees --></label>
+        <name>DUNS_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Marketing Lead --></label>
+        <name>EML__c</name>
+        <relationshipLabel><!-- Accounts (Enrollment Marketing Lead) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Roll Up Helper: MIN of Active Program Overview Initial Launch Date ; updated daily --></help>
+        <label><!-- Earliest Active Initial Launch Date --></label>
+        <name>Earliest_Active_Initial_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Earliest Closed Won Opportunity --></label>
+        <name>Earliest_Closed_Won_Opportunity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Email Coverage Percentage (DM) --></label>
+        <name>Email_Coverage_Percentage_DM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Email Coverage Percentage (HTN) --></label>
+        <name>Email_Coverage_Percentage_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employer Identification Number (EIN) --></label>
+        <name>Employer_Identification_Number_EIN__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Enrolled BG200 --></label>
+        <name>Enrolled_BG200__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Enrolled BG300 --></label>
+        <name>Enrolled_BG300__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Enrolled BG300i --></label>
+        <name>Enrolled_BG300i__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Enrollment Percentage (rPwDs) --></label>
+        <name>Enrollment_Percentage_rPwDs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment_Percentage_rPwDs__c --></label>
+        <name>Enrollment_Percentage_rPwDs_c__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Enrollment Percentage (rPwHs) --></label>
+        <name>Enrollment_Percentage_rPwHs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Diabetes --></label>
+        <name>Estimated_Diabetes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this box if you would like to exclude this prospect account from inside sales / lead generation activities. Maximum exclusion is 25 prospect accounts. --></help>
+        <label><!-- Exclude from Inside Sales / Lead Gen --></label>
+        <name>Exclude_from_Inside_Sales_Lead_Gen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exit Interview Doc URL --></label>
+        <name>Exit_Interview_Doc_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Client Tier --></label>
+        <name>Expected_Client_Tier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fiscal Year --></label>
+        <name>Fiscal_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fortune 1000 Rank --></label>
+        <name>Fortune_1000_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fortune 100 --></label>
+        <name>Fortune_100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fortune 500 --></label>
+        <name>Fortune_500__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fully Insured Population --></label>
+        <name>Fully_Insured_Population__c</name>
+    </fields>
+    <fields>
+        <label><!-- Global Employees --></label>
+        <name>Global_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Review URL --></label>
+        <name>Google_Slides_Strategic_Plan_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- HSS Account Executive --></label>
+        <name>HSS_Account_Executive__c</name>
+        <relationshipLabel><!-- Accounts (HSS Account Executive) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Link to historic Account notes here (if not migrated to Salesforce) --></help>
+        <label><!-- Historic notes (if not in Salesforce) --></label>
+        <name>Historic_notes_if_not_in_Salesforce__c</name>
+    </fields>
+    <fields>
+        <help><!-- Ask your System Admin to check/uncheck this box. --></help>
+        <label><!-- Ignore all CSM mirroring effects --></label>
+        <name>Ignore_all_CSM_mirroring_effects__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only select a date for this field if a client has informed us they intend to terminate their agreement --></help>
+        <label><!-- Impending Client Termination Date --></label>
+        <name>Impending_Client_Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incentives: Content Guides - SPA --></label>
+        <name>Incentives_Content_Guides_SPA__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Incentives: Gift Cards - SPA --></label>
+        <name>Incentives_Gift_Cards_SPA__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Incentives: Goods and Services - SPA --></label>
+        <name>Incentives_Goods_and_Services_SPA__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>Industry__c</name>
+        <picklistValues>
+            <masterLabel>Energy</masterLabel>
+            <translation><!-- Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation</masterLabel>
+            <translation><!-- Transportation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Check this box if this account is a strategic account. VP of Strategic Accounts to own outreach, strategy, etc... --></help>
+        <label><!-- Is this account a Strategic Account? --></label>
+        <name>Is_this_account_a_Strategic_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Info --></label>
+        <name>JBCXM__CustomerInfo__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LinkedIn Company Id --></label>
+        <name>LID__LinkedIn_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity by Livongo Rep --></label>
+        <name>Last_Activity_by_Livongo_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Event by Livongo Rep --></label>
+        <name>Last_Event_by_Livongo_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Task/Event by Livongo Rep --></label>
+        <name>Last_Task_Event_by_Livongo_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Updated ECS DateTime --></label>
+        <name>Last_Updated_ECS_DateTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Last Updated Enrollment Communication Survey --></help>
+        <label><!-- Last Updated ECS --></label>
+        <name>Last_Updated_ECS__c</name>
+        <relationshipLabel><!-- Accounts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Latest Closed Won Opp Date --></label>
+        <name>Latest_Closed_Won_Opp_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Client Success. If you see a problem, please contact the Account&apos;s CSM. --></help>
+        <label><!-- Livongo Financial Impact (ROI) - Actual --></label>
+        <name>Livongo_Financial_Impact_ROI_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location Size Accuracy --></label>
+        <name>Location_Size_Accuracy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location Size Unit of Measure --></label>
+        <name>Location_Size_Unit_of_Measure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location Size --></label>
+        <name>Location_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Account Subtype --></label>
+        <name>Marketing_Account_SubType__c</name>
+        <picklistValues>
+            <masterLabel>Behavioral Health Provider</masterLabel>
+            <translation><!-- Behavioral Health Provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broker</masterLabel>
+            <translation><!-- Broker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Development</masterLabel>
+            <translation><!-- Business Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultant</masterLabel>
+            <translation><!-- Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Federal Government</masterLabel>
+            <translation><!-- Federal Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fully Insured Employer</masterLabel>
+            <translation><!-- Fully Insured Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health System</masterLabel>
+            <translation><!-- Health System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Labor/Pension Fund</masterLabel>
+            <translation><!-- Labor/Pension Fund --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Managed Care Organization</masterLabel>
+            <translation><!-- Managed Care Organization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicare Advantage</masterLabel>
+            <translation><!-- Medicare Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ops Partner</masterLabel>
+            <translation><!-- Ops Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PBM</masterLabel>
+            <translation><!-- PBM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payer</masterLabel>
+            <translation><!-- Payer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self Funded Employer</masterLabel>
+            <translation><!-- Self Funded Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPA</masterLabel>
+            <translation><!-- TPA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- First/top level layer of account segmentation for channel marketing --></help>
+        <label><!-- Marketing Account Type --></label>
+        <name>Marketing_Account_Type__c</name>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employer</masterLabel>
+            <translation><!-- Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medicaid Population --></label>
+        <name>Medicaid_Population__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medicare Advantage --></label>
+        <name>Medicare_Advantage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Member NPS --></label>
+        <name>Member_NPS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member recruitment began --></label>
+        <name>Member_recruitment_began__c</name>
+    </fields>
+    <fields>
+        <label><!-- Participants Enrolled --></label>
+        <name>Members_Enrolled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated myStrength Account --></label>
+        <name>Migrated_myStrength_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migration ID --></label>
+        <name>Migration_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- NAICS Industry Classification --></label>
+        <name>NAICS_Industry_Classification__c</name>
+        <picklistValues>
+            <masterLabel>Accommodation and Food Services</masterLabel>
+            <translation><!-- Accommodation and Food Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Administrative and Support and Waste Management and Remediation Services</masterLabel>
+            <translation><!-- Administrative and Support and Waste Management and Remediation Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agriculture, Forestry, Fishing and Hunting</masterLabel>
+            <translation><!-- Agriculture, Forestry, Fishing and Hunting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arts, Entertainment and Recreation</masterLabel>
+            <translation><!-- Arts, Entertainment and Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Services</masterLabel>
+            <translation><!-- Educational Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance and Insurance</masterLabel>
+            <translation><!-- Finance and Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health Care and Social Assistance</masterLabel>
+            <translation><!-- Health Care and Social Assistance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information</masterLabel>
+            <translation><!-- Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management of Companies and Enterprises</masterLabel>
+            <translation><!-- Management of Companies and Enterprises --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing</masterLabel>
+            <translation><!-- Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mining</masterLabel>
+            <translation><!-- Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Services (except Public Administration)</masterLabel>
+            <translation><!-- Other Services (except Public Administration) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional, Scientific and Technical Services</masterLabel>
+            <translation><!-- Professional, Scientific and Technical Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Administration</masterLabel>
+            <translation><!-- Public Administration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Estate Rental and Leasing</masterLabel>
+            <translation><!-- Real Estate Rental and Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail Trade</masterLabel>
+            <translation><!-- Retail Trade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation and Warehousing</masterLabel>
+            <translation><!-- Transportation and Warehousing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing</masterLabel>
+            <translation><!-- Truck, Utility Trailer, and RV (Recreational Vehicle) Rental and Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unclassified Establishments</masterLabel>
+            <translation><!-- Unclassified Establishments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wholesale Trade</masterLabel>
+            <translation><!-- Wholesale Trade --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Next Business Review --></label>
+        <name>Next_Business_Review__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of POs --></label>
+        <name>Number_of_POs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Cross-Sell Opportunity Count --></label>
+        <name>Open_Cross_Sell_Opportunity_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Date --></label>
+        <name>Open_Enrollment_Date__c</name>
+        <picklistValues>
+            <masterLabel>April</masterLabel>
+            <translation><!-- April --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>August</masterLabel>
+            <translation><!-- August --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>December</masterLabel>
+            <translation><!-- December --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>February</masterLabel>
+            <translation><!-- February --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>January</masterLabel>
+            <translation><!-- January --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>July</masterLabel>
+            <translation><!-- July --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>June</masterLabel>
+            <translation><!-- June --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>March</masterLabel>
+            <translation><!-- March --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>November</masterLabel>
+            <translation><!-- November --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>October</masterLabel>
+            <translation><!-- October --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>September</masterLabel>
+            <translation><!-- September --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Open Enrollment Period --></label>
+        <name>Open_Enrollment_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Opportunity Count --></label>
+        <name>Open_Opportunity_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Opportunity PwDs --></label>
+        <name>Open_Opportunity_PwDs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Renewal Opportunity Count --></label>
+        <name>Open_Renewal_Opportunity_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overall Account Score --></label>
+        <name>Overall_Account_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overall DM Score --></label>
+        <name>Overall_DM_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overall HTN Score --></label>
+        <name>Overall_HTN_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter data into this field if you&apos;d like to engage the partner team to help with this deal, through a pipeline call review, etc.
+Format: (Date - Partner Name - Request Details) --></help>
+        <label><!-- Partner Pipeline Request --></label>
+        <name>PBM_Partner_Pipeline_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO#_WholePerson --></label>
+        <name>PO_WholePerson__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payer Lines of Business --></label>
+        <name>Payer_Lines_of_Business__c</name>
+        <picklistValues>
+            <masterLabel>ACA</masterLabel>
+            <translation><!-- ACA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASO</masterLabel>
+            <translation><!-- ASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fully Insured</masterLabel>
+            <translation><!-- Fully Insured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicaid</masterLabel>
+            <translation><!-- Medicaid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicare Advantage</masterLabel>
+            <translation><!-- Medicare Advantage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provider Sponsored</masterLabel>
+            <translation><!-- Provider Sponsored --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payer Sales Cycle --></label>
+        <name>Payer_Sales_Cycle__c</name>
+        <picklistValues>
+            <masterLabel>Contract negotiation</masterLabel>
+            <translation><!-- Contract negotiation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract signed -- Active Partner</masterLabel>
+            <translation><!-- Contract signed - -  Active Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial conversations</masterLabel>
+            <translation><!-- Initial conversations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not interested currently/Declined/Lost</masterLabel>
+            <translation><!-- Not interested currently/Declined/Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not yet engaged</masterLabel>
+            <translation><!-- Not yet engaged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal</masterLabel>
+            <translation><!-- Proposal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP Process</masterLabel>
+            <translation><!-- RFP Process --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What month does the Client Health Plan year start? --></help>
+        <label><!-- Plan Year Start Month --></label>
+        <name>Plan_Year_Start_Month__c</name>
+        <picklistValues>
+            <masterLabel>April</masterLabel>
+            <translation><!-- April --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>August</masterLabel>
+            <translation><!-- August --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>December</masterLabel>
+            <translation><!-- December --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>February</masterLabel>
+            <translation><!-- February --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>January</masterLabel>
+            <translation><!-- January --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>July</masterLabel>
+            <translation><!-- July --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>June</masterLabel>
+            <translation><!-- June --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>March</masterLabel>
+            <translation><!-- March --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>November</masterLabel>
+            <translation><!-- November --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>October</masterLabel>
+            <translation><!-- October --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>September</masterLabel>
+            <translation><!-- September --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- # of Accts_PO1 --></label>
+        <name>Power_of_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary CS Point of Contact --></label>
+        <name>Primary_CS_POC__c</name>
+        <relationshipLabel><!-- Accounts (Primary CS Point of Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prior Account Status --></label>
+        <name>Prior_Account_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Number of Employees --></label>
+        <name>Prior_Year_Number_of_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Revenue --></label>
+        <name>Prior_Year_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Count --></label>
+        <name>Program_Count2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Program Implementation Status = Terminated, Expired, or Ongoing Delivery Total --></help>
+        <label><!-- Program Overview Count_Term/Exp --></label>
+        <name>Program_Overview_Count_Term_Exp__c</name>
+    </fields>
+    <fields>
+        <help><!-- Program Implementation Status = Implementation or Contracting --></help>
+        <label><!-- Program Overview Count_Upcoming --></label>
+        <name>Program_Overview_Count_Upcoming__c</name>
+    </fields>
+    <fields>
+        <help><!-- Program Implementation Status = Launched + 90 or On-going Delivery --></help>
+        <label><!-- Program Overview Count --></label>
+        <name>Program_Overview_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospect Update &amp; Next Steps --></label>
+        <name>Prospect_Update_Next_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provider Sponsored Population --></label>
+        <name>Provider_Sponsored_Population__c</name>
+    </fields>
+    <fields>
+        <label><!-- PwBH Sold --></label>
+        <name>PwBH_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- PwDPP Sold --></label>
+        <name>PwDPP_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- PwH Sold --></label>
+        <name>PwH_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- PwO Sold --></label>
+        <name>PwO_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- PwWM+DPP Sold --></label>
+        <name>PwWM_DPP_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- PwWM Sold --></label>
+        <name>PwWM_Sold__c</name>
+    </fields>
+    <fields>
+        <label><!-- RPwDs from Claims --></label>
+        <name>RPwDs_from_Claims_Data__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- RPwHs from Claims --></label>
+        <name>RPwHs_from_Claims__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Reduction in A1c - Actual --></label>
+        <name>Reduction_in_A1c_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client willing to serve as reference --></label>
+        <name>Reference_Account__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reference Client --></label>
+        <name>Reference_Client__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checkbox, when checked, will create a task assigned to Client Implementation Director for purposes of assigning a CIM to this Account. --></help>
+        <label><!-- Request CIM --></label>
+        <name>RequestCIM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checkbox, when checked, will create a task assigned to Client Success Director for purposes of assigning a CSM to this Account. --></help>
+        <label><!-- Request CSM --></label>
+        <name>RequestCSM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risk Color --></label>
+        <name>Risk_Color__c</name>
+        <picklistValues>
+            <masterLabel>Black - Leaving Livongo</masterLabel>
+            <translation><!-- Black - Leaving Livongo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green - Retaining the Client</masterLabel>
+            <translation><!-- Green - Retaining the Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red - No Clear Intent Expressed</masterLabel>
+            <translation><!-- Red - No Clear Intent Expressed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow - Intent Expressed</masterLabel>
+            <translation><!-- Yellow - Intent Expressed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Risk Description --></label>
+        <name>Risk_Description__c</name>
+        <picklistValues>
+            <masterLabel>Acquired and no path forward with new parent company</masterLabel>
+            <translation><!-- Acquired and no path forward with new parent company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contracted directly and signed</masterLabel>
+            <translation><!-- Contracted directly and signed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conversation had but no clear intent - Met with AE and they verbally said they will not be pushing ngTDC to the client right now</masterLabel>
+            <translation><!-- Conversation had but no clear intent - Met with AE and they verbally said they will not be pushing ngTDC to the client right now --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conversation had but no clear intent - Met with Client/AE/Consultant  and discussed changes and were interested in making changes to direct or partner but did not commit yet</masterLabel>
+            <translation><!-- Conversation had but no clear intent - Met with Client/AE/Consultant  and discussed changes and were interested in making changes to direct or partner but did not commit yet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conversation had but no clear intent - Met with client / consultant and discussed contracting path options but no commitment yet</masterLabel>
+            <translation><!-- Conversation had but no clear intent - Met with client / consultant and discussed contracting path options but no commitment yet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intent to contract through other partner and not renew</masterLabel>
+            <translation><!-- Intent to contract through other partner and not renew --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intent to go direct and not renew</masterLabel>
+            <translation><!-- Intent to go direct and not renew --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intent to move to ngTDC</masterLabel>
+            <translation><!-- Intent to move to ngTDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intent to renew on TDC paper &amp; evaluate alternative contracting paths to stay with Livongo for 2022 and beyond and CAN contract direct - no paperwork received yet</masterLabel>
+            <translation><!-- Intent to renew on TDC paper &amp; evaluate alternative contracting paths to stay with Livongo for 2022 and beyond and CAN contract direct - no paperwork received yet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intent to renew on TDC paper &amp; evaluate alternative contracting paths to stay with Livongo for 2022 and beyond and CANNOT contract direct - no paperwork received yet</masterLabel>
+            <translation><!-- Intent to renew on TDC paper &amp; evaluate alternative contracting paths to stay with Livongo for 2022 and beyond and CANNOT contract direct - no paperwork received yet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intent to renew on TDC paper &amp; no other intent stated and have not received paperwork yet</masterLabel>
+            <translation><!-- Intent to renew on TDC paper &amp; no other intent stated and have not received paperwork yet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No discussions with client or consultant after multiple outreaches</masterLabel>
+            <translation><!-- No discussions with client or consultant after multiple outreaches --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out to RFP</masterLabel>
+            <translation><!-- Out to RFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recent launch/renewal, no commitment to renew</masterLabel>
+            <translation><!-- Recent launch/renewal, no commitment to renew --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Redlines in progress and full intent from client to renew direct</masterLabel>
+            <translation><!-- Redlines in progress and full intent from client to renew direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Redlines in progress and full intent from client to renew through other partner</masterLabel>
+            <translation><!-- Redlines in progress and full intent from client to renew through other partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal CCS Received (5/1/2020 or later) for TDC</masterLabel>
+            <translation><!-- Renewal CCS Received (5/1/2020 or later) for TDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spoke with client and they are not happy with Livongo</masterLabel>
+            <translation><!-- Spoke with client and they are not happy with Livongo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unhappy client - Terming and we have tried literally everything</masterLabel>
+            <translation><!-- Unhappy client - Terming and we have tried literally everything --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Override DupeCatcher --></label>
+        <name>SFSSDupeCatcher__Override_DupeCatcher__c</name>
+    </fields>
+    <fields>
+        <label><!-- SPS Program Manager --></label>
+        <name>SPS_Program_Manager__c</name>
+        <relationshipLabel><!-- Accounts (SPS Program Manager) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- S&amp;P 500 --></label>
+        <name>S_P_500__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Client Success. If you see a problem, please contact the Account&apos;s CSM. --></help>
+        <label><!-- Savings PPPM (ROI) - Actual --></label>
+        <name>Savings_PPPM_ROI_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Single or Multi Program --></label>
+        <name>Single_or_Multi_Program2__c</name>
+        <picklistValues>
+            <masterLabel>Multi Program</masterLabel>
+            <translation><!-- Multi Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Program</masterLabel>
+            <translation><!-- Single Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Whole Person</masterLabel>
+            <translation><!-- Whole Person --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Split Billing? --></label>
+        <name>Split_Billing__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field stores a calculated customer onboarding score based on a TaskRay Project related to this Account. --></help>
+        <label><!-- Customer Onboarding Score --></label>
+        <name>TASKRAY__trCustomerOnboardingScore__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture a customer&apos;s desired outcome(s). Can be populated from the Desired Outcomes field on TaskRay Project. --></help>
+        <label><!-- Desired Outcomes --></label>
+        <name>TASKRAY__trDesiredOutcomes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Onboarding Duration --></label>
+        <name>TASKRAY__trOnboardingDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used by TaskRay to record the actual end date of the onboarding project associated with this account. --></help>
+        <label><!-- Onboarding End --></label>
+        <name>TASKRAY__trOnboardingEndDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used by TaskRay to record the actual start date of the onboarding project associated with this account. --></help>
+        <label><!-- Onboarding Start --></label>
+        <name>TASKRAY__trOnboardingStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- MSA Target Close Date --></label>
+        <name>Target_payer_close_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Forecast Date --></label>
+        <name>Termination_Forecast_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Rationale Summary --></label>
+        <name>Termination_Rationale_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Reason --></label>
+        <name>Termination_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Financial drivers / Cost</masterLabel>
+            <translation><!-- Financial drivers / Cost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost crucial sponsor</masterLabel>
+            <translation><!-- Lost crucial sponsor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost through contracting partner</masterLabel>
+            <translation><!-- Lost through contracting partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M&amp;A</masterLabel>
+            <translation><!-- M&amp;A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never sold</masterLabel>
+            <translation><!-- Never sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offering didn’t meet needs</masterLabel>
+            <translation><!-- Offering didn’t meet needs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Physician buy-in</masterLabel>
+            <translation><!-- Physician buy-in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROI</masterLabel>
+            <translation><!-- ROI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor Consolidation</masterLabel>
+            <translation><!-- Vendor Consolidation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Closed Lost Opps --></label>
+        <name>Total_Closed_Lost_Opps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Closed No Decision Opps --></label>
+        <name>Total_Closed_No_Decision_Opps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Open Opportunities --></label>
+        <name>Total_Open_Opportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Opportunity Count --></label>
+        <name>Total_Opportunity_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Primary Products --></label>
+        <name>Total_Primary_Products__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Won Opportunities (Non-Renewals) --></label>
+        <name>Total_Won_Opportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of Incentive to Exclude - SPA --></label>
+        <name>Type_of_Incentive_to_Exclude_SPA__c</name>
+        <picklistValues>
+            <masterLabel>Activity Trackers</masterLabel>
+            <translation><!-- Activity Trackers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amazon GC</masterLabel>
+            <translation><!-- Amazon GC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food Products</masterLabel>
+            <translation><!-- Food Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospitality Incentives</masterLabel>
+            <translation><!-- Hospitality Incentives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visa GC</masterLabel>
+            <translation><!-- Visa GC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Union Population --></label>
+        <name>Union_Population__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Usage % Last 30 day (Diabetes) --></label>
+        <name>Usage_Last_30_day_Diabetes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Usage % Last 30 day (HTN) --></label>
+        <name>Usage_Last_30_day_HTN__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Usage % Last 90 day (Diabetes) --></label>
+        <name>Usage_Last_90_day_Diabetes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- Usage % Last 90 day (HTN) --></label>
+        <name>Usage_Last_90_day_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use for Activation/Usage? - SPA --></label>
+        <name>Use_for_Activation_Usage_SPA__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If the client uses an acronym or a legal name that differs that what appears in the Account Name field, please indicate here to make it easier to search. This can be as simple as spelling out of an acronym or the known as name for a company. --></help>
+        <label><!-- Doing business as --></label>
+        <name>dba__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sourced from Data.com --></label>
+        <name>ddc_prospector__Sourced_from_Data_com__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Account Close Score Updated --></label>
+        <name>isdc_closedate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Account Close Score --></label>
+        <name>isdc_closescore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Account Close Score Grade --></label>
+        <name>isdc_closescoregrade__c</name>
+    </fields>
+    <fields>
+        <label><!-- myStrengthAcctExtId --></label>
+        <name>myStrengthAcctExtId__c</name>
+    </fields>
+    <fields>
+        <label><!-- myStrength Account --></label>
+        <name>myStrength_Account__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE ME per JENGA 1528 --></help>
+        <label><!-- myStrength Indicator --></label>
+        <name>myStrength_Indicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- myStrength Partner --></label>
+        <name>myStrength_Partner__c</name>
+        <picklistValues>
+            <masterLabel>AcademicBlue</masterLabel>
+            <translation><!-- AcademicBlue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Anthem</masterLabel>
+            <translation><!-- Anthem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cambia</masterLabel>
+            <translation><!-- Cambia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Castlight</masterLabel>
+            <translation><!-- Castlight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ComPsych</masterLabel>
+            <translation><!-- ComPsych --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct</masterLabel>
+            <translation><!-- Direct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kaiser Permanente</masterLabel>
+            <translation><!-- Kaiser Permanente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lyra</masterLabel>
+            <translation><!-- Lyra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Magellan</masterLabel>
+            <translation><!-- Magellan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MedCost</masterLabel>
+            <translation><!-- MedCost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Directions</masterLabel>
+            <translation><!-- New Directions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resources For Living</masterLabel>
+            <translation><!-- Resources For Living --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SnapClarity</masterLabel>
+            <translation><!-- SnapClarity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This account is a Partner</masterLabel>
+            <translation><!-- This account is a Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Balance --></label>
+        <name>netsuite_conn__Account_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overdue Balance --></label>
+        <name>netsuite_conn__Account_Overdue_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Celigo Update --></label>
+        <name>netsuite_conn__Celigo_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel Tier --></label>
+        <name>netsuite_conn__Channel_Tier__c</name>
+        <picklistValues>
+            <masterLabel>Distributor</masterLabel>
+            <translation><!-- Distributor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End User</masterLabel>
+            <translation><!-- End User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reseller</masterLabel>
+            <translation><!-- Reseller --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Credit Hold --></label>
+        <name>netsuite_conn__Credit_Hold__c</name>
+        <picklistValues>
+            <masterLabel>Auto</masterLabel>
+            <translation><!-- Auto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Off</masterLabel>
+            <translation><!-- Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On</masterLabel>
+            <translation><!-- On --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Credit Limit --></label>
+        <name>netsuite_conn__Credit_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Overdue --></label>
+        <name>netsuite_conn__Days_Overdue__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Id --></label>
+        <name>netsuite_conn__NetSuite_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Sync Error --></label>
+        <name>netsuite_conn__NetSuite_Sync_Err__c</name>
+    </fields>
+    <fields>
+        <label><!-- Push To NetSuite --></label>
+        <name>netsuite_conn__Push_To_NetSuite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pushed From Opportunity --></label>
+        <name>netsuite_conn__Pushed_From_Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync In Progress --></label>
+        <name>netsuite_conn__Sync_In_Progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unbilled Orders --></label>
+        <name>netsuite_conn__Unbilled_Orders__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- # of Enrolled RPwDs to date --></label>
+        <name>of_Enrolled_RPwDs_to_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Updated by Sales Ops. If you see a problem, please contact SalesOps@livongo.com --></help>
+        <label><!-- # of Enrolled RPwHs to Date --></label>
+        <name>of_Enrolled_RPwHs_to_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used by channel marketing to get an understanding of the number of opportunities associated with the account. --></help>
+        <label><!-- # of Open Opportunities --></label>
+        <name>of_Open_Opportunities__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Retirees --></label>
+        <name>of_Retirees__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Close Score Last Updated --></label>
+        <name>qbdialer__CloseDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Close Score --></label>
+        <name>qbdialer__CloseScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dials --></label>
+        <name>qbdialer__Dials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Call Time --></label>
+        <name>qbdialer__LastCallTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Contact Dials --></label>
+        <name>qbdialer__Related_Contact_Dials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Contact Last Call Time --></label>
+        <name>qbdialer__Related_Contact_LastCallTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Time --></label>
+        <name>qbdialer__ResponseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency Test --></label>
+        <name>rh2__testCurrency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hierarchy Level --></label>
+        <name>zaapit__Hierarchy_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company ID --></label>
+        <name>zisf__Company_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Complete Status --></label>
+        <name>zisf__ZoomInfo_Complete_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Industry --></label>
+        <name>zisf__ZoomInfo_Industry__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date/time refers to last time ZoomInfo Clean ran for record. --></help>
+        <label><!-- ZoomInfo Last Clean Run --></label>
+        <name>zisf__ZoomInfo_Last_Clean_Run__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Clean Status --></label>
+        <name>zisf__Zoom_Clean_Status__c</name>
+        <picklistValues>
+            <masterLabel>Clean</masterLabel>
+            <translation><!-- Clean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Different</masterLabel>
+            <translation><!-- Different --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Sync</masterLabel>
+            <translation><!-- In Sync --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Compared</masterLabel>
+            <translation><!-- Not Compared --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Found</masterLabel>
+            <translation><!-- Not Found --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo ID --></label>
+        <name>zisf__zoom_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Last Updated --></label>
+        <name>zisf__zoom_lastupdated__c</name>
+    </fields>
+    <recordTypes>
+        <description><!-- Sales account associated with direct-client relationships (e.g. employer groups) --></description>
+        <label><!-- Client Account --></label>
+        <name>Client_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Child sales account associated with downmarket parent-child relationships --></description>
+        <label><!-- Client Lite Account --></label>
+        <name>Client_Lite_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sales account associated with partners who are also direct clients --></description>
+        <label><!-- Client+Partner --></label>
+        <name>Client_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Non-sales account associated with competitive vendors --></description>
+        <label><!-- Competitor Account --></label>
+        <name>Competitor_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Child sales account associated with downmarket parent-child relationships --></description>
+        <label><!-- Downmarket Client --></label>
+        <name>Downmarket_Client</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Marketing --></label>
+        <name>Marketing</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Marketing Account --></description>
+        <label><!-- Marketing Account --></label>
+        <name>Marketing_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Non-sales account associated with partner relationships (e.g. Health Plans, PBMs, Benefit Consultants) --></description>
+        <label><!-- Partner Account --></label>
+        <name>Partner_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- &apos;Sales Team&apos; Accounts that are for Payer/Health Plans --></description>
+        <label><!-- Payer Account --></label>
+        <name>Payer_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Sales Account would be associated with the Sales Application and would ideally be handled by users of &apos;Sales Team&apos; --></description>
+        <label><!-- Sales Account --></label>
+        <name>Sales_Account</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You do not have permission to edit the Account Status from Client to Former Client, or vice versa. Please reach out to the Client Success Leadership Team to make the changes. --></errorMessage>
+        <name>AccountStatus_Former_n_Client</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You do not have permission to assign Account Status = Study, please choose a different value. If you believe this is in error, please reach out to your System Administrator. --></errorMessage>
+        <name>Account_Status_Study</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You do not have access to edit the name of this active Account. Please contact your System Administrator. --></errorMessage>
+        <name>Cannot_Edit_Name_If_Client_or_Partner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have indicated this account has custom marketing requirements. Please specify those requirements in the Custom Marketing Requirements Detail field. --></errorMessage>
+        <name>Custom_Marketing_Req_Detail</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the type of this account (i.e. - Prospect, Client, Former Client, Partner) --></errorMessage>
+        <name>Require_Account_Type_to_be_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the type of this account (i.e. - Self-funded, Payer/ASO, PBM, etc...) --></errorMessage>
+        <name>Require_Type_to_be_Selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When changing a client to &quot;Client - Impending Termination&quot;, you need to select a Impending Client Termination Date --></errorMessage>
+        <name>Require_termination_date_when_picked</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If CVS Campaign&apos;s Risk Color is populated, Conversation Had With? must be populated. You can chose &quot;N/A&quot;. If you are unable to update this field, please reach out to your Client Success Manager. --></errorMessage>
+        <name>RiskColor_RequiredFields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You do not have permission to change the owner for this account. Please reach out to an administrator for assistance. --></errorMessage>
+        <name>current_owner_or_admin_can_change_owner</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions --></label>
+        <name>MC4SF__MailChimp_Subscriptions</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pull_NetSuite_Financials --></label>
+        <name>netsuite_conn__Pull_NetSuite_Financials</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_To_Prospect_Insight --></label>
+        <name>pi__Send_To_Prospect_Insight</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_List --></label>
+        <name>qbdialer__Create_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_Click_to_Call --></label>
+        <name>qbdialer__Launch_Click_to_Call</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Lists --></label>
+        <name>qbdialer__Manage_Lists</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Existing_Document --></label>
+        <name>tinderbox__Add_Existing_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contract --></label>
+        <name>tinderbox__New_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Presentation --></label>
+        <name>tinderbox__New_Presentation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_TinderBox_Document --></label>
+        <name>tinderbox__New_TinderBox_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Auto_Mark --></label>
+        <name>zaapit__Auto_Mark</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Merge --></label>
+        <name>zaapit__Mass_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Merge_Accounts --></label>
+        <name>zaapit__Merge_Accounts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Merge_Accounts_L --></label>
+        <name>zaapit__Merge_Accounts_L</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- zp_actions --></label>
+        <name>zaapit__zp_actions</name>
+    </webLinks>
+</CustomObjectTranslation>

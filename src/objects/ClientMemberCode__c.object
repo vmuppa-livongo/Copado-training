@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Client_Member_Group_Lightning_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Client_Member_Codes_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Client_Member_Codes_Compact_Layout</fullName>
+        <fields>ClientMemberCode__c</fields>
+        <fields>Account__c</fields>
+        <label>Client Member Codes Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Client Member Codes may be used to facilitate registration or to classify clients into groups for reporting and billing (or a combination of these options).  Legacy Registration Codes and Tags are captured as Client Member Codes in Salesforce.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Defines the relationship between a Client Account and a Client Member Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the relationship between a Client Account and a Client Member Code</inlineHelpText>
+        <label>Client Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>You must choose an Account with record type Client Account or Downmarket Client</errorMessage>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Client Account, Downmarket Client, Partner Account</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Client Member Codes</relationshipLabel>
+        <relationshipName>Client_Member_Groups</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ClientMemberCode__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Defines the Client Member Code value (e.g. &quot;VALLEYPROTEINS&quot;)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the Client Member Code value (e.g. &quot;VALLEYPROTEINS&quot;).
+The Client Member Code must contain only UPPERCASE letters, numbers, and/or a dash. It should not contain any other special characters</inlineHelpText>
+        <label>Code</label>
+        <length>32</length>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Member_Code_ID_Long__c</fullName>
+        <externalId>false</externalId>
+        <formula>Id
+&amp; MID(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ012345&quot;,(
+IF(FIND(MID(Id,1,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,1,0)
++IF(FIND(MID(Id,2,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,2,0)
++IF(FIND(MID(Id,3,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,4,0)
++IF(FIND(MID(Id,4,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,8,0)
++IF(FIND(MID(Id,5,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,16,0)
+)+1,1)
+&amp; MID(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ012345&quot;,(
+IF(FIND(MID(Id,6,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,1,0)
++IF(FIND(MID(Id,7,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,2,0)
++IF(FIND(MID(Id,8,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,4,0)
++IF(FIND(MID(Id,9,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,8,0)
++IF(FIND(MID(Id,10,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,16,0)
+)+1,1)
+&amp; MID(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ012345&quot;,(
+IF(FIND(MID(Id,11,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,1,0)
++IF(FIND(MID(Id,12,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,2,0)
++IF(FIND(MID(Id,13,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,4,0)
++IF(FIND(MID(Id,14,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,8,0)
++IF(FIND(MID(Id,15,1), &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;)&gt;0,16,0)
+)+1,1)</formula>
+        <label>Client Member Code ID_Long</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Defines the relationship between a Client Account and a Client Overview contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines the relationship between a Client Account and a Client Overview contract.</inlineHelpText>
+        <label>Contract</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1</booleanFilter>
+            <errorMessage>You must choose a Client Overview contract.</errorMessage>
+            <filterItems>
+                <field>Contract.RecordType.Id</field>
+                <operation>equals</operation>
+                <value>0120f000000WicNAAS</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Client Member Codes</relationshipLabel>
+        <relationshipName>Client_Member_Groups</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Downmarket_Reg_Code_Program_Associations__c</fullName>
+        <description>Used to designate which Reg Code should be used for downmarket set up based on Programs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used to designate which Reg Code should be used for downmarket set up based on Programs</inlineHelpText>
+        <label>Downmarket Reg Code Program Associations</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>DM</fullName>
+                    <default>false</default>
+                    <label>DM</label>
+                </value>
+                <value>
+                    <fullName>DM + DPP</fullName>
+                    <default>false</default>
+                    <label>DM + DPP</label>
+                </value>
+                <value>
+                    <fullName>DM + DPP + HTN</fullName>
+                    <default>false</default>
+                    <label>DM + DPP + HTN</label>
+                </value>
+                <value>
+                    <fullName>DM + HTN</fullName>
+                    <default>false</default>
+                    <label>DM + HTN</label>
+                </value>
+                <value>
+                    <fullName>DPP</fullName>
+                    <default>false</default>
+                    <label>DPP</label>
+                </value>
+                <value>
+                    <fullName>HTN</fullName>
+                    <default>false</default>
+                    <label>HTN</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>UsedforRegistration__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicate whether a Client Member Code is currently used for Registration purposes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether a Client Member Code is used by the member to Register</inlineHelpText>
+        <label>Used for Registration</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Client Member Code</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>ClientMemberCode__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CMC-{000000}</displayFormat>
+        <label>CM Code Assignment Id</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Client Member Codes</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>ClientMemberCode</fullName>
+        <active>true</active>
+        <label>Client Member Code</label>
+        <picklistValues>
+            <picklist>Downmarket_Reg_Code_Program_Associations__c</picklist>
+            <values>
+                <fullName>DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM %2B DPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM %2B DPP %2B HTN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM %2B HTN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>RegistrationOnly</fullName>
+        <active>true</active>
+        <label>Registration Only</label>
+        <picklistValues>
+            <picklist>Downmarket_Reg_Code_Program_Associations__c</picklist>
+            <values>
+                <fullName>DM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM %2B DPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM %2B DPP %2B HTN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM %2B HTN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DPP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HTN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>ClientMemberCode__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UsedforRegistration__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contract__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Limit_Characters</fullName>
+        <active>true</active>
+        <description>Only allow uppercase letters, numbers, and a dash</description>
+        <errorConditionFormula>NOT(REGEX(  ClientMemberCode__c ,&quot;^[0-9 A-Z -]*&quot;))</errorConditionFormula>
+        <errorDisplayField>ClientMemberCode__c</errorDisplayField>
+        <errorMessage>The Client Member Code must contain only UPPERCASE letters, numbers, and/or a dash</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Contract_for_Registration</fullName>
+        <active>false</active>
+        <description>A link to Contract is required if the code is used for Registration.</description>
+        <errorConditionFormula>UsedforRegistration__c = TRUE &amp;&amp; ISBLANK(Contract__c) &amp;&amp; Account__r.RecordType.Name = &quot;Client Lite Account&quot;</errorConditionFormula>
+        <errorMessage>You must link this group to a Contract in order to use this code for Registration.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

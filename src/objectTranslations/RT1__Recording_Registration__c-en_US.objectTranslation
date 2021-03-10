@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact --></label>
+        <name>RT1__Contact__c</name>
+        <relationshipLabel><!-- ReadyTalk Recording Playback History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- InviteSent --></label>
+        <name>RT1__InviteSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>RT1__Lead__c</name>
+        <relationshipLabel><!-- ReadyTalk Recording Playback History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Playback Date --></label>
+        <name>RT1__PlaybackDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playback Duration (minutes) --></label>
+        <name>RT1__PlaybackDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording Title --></label>
+        <name>RT1__Recording__c</name>
+        <relationshipLabel><!-- Recording Registrations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Registration Answer 1 --></label>
+        <name>RT1__RegistrationAnswer1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Answer 2 --></label>
+        <name>RT1__RegistrationAnswer2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Answer 3 --></label>
+        <name>RT1__RegistrationAnswer3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Answer 4 --></label>
+        <name>RT1__RegistrationAnswer4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Answer 5 --></label>
+        <name>RT1__RegistrationAnswer5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Answer 6 --></label>
+        <name>RT1__RegistrationAnswer6__c</name>
+    </fields>
+    <fields>
+        <label><!-- RegistrationId --></label>
+        <name>RT1__RegistrationId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Question 1 --></label>
+        <name>RT1__RegistrationQuestion1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Question 2 --></label>
+        <name>RT1__RegistrationQuestion2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Question 3 --></label>
+        <name>RT1__RegistrationQuestion3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Question 4 --></label>
+        <name>RT1__RegistrationQuestion4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Question 5 --></label>
+        <name>RT1__RegistrationQuestion5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Question 6 --></label>
+        <name>RT1__RegistrationQuestion6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording Registrant Status --></label>
+        <name>RT1__Status__c</name>
+        <picklistValues>
+            <masterLabel>Invited</masterLabel>
+            <translation><!-- Invited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viewed</masterLabel>
+            <translation><!-- Viewed --></translation>
+        </picklistValues>
+    </fields>
+    <webLinks>
+        <label><!-- Add --></label>
+        <name>RT1__Add</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Invite --></label>
+        <name>RT1__Invite</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Invite_to_Recording --></label>
+        <name>RT1__Invite_to_Recording</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,248 @@
+<apex:page docType="html-5.0" sidebar="false" showHeader="false" showChat="false" title="Gainsight" tabStyle="Gainsight__tab" controller="JBCXM.FileUploader">
+     <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <style>
+    .fileupload_btn_ctn {
+        margin-bottom: 10px;
+        padding-top: 169px;
+        text-align: center;
+    }
+    .gs-btn {
+        display: inline-block;
+        padding: 4px 15px;
+        margin-bottom: 0;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 1.428571429;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 3px;
+    }
+    /*-----save----*/
+    
+    .btn-save {
+        color: #fff;
+        background-color: #72ab26;
+        box-shadow: 0 2px 0 #538901;
+        -webkit-box-shadow: 0 2px 0 #538901;
+        -moz-box-shadow: 0 2px 0 #538901;
+    }
+    .btn-save:hover {
+        color: #fff;
+        background-color: #5b891e;
+        box-shadow: 0 2px 0 #5b891e;
+        -webkit-box-shadow: 0 2px 0 #5b891e;
+        -moz-box-shadow: 0 2px 0 #5b891e;
+    }
+    .btn-save:active {
+        color: #fff;
+        background-color: #609418;
+        box-shadow: 0 2px 0 #3c6800;
+        -webkit-box-shadow: 0 2px 0 #3c6800;
+        -moz-box-shadow: 0 2px 0 #3c6800;
+    }
+    /*-----cancel----*/
+    
+    .btn-cancel {
+        color: #fff;
+        background-color: #b9b9b9;
+        box-shadow: 0 2px 0 #8c8c8c;
+        -webkit-box-shadow: 0 2px 0 #8c8c8c;
+        -moz-box-shadow: 0 2px 0 #8c8c8c;
+    }
+    .btn-cancel:hover {
+        color: #fff;
+        background-color: #abaaaa;
+        box-shadow: 0 2px 0 #abaaaa;
+        -webkit-box-shadow: 0 2px 0 #abaaaa;
+        -moz-box-shadow: 0 2px 0 #abaaaa;
+    }
+    .btn-cancel:active {
+        color: #fff;
+        background-color: #abaaaa;
+        box-shadow: 0 2px 0 #626262;
+        -webkit-box-shadow: 0 2px 0 #626262;
+        -moz-box-shadow: 0 2px 0 #626262;
+    }
+    .btn-add {
+      color: #fff;
+      background-color: #1492cf;
+      
+      box-shadow:0 2px 0 #196fa1;
+      -webkit-box-shadow:0 2px 0 #196fa1;
+      -moz-box-shadow:0 2px 0 #196fa1;
+    }
+    .btn-add:hover {
+      color: #fff;
+      background-color: #146e9b;
+       
+      box-shadow:0 2px 0 #146e9b;
+      -webkit-box-shadow:0 2px 0 #146e9b;
+      -moz-box-shadow:0 2px 0 #146e9b;
+    }
+    .model-footer {
+        text-align: center;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .fileUpload {
+        position: relative;
+        overflow: hidden;
+        margin: 10px;
+    }
+    .fileUpload input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .docKeyWord {
+        display : none;
+    }
+    .hiddenBtnAutoTrigger {
+        display : none;
+    }
+    
+    
+    
+    </style>
+           <apex:form enctype="multipart/form-data" id="changeStatusForm">
+           <div class="fileupload_btn_ctn">
+           <div class="fileUpload gs-btn btn-add">
+                <span></span>
+            <apex:inputFile value="{!document.body}" filename="{!document.name}"  contentType="{!document.contentType}" fileSize="{!document.BodyLength}" id="file" styleClass="jbaraImgUploadClass"/>
+            
+            </div>
+            <div class = "fizeSizeDisplay">Max file size is 2 MB.</div>
+          </div>
+            
+            <div class="model-footer"><apex:commandButton action="{!saveImage}" value="Save" styleClass="dummyNewSurveySaveBtn gs-btn btn-save hiddenBtnAutoTrigger" onClick=""  />
+             <apex:inputText value="{!documentKeyWord}" styleClass="docKeyWord" />
+             </div>
+          </apex:form>
+    <script>
+        var fileInput = document.getElementsByClassName('jbaraImgUploadClass')[0];
+        var callback = "{!($CurrentPage.parameters.callback)}";
+        var documentKeyWord = "{!($CurrentPage.parameters.dcKeyword)}";
+        var gsType = "{!($CurrentPage.parameters.uploaderType)}";
+        var supportedFiles = {
+            "image/png" : "image/png",
+            "image/jpeg" : "image/jpeg",
+            "image/jpg" : "image/jpeg"
+        }
+        var displayMessages = {
+        'Image' : 'Uploading...',
+        'Template' : 'Uploading...'
+        }
+        fileInput.addEventListener('change', function(e) {
+                var file = fileInput.files[0];
+                var reader = new FileReader();
+                var fileName = file.name;
+                if(gsType === 'Image' && (supportedFiles[file.type])) {
+                    var dSize = file.size/1024;
+                        dSize = dSize/1024;
+                    if( dSize > 2) {
+                        alert('The maximum file size supported is 2 MB, your file size is ' + dSize.toString().match(/^\d+(?:\.\d{0,2})?/) +' MB');
+                        $(".jbaraImgUploadClass").get(0).value = "";
+                        return false;
+                    }
+                    else {
+                        $(".hiddenBtnAutoTrigger").trigger('click');
+                    }
+                    
+                }
+                else if(gsType.toUpperCase() === 'CSV') {
+                    if(fileName.substr(fileName.indexOf(".")+1).toLowerCase() === "csv") {
+                        var dSize = file.size/1024;
+                        dSize = dSize/1024;
+                               
+                        if( dSize > 2) {
+                            alert('The maximum file size supported is 2 MB, your file size is ' + dSize.toString().match(/^\d+(?:\.\d{0,2})?/) +' MB');
+                            $(".jbaraImgUploadClass").get(0).value = "";
+                            return false;
+                        }
+                        else {
+                            
+                            reader.onload = function() {
+                                var fileData = reader.result;
+                                
+                                if(fileData.indexOf("\r") != -1){
+                                    var _temp = fileData.split("\r");
+                                }else{
+                                    var _temp = fileData.split("\n");
+                                }
+                               
+                               	var a = [];
+                                $.each(_temp, function(index, elmt) {
+                               		a[index] = elmt.split(",");
+                               	});
+                               	
+                                window.parent[callback+"csv"] = a[0];
+                                window.parent[callback+"csvName"] = file.name;
+                                
+                            };
+                            
+                            reader.readAsText(file);
+                            $(".hiddenBtnAutoTrigger").trigger('click');
+                        }
+                    }
+                    else {
+                             alert('File not supported');
+                    }
+                    
+                }
+                else if(gsType === 'Template' && file.name.match(/^.*\.pptx$/) ) { 
+                    //Validation for not allowing PPT to be more than 5MB
+                    var dSize = file.size/1024;
+                        dSize = dSize/1024;
+                    if( dSize > 5) {
+                        alert('The maximum file size supported is 5 MB, your file size is ' + dSize.toString().match(/^\d+(?:\.\d{0,2})?/) +' MB');
+                        $(".jbaraImgUploadClass").get(0).value = "";
+                        return false;
+                    }
+                    else {
+                        $(".hiddenBtnAutoTrigger").trigger('click');
+                    }
+                    
+                }
+                else {
+                    alert('File not supported');
+                    $(".jbaraImgUploadClass").get(0).value = "";
+                }
+                
+        });
+        
+        $(".dummyNewSurveySaveBtn").removeClass("btn");
+        
+        var imageId = '{!(imgId)}';
+        $(".docKeyWord").val(documentKeyWord);
+        $(".dummyNewSurveySaveBtn").click(function(){
+            $('.blocker-message', window.parent.document).text(displayMessages[gsType]);
+            $(".ui-blocker-gs, .blocker-Text", window.parent.document).show();
+            $(".ui-blocker-gs", window.parent.document).height($(window.parent.document).height());
+        });
+        if(imageId && imageId != ""){
+            $(".ui-blocker-gs, .blocker-Text",window.parent.document).hide();
+            window.parent[callback].apply(window.parent, [{imageId:imageId}]);
+        }
+        
+        if(gsType == "Template") {
+        	$('.fizeSizeDisplay').text("Max file size is 5 MB.");
+        }
+        
+    </script>
+   
+    </apex:page>

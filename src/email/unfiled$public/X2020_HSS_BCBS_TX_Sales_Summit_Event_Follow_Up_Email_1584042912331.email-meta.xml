@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to BCBS TX AEs</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_HSS_BCBS TX Sales Summit Event Follow-Up Email</name>
+    <style>none</style>
+    <subject>Thanks for Joining BCBSTX Sales Summit with Livongo</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

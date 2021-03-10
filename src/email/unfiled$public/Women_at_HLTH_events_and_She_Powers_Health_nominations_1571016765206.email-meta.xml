@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>2019 Women At HLTH events</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Women at HLTH events and She Powers Health nominations</name>
+    <relatedEntityType>Campaign</relatedEntityType>
+    <style>none</style>
+    <subject>Women at HLTH - Nominate a Leader!</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

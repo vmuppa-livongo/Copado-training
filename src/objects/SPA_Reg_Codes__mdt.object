@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Programs__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Programs</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>DM</fullName>
+                    <default>true</default>
+                    <label>DM</label>
+                </value>
+                <value>
+                    <fullName>DM + DPP</fullName>
+                    <default>false</default>
+                    <label>DM + DPP</label>
+                </value>
+                <value>
+                    <fullName>DM + DPP + HTN</fullName>
+                    <default>false</default>
+                    <label>DM + DPP + HTN</label>
+                </value>
+                <value>
+                    <fullName>DM + HTN</fullName>
+                    <default>false</default>
+                    <label>DM + HTN</label>
+                </value>
+                <value>
+                    <fullName>DPP</fullName>
+                    <default>false</default>
+                    <label>DPP</label>
+                </value>
+                <value>
+                    <fullName>HTN</fullName>
+                    <default>false</default>
+                    <label>HTN</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Registration_Code_ID__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Registration Code ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SPA_CMC_Prefix__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>SPA CMC Prefix</label>
+        <referenceTo>SPA_CMC_Prefix__mdt</referenceTo>
+        <relationshipLabel>SPA Reg Codes</relationshipLabel>
+        <relationshipName>SPA_Reg_Codes</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <label>SPA Reg Code</label>
+    <listViews>
+        <fullName>SPA_Reg_Code_View</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Programs__c</columns>
+        <columns>SPA_CMC_Prefix__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>SPA Reg Code View</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>SPA Reg Codes</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Access to Direct Mail? --></label>
+        <name>Access_to_Direct_Mail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Access to Employee Emails? --></label>
+        <name>Access_to_Employee_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activities / Success Criteria --></label>
+        <name>Activities_Success_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Title --></label>
+        <name>Assigned_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attendance Required --></label>
+        <name>Attendance_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Benefits Consultant(s) --></label>
+        <name>Benefits_Consultant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Method --></label>
+        <name>Billing_Method__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result --></label>
+        <name>Call_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Health Plan(s) --></label>
+        <name>Client_Health_Plan_s__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Overview --></label>
+        <name>Company_Overview__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost of Supplies --></label>
+        <name>Cost_of_Supplies__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated PwDs --></label>
+        <name>Estimated_PwDs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Address --></label>
+        <name>Event_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Detail Text --></label>
+        <name>Event_Detail_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event Materials --></label>
+        <name>Event_Materials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event State --></label>
+        <name>Event_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Attendance --></label>
+        <name>Expected_Attendance__c</name>
+    </fields>
+    <fields>
+        <help><!-- FOR USE BY INSIDE SALES --></help>
+        <label><!-- Include in weekly call review? --></label>
+        <name>Include_in_weekly_call_review__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internal/External Tags --></label>
+        <name>Internal_External_Tags__c</name>
+    </fields>
+    <fields>
+        <help><!-- Which rep did you have the meeting with? --></help>
+        <label><!-- Internal Livongo Rep --></label>
+        <name>Internal_Livongo_Rep__c</name>
+        <relationshipLabel><!-- Events --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Key Contacts (Name/Title/Email/Phone) --></label>
+        <name>Key_Contacts_Name_Title_Email_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>LID__Date_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL --></label>
+        <name>LID__URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Status --></label>
+        <name>Meeting_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Type --></label>
+        <name>Meeting_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Method of outreach --></label>
+        <name>Method_of_outreach__c</name>
+    </fields>
+    <fields>
+        <label><!-- MigratedmyStrengthActivity --></label>
+        <name>MigratedmyStrengthActivity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migration ID --></label>
+        <name>Migration_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Navigator --></label>
+        <name>Navigator__c</name>
+    </fields>
+    <fields>
+        <label><!-- PBM Partner --></label>
+        <name>PBM_Partner__c</name>
+    </fields>
+    <fields>
+        <label><!-- @Deprecated --></label>
+        <name>PFLSFTMA__Failed_TMA_Transaction_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>PFLSFTMA__Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- TMA Reason --></label>
+        <name>PFLSFTMA__TMA_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- @Deprecated --></label>
+        <name>PFLSFTMA__TMA_Transaction_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Type --></label>
+        <name>PFLSFTMA__Task_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date &amp; time of the call --></help>
+        <label><!-- Playbooks Call Date --></label>
+        <name>Playbooks_Call_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the hour the call was placed in the prospect&apos;s time --></help>
+        <label><!-- Playbooks Call Hour --></label>
+        <name>Playbooks_Call_Hour__c</name>
+    </fields>
+    <fields>
+        <help><!-- A link to the call recording of that specific call --></help>
+        <label><!-- Playbooks Call Recording --></label>
+        <name>Playbooks_Call_Recording__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name of the play a record is currently enrolled in --></help>
+        <label><!-- Playbooks Play Name --></label>
+        <name>Playbooks_Play_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Link Click Count --></label>
+        <name>Playbooks_Step_Email_Link_Click_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Link Clicked Data --></label>
+        <name>Playbooks_Step_Email_Link_Clicked_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Link Clicked --></label>
+        <name>Playbooks_Step_Email_Link_Clicked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Open Count --></label>
+        <name>Playbooks_Step_Email_Open_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Opened --></label>
+        <name>Playbooks_Step_Email_Opened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Replied --></label>
+        <name>Playbooks_Step_Email_Replied__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Reply Count --></label>
+        <name>Playbooks_Step_Email_Reply_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Email Template Name --></label>
+        <name>Playbooks_Step_Email_Template_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- The step number the activity was completed on --></help>
+        <label><!-- Playbooks Step Number --></label>
+        <name>Playbooks_Step_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Success --></label>
+        <name>Playbooks_Step_Success__c</name>
+    </fields>
+    <fields>
+        <help><!-- The type of step for the task (phone, email, other) --></help>
+        <label><!-- Playbooks Step Type --></label>
+        <name>Playbooks_Step_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Products Pitched --></label>
+        <name>Products_Pitched__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prospecting or Pipeline Acceleration? --></label>
+        <name>Prospecting_or_Pipeline_Acceleration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Readytalk Attendance ID --></label>
+        <name>RT1__ReadytalkAttendanceID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Contract Date --></label>
+        <name>Target_Contract_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target Launch Date --></label>
+        <name>Target_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Telephonic or F2F? --></label>
+        <name>Telephonic_or_F2F__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Diabetes Spend --></label>
+        <name>Total_Diabetes_Spend__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total H/C Spend --></label>
+        <name>Total_H_C_Spend__c</name>
+    </fields>
+    <fields>
+        <label><!-- # Total Lives --></label>
+        <name>Total_Lives__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wellness Partner --></label>
+        <name>Wellness_Partner__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Employees --></label>
+        <name>of_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Recording --></label>
+        <name>qbdialer__CallRecordingURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Date/Time --></label>
+        <name>qbdialer__Call_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Dial Number --></label>
+        <name>qbdialer__Call_Dial_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Hour --></label>
+        <name>qbdialer__Call_Hour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Lead Status --></label>
+        <name>qbdialer__Call_Lead_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Ring Time --></label>
+        <name>qbdialer__Call_Ring_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Time Zone --></label>
+        <name>qbdialer__Call_Time_Zone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Callback Date/Time --></label>
+        <name>qbdialer__Callback_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impression ID --></label>
+        <name>qbdialer__ImpressionId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Text message reminders will be sent to all attendees at the set reminder time. --></help>
+        <label><!-- Send text msg reminder to all attendees --></label>
+        <name>qbdialer__SMSReminder__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- CS Meeting --></label>
+        <name>CS_Meeting</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Meeting for Sales Leader to track team engagement --></description>
+        <label><!-- Sales Manager Meeting --></label>
+        <name>Sales_Manager_Meeting</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Sales Rep Meeting --></label>
+        <name>Sales_Rep_Meeting</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Create_Follow_Up_Event --></label>
+        <name>zaapit__Create_Follow_Up_Event</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Follow_Up_Task --></label>
+        <name>zaapit__Create_Follow_Up_Task</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- zp_actions --></label>
+        <name>zaapit__zp_actions</name>
+    </webLinks>
+</CustomObjectTranslation>

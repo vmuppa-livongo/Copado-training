@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Lead Filter Fields --></label>
+        <name>MC4SF__Lead_Filter_Fields</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Account Address --></label>
+        <name>Account_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Record Type --></label>
+        <name>Account_Record_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- Assigns the lead to a new user. Triggers workflow that updates owner. --></help>
+        <label><!-- Assign Lead --></label>
+        <name>Assign_Lead__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Call Script --></label>
+        <name>Call_Script__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether the lead record was created by the Pardot to Salesforce connector. Populated by a Pardot automation rule. --></help>
+        <label><!-- Created by Pardot --></label>
+        <name>Created_by_Pardot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Account State --></label>
+        <name>Current_Account_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Account Status --></label>
+        <name>Current_Account_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Looks to email field and parses email domain information from the email address. This is utilized in automation that looks for other contacts with the same email domain. --></help>
+        <label><!-- Email Parse --></label>
+        <name>Email_Parse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include in pre-event email marketing? --></label>
+        <name>Include_in_email_marketing_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include in post-event email marketing? --></label>
+        <name>Include_in_post_event_email_marketing__c</name>
+    </fields>
+    <fields>
+        <label><!-- LinkedIn Company Id --></label>
+        <name>LID__LinkedIn_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- LinkedIn Member Token --></label>
+        <name>LID__LinkedIn_Member_Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead_Long ID --></label>
+        <name>Lead_Long_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Additional details to Lead Source field --></help>
+        <label><!-- Lead Source Details --></label>
+        <name>Lead_Source_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Type --></label>
+        <name>Lead_Type__c</name>
+        <picklistValues>
+            <masterLabel>Employer</masterLabel>
+            <translation><!-- Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Influencer</masterLabel>
+            <translation><!-- Influencer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payer</masterLabel>
+            <translation><!-- Payer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provider</masterLabel>
+            <translation><!-- Provider --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MC Subscriber --></label>
+        <name>MC4SF__MC_Subscriber__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Date the Lead became qualified. --></help>
+        <label><!-- MQL Date --></label>
+        <name>MQL_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Lead is a Marketing Qualified Lead by acquiring 75+ points through various interactions with Livongo’s marketing efforts. --></help>
+        <label><!-- MQL --></label>
+        <name>MQL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migration ID --></label>
+        <name>Migration_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Flow populates this checkbox when a Lead is created with an email address, but does not have an account and the results of a lookup yield no results. --></help>
+        <label><!-- No Acct Found Via Email Parse Flow --></label>
+        <name>No_Acct_Found_Via_Email_Parse_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offers Benefits US Employes --></label>
+        <name>Offers_Benefits_US_Employes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Swaggable --></label>
+        <name>PFLSFTMA__Swaggable__c</name>
+    </fields>
+    <fields>
+        <label><!-- TMA CM Trigger Value --></label>
+        <name>PFLSFTMA__TMA_CM_Trigger_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- TMA Last Sent --></label>
+        <name>PFLSFTMA__TMA_Last_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Next Step Due Date --></label>
+        <name>Playbooks_Next_Step_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Play Name --></label>
+        <name>Playbooks_Play_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Play Status --></label>
+        <name>Playbooks_Play_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Number --></label>
+        <name>Playbooks_Step_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this box if this is a white-glove lead (may include pre-show gift, etc) --></help>
+        <label><!-- Priority Event Lead --></label>
+        <name>Priority_Event_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ready to convert --></label>
+        <name>Ready_to_convert__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason Why Convert --></label>
+        <name>Reason_Why_Convert__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Override DupeCatcher --></label>
+        <name>SFSSDupeCatcher__Override_DupeCatcher__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the date and time in which a workflow fired to send the lead to the product awareness team. --></help>
+        <label><!-- Sent to Product Awareness Timestamp --></label>
+        <name>Sent_to_Product_Awareness_Timestamp__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a workflow sent an email regarding the lead record to the product awareness team. --></help>
+        <label><!-- Sent to Product Awareness --></label>
+        <name>Sent_to_Product_Awareness__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>TAN__c</name>
+        <relationshipLabel><!-- Leads --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <picklistValues>
+            <masterLabel>Aaryn Pure</masterLabel>
+            <translation><!-- Aaryn Pure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill Kutsche</masterLabel>
+            <translation><!-- Bill Kutsche --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jason Macaleer</masterLabel>
+            <translation><!-- Jason Macaleer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mike Reeve</masterLabel>
+            <translation><!-- Mike Reeve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neal Lewis</masterLabel>
+            <translation><!-- Neal Lewis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Randy Forman</masterLabel>
+            <translation><!-- Randy Forman --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Reason why not converting this lead or &quot;lead is dead&quot; --></help>
+        <label><!-- Why not convert --></label>
+        <name>Why_not_convert__c</name>
+        <picklistValues>
+            <masterLabel>Asked to be removed</masterLabel>
+            <translation><!-- Asked to be removed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fictitious information</masterLabel>
+            <translation><!-- Fictitious information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Just purchased competitor</masterLabel>
+            <translation><!-- Just purchased competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong contact</masterLabel>
+            <translation><!-- Wrong contact --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sourced from Data.com --></label>
+        <name>ddc_prospector__Sourced_from_Data_com__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Lead Close Score Last Updated --></label>
+        <name>isdc_closedate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Lead Close Score --></label>
+        <name>isdc_closescore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Lead Close Score Grade --></label>
+        <name>isdc_closescoregrade__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of US-based Covered Lives --></label>
+        <name>of_US_based_Covered_Lives__c</name>
+    </fields>
+    <fields>
+        <label><!-- Needs Score Synced --></label>
+        <name>pi__Needs_Score_Synced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Scored At --></label>
+        <name>pi__Pardot_Last_Scored_At__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Campaign --></label>
+        <name>pi__campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Comments --></label>
+        <name>pi__comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Date --></label>
+        <name>pi__conversion_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Name --></label>
+        <name>pi__conversion_object_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Type --></label>
+        <name>pi__conversion_object_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Created Date --></label>
+        <name>pi__created_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Activity --></label>
+        <name>pi__first_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Query --></label>
+        <name>pi__first_search_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Type --></label>
+        <name>pi__first_search_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer --></label>
+        <name>pi__first_touch_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Grade --></label>
+        <name>pi__grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Activity --></label>
+        <name>pi__last_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Notes --></label>
+        <name>pi__notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Hard Bounced --></label>
+        <name>pi__pardot_hard_bounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Score --></label>
+        <name>pi__score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot URL --></label>
+        <name>pi__url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Campaign --></label>
+        <name>pi__utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Content --></label>
+        <name>pi__utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Medium --></label>
+        <name>pi__utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Source --></label>
+        <name>pi__utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Term --></label>
+        <name>pi__utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Close Score Last Updated --></label>
+        <name>qbdialer__CloseDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Close Score --></label>
+        <name>qbdialer__CloseScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Contactability Last Updated --></label>
+        <name>qbdialer__ContactDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Hourly Contactability ID --></label>
+        <name>qbdialer__ContactScoreId__c</name>
+        <relationshipLabel><!-- Contact Score Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Contactability Score --></label>
+        <name>qbdialer__ContactScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dials --></label>
+        <name>qbdialer__Dials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Call Time --></label>
+        <name>qbdialer__LastCallTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Time --></label>
+        <name>qbdialer__ResponseTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Displays ZoomInfo Has Moved data point. Denotes whether the lead/contact has moved from the current company. Values are Yes, Uncertain, No. --></help>
+        <label><!-- Person Has Moved --></label>
+        <name>zisf__Person_Has_Moved__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Complete Status --></label>
+        <name>zisf__ZoomInfo_Complete_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- ZoomInfo Email Address for the Lead record. --></help>
+        <label><!-- ZoomInfo Email --></label>
+        <name>zisf__ZoomInfo_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Industry --></label>
+        <name>zisf__ZoomInfo_Industry__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date/time refers to last time ZoomInfo Clean ran for record. --></help>
+        <label><!-- ZoomInfo Last Clean Run --></label>
+        <name>zisf__ZoomInfo_Last_Clean_Run__c</name>
+    </fields>
+    <fields>
+        <help><!-- ZoomInfo Phone for the Lead record. --></help>
+        <label><!-- ZoomInfo Phone --></label>
+        <name>zisf__ZoomInfo_Phone__c</name>
+    </fields>
+    <fields>
+        <help><!-- When this value is set to &quot;True&quot;, an incoming Lead with blank fields will be automatically appended with available data by ZoomInfo. --></help>
+        <label><!-- ZoomInfo Trigger --></label>
+        <name>zisf__ZoomInfo_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Clean Status --></label>
+        <name>zisf__Zoom_Clean_Status__c</name>
+        <picklistValues>
+            <masterLabel>Clean</masterLabel>
+            <translation><!-- Clean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company Clean Only</masterLabel>
+            <translation><!-- Company Clean Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Different</masterLabel>
+            <translation><!-- Different --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Sync</masterLabel>
+            <translation><!-- In Sync --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Compared</masterLabel>
+            <translation><!-- Not Compared --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Found</masterLabel>
+            <translation><!-- Not Found --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo ID --></label>
+        <name>zisf__zoom_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Last Updated --></label>
+        <name>zisf__zoom_lastupdated__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- CustomConvert --></label>
+        <name>CustomConvert</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_detail --></label>
+        <name>MC4SF__MailChimp_Subscriptions_detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_list --></label>
+        <name>MC4SF__MailChimp_Subscriptions_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_List --></label>
+        <name>qbdialer__Create_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_Click_to_Call --></label>
+        <name>qbdialer__Launch_Click_to_Call</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Lists --></label>
+        <name>qbdialer__Manage_Lists</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Existing_Document --></label>
+        <name>tinderbox__Add_Existing_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contract --></label>
+        <name>tinderbox__New_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Presentation --></label>
+        <name>tinderbox__New_Presentation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_TinderBox_Document --></label>
+        <name>tinderbox__New_TinderBox_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_to_Campaign --></label>
+        <name>zaapit__Add_to_Campaign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Auto_Mark --></label>
+        <name>zaapit__Auto_Mark</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Convert_leads --></label>
+        <name>zaapit__Convert_leads</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Convert --></label>
+        <name>zaapit__Mass_Convert</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Convert_L --></label>
+        <name>zaapit__Mass_Convert_L</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Emails --></label>
+        <name>zaapit__Mass_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Emails2 --></label>
+        <name>zaapit__Mass_Emails2</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Merge --></label>
+        <name>zaapit__Mass_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Merge_Leads1 --></label>
+        <name>zaapit__Merge_Leads1</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Merge_Leads_L --></label>
+        <name>zaapit__Merge_Leads_L</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- zp_actions --></label>
+        <name>zaapit__zp_actions</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email #3: Kit is on the Way template to inform Employer Prospective Clients in the West that Kit has shipped and remind them of meeting time</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_10_Halloween_Cookie_Campaign_Email_3</name>
+    <style>none</style>
+    <subject>Your Spookie Kit is on the Way!</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

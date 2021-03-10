@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>181203 Year-One ROI Webinar Follow-up</name>
+    <style>freeForm</style>
+    <subject>Healthcare Cost Savings</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+For many Americans living with chronic conditions, the confusion, complexity, and cost of the healthcare system is overwhelming.
+
+Livongo’s Applied Health Signals engine reduces the financial burden for people with diabetes by making it easier for them to manage their chronic conditions. A recent case study showed 3.6x positive ROI for a group of large self-insured employers. You can learn more here.
+
+In addition, our Value of Data white paper details how we use data to optimize the Livongo program for our members and prove return on investment
+
+Thanks,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

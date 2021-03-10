@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Jay Cambia and Series E Outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo Material Updates: Cambia Partnership and Series E Funding of $105M</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Two big announcements this morning to share. First, we raised $105 million in our Series E funding round. Led by General Catalyst and Kinnevik, with participation by most of our prior investors, this raise will be used to fund our continued growth, invest in building our data science capabilities even further, complete deeper integration with clients and partners, and build out our comprehensive consumer platform based on our vision of serving the whole person. Cambia’s Venture Arm, Echo Health Ventures, was brought on as a new investor in this round.
+
+We also announced our strategic partnership with Cambia Health Solutions, which, while it owns health plans that cover over 2 million people in the pacific northwest, has a vision to redesign health and healthcare to be more consumer driven.  Cambia’s CEO, Mark Ganz, talks about completely transforming the experience people have and using human centered design to ensure we’re creating personalized experiences that really change how we feel, think, value, and experience health and healthcare and he wants to co-develop that future with us.
+
+Can we talk?
+
+Jay
+
+Jay Helmer
+VP, Health Services Sales
+(203) 612 8652
+jhelmer@livongo.com
+How We Work with Health Plans</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

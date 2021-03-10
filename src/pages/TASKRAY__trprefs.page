@@ -1,0 +1,3 @@
+<apex:page standardController="TASKRAY__Project_Task__c" sidebar="false" showheader="false">
+  Deprecated Do Not Use
+</apex:page>

@@ -1,0 +1,44 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <br /> 
+   <img alt="Livongo_Logo_RGB" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Livongo_Logo_RGB?oid=00D4600000180Lw" style="max-width: 171px; width: 171px; max-height: 32px; height: 32px;" title="Livongo_Logo_RGB" /> 
+   <br /> 
+   <br /> 
+   <br /> Dear {{{Recipient.FirstName}}}, 
+   <br /> 
+   <br /> Open enrollment may look different for you and your employees this year, as many of us are still working remotely to keep as safe as possible. We want to help you make the most of the opportunity and ensure that your employees have the information they need to make their benefits decisions.&nbsp; 
+   <br /> 
+   <br /> 
+   <b>This Fall, we invite you to host your virtual benefits or health fair on </b> 
+   <a href="https://www.brazen.com/"><b>Brazen</b></a> 
+   <b>, a high-quality Virtual Events Platform, at no cost to you.&nbsp;</b> 
+   <br /> 
+   <br /> The Brazen platform is modern, safe and easy to use. &nbsp;As part of the platform, your employees will be able to: 
+   <ul> 
+    <li>Engage with the health and wellness vendors you invite to join the fair</li> 
+    <li>Meet with vendors through video, email and chat&nbsp;</li> 
+    <li>Download relevant resources to aid their decision-making&nbsp;</li> 
+    <li>…and more&nbsp;</li> 
+   </ul> If you are interested in learning more or taking advantage of this offer, please email your Client Success Manager by September 30th. &nbsp; 
+   <br /> 
+   <br /> It’s all part of our commitment to keeping people -- especially those living with chronic conditions at greater risk of serious illness from COVID-19 -- healthy, at home, and out of harm’s way.&nbsp; 
+   <br /> 
+   <br /> As always, thank you for your continued support and we look forward to hearing from you.&nbsp; 
+   <br /> 
+   <br /> Stay safe and healthy, 
+   <br /> {{{Sender.FirstName}}} 
+   <br /> 
+   <br /> {{{Sender.Signature}}} 
+  </div>
+ </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;">
+    Dear {{{Recipient.FirstName}}}, 
+   <br /> &nbsp; 
+   <br /> For the second year, Livongo will be hosting the She Powers Health Awards during the HLTH VRTL conference. She Powers Health recognizes individuals who are making a significant impact on peoples’ health, empowering women and modeling diversity and inclusion in the workplace.&nbsp; 
+   <br /> &nbsp; 
+   <br /> In 2019, we honored Molly Coye, MD, MPH, Executive in Residence at AVIA, for her lifetime achievements in healthcare and dedication to empowering women in leadership. Additionally, Chelsea Perry, Head of Community at The Advancement League and Operations Manager at MedStar Health was recognized with the She Powers Health Rising Star award for the accomplishments she has already made as a woman in healthcare early in her career. 
+   <br /> &nbsp; 
+   <br /> We are proud to present this award and highlight the accomplishments women have made in healthcare and in leadership over the course of their careers and more recently amidst the current pandemic.&nbsp; 
+   <br /> &nbsp; 
+   <br /> There are two awards as part of this program: 
+   <ol> 
+    <li><b>She Powers Health</b>&nbsp;- Recognizes trailblazers who have spent their career contributing to the betterment of our healthcare system and equality and empowerment for women in leaders and in the workplace.</li> 
+    <li><b>She Powers Health&nbsp;Rising Star</b> - Recognizes a woman early in her career who serves as a role model for other young women in healthcare and is recognized as a leader amongst her peers.&nbsp;</li> 
+   </ol> To submit a woman who inspires you, please fill out the form 
+   <a href="https://www.livongo.com/shepowershealth/">here</a>&nbsp;by October 2 at 11:59 PM Pacific Time. Winners will be announced during the HLTH VRTL conference on Wednesday, October 14, 2020.&nbsp; 
+   <br /> &nbsp; 
+   <br /> Thank you for submitting your nominations. For any questions, please contact Ashley Beresid at aberesid@livongo.com.&nbsp; 
+   <br /> &nbsp; 
+   <br /> Stay safe and healthy, 
+   <br /> {{{Sender.FirstName}}} 
+   <br /> 
+   <br /> {{{Sender.Signature}}} 
+   <br /> &nbsp; 
+  </div>
+ </body>
+</html>

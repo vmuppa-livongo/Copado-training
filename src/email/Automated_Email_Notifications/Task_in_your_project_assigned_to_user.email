@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html style="margin:0 !important; min-width:100% !important;"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body style="margin:0 !important; min-width:100% !important;">
+
+<table style="min-width:100% !important; margin:0 !important;" bgcolor="#f4f6f9" border="0" cellpadding="20" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td align="center" style="font-family:helvetica neue,helvetica,arial,sans-serif;font-size:14px;color:#333333; padding-top: 40px;" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" style="border:0;padding:0;margin:0;min-width:280px;max-width:500px">
+<tbody>
+<tr>
+<td bgcolor="#ffffff" style="padding:0px 20px 14px 20px;border-radius:6px;border-bottom:1px solid #d8dde6;border-left:1px solid #eceef3;border-right:1px solid #eceef3">
+<div style="font-family: helvetica neue, helvetica, arial, sans-serif">
+<div style="color: #080707;">
+<p style="font-size:21px;color:#080707;margin-top:20px;">Task Assignment Notification</p>
+<hr style="background-color:#d8dde6;height:1px;border:0;padding:0;margin-bottom:21px;">
+<div>
+<p>Hello {!TASKRAY__Project_Task__c.CreatedBy},</p>
+<p style="margin-bottom: 0px;">The following TaskRay Task in your Project has been assigned from a queue to {!TASKRAY__Project_Task__c.OwnerFullName}:</p>
+<table style="border-collapse: collapse;">
+<tbody>
+<tr style="font-weight: bold;">
+<td style="padding-top: 15px;">Project:</td>
+<td style="padding-top: 15px"><a target="_blank" href="https://livongohealth2ndorg.lightning.force.com/lightning/r/TASKRAY__Project__c/{!TASKRAY__Project_Task__c.TASKRAY__ProjectId__c}/view">{!TASKRAY__Project_Task__c.Project_Name__c}</a></td>
+</tr>
+<tr>
+<td>Task(s):</td>
+<td><a target="_blank" href="{!TASKRAY__Project_Task__c.Link}">{!TASKRAY__Project_Task__c.Name} (Due: {!TASKRAY__Project_Task__c.TASKRAY__Deadline__c})
+</a></td>
+</tr>
+<tr>
+<td> Task Owner:</td>
+<td> {!TASKRAY__Project_Task__c.OwnerFullName}</a></td>
+
+</tr>
+<tr style="border-bottom: 1px solid #000; height: 10px;">
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div style="text-align: center; margin-top: 10px;">
+<div style="width: 100%"><a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__support.taskray.com_hc_en-2Dus_categories_204630528-2DTaskRay-2DGuide&amp;d=DwMFaQ&amp;c=fa_WZs7nNMvOIDyLmzi2sMVHyyC4hN9WQl29lWJQ5Y4&amp;r=A1od9bXsE-gWwyGs56jTfpbN8-ZEIFC3PEwzB3LtnIM&amp;m=8mwGSdUuyamQJkRwJuORE9F-Rvfn0Ad9vLlw47EAfno&amp;s=1OmvHANNLaPoyH8HUxk1OaohXCNgntQJj7yCMKbKzqs&amp;e=" style="text-decoration:none;color:#00617f;margin-right:7px;margin-left:7px;font-size:12px; white-space: nowrap" target="_blank">User
+ Guide</a><span style="color:#00617f;font-weight:bold;font-size:12px">·</span><a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__support.taskray.com_hc_en-2Dus_community_topics_201254767-2DIdeas&amp;d=DwMFaQ&amp;c=fa_WZs7nNMvOIDyLmzi2sMVHyyC4hN9WQl29lWJQ5Y4&amp;r=A1od9bXsE-gWwyGs56jTfpbN8-ZEIFC3PEwzB3LtnIM&amp;m=8mwGSdUuyamQJkRwJuORE9F-Rvfn0Ad9vLlw47EAfno&amp;s=fdsmZ5LuF4BISUKhCFa-ZLPuilegnEvR33gW8XteSm8&amp;e=" style="text-decoration:none;color:#00617f;margin-right:7px;margin-left:7px;font-size:12px; white-space: nowrap" target="_blank">Idea
+ Forum</a><span style="color:#00617f;font-weight:bold;font-size:12px">·</span><a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__success.salesforce.com_loginswitcher-3FstartURL-3D-252F-5Fui-252Fcore-252Fchatter-252Fgroups-252FGroupProfilePage-253Fg-253D0F930000000Paio&amp;d=DwMFaQ&amp;c=fa_WZs7nNMvOIDyLmzi2sMVHyyC4hN9WQl29lWJQ5Y4&amp;r=A1od9bXsE-gWwyGs56jTfpbN8-ZEIFC3PEwzB3LtnIM&amp;m=8mwGSdUuyamQJkRwJuORE9F-Rvfn0Ad9vLlw47EAfno&amp;s=Iu5vmupSEQFv1U9wwg3dPQ7-Z1X4a5RmTh6B4R56J34&amp;e=" style="text-decoration:none;color:#00617f;margin-right:7px;margin-left:7px;font-size:12px; white-space: nowrap" target="_blank">Success
+ Community</a></div>
+<div style="width: 100%; margin-top: 4px;"><img width="50" height="50" border="0" style="max-height:50px;max-width:50px" src="https://s3.amazonaws.com/blstatic/taskray_in_app/in.app.email.footer.logo.2018.png"></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>

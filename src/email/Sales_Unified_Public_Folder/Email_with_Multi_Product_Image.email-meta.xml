@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Email with Multi-Product Image</name>
+    <style>freeForm</style>
+    <subject>Livongo Selected for Forbes Billion-Dollar Startup List</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We’re proud to share with you that today, Livongo was named to the Forbes Next Billion-Dollar Startup list. This is an important recognition of the progress we’re making and the opportunity we have to truly make a difference by empowering all people with chronic conditions to live better and healthier lives. With over 215 clients, including some of the country’s largest self-insured employers, partnerships with the two largest PBMs, and 4 of the top 7 payers in the country, we’re at an exciting inflection point.
+
+None of this could have happened without our clients, who have chosen not to accept the status quo and who have chosen to offer their employees, their families and dependents, innovative solutions that make it easier to stay healthier.
+
+Our commitment is to keep working to bring the people who matter most to all of us solutions to real healthcare needs that they love, that measurably improve their health, and that cost less.  A real challenge but nothing is more important.
+
+You can find the full article attached and slideshow here.
+
+Thank you for the opportunity to make a difference.
+
+Best regards,
+
+Adam Claypool
+Director of Commercial Operations
+Livongo
+m: 314.346.2964
+o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Ste 2880, Chicago, IL 60622
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

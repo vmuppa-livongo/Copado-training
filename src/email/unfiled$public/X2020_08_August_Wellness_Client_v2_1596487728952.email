@@ -1,0 +1,18 @@
+<html>
+ <head> 
+  <style type="“text/css”">div {
+  max-width: 650px;
+  min-width: 300px;
+}
+	
+  </style> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <img alt="BH email hero image" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/BH_email_hero_image1?oid=00D4600000180Lw" style="max-width: 650px" title="BH email hero image" /> 
+  <br /> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> August is National Wellness Month and a great time to focus on self-care, establishing new healthier habits, and managing stress. We’ll be reaching out throughout the month with information and updates on how we’re doing this for our Members living with chronic conditions.<br /> <br /> Check out these new resources designed to kick-start healthy habits — for sharing with your employees and as a worthwhile reminder for all of us.&nbsp;<br /> <br /> <a href="https://content.livongo.com/cp/PM09342.A_8_ways_to_better_manage_stress.pdf">8 Ways to Better Manage Stress</a> &nbsp;<br /> <br /> <a href="https://content.livongo.com/cp/PM09340.A_Exercise_Strategies_for_Busy_Lifestyle.pdf">Smart Exercise Strategies for Busy Lifestyles</a><br /> <br /> <a href="https://www.youtube.com/watch?v=Fqz1ClPOz8U&amp;feature=youtu.be">Video: 10 Healthy Summer Low-Carb Swaps</a><br /> <br /> These resources are just a few examples of the kind of support we offer our Members pursuing a healthier lifestyle. And it works. In fact, a new clinical study in <i><a href="https://drc.bmj.com/content/8/1/e001132.full?ijkey=LH9m0poAQm0B71S&amp;keytype=ref">BMJ Open Diabetes Research &amp; Care</a>&nbsp;</i>shows the impact of Livongo’s Diabetes Prevention Program.&nbsp;<br /> <br /> <a href="https://www2.livongo.com/news/preventing-diabetes-through-a-consumer-directed-virtual-care-model">Learn more here.</a> &nbsp;<br /> <br /> While wellness is top-of-mind for us every day at Livongo, it’s especially important now, in the midst of the ongoing COVID-19 crisis.&nbsp;<br /> <br /> We look forward to continuing the conversation.&nbsp;<br /> <br /> Stay healthy,&nbsp;<br /> <br /> CSM &nbsp;&amp; Client Sales&nbsp;</span></span>
+ </body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is for MBGH targets, to promote the Q3 Webinar and the MBGH Event. PLEASE DO NOT CHANGE THE SUBJECT LINE</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Q3_SONJ Webinar Campaign_MBGH Targets</name>
+    <style>none</style>
+    <subject>Expert Webinars: Two Events, Two Examples of How Livongo is Providing Virtual Care Amid a Pandemic</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

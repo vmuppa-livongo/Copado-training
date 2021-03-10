@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Access Code --></label>
+        <name>RT1__AccessCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Others to Invite --></label>
+        <name>RT1__AllowOthersToInvite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>RT1__Campaign__c</name>
+        <relationshipLabel><!-- Recordings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Desciption --></label>
+        <name>RT1__Desciption__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>RT1__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration --></label>
+        <name>RT1__Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>RT1__EndDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Import Registrations --></label>
+        <name>RT1__ImportRegistrations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invitation Message --></label>
+        <name>RT1__Invitation_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invited --></label>
+        <name>RT1__InvitedRecordingRegistrations__c</name>
+    </fields>
+    <fields>
+        <label><!-- LastSyncCompleted --></label>
+        <name>RT1__LastSyncCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- New --></label>
+        <name>RT1__NewRecordingRegistrations__c</name>
+    </fields>
+    <fields>
+        <label><!-- NextMemberIndex --></label>
+        <name>RT1__NextMemberIndex__c</name>
+    </fields>
+    <fields>
+        <label><!-- NextRegistrationIndex --></label>
+        <name>RT1__NextRegistrationIndex__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passcode Enabled --></label>
+        <name>RT1__PasscodeEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passcode --></label>
+        <name>RT1__Passcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playback Count --></label>
+        <name>RT1__PlaybackCount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playback Notification Enabled --></label>
+        <name>RT1__PlaybackNotificationEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playback URL --></label>
+        <name>RT1__PlaybackUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording Id --></label>
+        <name>RT1__RecordingId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recording Author --></label>
+        <name>RT1__Recording_Author__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Enabled --></label>
+        <name>RT1__RegistrationEnabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>RT1__StartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toll Free Number --></label>
+        <name>RT1__TollFreeNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Viewed --></label>
+        <name>RT1__ViewedRecordingRegistrations__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Import_Recording --></label>
+        <name>RT1__Import_Recording</name>
+    </webLinks>
+</CustomObjectTranslation>

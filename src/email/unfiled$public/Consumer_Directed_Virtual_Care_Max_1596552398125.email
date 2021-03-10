@@ -1,0 +1,25 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Hi&nbsp;{{{Recipient.FirstName}}}, 
+  <br /> 
+  <br /> The current global pandemic has made virtual care a critical element that's poised to become the new standard moving forward. 
+  <br /> 
+  <br /> With more than 1,252 clients and 400,000+ enrolled Members, Livongo leads the remote monitoring/virtual care industry in delivering both clinical and financial outcomes for our clients. We support people with chronic conditions to live better and healthier lives, while controlling medical costs through reduced healthcare utilization, unnecessary ER visits, and condition-related medication usage. Benefit Leaders, like you, are partnering with Livongo to help keep people safe and out of the brick-and-mortar healthcare system to limit COVID-19 exposure.&nbsp; 
+  <br /> 
+  <br /> Since 2014, Livongo has been providing remote monitoring for people with chronic conditions and the organizations that serve them. Our solutions supports: 
+  <ul> 
+   <li><b>Immediate Needs:</b> Our proven approach supports a vulnerable population - people living with chronic conditions - outside of high-risk clinical settings.</li> 
+   <li><b>Higher Quality of Care:</b> Access to Members' biometric data, such as blood glucose and blood pressure readings, offers telehealth providers a convenient, efficient way to understand and evaluate patient health.</li> 
+   <li><b>Increased Connectivity:</b> Members may share their up-to-date health data with their providers, family, and friends, keeping their support networks close even when they may be physically apart.</li> 
+   <li><b>Measurable Outcomes:</b> Proven clinical outcomes and an average medical cost savings of $180 per participant per month when addressing comorbid conditions for people living with diabetes.</li> 
+  </ul> Since we haven't had the opportunity to meet in the past, we'd love to connect via Zoom to learn more about your benefits strategy and show how Livongo can virtually support your population's health and care. Let me know when would be a convenient time - we promise to make the discussion informative and valuable. 
+  <br /> 
+  <br /> Sincerely, 
+  <br /> {{{Sender.FirstName}}} 
+  <br /> 
+  <br /> {{{Sender.Signature}}}
+ </body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Care Coordination</fullName>
+        <default>false</default>
+        <label>Care Coordination</label>
+    </customValue>
+    <customValue>
+        <fullName>Shared Coaching</fullName>
+        <default>false</default>
+        <label>Shared Coaching</label>
+    </customValue>
+    <masterLabel>Clinical Model</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

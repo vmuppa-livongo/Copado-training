@@ -1,0 +1,19 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},<br /> <br /> I wanted to share with you this upcoming, topical Transformation Tuesday discussion occurring early July and hosted by Cleveland Clinic's, Will Morris, MD, Executive Medical Director. Please find the details below.&nbsp; Based on our conversations, your commitment to .....[TIE THE TOPIC TO THE PROSPECT OR CLIENT].<br /> <br /> <b>Tue, Jul 7, 2020 1:00 PM - 2:00 PM EDT</b><br /> <br /> <a href="https://innovations.clevelandclinic.org/Summit/Transformation-Tuesday"><b>Register Here</b></a><br /> <br /> <b>The Versatility of Telehealth</b></span></span> 
+  <br /> 
+  <i><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Telehealth may be known as the buzzword-turned-basic necessity in light of recent events, but the tool has held revolutionary power in healthcare for&nbsp;years. The platforms available today have matured to remedy both patient- and clinician-facing concerns, making the delivery of care quicker, simpler,&nbsp;and more widespread. Coupled with other digital health initiatives like remote monitoring and wearable devices, teleheatlh continues to figuratively,&nbsp;and literally, push the boundaries of provider practice.<br /> <br /> The panelists will speak to the versatility of this solution and give their predictions for additional applications as a result of its newfound popularity.&nbsp;</span></span></i> 
+  <br /> 
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Moderator: Will Morris, MD, Executive Medical Director, <b>Cleveland Clinic</b></span></span> 
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Lisa Alderson, CEO &amp; Co-Founder, <b>Genome Medical</b><br /> Ann Mond Johnson, CEO, <b>American Telemedicine Association (ATA)</b><br /> Jennifer Schneider, MD, MS, President, <b>Livongo</b><br /> Peter Rasmussen, MD, Director, Distance Health, <b>Cleveland Clinic</b></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Looking forward to connecting to discuss your perspective.&nbsp; Let me know if you have any questions.<br /> <br /> Stay Healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  <br /> &nbsp;
+ </body>
+</html>

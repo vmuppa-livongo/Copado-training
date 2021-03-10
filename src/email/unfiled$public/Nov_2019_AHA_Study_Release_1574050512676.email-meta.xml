@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Bimal&apos;s study on HTN and DM released at 11.16 .19 American Heart Association</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2019_Clinical_AHA Study Release</name>
+    <relatedEntityType>Campaign</relatedEntityType>
+    <style>none</style>
+    <subject>AHA Study-significant blood pressure reduction</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

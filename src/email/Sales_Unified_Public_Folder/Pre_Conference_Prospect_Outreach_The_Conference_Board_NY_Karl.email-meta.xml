@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Pre Conference Prospect Outreach: The Conference Board NY Karl</name>
+    <style>freeForm</style>
+    <subject>Will you be attending The Conference Board?</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Will you be attending The Conference Board in New York on March 8th and 9th? If so, I would love to schedule time to catch up.
+
+For some background, Livongo is a consumer digital health company the empowers all people with chronic conditions, starting with diabetes, to live better and healthier lives. Here are some recent updates on Livongo:
+
+We’ve proven our approach to chronic conditions management: Our members love us! We have an NPS of 64, which compares to companies like Netflix and Amazon. Also, our members are getting healthier while our clients are saving. Members are showing a .9% reduction in A1c, and clients have demonstrated a cost savings of $83pppm.
+We’re expanding to heart disease: we hired renowned cardiologist, Dr. Bimal Shah, to lead our expansion to heart disease, starting with hypertension, and we will launch Livongo for Hypertension to our existing members early this year.
+We have almost 300 enterprise clients: We are working with the leading Fortune 100 employers, the largest PBMs, 4 of 7 most innovative health plans, and leading health systems
+Our team is growing: Arnnon Geshuri, formerly of Tesla, recently joined as Chief People Officer
+
+Livongo will host a session with PepsiCo titled Proving Financial Impact and Business Model for Chronic Condition Management on March 8th from 3:00 pm - 3:50 pm. Livongo Chief Commercial Officer, Jim Pursley, will join Magda Rusinowski, PepsiCo Director of US Health Benefits, to discuss Livongo’s clinical outcomes and measurable financial impact.
+
+In addition to Jim and Magda’s session, please save the date for Livongo’s VIP event on March 7th from 6:00 - 9:00 pm. The event is hosted at the Attic, and we are co-sponsoring the evening with Castlight and Hinge Health. At the event, there will be plenty of networking opportunities, cocktails, and a fun appearance by the Bumby’s. If you haven’t heard of them yet, we aren’t judging, but they might be. More about this funky New York-based anonymous duo here. We feel that this will be a fun opportunity to set the tone for a great conference and provide a great opportunity to catch up. RSVP for the event here.
+
+Looking forward to hearing back from you, and I hope we can connect while in New York.
+
+Best regards,
+
+Karl Greiter
+Vice President Sales &amp; Employer Market Leader
+Livongo
+m: 630.453.3381 e: kgreiter@livongo.com
+a:  444 N. Michigan Ave, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

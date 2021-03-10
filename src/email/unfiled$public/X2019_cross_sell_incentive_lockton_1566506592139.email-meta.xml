@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>campaign to encourage BC&apos;s to sell Livongo</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2019_Partner_cross_sell_incentive_lockton</name>
+    <relatedEntityType>Campaign</relatedEntityType>
+    <style>none</style>
+    <subject>Expand our partnership and offer your clients a cost-savings</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

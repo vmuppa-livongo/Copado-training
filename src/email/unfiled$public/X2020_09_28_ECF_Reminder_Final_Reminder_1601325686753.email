@@ -1,0 +1,27 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  &nbsp; 
+  <div style="width: 600px; margin: 0px auto; text-align: center;"> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><img alt="2020_Livongo_Executive_Client_Forum" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/X2020_Livongo_Executive_Client_Forum?oid=00D4600000180Lw" style="max-width: 600px" title="2020_Livongo_Executive_Client_Forum" /></span></span> 
+  </div> 
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">&nbsp;</span></span> 
+  <div style="width: 600px; margin: 0px auto;"> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},</span></span> 
+   <p dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">It’s almost here! We’re looking forward to bringing together an intimate group of our strategic partners for Livongo’s Executive Client Forum tomorrow, September 29 from 2:00 – 6:00 PM CDT<b>.&nbsp;</b></span></span></p> 
+   <p dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Livongo’s leadership team is ready to share updates and insights from around our business, and we look forward to hearing from you as we shape our future direction.&nbsp;</span></span></p> 
+   <p dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">We’ve also assembled some truly talented and entertaining guests to add variety and diversity throughout the day, including unique access to a special musical performance. Out of respect for the artist's wishes, we ask that you kindly refrain from capturing any photo or video of any kind. Thank you for your cooperation - we promise it will be a special night.&nbsp;</span></span></p> 
+   <p dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">This is going to be a great event and we look forward to seeing you there!&nbsp;</span></span></p> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Stay Healthy,&nbsp;<br /> {{{Sender.FirstName}}}<br /> <br /> <br /> {{{Sender.Signature}}}&nbsp;</span></span> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b id="docs-internal-guid-893b7bb9-7fff-3b24-2f47-353efff0a46a"> </b> </span></span> 
+  </div>
+ </body>
+</html>

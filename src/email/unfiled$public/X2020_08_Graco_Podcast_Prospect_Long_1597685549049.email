@@ -1,0 +1,23 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 500px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="Graco Podcast Screen shot" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Graco_Podcast_Screen_shot?oid=00D4600000180Lw" style="max-width: 650.9149627685547px" title="Graco Podcast Screen shot" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> I thought you would enjoy listening to </span></span> 
+   <a href="https://www.youtube.com/watch?v=jUKxgWXr1CM&amp;feature=youtu.be"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">this podcast</span></span></a> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"> featuring Jodi Morris, Global Benefits Manager at Graco and Amar Kendale, Livongo Chief Product Officer. In it, they share Graco’s strategy to reduce costs on their diabetes spend and how Livongo’s whole person approach helped address this challenge.&nbsp;<br /> <br /> Graco evaluated wellness programs and selected Livongo because they could offer their employees one platform that addresses multiple conditions, empowers them to manage their chronic condition for a greater impact on the long-term costs and has a proven ROI. In addition, they desired a program that understands how to help people living with chronic conditions and deliver communications that drive action. &nbsp;&nbsp;<br /> <br /> Livongo has learned that many of its members deal with multiple conditions including diabetes, hypertension, and the challenges of being overweight or those associated with behavioral health. They created a single, cohesive experience that works across all these conditions to bring in data from devices, and partnerships, and then deliver personalized communications to drive sustained behavior change.&nbsp;<br /> <br /> The result is that it works. Livongo’s programs have yielded clinically validated and evidence based ROI for their clients.<br /> &nbsp;&nbsp;<br /> As people look for ways to stay healthy wherever they are, Livongo is well-positioned to help you protect the health of the people you serve, as well as the long-term health of your business.&nbsp;<br /> <br /> Stay Safe and Healthy,&nbsp;</span></span> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  </div>
+ </body>
+</html>

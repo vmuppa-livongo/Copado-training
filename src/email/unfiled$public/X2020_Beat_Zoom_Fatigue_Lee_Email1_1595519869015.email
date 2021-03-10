@@ -1,0 +1,23 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Hello&nbsp;{{{Recipient.FirstName}}}, 
+  <br /> 
+  <br /> I hope the note finds you well both personally and professionally. 
+  <br /> 
+  <br /> As we all spend more time in front of our screens and on Zoom, I thought you would find 
+  <a href="https://thriveglobal.com/stories/how-to-avoid-zoom-fatigue-while-working-from-home/">THIS</a>&nbsp;article 
+  <b>'How to Avoid Zoom Fatigue While Working from Home'</b> helpful. 
+  <br /> 
+  <br /> My biggest struggle is setting boundaries around how many Zoom calls I can lead (well) in a day. I have found the number is 5, all separated by a brief walk and stretching session. 
+  <br /> 
+  <br /> Best wishes to you as you find your sweet spot that sustains energy and joy. 
+  <br /> 
+  <br /> Kind regards, 
+  <br /> {{{Sender.FirstName}}} 
+  <br /> 
+  <br /> {{{Sender.Signature}}}
+ </body>
+</html>

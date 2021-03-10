@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>case info being sent to create Jira stories</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Salesforce Case to Jira Story</name>
+    <style>freeForm</style>
+    <subject>{!Case.Case_Team__c}: {!Case.Subject}</subject>
+    <textOnly>Request From: {!Case.Contact}
+Request Date: {!Case.CreatedDate}
+Team: {!Case.Case_Team__c}
+Priority: {!Case.Priority}
+
+Request Details
+Request Type: {!Case.Case_Area__c}
+
+I would like to: {!Case.I_would_like_to__c}
+So that: {!Case.So_That__c}
+Acceptance Criteria: {!Case.Acceptance_Criteria__c}
+Technical Requirements: {!Case.Technical_Requirements__c}
+Other Teams Impacted: {!Case.Other_Teams_Impacted__c}
+
+Subject: {!Case.Subject}
+Description: {!Case.Description}
+
+Case Link: {!Case.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,26 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Hello {{{Recipient.FirstName}}}, 
+  <br /> 
+  <br /> As a HTA member, I thought you’d be interested in our new collaboration with the Health Transformation Alliance (HTA) and Welltok. This 
+  <a href="https://www.prnewswire.com/news-releases/the-health-transformation-alliance-and-welltok-select-livongo-as-first-marketplace-partner-301030344.html">press release</a> outlines our selection as the FIRST marketplace preferred partner for Livongo’s diabetes and diabetes prevention programs.&nbsp; 
+  <br /> 
+  <br /> Criteria for the marketplace selection process included:&nbsp; 
+  <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Positive health outcomes&nbsp; 
+  <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Demonstrated savings&nbsp; 
+  <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;User-friendly experience&nbsp; 
+  <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; • &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Improved employee engagement and satisfaction&nbsp; 
+  <br /> 
+  <br /> We are proud of this endorsement and believe it signifies Livongo as the market leader in Applied Health Signals. To learn more about who we are and what we do, please 
+  <a href="https://creative.livongo.com/share/278D000D-FC12-4CA7-9D4C24F53511EDC6/">click here</a> to download some of our key marketing collateral.&nbsp; 
+  <br /> 
+  <br /> I look forward to discussing a partnership and bringing our solutions to your population.&nbsp; 
+  <br /> 
+  <br /> Best Regards,&nbsp; 
+  <br /> 
+  <br /> {{{Sender.FirstName}}}&nbsp;
+ </body>
+</html>

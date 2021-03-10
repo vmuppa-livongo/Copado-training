@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>EMPLOYER CLIENT:  November Email Template for Monthly HR Wellness Materials</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_10_November Member Wellness</name>
+    <style>none</style>
+    <subject>Healthy tips we can all use as the holiday season begins</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

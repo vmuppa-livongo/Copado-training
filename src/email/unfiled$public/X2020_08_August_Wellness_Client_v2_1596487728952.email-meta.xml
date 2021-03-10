@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is for the August Wellness Campaign. Please add contacts you would like to include in this send to 2020_08_Client Sales_August Wellness.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_08_August Wellness_Client (v2)</name>
+    <style>none</style>
+    <subject>Wellness Tips for All of Us</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

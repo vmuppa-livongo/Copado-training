@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Salesforce Admins</name>
+    <queueMembers>
+        <users>
+            <user>steven.truong@livongo.com</user>
+            <user>vijay.polamraju@livongo.com</user>
+            <user>virinchi.bairisetty@livongo.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

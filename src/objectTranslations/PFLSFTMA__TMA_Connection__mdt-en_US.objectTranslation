@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- AuthCode --></label>
+        <name>PFLSFTMA__AuthCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- AuthorizeUrl --></label>
+        <name>PFLSFTMA__AuthorizeUrl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Namespaceprefix --></label>
+        <name>PFLSFTMA__Namespaceprefix__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Endpoint Host --></label>
+        <name>PFLSFTMA__Service_Endpoint_Host__c</name>
+    </fields>
+</CustomObjectTranslation>

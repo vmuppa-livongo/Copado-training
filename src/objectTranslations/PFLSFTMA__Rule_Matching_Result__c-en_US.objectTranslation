@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- MatchedObjectsIds --></label>
+        <name>PFLSFTMA__MatchedObjectsIds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rule --></label>
+        <name>PFLSFTMA__Rule__c</name>
+        <relationshipLabel><!-- Rule Matching Results --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

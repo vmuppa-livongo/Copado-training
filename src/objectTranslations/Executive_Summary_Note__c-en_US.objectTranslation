@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Executive Summary Note</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Executive Summary Notes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>Contract__c</name>
+        <relationshipLabel><!-- Executive Summary Notes --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Populated from User&apos;s Department --></help>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue --></label>
+        <name>Issue__c</name>
+        <picklistValues>
+            <masterLabel>Client Issue</masterLabel>
+            <translation><!-- Client Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Issue</masterLabel>
+            <translation><!-- Data Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Issue</masterLabel>
+            <translation><!-- Marketing Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Issue</masterLabel>
+            <translation><!-- Partner Issue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- In one or two sentences, describe the actions you will take to resolve issue: --></help>
+        <label><!-- Path to Resolution --></label>
+        <name>Path_to_Resolution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub Issue(s) --></label>
+        <name>Sub_Issue_s__c</name>
+        <picklistValues>
+            <masterLabel>Awaiting Data</masterLabel>
+            <translation><!-- Awaiting Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting client or partner marketing approval</masterLabel>
+            <translation><!-- Awaiting client or partner marketing approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awaiting schedule of kick off call</masterLabel>
+            <translation><!-- Awaiting schedule of kick off call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client edit delays</masterLabel>
+            <translation><!-- Client edit delays --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client requested later launch or enrollment date</masterLabel>
+            <translation><!-- Client requested later launch or enrollment date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client requires extra internal marketing approvals</masterLabel>
+            <translation><!-- Client requires extra internal marketing approvals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client still in contracting</masterLabel>
+            <translation><!-- Client still in contracting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client unresponsive</masterLabel>
+            <translation><!-- Client unresponsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data file processing issues</masterLabel>
+            <translation><!-- Data file processing issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data issues</masterLabel>
+            <translation><!-- Data issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data not processed on time</masterLabel>
+            <translation><!-- Data not processed on time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doc control review preventing enrollment deployment</masterLabel>
+            <translation><!-- Doc control review preventing enrollment deployment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enrollment marketing not launched on time</masterLabel>
+            <translation><!-- Enrollment marketing not launched on time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing hold request</masterLabel>
+            <translation><!-- Marketing hold request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Misaligned expectations on data/file handoff timeline</masterLabel>
+            <translation><!-- Misaligned expectations on data/file handoff timeline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing required paperwork (e.g. ESI PHI release)</masterLabel>
+            <translation><!-- Missing required paperwork (e.g. ESI PHI release) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial data received - proceeding with launch</masterLabel>
+            <translation><!-- Partial data received - proceeding with launch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner restrictions</masterLabel>
+            <translation><!-- Partner restrictions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner unresponsive</masterLabel>
+            <translation><!-- Partner unresponsive --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

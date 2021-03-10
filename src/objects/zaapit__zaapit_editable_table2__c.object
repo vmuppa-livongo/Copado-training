@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>zaapit__Advanced_Text_Search__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Advanced Text Search</description>
+        <externalId>false</externalId>
+        <label>Advanced Text Search</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Amount_field_For_Graphs__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Amount field For Graphs</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__CustomActionLink__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>format: link-Text~https://na14.salesforce.com/{0}/e?close=1~tool tip text(optional)
+{0} is the rowID</inlineHelpText>
+        <label>CustomActionLink</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Custom_CSS__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom CSS  to control view / edit mode fields columns etc.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Custom CSS  to control view / edit mode fields columns etc.</inlineHelpText>
+        <label>Custom CSS</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__DisableGeoMaps__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disable Geo Maps for smart Instant graphs</description>
+        <externalId>false</externalId>
+        <label>DisableGeoMaps</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Disable_formula_fields_groupings__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable formula fields groupings</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__DupeSettings__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>DupeSettings</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__EnableFieldValueCss__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Field Value Css</description>
+        <externalId>false</externalId>
+        <label>EnableFieldValueCss</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__EnableHorizontalScroll__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>EnableHorizontalScroll</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Enable_Sort_Grouping2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Sort Grouping2</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Enable_Sort_coloring__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Sort coloring: use Sort_color1 &amp; Sort_color2 custom labels to change the colors</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable Sort coloring: use Sort_color1 &amp; Sort_color2 custom labels to change the colors</inlineHelpText>
+        <label>Enable Sort coloring</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Enable_Sort_grouping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable_Sort_grouping</description>
+        <externalId>false</externalId>
+        <label>Enable Sort Grouping</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Exclude_Fields_From_Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Exclude Fields From Total</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Exclude Fields From Total - use # as a sepeartor</inlineHelpText>
+        <label>Exclude Fields From Total</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__FilterReplaceLabelName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Use a label for substituting none-translated pulldowns
+Label format:pulldown value~translated value#pulldown value1~translated value1#</description>
+        <externalId>false</externalId>
+        <label>FilterReplaceLabelName</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Hide_Scroll_Buttons__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide Scroll Buttons</description>
+        <externalId>false</externalId>
+        <label>Hide Scroll Buttons</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Hide_graph_link_on_filter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide graph link on filter</description>
+        <externalId>false</externalId>
+        <label>Hide graph link on filter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__HierarchyRelation__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Hierarchy Relation for {PID} parameter 
+Format: table~SON Field API FIELD NAME~Father Field API FIELD NAME
+Example: account~id~parentid</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hierarchy Relation for {PID} parameter 
+Format: table~SON Field API FIELD NAME~Father Field API FIELD NAME
+Example: account~id~parentid</inlineHelpText>
+        <label>HierarchyRelation</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__LogicExtend__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>EventName~classNameSpace~ClassName#EventName2~classNameSpace2~ClassName2
+The Class must Implement ZPTableHandler</inlineHelpText>
+        <label>LogicExtend</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Max_rows_for_formula_grouping__c</fullName>
+        <defaultValue>10000</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The maximum number of rows for calculating filter-groupings (large values may take more time to calculate).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The maximum number of rows for calculating filter-groupings (large values may take more time to calculate).</inlineHelpText>
+        <label>Max rows for formula grouping</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__MaximumRowsMassDeleteAll__c</fullName>
+        <defaultValue>5000</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Maximum Rows for Mass Delete All (will delete the first x rows), this option is used for limiting the number of rows so when deleting the won&apos;t exceed Salesforc&apos;s limits.</description>
+        <externalId>false</externalId>
+        <label>MaximumRowsMassDeleteAll</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__More_Actions_Link__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>More Actions Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__More_Actions_win_width__c</fullName>
+        <deprecated>false</deprecated>
+        <description>empty this field for auto-with</description>
+        <externalId>false</externalId>
+        <label>More Actions win width</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__NumberOfNewRows__c</fullName>
+        <defaultValue>10</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The number of new empty rows to add on default</description>
+        <externalId>false</externalId>
+        <label>NumberOfNewRows</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__Open_TextArea_in_a_dialog__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Open Text Area in a dialog</description>
+        <externalId>false</externalId>
+        <label>Open TextArea in a dialog</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__PutFieldOnRowCSSClass__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>PutFieldOnRowCSSClass</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__ShowRefreshLink__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show Refresh Link</description>
+        <externalId>false</externalId>
+        <label>ShowRefreshLink</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Show_All_Rows_in_query__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show All Rows in query  includes archived and deleted rows (ALL ROWS)</description>
+        <externalId>false</externalId>
+        <label>Show All Rows in query</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Show_Hover_Preview_On_Name_Field__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show hover preview on name field</description>
+        <externalId>false</externalId>
+        <label>Show hover preview on name field</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Show_Mass_Updae_on_view_mode__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show Mass Updae on view mode</description>
+        <externalId>false</externalId>
+        <label>Show Mass Updae on view mode</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__Show_column_filter__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Show column filter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__SortBy3__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sort By #3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__Using_Scope__c</fullName>
+        <deprecated>false</deprecated>
+        <description>USING SCOPE:
+Delegated
+Filter for records delegated to another user for action. For example, a query could filter for only delegated Task records.
+Everything
+Filter for all records.
+Mine
+Filter for records owned by the user running the query.
+My_Territory
+Filter for records in the territory of the user running the query. This option is available if territory management is enabled for your organization.
+My_Team_Territory
+Filter for records in the territory of the team of the user running the query. This option is available if territory management is enabled for your organization.
+Team
+Filter for records assigned to a team, such as an Account team.</description>
+        <externalId>false</externalId>
+        <label>Using Scope</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__buttons2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>add custom javascript buttons
+name~javascript#name~javascript#name~javascript#.....</description>
+        <externalId>false</externalId>
+        <inlineHelpText>add custom javascript buttons</inlineHelpText>
+        <label>buttons2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__buttons__c</fullName>
+        <deprecated>false</deprecated>
+        <description>add custom javascript buttons
+name~javascript#name~javascript#name~javascript#.....</description>
+        <externalId>false</externalId>
+        <inlineHelpText>add custom javascript buttons</inlineHelpText>
+        <label>buttons</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__columnsWidth__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>columnsWidth</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__customLinksOnReadMode2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>customLinksOnReadMode2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__customLinksOnReadMode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Format: salesforce_field~salesforce_field_ID#salesforce_field~salesforce_field_ID..
+The &quot;salesforce_field_ID&quot; will be the link on the text of &quot;salesforce_field&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Format: salesforce_field~salesforce_field_ID#salesforce_field~salesforce_field_ID..
+The &quot;salesforce_field_ID&quot; will be the link on the text of &quot;salesforce_field&quot;</inlineHelpText>
+        <label>customLinksOnReadMode</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__disable_autosave_views__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disable auto save views</description>
+        <externalId>false</externalId>
+        <label>disable_autosave_views</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__export_to_url__c</fullName>
+        <deprecated>false</deprecated>
+        <description>export_to_url, empty is disable
+example: https://zaapit.xxx.visual.force.com
+Use this option only with custom developments / communities...</description>
+        <externalId>false</externalId>
+        <label>export_to_url</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__external_CSS_include__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>external_CSS_include</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__external_JS_include__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>external_JS_include</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__extraConditionFilter2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>extends extraConditionFilter</description>
+        <externalId>false</externalId>
+        <label>extraConditionFilter2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__extraConditionFilter__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Write a SQL (SOQL) optional condition.
+Example: price&gt;0</inlineHelpText>
+        <label>extraConditionFilter</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__fields2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>the second field the holds the fields</description>
+        <externalId>false</externalId>
+        <label>fields2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__fieldsHeaders2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>fieldsHeaders2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__fieldsHeaders__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specify your own first row headers - leave empty to use the default, a must: number of fields=number of field headers. format: salesforce_field~new header#salesforce_field~new header#....</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify your own first row headers - leave empty to use the default, a must: number of fields=number of field headers. format: salesforce_field~new header#salesforce_field~new header#....</inlineHelpText>
+        <label>fieldsHeaders</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__fields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field to display in the editable table, use &apos;#&apos; as a field separator, use the original field API name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field to display in the editable table, use &apos;#&apos; as a field separator, use the original field API name</inlineHelpText>
+        <label>fields</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__freezeColumnNum__c</fullName>
+        <defaultValue>1</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>freezeColumnNum</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__freezeColumn__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>freezeColumn</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideAddRow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide Add Row button on edit mode</description>
+        <externalId>false</externalId>
+        <label>hideAddRow</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideChooseATableLink__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide Choose A Table Link (on top right)</description>
+        <externalId>false</externalId>
+        <label>hideChooseATableLink</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideCustomizeLink__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide Customize Link</description>
+        <externalId>false</externalId>
+        <label>hideCustomizeLink</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideEditButton__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide Edit Button</description>
+        <externalId>false</externalId>
+        <label>hideEditButton</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideEditDelColumn__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide edit &amp; delete links on read-only column</description>
+        <externalId>false</externalId>
+        <label>hideEditDelColumn</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideItemsPerPage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>hideItemsPerPage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideNewAndDelete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide New &amp; Delete Buttons on edit mode</description>
+        <externalId>false</externalId>
+        <label>hideNewAndDelete</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hidePageNumberConfirm__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide page number confirm pop up when in related list mode</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide page number confirm pop up when in related list mode</inlineHelpText>
+        <label>hidePageNumberConfirm</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hidePageNumbers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>hidePageNumbers</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideTopFilterSave__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>hideTopFilterSave</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hideTotalsRow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide Totals Row</description>
+        <externalId>false</externalId>
+        <label>hideTotalsRow</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hide_chatter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>hide_chatter</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__hide_multi_value_filters__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hide multi value filters</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__include_page_load_params__c</fullName>
+        <deprecated>false</deprecated>
+        <description>include page load prams separated by #.</description>
+        <externalId>false</externalId>
+        <label>include page load params</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__include_page_name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Page to include on the top of the table.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Page to include on the top of the table.</inlineHelpText>
+        <label>include page name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__isEdit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Edit - Default</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__loadfilter_maxResRows__c</fullName>
+        <defaultValue>250</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>loadfilter maxResRows</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__mainFieldSubQueryPre__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>mainFieldSubQueryPre</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__maxRowToExport__c</fullName>
+        <defaultValue>2000</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The maximum amount of rows to export</description>
+        <externalId>false</externalId>
+        <label>maxRowToExport</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__maxRowsOnPage__c</fullName>
+        <defaultValue>200</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Max rows on page  - footer selector</description>
+        <externalId>false</externalId>
+        <label>maxRowsOnPage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__maxRowsPerPage__c</fullName>
+        <defaultValue>10</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Maximum displayed rows</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum displayed rows</inlineHelpText>
+        <label>maxRowsPerPage</label>
+        <precision>10</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__newRecordLinkNum__c</fullName>
+        <deprecated>false</deprecated>
+        <description>003 is for contact - newRecordLinkNum
+006 is for opportunity
+press a regular new and see</description>
+        <externalId>false</externalId>
+        <label>newRecordLinkNum</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__new_record_link__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>use {ID} in the url for the current parentid (usefull for related lists)</inlineHelpText>
+        <label>new record link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__removeAutoNameFromExport__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Remove Auto Name field From Export (for no-name tables)</description>
+        <externalId>false</externalId>
+        <label>removeAutoNameFromExport</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showCheckBoxes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>show Check Boxes next to the actions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>show Check Boxes next to the actions</inlineHelpText>
+        <label>showCheckBoxes</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showCountOnExport__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>showCountOnExport</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showDeleteSelectedViewMode__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show Delete Selected on View Mode</description>
+        <externalId>false</externalId>
+        <label>showDeleteSelectedViewMode</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showExport__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show Export button to Excel, pdf &amp; word</description>
+        <externalId>false</externalId>
+        <label>showExport</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showMassDeleteAll__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show mass delete all button</description>
+        <externalId>false</externalId>
+        <label>showMassDeleteAll</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showMassDuplicate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>showMassDuplicate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showQuarterField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Show Quarter Field - of type date to show only the current/selected quarter</description>
+        <externalId>false</externalId>
+        <label>showQuarterField</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__showRegButtons__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>showRegButtons</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showTopTaskLinksSAM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>showTopTaskLinksSAM</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__showUserGuideLink__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show User Guide Link on the top of table</description>
+        <externalId>false</externalId>
+        <label>showUserGuideLink</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__soqlSubQueryPre__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Example: select email from leads group by email having count()&gt;1</description>
+        <externalId>false</externalId>
+        <label>soqlSubQueryPre</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__sortBy2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sort By #2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__sortBy__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sort By field name.</description>
+        <externalId>false</externalId>
+        <label>sortBy</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__sortDir2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>sortDir2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__sortDir3__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>sortDir3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__sortDir__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sort direction ascending / descending</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sort direction ascending / descending.
+Put asc/desc</inlineHelpText>
+        <label>sortDir</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__table__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The real table to use</description>
+        <externalId>false</externalId>
+        <label>table</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__table_ref__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>table_ref</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__title__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The table title</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The table title</inlineHelpText>
+        <label>title</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__tools_link__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>tools link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__topChartsFields__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Auto open the charts for the fields inside this fields.
+Example: field1#field2....</description>
+        <externalId>false</externalId>
+        <label>topChartsFields</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zaapit__turnOnScrollModeForRLNTabs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Turn On Scroll Mode For related lists &amp; Sub-Tabs</description>
+        <externalId>false</externalId>
+        <label>turnOnScrollModeForRLNTabs</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>zaapit__useSmallTableFont__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When &quot;marked&quot; that entire table will be displayed in small font (8pt).
+This feature will help you to display large amount of data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When &quot;marked&quot; that entire table will be displayed in small font (8pt).</inlineHelpText>
+        <label>useSmallTableFont</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>zaapit_editable_table2</label>
+    <visibility>Public</visibility>
+</CustomObject>

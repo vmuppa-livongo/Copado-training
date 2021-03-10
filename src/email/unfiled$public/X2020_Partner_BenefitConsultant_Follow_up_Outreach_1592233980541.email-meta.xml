@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email Follow-up to Benefit Consultant contacts (reactive only)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Partner_BenefitConsultant_CVS Follow-up Outreach</name>
+    <style>none</style>
+    <subject>Checking in and sending some additional context</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

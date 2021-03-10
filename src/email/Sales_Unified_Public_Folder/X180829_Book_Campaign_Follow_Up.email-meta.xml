@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>180912 Book Campaign Follow Up</name>
+    <style>freeForm</style>
+    <subject>Did you receive the book I sent you?</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Did you receive the package that I recently sent to your office? It contains a book written by Livongo CEO, Glen Tullman, that I figured that you would enjoy.
+
+The book is titled “On Our Terms: Empowering the New Health Consumer” and focuses on how we address the current healthcare crisis in quality and cost, especially as it relates to chronic conditions, by empowering health consumers.  The premise is captured in the introductory quote: “Our greatest chance of solving the chronic condition epidemic in this country and across the world requires us to look in the last pace we might imagine: the person who is living with the chronic disease on a daily basis.”
+
+I hope you have the chance to read it! Even if you cannot find the time, the book provides a great summary at the end of each chapter that lists the key takeaways.
+
+Look forward to connecting soon.
+
+[Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

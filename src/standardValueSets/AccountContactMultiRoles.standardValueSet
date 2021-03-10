@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Actuary / Data Analytics</fullName>
+        <default>false</default>
+        <label>Actuary / Data Analytics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Analyst</fullName>
+        <default>false</default>
+        <label>Analyst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing POC</fullName>
+        <default>false</default>
+        <label>Billing POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker</fullName>
+        <default>false</default>
+        <label>Broker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Budget Approver</fullName>
+        <default>false</default>
+        <label>Budget Approver</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Decision Maker</fullName>
+        <default>false</default>
+        <label>Business Decision Maker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Influencer</fullName>
+        <default>false</default>
+        <label>Business Influencer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Care Management Lead / POC</fullName>
+        <default>false</default>
+        <label>Care Management Lead / POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Implementation Lead / POC</fullName>
+        <default>false</default>
+        <label>Client Implementation Lead / POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Success Lead / POC</fullName>
+        <default>false</default>
+        <label>Client Success Lead / POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clinical Lead / POC</fullName>
+        <default>false</default>
+        <label>Clinical Lead / POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consulting Pharmacist</fullName>
+        <default>false</default>
+        <label>Consulting Pharmacist</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Enrollment Marketing POC</fullName>
+        <default>false</default>
+        <label>Enrollment Marketing POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Executive Sponsor</fullName>
+        <default>false</default>
+        <label>Executive Sponsor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gatekeeper</fullName>
+        <default>false</default>
+        <label>Gatekeeper</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lead Consultant</fullName>
+        <default>false</default>
+        <label>Lead Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Legal Lead / POC</fullName>
+        <default>false</default>
+        <label>Legal Lead / POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Procurement Lead / POC</fullName>
+        <default>false</default>
+        <label>Procurement Lead / POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Lead / POC</fullName>
+        <default>false</default>
+        <label>Sales Lead / POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scorecard Recipient</fullName>
+        <default>false</default>
+        <label>Scorecard Recipient</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Supporting ASO Executive - Commercial Partner Executive</fullName>
+        <default>false</default>
+        <label>Supporting ASO Executive - Commercial Partner Executive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Supporting Consultant</fullName>
+        <default>false</default>
+        <label>Supporting Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Supporting Other Partner Executive</fullName>
+        <default>false</default>
+        <label>Supporting Other Partner Executive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Supporting PBM Executive</fullName>
+        <default>false</default>
+        <label>Supporting PBM Executive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Technical Decision Maker</fullName>
+        <default>false</default>
+        <label>Technical Decision Maker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Technical Influencer</fullName>
+        <default>false</default>
+        <label>Technical Influencer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Telemedicine</fullName>
+        <default>false</default>
+        <label>Telemedicine</label>
+    </standardValue>
+</StandardValueSet>

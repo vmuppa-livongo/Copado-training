@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>CTA partnership email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_CTA Partnership Email</name>
+    <style>none</style>
+    <subject>From one Consumer Technology Association member to another</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

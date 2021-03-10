@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Field Style --></label>
+        <name>zaapit__Field_Style__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field To Color --></label>
+        <name>zaapit__Field_To_Color__c</name>
+    </fields>
+    <fields>
+        <label><!-- Row Style --></label>
+        <name>zaapit__Row_Style__c</name>
+    </fields>
+    <fields>
+        <label><!-- SOQL Condition --></label>
+        <name>zaapit__SOQL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Style Description --></label>
+        <name>zaapit__Style_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- ViewID --></label>
+        <name>zaapit__ViewID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Css --></label>
+        <name>zaapit__css__c</name>
+    </fields>
+</CustomObjectTranslation>

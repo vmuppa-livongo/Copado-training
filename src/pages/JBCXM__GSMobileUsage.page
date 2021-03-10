@@ -1,0 +1,44 @@
+<!-- Copyright (c) 2014 Gainsight Software, Inc. 
+---- Purpose                    : Shows the Usage data based on selected customer.
+----                              Created this page to display the usage data in a iFrame. 
+---- Other comments (optional)  : 
+-->
+<apex:page docType="html-5.0"  showheader="false" sidebar="false" title="360 View" tabStyle="CustomerSuccess360__tab" controller="JBCXM.Customer360Broker" extensions="JBCXM.NSRemoting">
+
+<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSAppCSS,'css/CS360/CS360.css'))}"/>
+<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>    
+<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid, 'css/ui.jqgrid.css'))}"/>
+
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor,'js/vendor/jquery/jquery-1.10.2.min.js'))}"/>
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor,'js/vendor/jquery/jquery-UI-1.10/js/jquery.ui.min.js'))}"/>
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor,'js/vendor/grids/jqgrid-4.6.0/js/jquery.jqGrid.min.js'))}"/>
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor,'js/vendor/grids/jqgrid-4.6.0/js/i18n/grid.locale-en.js'))}"/>    
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'js/jqgrid.Custom.Utility.js'))}"/>
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor,'js/vendor/underscore-min.js'))}"/>
+
+<!-- 02/2014 : Commented the older and used the latest Highstock version 1.3.10 --> 
+<!-- <apex:includeScript value="{!JSENCODE(URLFOR($Resource.HighchartsJS, 'HighchartsJS/highstock1.3.2.js'))}"/>
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.HighchartsJS, 'HighchartsJS/themes/gray.js'))}" /> -->
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSMobileApp, 'js/HighstockJS1.3.10/highstock.js'))}" />
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSMobileApp, 'js/HighstockJS1.3.10/themes/gray.js'))}" />
+
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSMobileApp, 'js/usage/adoptiongraph.js'))}" />
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JSONUtil))}"/>
+<script>
+    j$=jQuery.noConflict();
+</script>
+<div>
+    <c:Usage360 customerId="{!$CurrentPage.parameters.cid}" customerName="{!customerName}" graphTitle="{!customerName}" showTitle="false" containerHeight="500px" formName="Customer360" >
+    </c:Usage360>
+</div>
+<script> 
+		(function(){try{var a=navigator.userAgent; 
+        if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1 || a.indexOf('OS/9')!=-1||a.indexOf('OS 9')!=-1||a.indexOf('OS/10')!=-1||a.indexOf('OS 10')!=-1)&&(a.indexOf('Safari')==-1)){ 
+		var s=document.createElement('style'); 
+		s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+		document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+  </script>
+</apex:page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Neal Customized Castlight Blog Outreach</name>
+    <style>freeForm</style>
+    <subject>Thought Leadership from Castlight and Livongo</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+I wanted to share a blog post from our partners at Castlight Health. The post does a great job explaining the financial and clinical importance of managing hypertension, diabetes, and other chronic conditions. Castlight formed a strategic partnership with Livongo to address these concerns because of their belief in our proven approach to managing chronic conditions.
+The Livongo and Castlight partnership provides many benefits for employers but two that will directly impact your efforts are:
+
+An easy implementation process: Castlight clients can simply add Livongo into the existing Castlight ecosystem, saving time and the hassles of adding a new vendor.
+Improved enrollment and utilization: Castlight’s engagement and incentives programs naturally drive employees to enroll in the Livongo program and utilize its benefits.
+
+I would love to schedule some time to discuss more about Livongo’s partnership with Castlight and how we are revolutionizing chronic conditions management.
+
+Best regards,
+
+Neal Lewis
+Vice President, Southeast, Livongo
+m: 239.633.0482 e: nlewis@livongo.com
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

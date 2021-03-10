@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is Email #1 in the Q3 State of New Jersey Webinar campaign.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Q3 SONJ Webinar Campaign_Email #1</name>
+    <style>none</style>
+    <subject>Save the date: Improving health outcomes and reducing care costs – despite a pandemic</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

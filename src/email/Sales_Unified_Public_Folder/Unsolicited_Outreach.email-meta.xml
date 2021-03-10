@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Unsolicited Outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo One-Time Special Offer</subject>
+    <textOnly>Good afternoon {!Contact.FirstName}, I hope this note finds you having a blessed day!
+
+Recently, you expressed interest in evaluating and launching the Livongo for Diabetes program to your employees and health plan members.  We Thank You for your interest and would like to present you with a unique &quot;one-time&quot; opportunity to help make a huge impact in the lives of your members living with diabetes.
+
+This special opportunity is only being offered to a select few companies in the Southeast and is time sensitive.  You have been selected because of your past interest and given your Southeast presence.  Albeit unfortunate, we experience much higher prevalence in our part of the country, and collectively we can truly make a positive impact for those who struggle with this dreadful disease on a daily basis.  Additionally, we can help drive down your cost for this very important, but costly, population to your organization.
+
+Special Offer $68* PPPM
+First 2 Months: Free
+Special Offer valid only if contracted by May 1 - Launched by Sept. 1.
+Option to add: $20** PPPM
+Livongo for Hypertension &quot;New&quot;
+
+See full proposal here:
+https://livongo.octiv.com/view/livongo-special-offer-southeast-us
+
+Stay healthy,
+
+NEAL LEWIS
+Regional Vice President
+Livongo
+m: 239.633.0482 e: nlewis@livongo.com
+a: 3900 Deep Passage Way, Naples, FL 34109
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

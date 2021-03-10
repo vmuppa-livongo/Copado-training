@@ -1,0 +1,114 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false">
+  <html>
+
+  <body>
+    <div id="zoom-container">
+      <div id="print-container" class="slds">
+        <div id="print-header" class="slds-clearfix">
+          <div id="print-header-image-container"></div>
+          <div id="print-header-title" class="slds-text-heading_small"></div>
+          <div id="print-header-notes" class="slds-text-heading_small"></div>
+        </div>
+        <div id="print-content-container"></div>
+        <div id="print-footer">
+          <div id="print-footer-notes"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <link href="{!URLFOR($Resource.trslds, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" rel="stylesheet"
+    type="text/css" />
+  <link href="{!URLFOR($Resource.trplugins, 'css/trtaskboard.css')}" rel="stylesheet" type="text/css" />
+  <style>
+    .show-custom-header-and-footer #print-header {
+      overflow: hidden;
+    }
+
+    .show-custom-header-and-footer #print-header-title {
+      text-align: center;
+    }
+
+    .show-custom-header-and-footer #print-header-notes {
+      text-align: right;
+    }
+
+    .show-custom-header-and-footer #print-header>div {
+      width: 33.33333%;
+      float: left;
+      height: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: pre-wrap;
+      line-height: 1;
+    }
+
+    .show-custom-header-and-footer #print-footer {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 1;
+    }
+
+    .show-custom-header-and-footer #print-footer-notes {
+      height: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: pre-wrap;
+      line-height: 1;
+    }
+
+    /*We need this rule so that the content containers stretch to filll the plan view content*/
+
+    #print-container,
+    #print-content-container,
+    #print-content-container>div {
+      display: inline-block;
+    }
+
+    #print-header {
+      display: block;
+    }
+
+    #plan-view-button-header_bar {
+      display: none;
+    }
+
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+      }
+      .sidebar-task-item,
+      .sidebar-task-group-item,
+      .sidebar-project-item {
+        page-break-inside: avoid;
+      }
+      #zoom-container.rotate {
+        transform: rotate(90deg) translate(0%, -100%);
+        transform-origin: top left;
+      }
+    }
+
+    #plan-board {
+      border-left: 1px solid #d8dde6;
+    }
+
+    .plan-view-center-board_row {
+      height: 32px !important;
+      border-bottom: 1px solid #e3e3e3 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .plan-view-center-board-row-borders {
+      display: none !important;
+    }
+
+    .no-print,
+    .no-print * {
+      display: none !important;
+    }
+  </style>
+  <style id="pageSizingStyle">
+  </style>
+  <script src="{!URLFOR($Resource.jshelper, 'trPrintPlanView.js')}" type="text/javascript" />
+
+  </html>
+</apex:page>

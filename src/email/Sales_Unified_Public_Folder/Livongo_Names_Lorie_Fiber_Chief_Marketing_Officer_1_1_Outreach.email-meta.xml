@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Livongo Names Lorie Fiber Chief Marketing Officer 1:1 Outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo is proud to announce Lorie Fiber as new Chief Marketing Officer</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+You may have seen this morning’s announcement that Lorie Fiber is Livongo’s new Chief Marketing Officer. She most recently held leadership roles at IBM Health where she oversaw customer success and growth for the unit’s Global Ecosystem.
+
+This key executive acquisition comes at a vital time of Livongo’s growth and will support our vision of empowering all people with chronic conditions to live better and healthier lives. After expanding the Livongo platform to include a hypertension management solution, Lorie will play a huge role in educating the market about the depth and breadth of the Livongo platform, supporting adoption and use of the company’s product and services for diabetes and hypertension, and most importantly, introducing solutions addressing other chronic conditions, which are expected soon.
+
+I’d love the chance to share more about Livongo’s continued growth and our overall vision.
+
+Best regards,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

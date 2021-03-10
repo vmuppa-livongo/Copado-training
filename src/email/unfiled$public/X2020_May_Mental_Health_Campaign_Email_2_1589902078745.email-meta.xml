@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is Email #2 in the May Mental Health Awareness Month campaign.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_May_Mental Health Campaign_Email #2</name>
+    <style>none</style>
+    <subject>Webinar: Will digital self-care transform the future of mental healthcare?</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

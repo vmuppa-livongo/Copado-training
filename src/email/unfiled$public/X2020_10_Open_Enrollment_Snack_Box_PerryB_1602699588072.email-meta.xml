@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template should be leveraged by our East Coast Sales team a part of the Open Enrollment Campaign in collaboration with Snack Nation (Caroo)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_10_Open Enrollment_Snack Box_PerryB</name>
+    <style>none</style>
+    <subject>Your Open Enrollment Survival Gift Box</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

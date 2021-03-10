@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Jim Hartman Outreach Email 1</name>
+    <style>freeForm</style>
+    <subject>Tackling diabetes in 2018</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+As you look for ways to positively address {!Account.Name}’s current challenges with Diabetes; I thought that it would be a great time to introduce you to Livongo Health. Livongo was recently named by Forbes Magazine as one of the “Next Billion Dollar Startups” due to the enormous success that we are having in helping organizations like yours address the significant clinical and monetary challenges associated with Diabetes.
+
+Livongo delivers an innovative, end-to-end, diabetes solution combining technology, real-time, personalized coaching, and unlimited blood glucose testing supplies. Livongo is extremely easy for the member to use and quite seamless for an organization to integrate. In fact, many of the nation’s largest health systems and employers (Cerner, Mt. Sinai, Mission Health, Barnes Jewish Hospitals, Amazon, PepsiCo, Intel, Microsoft, Lowe&apos;s and Merck) have recently partnered with Livongo to help them address the rapidly growing diabetes epidemic within their own organizations.
+
+Here is a short client &amp; member testimonial that illustrates the positive impact Livongo is having on many of these clients and members. When you watch it, I’m confident that you’ll see the positive impact that Livongo can have on {!Account.Name}.
+
+I would love to share more details about Livongo and its potential for helping you and {!Account.Name} combat this very significant problem. Please let me know if you would be interested in learning more.
+
+Thank you,
+
+Jim Hartman
+Vice President of Sales, Health Systems
+Livongo
+m: 813-476-4188
+e: jhartman@livongo.com
+a:  444 N. Michigan Ave. Ste 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

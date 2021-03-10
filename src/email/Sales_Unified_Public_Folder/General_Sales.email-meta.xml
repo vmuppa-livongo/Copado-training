@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>General Sales</name>
+    <style>freeForm</style>
+    <subject>Important update from Livongo</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You may have seen this morning’s announcement about the new peer-reviewed JMIR study that found that Livongo members experienced a decreased likelihood of having high and low blood glucose levels.
+
+Livongo members had a 16.4% decrease in high blood glucose.
+
+16.4 percent decrease in high blood glucose!
+
+High  glucose levels are key indicators of extraneous health care costs and can lead to unnecessary emergency department visits, hospitalization, and missed work days. Livongo is looking to lower these costs for you and improve the health of your employees.
+
+A quick discussion would be the first step to make this happen.
+
+In fact, I’m pulling together a dinner with folks in [city], including [Client A], [Client B], and [Client C]. We’re looking at the weeks of [X] and [Y] - is there an evening that works best for you?
+
+Best regards,
+
+Adam Claypool
+Director of Commercial Operations
+Livongo
+m: 314.346.2964
+o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Ste 2880, Chicago, IL 60622
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

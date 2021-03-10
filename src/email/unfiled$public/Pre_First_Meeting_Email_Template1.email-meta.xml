@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template to use before a meeting with a prospective client.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Pre-First Meeting Email Template</name>
+    <style>freeForm</style>
+    <subject>Livongo + [CLIENT] Meeting</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I&apos;m really looking forward to spending some time learning more about [purpose] at [prospect] and talking about how Livongo can support your efforts on [Date, Time, Location].
+
+To give you some background before we meet, Livongo has pioneered Applied Health Signals, and I&apos;ve attached an overview to show you how our AI+AI engine uniquely positions Livongo to change member behavior. Our approach currently reaches over 600 clients, 4 of the 7 largest payers, providers, and the two largest PBM - and we&apos;re improving health outcomes for members and saving money for our partners and clients.
+
+You should see two attachments.
+Livongo Company Overview
+Applied Health Signals Overview
+
+The meeting attendees are:
+[Livongo Attendee, Title, Livongo]
+[Livongo Attendee, Title, Livongo]
+[Consultant Attendee, Title, Consultant]
+[Client Attendee, Title, Company]
+
+Agenda:
+Introductions
+Livongo Overview and Demo; 30-45 min
+Discussion and Next Steps: 15 min
+
+For our meeting only, if you could share the cell phone numbers of those who will be in the meeting, I can integrate them into our Livongo demo.
+
+Thank you and looking forward to our meeting!
+
+Best,
+[Insert Email Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

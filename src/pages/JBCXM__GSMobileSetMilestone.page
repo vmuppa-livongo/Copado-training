@@ -1,0 +1,232 @@
+<apex:page docType="html-5.0" standardController="Account" extensions="JBCXM.Customer360Broker" showheader="false" sidebar="false" standardStylesheets="false">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no" /> 
+        
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-1.10.2.min.js'))}"></script>
+    <script src="{!JSENCODE(URLFOR($Resource.GSMobileApp,'bootstrapbdl/bootstrap/js/bootstrap.js'))}"></script>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />    
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/fonts/fonts.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/fonts/style.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/css/styles.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/css/custom.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/css/icons.css'))}" />
+    
+    <!-- Bootstrap css files -->
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/bootstrap/css/bootstrap.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/bootstrap/css/bootstrap-theme.css'))}" />
+    
+    <script type='text/javascript' src='/canvas/sdk/js/29.0/publisher.js'></script>
+    
+    <script>
+        var remotingEndPoint = '{!$RemoteAction.Customer360Broker.customer360RequestBroker}';
+        var isPublisher = false;
+        var GS = GS || {};
+        GS.isMobile = true;
+        GS.packageNS            = "{!(pkgNS)}";
+    	GS.isPackagedInstance   = (GS.packageNS) ? "true" : "false";
+        GS.userConfig = {
+            userLocale  : {!(dateTimeFormatByLocale)},
+            userName    : "{!$User.FirstName}"+" "+"{!$User.LastName}",
+            firstName    : "{!($User.FirstName)}",
+            lastName    : "{!($User.LastName)}",
+            userId      : "{!$User.Id}",
+            userEmail   : "{!$User.Email}",
+            userSessionId : "{!(sessionId)}"    
+        };
+        var fromTab = "{!JSENCODE($CurrentPage.parameters.fromTab)}";
+        
+        function getKey(key){
+        	return GS.packageNS + key ;
+    	}	
+    	
+        $(document).ready(function() {
+            //console.log( Sfdc.canvas.publisher.publish({name: "publisher.setValidForSubmit", payload:"false"}));
+            
+            try{
+                Sfdc.canvas.publisher.subscribe({ name : "publisher.setupPanel", onData:function(e) { 
+                         Sfdc.canvas.publisher.publish({ name : "publisher.setValidForSubmit", payload:"true"});  
+                         isPublisher = true;
+                         $("#subHeader").hide();
+                         $("#saveMilestone").hide();
+                         $("#mainContainer").css('margin-top','-66px');
+                     }}
+                );
+                 Sfdc.canvas.publisher.subscribe({ name: "publisher.post",
+                    onData: function(e) {
+                        saveMilestoneData();
+                }}); 
+            }catch(e){
+                
+            }
+            
+            $("#closeMilestone").on('click', function(){
+                
+                if(fromTab == 'timeline'){
+					if( (typeof sforce != 'undefined') && (sforce != null) ) {
+						sforce.one.navigateToURL('/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}&fromPA=true');
+					}
+					else {
+						window.location.href = '/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}&fromPA=true';
+					}
+				}else{
+					if( (typeof sforce != 'undefined') && (sforce != null) ) {
+						sforce.one.navigateToURL('/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}');
+					}
+					else {
+						window.location.href = '/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}';
+					}
+				}
+            });
+            
+            $('#accountName').text("{!(Account.Name)}");
+            var getMilestoneDetails='{"action":"milestones.getMilestonesForEdit","custInfo":{"accountId":"{!Account.Id}","milestoneId":"", "sendMilestonesMeta" : true }}';
+            
+            Visualforce.remoting.Manager.invokeAction(
+                remotingEndPoint,getMilestoneDetails,
+                  function(result, e){
+                    console.log('************'+JSON.stringify(result));
+                    var str = "";
+                    str += '<option value = "0">Select</option>';
+                    var allMilestones = new Array();
+                    for(var prop in result.dataObj.milestones) {
+                        allMilestones.push(result.dataObj.milestones[prop]);                            
+                    }
+                    //allMilestones = sort(allMilestones, getKey('DisplayOrder__c'), 'ASC', 'number', true);
+                    for(var i=0; i<allMilestones.length;i++){
+                        if(allMilestones[i][getKey("Active__c")]) {
+                            str += "<option ";
+                            str += "value = \"" + allMilestones[i].Id + "\">" + allMilestones[i].Name + "</option>";
+                        }
+                    }
+                    $('#milestoneOptions').html(str);
+            });
+        });
+        
+        function saveMilestoneData(){
+            var orgConfig={},self=this; 
+            var mileStoneDate = $("#date").val();
+            var milestone=$("#milestoneOptions").val();
+            var commentsStr=$("#comment").val();
+             if(commentsStr.length > 4096) {
+                 alert("Comments out of maximum length (4096)");
+                 return false;
+             } else {
+                 orgConfig[getKey("Comment__c")] = commentsStr;
+             }
+             orgConfig[getKey("account__c")] = "{!Account.Id}";
+             
+             if($("#date").val().trim() == ''){
+                $("#date").attr("style","border: 1px solid red !important");
+                return false;
+             } else{
+                $("#date").attr("style","border: 1px solid #cfd0d2 !important");
+             }
+             
+             if(milestone == '0'){
+                $("#milestoneOptions").attr("style","border: 1px solid red !important");
+                return false;
+             }else{
+                $("#milestoneOptions").attr("style","border: 1px solid #cfd0d2 !important");
+             }
+             
+             orgConfig[getKey("Date__c")] = new Date(mileStoneDate).getTime();
+             orgConfig[getKey("Milestone__c")] = milestone;
+             console.log('*1*************'+JSON.stringify(orgConfig));
+             
+             var sendObj = {};
+             sendObj.data = JSON.stringify(new Array(orgConfig));
+             sendObj.accountId = "{!Account.Id}";
+             sendObj["msDate"] = JBARAformatDate(new Date(mileStoneDate), GS.userConfig.userLocale.DateFormat);
+             var milestoneOb='{"action":"milestones.updateMilestones","custInfo" : '+JSON.stringify(sendObj)+'}';
+             console.log('*1*************'+milestoneOb);
+             
+             Visualforce.remoting.Manager.invokeAction(
+                remotingEndPoint,milestoneOb,
+                  function(result, e){
+                     try {
+                        if(!isPublisher){
+                            if(fromTab == 'timeline'){
+								if( (typeof sforce != 'undefined') && (sforce != null) ) {
+									sforce.one.navigateToURL('/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}&fromPA=true');
+								}
+								else {
+									window.location.href = '/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}&fromPA=true';
+								}
+							}else{
+								if( (typeof sforce != 'undefined') && (sforce != null) ) {
+									sforce.one.navigateToURL('/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}');
+								}
+								else {
+									window.location.href = '/apex/'+ GS.packageNS +'GSMobileCustomerSuccess360?cid={!Account.Id}';
+								}
+							}
+                        }else{
+                            Sfdc.canvas.publisher.publish({name: "publisher.close", payload:{refresh:"true"}});
+                        }
+                     }
+                     catch(e) {
+                         console.log(e.message);
+                     }
+                 });
+            
+             //alert('**************'+JSON.stringify(orgConfig));
+        }
+        
+    </script>
+    
+        <div id="main">
+            <div id="mainContainer">
+                <div class="customer-detail">
+                    <div class="timeline-view" style="display: block;">
+                        <div id="subHeader" class="col-xs-12">
+                            <div>
+                                <div class="col-xs-2 icon-utility-back" id="closeMilestone">&nbsp;</div>
+                                <div class="col-xs-8 title"  style="display: block" id="accountName"></div>
+                                <div >&nbsp;</div>
+                            </div>
+                            <div>
+                                <div class="col-xs-12"><h1>Set a Milestone</h1></div>               
+                            </div>
+                        </div>
+                        
+                        <div id="mainContainer" class="overWriteMainContainer" style="margin-top: -86px;">  
+                            <div class="searchResult" id="alertPage">
+                                <input type="hidden" id="milestoneId" value=""/>
+                                <fieldset class="form-group">
+                                    <label for="date">Date <span class="mandetoryField">*</span> </label>
+                                    <div class="input-group">                               
+                                        <input class="form-control form-control-widthoutBorder" type="date" id="date"  value=""/>
+                                        <span class="input-group-addon"><div class="icon-utility-event"></div></span>
+                                    </div>
+                                </fieldset>
+                                    
+                                <fieldset class="form-group">
+                                    <label for="date">Milestone <span class="mandetoryField">*</span></label>
+                                    <div class="input-group" style="height:34px; width: 100%;"> 
+                                        <select id="milestoneOptions">
+                                        </select>
+                                    </div>
+                                </fieldset>                 
+                                                        
+                                <fieldset class="form-group">
+                                    <label for="date">Description</label>
+                                    <textarea  rows="5" class="form-control" id="comment" name="comment" form="usrform" style="resize: none"></textarea>                
+                                </fieldset>
+                                
+                                <fieldset class="form-group">
+                                    <button  class="btn btn-primary btn-lg btn-block" id="saveMilestone" onclick="saveMilestoneData();">Save Milestone</button>
+                                </fieldset>     
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script> 
+		(function(){try{var a=navigator.userAgent; 
+        if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1 || a.indexOf('OS/9')!=-1||a.indexOf('OS 9')!=-1||a.indexOf('OS/10')!=-1||a.indexOf('OS 10')!=-1)&&(a.indexOf('Safari')==-1)){ 
+			var s=document.createElement('style'); 
+			s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+			document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+  		</script>
+</apex:page>

@@ -1,0 +1,47 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false"
+  title="{!$Label.taskray__taskray_pagetitle}">
+
+  <head>
+    <script src="/support/console/43.0/integration.js" type="text/javascript"></script>
+    <apex:slds />
+    <style type="text/css">
+      body {
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="slds-scope">
+      <div id="not-in-console" style="display: none;">
+        {!$Label.taskray__taskray_console_launcher_not_available}
+      </div>
+      <div id="in-console" style="display: none;">
+        <div class="slds-text-body_regular slds-m-bottom_x-small slds-m-top_large">
+          {!$Label.taskray__taskray_console_launcher_subheader}
+        </div>
+        <button class="slds-button slds-button_neutral" onclick="onClick()">{!$Label.taskray__taskray_console_launcher_openbutton}</button>
+      </div>
+    </div>
+    <script>
+      var uiTheme = "{!$User.UIThemeDisplayed}";
+      //Stupid 1538784000000 timestamp is for timing this:
+      // https://releasenotes.docs.salesforce.com/en-us/spring18/release-notes/rn_general_lightning_console_theme_cruc.htm
+      if (uiTheme === 'Theme4u' || (uiTheme === 'Theme4d' && (sforce.console.isInConsole() === true || new Date().getTime() < 1538784000000))) {
+        document.getElementById('in-console').style.display = 'block';
+      } else {
+        document.getElementById('not-in-console').style.display = 'block';
+      }
+      sforce.console.setTabTitle('TaskRay Console Launcher');
+      function onClick() {
+        sforce.console.openPrimaryTab(null, '/apex/TASKRAY__trtaskboard', true, 'TaskRay', function (response) {
+          sforce.console.getEnclosingTabId(function (response) {
+            if (response.id && response.id !== 'null') {
+              sforce.console.closeTab(response.id);
+            }
+          })
+        }, 'TaskRay')
+      }
+    </script>
+  </body>
+</apex:page>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>20180830 ESI Hypertension to Prospects</name>
+    <style>freeForm</style>
+    <subject>Limited Time: Express Scripts and Livongo Hypertension Program</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I’m excited to share that existing Express Scripts clients can now easily sign up for Livongo for Diabetes and Livongo for Hypertension. Livongo is the only solution on the market today to offer an integrated experience for both diabetes and high blood pressure: one app, one coach, one experience.
+
+We have a limited time program this fall where you’ll receive two months at no cost if you sign up for Livongo for Diabetes or Livongo for Hypertension by September 30, 2018, and launch the program by November 1, 2018. To make your implementation process as easy as possible, all you need to do is sign an addendum to your existing Express Scripts pharmacy agreement.
+
+I would love to schedule time to discuss more about this program and how Livongo for Diabetes and Livongo for Hypertension can improve the health of your employees and drive down your healthcare costs.
+
+Thanks,
+
+[signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Access Code --></label>
+        <name>RT1__AccessCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Access Level --></label>
+        <name>RT1__AccessLevel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create New Leads --></label>
+        <name>RT1__CreateNewLeads__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Lead Source --></label>
+        <name>RT1__DefaultLeadSource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Default Question IDs --></label>
+        <name>RT1__DefaultQuestionIds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Assignment Behavior --></label>
+        <name>RT1__LeadAssignmentBehavior__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Assignment Rule Id --></label>
+        <name>RT1__LeadAssignmentRuleId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Owner Id --></label>
+        <name>RT1__LeadOwnerId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passcode --></label>
+        <name>RT1__Passcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync Automatically --></label>
+        <name>RT1__SyncAutomatically__c</name>
+    </fields>
+    <fields>
+        <label><!-- Toll Free Number --></label>
+        <name>RT1__TollFreeNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update Leads With CC Data --></label>
+        <name>RT1__UpdateLeadsWithCcData__c</name>
+    </fields>
+</CustomObjectTranslation>

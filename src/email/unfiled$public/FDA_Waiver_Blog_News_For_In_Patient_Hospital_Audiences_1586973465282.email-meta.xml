@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is meant for in-patient hospital facilities who can take advantage of the FDA&apos;s emergency waiver to implement Livongo.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>FDA Waiver Blog/News_For In-Patient Hospital Audiences</name>
+    <style>none</style>
+    <subject>Helping Hospital Staff Go Hands-Free</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,58 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;">
+    Dear {{{Recipient.FirstName}}}, 
+   <br /> 
+   <br /> 
+   <font face="Calibri, sans-serif"><span style="font-size: 14.6667px;">Labor Day is a time for reflection and temperance. The winds of change are blowing as the temperature cools down. We are preparing for a winter unlike any we have ever experienced.&nbsp;</span></font> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none"><span style="font-size:11pt"><span style="color:black">With COVID-19 a part of our everyday lives, we have seen the rapid-adoption of technology in a variety of forms to keep people as safe and healthy as possible.&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none"><span style="font-size:11pt"><span style="color:black">Diabetes Prevention Programs have embraced the new paradigm and have proven to be very effective for preventive care. Livongo’s digital program for diabetes prevention proves effective because it uses a wide-range of mechanisms that empower Members with the knowledge, support, and resiliency to reduce risk factors for&nbsp;<b><i>Type 2 Diabetes</i></b>. Through extensive research, a Livongo peer-reviewed study that included over 2,000 Livongo DPP Members, we were able to uncover the driving factors for success. &nbsp;&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none"><span style="font-size:11pt"><span style="color:black">Tools&nbsp;such as human coaching, weigh-ins, food logging, and activity tracking were the biggest factors in determining clinical impact and improvements.Invariably,&nbsp;engagement with Livongo Health Coaches are an&nbsp;indicator of success.&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none"><span style="font-size:11pt"><span style="color:black">We have a great deal of clinically-validated results from our DPP program that illustrate positive clinical and economic results. Essentially, it is a win-win situation for all involved, Livongo's unique approach to meeting our Members's unique needs and circumstances&nbsp;prove valuable in keeping Members engaged and satisfied.&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <font face="Calibri, sans-serif"><span style="font-size: 14.6667px;">We can launch the program at any scale that you see fit. Minimal resources are required on your end and results are realized almost immediately with the positive behavior change that enrollment into the program creates for our Members!</span></font> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none"><span style="font-size:11pt"><span style="color:black">Thank you so much and I look forward to your response! Read more about the Livongo Diabetes Prevention Program here:</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <br /> 
+   <a href="https://creative.livongo.com/share/3240C301-BB12-4039-8FB690D5529239B0/">DPP OnePager</a> 
+   <br /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none"><span style="font-size:11pt"><span style="color:black">Kindly,</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <span style="font-size:12pt"><span style="font-family:Calibri, sans-serif"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="orphans:auto"><span style="text-transform:none"><span style="white-space:normal"><span style="widows:auto"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <br /> 
+   <br /> {{{Sender.FirstName}}} 
+   <br /> 
+   <br /> 
+   <br /> {{{Sender.Signature}}} 
+  </div>
+ </body>
+</html>

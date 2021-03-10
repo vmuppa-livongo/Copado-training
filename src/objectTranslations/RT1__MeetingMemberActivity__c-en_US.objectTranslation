@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Email --></label>
+        <name>RT1__Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Information --></label>
+        <name>RT1__Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Date &amp; Time --></label>
+        <name>RT1__MeetingDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReadyTalk Meeting Member --></label>
+        <name>RT1__MeetingMember__c</name>
+        <relationshipLabel><!-- Meeting Member Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>RT1__Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReadyTalk Meeting --></label>
+        <name>RT1__ReadyTalkMeeting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Readytalk Attendance Id --></label>
+        <name>RT1__ReadytalkAttendanceId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>RT1__Type__c</name>
+        <picklistValues>
+            <masterLabel>Meeting Attendance</masterLabel>
+            <translation><!-- Meeting Attendance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meeting Registration</masterLabel>
+            <translation><!-- Meeting Registration --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

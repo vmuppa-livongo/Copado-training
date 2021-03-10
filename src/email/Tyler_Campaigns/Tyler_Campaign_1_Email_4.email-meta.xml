@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Tyler Campaign 1 Email 4</name>
+    <style>freeForm</style>
+    <subject>Messages that give us goosebumps</subject>
+    <textOnly>{!Contact.FirstName},
+
+I wanted to share this quick note we received this year, shortly after Mother&apos;s Day, from a Livongo member&apos;s daughter.
+
+&quot;...this has been a true blessing for me and my Mother. I do not believe I would be spending Mothers Day with her this year without the help Livongo has provided us in keeping her on track with her care.&quot;
+
+--Sandra M., Daughter of Livongo member
+
+Obviously, notes like these give us goosebumps, and energize us to come to work each and every day to help as many people living with diabetes as possible.
+
+In addition to the note I sent you a few days ago about the unlimited diabetes test strips and lancets, Livongo members also have the ability to schedule unlimited coaching sessions with Certified Diabetes Educators, who help them better understand all of the things that contribute to their blood glucose levels. Compared to traditional diabetes management programs that have single digit engagement rates, we connect with our members 82% of the time. Our coaches will reach out within minutes whenever a member&apos;s BG level is dangerously low or high, to make sure that member is OK and offer tools for getting their levels back in range.
+
+I hope I&apos;ve made a compelling case for how Livongo can help {!Account.Name} and your employees. Can we get something on the calendar?
+
+Let me know.
+
+Thanks,
+
+Tyler Vandenberg
+Sales Development Representative at Livongo
+Livongo
+o: 312.357.5540
+e: tvandenberg@livongo.com
+a: 444 N. Michigan Ave., Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

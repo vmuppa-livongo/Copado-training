@@ -1,0 +1,42 @@
+<apex:page docType="html-5.0" standardStylesheets="false" controller="TASKRAY.trCirrusExt" showHeader="false" sidebar="false">
+  <html>
+
+  <head>
+    <link href="{!URLFOR($Resource.trslds, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" rel="stylesheet"
+      type="text/css" />
+    <link href="{!URLFOR($Resource.trplugins, 'css/trtaskboard.css')}" rel="stylesheet" type="text/css" />
+    <apex:includeScript value="{!URLFOR($Resource.TASKRAY__trplugins, 'vendor/cirrusinsight.min.js')}" />
+
+    <script>
+      window.userId = '{!JSENCODE($User.Id)}';
+      var labels = JSON.parse("{!JSENCODE(customLabelJSON)}");
+      var rsldsAssetRoot = '{!URLFOR($Resource.trslds)}' + '/assets'
+
+      var sdsIconActionSprite = '{!URLFOR($Resource.trslds, "assets/icons/action-sprite/svg/symbols.svg")}';
+      var sdsIconCustomSprite = '{!URLFOR($Resource.trslds, "assets/icons/custom-sprite/svg/symbols.svg")}';
+      var sdsDoctypeCustomSprite = '{!URLFOR($Resource.trslds, "assets/icons/doctype-sprite/svg/symbols.svg")}';
+      var sdsIconStandardSprite = '{!URLFOR($Resource.trslds, "assets/icons/standard-sprite/svg/symbols.svg")}';
+      var sdsIconUtilitySprite = '{!URLFOR($Resource.trslds, "assets/icons/utility-sprite/svg/symbols.svg")}';
+      var taskrayIconSprite = '{!URLFOR($Resource.trplugins, "images/taskray-sprite.svg")}';
+      window.customJSRoot = '{!URLFOR($Resource.trplugins)}' + '/customjs/';
+      var session = '{!$Api.Session_ID}';
+      var currentUserLocale = '{!JSENCODE(userLocale)}';
+      currentUserLocale = currentUserLocale.replace('_', '-');
+      var currentUserDateFormat;
+
+      var trTaskBoardURL = '{!URLFOR($Page.trtaskboard)}';
+      var accountIdForContact = '{!JSENCODE(accountIdForContact)}';
+      window.trDebug = {};
+    </script>
+
+
+  </head>
+
+  <body>
+    <div id="tether-destination" />
+    <div id='cirrus-app-container' />
+  </body>
+
+  </html>
+  <script src="{!URLFOR($Resource.trplugins, 'customjs/cirrusApp-bundle.js')}" />
+</apex:page>

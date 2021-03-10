@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Client_Handoff_Summary_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Client_Handoff_Summary_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>Client_Handoff_Summary_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Client_Handoff_Summary_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Account_Name__c</fields>
+        <fields>Client_Implementation_Manager__c</fields>
+        <fields>Client_Success_Manager__c</fields>
+        <fields>Enrollment_Marketing_Lead__c</fields>
+        <fields>TaskRay_Project__c</fields>
+        <label>Client Handoff Summary Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Account_Health_Notes__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Client_Risk_Notes__c</formula>
+        <label>Account Health Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Health_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account__r.Client_Risk__c)</formula>
+        <label>Account Health Score</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Name</formula>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Owner.FirstName +&apos; &apos;+ Account__r.Owner.LastName</formula>
+        <label>Account Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Client Handoff Summary</relationshipLabel>
+        <relationshipName>Client_Handoff_Summary</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_Account_Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - Account &amp; Contract</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_Account_Management__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - Account Management</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_BH__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - BH</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_DM__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - DM</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_DPP__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - DPP</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_HTN__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - HTN</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_Marketing__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - Marketing</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_Reporting__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - Reporting</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Details_WM__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Details - WM</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Box_Link_for_Legal_Documents__c</fullName>
+        <externalId>false</externalId>
+        <label>Box Link for Legal Documents</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Business_reviews_available_on_Box__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Business reviews available on Box</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Business_reviews_discussed__c</fullName>
+        <externalId>false</externalId>
+        <label>Business reviews discussed?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Call_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Call Frequency</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Implementation_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Client_Implementation_Manager__r.FirstName +&apos; &apos;+
+Account__r.Client_Implementation_Manager__r.LastName</formula>
+        <label>Client Implementation Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Must_Approve_Assets__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Client_Must_Approve_Assets__c)</formula>
+        <label>Client Must Approve Assets</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Overview__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Client Overview</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Client Handoff Summary</relationshipLabel>
+        <relationshipName>Client_Handoff_Summary</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Client_Success_Manager__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.CSM__r.FirstName +&apos; &apos;+
+Account__r.CSM__r.LastName</formula>
+        <label>Client Success Manager</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clinical_Data_Sharing_and_Access__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(INCLUDES( Client_Overview__r.Clinical_Data_Sharing_and_Access__c , &quot;None&quot;), &quot;None; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Clinical_Data_Sharing_and_Access__c , &quot;Clinical Portal - Care Coordination&quot;), &quot;Clinical Portal - Care Coordination; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Clinical_Data_Sharing_and_Access__c , &quot;Clinical Portal - Shared Coaching&quot;), &quot;Clinical Portal - Shared Coaching; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Clinical_Data_Sharing_and_Access__c , &quot;Reporting/File Share&quot;), &quot;Reporting/File Share; &quot;, NULL) + 
+IF(INCLUDES( Client_Overview__r.Clinical_Data_Sharing_and_Access__c , &quot;API Integration&quot;), &quot;API Integration; &quot;, NULL)</formula>
+        <label>Clinical Data Sharing and Access</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clinical_Model__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Clinical_Model__c)</formula>
+        <label>Clinical Model</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clinical_Referrals__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Clinical_Referrals__c)</formula>
+        <label>Clinical Referrals</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Contract_Effective_Date__c)</formula>
+        <label>Contract Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Path__c</fullName>
+        <externalId>false</externalId>
+        <formula>Client_Overview__r.Contract_Path__r.Name</formula>
+        <label>Contract Path</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Contract_Type__c)</formula>
+        <label>Contract Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Sharing_Agreement_Document__c</fullName>
+        <externalId>false</externalId>
+        <formula>TaskRay_Project__r.Data_Sharing_Agreement_Document__c</formula>
+        <label>Data Sharing Agreement Document</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Do_we_receive_Emails__c</fullName>
+        <externalId>false</externalId>
+        <label>Do we receive Emails?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eligibility_Verification_Method__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Eligibility_Verification_Method__c)</formula>
+        <label>Eligibility Verification Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Frequency</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enrollment_Marketing_Lead__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.EML__r.FirstName +&apos; &apos;+
+Account__r.EML__r.LastName</formula>
+        <label>Enrollment Marketing Lead</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>How_does_Client_Define_Success__c</fullName>
+        <externalId>false</externalId>
+        <label>How does Client Define Success?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Launch_Assets__c</fullName>
+        <externalId>false</externalId>
+        <label>Launch Assets</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>List_legal_documents__c</fullName>
+        <externalId>false</externalId>
+        <label>List legal documents</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Livongo_Incentive_for_Automation__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Livongo_Incentive_for_Automation__c)</formula>
+        <label>Livongo Incentive for Automation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Livongo_Led__c</fullName>
+        <externalId>false</externalId>
+        <formula>Client_Overview__r.Livongo_Led__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Livongo Led?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Client_Overview__r.Marketing_Name__c</formula>
+        <label>Marketing Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Outreach_Stratification__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Client_Overview__r.Outreach_Stratification__c)</formula>
+        <label>Outreach Stratification</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Population_of_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Employees&quot;), &quot;Employees; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Spouse&quot;), &quot;Spouse; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Dependents U18&quot;), &quot;Dependents U18; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Dependents 18+&quot;), &quot;Dependents 18+; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Employees w/o Medical&quot;), &quot;Employees w/o Medical; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Patients&quot;), &quot;Patients; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Retirees&quot;), &quot;Retirees; &quot;, NULL)  + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Secondary Insurance&quot;), &quot;Secondary Insurance; &quot;, NULL) + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Direct to Consumer (D2C)&quot;), &quot;Direct to Consumer (D2C); &quot;, NULL) + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Pre-65 Retirees&quot;), &quot;Pre-65 Retirees; &quot;, NULL) + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Cobra&quot;), &quot;Cobra; &quot;, NULL) + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Diabetes Under 13&quot;), &quot;Diabetes Under 13; &quot;, NULL) + 
+IF(INCLUDES( Client_Overview__r.Population_of_Coverage__c , &quot;Union Population&quot;), &quot;Union Population; &quot;, NULL)</formula>
+        <label>Population of Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ready_for_Automation__c</fullName>
+        <externalId>false</externalId>
+        <formula>Client_Overview__r.Ready_for_Automation__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ready for Automation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recipient__c</fullName>
+        <externalId>false</externalId>
+        <label>Recipient</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(TaskRay_Project__r.Reporting_Frequency__c)</formula>
+        <label>Reporting Frequency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Method_of_Delivery__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(TaskRay_Project__r.Reporting_Method_of_Delivery__c)</formula>
+        <label>Reporting Method of Delivery</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Type_Detail__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(TaskRay_Project__r.Report_Type_Detail__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reporting Type Detail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(TaskRay_Project__r.Report_Request_Type__c)</formula>
+        <label>Reporting Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scorecards_available_on_Box__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Scorecards available on Box</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TaskRay_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>TaskRay Project</label>
+        <referenceTo>TASKRAY__Project__c</referenceTo>
+        <relationshipLabel>Client Handoff Summary</relationshipLabel>
+        <relationshipName>Client_Handoff_Summary</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Client Handoff Summary</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CHS# {00000}</displayFormat>
+        <label>Client Handoff Summary Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Client Handoff Summary</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Client_Overview__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Pre Conference Guest Outreach: The Conference Board San Diego</name>
+    <style>freeForm</style>
+    <subject>Thanks for joining Livongo at The Conference Board</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+As we get closer to The Conference Board, I wanted to say thanks again for joining as our guest. If you anticipate having some free time time while in San Diego, I would love to schedule a quick meeting over coffee. It would be great to catch up and update you on some exciting new developments at Livongo.
+
+At the conference, Livongo will co-host a session with PepsiCo titled, Proving Financial Impact and Business Model for Chronic Condition Management, on March 27th from 3:00 pm - 3:50 pm. Livongo Chief Commercial Officer, Jim Pursley, will join Magda Rusinowski, PepsiCo Director of US Health Benefits, as they discuss Livongo’s clinical outcomes and measurable financial impact.
+
+Looking forward to seeing you in San Diego!
+
+Best regards,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

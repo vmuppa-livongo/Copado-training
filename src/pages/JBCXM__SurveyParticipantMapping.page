@@ -1,0 +1,317 @@
+<apex:page controller="JBCXM.SurveyController" sidebar="false"  title="Survey participant " tabStyle="Survey__tab">
+	<!-- Static Resource Includes: Jquery and Character limit plugin -->
+    <!--<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-1.7.1.min.js'))}"/>
+ 	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-ui-1.8.18.custom.min.js'))}"/>
+ 	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.SurveyJquery, 'css/redmond/jquery-ui-1.8.18.custom.css'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+	
+	
+	
+	
+	<style>
+		.mapField{
+			padding:10px;
+		}
+		.mapFieldLabel, .filedsSelectDiv,.filedsAccountSelectDiv, .mapObjectLabel, .objectSelectDiv,.filedsSelectPartLookupDiv{
+			min-width:220px;
+			display:inline-block;
+		}
+		.jbaraErrorMessageClass{
+        	margin-top:20px;
+        	margin-bottom: 20px;
+        	margin-left: auto;
+		    margin-right: auto;
+		    width: 60%;
+		    padding: 10px;
+		    font-size:18px;
+        }
+        .warningImageClass{
+            background-image: url('/img/msg_icons/error32.png');
+	        width:32px;
+	        height:32px;
+	        display:inline-block;
+	        vertical-align: middle;
+        } 
+        body .bRelatedList .pbTitle h3, body .bPageBlock .pbTitle h2, body .bPageBlock .pbTitle h3, body .bSubBlock h3.lbHeader {
+		    color: #000000;
+		    font-size: 1.2em;
+		}
+		.requiredExample {
+		    border-left: 3px solid #CC0000;
+		    font-size: 100%;
+		    margin-right: 1px;
+		    padding-bottom: 3px;
+		    padding-top: 2px;
+		    vertical-align: 1px;
+		    width: 100%;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var j$ = jQuery.noConflict();
+		
+		var mapParticipantList = new Array(); 
+		var isFromExternalObject;
+		
+		j$(document).ready(function () {			
+			mapParticipantList = eval({!(SurveyParticipantFieldMap)});		
+			isFromExternalObject = eval({!(isExternalParticipant)});
+			j$(".filedsSelectDiv select,.filedsSelectPartLookupDiv select,.filedsAccountSelectDiv select ").html("");
+			var newFieldOptions = j$(".jbaraMapFieldSelectCtrl").html();
+			var newParticpantLookupOptions = j$(".jbaraParticpantLookupFieldSelectCtrl").html();
+			var newParticpantAccountLookupField = j$(".jbaraParticpantAccountLookupFieldSelectCtrl").html();	
+			j$(".filedsSelectDiv select").append(newFieldOptions);
+			j$(".filedsSelectPartLookupDiv select").append(newParticpantLookupOptions);
+			j$(".filedsAccountSelectDiv select").append(newParticpantAccountLookupField);			
+			if(isFromExternalObject == true){
+				j$(".objectName").val('');
+				if(mapParticipantList.length>0){
+					assignParticipanSelectValues(mapParticipantList);
+				}
+				j$("#mainParticipantDiv").show();				
+				j$("#errorPanelDiv").hide();		
+			}else{
+				j$("#mainParticipantDiv").hide();
+				j$("#errorPanelDiv").show();
+			}	
+		});
+		
+		
+		function assignParticipanSelectValues(mapSettings){
+			j$(".objectName").val(mapSettings[0].objectName);
+			j$(".Account__c").val(mapSettings[0].Account__c);
+			j$(".DisplayName__c").val(mapSettings[0].DisplayName__c);
+			j$(".SentEmail__c").val(mapSettings[0].SentEmail__c);
+			j$(".Role__c").val(mapSettings[0].Role__c);
+			j$(".lookUpfield").val(mapSettings[0].lookUpfield);
+		}
+		
+		
+		function showMapfields() {	
+			j$(".filedsSelectDiv select,.filedsSelectPartLookupDiv select,.filedsAccountSelectDiv select").html("");
+			var newFieldOptions = j$(".jbaraMapFieldSelectCtrl").html();
+			var newParticpantLookupOptions = j$(".jbaraParticpantLookupFieldSelectCtrl").html();	
+			var newParticpantAccountLookupField = j$(".jbaraParticpantAccountLookupFieldSelectCtrl").html();
+			j$(".filedsSelectDiv select").append(newFieldOptions);
+			j$(".filedsAccountSelectDiv select").append(newParticpantAccountLookupField);			
+			j$(".filedsSelectPartLookupDiv select").append(newParticpantLookupOptions);
+			
+		}
+		
+		/**
+        *Javascript Object to store the particpant properties.
+        */
+        function particpantMapClass(data) {
+			this.objectName            	 	= data.objectName;
+			this.Account__c 		   	 	= data.Account__c;
+			this.DisplayName__c          	= data.DisplayName__c;
+			this.SentEmail__c        		= data.SentEmail__c;
+			this.Role__c        			= data.Role__c;       
+			this.lookUpfield        		= data.lookUpfield; 
+        }
+        
+        
+        function saveParicipantMapping(){
+	        if(validateAlertInputs()){
+	        	j$("#jBaraParicipantMapErrorContainer").html("");
+	        	var paricipantClassObjList = new Array();
+	        	var paricipantClassObj;
+	        	paricipantClassObj = new particpantMapClass({
+	        		objectName		: 	j$(".objectName").val(),
+	        		Account__c		:	j$(".Account__c").val(),
+	        		DisplayName__c	:	j$(".DisplayName__c").val(),
+	        		SentEmail__c	:	j$(".SentEmail__c").val(),
+	        		Role__c			:	j$(".Role__c").val(),
+	        		lookUpfield		:	j$(".lookUpfield").val()        		
+	        	});        	
+	        	paricipantClassObjList.push(paricipantClassObj);
+	        	
+	        	j$(".jbaraParicipantMapInput").val(JSON.stringify(paricipantClassObjList));
+	        	
+	        	actionSaveParicipantMap();    
+	        	j$("#saveParicipantMsg").show().delay(5000).fadeOut('slow');
+	        }     	
+        }
+        function jbaraAfterSaveParicipantMapClick(){
+        	window.top.location.href='/apex/SurveyDistributionList?surveyId={!($CurrentPage.parameters.surveyId)}';
+        }
+        
+         function validateAlertInputs(){
+       		var validEntries =true;
+       		var errorList= new Array();
+			if(j$.trim(j$(".objectName").val())==''){
+ 				errorItem = new JBaraErrorClass();
+ 				errorItem.header = 'Object Name:';
+ 				errorItem.msg	 =  'Required';
+ 				errorList.push(errorItem);
+ 				validEntries = false;
+ 			} 			
+ 			if(j$.trim(j$(".DisplayName__c").val())==''){
+ 				errorItem = new JBaraErrorClass();
+ 				errorItem.header = 'Display Name:';
+ 				errorItem.msg	 =  'Required';
+ 				errorList.push(errorItem);
+ 				validEntries = false;
+ 			} 			
+ 			if(j$.trim(j$(".SentEmail__c").val())==''){
+ 				errorItem = new JBaraErrorClass();
+ 				errorItem.header = 'Email Address:';
+ 				errorItem.msg	 =  'Required';
+ 				errorList.push(errorItem);
+ 				validEntries = false;
+ 			}
+ 			if(j$.trim(j$(".Account__c").val())==''){
+ 				errorItem = new JBaraErrorClass();
+ 				errorItem.header = 'Account Lookup:';
+ 				errorItem.msg	 =  'Required';
+ 				errorList.push(errorItem);
+ 				validEntries = false;
+ 			}
+ 			if(j$.trim(j$(".lookUpfield").val())==''){
+ 				errorItem = new JBaraErrorClass();
+ 				errorItem.header = 'Lookup field:';
+ 				errorItem.msg	 =  'Required';
+ 				errorList.push(errorItem);
+ 				validEntries = false;
+ 			}
+ 			
+ 			if(toCheckDuplicateValuesIsSelected()){
+ 				errorItem = new JBaraErrorClass();
+ 				errorItem.header = 'Duplicate Fields:';
+ 				errorItem.msg	 =  'Please review mapping - field(s) "'+duplicateFldValue.slice(0,-2)+'" is mapped to multiple JBara fields.';
+ 				errorList.push(errorItem);
+ 				validEntries = false;
+ 			}
+ 			
+ 			if(!validEntries){
+	 			showJBaraValidationErrors('jBaraParicipantMapErrorContainer',errorList);
+	 		}
+
+	 		return validEntries;
+ 		}
+ 		
+ 		
+ 		var duplicateFldValue;
+ 		function toCheckDuplicateValuesIsSelected(){ 	
+ 			duplicateFldValue = '';	
+ 			var selectedFldsArray = new Array();
+ 			var isDuplicateRow = false;
+        	j$('.filedsSelectDiv select option:selected').each(function(i, e) {
+	        	if(j$(this).val() !=''){
+	        		if(selectedFldsArray[j$(this).val()] === undefined){
+	        			selectedFldsArray[j$(this).val()] = i;		        			
+	        		}else{ 
+	        			duplicateFldValue +=j$(this).val() +' & ';       			
+	        			isDuplicateRow = true;
+	        		} 
+	        	}      	
+        	});
+        	
+	        return isDuplicateRow	       
+ 		}
+ 		function setHelpZindex() {
+          j$(".helpText").css({
+              'z-index': '6000',
+              'position': 'fixed'
+          })
+       }
+	</script>
+
+ 	<apex:sectionHeader title="Custom Object -> Survey Participants" subtitle="{!surveyTitle}"/>
+ 	<a href="/apex/SurveyDistributionList?surveyId={!(surveyId)}"  style="text-decoration:none;">&nbsp;«&nbsp;Back</a>
+ 	
+	<apex:form >
+		<apex:pageBlock id="dummySurveyListPageBlock" title="Map Custom object fields to Survey Participant fields">
+		<apex:pageBlockButtons location="top" >
+	    	
+		</apex:pageBlockButtons>
+		
+		<apex:pageMessages id="jbaraParicipantMapErrorMessages" />
+		
+		 <span Id="jBaraParicipantMapErrorContainer"></span>
+		
+		
+		
+		<div id="mainParticipantDiv" style="display:none;">
+					
+			<div id="saveParicipantMsg" class="ui-state-highlight ui-corner-all" style="margin-top: 10px; padding: 10px;display:none;"> 
+				<p>
+					<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+					 Your changes have been saved.
+				</p>
+			</div>
+			
+			
+			<apex:actionFunction name="getObjectFields" reRender="rerenderPartObjFields" onComplete=" showMapfields()"/>
+	
+			<apex:outputPanel id="rerenderPartObjFields"  >                        	
+				<apex:selectList size="1" StyleClass="jbaraMapFieldSelectCtrl" style="display:none;">
+					<apex:selectOptions value="{!ObjectFields}"/>
+				</apex:selectList>
+				<apex:selectList size="1" StyleClass="jbaraParticpantLookupFieldSelectCtrl" style="display:none;">
+					<apex:selectOptions value="{!ObjectParticpantFields}"/>
+				</apex:selectList>
+				<apex:selectList size="1" StyleClass="jbaraParticpantAccountLookupFieldSelectCtrl" style="display:none;" >
+					<apex:selectOptions value="{!associatedObjectAccountField}"/>
+			</apex:selectList>
+			</apex:outputPanel>
+			
+			
+	                            
+			<div class="mapField" >
+				<div class="mapObjectLabel"> Select Custom Object : </div>
+				<div class="objectSelectDiv"><span class="requiredExample"></span>
+					<apex:selectList size="1" value="{!participantAssocObj}"  onchange="getObjectFields()" StyleClass="jbaraSelectCtrl objectName">
+						<apex:selectOptions value="{!ObjNames}"/>
+					</apex:selectList>
+				</div>
+			</div>
+			
+			<div id="selectParticipantMapping">
+				
+				<div class="mapField"><div class="mapFieldLabel">Display name of the Survey participant :</div> <div class="filedsSelectDiv"><span class="requiredExample"></span> <select size="1" class="DisplayName__c">  </select> </div> </div>
+				
+				<div class="mapField"><div class="mapFieldLabel">Email Address :</div> <div class="filedsSelectDiv"><span class="requiredExample"></span> <select size="1" class="SentEmail__c">  </select> </div> </div>
+				
+				<div class="mapField"><div class="mapFieldLabel">Role :</div> <div class="filedsSelectDiv"> <select size="1" class="Role__c">  </select> </div> </div>
+				
+				<div class="mapField" ><div class="mapFieldLabel">Account Lookup : </div> <div class="filedsAccountSelectDiv"><span class="requiredExample"></span> <select size="1" class="Account__c">  </select> </div>  </div>
+				
+				<div class="mapField">
+					<div class="mapFieldLabel"> 
+						<span id="Name-_help" class="helpButton" onmouseover="setTimeout('setHelpZindex()',20)">
+	                      Lookup field on Participant object : 
+	                      <img style="vertical-align: middle;" title="" class="helpOrb" alt="" src="/s.gif" />
+	                      <script type="text/javascript" >
+	                         sfdcPage.setHelp('Name', 'Select the lookup field created on "JBCXM__SurveyParticipant__C"');
+	                      </script>
+	                	</span>
+                	</div> 
+                	<div class="filedsSelectPartLookupDiv"><span class="requiredExample"></span> 
+                		<select size="1" class="lookUpfield">  </select>
+                	</div>
+                </div>
+			
+			</div>
+		                       
+	       	<input type="button" value="Save" class="btn dummyParicipantMappingSaveBtn" onclick="saveParicipantMapping()"/>
+	       	<input type="button" value="Cancel" class="btn dummyParicipantMappingCancelBtn" onclick="jbaraAfterSaveParicipantMapClick()"/>
+	       
+	       	<apex:actionFunction name="actionSaveParicipantMap" action="{!saveSurveyParticipantMapSettings}" reRender="jbaraParicipantMapErrorMessages"
+						                            oncomplete="return jbaraAfterSaveParicipantMapClick();" />
+						                       
+			<apex:inputText value="{!participantMappingFileds}" Styleclass="jbaraParicipantMapInput" style="display:none;"/>
+	 </div>
+	 <div id="errorPanelDiv" style="display:none;">
+	 	<div align="center" class="jbaraErrorMessageClass ui-state-error ui-corner-all">
+			<span class="warningImageClass">&nbsp;</span> 
+			<span class="validationMsgClass">
+				Survey Id is not valid or "Allow Data From External Source" is not enabled in the Survey. 
+			</span>
+		</div>
+	 </div>
+  	</apex:pageBlock>                      
+	</apex:form>-->
+
+
+</apex:page>

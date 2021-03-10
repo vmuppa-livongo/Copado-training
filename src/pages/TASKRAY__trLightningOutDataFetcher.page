@@ -1,0 +1,225 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" title="{!$Label.taskray__taskray_pagetitle}"
+  controller="TASKRAY.trLightningOutDataFetcherController">
+  <apex:includeLightning />
+  <div id="vf-lwc-message-broker-container"></div>
+  <div id="vf-aura-lds-reset-container"></div>
+  <script>
+    var baseUrl = '{!JSENCODE(getBaseUrl)}';
+    var siteBaseUrl = '{!JSENCODE($Site.BaseUrl)}';
+    var sessionId = '{!$Api.Session_ID}';
+    var ltngOutAppName = 'TASKRAY:trTaskBoardOutApp';
+    window.$Lightning.use(window.ltngOutAppName, function () {
+      window.$Lightning.use(window.ltngOutAppName, function () {
+        this._isBootstrapped = true;
+        $Lightning.createComponent(
+          'TASKRAY:trLtngOutDataFetcher',
+          {},
+          'vf-lwc-message-broker-container',
+          function (cmp) {
+          }
+        );
+        $Lightning.createComponent(
+          'TASKRAY:trResetLDSRecord',
+          {},
+          'vf-aura-lds-reset-container',
+          function (cmp) {
+          }
+        );
+        resolve();
+      });
+    });
+
+    function getBaseUrl() {
+      return siteBaseUrl ? siteBaseUrl : baseUrl;
+    }
+
+    window.addEventListener('message', receiveUiApiDirectMessage, false);
+    var _endPointMapping = {
+      '/lookups': '/aura?r=2&aura.Lookup.getLookupRecords=1'
+    };
+    function receiveUiApiDirectMessage(event) {
+      if (event.origin === window.location.origin && event.data) {
+        if (isValidJSON(event.data)) {
+          let eventData = JSON.parse(event.data);
+          if (eventData.eventType) {
+            switch (eventData.eventType) {
+              case 'TASKRAY_LIGHTNING_OUT_DATA_FETCHER_UI_API_DIRECT_REQUEST':
+                if (eventData.methodName.indexOf('/lookups/') === 0) {
+                  getLookupResults(eventData, eventData.methodArgs.objectName, eventData.methodArgs.fieldName, eventData.methodArgs.targetApiName, eventData.methodArgs.searchType, eventData.methodArgs.q, eventData.methodArgs.dependentFieldBindings);
+                }
+                break;
+              case 'TASKRAY_LIGHTNING_OUT_DATA_FETCHER_UI_API_UD_REQUEST':
+                if (eventData.methodName.indexOf('/lookups/') === 0) {
+                  getLookupResults_ud(eventData, eventData.methodArgs.objectName, eventData.methodArgs.fieldName, eventData.methodArgs.targetApiName, eventData.methodArgs.searchType, eventData.methodArgs.q, eventData.methodArgs.dependentFieldBindings);
+                }
+                break;
+              case 'TASKRAY_LIGHTNING_OUT_DATA_FETCHER_UI_API_APEX_REQUEST':
+                if (eventData.methodName.indexOf('/lookups/') === 0) {
+                  getLookupResults_apex(eventData, eventData.methodArgs.objectName, eventData.methodArgs.fieldName, eventData.methodArgs.targetApiName, eventData.methodArgs.searchType, eventData.methodArgs.q, eventData.methodArgs.dependentFieldBindings);
+                }
+                break;
+              default:
+                break;
+            }
+          }
+        }
+      }
+    }
+
+    function isValidJSON(str) {
+      try {
+        var parsed = JSON.parse(str);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+
+
+    function getBaseActionFormData() {
+      var formData = new FormData();
+      formData.append(
+        'aura.context',
+        JSON.stringify({
+          mode: window.aura.getContext().getMode(),
+          fwuid: window.localStorage.getItem('lightningOutDelegateVersion'),
+          app: window.aura.getContext().getApp()
+        })
+      );
+      formData.append('aura.pageURI', window.location.pathname);
+      formData.append('aura.token', findAuraClientToken());
+      return formData;
+    }
+
+    function findAuraClientToken() {
+      var localStorageToken = window.localStorage.getItem(
+        '$AuraClientService.token$'
+      );
+      if (localStorageToken) {
+        return localStorageToken;
+      }
+      var likelyKey = Object.keys(window.$A.clientService).find(function (key) {
+        if (
+          window.$A.clientService[key] &&
+          typeof window.$A.clientService[key] === 'string' &&
+          (window.$A.clientService[key].length === 128 || window.$A.clientService[key].length === 550)
+        ) {
+          return true;
+        }
+        return false;
+      });
+      return window.$A.clientService[likelyKey];
+    }
+
+    function getLookupResults(eventData, objectName, fieldName, targetApiName, searchType, q, dependentFieldBindings) {
+      var request = new XMLHttpRequest();
+      var url = getBaseUrl() + '/services/data/v46.0/ui-api/lookups/' + objectName + '/' + fieldName + '?searchType=' + searchType;
+      if (q) {
+        url += '&q=' + q;
+      }
+      if (dependentFieldBindings && dependentFieldBindings.length && dependentFieldBindings.length > 0) {
+        url += '&dependentFieldBindings=' + dependentFieldBindings.join(',');
+      }
+      request.open("GET", url);
+      request.onload = function () {
+        if (request.status === 200) {
+          window.postMessage(JSON.stringify({ messageId: eventData.messageId, eventData: eventData, eventType: 'TASKRAY_LIGHTNING_OUT_DATA_FETCHER_UI_API_DIRECT_RESPONSE', result: { error: null, data: JSON.parse(request.responseText) } }), window.location.origin);
+        } else {
+          window.postMessage(JSON.stringify({ messageId: eventData.messageId, eventData: eventData, eventType: 'TASKRAY_LIGHTNING_OUT_DATA_FETCHER_UI_API_DIRECT_RESPONSE', result: { error: { statusText: request.statusText }, data: null } }), window.location.origin);
+        }
+      };
+      request.setRequestHeader('Authorization', 'Bearer ' + sessionId);
+      request.setRequestHeader('SalesforceProxy-Endpoint', encodeURI(url));
+      request.send();
+    }
+
+    function getLookupResults_ud(eventData, objectName, fieldName, targetApiName, searchType, q, dependentFieldBindings) {
+      var message = JSON.stringify({
+        actions: [
+          {
+            id: '5;a',
+            descriptor:
+              'aura://LookupController/ACTION$getLookupRecords',
+            callingDescriptor: 'UNKNOWN',
+            params: { "objectApiName": objectName, "fieldApiName": fieldName, "targetApiName": targetApiName, "searchType": searchType, "pageSize": 25, "q": q, "dependentFieldBindings": dependentFieldBindings },
+          }
+        ]
+      });
+      var url =
+        getBaseUrl() +
+        '/aura?r=1&aura.Lookup.getLookupRecords=1';
+      sendAction(message, url, function (result, err) {
+        //Formatting the undocumented method to look like the UI API results
+        var parsedError = (result && !result.error && !result.data) ? 'UD_ERROR' : null;
+        var parsedResultRecords = (result && result.data && result.data.records) ? result.data.records : null;
+        var parsedResultData = undefined;
+        if (parsedResultRecords) {
+          parsedResultData = {};
+          parsedResultData['lookupResults'] = {};
+          parsedResultData['lookupResults'][targetApiName] = {};
+          parsedResultData['lookupResults'][targetApiName]['records'] = parsedResultRecords;
+        }
+        var parsedResult = { data: parsedResultData, error: parsedError };
+        window.postMessage(JSON.stringify({ messageId: eventData.messageId, eventType: 'TASKRAY_LIGHTNING_OUT_DATA_FETCHER_UI_API_UD_RESPONSE', eventData: eventData, result: parsedResult }), window.location.origin);
+      })
+    }
+
+    function sendAction(message, url, callback) {
+      let formData = getBaseActionFormData();
+      formData.append('message', message);
+      var request = new XMLHttpRequest();
+      request.open("POST", url);
+      request.onload = function () {
+        if (request.status === 200 && isValidJSON(request.responseText)) {
+          callback({ error: null, data: parseResponse(JSON.parse(request.responseText)) });
+        } else {
+          callback({ error: true });
+        }
+      };
+      request.send(formData);
+    }
+
+    function parseResponse(response) {
+      if (response.error && response.error.length > 0) {
+        throw new Error(JSON.stringify(response.error));
+      } else {
+        return response.actions[0].returnValue;
+      }
+    }
+
+    function getLookupResults_apex(eventData, objectName, fieldName, targetApiName, searchType, q, dependentFieldBindings) {
+      window.TASKRAY.trLightningOutDataFetcherController.getUiApiLookupResultsFallback(objectName, fieldName, targetApiName, searchType, q, function (result, event) {
+        var resultObject = { error: null, data: null };
+        if (event.statusCode !== 200) {
+          resultObject.error = event.message;
+        } else {
+          //Wrap the apex result like the ui-api response
+          resultObject.data = result;
+          var lookupResults = {};
+          lookupResults[targetApiName] = {
+            count: result.length,
+            records: []
+          };
+          if (result && result.length > 0) {
+            result.forEach(function (sobjResult) {
+              var parsedSObjResult = {};
+              Object.keys(sobjResult).forEach(function (fieldName) {
+                parsedSObjResult[fieldName] = { value: sobjResult[fieldName], displayValue: null };
+              })
+              var resultRow = {
+                apiName: targetApiName,
+                fields: parsedSObjResult,
+                id: sobjResult.Id
+              };
+              lookupResults[targetApiName].records.push(resultRow);
+            })
+          }
+          resultObject.data = { lookupResults: lookupResults };
+        }
+        window.postMessage(JSON.stringify({ messageId: eventData.messageId, eventType: 'TASKRAY_LIGHTNING_OUT_DATA_FETCHER_UI_API_APEX_RESPONSE', eventData: eventData, result: resultObject }), window.location.origin);
+      });
+    }
+
+  </script>
+</apex:page>

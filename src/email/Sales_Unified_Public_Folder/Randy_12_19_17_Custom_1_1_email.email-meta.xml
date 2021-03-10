@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Randy 12/19/17 Custom 1:1 email</name>
+    <style>freeForm</style>
+    <subject>Impactful News from Livongo</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Despite the holiday season, we have been busier than ever at Livongo. In recent days, we have received a significant news coverage for our innovation and thought leadership. I believe that you might find some of these articles interesting:
+
+Livongo has added Arnnon Geshuri as its new Chief People Officer. Geshuri most recently served as the Vice President of Human Resources at Tesla and oversaw the growth of the company from a 400-person startup to an industry leader with over 35,000 employees around the globe. Under Geshuri’s leadership, Livongo plans to more than double its employee base over the next nine months.
+
+Livongo has partnered with Castlight Health to integrate Livongo for Diabetes into the Castlight platform. Livongo will be offered to 250 Castlight clients and will launch the first integrated solution in 2018.
+
+Livongo was featured in an article by MobiHealthNews that discussed collaboration with CMS to raise awareness how digital engagement tools can play a critical role in improving health outcomes.
+
+Livongo has been named to FierceMedTech’s 2017 Fierce 15.The award is affirmation of the impact that the Livongo for Diabetes program has made and the excitement that is brewing as we expand to multiple chronic conditions.
+
+Hope you enjoy a happy and relaxing holidays and I look forward to hearing from you soon.
+
+Thanks,
+
+RANDY FORMAN
+Vice President, Sales
+Livongo
+m: 773.425.3316 
+e: rforman@livongo.com
+a: 444 N. Michigan Ave., Ste 3400, Chicago, IL 60622
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

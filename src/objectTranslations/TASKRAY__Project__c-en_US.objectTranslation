@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- TaskRay Project Field Set --></label>
+        <name>TASKRAY__Projects_Field_Set</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- TaskRay Field Trickler Field Set --></label>
+        <name>TASKRAY__TaskRay_Field_Trickler</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Account CSM --></label>
+        <name>Account_CSM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide report request details including report types and data recipients, and/or future reporting requests that are not part of this parent project --></help>
+        <label><!-- Additional reporting information --></label>
+        <name>Additional_reporting_information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Are we rolled out to entire population? --></label>
+        <name>Are_we_rolled_out_to_entire_population__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Billing Method --></label>
+        <name>Billing_Method__c</name>
+    </fields>
+    <fields>
+        <help><!-- During the Implementation/Launch+90 phase, has the CIM discussed holding regular business reviews with the client? --></help>
+        <label><!-- Business reviews discussed? --></label>
+        <name>Business_reviews_discussed__c</name>
+    </fields>
+    <fields>
+        <help><!-- During the Implementation/Launch+90 phase, how often has the CIM had calls with the client? --></help>
+        <label><!-- Call Frequency --></label>
+        <name>Call_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Ad Hoc</masterLabel>
+            <translation><!-- Ad Hoc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bi-Weekly</masterLabel>
+            <translation><!-- Bi-Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please provide details on any upcoming or standing events that the client wants Livongo to participate in, AND be sure to include them in the event tracker. --></help>
+        <label><!-- Client Event Details --></label>
+        <name>Client_Event_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Implementation Manager --></label>
+        <name>Client_Implementation_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Overview --></label>
+        <name>Client_Overview__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates if the client or partner requires tags for billing, reporting or other purposes. --></help>
+        <label><!-- Client/Partner Required Tags --></label>
+        <name>Client_Partner_Required_Tags__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Success Manager --></label>
+        <name>Client_Success_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clinical Model --></label>
+        <name>Clinical_Model__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clinical Referrals --></label>
+        <name>Clinical_Referrals__c</name>
+        <picklistValues>
+            <masterLabel>Bi-Directional</masterLabel>
+            <translation><!-- Bi-Directional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>One directional (inbound to Livongo)</masterLabel>
+            <translation><!-- One directional (inbound to Livongo) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract Path --></label>
+        <name>Contract_Path__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is where the link to the Data Sharing Agreement for the specified client will be placed so that we are able to verify that the DSA states the type of reports we are allowed to share. --></help>
+        <label><!-- Data Sharing Agreement Document --></label>
+        <name>Data_Sharing_Agreement_Document__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates if the required Data Sharing Agreement(s) are in place between the client and/or partner(s) --></help>
+        <label><!-- Data Sharing Agreement in Place --></label>
+        <name>Data_Sharing_Agreement_in_Place__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Required</masterLabel>
+            <translation><!-- Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates the delimiter to be used in reports delivered to the client or partner --></help>
+        <label><!-- Delimiter --></label>
+        <name>Delimiter__c</name>
+        <picklistValues>
+            <masterLabel>Comma (standard)</masterLabel>
+            <translation><!-- Comma (standard) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pipe</masterLabel>
+            <translation><!-- Pipe --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Downmarket --></label>
+        <name>Downmarket__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration (Business Days) --></label>
+        <name>Duration_Business_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Eligibility Verification Method --></label>
+        <name>Eligibility_Verification_Method__c</name>
+    </fields>
+    <fields>
+        <help><!-- During the Implementation/Launch+90 phase, how often has the CIM emailed with the client? --></help>
+        <label><!-- Email Frequency --></label>
+        <name>Email_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Ad Hoc</masterLabel>
+            <translation><!-- Ad Hoc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bi-Weekly</masterLabel>
+            <translation><!-- Bi-Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates the email to which notification of report upload will be sent. If there is more than one recipient, please separate e-mails with a &quot;,&quot;. --></help>
+        <label><!-- Email Notification of SFTP Upload --></label>
+        <name>Email_Notification_of_SFTP_Upload__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled - BH --></label>
+        <name>Enrolled_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled - DM --></label>
+        <name>Enrolled_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled - HTN --></label>
+        <name>Enrolled_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled - PD --></label>
+        <name>Enrolled_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrolled - WM --></label>
+        <name>Enrolled_WM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Cap --></label>
+        <name>Enrollment_Cap__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Marketing Lead --></label>
+        <name>Enrollment_Marketing_Lead__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide any additional information regarding expansion or cross sell opportunities. If there is no opportunity due to a competitive program, ensure a Client-Level Competitor record has been created. --></help>
+        <label><!-- Expansion Opportunity Details --></label>
+        <name>Expansion_Opportunity_Details__c</name>
+    </fields>
+    <fields>
+        <help><!-- Does the client have an expected date of delivering an ROI Analysis? --></help>
+        <label><!-- Expected ROI Analysis delivery date --></label>
+        <name>Expected_ROI_Analysis_delivery_date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates  the format in which reports will be delivered to the client or partner --></help>
+        <label><!-- File Format --></label>
+        <name>File_Format__c</name>
+        <picklistValues>
+            <masterLabel>*.csv</masterLabel>
+            <translation><!-- *.csv --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>*.csv encrypted</masterLabel>
+            <translation><!-- *.csv encrypted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>*.txt</masterLabel>
+            <translation><!-- *.txt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>fixed-width</masterLabel>
+            <translation><!-- fixed-width --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Recruitable – BH --></label>
+        <name>First_Recruitable_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Recruitable – DM --></label>
+        <name>First_Recruitable_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Recruitable – HTN --></label>
+        <name>First_Recruitable_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Recruitable – PD --></label>
+        <name>First_Recruitable_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Recruitable – WM --></label>
+        <name>First_Recruitable_WM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Have you discussed other programs? --></label>
+        <name>Have_you_discussed_other_programs__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Incentive Administrator --></label>
+        <name>Incentive_Administrator__c</name>
+        <picklistValues>
+            <masterLabel>Caremark</masterLabel>
+            <translation><!-- Caremark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Castlight</masterLabel>
+            <translation><!-- Castlight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Express Scripts</masterLabel>
+            <translation><!-- Express Scripts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limeade</masterLabel>
+            <translation><!-- Limeade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optum Rx</masterLabel>
+            <translation><!-- Optum Rx --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Redbrick</masterLabel>
+            <translation><!-- Redbrick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staywell</masterLabel>
+            <translation><!-- Staywell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin Pulse</masterLabel>
+            <translation><!-- Virgin Pulse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vitality</masterLabel>
+            <translation><!-- Vitality --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Incentive Criteria --></label>
+        <name>Incentive_Criteria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jira Ticket --></label>
+        <name>Jira_Ticket__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide additional context regarding key contacts, including whether they should be included on client calls: --></help>
+        <label><!-- Key Contact Details --></label>
+        <name>Key_Contact_Details__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide the link to the JIRA ROI ticket (if already created) --></help>
+        <label><!-- Link to JIRA ROI ticket --></label>
+        <name>Link_to_JIRA_ROI_ticket__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link to client reports box folder --></label>
+        <name>Link_to_client_reports_box_folder__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are there additional marketing nuances to consider? Any issues or push-back from the client on marketing, channels, incentives, etc? --></help>
+        <label><!-- Marketing Nuances --></label>
+        <name>Marketing_Nuances__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Status --></label>
+        <name>Marketing_Status__c</name>
+        <picklistValues>
+            <masterLabel>At Risk</masterLabel>
+            <translation><!-- At Risk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Schedule</masterLabel>
+            <translation><!-- On Schedule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overdue</masterLabel>
+            <translation><!-- Overdue --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Minors - BH --></label>
+        <name>Minors_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minors - DM --></label>
+        <name>Minors_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minors - HTN --></label>
+        <name>Minors_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minors - PD --></label>
+        <name>Minors_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minors - WM --></label>
+        <name>Minors_WM__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits - BH --></label>
+        <name>New_Recruits_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits - DM --></label>
+        <name>New_Recruits_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits - HTN --></label>
+        <name>New_Recruits_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits - PD --></label>
+        <name>New_Recruits_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits - WM --></label>
+        <name>New_Recruits_WM__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits with Emails - BH --></label>
+        <name>New_Recruits_with_Emails_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits with Emails - DM --></label>
+        <name>New_Recruits_with_Emails_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits with Emails - HTN --></label>
+        <name>New_Recruits_with_Emails_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits with Emails - PD --></label>
+        <name>New_Recruits_with_Emails_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Recruits with Emails - WM --></label>
+        <name>New_Recruits_with_Emails_WM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provide any additional information about the client, ongoing account management expectations, temperament, etc that would be helpful for the CSM to know --></help>
+        <label><!-- Ongoing Client Expectations/Nuances --></label>
+        <name>Ongoing_Client_Expectations_Nuances__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the client has CVS-TDC, ESI, HCSC, or other nuanced partnership, please explain the nuances and how the engagement with the client may be different --></help>
+        <label><!-- Partnership Nuances --></label>
+        <name>Partnership_Nuances__c</name>
+    </fields>
+    <fields>
+        <help><!-- If any of the population data files are being sent via secure email, note why it isn’t sent via sFTP and who sends it. CIM must send an email and CC the CSM to notify contact of recipient change. --></help>
+        <label><!-- Population Data Delivery Details --></label>
+        <name>Population_Data_Delivery_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Population Data Sources --></label>
+        <name>Population_Data_Sources__c</name>
+    </fields>
+    <fields>
+        <label><!-- Population Type --></label>
+        <name>Population_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Population of Coverage --></label>
+        <name>Population_of_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previously Recruitable Population - BH --></label>
+        <name>Previously_Recruitable_Population_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previously Recruitable Population - DM --></label>
+        <name>Previously_Recruitable_Population_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previously Recruitable Population - HTN --></label>
+        <name>Previously_Recruitable_Population_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previously Recruitable Population - PD --></label>
+        <name>Previously_Recruitable_Population_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previously Recruitable Population - WM --></label>
+        <name>Previously_Recruitable_Population_WM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date by which the final production report must be delivered --></help>
+        <label><!-- Prod File Due Date --></label>
+        <name>Prod_File_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program(s) --></label>
+        <name>Program_s__c</name>
+        <picklistValues>
+            <masterLabel>Behavioral Health</masterLabel>
+            <translation><!-- Behavioral Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetes</masterLabel>
+            <translation><!-- Diabetes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hypertension</masterLabel>
+            <translation><!-- Hypertension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prediabetes</masterLabel>
+            <translation><!-- Prediabetes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weight Management</masterLabel>
+            <translation><!-- Weight Management --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Duration --></label>
+        <name>Project_Duration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Displays the 18 digit case safe ID for the Project record --></help>
+        <label><!-- Project ID Long --></label>
+        <name>Project_ID_Long__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Name (Wizard Flow) --></label>
+        <name>Project_Name_Wizard_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Sub-Type --></label>
+        <name>Project_Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>ESI HC 360</masterLabel>
+            <translation><!-- ESI HC 360 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Express Scripts (ESI)</masterLabel>
+            <translation><!-- Express Scripts (ESI) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incentive Setup and Reporting</masterLabel>
+            <translation><!-- Incentive Setup and Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner - CVS</masterLabel>
+            <translation><!-- Partner - CVS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Select Partner Account - Parent Project</masterLabel>
+            <translation><!-- Select Partner Account - Parent Project --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Select Partner Account - Sub Project</masterLabel>
+            <translation><!-- Select Partner Account - Sub Project --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Select Partner Accounts</masterLabel>
+            <translation><!-- Select Partner Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tier 3</masterLabel>
+            <translation><!-- Tier 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Template Category --></label>
+        <name>Project_Template_Category__c</name>
+        <picklistValues>
+            <masterLabel>Ad Hoc Requests</masterLabel>
+            <translation><!-- Ad Hoc Requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Operations Requests</masterLabel>
+            <translation><!-- Data Operations Requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Science Requests</masterLabel>
+            <translation><!-- Data Science Requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Template</masterLabel>
+            <translation><!-- Project Template --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology Requests</masterLabel>
+            <translation><!-- Technology Requests --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Type --></label>
+        <name>Project_Type__c</name>
+        <picklistValues>
+            <masterLabel>CMC Migration/Deactivation</masterLabel>
+            <translation><!-- CMC Migration/Deactivation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carrier/Contract Path Change</masterLabel>
+            <translation><!-- Carrier/Contract Path Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Incentives</masterLabel>
+            <translation><!-- Client Incentives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Convert SPA to Enterprise</masterLabel>
+            <translation><!-- Convert SPA to Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross-Sell (New Program)</masterLabel>
+            <translation><!-- Cross-Sell (New Program) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Source Change</masterLabel>
+            <translation><!-- Data Source Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Divestiture</masterLabel>
+            <translation><!-- Divestiture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise Client Termination</masterLabel>
+            <translation><!-- Enterprise Client Termination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Client / Contract Path</masterLabel>
+            <translation><!-- New Client / Contract Path --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Population Expansion</masterLabel>
+            <translation><!-- Population Expansion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPA Carrier/Contract Path Change</masterLabel>
+            <translation><!-- SPA Carrier/Contract Path Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPA Client Termination</masterLabel>
+            <translation><!-- SPA Client Termination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Whole Person Transition</masterLabel>
+            <translation><!-- Whole Person Transition --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please provide details and/or insights regarding ROI Analysis for this client --></help>
+        <label><!-- ROI Analysis Details --></label>
+        <name>ROI_Analysis_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- ROI Analysis discussed? --></label>
+        <name>ROI_Analysis_discussed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Recruitable Population - BH --></label>
+        <name>Recruitable_Population_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitable Population - DM --></label>
+        <name>Recruitable_Population_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitable Population - HTN --></label>
+        <name>Recruitable_Population_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitable Population - PD --></label>
+        <name>Recruitable_Population_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recruitable Population - WM --></label>
+        <name>Recruitable_Population_WM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please provide details if we have set up any referrals for this client --></help>
+        <label><!-- Referral Details --></label>
+        <name>Referral_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Opportunity Box URL --></label>
+        <name>Related_Opportunity_Box_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is required when Report Type is Custom --></help>
+        <label><!-- Report Description --></label>
+        <name>Report_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Field Names --></label>
+        <name>Report_Field_Names__c</name>
+        <picklistValues>
+            <masterLabel>Blood Glucose Value</masterLabel>
+            <translation><!-- Blood Glucose Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blood Pressure Value</masterLabel>
+            <translation><!-- Blood Pressure Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Name</masterLabel>
+            <translation><!-- Client Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Date of Birth</masterLabel>
+            <translation><!-- Date of Birth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diastolic</masterLabel>
+            <translation><!-- Diastolic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feel Tag</masterLabel>
+            <translation><!-- Feel Tag --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Device Activation Date</masterLabel>
+            <translation><!-- First Device Activation Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Device Ship Date</masterLabel>
+            <translation><!-- First Device Ship Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Enrollment Date</masterLabel>
+            <translation><!-- First Enrollment Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Name</masterLabel>
+            <translation><!-- First Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow up reading BG Value</masterLabel>
+            <translation><!-- Follow up reading BG Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gender</masterLabel>
+            <translation><!-- Gender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heart Rate</masterLabel>
+            <translation><!-- Heart Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Height</masterLabel>
+            <translation><!-- Height --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual/Group</masterLabel>
+            <translation><!-- Individual/Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Group ID</masterLabel>
+            <translation><!-- Insurance Group ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Member ID</masterLabel>
+            <translation><!-- Insurance Member ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurer Name (Health Plan)</masterLabel>
+            <translation><!-- Insurer Name (Health Plan) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurer Relationship</masterLabel>
+            <translation><!-- Insurer Relationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Deactivation Date</masterLabel>
+            <translation><!-- Last Deactivation Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Device Usage Date</masterLabel>
+            <translation><!-- Last Device Usage Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Lapsed Date</masterLabel>
+            <translation><!-- Last Lapsed Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Name</masterLabel>
+            <translation><!-- Last Name --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Livongo ID</masterLabel>
+            <translation><!-- Livongo ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meal Tag</masterLabel>
+            <translation><!-- Meal Tag --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mean Arterial Pressure</masterLabel>
+            <translation><!-- Mean Arterial Pressure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Member-CDE Contact (Y/N)</masterLabel>
+            <translation><!-- Member-CDE Contact (Y/N) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outreach Mode</masterLabel>
+            <translation><!-- Outreach Mode --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program</masterLabel>
+            <translation><!-- Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Session Date</masterLabel>
+            <translation><!-- Session Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Session Type</masterLabel>
+            <translation><!-- Session Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Systolic</masterLabel>
+            <translation><!-- Systolic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timestamp</masterLabel>
+            <translation><!-- Timestamp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Topic</masterLabel>
+            <translation><!-- Topic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weight</masterLabel>
+            <translation><!-- Weight --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Report Request Type --></label>
+        <name>Report_Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Custom</masterLabel>
+            <translation><!-- Custom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Report Type Detail --></label>
+        <name>Report_Type_Detail__c</name>
+        <picklistValues>
+            <masterLabel>Alert Details</masterLabel>
+            <translation><!-- Alert Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blood Glucose Readings</masterLabel>
+            <translation><!-- Blood Glucose Readings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blood Pressure Readings</masterLabel>
+            <translation><!-- Blood Pressure Readings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coaching Details</masterLabel>
+            <translation><!-- Coaching Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incentive Management</masterLabel>
+            <translation><!-- Incentive Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Livongo Membership</masterLabel>
+            <translation><!-- Livongo Membership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weight Readings</masterLabel>
+            <translation><!-- Weight Readings --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates how often the report(s) need to be delivered to the client or partner --></help>
+        <label><!-- Reporting Frequency --></label>
+        <name>Reporting_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yearly</masterLabel>
+            <translation><!-- Yearly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates how reports will be delivered to the client or partner --></help>
+        <label><!-- Reporting Method of Delivery --></label>
+        <name>Reporting_Method_of_Delivery__c</name>
+        <picklistValues>
+            <masterLabel>Client/Partner SFTP (Livongo push to client/partner)</masterLabel>
+            <translation><!-- Client/Partner SFTP (Livongo push to client/partner) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go Anywhere Portal (Livongo reporting portal)</masterLabel>
+            <translation><!-- Go Anywhere Portal (Livongo reporting portal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Livongo SFTP (client pull from Livongo)</masterLabel>
+            <translation><!-- Livongo SFTP (client pull from Livongo) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requested Registration Code Status --></label>
+        <name>Requested_Registration_Code_Status__c</name>
+        <picklistValues>
+            <masterLabel>Disabled From Search</masterLabel>
+            <translation><!-- Disabled From Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Has the Livongo ROI timeline been shared with the client? --></help>
+        <label><!-- Shared Livongo ROI timeline ? --></label>
+        <name>Shared_Livongo_ROI_timeline__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Share to Chatter Groups (ID) --></label>
+        <name>TASKRAY__ChatterGroupSharingIds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Share to Chatter Groups (Name) --></label>
+        <name>TASKRAY__ChatterGroupSharingNames__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Update Pending --></label>
+        <name>TASKRAY__Dependent_Update_Pending__c</name>
+    </fields>
+    <fields>
+        <label><!-- Color --></label>
+        <name>TASKRAY__ProjectColor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated End Date --></label>
+        <name>TASKRAY__Project_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Project --></label>
+        <name>TASKRAY__Project_Parent__c</name>
+        <relationshipLabel><!-- Child Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>TASKRAY__Project_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived --></label>
+        <name>TASKRAY__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deprecated (Do Not Use) --></label>
+        <name>TASKRAY__TextColor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>TASKRAY__trAccount__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Actual Billable Time (hrs) --></label>
+        <name>TASKRAY__trActualBillableHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date of when the project was completed. --></help>
+        <label><!-- Actual Completion Date --></label>
+        <name>TASKRAY__trActualCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of days that it took to complete the project. --></help>
+        <label><!-- Actual Duration --></label>
+        <name>TASKRAY__trActualDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Time (hrs) --></label>
+        <name>TASKRAY__trActualHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- A behind-the-scenes field that controls the addition/removal of the TaskRay Forms Public Site Guest User to the Project Team. --></help>
+        <label><!-- Add Forms Guest User to Project Team --></label>
+        <name>TASKRAY__trAddFormsGuestUserToProjectTeam__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available for External Sharing --></label>
+        <name>TASKRAY__trAvailableExternal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Schedule --></label>
+        <name>TASKRAY__trBusinessHours__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Indicates a Project has been successfully cloned from a template. This field is automatically set to true when the clone operation is complete. --></help>
+        <label><!-- Clone Operation Complete --></label>
+        <name>TASKRAY__trCloneOperationComplete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether a project is complete. --></help>
+        <label><!-- Completed --></label>
+        <name>TASKRAY__trCompleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>TASKRAY__trCompletionPercentage__c</name>
+    </fields>
+    <fields>
+        <help><!-- A calculated customer onboarding score based on a project&apos;s Initial Projected Duration vs. Actual Duration and the average of Internal &amp; External Sentiment. --></help>
+        <label><!-- Customer Onboarding Score --></label>
+        <name>TASKRAY__trCustomerOnboardingScore__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture a customer&apos;s desired outcome(s) for their onboarding process. Can be populated from the Desired Outcomes field on Opportunity. --></help>
+        <label><!-- Desired Outcomes --></label>
+        <name>TASKRAY__trDesiredOutcomes__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field is controlled behind-the-scenes and determines if a Project is a draft template. --></help>
+        <label><!-- Draft --></label>
+        <name>TASKRAY__trDraft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Billable Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedBillableHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estimated number of days that it should take to complete the project as scheduled. --></help>
+        <label><!-- Estimated Duration --></label>
+        <name>TASKRAY__trEstimatedDuration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Time (hrs) --></label>
+        <name>TASKRAY__trEstimatedHours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture external feedback about a customer&apos;s onboarding experience. --></help>
+        <label><!-- External Feedback --></label>
+        <name>TASKRAY__trExternalFeedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Sharing Link --></label>
+        <name>TASKRAY__trExternalLink__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture the external sentiment of a customer onboarding project. --></help>
+        <label><!-- External Sentiment --></label>
+        <name>TASKRAY__trExternalSentiment__c</name>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied</masterLabel>
+            <translation><!-- Unsatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Unsatisfied</masterLabel>
+            <translation><!-- Very Unsatisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Use this to generate the Onboarding Feedback Form Link which can be shared with a customer to capture their external feedback and sentiment. --></help>
+        <label><!-- Generate Onboarding Feedback Form --></label>
+        <name>TASKRAY__trGenerateOnboardingFeedbackForm__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the date of when the project was initially projected to be completed. --></help>
+        <label><!-- Initial Projected Completion Date --></label>
+        <name>TASKRAY__trInitialProjectedCompletionDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- “Behind the scenes” field. This is the duration of the project as it was initially projected. --></help>
+        <label><!-- Initial Projected Duration --></label>
+        <name>TASKRAY__trInitialProjectedDuration__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to capture the internal sentiment of a customer onboarding project. --></help>
+        <label><!-- Internal Sentiment --></label>
+        <name>TASKRAY__trInternalSentiment__c</name>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Satisfied</masterLabel>
+            <translation><!-- Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied</masterLabel>
+            <translation><!-- Unsatisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Satisfied</masterLabel>
+            <translation><!-- Very Satisfied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Very Unsatisfied</masterLabel>
+            <translation><!-- Very Unsatisfied --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nickname --></label>
+        <name>TASKRAY__trNickname__c</name>
+    </fields>
+    <fields>
+        <help><!-- The most recent date that a project has been marked as on hold. --></help>
+        <label><!-- On-Hold Date --></label>
+        <name>TASKRAY__trOnHoldDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates that a project has been marked as on hold. --></help>
+        <label><!-- On-Hold --></label>
+        <name>TASKRAY__trOnHold__c</name>
+    </fields>
+    <fields>
+        <help><!-- A link to the TaskRay Onboarding Feedback Form which can be shared with a customer to capture their external feedback and sentiment. --></help>
+        <label><!-- Onboarding Feedback Form Link --></label>
+        <name>TASKRAY__trOnboardingFeedbackFormLink__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to store key information about a customer&apos;s onboarding that can be referenced throughout the customer&apos;s lifecycle. --></help>
+        <label><!-- Onboarding Summary Notes --></label>
+        <name>TASKRAY__trOnboardingSummaryNotes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>TASKRAY__trOpportunity__c</name>
+        <relationshipLabel><!-- TaskRay Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pending Interview Count --></label>
+        <name>TASKRAY__trPendingInterviewCount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to identify the primary customer contact for onboarding. --></help>
+        <label><!-- Primary Onboarding Contact --></label>
+        <name>TASKRAY__trPrimaryOnboardingContact__c</name>
+        <relationshipLabel><!-- Primary Onboarding Contact (TaskRay Projects) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>TASKRAY__trStatus__c</name>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Use this field to provide a description of a Template Project. --></help>
+        <label><!-- Template Description --></label>
+        <name>TASKRAY__trTemplateDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Template Library Source --></label>
+        <name>TASKRAY__trTemplateLibrarySource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Template Source --></label>
+        <name>TASKRAY__trTemplateSource__c</name>
+        <relationshipLabel><!-- Cloned Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Template --></label>
+        <name>TASKRAY__trTemplate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates the usage of the tags/UIDs being requested by the client or partner --></help>
+        <label><!-- Tag Usage Type --></label>
+        <name>Tag_Usage_Type__c</name>
+        <picklistValues>
+            <masterLabel>Billing</masterLabel>
+            <translation><!-- Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incentives</masterLabel>
+            <translation><!-- Incentives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting</masterLabel>
+            <translation><!-- Reporting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Launch Date / Due Date --></label>
+        <name>TaskRayLaunchDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field to track the target start of the Member recruitment --></help>
+        <label><!-- Member Recruitment Start Date - Actual --></label>
+        <name>TaskRayMemberRecruitmentStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Status --></label>
+        <name>TaskRayStatus__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress - Delayed</masterLabel>
+            <translation><!-- In Progress - Delayed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress - On Track</masterLabel>
+            <translation><!-- In Progress - On Track --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Field to track the target start of the Member enrollment recruitment --></help>
+        <label><!-- Targeted Marketing Start Date - Actual --></label>
+        <name>TaskRayTargetedMarketingStartDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weeks Live --></label>
+        <name>TaskRayWeeksLive__c</name>
+    </fields>
+    <fields>
+        <label><!-- TaskRay Project Number --></label>
+        <name>TaskRay_Project_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termed - BH --></label>
+        <name>Termed_BH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termed- DM --></label>
+        <name>Termed_DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termed - HTN --></label>
+        <name>Termed_HTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termed - PD --></label>
+        <name>Termed_PD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termed - WM --></label>
+        <name>Termed_WM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date by which the test report of other test file must be delivered --></help>
+        <label><!-- Test File Due Date --></label>
+        <name>Test_File_Due_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates if a test report or other test file needs to be sent --></help>
+        <label><!-- Test File Needed --></label>
+        <name>Test_File_Needed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Does the client have upcoming or regular Biometric Screenings that they want Livongo to participate in? --></help>
+        <label><!-- Upcoming Biometric Screenings? --></label>
+        <name>Upcoming_Biometric_Screenings__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Does the client have upcoming or regular Health Fairs that they want Livongo to participate in? --></help>
+        <label><!-- Upcoming Health Fairs? --></label>
+        <name>Upcoming_Health_Fairs__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Does the client have upcoming or regular Vendor Summits that they want Livongo to participate in? --></help>
+        <label><!-- Upcoming Vendor Summits --></label>
+        <name>Upcoming_Vendor_Summits__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- E.g. BAA, DSA, amendments, partnership specific documents, etc. Provide link to DSA if not saved in client&apos;s Box folder. Additionally, are there special contract stipulations that need to be highlighted/kept top of mind? --></help>
+        <label><!-- What legal documents are in place? --></label>
+        <name>What_legal_documents_are_in_place__c</name>
+    </fields>
+    <fields>
+        <help><!-- Indicates if the required sFTP is in place in order to share data between the client and/or partner(s) --></help>
+        <label><!-- sFTP in Place --></label>
+        <name>sFTP_in_Place__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Required</masterLabel>
+            <translation><!-- Not Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <sharingReasons>
+        <label><!-- Added to TaskRay Project Team --></label>
+        <name>TASKRAY__Project_Member_added_in_TaskRay</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage><!-- You do not have permission to edit a TaskRay Template --></errorMessage>
+        <name>Cannot_Edit_Template</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Report Description is required when Report Request Type is Custom --></errorMessage>
+        <name>Report_Description_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Report Type Detail is required when Report Request Type is Standard --></errorMessage>
+        <name>Report_Type_Detail_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Account field is required for all project types, and the Client Overview is required for New Client, Cross Sell, or Population Expansion project types. --></errorMessage>
+        <name>Require_Acct_and_CO_on_project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can mark the project as completed. Contact your system administrator if you would like access to this functionality. --></errorMessage>
+        <name>TASKRAY__Completing_Project_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can edit the Customer Onboarding Score. Contact your system administrator if you would like access to this field. --></errorMessage>
+        <name>TASKRAY__Editing_Score_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can make the project available for external sharing. Contact your system administrator if you would like access to this field. --></errorMessage>
+        <name>TASKRAY__External_Sharing_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the Project Owner can make the project available for external onboarding feedback. Contact your system administrator if you would like access to this field. --></errorMessage>
+        <name>TASKRAY__Feedback_Form_Restricted_to_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Project Nicknames cannot have spaces --></errorMessage>
+        <name>TASKRAY__No_spaces_in_Nickname</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- TaskRay_Project_Clone --></label>
+        <name>TASKRAY__TaskRay_Project_Clone</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_in_TaskRay --></label>
+        <name>TASKRAY__View_in_TaskRay</name>
+    </webLinks>
+</CustomObjectTranslation>

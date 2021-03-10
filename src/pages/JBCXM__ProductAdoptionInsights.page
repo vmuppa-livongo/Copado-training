@@ -1,0 +1,40 @@
+<apex:page sidebar="false" showHeader="true" tabStyle="Insights__tab">
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+	
+	<script type="text/javascript" >
+        var j$ = jQuery.noConflict();
+        
+        //Code to handle the change event on Survey Selection.
+        j$(document).ready(function() {
+	        j$('.jbaraInsightsSelectList').unbind().bind("change",function() {
+	        	var queryStringParam = encodeURIComponent(j$(this).val());
+	        	window.top.location.href=encodeURI('/apex/'+queryStringParam+'');
+	        });
+       });  
+     </script>
+	
+	
+	<div style="height: 70px; width: 100%;">
+        <div style='width: 60%' class="insightsSectionHeader360">
+            <apex:sectionHeader title="Insights" subtitle="Product Adoption"/>
+        </div>
+        <div style="margin-top: -50px;display: inline; float: right;margin-right:20px;" class="insightsSelectionClass">
+			<b>View Insights :</b>
+			<select class="jbaraInsightsSelectList">
+			  <option value="CustomerSuccessInsights">Customer Success</option>
+			  <option value="AlertsInsights">Alerts</option>
+			  <option value="FeaturesInsights">Feature Usage</option>
+			  <option value="ProductAdoptionInsights" selected="selected">Product Adoption</option>
+			  <option value="SurveyInsights">Survey</option>
+			  <option value="RenewalDashBoard">Renewals</option>
+			</select>
+        </div> 
+  	</div>
+  	
+  	<div align="center">
+  		<img title="Under Construction" src="{!URLFOR($Resource.appStyles)}/img/under-construction.jpg" />      
+  	</div>
+      
+</apex:page>

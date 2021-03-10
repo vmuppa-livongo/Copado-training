@@ -1,0 +1,4 @@
+Account Name: {!Account.Name}
+Sales Rep: {!Account.OwnerFullName}
+CSM: {!Account.CSM__c}
+Impending Client Termination Date: {!Account.Impending_Client_Termination_Date__c}

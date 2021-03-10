@@ -1,0 +1,440 @@
+<apex:page Controller="JBCXM.CS360SectionConfigController" extensions="JBCXM.NSRemoting" sidebar="false" title="CS360 Sections Configuraiton"  tabStyle="Administration__tab">
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__SurveyJquery,'miscscripts/jquery.limit-1.2.source.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__SurveyUtil,'SurveyUtil.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />            
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'jqGridLatest/js/i18n/grid.locale-en.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'jqGridLatest/js/jquery.jqGrid.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'js/jqgrid.Custom.Utility.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'miscscripts/jquery.limit-1.2.source.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid, 'css/ui.jqgrid.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS, 'NS/newStack/js/restclient/restClient.js'))}" />
+<!-- 
+    <script type="text/javascript" src="https://www.ok-soft-gmbh.com/jqGrid/jquery.jqGrid-4.2.0/plugin/ui.multiselect.js"></script>
+	<script type="text/javascript" src="https://www.ok-soft-gmbh.com/jqGrid/jquery.jqGrid-4.2.0/js/jquery.jqGrid.src.js"></script> 
+  -->
+    <style>
+	  .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column input.cbox{margin: 3px 0px !important;}
+	  .cbox{margin: 3px 3px 3px 0 !important;}
+	  </style>
+ 	<script type="text/javascript">        
+        var replist = {};        
+        var j$ = jQuery.noConflict();
+    	var hasCollection;
+		var areaReportsMap = {};
+		var areaIdNameMap = {};
+    	var reportList	= [];
+    	var reportList_All	= [];
+    	var reportIdNameMap	= {};
+                
+        j$(document).ready(function() {        
+ 			
+ 			if('{!($CurrentPage.parameters.sectionName)}' != '' && '{!($CurrentPage.parameters.sectionName)}' == 'usage') {            
+            	j$("#recordName").children('input[type=text]').attr("disabled", true);
+            	j$(".jbaraCaseSettingsCheckbox").attr("disabled", true);       
+            }
+            else { 
+            	j$("#recordName").children('input[type=text]').removeAttr("disabled");
+            	j$(".jbaraCaseSettingsCheckbox").removeAttr("disabled");       
+            }
+            
+            //j$(".reportsSection").hide();
+            restClient.config = {remoting:"{!$RemoteAction.NSRemoting.apinsinvoke}",sessionId : "{!NSSessionId}"};                        
+            hasCollection = !replist.collections;            
+            //prepareSampleData();
+            //getAllNSSubjectAreas();
+            getAllNSReports();
+            
+            /*var counter=1;
+            var found = false;            
+            while(counter < 3) {                        	            	            	          
+            	if(reportList_All.length > 0) {
+            		//found
+            		found=true;
+            		break;            	
+            	}
+            	else {	//if not found again try
+            		getAllNSReports();
+            		counter = counter+1;            		            		
+            	}
+            }
+            
+            if(found== true)
+            	//getPresavedData();
+            else {
+            	alert('Unable to get reports data. Please try again.');
+            	return false;
+            }*/
+                        			            							                                              
+        });
+        
+
+ 	    function getAllNSSubjectAreas() {	        	           		  
+	   		if(hasCollection)
+			{				
+				areaIdNameMap={};
+				restClient.serveRequest("collections/all","GET","",{},false,
+					(function(data){
+						replist.collections = data.data.Collections;						
+						//loop throgh each Subject area
+						var optionHTML='';						
+						for(var i = 0, len = replist.collections.length;i<len;i++){
+							//form items list
+							j$('<option>').val(replist.collections[i].CollectionDetails.CollectionID).text(replist.collections[i].CollectionDetails.CollectionName).appendTo('#selcoll');
+						}						
+				 	}));				
+			} 
+	      }
+	            
+	      /* Create a map of Area and Reports and pass it to previous method 
+	      *  there add remaning areas in the map
+	      */  
+	      function getAllNSReports() {           
+	  		try { 	  					                
+	                restClient.serveRequest("reports/all"
+					 ,"GET"
+					 ,""
+					 ,{}
+					 ,false
+					 ,(function(data){							 				 
+						replist.data = data;
+						if(!replist.data.result){
+							alert("Exception occurred while retrieving the Reports list \n" + replist.griddata.errorDesc);
+							return(false);
+						}
+						replist.data = replist.data.data.Reports;
+						//replist.griddata = new Array();														
+						areaReportsMap = {};
+	  					reportList	= new Array();
+	  					reportList_All = new Array();
+						for(var i = 0, len = replist.data.length;i<len;i++){																																		
+							reportList_All.push({ReportName: (replist.data[i].ReportInfo[0].reportName), ReportId:replist.data[i].ReportInfo[0].ReportId, SchemaName:replist.data[i].ReportInfo[0].SchemaName});															
+						}
+						getPresavedData();
+					 }));
+					
+				}
+				catch(e) {
+					alert("Exception occurred while retrieving the Reports list \n" + e);
+					return(false);
+				}    
+		    }
+	
+		function getPresavedData() {
+						
+			//if('{!($CurrentPage.parameters.sectionId)}' != '' && '{!($CurrentPage.parameters.sectionId)}' != null) {																
+				//var subjArea =  eval('{!(subjectArea)}');				
+				var selectedReportsJSON = eval({!(selectedReportIds)});
+				if(selectedReportsJSON != '' && selectedReportsJSON != null && selectedReportsJSON != undefined) {																			
+					for(var i=0, len=selectedReportsJSON.length;i<len;i++) {
+						idsOfSelectedRows.push(selectedReportsJSON[i].Id);
+						if(selectedReportsJSON[i].Default == true){
+							defaultReport = selectedReportsJSON[i].Id;
+						}
+					}
+					createCorrespondingGrid(false);
+				}
+				else{
+					createCorrespondingGrid(true);
+				}
+		}
+        
+   </script>
+	
+   <script type="text/javascript">  
+   	var idsOfSelectedRows = [];
+   	var defaultReport = '';   	
+   	function createCorrespondingGrid(isNewReport) {	
+	   	   
+		var repGridData = [];
+		//var selectedOptionVal = j$("#selcoll").val();
+		
+		if(isNewReport == true) {
+			idsOfSelectedRows = [];
+		}
+						
+		/*if(selectedOptionVal == '0')
+			j$(".reportsSection").hide();
+		else
+			j$(".reportsSection").show();
+		*/		
+		//from the areaReportsMap, get the corresponding reports 
+		//if(areaReportsMap[selectedOptionVal] != null && areaReportsMap[selectedOptionVal] != undefined) {		
+			//repGridData = areaReportsMap[selectedOptionVal];		
+		//}
+		
+		for(var i = 0, len = reportList_All.length; i<len;i++){	
+			repGridData.push({ReportName: (reportList_All[i].ReportName), ReportId:reportList_All[i].ReportId, SchemaName:reportList_All[i].SchemaName});
+		}	
+        var updateIdsOfSelectedRows = function (id, isSelected) {        
+			var index = j$.inArray(id, idsOfSelectedRows);						
+			if (!isSelected && index >= 0) {
+				idsOfSelectedRows.splice(index, 1); // remove id from the list
+			} 
+			else if (index < 0) {
+				idsOfSelectedRows.push(id);
+			}			
+        };         
+	    
+	    //unload the grid 	     
+        j$('#IdToRenderRenewalForecastData').jqGrid('GridUnload');
+        
+        radioButtonCreate = function (cellvalue, options, rowObject) {
+      		return ('<input type="radio" class="selectedCall" name="selectedCall" value=\"' + options.rowId + '\" onClick="setDefaultReport(this.value);" />');      		
+  		}
+        
+        //recreate the grid 
+        j$("#IdToRenderRenewalForecastData").jqGrid({
+			 datatype: 'local',
+			 data: repGridData,
+			 colNames: ['Report Id', 'Report Name', 'Subject Area', 'Default'],
+			 colModel: [
+				 		{name: 'ReportId',    index: 'ReportId',    align: 'left', width: 20, key: true, hidden: true},
+					 	{name: 'ReportName',  index: 'ReportName',  align: 'left', width: 125 },
+				 		{name: 'SchemaName',  index: 'SchemaName',  align: 'left', width: 125 },
+				 		{name: 'Default', 	  index: 'Default', 	align: 'center', width: 20, formatter: radioButtonCreate, sortable: false}
+				 						 
+			 ],
+			 rowNum: 20,
+			 rowList: [20, 50, 100],
+			 pager: '#pIdToRenderRenewalForecastData',
+			 gridview: true,
+			 multiselect: true,
+			 sortname: 'SchemaName',
+			 onSelectRow: updateIdsOfSelectedRows,
+			 onSelectAll: function (rowid, isSelected) {
+				var i, count, id;
+				for (i = 0, count = rowid.length; i < count; i++) {
+					id = rowid[i];
+					updateIdsOfSelectedRows(id, isSelected);
+				}
+			 },
+			 loadComplete: function () {
+				var $this = j$(this), i, count;
+				for (i = 0, count = idsOfSelectedRows.length; i < count; i++) {
+					$this.jqGrid('setSelection', idsOfSelectedRows[i], false);
+				}
+				
+				if(defaultReport != '')
+					j$('input[type=radio][value=\"'+defaultReport+'\"]').attr('checked',true);												
+			 },			 
+			 width: 1000,
+		     height: (j$(window).height() * 0.50),
+			 sortname: 'ReportName',
+			 viewrecords: true,
+			 height: '100%'
+			});
+	}
+	
+	
+	function setDefaultReport(repIdVal) {		
+		defaultReport=repIdVal;				
+	}
+    
+    </script>
+	
+   <script type="text/javascript">     	 	    	    	    																		
+    	            
+    function saveExternalReportSection() {    	
+    	var isNoError = false;
+        if(validateRelatedListDetails()) {          	          
+          	if(idsOfSelectedRows.length > 0) {        
+          		//var selectedOptionVal = j$("#selcoll").val()          		
+          		var subjectAreaReports = [];
+          		//subjectAreaReports = areaReportsMap[selectedOptionVal];
+          		subjectAreaReports = reportList_All;          		
+          		var eachSelectedReport = new Array();
+          		var isDefault= false;
+          		
+          		//var finalJSON = {ReportItems: []};
+          		
+          		//lop through the reports of area map
+          		for(var indx=0, repSize= subjectAreaReports.length; indx<repSize; indx++) {
+          			//check if this report was selected
+          			if( idsOfSelectedRows.indexOf(subjectAreaReports[indx].ReportId) > -1) {
+          				//if yes then put it in the final map
+          				//check if this was selected as default
+          				if(defaultReport == subjectAreaReports[indx].ReportId)
+          					isDefault = true;
+          				else
+          					isDefault = false;
+          					
+          				eachSelectedReport.push({Id:subjectAreaReports[indx].ReportId, Name:subjectAreaReports[indx].ReportName, Default: isDefault});
+          				//finalJSON.ReportItems.push({Id:subjectAreaReports[indx].ReportId, Name:subjectAreaReports[indx].ReportName, Default: isDefault});
+          			}
+          		}          		          		
+          		//saveExternalReportAction(JSON.stringify(eachSelectedReport), selectedOptionVal);          		
+          		saveExternalReportAction(JSON.stringify(eachSelectedReport));
+          	}
+          	else{          	
+          		errorList = new Array();
+            	errorItem = new JBaraErrorClass();
+                errorItem.header = 'Please Select at least one report';
+                errorItem.msg = '';
+                errorList.push(errorItem);
+                showJBaraValidationErrors('jBaraClientErrContainer', errorList);
+                enableSaveBtn();                
+            }     
+        }
+        else {                           
+                showJBaraValidationErrors('jBaraClientErrContainer', errorList);
+                enableSaveBtn();                 
+        }     
+    }
+    	        	           
+   </script>
+    
+    <script type="text/javascript">    	    	    	    																		    
+        function prepareSampleData(){    		    	
+    		var jsonData = [];	    												
+			var myItem, itemData, jsonObj;    		
+    		
+    		//Subject Areas creation
+    		for(var i=0; i<51; i++) {
+    			jsonData.push({CollectionName:"Area "+i, CollectionID:"Area"+i});
+			}
+			
+    		//prepare subject area dropdown, and create a map of Subject Area and Corresponding Reports    		
+    		for(var i = 0, len = jsonData.length;i<len;i++){
+    			j$('#selcoll').append(j$("<option></option>").attr("value", jsonData[i].CollectionID).text(jsonData[i].CollectionName));
+    			
+    			reportList	= [];    		    		    			    			
+    			for(var j=0; j<i; j++) {
+    				reportList.push({ReportName: "Report "+(j+1), ReportId : jsonData[i].CollectionID+"Report"+(j+1), SchemaName : jsonData[i].CollectionID, Description: "Description "+(j+1)});
+    			}    		
+    			areaReportsMap[jsonData[i].CollectionID] = reportList;  
+    		}    		    		    	    			  
+		}    
+   </script>
+    
+    
+    
+	<script>
+    	function validateRelatedListDetails() {         
+            errorList = new Array();
+            var validEntries = true;
+                    
+            if(j$.trim(j$('#recordName').children('input[type=text]').val()) == '' ) {              
+                 errorItem = new JBaraErrorClass();
+                 errorItem.header = 'Required:';
+                 errorItem.msg = 'Section Label';
+                 errorList.push(errorItem);
+                 validEntries = false;
+            }
+            return validEntries;        
+        }
+        
+        function disableBtn() {
+            j$(".saveExternalReport").attr("disabled", true);
+            j$(".saveExternalReport").removeClass("btn").addClass("btnDisabled");
+        } 
+        function enableSaveBtn() {
+            j$(".saveExternalReport").removeAttr('disabled', 'disabled');
+            j$(".saveExternalReport").removeClass("btnDisabled").addClass("btn");
+        } 
+        
+        function backToC360() {                
+       		window.location.href = '/apex/CaseSettings';
+        }      
+    </script>
+
+
+
+	<apex:sectionHeader title="{!(sectionTitle)}" /> 
+    	<a href="/apex/CaseSettings" style="text-decoration:none;">&nbsp;«&nbsp;Back</a>
+    
+	
+	<apex:form >        
+        
+     <!------------------------------  PAGE - DISPLAY SECTION  ------------------------------------->        
+     <apex:pageBlock title="Sections" id="relatedListIdBlock">
+        <apex:pageBlockButtons location="both">
+                <div style="clear: both;">
+                    <input class = "btn saveExternalReport" type = "button" value = "Save" onClick = "disableBtn(); saveExternalReportSection();" />
+	                <input class = "btn cancelExternalReport" type="button" value="Cancel" onClick = "backToC360();" />	                                                              
+                </div>
+        </apex:pageBlockButtons>
+                    
+        <!------------------------------  POPUP ------------------------------------->        
+        <apex:outputPanel id="popupPanel">	          
+	              <div class="middle" style="width: 50%; ">                   
+	                <div id="InlineEditDialogContent" class="innerContent">	                                       
+	                    <span id="jBaraClientErrContainer"></span>
+	                    <apex:pageMessages id="jbaraDashboardErrorMessages" />
+	                    <table class="rounded-corner" width="100%" style = "margin: 10px auto;" id ="tableRelatedListTable">
+	                        <tbody>	                	
+	                            <tr class="dashboardNameSection">                               
+	                                <td width="50%">
+	                                    <b>Show in Customer 360:</b>
+	                                </td>
+	                                <td width="50%">
+	                                    <apex:inputCheckbox value="{!newRelatedObject.JBCXM__InCustomer360__c}" styleClass="jbaraCaseSettingsCheckbox inputDashboardId"/>
+	                                </td>
+	                            </tr>
+	                            
+	                            <tr class="dashboardNameSection">
+	                                <td width="50%">
+	                                    <b>Section Label:</b>
+	                                </td>
+	                                <td width="50%">
+	                                 <apex:outputPanel styleClass="requiredInput" layout="block">
+	                                    <apex:outputPanel styleClass="requiredBlock" layout="block" />
+	                                        <span id="recordName" ><apex:inputText value="{!newRelatedObject.JBCXM__DisplayLabel__c}" /></span>
+	                                 </apex:outputPanel>    
+	                                </td>
+	                            </tr>
+	                            
+	                            
+	                            <!-- <tr class="subjectAreaSection externalReportClass">
+	                                <td width="50%">
+	                                    <b>Select Subject Area:</b>
+	                                </td>
+	                                <td width="50%">
+	                                	<apex:outputPanel styleClass="requiredInput" layout="block">
+	                                        <apex:outputPanel styleClass="requiredBlock" layout="block" />	                                 		
+											<select id="selcoll" style="width:80%;valign:middle;" class="subjectAreaSection externalReportClass" onchange="createCorrespondingGrid(true);">
+												<option value="0">None</option>
+											</select>											
+										</apex:outputPanel>			
+	                                </td>
+	                            </tr>
+	                             -->
+	                            <tr class="reportsSection externalReportClass">
+	                                <td width="50%">
+	                                    <b>Select Big Data Analytics Report:</b>
+	                                </td>
+	                                <td width="50%">	                                			
+	                                </td>
+	                            </tr>
+	                            
+	                        </tbody>
+	                    </table>
+	                    
+	                    <apex:outputPanel styleClass="reportsSection requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block" />	                                 		
+							<div id="jqxTree" style="width:200%;"> </div>
+							
+							<table id="IdToRenderRenewalForecastData"></table><div id="pIdToRenderRenewalForecastData"></div>
+							
+																		
+						</apex:outputPanel>	
+	                    
+	                </div>
+	              </div>
+        </apex:outputPanel>
+        <!------------------------------  POPUP - ENDS------------------------------------->
+     </apex:pageBlock>
+     
+     <apex:actionFunction name="saveExternalReportAction"  action="{!saveExternalReport}" onComplete="backToC360();" >               
+              <apex:param name="reportId" value="" assignTo="{!selectedReportIds}"/>
+              <!-- <apex:param name="subjectName" value="" assignTo="{!subjectArea}"/>  -->
+        </apex:actionFunction>
+     
+    </apex:form>
+</apex:page>

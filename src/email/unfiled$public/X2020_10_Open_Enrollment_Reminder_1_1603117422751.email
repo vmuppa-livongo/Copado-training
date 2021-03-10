@@ -1,0 +1,23 @@
+<html><head>
+	<title></title>
+	<style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;"><div style="width: 600px; margin: 0 auto;">Dear {{{Recipient.FirstName}}},<br />
+<br />
+This is a quick reminder to claim your Open Enrollment Survival gift box! We know how busy this time of year is for you, so the Livongo Team has put together some goodies to help you power through this year’s unusual Open Enrollment season.&nbsp;</div>
+
+<div style="width: 600px; margin: 0 auto;"><br />
+Redeem your gift box by <span style="color:#e74c3c;">clicking here [add your personal link]</span> and providing your preferred mailing address directly to our partner, Snack Nation (now Caroo) by <b>Wednesday, October 21st&nbsp;at 5pm EST</b>. Once you complete the form, you can expect your gift box - filled with healthy snacks, coffee, and Livongo swag - to arrive soon.</div>
+
+<div style="width: 600px; margin: 0px auto; text-align: center;"><img alt="caroo-snack+coffee kit" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/caroosnackcoffee_kit?oid=00D4600000180Lw" style="max-width: 217px; width: 216.997px; height: 216.997px;" title="caroo-snack+coffee kit" /></div>
+
+<div style="width: 600px; margin: 0 auto;">We look forward to supporting you during this year’s Open Enrollment season!<br />
+<br />
+Your partner in health,&nbsp;<br />
+{{{Sender.FirstName}}}<br />
+<br />
+{{{Sender.Signature}}}</div></body></html>

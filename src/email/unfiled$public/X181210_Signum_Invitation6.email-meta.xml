@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ML Signum Event</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>181210 Signum Invitation</name>
+    <style>freeForm</style>
+    <subject>Signum: An Invite-Only Event Not to Be Missed</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+I am excited to invite you to Signum, an exclusive event for 300 healthcare, tech, and data science leaders to come together and launch the next era of health for people with chronic conditions. Signum will feature renowned speakers, a number of VIP events, and a chance to learn how successful industry leaders are using health signals today.
+
+
+
+The Village
+
+969 Market St, San Francisco, CA
+
+February 28, 2019
+
+General Session: 10:00 AM - 2:30 PM
+
+Clients Only: 2:30 PM - 6:30 PM
+
+
+
+
+
+To RSVP and to view the full agenda, visit livongo.com/signum or email RSVP@livongo.com with any questions. This invitation is non-transferable. If you would like to add someone in your place, please apply at RSVP@livongo.com.
+
+
+
+This is an event you won’t want to miss. Please be sure to register by January 11, 2019, to learn more about our new Applied Health Signals category and how it is silencing Noisy Healthcare.
+
+
+
+Thanks, and we hope to see you in San Francisco!
+
+
+[Rep Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

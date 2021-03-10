@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>181210 Signum Invitation</name>
+    <style>freeForm</style>
+    <subject>Signum: An Invite-Only Event Not to Be Missed</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+Happy New Year! I want to invite you to attend Livongo&apos;s Signum conference this February. This one-day, invitation-only event will bring together thought leaders from healthcare into an meaningful dialogue around transforming healthcare for people with chronic conditions. We’re excited to have thought leaders like Daniel Pink, Hemant Taneja, and Seth Stephens-Davidowitz, as well as executives from Amazon, Walgreens, Delta, the American Diabetes Association, Anthem, Highmark, and Aetna.
+
+
+
+The Village
+
+969 Market St, San Francisco, CA
+
+February 28, 2019
+
+General Session: 8:30 AM - 2:30 PM
+
+Clients Only: 2:30 PM - 6:30 PM
+
+
+
+
+
+To RSVP and to view the full agenda, visit livongo.com/signum or email RSVP@livongo.com with any questions. This invitation is non-transferable. If you would like to add someone in your place, please apply at RSVP@livongo.com.
+
+
+
+This is an event you won’t want to miss. Please be sure to register by January 11, 2019, to learn more about our new Applied Health Signals category and how it is silencing Noisy Healthcare.
+
+
+
+Thanks, and we hope to see you in San Francisco!
+
+
+[Rep Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

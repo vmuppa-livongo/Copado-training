@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Store ID --></label>
+        <name>PFLSFTMA__API_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>PFLSFTMA__Account__c</name>
+        <relationshipLabel><!-- TMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaign Member --></label>
+        <name>PFLSFTMA__Campaign_Member__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Name --></label>
+        <name>PFLSFTMA__Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>PFLSFTMA__Contact__c</name>
+        <relationshipLabel><!-- TMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>PFLSFTMA__Contract__c</name>
+        <relationshipLabel><!-- TMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date Delivered --></label>
+        <name>PFLSFTMA__Date_Delivered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Date Time --></label>
+        <name>PFLSFTMA__Date_Ordered_DateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Date --></label>
+        <name>PFLSFTMA__Date_Ordered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Time Shipped --></label>
+        <name>PFLSFTMA__Date_Shipped_DateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Shipped --></label>
+        <name>PFLSFTMA__Date_Shipped__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Message --></label>
+        <name>PFLSFTMA__Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>PFLSFTMA__External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Id --></label>
+        <name>PFLSFTMA__Gift_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch --></label>
+        <name>PFLSFTMA__Gift_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender City --></label>
+        <name>PFLSFTMA__Gift_Sender_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender Company --></label>
+        <name>PFLSFTMA__Gift_Sender_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender Country --></label>
+        <name>PFLSFTMA__Gift_Sender_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender Email --></label>
+        <name>PFLSFTMA__Gift_Sender_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender First Name --></label>
+        <name>PFLSFTMA__Gift_Sender_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender Last Name --></label>
+        <name>PFLSFTMA__Gift_Sender_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender Phone --></label>
+        <name>PFLSFTMA__Gift_Sender_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender Postal Code --></label>
+        <name>PFLSFTMA__Gift_Sender_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender State --></label>
+        <name>PFLSFTMA__Gift_Sender_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender Street Address --></label>
+        <name>PFLSFTMA__Gift_Sender_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gift Sender User --></label>
+        <name>PFLSFTMA__Gift_Sender_User__c</name>
+        <relationshipLabel><!-- TMA Transactions (Gift Sender User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Internal Error Message --></label>
+        <name>PFLSFTMA__Internal_Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>PFLSFTMA__Lead__c</name>
+        <relationshipLabel><!-- TMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number TMA Orders --></label>
+        <name>PFLSFTMA__Number_TMA_Orders__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>PFLSFTMA__Opportunity__c</name>
+        <relationshipLabel><!-- TMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Detail --></label>
+        <name>PFLSFTMA__Order_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>PFLSFTMA__Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ordered By Me --></label>
+        <name>PFLSFTMA__Ordered_By_Me__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ordered By --></label>
+        <name>PFLSFTMA__Ordered_By__c</name>
+        <relationshipLabel><!-- TMA Transactions (Ordered By) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reason --></label>
+        <name>PFLSFTMA__Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient City --></label>
+        <name>PFLSFTMA__Recipient_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Company --></label>
+        <name>PFLSFTMA__Recipient_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Country --></label>
+        <name>PFLSFTMA__Recipient_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Email --></label>
+        <name>PFLSFTMA__Recipient_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient First Name --></label>
+        <name>PFLSFTMA__Recipient_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Last Name --></label>
+        <name>PFLSFTMA__Recipient_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Phone --></label>
+        <name>PFLSFTMA__Recipient_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Postal Code --></label>
+        <name>PFLSFTMA__Recipient_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient State --></label>
+        <name>PFLSFTMA__Recipient_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient Street Address --></label>
+        <name>PFLSFTMA__Recipient_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recipient --></label>
+        <name>PFLSFTMA__Recipient__c</name>
+    </fields>
+    <fields>
+        <label><!-- RuleID --></label>
+        <name>PFLSFTMA__RuleID__c</name>
+        <relationshipLabel><!-- TMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Send Mechanism --></label>
+        <name>PFLSFTMA__Send_Mechanism__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signed By --></label>
+        <name>PFLSFTMA__Signed_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusFlag --></label>
+        <name>PFLSFTMA__StatusFlag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>PFLSFTMA__Status__c</name>
+        <picklistValues>
+            <masterLabel>Delivered</masterLabel>
+            <translation><!-- Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Confirmed</masterLabel>
+            <translation><!-- Order Confirmed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shipped</masterLabel>
+            <translation><!-- Shipped --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unable to deliver</masterLabel>
+            <translation><!-- Unable to deliver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TMA Product --></label>
+        <name>PFLSFTMA__TMA_Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Follow-up Task Id --></label>
+        <name>PFLSFTMA__TaskID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Failed Follow-up Task Id --></label>
+        <name>PFLSFTMA__TaskId_Failed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Price --></label>
+        <name>PFLSFTMA__Total_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Link --></label>
+        <name>PFLSFTMA__Tracking_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>PFLSFTMA__Tracking_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking URL --></label>
+        <name>PFLSFTMA__Tracking_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Truncated Fields --></label>
+        <name>PFLSFTMA__Truncated_Fields__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Close --></label>
+        <name>PFLSFTMA__Close</name>
+    </webLinks>
+</CustomObjectTranslation>

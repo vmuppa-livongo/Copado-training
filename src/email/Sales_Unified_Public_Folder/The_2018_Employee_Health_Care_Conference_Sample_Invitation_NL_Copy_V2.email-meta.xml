@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>The 2018 Employee Health Care Conference Sample Invitation V2</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>The 2018 Employee Health Care Conference Sample Invitation NL Copy V2</name>
+    <style>freeForm</style>
+    <subject>Be Our Guest at The Conference Board’s 2018 Employee Health Care Conference</subject>
+    <textOnly>{!Contact.FirstName},
+
+I see you have not registered yet for the The Conference Board&apos;s  Employee Health Care Conference next March. That is great because I can help save you money by extending a complimentary pass for you to attend!
+
+The dates are March 8-9 in New York or March 27-28 in San Diego. Your complimentary pass, valued at $2,895, also includes attendance to the pre-conference workshop: Modernizing Benefits Delivery &amp; Administration to Stay Agile and Engaging, being held 1:30 – 5 pm on March 7th in New York and March 26th in San Diego.
+
+For additional details and see the conference agenda:
+Please visit Employee Health Care San Diego or Employee Health Care New York.
+
+If you&apos;d like to take advantage of this complimentary pass, please
+1. let me know what city you’d like to travel to
+2. let me know if you’d also like to attend the pre-conference workshop
+3. include your contact details referenced below.
+     a. Name
+     b. Title
+     c. Company
+     d. Mailing Address (HQ is fine)
+     e. Phone
+     f. Email
+
+We will have you registered through The Conference Board and you will receive a confirmation directly from their customer service team in about a week.
+
+Thank you,
+
+Neal Lewis
+Regional Vice President
+Livongo
+m: 239.633.0482 e: nlewis@livongo.com
+a:  3960 Deep Passage Way, Naples, FL 34109
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,13 @@
+<p>Hello! 
+<p>You are listed as the assigned CIM / CSM, or Enrollment Marketing Lead  for Account <strong>{!TASKRAY__Project_Task__c.TASKRAY__trAccount__c}</strong>. The Data Operations team has complete processing new data file(s) for this client as a part of the below project. Please take the appropriate action to complete your enrollment marketing and pre-reg activities.</p>
+
+<p><strong>Project Name:</strong> {!TASKRAY__Project_Task__c.TASKRAY__Project__c} 
+<br /><strong>Related Client Overview:</strong>  
+{!TASKRAY__Project_Task__c.Client_Overview__c}
+<br /><strong>Launch Date:</strong> {!TASKRAY__Project_Task__c.Launch_Date_Due_Date__c}
+<br /><strong>Targeted Marketing Start Date:</strong> {!TASKRAY__Project_Task__c.Targeted_Marketing_Start_Date__c}
+<br /><strong>Task Name:</strong> {!TASKRAY__Project_Task__c.Name}
+<br /><strong>Task Owner:</strong> {!TASKRAY__Project_Task__c.OwnerFullName}
+<br /><strong>Link to Salesforce record:</strong> {!TASKRAY__Project_Task__c.Link}
+
+</p>

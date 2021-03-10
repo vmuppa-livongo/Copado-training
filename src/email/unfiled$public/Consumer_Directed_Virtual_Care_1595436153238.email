@@ -1,0 +1,25 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Hi&nbsp;{{{Recipient.FirstName}}}, 
+  <br /> 
+  <br /> The current global pandemic has made virtual care a critical element that's poised to become the new standard moving forward. 
+  <br /> 
+  <br /> Livongo empowers people with chronic conditions (diabetes, hypertension, prediabetes, weight management, and behavioral health) to live better and healthier lives from wherever they are. Today, with more people being asked to manage their health and care from the relative safety of their homes, this promise becomes more important than ever. 
+  <br /> 
+  <br /> Livongo has provides remote monitoring for people with chronic conditions and the organizations that serve them, which is especially important today due to COVID-19. Our solutions supports: 
+  <ul> 
+   <li><b>Immediate Needs:</b> Our proven approach supports a vulnerable population - people living with chronic conditions - outside of high-risk clinical settings.</li> 
+   <li><b>Higher Quality of Care:</b> Access to Members' biometric data, such as blood glucose and blood pressure readings, offers telehealth providers a convenient, efficient way to understand and evaluate patient health.</li> 
+   <li><b>Increased Connectivity:</b> Members may share their up-to-date health data with their providers, family, and friends, keeping their support networks close even when they may be physically apart.</li> 
+   <li><b>Measurable Outcomes:</b> Proven clinical outcomes and an average medical cost savings of $180 per participant per month when addressing comorbid conditions for people living with diabetes.</li> 
+  </ul> If we could have 15-20 minutes of your time, we'd love to learn more about your current initiatives and show you how Livongo can help accelerate your virtual chronic condition strategy. Let me know what date/time works best for you. 
+  <br /> 
+  <br /> Thanks, 
+  <br /> {{{Sender.FirstName}}} 
+  <br /> 
+  <br /> {{{Sender.Signature}}}
+ </body>
+</html>

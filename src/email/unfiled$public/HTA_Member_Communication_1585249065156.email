@@ -1,0 +1,77 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <font face="Calibri, sans-serif"><span style="font-size: 11pt;">Dear {{{Recipient.FirstName}}},</span></font> 
+  <br /> 
+  <br /> 
+  <font face="Calibri, sans-serif"><span style="font-size: 14.6667px;">I hope you are staying as safe and secure as possible these days.</span><br /> <br /> <span style="font-size: 14.6667px;">I was happy to see the news that your organization, like Livongo, is among the handful of companies that helped shape the Consumer Technology Association's </span><i style="font-size: 14.6667px;">Guiding Principles on Virtual Care</i><span style="font-size: 14.6667px;">. Obviously, we both have hard-won guidance to share that will serve the market well beyond the current pandemic that has underscored its importance.</span><br /> <br /> <span style="font-size: 14.6667px;">I'd love to explore how we might continue to advance this work together, whether on a project-by-project basis or as part of a more formal partnership.<br /> <br /> Livongo has a robust partnership program in place, bringing together key players in the industry to offer privacy-safe, consumer-first solutions for people living with chronic conditions. For example, we recently announced a partnership with Dexcom, the leading continuous glucose monitor manufacturer. This partnership can -- at the request of our Members -- stream data from their Dexcom G6 to our Livongo programs. This in turn better informs our health coaches who provide 24/7 support to our Members with diabetes.<br /> <br /> I'm interested in hearing more about your recent efforts, especially now that virtual care has become top-of-mind for so many. Let's find a time to connect, commiserate, and explore ways to continue doing good work together.<br /> <br /> Thank you,</span></font> 
+  <br /> 
+  <br /> 
+  <meta content="text/html; charset=utf-8" /> 
+  <meta content="Word.Document" name="ProgId" /> 
+  <meta content="Microsoft Word 15" name="Generator" /> 
+  <meta content="Microsoft Word 15" name="Originator" /> 
+  <style type="text/css"><!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+
+
+  </style> 
+  <p class="MsoNormal"><b><span style="font-size:14.0pt;color:#0070C0">Joshua Akers </span></b><br /> <span style="font-size:14.0pt"><a href="https://www.livongo.com/"><span style="color:blue">Product Awareness Manager</span></a> </span><br /> <b>P: 815.762.8188<br /> E:jakers@livongo.com </b></p>
+ </body>
+</html>

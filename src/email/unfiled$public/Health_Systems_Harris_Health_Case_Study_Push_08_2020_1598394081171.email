@@ -1,0 +1,40 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Dear {{recipient.firstname}},</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Our health system clients come to us with a unique perspective -- as healthcare providers, they understand the importance of managing the health of their own employees, so they can continue to deliver high-quality healthcare to their patients.&nbsp;</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Learn how we worked with Harris Health System -- a fully-integrated healthcare system serving more than 4.6 million residents of Harris County, Texas -- to deliver a whole-person approach to care for its employees and spouses with diabetes and hypertension. Results include:&nbsp;&nbsp;</span></span></span></span> 
+  <br /> &nbsp; 
+  <ul> 
+   <li><span style="font-size:12pt"><span style="tab-stops:list .5in"><span style="vertical-align:baseline"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">A coordinated experience across conditions for people living with both diabetes and hypertension&nbsp;with an NPS of +92</span></span></span></span></span></span> &nbsp;</li> 
+  </ul> 
+  <ul> 
+   <li><span style="font-size:12pt"><span style="tab-stops:list .5in"><span style="vertical-align:baseline"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Multi-year impact on clinical diabetes measures, including reduced HbA1c levels and fewer hypoglycemic readings</span></span></span></span></span></span></li> 
+  </ul> 
+  <ul> 
+   <li><span style="font-size:12pt"><span style="tab-stops:list .5in"><span style="vertical-align:baseline"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Measurable impact on systolic and diastolic blood pressure rates among those with uncontrolled hypertension&nbsp;&nbsp;</span></span></span></span></span></span>&nbsp;</li> 
+  </ul> 
+  <ul> 
+   <li><span style="font-size:12pt"><span style="tab-stops:list .5in"><span style="vertical-align:baseline"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Reduced spending incurred through medical care, emergency room visits, and pharmacy costs associated with managing chronic conditions, resulting in a positive ROI&nbsp;</span></span></span></span></span></span></li> 
+  </ul> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Access the full case study </span></span></span></span> 
+  <a href="https://creative.livongo.com/share/1997F48D-01F3-47CA-A5FCDEFC6C587D4F/"><span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">here</span></span></span></span></a> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">.</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">We would like to set up a call to review this case study further and explore collaboration in how your organization could yield similar results.</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Looking forward to connecting!</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12pt"><span style="font-family:Arial,sans-serif"><span style="color:black"><span style="font-size:11.0pt">Best,<br /> <br /> {{sender.firstname}}</span></span></span></span>
+ </body>
+</html>

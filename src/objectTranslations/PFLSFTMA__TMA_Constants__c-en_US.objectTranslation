@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Canvas App Name --></label>
+        <name>PFLSFTMA__Canvas_App_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create/Update task if order is delivered --></label>
+        <name>PFLSFTMA__Create_FollowUp_Task__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable/disable &quot;Public&quot; checkbox on a created task when the rule is triggered --></help>
+        <label><!-- Create public tasks for TimeBased Orders --></label>
+        <name>PFLSFTMA__Create_Public_Tasks_For_Time_Based__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable/disable &quot;Public&quot; checkbox on a created task when the rule is triggered --></help>
+        <label><!-- Create public tasks for Workflow Orders --></label>
+        <name>PFLSFTMA__Create_Public_Tasks_For_Workflow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create/Update task if order is shipped --></label>
+        <name>PFLSFTMA__Create_Task_Upon_Order_Shipped__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create/Update task if order is created --></label>
+        <name>PFLSFTMA__Create_task_upon_order_creation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Task Notifications --></label>
+        <name>PFLSFTMA__Enable_Task_Notifications__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender City --></label>
+        <name>PFLSFTMA__Gift_Sender_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender Company --></label>
+        <name>PFLSFTMA__Gift_Sender_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender Country --></label>
+        <name>PFLSFTMA__Gift_Sender_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender Email --></label>
+        <name>PFLSFTMA__Gift_Sender_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender First Name --></label>
+        <name>PFLSFTMA__Gift_Sender_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender Last Name --></label>
+        <name>PFLSFTMA__Gift_Sender_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender Phone --></label>
+        <name>PFLSFTMA__Gift_Sender_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender Postal Code --></label>
+        <name>PFLSFTMA__Gift_Sender_Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender State --></label>
+        <name>PFLSFTMA__Gift_Sender_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender Street Address --></label>
+        <name>PFLSFTMA__Gift_Sender_Street_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Sender User ID --></label>
+        <name>PFLSFTMA__Gift_Sender_User_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Api User Set --></label>
+        <name>PFLSFTMA__Is_Api_User_Set__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Evaluation Enabled --></label>
+        <name>PFLSFTMA__Is_Triggers_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notification User ID --></label>
+        <name>PFLSFTMA__Notification_User_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Shipped Task Name --></label>
+        <name>PFLSFTMA__Order_Shipped_Task_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type --></label>
+        <name>PFLSFTMA__Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Order Batch ID --></label>
+        <name>PFLSFTMA__Send_Order_Batch_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Order Job Name --></label>
+        <name>PFLSFTMA__Send_Order_Job_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Order Job --></label>
+        <name>PFLSFTMA__Send_Order_Job__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send TMA Orders Interval --></label>
+        <name>PFLSFTMA__Send_TMA_Orders_Interval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send TMA Orders Scope --></label>
+        <name>PFLSFTMA__Send_TMA_Orders_Scope__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Placed Task Name --></label>
+        <name>PFLSFTMA__Send_TMA_Task_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Community Users --></label>
+        <name>PFLSFTMA__Show_Community_Users__c</name>
+    </fields>
+    <fields>
+        <label><!-- TMA Connection Name --></label>
+        <name>PFLSFTMA__TMA_Connection_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Delivered Task Name --></label>
+        <name>PFLSFTMA__TMA_Delivered_Task_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger CPU Time --></label>
+        <name>PFLSFTMA__Trigger_CPU_Time__c</name>
+    </fields>
+</CustomObjectTranslation>

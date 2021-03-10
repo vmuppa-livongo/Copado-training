@@ -1,0 +1,67 @@
+<!-- Copyright (c) 2014 Gainsight.
+---- Purpose                    : Create an interface  where users can prebuilt reports.
+---- Other comments (optional)  : None
+-->
+<apex:page Controller="JBCXM.SystemDefinedDataLoader" sidebar="false" showHeader="false" title="Load prebuilt reports">
+   <!-- Static Resource Includes: Jquery and css files  -->
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-1.10.2.min.js'))}"></script>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+    <script type="text/javascript" language="javascript">
+        var j$ = jQuery.noConflict();
+        document.title = "Load prebuilt reports";
+        //Disable the button when new or save buttons clicked.
+        function disableBtn(obj) {
+            j$(obj).attr("disabled", true);
+            j$(obj).removeClass("btn").addClass("btnDisabled");
+        }
+    </script>
+    <style>
+    #loadSampleDatatable th{
+        background: url("/img/alohaSkin/grid_headerbg.gif") repeat-x scroll 0 bottom #FFFFFF;
+        border-width: 0 0 1px 1px;
+        color: #000000;
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 5px 2px 4px 5px;
+    }
+    </style>
+    <br/>
+    <apex:form id="loadPrebuiltDataForm">
+        <div style="display: inline; width: 100%;">
+            <div style="display: inline ;float:left;">
+                <apex:image id="JBaraImage" value="{!$Resource.JBCXM__JBaraLogo}" width="230" height="65" />
+            </div>
+            <div align="center" style="display: inline ;float:left;font-size:24px;padding-left:30px;margin-top:21px;font-weight:bold;">
+                Pre-built reports
+            </div>
+        </div>
+        <br/>
+        <br/>
+        
+        <apex:outputpanel rendered="{!isSetupDataLoaded != true}">
+	        <apex:pageBlock title="Pre-built reports">
+	           <div style="clear:both;color:#f00;">
+	               Configure CSM field before creating pre-built reports.<br/>
+	               <br/><a style="clear:both;color:#015BA7;" href="/apex/Administration#Administration-Customers">Click here to configure CSM</a>
+	           </div>
+	        </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputpanel rendered="{!isSetupDataLoaded == true}" id="loadPrebuiltDataPanel">
+	        <apex:pageBlock title="Create pre-built reports" rendered="{!If(IsPBRLoaded == false , true, false)}">
+	            <p>
+	                Create pre-built reports:
+	                <input type="button" value="Create" class="btn" onclick="disableBtn(this);loadPrebuiltData()"/>
+	            </p>
+	            <apex:actionFunction name="loadPrebuiltData" action="{!insertPBR}" reRender="loadPrebuiltDataPanel"/>                
+	        </apex:pageBlock>
+	        
+	        <apex:outputpanel id="prebuiltReportsLoaded" rendered="{!If(IsPBRLoaded == true , true, false)}">
+		        <apex:pageBlock title="Pre-built reports">
+		            Pre-built reports have been created and added to 'My Customers' and 'Executive View' layouts.<br/> 
+		            <br/><a style="clear:both;color:#015BA7;" href="/apex/HomePage">Click here to view them</a>
+		        </apex:pageBlock>
+	        </apex:outputPanel>
+		</apex:outputPanel>
+    </apex:form>
+</apex:page>

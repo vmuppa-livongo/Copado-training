@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Bimal&apos;s study on Drivers of Weight Loss in a CDC-recognized Digital Diabetes Prevention Program</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_DPP Manuscript</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>DPP Study-Food logging associated with weight loss</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

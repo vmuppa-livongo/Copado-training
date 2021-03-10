@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template to use after a meeting with a prospective client.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>190523_Client Testimonial Video Email Template</name>
+    <style>freeForm</style>
+    <subject>Hear What Clients Are Saying About Livongo</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Did you know that 90% of US healthcare spend is attributable to people with chronic and behavioral health conditions?  Livongo provides a whole person platform that empowers people with chronic conditions to live better and healthier lives, beginning with diabetes and now including hypertension, weight management, diabetes prevention, and behavioral health.
+
+Watch this 2 minute video that features benefits leaders from Delta Airlines, Jefferson Health, and SAP, who talk to how they improved the health for their population and also experienced a return on their investment.
+
+I&apos;d love to discuss how our program can help {!Account.Name}.  Do you have time next week for a 15-minute phone call?
+
+Thanks,
+{!User.FirstName} {!User.LastName}
+{!User.Email}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

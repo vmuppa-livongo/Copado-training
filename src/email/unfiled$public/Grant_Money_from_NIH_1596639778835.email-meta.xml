@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>State, City ad Local government</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Grant Money from NIH</name>
+    <style>none</style>
+    <subject>Grant Money from NIH</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

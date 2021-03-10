@@ -1,0 +1,186 @@
+<!-- Copyright (c) 2011 JBara Software, Inc.
+---- Purpose                    : Create an interface from where users can Load Sample Data.
+----                              Also list the number of sample records loaded into each Object.
+----                              If there are any sample records, give user option to delete Sample data.
+---- Other comments (optional)  : None
+-->
+<apex:page Controller="JBCXM.SampleDataLoader" sidebar="false" showHeader="false" title="Sample Data Loader">
+   <!-- Static Resource Includes: Jquery and css files  -->
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+    <script type="text/javascript" language="javascript">
+        var j$ = jQuery.noConflict();
+        //Disable the button when new or save buttons clicked.
+        function disableBtn(obj) {
+            j$(obj).attr("disabled", true);
+            j$(obj).removeClass("btn").addClass("btnDisabled");
+        }
+    </script>
+    <style>
+    #loadSampleDatatable th{
+        background: url("/img/alohaSkin/grid_headerbg.gif") repeat-x scroll 0 bottom #FFFFFF;
+        border-width: 0 0 1px 1px;
+        color: #000000;
+        font-size: 0.9em;
+        font-weight: bold;
+        padding: 5px 2px 4px 5px;
+    }
+    #TransLinesLoaderBtn a{
+    	text-decoration: none;
+    }
+    .noPedningTransLines {
+    	background: url("/img/alohaSkin/btn_sprite.png") repeat-x scroll right top #E8E8E9;
+	    border-color: #B5B5B5 #B5B5B5 #7F7F7F;
+	    border-radius: 3px 3px 3px 3px;
+	    border-style: solid;
+	    border-width: 1px;
+	    padding:2px;
+    }
+    </style>
+    <br/>
+    <apex:form id="loadSampleDataForm">
+        <div style="display: inline; width: 100%;">
+            <div style="display: inline ;float:left;">
+                <apex:image id="JBaraImage" value="{!$Resource.JBCXM__JBaraLogo}" width="230" height="65" />
+            </div>
+            <div align="center" style="display: inline ;float:left;font-size:24px;padding-left:30px;margin-top:21px;font-weight:bold;">
+                Load sample data
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <apex:outputPanel rendered="{!AllAccounts.size == 0}">
+            <apex:pageBlock title="This page is used to load sample data.">
+                <p>
+                    Load Sample Data:
+                    <input type="button" value="Load" class="btn" onclick="disableBtn(this);loadSampleData()"/>
+                </p>
+                <apex:actionFunction name="loadSampleData" action="{!InsertSampleData}" reRender="loadSampleDataForm" />
+                <!--This block should only be used if Transaction Header was loaded from ETL-->
+                <apex:outputPanel id="transactionLinesLoader" rendered="{!isSetupDataLoaded}">
+                    <p>
+                        Load missing transaction lines:
+                        <input type="button" value="Load" class="btn btnToLoadTransLines" onclick="disableBtn(this);loadTransactionLines()"/>
+                    </p>
+                    <apex:actionFunction name="loadTransactionLines" action="{!insertLinesForALLTransactions}" reRender="transactionLinesLoader" />
+                    <apex:outputPanel rendered="{!(!IsHavingTransactionsWithoutTransLines)}">
+                    	<script type="text/javascript" language="javascript">
+                            j$(".btnToLoadTransLines").attr("disabled", true);
+                            j$(".btnToLoadTransLines").removeClass("btn").addClass("btnDisabled");
+                            j$(".btnToLoadTransLines").val("No pending transaction lines");
+                    	</script>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        <!--If Sample data is loaded then list the number of records for each Object-->
+        <apex:outputPanel id="SampleData" rendered="{!isSetupDataLoaded}">
+            <apex:outputPanel rendered="{!AllAccounts.size > 0}">
+                <apex:pageBlock title="This page is used to load sample data.">
+                    <table class="rounded-corner table list" id="loadSampleDatatable" summary="Load sample data">
+                        <thead>
+                            <tr>
+                                <th class="rounded-h2" width="25%" style="min-width:250px">
+                                    <b>
+                                        Setup data
+                                    </b>
+                                </th>
+                                <th class="rounded-h5">
+                                    <b>
+                                        No of Records
+                                    </b>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="25%" style="min-width:250px">
+                                    Account records
+                                </td>
+                                <td>
+                                    <apex:outputText value="{! AllAccounts.size }" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%" style="min-width:250px">
+                                    Survey Master records
+                                </td>
+                                <td>
+                                    <apex:outputText value="{! AllSurveyMaster.size }" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%" style="min-width:250px">
+                                    Survey Response records
+                                </td>
+                                <td>
+                                    <apex:outputText value="{! AllSurveyResponse.size}" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%" style="min-width:250px">
+                                    Customer Info records
+                                </td>
+                                <td>
+                                     <apex:outputText value="{! AllCustomerInfo.size}" />
+                               </td>
+                            </tr>
+                            <tr>
+                                <td width="25%" style="min-width:250px">
+                                    User Adoption records
+                                </td>
+                                <td>
+                                   <apex:outputText value="{! AllUserAdoption.size}" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%" style="min-width:250px">
+                                    Transaction records
+                                </td>
+                                <td>
+                                    <apex:outputText value="{! AllTransactions.size}" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr/>
+                    <!--If SetupData is not loaded, ask user to load SetupData first before loading
+                    sample data.-->
+                    <apex:outputPanel rendered="{!isSetupDataLoaded != true}">
+                        <div align="center" style="clear:both;">
+                            Load Setup Data Before loading Sample Data.
+                        </div>
+                    </apex:outputPanel>
+                    <!--This block should only be used if Transaction Header was loaded from ETL-->
+                    <apex:outputPanel id="transactionLinesLoader" rendered="{!isSetupDataLoaded}">
+                        <p style="float:right">
+                            <span id="TransLinesLoaderBtn"><i><a href="#" class="btn" onclick="disableBtn(this);loadTransactionLines();return false;">Load transaction lines from header</a></i></span>
+                        </p>
+                        <apex:actionFunction name="loadTransactionLines" action="{!insertLinesForALLTransactions}"
+                        reRender="loadSampleDataForm">
+                        </apex:actionFunction>
+                    </apex:outputPanel>
+                    <!-- To handle the LoadTransaction lines button -->
+                    <apex:outputPanel rendered="{!(!IsHavingTransactionsWithoutTransLines)}">
+                    	<script type="text/javascript" language="javascript">
+                    		j$("#TransLinesLoaderBtn").html('<i><span class="noPedningTransLines"><b>No pending transaction lines</b></span></i>');
+                    	</script>
+                    </apex:outputPanel>
+
+                    <!--Load the Delete button which is associated with the Delete action if SampleData
+                    is already Loaded-->
+                    <apex:outputPanel id="DeleteSampleData" rendered="{!isSetupDataLoaded}">
+                        <apex:outputPanel rendered="{!AllAccounts.size > 0}">
+                            <p>
+                                Delete sample data:
+                                <input type="button" value="Go!" class="btn" onclick="disableBtn(this);deleteAllSampleData()"/>
+                            </p>
+                            <apex:actionFunction name="deleteAllSampleData" action="{!deleteSampleData}" reRender="loadSampleDataForm">
+                            </apex:actionFunction>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:pageBlock>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

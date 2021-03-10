@@ -1,0 +1,21 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0px auto; text-align: center;"> 
+   <img alt="Map COVID Blog 2" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Map_COVID_Blog_2?oid=00D4600000180Lw" style="max-width: 652.65px" title="Map COVID Blog 2" /> 
+  </div> 
+  <div style="width: 600px; margin: 0 auto;"> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> &nbsp;<br /> Not surprisingly, the COVID-19 pandemic and accompanying economic recession have led to an unprecedented rise in stress, anxiety, and other behavioral health issues. While anxiety and stress do not directly cause long-term hypertension, episodes of psycho-social stress and anxiety are well known to <a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/expert-answers/anxiety/faq-20058549">cause dramatic spikes in blood pressure (BP)</a>. High levels of stress and anxiety also drive people to engage in unhealthy behaviors such as smoking, overeating, and drinking alcohol that can lead to elevated BP.&nbsp;<br /> &nbsp;<br /> Against this backdrop, we evaluated Members enrolled in the Livongo for Hypertension program to understand the impact of the pandemic on Members’ blood pressure readings from their connected Livongo cuffs.&nbsp;<br /> <br /> <a href="https://www.livongo.com/covid-blood-pressure/">Here is an article</a> that looks at tracking the effect of COVID-19 on the Nation’s High Blood Pressure which I thought you might find interesting. &nbsp; &nbsp;<br /> <br /> Monitoring blood pressure is only half of the challenge, though. In fact, we see that <b>Members of our Livongo for Hypertension program achieve a 10 mmHG average systolic blood pressure reduction</b>. A reduction of this level has demonstrated a reduced risk of major cardiovascular disease events and death.<br /> <br /> Whether as a standalone program or as part of our comprehensive Whole Person cardiovascular solution (which includes features for managing high cholesterol in addition to blood pressure, weight, and behavioral health), we’re driving healthier behaviors among Members. Regardless of the ongoing stress of the pandemic.<br /> <br /> Livongo is well-positioned to help you protect the health of the people you serve, as well as the long-term health of your business. &nbsp;<br /> <br /> I would be happy to set up time to discuss the details and benefits of the Livongo programs with you and answer any questions you may have.&nbsp;<br /> <br /> Stay safe and Healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  </div>
+ </body>
+</html>

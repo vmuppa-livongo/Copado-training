@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Pursley Lenovo Health Innovation Think Tank</name>
+    <style>freeForm</style>
+    <subject>Livongo Thought Leadership Featured in Healthcare IT News</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I hope this email finds you well. I am reaching out because Livongo’s Chief Commercial officer, Jim Pursley, recently participated in the Lenovo Health Innovation Think Tank to discuss improving clinical outcomes by focusing on value-based care.
+
+Healthcare IT News published an article showcasing how connected health solutions can empower consumers and I thought you might find it interesting. &gt;&gt; Read it here.
+
+&quot;By working closely with chronic care patients, leaders at Livongo have discovered these patients actually “hate dealing with their diseases” and don’t necessarily want to engage more. Instead, they want to “engage less and experience better health,” said Jim Pursley, chief commercial officer at Livongo.
+
+The discussion is evolving rapidly and I’d love to chance to catch up to discuss your priorities. I’ll be in your neighborhood this quarter, and I am also planning to be at HIMSS early next year.
+
+Please let me know what works best for you.
+
+Hope all is well!
+
+Adam Claypool
+Director of Commercial Operations
+Livongo
+m: 314.346.2964
+o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Ste 2880, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

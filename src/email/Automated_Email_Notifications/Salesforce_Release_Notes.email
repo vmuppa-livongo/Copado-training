@@ -1,0 +1,387 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); caret-color: rgb(0, 0, 0); text-size-adjust: auto;"><span style="font-family: Arial; white-space: pre-wrap;">The Salesforce <b><font color="#6600cc">Dobby Sock</font></b> Release was successfully implemented this evening and Salesforce is back to normal. Release highlights are listed below. For more detailed information on these updates and enhancements, speak to your team's Salesforce SME or review the sprint stories in JIRA.  </span></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; background-color: rgb(255, 255, 255); line-height: 1.2;"><span style="font-size: 14pt; font-family: Arial; color: rgb(0, 96, 252); font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><br></span></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; background-color: rgb(255, 255, 255); line-height: 1.2;"><span style="font-size: 14pt; font-family: Arial; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"><font color="#6600cc">Account:</font></span></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; background-color: rgb(255, 255, 255); line-height: 1.2;"></p><ul style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);"><li><span style="font-family: Arial; white-space: pre-wrap; font-size: 12pt;">JENGA-1654: Enrollment Communication Input Form - Phase II</span></li><li><span style="font-family: Arial; white-space: pre-wrap; font-size: 12pt;">JENGA-1591: Health Score Integration (Ready to launch on 12/21)</span></li></ul><p style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);"></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; background-color: rgb(255, 255, 255); line-height: 1.2;"><span style="color: rgb(0, 96, 252); font-family: Arial; font-size: 14pt; font-weight: 700; white-space: pre-wrap;"><br></span></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; background-color: rgb(255, 255, 255); line-height: 1.2;"><span style="font-family: Arial; font-size: 14pt; font-weight: 700; white-space: pre-wrap;"><font color="#6600cc">Opportunity:</font></span></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; background-color: rgb(255, 255, 255); line-height: 1.2;"></p><ul style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);"><li><span style="font-family: Arial; white-space: pre-wrap; font-size: 12pt;">JENGA-1667: New Opportunity Type "Price - Increase"</span></li><li><span style="font-family: Arial; white-space: pre-wrap; font-size: 12pt;">JENGA-1664: Remove ability to close for CI and Ops</span></li><li><span style="font-family: Arial; white-space: pre-wrap; font-size: 12pt;">JENGA-1665: Updates to Oppty Close Checklist</span></li><li><span style="font-family: Arial; white-space: pre-wrap; font-size: 12pt;">JENGA-1668: Opportunity Close notification on Contract Path Change Type Opportunities </span></li></ul><div style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);"><font face="Arial"><span style="white-space: pre-wrap;"><br></span></font></div><div style="color: rgb(0, 0, 0); font-size: medium; background-color: rgb(255, 255, 255);"><p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; line-height: 1.2;"><span style="font-family: Arial; font-size: 18.6667px; font-weight: 700; white-space: pre-wrap;"><font color="#6600cc">Taskray:</font></span></p><p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; line-height: 1.2;"></p><ul><li><span style="font-family: Arial; white-space: pre-wrap; font-size: 12pt;">JENGA-1504: SPA TaskRay Redesign Improvements</span></li></ul></div><div style="font-size: medium; background-color: rgb(255, 255, 255);"><div style="color: rgb(0, 0, 0);"><div><font face="Arial"><span style="white-space: pre-wrap;"><br></span></font></div></div><div style="color: rgb(0, 0, 0);"><font face="Arial"><span style="white-space: pre-wrap;"><br></span></font></div><div style="color: rgb(0, 0, 0);"><span style="font-size: 16px; caret-color: rgb(255, 255, 255); font-family: Arial, sans-serif;">Questions? Send message to&nbsp;</span><a href="mailto:crmrequest@livongo.com" style="font-size: 16px; caret-color: rgb(255, 255, 255); font-family: Arial, sans-serif;"><font color="#6600cc">crmrequest@livongo.com</font></a></div><p dir="ltr" style="margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; line-height: 1.2;"><br></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; line-height: 1.2;"><br></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; line-height: 1.2;"><span style="font-family: Arial; white-space: pre-wrap; caret-color: rgb(0, 0, 0);"><br></span></p><p dir="ltr" style="color: rgb(0, 0, 0); margin-top: 0pt; margin-bottom: 0pt; font-size: 12pt; line-height: 1.2;"><span style="font-family: Arial; white-space: pre-wrap; caret-color: rgb(0, 0, 0);">Thank you!!</span></p></div><style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+span.EmailStyle15
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:182211458;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1304904522 194429646 -387171572 -1803224270 1173619932 -1479741770 1955604204 -1899194880 180788578 1608789430;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1
+	{mso-list-id:252514327;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-874361336 421924624 1595686740 -698610988 -966497754 -1203844494 865104812 549591712 -264598838 -141018306;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2
+	{mso-list-id:526143532;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-563322852 -1570478242 -305367832 1334877996 -943294374 -2137612196 1971480868 635077034 -72968992 -364745934;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3
+	{mso-list-id:925698177;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-91462842 -755722326 -320573232 1180091402 1025530134 16437878 -1309386870 -1072796526 -1865409196 -1817549432;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:•;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Arial",sans-serif;
+	mso-bidi-font-family:"Times New Roman";}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>]]></td>
+</tr>
+</table>

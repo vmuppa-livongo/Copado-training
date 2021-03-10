@@ -1,0 +1,21 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="display: none;">&nbsp;</span> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},<br /> <br /> <span style="background:white"><span style="color:black">I hope this finds you healthy. </span></span></span></span> 
+  <span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">I know you may have seen our announcement, but I want to share our exciting news personally with you.</span></span></span></span> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="background:white"><span style="color:black"> Livongo has entered into an agreement to merge with Teladoc Health to create the only consumer centered virtual care platform for the full spectrum of health needs.<br /> <br /> With this news, we want to assure you that nothing changes with regards to our ability to serve you as a potential partner and it is business as usual at Livongo. We value everything you do as we work together to empower people with chronic conditions to live better and healthier lives. Our combination with Teladoc Health increases our ability to provide Members with a comprehensive, virtual healthcare solution, helping to give them more control over their health options and improve their experience.&nbsp;</span></span></span></span> 
+  <span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black"><a href="https://vimeo.com/444828186/a696a51280" style="color:blue; text-decoration:underline">Hear</a> from from Glen Tullman, Livongo's Founder &amp; Executive Chairman, and Jason Gorevic, Teladoc's CEO, about how our coming together will create a new standard in keeping people healthy.</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <a href="http://ir.teladochealth.com/news-and-events/investor-news/press-release-details/2020/Teladoc-Health-and-Livongo-Merge-to-Create-New-Standard-in-Global-Healthcare-Delivery-Access-and-Experience/default.aspx" style="color: #0060fc;" target="_blank"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="background:white">This announcement</span></span></span></a> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="background:white"><span style="color:black"> is only the first step in what is a very exciting development for Livongo. The agreement is expected to close by the end of Q4 2020, pending regulatory approvals and meeting closing conditions. There are still details that need to be worked out over the coming months and we will keep you informed along the way.</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Thank you for your consideration. If you have any questions, please don’t hesitate to reach out to me.</span></span></span></span> 
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="background:white"><span style="color:black"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> <span style="display: none;">&nbsp;</span></span></span></span>
+ </body>
+</html>

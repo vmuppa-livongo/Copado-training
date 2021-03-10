@@ -1,0 +1,14 @@
+CIM {!Opportunity.CIM__c} has been assigned to opportunity "{!Opportunity.Name}."  {!Opportunity.OwnerFullName}, please reach out to {!Opportunity.CIM__c} to schedule an internal touchpoint. 
+
+Estimated PwDs: {!Opportunity.Livongo_for_Diabetes_PwDs__c} 
+Estimated PwHs: {!Opportunity.Livongo_for_Hypertension_PwHs__c} 
+Sales Rep: {!Opportunity.OwnerFullName} 
+Stage: {!Opportunity.StageName} 
+Forecast Category: {!Opportunity.ForecastCategoryName} 
+Opportunity Type: {!Opportunity.Type}
+Target Close Date: {!Opportunity.CloseDate} 
+Target Launch Date: {!Opportunity.Launch_Date__c} 
+Account Type: {!Account.Type} 
+Billing Partner: {!Opportunity.BillingPartner__c} 
+Contract Path: {!Opportunity.Contract_Path_from_Contract__c}
+Opportunity Link: {!Opportunity.Link}

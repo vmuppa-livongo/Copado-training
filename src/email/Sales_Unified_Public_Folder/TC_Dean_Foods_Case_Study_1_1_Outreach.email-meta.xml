@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>TC - 20180607 Dean Foods Case Study 1:1 Email</name>
+    <style>freeForm</style>
+    <subject>Year One ROI Case Study</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+I’m excited to share our latest case study that shows how Livongo helped Dean Foods achieve a positive Year-1 ROI of 1.4x on their investment in Livongo with $70 per participant per month cost savings. People on the Livongo program achieved a 5 percent medical savings while people who were not on Livongo program had a 7 percent increase in costs.
+
+While we expect costs savings in three years, we’re thrilled we achieved this in one year. See the full study here.
+
+I’d love to further discuss how Livongo can drive these types of results for your organization.
+
+Best,
+Theresa
+
+
+THERESA CHAMPAGNE
+
+Livongo
+
+m: 916.990.3193
+
+e: tchampagne@livongo.com
+
+www.livongo.com
+
+
+The information contained in this transmission is confidential (including any attachments) and contains privileged information. It is intended only for the use of the person(s) named above. If you are not the intended recipient, you are hereby notified that any review, dissemination, distribution or duplication of this communication is strictly prohibited. If you are not the intended recipient, please contact the sender by reply email and destroy all copies of the original message. To reply to our email administrator directly, please send an email to admin@livongo.com.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,28 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; caret-color: rgb(0, 0, 0);"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">Dear {{{Recipient.FirstName}}},</span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <br /> 
+   <span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; caret-color: rgb(0, 0, 0);"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">This year's annual Great Philadelphia Business Coalition on Health will be held virtually from September 22- 24th.&nbsp; This year's meeting offers discussions on how employers can drive toward's value - a topic that is top of mind in today's environment. Join local and national experts, to learn the latest on health policy, building cultures of well-being, and driving waste from medical and pharma spend.&nbsp;&nbsp;</span></span></span></span></span></span></span></span></span></span></span> 
+   <br /> 
+   <br /> 
+   <font face="Arial, Helvetica, sans-serif"><span style="font-size: 12px;">I thought you would find <span style="color:#ff0000;">[enter a session of interest]</span> session of interest. <a href="https://www.eventbrite.com/e/driving-toward-value-the-employer-roadmap-tickets-110675655866">Here</a></span></font> 
+   <font face="Arial, Helvetica, sans-serif"><span style="font-size: 12px;"> is the complete agenda for your reference.&nbsp;</span></font> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">I hope you enjoy the conference and I look forward to connecting with you soon.&nbsp; Thank you!</span></span></span></span></span></span></span></span></span></span></span><br /> <span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span><br /> Stay safe and healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+   <br /> 
+   <br /> &nbsp; 
+  </div>
+ </body>
+</html>

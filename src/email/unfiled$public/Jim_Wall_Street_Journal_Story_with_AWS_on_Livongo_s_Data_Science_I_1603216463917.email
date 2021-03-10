@@ -1,0 +1,13 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><span style="display: none;">&nbsp;</span> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},<br />
+<br />
+<span style="background:white"><span style="color:black">I hope your Q4 is off to a great start!&nbsp;</span></span></span></span><span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">I thought you might enjoy this </span></span></span></span> <a href="https://partners.wsj.com/aws/machine-powered-human-driven/data-empowers-patients-and-providers/"><span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Wall Street Journal story</span></span></span></span></a> <span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black"> in collaboration with Amazon Web Services about the power of Livongo's machine learning and data science in care delivery.&nbsp;</span></span></span></span><br />
+<br />
+<span style="font-size:10.5pt"><span style="background:white"><span style="font-family:&quot;Arial&quot;,sans-serif"><span style="color:black">Enjoy!<br />
+<br />
+Stay healthy,</span></span></span></span><br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="background:white"><span style="color:black"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}<br />
+<br />
+{{{Sender.Signature}}}</span></span> <span style="display: none;">&nbsp;</span></span></span></span></body></html>

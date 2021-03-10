@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>190109 Glen ADA Board</name>
+    <style>freeForm</style>
+    <subject>American Diabetes Association Board of Directors</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I wanted to share that Livongo Founder and Executive Chairman Glen Tullman was appointed to serve on the American Diabetes Associations Board of Directors.
+
+The American Diabetes Association is the nation’s leading voluntary health organization on a mission to prevent and cure diabetes, as well as improve the lives of all people affected by the condition.
+
+Whether it is through the work that we do every day to better serve our members, or the fact that we had the largest corporate team in JDRF ride history and raised more than $200,000 for diabetes research, Livongo practices what we preach and we are truly committed to solving the chronic condition epidemic.
+
+I would love to schedule some time to discuss how Livongo can empower your employees to better manage their chronic conditions.
+
+
+[Rep Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

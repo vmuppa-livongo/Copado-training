@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template should be leverage to invite prospects/client contacts to the Perspectives Webinar on 1/28.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Plain Text: EBN 2021 Perspectives Webinar Invite</name>
+    <style>none</style>
+    <subject>Register now: Webinar on the path forward for virtual care</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

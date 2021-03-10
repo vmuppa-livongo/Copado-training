@@ -1,0 +1,32 @@
+<html><head>
+	<title></title>
+	<style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;"><div style="width: 600px; margin: 0px auto;"><img alt="Halloween Cookie Kit" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Halloween_Cookie_Kit?oid=00D4600000180Lw" style="max-width: 600px; width: 600px; height: 452px;" title="Halloween Cookie Kit" /></div>
+
+<div style="width: 600px; margin: 0px auto;"><br />
+<span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">Dear {{{Recipient.FirstName}}},&nbsp;</span>
+
+<p dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">This is a quick reminder to claim your Spookie Cookie decorating kit! We know this is a busy time of year for you and we're hopeful you can take a fun break and share your creative cookie designs with us and learn&nbsp;how Livongo is helping people with chronic conditions to live better and healthier lives!<br />
+<br />
+To ensure your kit gets delivered in time for our meeting, please email <a href="mailto:kellie@prettylittlebakers.com">kellie@prettylittlebakers.com</a>&nbsp;with your full name and current mailing address. Please know your information is private and will not be shared with Livongo. Your kit will arrive in the mail in time for our meeting on <span style="color:#ff0000;">[Wednesday, October 28th.]</span></span></span></p>
+</div>
+
+<div style="width: 600px; margin: 0px auto;">
+<p dir="ltr"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">We look forward to seeing you!&nbsp;&nbsp;<br />
+{{{Sender.FirstName}}}</span></span></p>
+
+<p dir="ltr"><br />
+<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.Signature}}}</span></span></p>
+<br />
+&nbsp;</div>
+<br />
+<b id="docs-internal-guid-893b7bb9-7fff-3b24-2f47-353efff0a46a">&nbsp; </b>
+
+<div id="" style="left: 562.5px; top: 8px;">&nbsp;</div>
+
+<div id="" style="left: 562.5px; top: 8px;">&nbsp;</div></body></html>

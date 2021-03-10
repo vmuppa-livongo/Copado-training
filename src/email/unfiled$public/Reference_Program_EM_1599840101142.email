@@ -1,0 +1,34 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;">
+    Dear {{{Recipient.FirstName}}}, 
+   <br /> 
+   <br /> In recognition of your continued support of Livongo, I would like to nominate you for our new Client Reference Program.&nbsp; 
+   <br /> 
+   <br /> As a reference client you would be asked to talk to prospects via Zoom approximately 1-2 times per quarter, for 30-45 minutes. The call would likely cover your candid experience with Livongo including implementation, member success, and return on investment.&nbsp; 
+   <br /> 
+   <br /> Participants will receive a small token of appreciation for their time and effort, to be determined as the program matures.&nbsp; 
+   <br /> 
+   <br /> If you are interested in participating in Livongo’s Reference Program, please let me know at your earliest convenience.&nbsp; 
+   <br /> 
+   <br /> If you are unable to make this commitment now, consider whether you would be interested and willing to be featured as a Client Success Story or Case Study. We would be delighted to showcase your organization’s success. 
+   <br /> 
+   <br /> Thank you for your consideration. 
+   <br /> 
+   <br /> Kind regards, 
+   <br /> 
+   <br /> {{{Sender.FirstName}}} 
+   <br /> 
+   <br /> {{{Sender.Signature}}} 
+  </div>
+ </body>
+</html>

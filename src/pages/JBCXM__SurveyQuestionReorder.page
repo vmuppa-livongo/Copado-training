@@ -1,0 +1,234 @@
+<apex:page sidebar="false" showHeader="false" Controller="JBCXM.SurveyQuestion">
+ 	<!--<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-1.7.1.min.js'))}"/>
+ 	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-ui-1.8.18.custom.min.js'))}"/>
+ 	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.SurveyJquery, 'css/redmond/jquery-ui-1.8.18.custom.css'))}"/>
+ 	
+ 	<style>
+		ol.sortableQuestions {
+		  list-style-position: inside;   
+		  list-style-type: decimal-leading-zero;
+		}
+		
+		/*li {
+		  padding: 4px 8px;
+		  border: 1px solid #ccc;
+		  background-color: #efefef;
+		  margin-bottom: 4px;   
+		}*/
+		.ui-icon {
+		    display: inline-block;
+		    vertical-align: bottom;
+		}
+		.displayQuestionLi{
+			cursor:pointer;
+			padding:3px;
+			margin-bottom: 4px;
+			font-weight:normal; 
+			border: 1px solid #ccc;
+		  	background-color: #F4F4F4;
+		  	max-height: 15px;
+	    	overflow: hidden; 
+		}
+		.sortableQuestions li:hover{
+			background-color:#FFFF99;
+		}
+		.saveSurveyBtn{     
+		    background: url("/img/forcecom/btn_sprite1.png") repeat-x scroll right -120px #65A612;
+		    border: 2px solid #FFFFFF;
+		    border-radius: 5px 5px 5px 5px;
+		    color: #FFFFFF;
+		    font-weight: bold;
+		    margin: 1px;
+		    padding: 4px 10px;
+		    text-decoration: none;
+		    white-space: nowrap;
+		    cursor: pointer;
+		}
+		ul li, ol li {
+		    margin-left: 0em;
+		    padding-left: 0;
+		}
+		ol {
+		    margin-left:0; /* Remove the default left margin */
+		    padding-left:0; /* Remove the default left padding */
+		}
+		.moveUpIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/a_up_act.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;
+		}
+		.moveTopIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/go-top-3.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;
+		}
+		.moveDownIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/a_down_act.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;		
+		}
+		.moveBottomIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/go-bottom-3.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;
+		}
+		.moveUpDownIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/dragupdown.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;		
+		}
+	</style>
+	<apex:outputPanel id="redorderQuestionsJSPanel">
+		<script>
+			var j$ = jQuery.noConflict();			
+			j$(function () {
+			   j$('.questionReOrderUp').live("click",function () {
+					if (j$(this).prev()){ j$(this).parent().parent().insertBefore(j$(this).parent().parent().prev()); reorderItem();}
+				});
+				j$('.questionReOrderTop').live("click",function () {
+					if (j$(this).prev()){j$(this).parent().parent().parent().prepend(j$(this).parent().parent()); reorderItem();}
+				});
+				j$('.questionReOrderDown').live("click",function () {
+				    if (j$(this).next()){ j$(this).parent().parent().insertAfter(j$(this).parent().parent().next()); reorderItem();}
+				});	
+				j$('.questionReOrderBottom').live("click",function () {
+					if (j$(this).next()){j$(this).parent().parent().parent().append(j$(this).parent().parent()); reorderItem();}
+				});							
+				
+			});
+			
+			function reorderItem(){
+				var j$lis = j$("ol.sortableQuestions").children('li');
+						index=1;
+			            j$lis.each(function () {
+			                j$(this).val(index);
+			                ++index;
+			            });
+			}
+			
+			var questionsDisplayOrderClass = function () {
+			        this.Id = null;
+			        this.DisplayOrder__c = null;
+			    }
+			
+			function reorderQuesionsIndex() {
+				j$(".dummyReorderQuesionsSaveBtn").css({"background-color":"#E8E8E9 ","cursor":"none"}).attr("disabled","disabled");
+			    var itemsQuestionArray = new Array();
+			    var listItemsRedorder = j$(".sortableQuestions li");
+			    listItemsRedorder.each(function (idx, li) {
+			        var questionItem;
+			        questionsDisplayItem = new questionsDisplayOrderClass();
+			        questionsDisplayItem.Id = j$(li).find(".questionId").val();
+			        questionsDisplayItem.DisplayOrder__c = idx + parseInt(1);
+			        var strNameSpace = getJbaraNameSpace();
+			        if (strNameSpace != '') {
+			            itemsQuestionArray.push(pushJbaraNameSpace(questionsDisplayItem, strNameSpace));
+			        } else {
+			            itemsQuestionArray.push(questionsDisplayItem);
+			        }
+			    });
+			
+			    j$(".questionRorderClass").val(JSON.stringify(itemsQuestionArray));
+			    actionSaveReorderedQuesions();
+			    j$("#saveReorderMsg").show().delay(4000).fadeOut('slow');
+			}
+			
+			function pushJbaraNameSpace(item, nameSpacePrefix) {
+			    for (var key in item) {
+			        if (key != 'Id') {
+			            item[nameSpacePrefix + key] = item[key];
+			            delete item[key];
+			        }
+			    }
+			    return item;
+			}
+			
+			function getJbaraNameSpace() {
+			    var strFieldName = "{!$ObjectType.Survey__c.Fields.Code__c.Name}";
+			    if (j$.trim(strFieldName.split('Code__c')[0]) != '') {
+			        return j$.trim(strFieldName.split('Code__c')[0]);
+			    } else {
+			        return '';
+			    }
+			}
+		</script>
+	</apex:outputPanel>	
+	<apex:outputPanel id="redorderQuestionsPanel" rendered="{!QuestionsListBySurvey.size>0}">
+		<div id="saveReorderMsg" class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;display:none;"> 
+			<p>
+				<span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+				<b>Hey! </b>Question reordering is done!
+			</p>
+		</div>
+		<div class="redorderQuestions">
+			<ol class="sortableQuestions">
+			    <apex:repeat value="{!QuestionsListBySurvey}" var="Questions" >
+					<li class="displayQuestionLi" >
+						<input type="hidden" value="{!Questions.id}" class="questionId"/>						
+						<span title="{!Questions.Title__c}">
+							<span class="moveTopIconClass questionReOrderTop" title="Move Top">&nbsp;&nbsp;</span>
+							<span class="moveUpIconClass questionReOrderUp" title="Move Up">&nbsp;</span>
+							<span class="moveDownIconClass questionReOrderDown" title="Move Down">&nbsp;</span>
+							<span class="moveBottomIconClass questionReOrderBottom" title="Move Bottom">&nbsp;&nbsp;</span>
+							<span class="moveUpDownIconClass" title="Drag Up and Down">&nbsp;</span>
+							{!Questions.Title__c}
+						</span>
+					</li>
+	    		</apex:repeat>
+			</ol>
+		</div>		
+		<apex:form >
+			<apex:inputText value="{!questionJson}" StyleClass="questionRorderClass" style="display:none;"/>			
+			<div class="buttons" id="InlineEditDialog_buttons">
+				<input type="button" onclick="reorderQuesionsIndex();" value="Save" class="saveSurveyBtn dummyReorderQuesionsSaveBtn"/>
+				<apex:actionFunction name="actionSaveReorderedQuesions" action="{!saveReorderedQuesions}" reRender="redorderQuestionsPanel,surveyViewPanel"/>	
+			</div> 
+			<script type="text/javascript">
+	    			if('{!surveyStatus}'=='Closed'){
+						j$(".dummyReorderQuesionsSaveBtn").css({"background-color":"#E8E8E9 ","cursor":"none"}).attr("disabled","disabled");
+						j$(".questionReOrderTop").die("click");
+						j$(".questionReOrderUp").die("click");
+						j$(".questionReOrderDown").die("click");
+						j$(".questionReOrderBottom").die("click");
+						j$("ol.sortableQuestions").each(function(){
+							j$(this).sortable({ disabled: true });
+							j$(this).find("li").css('cursor','none');
+						});	
+					}
+					else {
+					
+						j$('ol.sortableQuestions').sortable({
+					        axis: 'y',
+					        connectWith: '.sortableQuestions',
+					        sort: function () {
+					            var j$lis = j$(this).children('li');
+					            j$lis.each(function () {
+					                var j$li = j$(this);
+					                var hindex = j$lis.filter('.ui-sortable-helper').index();
+					                if (!j$li.is('.ui-sortable-helper')) {
+					                    var index = j$li.index();
+					                    index = index < hindex ? index + 1 : index;
+					                    j$li.val(index);
+					
+					                    if (j$li.is('.ui-sortable-placeholder')) {
+					                        j$lis.filter('.ui-sortable-helper').val(index);
+					                    }
+					                }
+					            });
+					        }
+					    });
+					}
+				
+				
+			</script>	
+		</apex:form>
+	</apex:outputPanel>-->
+	
+	
+	
+</apex:page>

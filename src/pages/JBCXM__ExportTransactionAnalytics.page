@@ -1,0 +1,2793 @@
+<apex:page Controller="JBCXM.ReportBuilder" extensions="JBCXM.NSRemoting" title="Gainsight Analytics">
+
+	<style type="text/css">
+		.gs-container {
+			height: 100%;
+			width: 100%;
+			position: relative;
+		}
+
+		#sidebarCell {
+			display: none;
+		}
+
+		#bodyCell {
+			height: 600px;
+			width: 100%;
+			padding: 0px !important;
+		}
+
+		.gs-container * {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+			font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+		}
+
+		.search-box input {
+			display: block;
+			height: 25px;
+			width: 100%;
+			margin-top: 2px;
+			margin-left: 2px;
+		}
+
+		.clear {
+			clear: both;
+		}
+
+		.gs-leftpanel {
+			width: 450px;
+			height: 100%;
+			position: relative;
+			top: 0px;
+			float: left;
+			left: auto;
+		}
+
+		.gs-rightpanel {
+			margin: 0px 225px 0px 450px;
+			height: 100%;
+			background-color: #CCC;
+		}
+
+		.gs-lastpanel {
+			position: relative;
+			top: 0;
+			left: auto;
+			float: right;
+			height: 100%;
+			background-color: #CCC;
+			width: 225px;
+			border-left: 1px solid #dadada;
+		}
+
+		.gs-sectionheader {
+			background-color: #d3dee5;
+		}
+
+		.gs-sectioncontent {
+			height: 100%;
+			padding-top: 30px;
+			position: relative;
+		}
+
+		.gs-relative {
+			position: relative;
+			padding-top: 30px;
+		}
+
+		.gs-header {
+			height: 30px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			border-bottom: 1px solid #fff;
+			background-color: #cfe4f7;
+			color: #3f4042;
+			font-size: 11px;
+			line-height: 30px;
+			font-weight: bold;
+			border-top: 1px solid #ccc;
+		}
+
+		.gs-lastpanel .gs-header {
+			text-align: center;
+		}
+
+		.gs-half-col {
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+		}
+
+		.gs-field-col {
+			left: 0px;
+		}
+
+		.gs-area-col {
+			right: 0px;
+		}
+
+		.gs-4slice {
+			width: 100%;
+			height: 25%;
+			position: relative;
+			overflow: visible;
+			padding-top: 25px;
+		}
+
+		.area-header {
+			border-top: none;
+			background-color: #dde1e6;
+			height: 25px !important;
+			line-height: 25px !important;
+		}
+
+		.gs-area {
+			border: 1px solid #dadada;
+			border-top: none;
+			background-color: white;
+			padding-top: 0px !important;
+			overflow: auto;
+		}
+
+		.gs-icon {
+			height: 16px;
+			width: 16px;
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/sprite.png")
+				no-repeat top left;
+			margin-top: 2px;
+			margin-left: 4px;
+			float: left;
+		}
+
+		.area-comment,.fields-comment {
+			font-size: 11px;
+			line-height: 30px;
+			text-align: center;
+			border-left: 1px solid #fff;
+			font-weight: bold;
+		}
+
+		.area-comment {
+			border-right: 1px solid #fff;
+		}
+
+		.gs-area-label {
+			margin-left: 20px;
+			height: 100%;
+			padding-left: 5px;
+		}
+
+		.sprite-rows {
+			background-position: 0 -401px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.sprite-column {
+			background-position: 0 -64px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.sprite-measure {
+			background-position: 0 -64px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.sprite-pages {
+			background-position: 0 -261px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.gs-resultPane {
+			background-color: #eeeeee;
+		}
+
+		.gs-filter-select {
+			width: 200px;
+			height: 100%;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			text-align: center;
+			line-height: 30px;
+		}
+
+		.gs-report-icons {
+			width: 350px;
+			float: right;
+			top: 0px;
+			height: 100%;
+		}
+
+		.gs-report-name {
+			width: 100%;
+			height: 100%;
+			padding-left: 10px;
+			line-height: 30px;
+			margin-right: 150px;
+			font-size: 12px;
+		}
+
+		.gs-fields {
+			height: 100%;
+			width: 100%;
+			padding-bottom: 30px;
+			position: relative;
+			background-color: #fafbff;
+		}
+
+		.gs-field {
+			height: 20px;
+			line-height: 20px;
+			width: 100%;
+			padding: 0px 3px 0px 5px;
+			margin: 2px 0px;
+			font-size: 11px;
+			cursor: move;
+		}
+
+		.gs-field:hover {
+			background-color: #cfe4f7;
+		}
+
+		.gs-field-icon {
+			position: relative;
+			top: 0;
+			left: auto;
+			width: 20px;
+			height: 20px;
+			float: left;
+		}
+
+		.gs-field-filter {
+			position: relative;
+			top: 0;
+			left: auto;
+			width: 20px;
+			height: 20px;
+			float: right;
+		}
+
+		.gs-field-text {
+			height: 100%;
+			margin: 0 2px;
+		}
+
+		.gs-save-report {
+			float: right;
+			margin-right: 5px !important;
+			cursor: pointer;
+			background-color: #FDFDFD;
+			line-height: 15px;
+			margin-top: 4px !important;
+			padding: 2px 10px !important;
+			font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+			font-size: 11px !important;
+			font-weight: 500 !important;
+		}
+
+		.gs-save-report:hover {
+			opacity: 0.7;
+		}
+
+		.gs-resultPane,.filterSection {
+			background-color: white;
+		}
+
+		.leftpanel-move {
+			height: 50px;
+			width: 12px;
+			position: absolute;
+			right: -11px;
+			z-index: 1;
+			top: 50%;
+			margin-top: -25px;
+			background-color: #acafba;
+			cursor: pointer;
+			border: 1px solid white;
+			border-left: none;
+			box-shadow: 1px 0px 1px #666;
+		}
+
+		.nv-cl {
+			background-position: 0 0;
+			width: 7px;
+			height: 14px;
+		}
+
+		.nv-op {
+			background-position: 0 -197px;
+			width: 7px;
+			height: 14px;
+		}
+
+		.nav-icon {
+			height: 14px;
+			width: 7px;
+			margin: 18px 2px;
+		}
+
+		.gs-lastpanel .leftpanel-move {
+			left: -11px;
+			top: 50%;
+			margin-top: -25px;
+			z-index: 1;
+			background-color: #acafba;
+			border: 1px solid white;
+			border-right: none;
+			box-shadow: -1px 0px 1px #666;
+		}
+
+		.gs-lastpanel .nav-icon {
+			height: 14px;
+			width: 7px;
+			margin: 18px 2px;
+		}
+
+		#gs-filterSelecor {
+			margin-top: 5px;
+			width: 94%;
+		}
+
+		.gs-close {
+			background-position: 0 0;
+			width: 7px;
+			height: 14px;
+		}
+
+		.gs-column {
+			background-position: 0 -64px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.gs-filtericon {
+			background-position: 0 -134px;
+			width: 16px;
+			height: 13px;
+		}
+
+		.gs-open {
+			background-position: 0 -197px;
+			width: 7px;
+			height: 14px;
+		}
+
+		.gs-pages {
+			background-position: 0 -261px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.gs-playrun {
+			background-position: 0 -331px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.gs-rows {
+			background-position: 0 -401px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.gs-save {
+			background-position: 0 -471px;
+			width: 20px;
+			height: 20px;
+		}
+
+		.gs-area .gs-field .gs-field-filter{
+			background-position: 0 -134px;
+		}
+
+		.gs-area .gs-field .gs-field-filter {
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/BDAnalyzer/images/filter_add.png")
+				no-repeat;
+			background-position: center;
+			background-size: 11px 11px;
+			cursor:pointer;
+		}
+
+		.gs-field[type="0"] .gs-field-icon {
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/dimensions.png")
+				no-repeat;
+		}
+
+		.gs-field[type="1"] .gs-field-icon {
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/measures.png")
+				no-repeat;
+		}
+
+		.gs-field[type="2"] .gs-field-icon {
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/measures.png")
+				no-repeat;
+		}
+
+		#movingBallG {
+			position: absolute;
+			width: 256px;
+			height: 20px;
+			top: 50%;
+			left: 50%;
+			margin-left: -128px;
+			margin-top: -10px;
+		}
+
+		.movingBallLineG {
+			position: absolute;
+			left: 0px;
+			top: 8px;
+			height: 4px;
+			width: 256px;
+			background-color: #F2F2F2;
+			text-align: center;
+			color: #CCC;
+		}
+
+		.movingBallG {
+			background-color: #000000;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 20px;
+			-moz-border-radius: 10px;
+			-moz-animation-name: bounce_movingBallG;
+			-moz-animation-duration: 1.3s;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-direction: linear;
+			-webkit-border-radius: 10px;
+			-webkit-animation-name: bounce_movingBallG;
+			-webkit-animation-duration: 1.3s;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: linear;
+			-ms-border-radius: 10px;
+			-ms-animation-name: bounce_movingBallG;
+			-ms-animation-duration: 1.3s;
+			-ms-animation-iteration-count: infinite;
+			-ms-animation-direction: linear;
+			-o-border-radius: 10px;
+			-o-animation-name: bounce_movingBallG;
+			-o-animation-duration: 1.3s;
+			-o-animation-iteration-count: infinite;
+			-o-animation-direction: linear;
+			border-radius: 10px;
+			animation-name: bounce_movingBallG;
+			animation-duration: 1.3s;
+			animation-iteration-count: infinite;
+			animation-direction: linear;
+		}
+
+		@-moz-keyframes bounce_movingBallG
+		{
+			0%
+			{
+				left: 0px;
+			}
+			50%
+			{
+				left: 236px;
+			}
+			100%
+			{
+				left: 0px;
+			}
+		}
+		@-webkit-keyframes bounce_movingBallG
+		{
+			0%
+			{
+				left: 0px;
+			}
+			50%
+			{
+				left: 236px;
+			}
+			100%
+			{
+				left: 0px;
+			}
+		}
+		@-ms-keyframes bounce_movingBallG
+		{
+			0%
+			{
+				left: 0px;
+			}
+			50%
+			{
+				left: 236px;
+			}
+			100%
+			{
+				left: 0px;
+			}
+		}
+		@-o-keyframes bounce_movingBallG
+		{
+			0%
+			{
+				left: 0px;
+			}
+			50%
+			{
+				left: 236px;
+			}
+			100%
+			{
+				left: 0px;
+			}
+		}
+		@keyframes bounce_movingBallG
+		{
+			0%
+			{
+				left: 0px;
+			}
+			50%
+			{
+				left: 236px;
+			}
+			100%
+			{
+				left: 0px;
+			}
+		}
+		#gs-loading {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: 999;
+			background-color: #F2F2F2;
+			font-size: 10px;
+			opacity: 0.5
+		}
+
+		.highlight {
+			background-color: #dbeef3;
+		}
+
+		.in-drag {
+			background-color: #F2F2F2;
+		}
+		/* Do not remove this Drag and Drop does not work :) */
+		.gs-leftpanel .gs-sectioncontent {
+			position: static !important;
+		}
+
+		.gs-field-before {
+			background-color: #e2e8f4, border-top:  1px dashed black
+		}
+
+		#gs-filter-tree {
+			padding-top: 0px;
+			overflow: auto !important;
+			height: 540px;
+			width: 100%;
+			background-color:#fafbff;
+		}
+
+		._gs-filter-tree {
+			height: 100%; width; 100%;
+			padding-top: 0px;
+		}
+
+		.selectedTreeRow {
+			height: 16px !important;
+		}
+
+		.sprite-search-left {
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/search-left.png")
+				no-repeat;
+			margin-top: 5px;
+			width: 17px;
+		}
+
+		.sprite-search-right {
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/search-right.png")
+				no-repeat;
+			margin-top: 5px;
+			width: 17px;
+		}
+
+		.sprite-search {
+			background-color: #FFFFFF;
+			filter: alpha(opacity = 40);
+			background:
+				url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/search.png")
+				no-repeat;
+			margin-top: 3px;
+			width: 19px;
+			margin-left: 2px
+		}
+
+		.search-box {
+			height: 25px;
+			margin: -1px 48px 0px 2px;
+		}
+
+		.search-box input {
+			display: block;
+			height: 100%;
+			width: 100%;
+			padding-left: 5px;
+		}
+
+		.search-buttons {
+			float: right;
+			width: 72px;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			overflow: hidden;
+		}
+
+		#gs-search-filters {
+			background-color: #F2F3F7;
+			border: none
+		}
+
+		.search-buttons div {
+			float: left;
+			height: 24px;
+			cursor: pointer;
+			opacity: 0.8;
+			margin: 2px 0px 0px 5px;
+		}
+
+		.search-icon1 {
+			margin-top: 7px !important;
+		}
+
+		.search-buttons div:hover {
+			opacity: 1
+		}
+
+		#demoDiv {
+			width: 100%;
+			height: 100%;
+		}
+
+		#demoGrid {
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			color: #1a2731;
+			border-right: 1px solid #CCC;
+		}
+
+		#gridWrapper {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+		}
+
+		#gs-all-fields {
+			overflow: auto;
+		}
+
+		.gs-field-text {
+			overflow: hidden;
+			padding-left:5px;
+		}
+
+
+		.standartTreeRow {
+			height: 18px;
+			line-height: 18px;
+			padding-left: 0px !important;
+		}
+
+		.selectedTreeRow {
+			padding-left: 0px !important;
+		}
+
+		.clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+		}
+		.gs_filter_container{
+			width:650px;
+			margin:0px auto;
+			padding: 10px 10px;
+		}
+		.gs_edit_selectbox{
+			float: left;
+		} 
+		.hide{
+			display: none;
+		}
+		.gs_filter_container input{
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0px 5px 0px 5px;
+			font-size: 13px;
+			color: #333;
+			height: 25px;
+		}
+		.gs_edit_selectbox_ctn, .gs_att_filtsmall {
+			float: left;
+			margin: 0px 20px 5px 0;
+		}
+		.gs_att_filtsmall{
+			position: relative;
+		}
+		.gs_att_filtsmall .dr-do-bn-cont{
+			background: url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/drop-down-bg.png") repeat-x scroll left top #DDDDDD;
+			cursor: pointer;
+			vertical-align: middle;
+			border-radius: 4px;
+			height: 25px;
+			width: 150px;
+			line-height: 25px;
+			padding: 0px 5px;
+			border: 1px solid #ccc;
+			overflow:hidden;
+		}
+		.gs_edit_selectbox_ctn input.frvalue {
+			float: left;
+			width: 140px;
+		}
+		.dr-do-bn-cont .gs_textover{
+			display: inline-block;
+			width: 90%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			word-break: break-all;
+		}
+		.gs_downarrow_gray {
+			background: url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/arrow3.png") no-repeat scroll;
+			display: inline-block;
+			float: right;
+			height: 8px;
+			width: 12px;
+			margin-top: 10px;
+			cursor: pointer;
+		}
+		.gs_att_filtsmall .dr-do-bn-cont:hover {
+			box-shadow: inset 1px 1px 4px #ccc;
+		}
+		ul.optlist {
+			position: absolute;
+			background-color: #fff;
+			z-index: 20000;
+			margin: 1px 0px 0px 0px;
+			padding: 0px;
+			width: 100%;
+			border-top: 1px solid #ccc;
+			border-left: 1px solid #ccc;
+			border-right: 1px solid #ccc;	 
+		}
+		ul.optlist li:hover {
+			background-color: #f2f2f2;
+		}
+		ul.optlist li {
+			list-style-type: none;
+			border-bottom: 1px solid #ccc;
+			padding: 5px;
+			cursor: pointer;
+			margin-left:0px !important;
+		}
+		.gs_edit_add_selectbox{
+			width: 180px;
+			height: 23px;
+			line-height: 21px;
+			display: block;
+			border: 1px dashed #ccc;
+			background-color: #94b367;
+			color: #fff;
+			text-align: center;
+			float: left;
+			cursor: pointer;
+			margin-bottom: 15px;
+		}
+		.gs-close-mark {
+			background-image: url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/cancel_cross.png");
+			background-repeat: no-repeat;
+			height: 10px;
+			width: 10px;
+			cursor: pointer;
+			display: block;
+			float: left;
+			margin-top: 10px;
+			opacity: 0.5;
+		}
+		.gs_lock{
+			background-image: url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/lock.png");
+			background-repeat: no-repeat;
+			height: 18px;
+			width: 18px;
+			cursor: pointer;
+			display: block;
+			float: left;
+			margin-top: 6px;
+			opacity: 0.5;
+		}
+		.gs_count{
+			background-image: url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/icon1.png");
+			background-repeat: no-repeat;
+			height: 18px;
+			width: 18px;
+			cursor: pointer;
+			display: block;
+			float: left;
+			margin-top: 9px;
+			margin-right:5px;
+		}
+		.gs_fil_view{
+			background-image: url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/icon2.png");
+			background-repeat: no-repeat;
+			height: 18px;
+			width: 18px;
+			cursor: pointer;
+			display: block;
+			float: left;
+			margin-top: 9px;
+			margin-right:5px;
+		}
+		.help-icon{
+			background-image: url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/helpicon.png");
+			background-repeat: no-repeat;
+			background-position: left;
+			display:inline-block;
+			height: 16px;
+			width: 17px;
+			opacity: 0.4;
+			margin-left:5px;
+			margin-bottom: -3px;
+		}
+		.locked-head{
+			font-style:italic;
+			height:30px;
+		}
+		.filter_ctn{
+			background-color: #ced1d8;
+			padding: 10px;
+			height: 25px;
+		}
+		.filter_ctn-act{
+			background-color: #f3f4f8;
+			padding: 10px;
+			height: 27px;
+		}
+		.gs_filt_lockedcnt{
+			padding: 10px;
+			border:1px solid #ccc;
+			background-color:#fff;
+			opacity:0.8;
+		}
+		.gs_filt_lockedcnt-bg{
+			background-color:#fff;
+		}
+		.gs_filt_inactive{
+			opacity:0.7;
+		}	
+		.gs-textover {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			width: 40px;
+		}
+		.rank_order .dr-do-bn-cont {
+			width:70px;
+		}
+		.rank_order .dr-do-bn-cont .gs-textover {
+			width:70%;
+		}
+		.filter_add_btn {
+			clear:both !important;
+			float:none !important;
+		}
+		.filt_type .dr-do-bn-cont {
+			width:50px;
+		}
+		.filt_type .dr-do-bn-cont .gs-textover {
+			width:75%;
+		}
+		.gs_btns {
+			margin: 0px auto;
+			padding: 10px;
+			margin-bottom: 25px;
+			width: 230px;
+			font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+			font-size: 14px;
+		}
+		.gs_btns a{
+			text-decoration:none;
+		}
+		.gs_btns a:hover, filter_add_btn:hover{
+			text-decoration:none;
+			color:#333;
+		}
+		.gs_apply {
+			color: #fff !important;
+			padding: 6px 16px;
+			background-color: #74aa32;
+			border: 1px solid #67912f;
+			margin-right:10px;
+			cursor:pointer;
+		}
+		
+		.gs_cancel {
+			color: #fff;
+			padding: 6px 16px;
+			background-color: #ceced0;
+			border: 1px solid #a9aca5;
+			cursor:pointer;
+		}
+		.rank_text {
+			width:100px;
+			height:25px;
+			line-height:25px;
+			margin:-10px;
+			white-space: pre;
+		}
+		
+		.ui-dialog {
+			z-index:9999;
+		}
+		.ui-dialog .ui-dialog-titlebar-close span {
+			margin:-8px;
+		}
+		
+		.ui-corner-all {
+			border-radius: 0px !important;
+		}
+		.filter_content {
+			margin-bottom:5px;
+		}
+		.ui-dialog .ui-widget-header {
+			background-color: #E5F3FE !important;
+			background-image: none !important;
+			border: medium none !important;
+			height:25px;
+		}
+		
+		.ui-dialog .ui-dialog-title {
+			background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+			border: 0 none !important;
+			border-radius: 0 !important;
+			color: #000000;
+			font-size: 12px;
+			padding: 5px 5px !important;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+		}
+		
+		.ui-dialog .ui-dialog-titlebar-close {
+			height: 18px;
+			margin: -10px 0 0;
+			padding: 1px;
+			position: absolute;
+			right: 0.3em;
+			top: 50%;
+			width: 19px;
+		}	
+		.moveUpIconClass {
+			background:  url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/up.png") no-repeat center center;
+			height: 100%;
+			width: 15px;
+			display: inline-block;
+			float:right;
+		}
+		.moveDownIconClass {
+			background:  url("{!URLFOR($Resource.NS)}/NS/newStack/stylesheets/images/down.png") no-repeat center center;
+			height: 100%;
+			width: 15px;
+			display: inline-block;
+			float:right;
+		}
+		.noDataFound {
+			background-color: #F2F2F2;
+			display: table;
+			font-size: 15px;
+			height: 40px;
+			line-height: 40px;
+			margin: 40px auto 0;
+			padding: 0 10px;
+			text-align: center;
+			width: auto;
+		}
+	</style>
+	
+	<div class="gs-container">
+		<div id="gs-loading">
+			<div id="movingBallG">
+				<div class="movingBallLineG">LOADING</div>
+				<div id="movingBallG_1" class="movingBallG"></div>
+			</div>
+		</div>
+		<div class="gs-leftpanel">
+			<div class="gs-half-col gs-field-col">
+				<div class="gs-sectionheader gs-header fields-comment"
+					id="gs-collection-name" title="Collection Name"></div>
+				<div class="gs-sectioncontent gs-fields" id="gs-all-fields"></div>
+				<div class="cliear"></div>
+			</div>
+			<div class="gs-half-col  gs-area-col">
+				<div class="gs-sectionheader gs-header area-comment">Drag fields below</div>
+				<div class="gs-sectioncontent" id="gs-areas">
+					<div class="leftpanel-move" id="gs-hideDnD" title='Click to hide'>
+						<div class="nav-icon nv-cl gs-icon"></div>
+					</div>
+					<div class="gs-4slice">
+						<div class="gs-sectionheader gs-header area-header">
+							<div class="gs-icon sprite-rows"></div>
+							<div class="gs-area-label">Rows</div>
+						</div>
+						<div class="gs-sectioncontent gs-area" id="gs-area-row"></div>
+					</div>
+					<div class="gs-4slice">
+						<div class="gs-sectionheader gs-header area-header">
+							<div class="gs-icon sprite-column"></div>
+							<div class="gs-area-label">Columns</div>
+						</div>
+						<div class="gs-sectioncontent gs-area" id="gs-area-column"></div>
+					</div>
+					<div class="gs-4slice">
+						<div class="gs-sectionheader gs-header area-header">
+							<div class="gs-icon sprite-pages"></div>
+							<div class="gs-area-label">Pages</div>
+						</div>
+						<div class="gs-sectioncontent gs-area" id="gs-area-page"></div>
+					</div>
+					<div class="gs-4slice">
+						<div class="gs-sectionheader gs-header area-header">
+							<div class="gs-icon sprite-measure"></div>
+							<div class="gs-area-label">Measures</div>
+						</div>
+						<div class="gs-sectioncontent gs-area" id="gs-area-measure"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		
+		<div class="gs-lastpanel gs-relative">
+			<div class="gs-sectionheader gs-header">
+				<select id="gs-filterSelecor">
+					<option>Select a field for filters</option>
+				</select>
+			</div>
+			<div class="gs-sectioncontent filterSection">
+				<div class="gs-sectionheader gs-header" id="gs-search-filters">
+					<div class='search-box'>
+						<input type='text' placeholder='Search' />
+					</div>
+					<div class='search-buttons'>
+						<div class='search-icon search-icon1 sprite-search gs-find'></div>
+						<div class='search-prev sprite-search-left gs-left' title='previous'></div>
+						<div class='search-next sprite-search-right gs-right' title='next'></div>
+					</div>
+				</div>
+				<div class="gs-sectioncontent _gs-filter-tree">
+					<div id="gs-filter-tree"></div>
+				</div>
+			</div>
+			<div class="leftpanel-move" id="filterpaneltoggle" title="Click to hide">
+				<div class="nav-icon nv-op gs-icon"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="gs-rightpanel gs-relative">
+			<div class="gs-sectionheader gs-header resultsectionheader">
+				<div class="gs-report-icons">
+					<div class="gs_att_filter_options" style="float:right">
+						<div title="Filters"> <div class="gs-save-report btn" style="width:70px">Filters <span class="gs_downarrow_gray" style="margin-top:5px"></span> </div></div>
+						<ul class="hide optlist filter_options" style="font-size: 11px !important;font-weight: 500 !important;margin: 25px 0px 0px -80px;
+							width: 150px;">
+							<li class="filter_option" style="padding:0px; padding-left: 5px !important">Measure Filters</li>
+							<li class="filter_option" style="padding:0px; padding-left: 5px !important">Field Filters</li>
+							<li class="filter_option" style="padding:0px; padding-left: 5px !important">View Applied Filters</li>
+						</ul>
+					</div>
+					<div class="gs-save-report btn" id="gs-export">Export</div>
+					<div class="gs-save-report btn" id="gs-saveas">Save As</div>
+					<div class="gs-save-report btn" id="gs-save">Save</div>
+					<div class="gs-save-report btn" id="gs-run">Run</div>
+					<div class="clear"></div>
+				</div>
+				<div class="gs-report-name" id="gs-report-name"
+					title="Collection Name">New report</div>
+			</div>
+			<div class="gs-sectioncontent gs-resultPane">
+
+				<div id="gridWrapper">
+					<div id="demoDiv" class="_tabParent">
+						<div id="demoGrid"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dialog">
+			
+		</div>
+		<div class="filterdialog">
+				
+		</div>
+		<div id="exposeMask" style="position: absolute; top: 0px; left: 0px; width: 1366px; height: 674px; display: none; opacity: 0.3; z-index: 9998; background-color: rgb(0, 0, 0);"></div>
+	</div>
+	
+	<div class="ranking_holder"  style="display:none">
+		<div class="gs_filter_container">
+			<div class="filter_content"> </div>
+			<div class="gs_edit_add_selectbox filter_add_btn"> + Add Filter </div>
+			
+			<div class='ranking_section'>
+				<div class="gs_filt_lockedcnt">
+					<div class="filter_ctn clearfix">
+						<div class="gs_att_filtsmall clearfix rank_order">
+							<div class="dr-do-bn-cont filt-btn" title="Bottom">
+								<span class="gs_textover" style="width:70%">Bottom</span>
+								<span class="moveDownIconClass"></span>
+							</div>
+						</div>
+						<div class="gs_edit_selectbox_ctn rank_value" title="Enter ranking value">
+							<input class="frvalue" style="width:60px"/>
+						</div>
+						<div class="gs_edit_selectbox_ctn">
+							<span class="rank_text">Rows &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   By :</span>
+						</div>
+						<div class="gs_att_filtsmall clearfix rank_measures">
+							<div class="dr-do-bn-cont filt-btn" title="Select measure">
+								<span class="gs_textover">Select measure</span>
+								<span class="gs_downarrow_gray"></span> 
+							</div>
+							<ul class="hide optlist list_measures">
+								
+							</ul>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end Filter-->
+		 <div class="gs_btns clearfix">
+			<span><a class="gs_apply applyGradeScoring">Apply Filters</a></span>
+			<span><a class="gs_cancel cancelGradeScoring">Cancel</a></span>
+		</div>
+	</div>
+
+	<div class="filter_ctn clearfix" id="template" style='display:none'>
+		<div class="gs_att_filtsmall clearfix filt_measures">
+			<div class="dr-do-bn-cont filt-btn" title="Select measure"> <span class="gs_textover">Select measure</span><span class="gs_downarrow_gray"></span> </div>
+			<ul class="hide optlist list_measures">
+				
+			</ul>
+		</div> 
+
+		<div class="gs_att_filtsmall clearfix filt_operations">
+			<div class="dr-do-bn-cont filt-btn" title="Equals to"> <span class="gs_textover">Equals to</span><span class="gs_downarrow_gray"></span> </div>
+			<ul class="hide optlist list_operations">
+				<li class="item-operation">Equals to</li>
+				<li class="item-operation">Not Equals to</li>
+				<li class="item-operation">Greater Than</li>
+				<li class="item-operation">Less Than</li>
+				<li class="item-operation">Less Than or Equal to</li>
+				<li class="item-operation">Greater Than or Equal to</li>
+				<li class="item-operation">Between</li>
+			</ul>
+		</div>
+
+		<div class="gs_edit_selectbox_ctn filt_value">
+			<input placeholder="Filter" title="Enter filter value" class="frvalue"/>
+			<input placeholder="Max" title="Enter filter value" class="frvalue" style="display:none; width:60px"/>
+		</div>
+
+		<div class="gs_att_filtsmall clearfix filt_type">
+			<div class="dr-do-bn-cont filt-btn"> <span class="gs_textover">AND</span><span class="gs_downarrow_gray"></span> </div>
+		</div>
+
+		<span class="gs-close-mark"></span> 
+	</div>
+	
+	<form id="excelForm" method="POST" target="_self" >
+       <input name="excel_content" type="hidden"></input>
+       <input type="hidden" name="auth_content"></input>
+    </form>
+      
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/vendors/jquery-1.10.2.min.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/vendors/jquery++.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/vendors/alertify.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/pivotgrid/pivotGrid.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/vendors/dhtmlx/dhtmlxcommon.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/vendors/dhtmlx/dhtmlxtree.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/vendors/dhtmlx/ext/dhtmlxtree_json.js'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/js/vendors/dhtmlx/dhtmlxtree.css'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/stylesheets/alertify.core.css'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__NS,'NS/newStack/stylesheets/pivotgrid/pivotgrid.css'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS, 'NS/newStack/js/restclient/restClient.js'))}" />
+	
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+	<script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-UI-1.10/js/jquery.ui.min.js'))}"></script>
+	
+	<script>
+    (function() {
+      if (!window.console) {
+        window.console = {};
+      }
+      // union of Chrome, FF, IE, and Safari console methods
+      var m = [
+        "log", "info", "warn", "error", "debug", "trace", "dir", "group",
+        "groupCollapsed", "groupEnd", "time", "timeEnd", "profile", "profileEnd",
+        "dirxml", "assert", "count", "markTimeline", "timeStamp", "clear"
+      ];
+      // define undefined methods as noops to prevent errors
+      for (var i = 0; i < m.length; i++) {
+        if (!window.console[m[i]]) {
+          window.console[m[i]] = function() {};
+        }    
+      } 
+    })();
+       
+    $(".dialog").dialog({
+					autoOpen: false,
+					title: "Measure Filters",
+					modal: true,
+					height:400,
+					width:700,
+					resizable:false,
+					close: function() {
+						$('#exposeMask').css('display','none');
+						$(".dialog").html("");
+					}
+				});
+				
+	 $(".filterdialog").dialog({
+					autoOpen: false,
+					title: "Filters Information",
+					modal: true,
+					height:300,
+					width:700,
+					resizable:false,
+					close: function() {
+						$('#exposeMask').css('display','none');
+						$(".filterdialog").html("");
+					}
+				});
+				
+		var operationsKV = {
+							"EQ":"Equals to",
+							"NE":"Not Equals to",
+							"GT":"Greater Than",
+							"LT":"Less Than",
+							"LTE":"Less Than or Equal to",
+							"GTE":"Greater Than or Equal to",
+							"BTW":"Between",
+					};
+		
+		var operationsVK = {
+							"Equals to":"EQ",
+							"Not Equals to":"NE",
+							"Greater Than":"GT",
+							"Less Than":"LT",
+							"Less Than or Equal to":"LTE",
+							"Greater Than or Equal to":"GTE",
+							"Between":"BTW",
+					};
+						
+    restClient.config = {remoting:"{!$RemoteAction.NSRemoting.apinsinvoke}",sessionId : "{!NSSessionId}"}; 
+	var rObj = function () {
+			return({
+					 	config:{
+							   	limit : 0,
+							   	type:"Adhoc",
+							   	dimensions : [],
+							   	reportlimit : 0,
+							   	dimbrowserlimit : 0,
+							   	name:"",
+							   	id : ""
+							  	},
+					collection : {},
+				setreportconfig : function(rfg) {
+								   		this.config.limit = rfg.ReportInfo[0].limit;
+								   		this.config.type = rfg.ReportInfo[0].Type;
+								   		//this.config.dimensions = rfg.ReportInfo[0].Dimensions;
+								   		this.config.dimensions = new Array();
+								   		for(var i = 0, len = rfg.ReportInfo[0].Dimensions.length; i < len; i++){
+								   			var d = { 	
+													id:rfg.ReportInfo[0].Dimensions[i].col,
+													axis:rfg.ReportInfo[0].Dimensions[i].axis,
+													type:rfg.ReportInfo[0].Dimensions[i].type
+												};
+								   			if(rfg.ReportInfo[0].Dimensions[i].order){
+								   				d.order = rfg.ReportInfo[0].Dimensions[i].order;
+								   			}
+								   			if(rfg.ReportInfo[0].Dimensions[i].filter_value){
+								   				d.filter = rfg.ReportInfo[0].Dimensions[i].filter_value;
+								   			}
+											if(rfg.ReportInfo[0].Dimensions[i].filteroperator){
+								   				d.filteroperator = rfg.ReportInfo[0].Dimensions[i].filteroperator;
+								   			}
+								   			this.config.dimensions.push(d);
+								   		}
+								   		this.config.reportlimit = rfg.ReportInfo[0].ReportReadLimit;
+								   		this.config.dimbrowserlimit = rfg.ReportInfo[0].DimensionBrowserReadLimit;
+								   		this.config.name = rfg.ReportInfo[0].reportName;  
+								   		this.config.id = rfg.ReportInfo[0].ReportId;
+								   },
+				defaultreportconfig : function() {
+								   		this.config.limit = 1000;
+								   		this.config.type = "Adhoc";
+								   		this.config.dimensions = [];
+								   		this.config.reportlimit = 1000;
+								   		this.config.dimbrowserlimit = 1000;
+								   		this.config.name = "";  
+								   		this.config.id = 0;
+								   },
+				setdimensionconfig : function(dims) {
+					this.config.dimensions = [];
+					for(var i in dims) {
+						this.config.dimensions.push({id:i,axis:dims[i].axis,type:dims[i].type})
+					}
+				},
+				setdimension : function(dim){
+					var d = this.config.dimensions.filter(
+									function(el){
+										if(el.id == dim.id ){
+											el.axis = dim.axis;
+											el.type = dim.type;
+											if(dim.order){
+												el.order = dim.order;
+											}
+											if(dim.filter){
+												el.filter = dim.filter;
+											}
+											if(dim.filteroperator) {
+												el.filteroperator = dim.filteroperator;
+											}
+										}
+										return el.id.toLowerCase() == dim.id.toLowerCase()
+									}
+								);
+					if(d.length == 0){
+						this.config.dimensions.push(dim)
+					}
+				},
+				removedimension : function(dimid){
+					for(var i = 0, len = this.config.dimensions.length;i < len; i++){
+						if(this.config.dimensions[i].id.toLowerCase() == dimid.toLowerCase()) {
+							this.config.dimensions.splice(i,1);
+							break;
+						}
+					}
+				},
+				// Updates the src element position to target element position
+				updatedimensionpos : function(dim, dimtarId) {
+					this.removedimension(dim.id);
+					for(var i = 0, len = this.config.dimensions.length;i < len; i++){
+						if(this.config.dimensions[i].id.toLowerCase() == dimtarId.toLowerCase()) {
+							this.config.dimensions.splice(i,0, dim);
+							break;
+						}
+					}
+				},
+				getElmtsCountFrmAxis : function(axis) {
+						var d = this.config.dimensions.filter(function(e) {
+						return e.axis.toLowerCase() == axis.toLowerCase();
+					});
+					return d.length;
+				},
+				getElmntsCountByType : function() {
+					var count = 0;
+					for(var i =0; i< arguments.length; i++)
+					{
+						var type = arguments[i];
+						var d = this.config.dimensions.filter(function(e) {
+							return e.type == type;
+						});
+						count += d.length;
+					}
+					return count;
+				},
+				getElmntsCountByTypeFrmAxis : function() {
+					var count = 0, axis  = arguments[0];
+					for(var i =1; i< arguments.length; i++)
+					{
+						var type = arguments[i];
+						var d = this.config.dimensions.filter(function(e) {
+							return (e.axis == axis && e.type == type);
+						});
+						count += d.length;
+					}
+					return count;
+				},
+				getcollectiondimensionbyid : function(id) {
+					var d = this.collection.dimensions.filter(function(e) {
+							return e.id.toLowerCase() == id.toLowerCase();
+						}
+					);
+					return d[0];
+				},
+				getreportdimensionbytext : function(dname){
+					var d = this.collection.dimensions.filter(
+							function(el){
+								return el.text.toLowerCase() == dname.toLowerCase()
+							}
+					)[0];
+					if(!d) return null;
+					var rd = this.config.dimensions.filter(function(el){
+									return el.id.toLowerCase() == d.id.toLowerCase()
+								})[0];
+					return rd;
+					
+				},
+				getreportdimensionbyid : function(did){
+					var rd = this.config.dimensions.filter(function(el){
+									return el.id == did
+								})[0];
+					return rd;
+					
+				},
+				setcollection : function(collcfg) {
+					this.collection.id = collcfg.CollectionDetails.CollectionID;
+					this.collection.name = collcfg.CollectionDetails.CollectionName;
+					this.collection.dimensions = [];
+					for(var i = 0 , len = collcfg.Columns.length; i < len; i++){
+						this.collection.dimensions.push({id:collcfg.Columns[i].DBName,text:collcfg.Columns[i].DisplayName,
+															type:collcfg.Columns[i].colattribtype, datatype:collcfg.Columns[i].datatype})
+					}
+				},
+				setdimensionsort : function(srtdim){
+					for(var i = 0, len = this.config.dimensions.length; i < len; i++) {
+						if(srtdim.id == this.config.dimensions[i].id){
+							this.config.dimensions[i].order = srtdim.order;
+						}
+						else {
+							delete this.config.dimensions[i].order;
+						}
+					}
+				},
+				updatereportname : function(r){
+					this.config.id = r.id;
+					this.config.name = r.name;
+				},
+				addfiltervalue : function(fd) {
+					var rd = this.getreportdimensionbyid(fd.id);
+					var cd = this.getcollectiondimensionbyid(fd.id);
+					if(!rd.filter){
+						rd.filter = new Array();
+					}
+					switch(cd.datatype)
+					{
+						case 'string':
+						case 'date':
+								rd.filter.push(fd.value);
+								break;
+						case 'number':
+								rd.filter.push(parseFloat(fd.value));
+								break;
+						default:
+								rd.filter.push(fd.value);
+					}
+					this.setdimension(rd);
+				},
+				removefiltervalue : function(fd) {
+					var rd = this.getreportdimensionbyid(fd.id);
+					if(rd.filter){
+						for(var i = 0, len = rd.filter.length; i < len; i++) {
+							if(rd.filter[i] == fd.value){
+								rd.filter.splice(i,1);
+								break;
+							}
+						}
+						if(rd.filter.length == 0){
+							delete rd.filter;
+						}
+						this.setdimension(rd);
+					}
+				},
+				removefiltervalues : function(did) {
+					var rd = this.getreportdimensionbyid(did);
+					if(rd.filter){
+							delete rd.filter;
+							this.setdimension(rd);
+						}
+				},
+				getsortdimension : function() {
+					var sd = null;
+					for(i = 0, len = this.config.dimensions.length; i < len; i++) {
+						if(this.config.dimensions[i].order){
+							sd = this.config.dimensions[i];
+							break;
+						}
+					}
+					if(sd != null){
+						var cd = this.getcollectiondimensionbyid(sd.id);
+						sd.text = cd.text;
+					}
+					return sd;
+					
+				}
+			
+			});
+    }();
+    var addToFilter = function(did) {
+    	var d = rObj.getcollectiondimensionbyid(did);
+    	if(d && d.type == 0) {
+    		if( !jQuery('#gs-filterSelecor').find("#"+d.id)[0] )
+    			jQuery('#gs-filterSelecor').append("<option id='" + d.id + "' value='" + d.id + "'>" + d.text + "</option>");
+    		
+    	}
+    };
+    var removeFromFilter = function(did){
+    	jQuery("#gs-filterSelecor option[value='" + did + "']").remove();
+    };
+	
+	$('.filter_options').mouseleave(function(event) {
+		$(this).addClass('hide');
+	});
+	// handle filter option button click events
+	$('.gs_att_filter_options').off().on('click', function(event) {
+		$(this).find('.optlist').removeClass('hide');
+	});
+	
+	$('.filter_option').off().on('click', function(event) {
+		$(this).parent().addClass('hide');
+		event.stopPropagation() ;
+		var filterOption = $(this).text();
+		
+		switch(filterOption) {
+		
+			case 'Field Filters':
+					Layout.right('open');
+				break;
+				
+			case 'Measure Filters':
+					showFilterUI();
+				break;
+				
+			case 'View Applied Filters':
+				var isfiltersAvailable = false;
+				var container = $(".ranking_holder").find('.filter_content').clone(true);
+				for(var i = 0, len = rObj.config.dimensions.length; i < len; i++){
+					var dim = rObj.config.dimensions[i];
+					if( dim.filter) {
+						isfiltersAvailable = true;
+						var contrl = $("#template").clone(true).prop("id", '').css({"display":""});
+						$(contrl).find('.gs_downarrow_gray').css({'display':'none'});
+						$(contrl).find('.filt_type').css({'display':'none'});
+						$(contrl).find('.optlist').css({'display':'none'});
+						$(contrl).find('.gs-close-mark').css({'display':'none'});
+						$(contrl).find('.dr-do-bn-cont').css({'cursor':'default'});
+						
+						$(contrl).find('input.frvalue').attr('readonly','readonly').css({'width':'250px'});
+						
+						$(contrl).appendTo($(container));
+						var val = rObj.getcollectiondimensionbyid(dim.id).text;
+						$(contrl).find('.filt_measures').children().first().attr('title', val).find('.gs_textover').text(val);
+						
+						var operaton = operationsKV[dim.filteroperator];
+						$(contrl).find('.filt_operations').children().first().attr('title', operaton).find('.gs_textover').text(operaton);
+						$(contrl).find('.frvalue').css({'background-color':'#ced1d8', 'opacity':'0.6'});
+						if ( operaton == "Between" ) {
+							var betwenCntrl = $(contrl).find('.filt_operations').next().find('.frvalue').css({'display':'', 'width':'125px'});;
+							var values = dim.filter;
+							$(contrl).find('.frvalue:first').val(values[0]);
+							$(contrl).find('.frvalue:last').val(values[1]);
+						}
+						else if(dim.filter) {
+							$(contrl).find('.frvalue').attr('title', dim.filter).val(dim.filter);	
+						}
+					}		
+				}
+				
+				if(isfiltersAvailable) {
+					$(".filterdialog").html(" ").html(container);
+				}
+				else {
+					$(".filterdialog").html("<div class=\"noDataFound\">No filters applied. </div>");
+				}
+				
+				$(".filterdialog").dialog('open');
+				$('.ui-widget-overlay').css('display','none');
+				$('#exposeMask').css('display','block');
+				break;
+		}
+	});
+	
+	function showFilterUI(dimtext) {
+		// Ranking UI information
+		var defmes = "";
+		var	dimorder, dimname, count =0;
+		var dims =  rObj.config.dimensions;
+
+		// clean the dialog element
+		$(".dialog").html("");
+		$(".dialog").dialog( "close" );
+
+		var container = $(".ranking_holder").clone(true).css({'display':'block'});
+		$(container).appendTo($('.dialog'));
+
+		// to hide ranking section if columns are available
+		if( rObj.getElmtsCountFrmAxis('column') > 0) {
+			$('.dialog').find('.ranking_section').find('.filter_ctn').css({'opacity':'0.5'});
+			$('.dialog').find('.ranking_section').find('.optlist').css({'display':'none'});
+			$('.dialog').find('.ranking_section').find('input.frvalue').attr('readonly','readonly');
+			$('.dialog').find('.ranking_section').find('.dr-do-bn-cont').css({'cursor':'default'});
+		}
+
+		for(var j = 0; j < dims.length; j++) {
+			var dim = dims[j];
+			if ( dim.type != 0 ) {
+				var text = rObj.getcollectiondimensionbyid(dim.id).text;
+				if( dim.order ) {
+					dimorder = dim.order;
+					dimname =  text;
+				}
+				defmes += "<li class='item-measure'>" + text + "</li>";
+			}
+		}
+
+		$(container).find('.rank_measures').find('.list_measures').html(defmes);
+
+		// handle to create new Measure
+		function addfilter(val) {
+			
+			// check filters count with measures count
+			if( count >= rObj.getElmntsCountByType(1, 2) ) {
+				alertify.error("All the measures in the report are added to filters.");
+				$(".dialog").find('.filter_add_btn').css('cursor', 'default');
+				return;
+			}
+			
+			var template = $("#template").clone(true).prop("id", '').css({"display":""});
+			$(template).find('.list_measures').html(defmes);
+			$(template).appendTo($(container).find('.filter_content'));
+			count += 1;
+														
+			// need to check
+			$('.dialog').find('.item-measure').off().on('click', function() {
+				$(this).parent().addClass("hide");
+				var cntrl = $(this).parent().siblings().find('.gs_textover');
+				var optionValue = $(this).text();
+				
+				// check measure already selected or not
+				if( $(this).closest('.filt_measures').length > 0 ) {
+					var isexist = false;
+					$('.dialog').find('.filt_measures').each(function() {
+						if( $(this).find('.gs_textover').text() == optionValue ) {
+							isexist = true;
+						}
+					});
+					if( isexist ) {
+						alertify.error("Measure already selected : " +optionValue);
+						return false;
+					}
+				}
+				$(this).parent().siblings().attr('title', optionValue);
+				cntrl.text(optionValue);								
+			});
+			
+			$('.dialog').find('.item-operation').off().on('click', function() {
+				$(this).parent().addClass("hide");
+				var cntrl = $(this).parent().siblings().find('.gs_textover');
+				var optionValue = $(this).text();
+				$(this).parent().siblings().attr('title', optionValue);
+				cntrl.text(optionValue);
+				// for between operator
+				if(optionValue == "Between" ) {
+					addBetweenOperator($(this).parent().parent());
+					$(cntrl).parent().parent().next().find('.frvalue:first').attr('placeholder', 'Min');
+					$(cntrl).parent().parent().next().find('.frvalue:last').val('');
+				}
+				else {
+					$(cntrl).parent().parent().next().find('.frvalue:last').val('').css('display', 'none');
+					$(cntrl).parent().parent().next().find('.frvalue:first').attr('placeholder', 'Filter').css({'display':'inline-block', 'width':'140px'});
+				}							
+			});
+			return template;
+		}
+
+		function addBetweenOperator(cntrl ) {
+			$(cntrl).next().find('.frvalue').css({'display':'', 'width':'70px'});
+		}
+
+		// handle click event of the measures list 
+		$('.dialog').find('.item-measure').off().on('click', function() {
+			
+			$(this).parent().addClass("hide");
+			var cntrl = $(this).parent().siblings().find('.gs_textover');
+			$(this).parent().siblings().attr('title', $(this).text());
+			cntrl.text($(this).text());								
+		});
+
+		// handle click event of the operations list
+		$('.dialog').find('.item-operation').off().on('click', function() {
+			
+			$(this).parent().addClass("hide");
+			var cntrl = $(this).parent().siblings().find('.gs_textover');
+			$(this).parent().siblings().attr('title', $(this).text());
+			cntrl.text($(this).text());								
+		});
+			
+		// handle add-filter button event to create new filter
+		$('.filter_add_btn').off().on('click', function(){
+			addfilter(true)
+		});
+
+		// handle select-box button click events
+		$('.filt-btn').off().on('click', function(event) {
+
+			$('.optlist').addClass('hide');
+			if( rObj.getElmtsCountFrmAxis('column') <= 0 ) {
+				if( $(this).parent().prop('class').indexOf('rank_order') != -1 ) {
+					if( $(this).find('span').last().prop('class') == "moveDownIconClass" ) {
+						$(this).find('span').first().text("Top");
+						$(this).find('span').last().removeClass('moveDownIconClass').addClass('moveUpIconClass');
+					}
+					else {
+						$(this).find('span').first().text("Bottom");
+						$(this).find('span').last().removeClass('moveUpIconClass').addClass('moveDownIconClass');
+					}
+				}
+			}
+			$(this).siblings().removeClass("hide");
+			event.stopPropagation() ;
+		});
+
+		// handle input validation
+		$('.frvalue').off().on('change', function() {
+			
+			validateFilterData(this);
+		});
+
+		// handle remove button event to remove filter
+		$('.gs-close-mark').off().on('click', function() {
+			count -= 1;
+			$(".dialog").find('.filter_add_btn').css('cursor', 'pointer');
+			$(this).parent().remove();
+		});
+
+		// handle to recreate existing Ranking
+		if ( dimorder && dimname ) {
+			$(".dialog").find('.rank_measures').children().first().attr('title',dimname).find('.gs_textover').text(dimname);
+			var icon = (dimorder == "desc" ) ? "moveUpIconClass" : "moveDownIconClass" ;
+			var icontext = (dimorder == "desc" ) ? "Top" : "Bottom";
+			$(".dialog").find('.rank_order').find('span').first().text(icontext)
+			$(".dialog").find('.rank_order').find('span').last().removeClass('moveDownIconClass moveUpIconClass').addClass(icon);
+			if( rObj.config.reportlimit != 1000) $(".dialog").find('.rank_value').children().val(rObj.config.reportlimit);
+		}
+		else if(dimtext) {
+			$(".dialog").find('.rank_measures').find('.gs_textover').text(dimtext);
+		}
+							
+		// handle to recreate existing Filters
+		for(var j = 0; j < dims.length; j++) {
+			var dim = dims[j];
+			if ( dim.type != 0 ) {
+				if( dim.filteroperator &&  dim.filter) {
+					var contrl = addfilter();
+					var val = rObj.getcollectiondimensionbyid(dim.id).text;
+					$(contrl).find('.filt_measures').children().first().attr('title', val).find('.gs_textover').text(val);
+					
+					var operaton = operationsKV[dim.filteroperator];
+					$(contrl).find('.filt_operations').children().first().attr('title', operaton).find('.gs_textover').text(operaton);
+					if ( operaton == "Between" ) {
+						var betwenCntrl = addBetweenOperator($(contrl).find('.filt_operations'));
+						var values = dim.filter;
+						$(contrl).find('.frvalue').first().val(values[0]);
+						$(contrl).find('.frvalue').last().val(values[1]);
+					}
+					else {
+						$(contrl).find('.frvalue').attr('title', dim.filter[0]).val(dim.filter[0]);	
+					}
+				}
+			}
+		}
+
+		// to show selected measure
+		var isselmeasexist = false;
+		if( dimtext ) {
+			$('.dialog').find('.filt_measures').each(function() {
+				if( $(this).find('.gs_textover').text() == dimtext ) {
+					isselmeasexist = true;
+					return false;
+				}
+			});
+			if( !isselmeasexist ) {
+				var contrl = addfilter();
+				$(contrl).find('.filt_measures').children().first().attr('title', dimtext).find('.gs_textover').text(dimtext);
+			}
+		}
+
+		//to hide select-box options
+		$('.dialog').off().on('click', function(){
+			$('.optlist').addClass('hide');
+		});
+
+		function validateFilterData(cntrl) {
+			var val = $(cntrl).val();
+			if( isNaN(val) ) {
+				alertify.error("Please provide numeric values.");
+				return false;
+			}
+			if( $(cntrl).parent().prop('class').indexOf('rank_value') == -1 ) {
+			
+				if( $(cntrl).parent().prev().find('.gs_textover').text() == "Between" ) {
+					var minVal = parseInt( $(cntrl).parent().find('.frvalue').first().val() );
+					var maxVal = parseInt( $(cntrl).parent().find('.frvalue').last().val() );
+					if(minVal && maxVal && minVal > maxVal ) {
+						alertify.error('Minimum value shouldbe less than Maximum value');
+						return false;
+					}
+					if(!minVal || !maxVal ) {
+						alertify.error('Provide Minimum value and than Maximum value');
+						return false;
+					}
+				}							
+			}
+			else {
+				if ( val && (val <= 0 || val >= 1000) ) {
+					alertify.error("Please provide the Range value between 1 to 1000.");
+					return false;
+				}
+			}
+			return true;
+		}
+
+		// handle apply filter button click event 
+		$('.gs_apply').off().on('click', function() {
+
+			var dimName = $(".dialog").find('.rank_measures').find('.gs_textover').text();
+			var order = $(".dialog").find('.rank_order').find('span').last().prop('class');
+			if( order == "moveUpIconClass" ) {
+				order = "desc";
+			}
+			else {
+				order = "asc";
+			}
+			
+			// validating the filter data
+			var isValidInfo = true;
+			
+			$('.dialog').find('.frvalue').each( function() {
+				if( validateFilterData(this) == false ) {
+					isValidInfo = false;
+					return false;
+				}
+			});
+			if ( !isValidInfo ) return false;
+										
+			var range = $(".dialog").find('.rank_value').children().val();
+			var dim = rObj.getreportdimensionbytext(dimName);
+			if( !dim ) dim = rObj.getreportdimensionbyid(dimName);
+			if( dim && order && range) {
+				dim.order = order;
+				rObj.setdimensionsort(dim);
+				rObj.config.reportlimit = parseInt(range);
+			}
+			else if ( dim ) {
+				//delete dim.order;
+				//rObj.setdimensionsort(dim);
+				rObj.config.reportlimit = 1000;
+			}
+			
+			// Remove existing filters.....
+			var dims =  rObj.config.dimensions;
+			for(var j = 0; j < dims.length; j++) {
+				var rd = dims[j];
+				if ( rd.type != 0 ) {
+					if( rd.filter ) {
+						delete rd.filter;
+					}
+					if( rd.filteroperator ) {
+						delete rd.filteroperator;	
+					}
+					rObj.setdimension(rd);
+				}
+			}
+			
+			$('.filter_content').children().each(function() {
+				var dimname = $(this).find('.filt_measures').find('.gs_textover').text();
+				var operationVal = $(this).find('.filt_operations').find('.gs_textover').text();
+				var filterval = $(this).find('.frvalue').val();
+				var dim = rObj.getreportdimensionbytext(dimname);
+				if( !dim ) dim = rObj.getreportdimensionbyid(dimname);
+				
+				if( dim && filterval && operationsVK[operationVal] ) {
+					dim.filteroperator = operationsVK[operationVal] ;
+					if(!dim.filter) {
+						dim.filter = new Array();
+					}
+					if(operationVal == "Between" ) {
+						var minVal = parseInt( $(this).find('.frvalue').first().val() );
+						var maxVal = parseInt( $(this).find('.frvalue').last().val() );
+						if(minVal && maxVal && minVal < maxVal ) {
+							dim.filter.push(minVal);
+							dim.filter.push(maxVal);
+						}
+					}
+					else {
+						dim.filter.push(parseInt(filterval));
+					}
+					rObj.setdimension(dim);
+				}
+			});
+			setTimeout('newStack.run()', 0);
+			$(".dialog").html("");
+			$('#exposeMask').css('display','none');
+			$(".dialog").dialog( "close" );
+		});
+
+		$('.gs_cancel').off().on('click', function() {
+			$('#exposeMask').css('display','none');
+			$(".dialog").html("");
+			$(".dialog").dialog("close");
+		});
+		
+		$(".dialog").dialog("open");
+		$('.ui-widget-overlay').css('display','none');
+		$('#exposeMask').css('display','block');
+	}
+
+	var $GS = (function ($j) {
+	function $GS(mode, collectionId, reportId) {
+		var that = this;
+		if (collectionId == 0 && reportId == 0) {
+			// Cannot show error message here by platform. This block will execute multiple times.
+			return;
+		} else {
+			that.collection = {};
+			that.parallelCollection = {};
+			that.selection = {};
+			that.reportconfig = {};
+
+			that.activeFilters = {};
+			if (collectionId && reportId) {
+				var data, collectionID, _collect;
+                if(collectionId == 0){
+                    $j('#gs-loading').show();
+                    restClient.serveRequest(("reports/" + reportId) ,"GET" ,"" ,{} ,true , (function(_){
+                        data = _.data.ReportInfo[0];
+                        rObj.setreportconfig(_.data);
+                        collectionID = data.CollectionID;
+                        
+                        numb();
+                    }));
+                }else{
+					collectionID = collectionId;
+					rObj.defaultreportconfig();
+                    window.setTimeout(function(){
+                        numb();
+                    }, 10);
+                }
+                
+				function numb(){
+                    restClient.serveRequest(("collections/" + collectionID) ,"GET" ,"" ,{} ,true ,( function(_){
+                        _collect = _;
+                        rObj.setcollection(_collect.data);
+                        if(rObj.config.id){
+                        	for(var i = 0 , len = data.Dimensions.length; i < len; i++) {
+                        		addToFilter(data.Dimensions[i].col);
+	                        }
+                        }
+                        //CollectionDetails
+                        that.filterStorage = {};
+                        updateReportName( rObj.config.name  || "New report" );
+                        updateCollectionName(rObj.collection.name);
+                        var obj = {
+                            data: {},
+                            reports: {},
+                            cache: {},
+                            filters: {}
+                        };
+                        updateFields(rObj.collection.dimensions, rObj.collection.name);
+                        updateAreas(rObj.config.dimensions,rObj.collection.name);
+                        console.log(collectionID);
+                        $j('#gs-loading').hide();
+                        new DnD('.gs-field', '.gs-area', '#gs-all-fields', function () {});
+                        if(rObj.config.id != 0){
+                            that.run();
+                        }
+                    }));
+                }
+                
+				that.tree = new DTree("gs-filter-tree", '#gs-search-filters', function (parent, selection) {
+					that.activeFilters[parent] = selection.slice(0);
+					var ele = $j('.gs-area .gs-field[uid="' + (that.activeColName + "-_gs_-" + parent) + '"]').first();
+					ele.attr('title', that.activeFilters[parent].join(', '));
+				});
+				
+                $j('.gs-area').delegate('.gs-field-filter', 'click', function(e){
+                	var type = $j(this).parent().attr('type');
+					var id = $j(this).parent().attr('uid').split('-_gs_-')[1];
+					var dimtext = rObj.getcollectiondimensionbyid(id).text;
+					                	
+                	if( type != 0 ) {
+						showFilterUI(dimtext);
+						return;
+					}
+					Layout.right('open');
+                    if($j('#gs-filterSelecor').val() == id){
+                    	return;    
+                    }
+                    $j('#gs-filterSelecor').val(id).change();
+                });
+                $j('.gs-area').delegate('.gs-field-filter', 'dblclick', function(e){
+                	e.preventDefault();
+                });
+				
+                var filterSearch = function () {
+                    var collect = that.activeFilters,
+						//storage = that.filterStorage[that.activeCollection];
+						storage = that.filterStorage;
+					var dataCollection = rObj.collection.dimensions; //that.collection[that.activeCollection].cache;
+					var th = $j(this),
+						val = th.val();
+					
+					if (val == "") {
+						$j('#gs-filterSelecor option').each(function () {
+							var _v = $j(this).attr('value');
+							that.tree.deleteAll(_v);
+						});
+                        $j('#gs-search-filters input:first').val('');
+                        that.activeDimSearch = ""; 
+						return false;
+					}
+					var fd = rObj.getreportdimensionbyid(val);
+					var _selectedF = fd.filter || [];
+					var cd = rObj.getcollectiondimensionbyid(val);
+					//if (storage) {
+                        if (!storage[val]) {
+							var cName = rObj.collection.name;
+							var filterDat = {
+								Column: val,
+                                DimensionBrowserReadLimit : (rObj.config.dimbrowserlimit || 0),
+                                SearchString : that.activeDimSearch
+							}
+							
+							$j('#gs-loading').show();
+                            restClient.serveRequest("collections/" + cName + "/dimensions/" + fd.id + "/members","POST" ,JSON.stringify(filterDat) ,{} ,true ,(function(_){
+                                storage[val] = _; 
+                                if (!storage[val].result) {
+                                    alertify.error(storage[val].errorCode + ' : ' + "Filters are not available");
+                                    th.val('');
+                                } else {
+                                    storage[val] = storage[val].data;
+                                }
+                                
+                                that.tree.setData(val, cd, storage[val], _selectedF);
+                                $j('#gs-loading').hide();
+                            }));
+						}else{
+                        	that.tree.setData(val, cd, storage[val], _selectedF); 
+                        }
+                        function dummy(){
+							that.tree.setData(val, cd, storage[val], _selectedF);
+                        }
+					//}
+				};
+				$j('.gs-lastpanel').delegate('#gs-filterSelecor', 'change', filterSearch);
+			}
+		}
+	}
+
+	function prepareReportStructure(that, template){
+		var filters = that.activeFilters, data = that.reportconfig, arr = [], filt = [], measLen = 0, rowMeas = 0, rowLen =0, colLen =0, measdimLen = 0;
+		var apireq = {
+                            ReportInfo: [{
+                                    SchemaName: rObj.collection.name,
+                                    CollectionID : rObj.collection.id,
+                                    limit: 500,
+                                    Type: "adhoc",
+                                    Dimensions: new Array(),
+                                	ReportReadLimit : rObj.config.reportlimit,
+                                    DimensionBrowserReadLimit : rObj.config.dimbrowserlimit,
+                                    ReportId:rObj.config.id,
+								    reportName:rObj.config.name
+								    
+                                }
+                            ]
+		};
+		
+		colLen = rObj.getElmtsCountFrmAxis('column');
+		// validate the rObj object
+		if(rObj.config.dimensions.length == 0){
+            alertify.log('Invalid selection to run/save a Report.');
+            $j('#gs-loading').hide();
+            return false;    
+        }
+        else if ((rObj.getElmntsCountByType(1, 2) == 0) || (rObj.getElmntsCountByType(0) == 0) ) {
+        /*		alertify.error('Please select at least one Dimension and one measure to run the Report');
+				$j('#gs-loading').hide();
+            	return false;*/
+        }
+        else if( rObj.getElmtsCountFrmAxis('measure') == 0 ) {
+        	if( rObj.getElmtsCountFrmAxis('row') == 0 ) {
+        		alertify.error('Please select at least one dimension on Rows');
+				$j('#gs-loading').hide();
+            	return false;
+        	}
+    /*    	else if( rObj.getElmntsCountByType(1, 2) == 0) {
+				alertify.error('Please select at least one Measure');
+				$j('#gs-loading').hide();
+            	return false;
+            }*/
+            
+		}
+        else if( rObj.getElmtsCountFrmAxis('measure') > 0 && rObj.getElmntsCountByTypeFrmAxis('row', 1, 2) > 0 ) {
+			alertify.error('Please add Measures in only one Axis');
+            $j('#gs-loading').hide();
+			return false;
+		}
+		
+		for(var i = 0, len = rObj.config.dimensions.length; i < len; i++){
+			var d = {col:rObj.config.dimensions[i].id,axis:rObj.config.dimensions[i].axis,type:parseInt(rObj.config.dimensions[i].type)};
+			if(rObj.config.dimensions[i].order){
+				d.order = rObj.config.dimensions[i].order;
+			}
+			if(rObj.config.dimensions[i].filter){
+				d.filter_value = rObj.config.dimensions[i].filter;
+			}
+			if(rObj.config.dimensions[i].filteroperator){
+				d.filteroperator = rObj.config.dimensions[i].filteroperator;
+			}
+			if( d.axis == "row" ) {
+				rowLen += 1;
+			} else if( d.axis == "measure" ) {
+				measdimLen += 1;
+			}
+			if ( d.axis == "row" && (d.type == 1 || d.type == 2)){
+				rowMeas += 1;
+				d.agg_func = "sum";
+			}
+			if ( d.axis == "measure" && d.type == 0) {
+				d.agg_func = "count";
+			}else if(d.axis == "measure"){
+				d.agg_func = "sum";
+			}
+			if( d.type == "1" || d.type == "2" ){
+				measLen += 1;
+			}
+			apireq.ReportInfo[0].Dimensions.push(d);
+		}
+		if( colLen > 0 ) rObj.config.reportlimit = 1000;
+		apireq.ReportInfo[0].ReportReadLimit = rObj.config.reportlimit;
+		return apireq;
+	}
+	
+	// Common Helper methods for $GS
+	var renderOption = function (item, idPrefix, filters) {
+		var str = ('<div uid="%uid%"  title="%title%" class="gs-field gs-field-home" type="%fieldType%" type="%filterType">' +
+			'<div class="gs-field-icon"></div>' +
+			'<div class="gs-field-filter"></div>' +
+			'<div class="gs-field-text">%text%</div>' +
+			'</div>').replace('%uid%', idPrefix + "-_gs_-" + item.id).replace('%fieldType%', item.type).replace('%text%', item.text);
+		if (filters && filters.length > 0) {
+			str = str.replace('%title%', "Filters selected : {" + filters.join(', ') + "}");
+		} else if (item.type == 0) {
+			str = str.replace('%title%', "No filters selected");
+		} else {
+			str = str.replace('%title%', "");
+		}
+		return str;
+	}
+	var updateReportName = function (name) {
+		$j('#gs-report-name').html(name);
+	}
+	var updateCollectionName = function (name) {
+		$j('#gs-collection-name').html(name);
+	}
+	var updateFields = function ( collection, name) {
+		collection.sort(function(a,b) { return a.text < b.text ? -1 : 1})
+				  .sort(function(a,b) {
+				  						var aType = a.type, bType = b.type;
+				  						if(aType == 2) aType = 1;
+				  						if(bType == 2) bType = 1;
+				  					 	return aType - bType
+				  					 });
+		var html = "",
+			cache = {};
+
+		for (var i = 0, l = collection.length; i < l; i++) {
+			var field = collection[i];
+			if (field.id) {
+				html += renderOption(field, name);
+				//cache[field.DBName] = field;
+			}
+		}
+		$j('#gs-all-fields').html(html);
+		//return cache;
+
+	}
+	var updateAreas = function (dimensions, name) {
+		var areas = {
+			row: {
+				id: "gs-area-row",
+				html: ""
+			},
+			column: {
+				id: "gs-area-column",
+				html: ""
+			},
+			page: {
+				id: "gs-area-page",
+				html: ""
+			},
+			measure: {
+				id: "gs-area-measure",
+				html: ""
+			}
+		};
+		var filters = {};
+		for (var i = 0, l = dimensions.length; i < l; i++) {
+			var d = rObj.getcollectiondimensionbyid(dimensions[i].id);
+			areas[dimensions[i].axis].html += renderOption(d, name);
+		}
+		for (i in areas) {
+			$j('#' + areas[i].id).html(areas[i].html);
+		}
+	}
+	
+	$GS.prototype.run = function () {
+		var that = this;
+        $j('#gs-loading').show();
+		var data = prepareReportStructure(that, that.template);
+        if(data == false){
+             $j('#gs-loading').hide();
+             $j('#gs-run').attr('hold', false);
+             return false;    
+        }
+        restClient.serveRequest("reports/run/preparation" ,"POST" ,JSON.stringify(data) ,{} ,false ,(function(_){
+            $j('#gs-run').attr('hold', false);
+            resp = _;
+            if( resp.errorCode ) {
+            	alertify.error( resp.errorDesc );
+            	$j('#gs-loading').hide();
+            	$j('#gs-run').attr('hold', false);
+             	return false;
+            }
+            if(!resp.ReportLayoutInfo.cols[0].data || !resp.ReportLayoutInfo.cols[0].data.length > 0 )
+            {
+            	alertify.error("The report doesnot contain any rows / columns");
+            	$j('#gs-loading').hide();
+            	$j('#gs-run').attr('hold', false);
+             	return false;
+            }
+            Layout.left('close');
+            Layout.right('close');
+            var d = new Date();
+            var Dimensions = data.ReportInfo[0].Dimensions, field;
+            for(var i = 0; i < Dimensions.length; i++){
+            	if(Dimensions[i].order){
+                	field = Dimensions[i]._t;    
+                }
+            }
+            var Gd = new pivotGrid("demoGrid", {});
+            Gd.transformData(resp);
+            Gd.init();
+            $j('#gs-loading').hide();
+            var sd = rObj.getsortdimension();
+            if(sd != null) {
+				Gd.sort({text:sd.text,desc:(sd.order == "desc"?true:false)});
+			}
+            Gd.onBeforeSort = function(name, ind, desc) {
+				var dim = rObj.getreportdimensionbyid(name);
+				
+				if ( rObj.getElmtsCountFrmAxis('column') > 0 && (ind +1) > rObj.getElmtsCountFrmAxis('row') ) return true;
+				else if ( dim && dim.type == 0) return true;
+				else if ( rObj.config.reportlimit >= rObj.config.limit ) return true;
+				else {
+					var dim = rObj.getreportdimensionbytext(name);
+					dim.order = desc;
+					rObj.setdimensionsort(dim);
+					setTimeout('newStack.run()', 0);
+					return false;
+				}
+			}
+			
+            Gd.onAfterSort = function(name, ind, desc){
+				if ( rObj.getElmtsCountFrmAxis('column') > 0 && (ind +1) > rObj.getElmtsCountFrmAxis('row') ) return;
+            	var dim = rObj.getreportdimensionbytext(name);
+            	if( dim) {
+            		dim.order = desc;
+            		rObj.setdimensionsort(dim);
+            	}
+            }   
+        }));
+	}
+	
+	$GS.prototype.export = function () {
+		var that = this;
+        $j('#gs-loading').show();
+		var data = prepareReportStructure(that, that.template);
+        if(data == false){
+             $j('#gs-loading').hide();
+             return false;    
+        }
+        var restClientParams  = JSON.parse(sessionStorage.getItem('accessparams'));
+        var url = restClientParams.url + "/api/reports/run/export";
+        $j("#excelForm input[name='auth_content']").val(JSON.stringify({"authToken":restClientParams.authtoken}));
+       	$j("#excelForm input[name='excel_content']").val(JSON.stringify(data));
+       	$j("#excelForm").attr('action', url);           		
+        $j("#excelForm").submit();
+        $j('#gs-loading').hide();  
+	}
+	
+	$GS.prototype.save = function (saveAs) {
+		var that = this;
+        function save(template){
+            $j('#gs-loading').show();
+            restClient.serveRequest("reports" ,"PUT" , JSON.stringify(template) ,{} ,true ,(function(_){
+                resp = _;
+                if(resp.result == true){
+                    alertify.success("Report saved successfully");
+                    repId = resp.data.ReportId;
+                    if(repId){
+                        rObj.updatereportname({id:repId,name:template.ReportInfo[0].reportName});
+                         updateReportName(template.ReportInfo[0].reportName);
+                    };
+                    $j('#gs-loading').hide();
+                }else{
+                    alertify.error(resp.errorDesc);
+                    $j('#gs-loading').hide();
+                    return false;
+                }
+            }));
+         
+		}
+		
+		var data = prepareReportStructure(that, that.template);
+        if(data == false){
+            
+            $j('#gs-loading').hide();
+            return false;
+           
+        }
+        saveAs = saveAs || false;
+		if(saveAs){
+            saveHelper();
+        }else{
+        	if(rObj.config.id){
+                //data.ReportInfo[0].reportName = that.activeRepName;
+                //data.ReportInfo[0].ReportId = that.activeReport;
+                save(data);
+            }else{
+            	saveHelper();   
+            }    
+        }
+        function saveHelper(){
+            alertify.prompt("Enter Report name", function (e, str) {
+                // str is the input text
+                if (e) {
+                    //if(data.ReportInfo[0].ReportId) delete data.ReportInfo[0].ReportId;
+                    delete data.ReportInfo[0].ReportId;
+                    data.ReportInfo[0].reportName = str;
+                    
+                    /*that.activeRepName = str;*/
+                    
+                    save(data);
+                } /*else {
+                    alertify.error("Report save cancelled!");
+                }*/
+            }, "Report name");
+		}
+	}
+	return $GS;
+})(jQuery);
+
+var DnD = (function (j$) {
+	function Dnd(field, area, source, callback) {
+		j$(field).on('draginit', function (ev, drag) {
+			drag.ghost();
+		});
+		j$(field).on('dragdown', function (ev, drag) {
+			drag.distance(5);
+			ev.preventDefault();
+		});
+		j$(source).on({
+			'dropon': function (ev, drop, drag) {
+				var uid = drag.element.attr('uid');
+				var drg = drag.element.clone(true, true).attr('uid', '');
+				j$(area + ' ' + field + '[uid="' + uid + '"]').each(function () {
+					j$(this).remove();
+				});
+				var dimid = uid.split("-_gs_-")[1];
+				removeFromFilter(dimid);
+				rObj.removedimension(dimid);
+			}
+		});
+		j$(area).delegate(field, {
+			'dropover': function (ev, drop, drag) {
+				j$(this).addClass('highlight');
+			},
+			'dropout': function (ev, drop, drag) {
+				j$(this).removeClass('highlight');
+			},
+			'dropon': function (ev, drop, drag) {
+				j$(this).removeClass('highlight');
+				var uid = drag.element.attr('uid'), drg;
+				if ( drop.element.attr('uid') != uid && isAllowtoDrop(drop.element.parent(), drag.element)) {
+					var srcId = drag.element.parent().attr('id');
+					drg =  (srcId == "gs-all-fields") ? drag.element.clone(true, true).attr('uid', '') : drag.element.attr('uid', '');
+					j$(area + ' ' + field + '[uid="' + uid + '"]').each(function () {
+						j$(this).remove();
+					});
+					drg.attr('uid', uid); 
+					drg.insertBefore(j$(this));
+					var d = rObj.getreportdimensionbyid(uid.split("-_gs_-")[1]);
+					if( !d) {
+						d = {id:uid.split("-_gs_-")[1],
+							 axis: drop.element.parent().attr('id').split("-")[2],
+						  	 type : j$(drg).attr("type")
+							};
+					}
+					else {
+						d.axis = drop.element.parent().attr('id').split("-")[2];
+					}
+					delete d.order;
+					rObj.updatedimensionpos(d, j$(this).attr('uid').split("-_gs_-")[1]);
+					addToFilter(d.id);
+					ev.stopPropagation();
+				}		
+			}
+		});
+		j$(area).on({
+			'dropover': function (ev, drop, drag) {},
+			'dropout': function (ev, drop, drag) {},
+			'dropon': function (ev, drop, drag) {
+				var srcId = drag.element.parent().attr('id');
+				if( srcId != drop.element.attr('id') && isAllowtoDrop(drop.element, drag.element))
+				{
+					var uid = drag.element.attr('uid'), drg;
+					drg = (srcId == "gs-all-fields") ? drag.element.clone(true, true).attr('uid', '') : drag.element.attr('uid', '');
+					drg.attr('uid', '');
+					j$(area + ' ' + field + '[uid="' + uid + '"]').each(function () {
+						j$(this).remove();
+					});
+					drg.attr('uid', uid);
+					j$(this).append(drg);
+					var d = rObj.getreportdimensionbyid(uid.split("-_gs_-")[1]);
+					if( !d) {
+						var d = {id:uid.split("-_gs_-")[1],
+								axis: this.id.split("-")[2],
+								type : j$(drg).attr("type")
+							};
+					}
+					else {
+						d.axis = this.id.split("-")[2];
+					}
+					delete d.order;
+					rObj.removedimension(d.id);
+					rObj.setdimension(d);
+					addToFilter(d.id);
+				}
+				ev.stopPropagation();
+			}
+		});
+		
+		var isAllowtoDrop = function(dropelmt, dragelmt){
+			var alwtodrp = true;
+			var axis = dropelmt.prop('id').replace('gs-area-', '');
+			var type = dragelmt.attr('type');
+			// for measures...
+			if( type == "1" || type == "2" )
+			{
+				if( axis == "column" || axis == "page") {
+					alertify.error("Measures cannot be dragged onto columns / pages.");
+					return false;
+				}
+			}				
+           	// column axis validation
+            else if(axis == "column" && j$(dropelmt).find('.gs-field').length == 2)
+            {
+            	alertify.error("More than two dimensions in Columns is not allowed.");
+            	return false;	
+            }
+            return alwtodrp;
+		};
+	}
+	return Dnd;
+})(jQuery);
+
+// field : '.gs-field',
+// source : '#gs-all-fields'
+// area : .gs-area
+
+// search : '#gs-search-filters'
+// selector : "gs-filter-tree",
+// callback : will be passed with parent and checked items
+
+// Layout wrappers
+var DTree = (function (j$) {
+	function DTree(selector, search, callback) {
+		var that = this,
+			config = {
+				skin: "dhx_skyblue",
+				parent: selector,
+				image_path: "{!URLFOR($Resource.NS)}/NS/newStack/js/vendors/dhtmlx/imgs/csh_dhx_skyblue/",
+                checkbox: true,
+                enableSmartXMLParsing: true
+			}
+		that.tree = new dhtmlXTreeObject(config);
+       	that.callback = callback;
+		var searchBox = j$(search);
+		j$(searchBox).find('input').bind('keyup', function () {
+			var val = j$.trim(j$(this).val());
+			that.searchText = val;
+			console.log(that.tree.findItem(val, 0, 1));
+		});
+		j$(searchBox).find('.gs-right').bind('click', function () {
+			that.search().next();
+		});
+		j$(searchBox).find('.gs-left').bind('click', function () {
+			that.search().prev();
+		});
+		that.tree.attachEvent("onCheck", function (id, state) {
+			var pid = that.tree.getParentId(id);
+			if( pid == 0 )
+			{
+				rObj.removefiltervalues( id );
+				return;
+			}
+			var fd = {id:pid,value:id};
+			if(state) {
+				rObj.addfiltervalue(fd);
+			}
+			else {
+				rObj.removefiltervalue(fd);
+			}
+			/*
+			var checked = that.tree.getAllChecked().split(',');
+			var arr = [],
+				parent = "";
+            var div = document.createElement('div');
+			for (var i = 0, l = checked.length; i < l; i++) {
+				var itm = checked[i].split('$_$');
+				if (i == 0) {
+					parent = itm[0];
+				}
+                div.innerHTML = itm[1];
+				arr.push(div[div.innerText ? "innerText" : "textContent"]);
+			}
+			that.callback(parent, arr);*/
+		});
+	}
+
+	DTree.prototype.search = function () {
+		var that = this;
+        return {
+			next: function () {
+				that.tree.findItem(that.searchText)
+			},
+			prev: function () {
+				that.tree.findItem(that.searchText, 1);
+			}
+		}
+	}
+	DTree.prototype.setData = function (parentId, parentText, data, existing, displayName) {
+		var that = this,
+			name = parentText.text;
+		if (that._active == parentId) {
+			return;
+		} else {
+			that.tree.deleteItem(this._active);
+			that._active = parentId;
+		}
+		var str = '<?xml version="1.0" encoding="iso-8859-1" ?>' +
+			'<tree id="0" >' + '<item open="1" text="' + name + '" id="' + parentId + '" nocheckbox="1" >';
+		data = data[0];
+		for (var j = 0, l = data.length; j < l; j++) {
+            var txt = (data[j]._id + '').replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+            str += '<item im0="bullet.png"  text="' + txt + '" id="' + txt + '" />'
+		}
+		str += '</item>' + '</tree>';
+		that.tree.loadXMLString(str); 
+		for (var i = 0; i < existing.length; i++) {
+			that.tree.setCheck(existing[i],1);		
+		}
+	}
+	DTree.prototype.remove = function () {
+		try {
+			this.destructor();
+			return true;
+		} catch (e) {
+			return false;
+		}
+	}
+	DTree.prototype.getActive = function () {
+		return this._active;
+	}
+	DTree.prototype.deleteAll = function () {
+		this.tree.deleteItem(this._active);
+	}
+	return DTree;
+})(jQuery);
+
+
+// search : '#gs-search-filters'
+// selector : "gs-filter-tree",
+// callback : will be passed with parent and checked items
+
+var Layout = (function (j$) {
+    var _cmd = "animate";
+    /*@cc_on
+        if (/^10/.test(@_jscript_version)) {
+            _cmd = "css";
+        }
+    @*/
+	var layoutOperations = {
+		toggleLeftPanel: function (command) {
+			var icon = j$('#gs-hideDnD').find('.nav-icon').eq(0),
+				left = j$('.gs-leftpanel'),
+				right = j$('.gs-rightpanel');
+			if (!command) {
+				if (icon.hasClass('nv-cl')) {
+					command = "close";
+				} else {
+					command = "open";
+				}
+			}
+			if (command == "close") {
+				j$('#gs-hideDnD').attr('title', 'Click to show');
+				$('.gs-area').css({
+                	overflow : "hidden"
+                });
+                left[_cmd]({
+					'width': '0px',
+					jquery:true
+				}, 'medium');
+				right[_cmd]({
+					'margin-left': 0,
+					jquery:true
+				});
+				icon.removeClass('nv-cl');
+				icon.addClass('nv-op');
+
+			} else {
+				j$('#gs-hideDnD').attr('title', 'Click to hide');
+				left[_cmd]({
+					'width': '450px',
+					jquery:true
+				}, 'medium', function(){
+                	$('.gs-area').css({
+                        overflow : "auto",
+                        jquery:true
+                    });    
+                });
+				right[_cmd]({
+					'margin-left': '450px',
+					jquery:true
+				});
+				icon.removeClass('nv-op');
+				icon.addClass('nv-cl');
+			}
+		},
+		toggleRightPanel: function (command) {
+			var icon = j$('#filterpaneltoggle').find('.nav-icon').eq(0),
+				left = j$('.gs-lastpanel'),
+				right = j$('.gs-rightpanel');
+			if (!command) {
+				if (icon.hasClass('nv-op')) {
+					command = "close";
+				} else {
+					command = "open";
+				}
+			}
+			if (command == "close") {
+				j$('#gs-filterSelecor').css('display', 'none');
+				j$('#filterpaneltoggle').attr('title', 'Click to show');
+                j$('#gs-search-filters').css('display', 'none');
+				left[_cmd]({
+					'width': '0px',
+					jquery:true
+				}, 'medium');
+				right[_cmd]({
+					'margin-right': 0,
+					jquery:true
+				});
+				icon.removeClass('nv-op');
+				icon.addClass('nv-cl');
+			} else {
+				j$('#filterpaneltoggle').attr('title', 'Click to hide');
+				left[_cmd]({
+					'width': '225px',
+					jquery:true
+				}, 'medium', function () {
+					j$('#gs-filterSelecor').css('display', '');
+                    j$('#gs-search-filters').css('display', '');
+				});
+                j$('#gs-filterSelecor').css('display', '');
+                j$('#gs-search-filters').css('display', '');
+				right[_cmd]({
+					'margin-right': '225px',
+					jquery:true
+				});
+				icon.removeClass('nv-cl');
+				icon.addClass('nv-op');
+			}
+		}
+	}
+	j$('#gs-hideDnD').on('click', function () {
+		layoutOperations.toggleLeftPanel();
+	});
+	j$('#filterpaneltoggle').on('click', function () {
+		layoutOperations.toggleRightPanel();
+	});
+	return {
+		left: function (cmd) {
+			layoutOperations.toggleLeftPanel(cmd);
+		},
+		right: function (cmd) {
+			layoutOperations.toggleRightPanel(cmd);
+		}
+	}
+})(jQuery);    
+    
+	var newStack;
+    </script>
+	<apex:form >
+		<apex:actionFunction name="_GainSight" action="{!loadBuilder}"
+			rerender="emptyoutpan"></apex:actionFunction>
+		<apex:outputPanel id="emptyoutpan">
+			<script type="text/javascript">
+                
+            	(function($j, a , b, c){
+					if(b || c && !newStack){
+						newStack = new $GS(a, b, c);
+						$j('#gs-save').on('click', function(){		
+							newStack.save();
+						});
+						
+                        $j('#gs-saveas').on('click', function(){		
+							newStack.save(true);
+						});
+						
+						$j('#gs-run').on('click', function(){
+							newStack.run();
+						});
+						
+						$j('#gs-export').on('click', function(){
+						    newStack.export();
+                        });
+					} 
+				 })(jQuery, "{!(option)}", "{!(collectionid)}", "{!(reportid)}");
+				
+             </script>
+		</apex:outputPanel>
+	</apex:form>
+	<script>
+    ;_GainSight();
+    </script>
+</apex:page>

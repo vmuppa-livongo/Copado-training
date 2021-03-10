@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>TASKRAY__trAccessControl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trCloneUtilsPublicWithoutSharing</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trControllerWOSharingPublicWOSharing</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trLightningOutDataFetcherController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trMyWorkController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>ADMINS: This is assigned to users without TaskRay - Standard Access or RO permission set. This additive set will provide access to new features in this release. It may be ignored or deleted if you use a TaskRay perm set or you update profile permissions.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>TaskRay Supplemental Permissions November 2019</label>
+    <pageAccesses>
+        <apexPage>TASKRAY__trChatter</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+</PermissionSet>

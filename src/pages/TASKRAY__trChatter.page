@@ -1,0 +1,21 @@
+<apex:page showHeader="false" showChat="false" title="{!$Label.taskray__taskray_pagetitle}">
+  <apex:includeScript value="{!URLFOR($Resource.TASKRAY__trplugins, 'plugins/insertion.query.min.js')}" />
+  <chatter:feedWithFollowers entityId="{!$CurrentPage.parameters.id}"></chatter:feedWithFollowers>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      window.navigateToUrlNewTab = parent.window.navigateToUrlNewTab;
+      window.srcUp = parent.window.navigateToUrlNewTab;
+      //Add target blank to all anchors
+      insertionQ('a').every(function (element) {
+        if (element.tagName === 'A' && element.target !== '_blank' && element.href && element.href.indexOf('javascript:') === -1) {
+          element.setAttribute('target', '_blank');
+        }
+      }.bind(this));
+    });
+    document.querySelectorAll('a').forEach(function (element) {
+      if (element.tagName === 'A' && element.target !== '_blank' && element.href && element.href.indexOf('javascript:') === -1) {
+        element.setAttribute('target', '_blank');
+      }
+    })
+  </script>
+</apex:page>

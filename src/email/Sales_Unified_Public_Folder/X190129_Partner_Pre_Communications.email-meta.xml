@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>190129 Livongo Signs Definitive Agreement to Acquire myStrength</name>
+    <style>freeForm</style>
+    <subject>Livongo Signs Definitive Agreement to Acquire myStrength</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Last week, Livongo announced that it has signed a definitive agreement to acquire Denver-based myStrength, Inc. The acquisition will enable us to more fully address the health of the whole person by bringing behavioral health conditions, including depression, anxiety, stress, substance use, chronic pain, and insomnia to Livongo’s Applied Health Signals solution.
+
+Approximately 135 million Americans suffer from at least one chronic condition and 20 percent of adults also have a behavioral health issue. The addition of myStrength will allow Livongo members to seamlessly manage their chronic and behavioral health conditions on one platform. This also strengthens our ability to bring clients a broader, more personalized offering that improves clinical outcomes and reduces overall healthcare spending.
+
+Here is the press release with additional information.
+
+Thanks for your ongoing partnership.
+
+[Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

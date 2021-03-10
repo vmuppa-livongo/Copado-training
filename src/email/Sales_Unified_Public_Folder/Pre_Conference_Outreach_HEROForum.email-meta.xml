@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>180928_Pre Conference Outreach HEROForum</name>
+    <style>freeForm</style>
+    <subject>Are you attending HERO Forum18?</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+On Tuesday, October 2, Dr. Anoop Sangha, Livongo’s VP Clinical Product Specialist, will take the stage at HERO Forum18 in a session titled The Proof is in the Peer-Reviewed Studies. In this session, Dr. Sangha will discuss Livongo’s proven successes in member satisfaction, clinical results, and cost savings outlined in Livongo’s peer-reviewed studies and scaled across our book of business.
+
+If you’re at the Forum, it would be great to connect, and we hope you will join us for an engaging session.
+
+Looking forward to catching up soon.
+
+Best,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

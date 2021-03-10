@@ -1,0 +1,136 @@
+<html><head>
+	<style type="text/css">html {
+   overflow-y: visible !important ;
+}
+	</style>
+	<title></title>
+	<meta content="text/html; charset=UTF-8" /><meta content="width=device-width, initialscale=1.0" name="viewport" /><meta content="IE=edge" />
+	<style type="text/css">@media screen and (max-width: 480px) {
+  .contentbuilderBaseColumnRow .columnCell {display:inline-block; width:100%}
+}
+ .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:600px}
+@media only screen and (max-width: 480px) {
+  .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:320px}
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;"><table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td align="Center" style="padding-bottom:10px;padding-top:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/MATTER_Header1?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="600" /></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-bottom:5px;padding-top:10px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},&nbsp;<br />
+												<br />
+												Worried about how your organization can enhance employee health and wellbeing -- without squeezing already tight budgets -- in light of the COVID-19 pandemic?&nbsp;&nbsp;<br />
+												<br />
+												You're not alone. Join me next week to hear other self-insured employers' current proactive and reactive strategies amidst COVID-19, and get a glimpse into the innovative solutions they are planning to adopt, accelerate and deploy in 2021.&nbsp;&nbsp;</span></span><br />
+												<br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">It's all part of the new Chicago-based program series <b><i>Insights on Innovation for Self-insured Employers</i></b>, hosted by MATTER and Livongo.&nbsp;<br />
+												<br />
+												<b>November 18, 12:30 - 1:30 PM CT</b><br />
+												<br />
+												<span style="line-height:1;">Panelists:</span></span> </span>
+
+												<ul>
+													<li><span style="overflow-y: hidden;"><span style="font-size:16px;"><span style="overflow-y: hidden;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height:1;">Glen Tullman, Founder and former Executive Chairman of Livongo</span></span></span></span></span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="overflow-y: hidden;"><span style="overflow-y: hidden;"><span style="line-height:1;">Jim Winkler, </span></span></span>SVP&nbsp;and Global Chief Innovation Officer of Health Solutions<span style="overflow-y: hidden;"><span style="overflow-y: hidden;"><span style="line-height:1;"> at Aon Hewitt</span></span></span></span></span></li>
+													<li><span style="overflow-y: hidden;"><span style="font-size:16px;"><span style="overflow-y: hidden;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height:1;">Jason Parrott, Senior Manager of Global Healthcare and Well Being Strategy at Boeing</span></span></span></span></span></span></li>
+												</ul>
+												<span style="overflow-y: visible;"> </span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<div style="text-align:center;word-break:break-word;margin-bottom:10px;margin-top:5px;">
+									<div style="display:inline-block;"><a href="https://www.eventbrite.com/e/proactive-strategies-for-self-insured-employer-groups-into-2021-and-beyond-registration-125560824807" style="display:block;mso-padding-alt:0;margin:0;text-align:center;border:2px solid #FFFFFF;font-family:Arial,sans-serif;background-color:#0060FC;padding-right:20px;color:#FFFFFF;padding-bottom:10px;border-radius:15px;font-weight:bold;text-decoration:none;padding-top:10px;padding-left:20px;font-size:16px;" target="_blank"><span>REGISTER HERE</span></a></div>
+									</div>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="padding-bottom: 10px; padding-top: 10px;"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 16px;">Stay with us after the program for a VIP discussion and networking via Zoom breakout rooms. Reserve your spot by opting in to the networking discussion when you register.&nbsp;</span></font><br />
+												<br />
+												<font face="Arial, Helvetica, sans-serif"><span style="font-size: 16px;">I hope you are able to join us and look forward to connecting afterwards to hear your thoughts&nbsp;and brainstorm strategies that may work for your organization.&nbsp;</span></font><br />
+												<br />
+												<font face="Arial, Helvetica, sans-serif"><span style="font-size: 16px;">Stay healthy,</span></font><br />
+												<font face="Arial, Helvetica, sans-serif"><span style="font-size: 16px;">{{{Sender.FirstName}}}</span></font><br />
+												<br />
+												<font face="Arial, Helvetica, sans-serif"><span style="font-size: 16px;">{{{Sender.Signature}}}</span></font></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-bottom:10px;padding-top:10px;">
+												<div style="text-align: center;"><br />
+												<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041<br />
+												<a href="mailto:unsubscribe@e-1alg9zf3qo01qow46vkmxmslp0apnl5npfuc39907dhzsihkha.46-180lweai.na134.apex.salesforce.com?subject=Unsubscribe">Unsubscribe</a></span></span></div>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+<img src="https://livongohealth2ndorg.my.salesforce.com/servlet/servlet.ImageServer?oid=00D4600000180Lw&amp;esid=0184R00000hCc08" /></body></html>

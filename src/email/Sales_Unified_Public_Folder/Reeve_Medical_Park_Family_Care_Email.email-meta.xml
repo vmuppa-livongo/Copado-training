@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Reeve Medical Park Family Care Email</name>
+    <style>freeForm</style>
+    <subject>Livongo Partners with Largest Primary Care Group in Alaska</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+We wanted to share our recent announcement that Livongo has partnered with Medical Park Family Care, the largest primary care group in Alaska, and their health plan. These partnerships will create a seamless experience between Livongo and provider for the member while simultaneously ensuring an effective, scalable, and sustainable business model for Livongo, provider, and payer.
+
+Livingo’s relationships with the country’s largest self-insured employers, partnerships with the two largest PBMs, and 4 of the top 7 payers in the country has allowed our 50,000 members to easily enroll in the program and feel empowered to live better and healthier lives.
+
+Livongo’s Industry Leading Approach Drives Outcomes:
+
+*Livongo NPS is +64 compared to Health Plan NPS of +12 and Amazon NPS of +69.
+*75% of members felt more confident managing their diabetes after using Livongo.
+*Livongo saved two self-insured employers $83 per participant per month on healthcare costs.
+*Members of Livongo for Diabetes experienced a 21% reduced rate of non-emergent ER visits.
+
+Our studies have clearly shown that Livongo is making a positive impact in the lives of our members and is saving payers money. I would love to catch up and continue our conversation on this topic. 
+
+Thanks,
+
+Adam Claypool
+Director of Commercial Operations
+Livongo
+m: 314.346.2964
+o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Ste 2880, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

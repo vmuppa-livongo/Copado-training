@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>180829 Member Success Stories Outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo’s positive impact on members’ health and quality of life</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I am excited to share that we recently launched a new page on our website that highlights our member success stories at Livongo. Here is a link.
+
+As you know, we are passionate about empowering our members to live better and healthier lives, and these success stories help to showcase the positive impact we make on a daily basis.  Over time, we will share member and client stories from our diabetes, hypertension and prediabetes program.
+
+We hope these stories inspire you and look forward to connecting soon.
+
+Thanks,
+
+[Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

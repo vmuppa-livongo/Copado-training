@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Brief announcement to partners to drive conversation around the merger</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Teladoc &amp; Livongo</name>
+    <style>none</style>
+    <subject>Let&apos;s Discuss the Teladoc &amp; Livongo Merger</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

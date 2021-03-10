@@ -1,0 +1,17 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" controller="TASKRAY.trSF1DashboardController"
+  applyHtmlTag="false" applyBodyTag="false">
+  <html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title>TaskRay SF1</title>
+  </head>
+
+  <body>
+    This application has been moved to an extension package. Email success@bracketlabs.com for installation details.
+  </body>
+
+  </html>
+
+</apex:page>

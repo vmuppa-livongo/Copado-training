@@ -1,0 +1,20 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},<br /> <br /> I have been thinking about you this week and hope you and your family are safe and healthy. I saw some new information this weekend on the increasing importance of remote monitoring that I thought would be useful to you.<br /> &nbsp;<br /> We’ve been talking with a lot of our clients about people with chronic conditions because they are at higher risk of complications due to COVID-19. I just saw a report from the CDC saying that 78% of people admitted to the ICU (related to COVID-19) had at least one preexisting condition*. Here’s a </span></span> 
+  <a href="https://www.cdc.gov/mmwr/volumes/69/wr/mm6913e2.htm"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">link</span></span></a> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"> if you’re interested. These people are top priority and need additional attention today.<br /> <br /> We are learning that while this most vulnerable population is sheltering at home, avoiding exposure, and using telehealth more, healthcare providers need to be able to monitor them remotely in order to optimize those telehealth visits. Major healthcare systems are now turning to Livongo to support remote monitoring knowing that our diabetes and hypertension programs provide valuable biometric data via cellular connections with no additional steps for Members.<br /> <br /> The role that remote monitoring can play to support ongoing care has caught the attention of health insurers and the government. At Livongo, we are working closely with these governing bodies to mobilize Livongo meters and to understand changing reimbursement landscapes that can help you. As I learn more details, would you like me to keep you informed?<br /> &nbsp;<br /> Here is a quick </span></span> 
+  <a href="https://www.cnbc.com/video/2020/03/30/livongo-health-founder-glen-tullman-on-fighting-coronavirus-with-remote-monitoring.html?&amp;qsearchterm=livongo"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">CNBC segment </span></span></a> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">recapping this information.<br /> &nbsp;<br /> Stay healthy and safe,<br /> <br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  <br /> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">*<span id="docs-internal-guid-16656d58-7fff-0639-4ad1-0dac35b255fa"><span style="font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">CDC. Preliminary Estimates of the Prevalence of Selected Underlying Health Conditions Among Patients with Coronavirus Disease 2019 — United States, February 12–March 28, 2020. </span><span style="font-weight: 700; font-style: italic; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Weekly</span><span style="font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"> / April 3, 2020 / 69(13);382–386.&nbsp;</span></span></span></span> 
+  <br /> 
+  <br /> 
+  <meta /> 
+  <h1 dir="ltr" style="line-height:1.38;background-color:#ffffff;margin-top:24pt;margin-bottom:6pt;">&nbsp;</h1>
+ </body>
+</html>

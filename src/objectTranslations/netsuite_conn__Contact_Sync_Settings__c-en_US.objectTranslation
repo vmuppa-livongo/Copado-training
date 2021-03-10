@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Contact Roles To Sync --></label>
+        <name>netsuite_conn__Contact_Roles_To_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create --></label>
+        <name>netsuite_conn__Create__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Trigger --></label>
+        <name>netsuite_conn__Disable_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Contact From Account Role --></label>
+        <name>netsuite_conn__Filter_Contact_From_Account_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update --></label>
+        <name>netsuite_conn__Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Batch --></label>
+        <name>netsuite_conn__Use_Batch__c</name>
+    </fields>
+</CustomObjectTranslation>

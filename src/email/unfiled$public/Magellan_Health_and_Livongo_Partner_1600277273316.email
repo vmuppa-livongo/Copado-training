@@ -1,0 +1,18 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Hi&nbsp;{{{Recipient.FirstName}}}, 
+  <br /> 
+  <br /> Recently, 
+  <a href="https://www2.livongo.com/news/magellan-health-and-livongo-to-co-create-a-new-digital-and-clinical-care">Livongo announced our new partnership with Magellan Health,</a>&nbsp;making Livongo for Behavioral Health available to Magellan Health customers and their members as the digital entry point to a wide range of Magellan Health and Livongo solutions and services. 
+  <br /> 
+  <br /> Livongo for Behavioral Health will provide Magellan customers and their members, consumer-driven digital self-care for mental and behavioral health outside of the clinical setting. As part of the strategic partnership, Livongo and Magellan Health will co-market behavioral health services and collaborate on new product innovations that enhance the member experience and care delivery. 
+  <br /> 
+  <br /> If you would like to learn more, feel free to reach out! 
+  <br /> {{{Sender.FirstName}}} 
+  <br /> 
+  <br /> {{{Sender.Signature}}}
+ </body>
+</html>

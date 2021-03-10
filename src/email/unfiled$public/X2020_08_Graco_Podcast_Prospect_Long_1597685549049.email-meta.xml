@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>LONG VERSION: This is an email template to share the Graco Podcast with Prospects</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_08_Graco Podcast_Prospect_Long</name>
+    <style>none</style>
+    <subject>Bending the Cost Curve on Diabetes - A Global Benefits Leader’s Perspective</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

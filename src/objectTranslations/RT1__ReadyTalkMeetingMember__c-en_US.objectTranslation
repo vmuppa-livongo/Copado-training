@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Lead/Contact Company --></label>
+        <name>RT1__Company__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Contact that is related to the ReadyTalk Meeting Member. --></help>
+        <label><!-- Contact --></label>
+        <name>RT1__Contact__c</name>
+        <relationshipLabel><!-- ReadyTalk Meeting History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Duration (minutes) --></label>
+        <name>RT1__DurationMinutes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead/Contact Email --></label>
+        <name>RT1__Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most recent date &amp; time the meeting member entered the meeting. --></help>
+        <label><!-- Attendance Entry Time --></label>
+        <name>RT1__EntryTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- Most recent date &amp; time the meeting member left the meeting. --></help>
+        <label><!-- Attendance Exit Time --></label>
+        <name>RT1__ExitTime__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Lead that is related to the ReadyTalk Meeting Member. --></help>
+        <label><!-- Lead --></label>
+        <name>RT1__Lead__c</name>
+        <relationshipLabel><!-- ReadyTalk Meeting History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date &amp; Time --></label>
+        <name>RT1__MeetingDateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Name --></label>
+        <name>RT1__MeetingName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Status --></label>
+        <name>RT1__Meeting_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Contact --></label>
+        <name>RT1__No_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Lead --></label>
+        <name>RT1__No_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Phone --></label>
+        <name>RT1__Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Answer 1 --></label>
+        <name>RT1__Poll_Answer1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Answer 2 --></label>
+        <name>RT1__Poll_Answer2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Answer 3 --></label>
+        <name>RT1__Poll_Answer3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Answer 4 --></label>
+        <name>RT1__Poll_Answer4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Answer 5 --></label>
+        <name>RT1__Poll_Answer5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Question 1 --></label>
+        <name>RT1__Poll_Question1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Question 2 --></label>
+        <name>RT1__Poll_Question2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Question 3 --></label>
+        <name>RT1__Poll_Question3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Question 4 --></label>
+        <name>RT1__Poll_Question4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Poll Question 5 --></label>
+        <name>RT1__Poll_Question5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Answer 1 --></label>
+        <name>RT1__PostSurvey_Answer1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Answer 2 --></label>
+        <name>RT1__PostSurvey_Answer2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Answer 3 --></label>
+        <name>RT1__PostSurvey_Answer3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Answer 4 --></label>
+        <name>RT1__PostSurvey_Answer4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Answer 5 --></label>
+        <name>RT1__PostSurvey_Answer5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Question 1 --></label>
+        <name>RT1__PostSurvey_Question1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Question 2 --></label>
+        <name>RT1__PostSurvey_Question2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Question 3 --></label>
+        <name>RT1__PostSurvey_Question3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Question 4 --></label>
+        <name>RT1__PostSurvey_Question4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Event Survey Question 5 --></label>
+        <name>RT1__PostSurvey_Question5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Title --></label>
+        <name>RT1__ReadyTalkMeeting__c</name>
+        <relationshipLabel><!-- ReadyTalk Meeting Members --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ReadyTalk Registration ID --></label>
+        <name>RT1__ReadyTalkRegistrationID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Date &amp; Time --></label>
+        <name>RT1__ReadyTalk_Meeting_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address --></label>
+        <name>RT1__RegistrationAddress1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 2 --></label>
+        <name>RT1__RegistrationAddress2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address 3 --></label>
+        <name>RT1__RegistrationAddress3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Revenue --></label>
+        <name>RT1__RegistrationAnnualRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Answer 1 --></label>
+        <name>RT1__RegistrationAnswer1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Answer 2 --></label>
+        <name>RT1__RegistrationAnswer2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Answer 3 --></label>
+        <name>RT1__RegistrationAnswer3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Answer 4 --></label>
+        <name>RT1__RegistrationAnswer4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Answer 5 --></label>
+        <name>RT1__RegistrationAnswer5__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>RT1__RegistrationCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>RT1__RegistrationComments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>RT1__RegistrationCompany__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>RT1__RegistrationCountry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>RT1__RegistrationDepartment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>RT1__RegistrationEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>RT1__RegistrationFax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration First Name --></label>
+        <name>RT1__RegistrationFirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Industry --></label>
+        <name>RT1__RegistrationIndustry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Title --></label>
+        <name>RT1__RegistrationJobTitle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Last Name --></label>
+        <name>RT1__RegistrationLastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile Phone --></label>
+        <name>RT1__RegistrationMobilePhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Name --></label>
+        <name>RT1__RegistrationName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Employees --></label>
+        <name>RT1__RegistrationNumberOfEmployees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>RT1__RegistrationPhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purchasing Time Frame --></label>
+        <name>RT1__RegistrationPurchasingTimeFrame__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Question 1 --></label>
+        <name>RT1__RegistrationQuestion1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Question 2 --></label>
+        <name>RT1__RegistrationQuestion2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Question 3 --></label>
+        <name>RT1__RegistrationQuestion3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Question 4 --></label>
+        <name>RT1__RegistrationQuestion4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Custom Question 5 --></label>
+        <name>RT1__RegistrationQuestion5__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>RT1__RegistrationState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Survey Id --></label>
+        <name>RT1__RegistrationSurveyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Website --></label>
+        <name>RT1__RegistrationWebsite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zip Code --></label>
+        <name>RT1__RegistrationZip__c</name>
+    </fields>
+    <fields>
+        <label><!-- Send Invite --></label>
+        <name>RT1__SendInvite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meeting Member Status --></label>
+        <name>RT1__Status__c</name>
+        <picklistValues>
+            <masterLabel>Attended</masterLabel>
+            <translation><!-- Attended --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confirmed</masterLabel>
+            <translation><!-- Confirmed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Failure: Address Error</masterLabel>
+            <translation><!-- Email Failure: Address Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Failure: Opt-Out</masterLabel>
+            <translation><!-- Email Failure: Opt-Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invited</masterLabel>
+            <translation><!-- Invited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No-Show</masterLabel>
+            <translation><!-- No-Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unmatched --></label>
+        <name>RT1__Unmatched__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- AddMeetingMembers --></label>
+        <name>RT1__AddMeetingMembers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- InviteMeetingMembers --></label>
+        <name>RT1__InviteMeetingMembers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- InviteToReadyTalkMeeting --></label>
+        <name>RT1__InviteToReadyTalkMeeting</name>
+    </webLinks>
+</CustomObjectTranslation>

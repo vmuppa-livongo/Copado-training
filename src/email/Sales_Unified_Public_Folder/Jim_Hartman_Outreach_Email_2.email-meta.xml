@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Jim Hartman Outreach Email 2</name>
+    <style>freeForm</style>
+    <subject>A quarter of a million people in the U.S. died from this in 2017</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+As you look for ways in 2018 to make a positive impact for the people that you’re responsible for at {!Account.Name}; I’d like for you to ponder the following sobering statistic:
+
+In 2017, approximately 250,000 people in the U.S. died with diabetes being the primary or underlying cause of death. To put that into perspective, a 747 airliner holds 416 passengers. 250,000 people would equate to nearly two fully boarded 747’s crashing and killing everyone on board every single day of the year. It’s time to do something different for employees and patients alike in 2018. People are suffering and the medical costs for {!Account.Name} are going through the roof!
+
+That’s why many of your colleagues at the nation’s largest health systems and employers (Cerner, Mt. Sinai, Mission Health, Barnes Jewish Hospital, Amazon, PepsiCo, Intel, Microsoft, Lowe’s &amp; Merck) have partnered with Livongo. Even these incredibly successful organizations recognized that they needed help in addressing their own rapidly growing diabetes epidemic.
+
+Diabetes is an epidemic for {!Account.Name} and only getting worse. There’s a better way. It’s called Livongo. Make 2018 the year that you implemented a proven solution. I look forward to helping you.
+
+Thank you,
+
+Jim Hartman
+Vice President of Sales, Health Systems
+Livongo
+m: 813-476-4188
+e: jhartman@livongo.com
+a:  444 N. Michigan Ave. Ste 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

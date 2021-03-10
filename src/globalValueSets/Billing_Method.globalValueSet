@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Direct Invoice through Enterprise / Client</fullName>
+        <default>false</default>
+        <label>Direct Invoice through Enterprise / Client</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Invoice through Partner / Payer</fullName>
+        <default>false</default>
+        <label>Direct Invoice through Partner / Payer</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Through Partner</fullName>
+        <default>false</default>
+        <label>Direct Through Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct to Employer/Client</fullName>
+        <default>false</default>
+        <label>Direct to Employer/Client</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct to TPA/ASO</fullName>
+        <default>false</default>
+        <label>Direct to TPA/ASO</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Claims through Payer</fullName>
+        <default>false</default>
+        <label>Medical Claims through Payer</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Claims TPA/ASO</fullName>
+        <default>false</default>
+        <label>Medical Claims TPA/ASO</label>
+    </customValue>
+    <customValue>
+        <fullName>Through PBM</fullName>
+        <default>false</default>
+        <label>Through PBM</label>
+    </customValue>
+    <customValue>
+        <fullName>Milestone Based Billing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Milestone Based Billing</label>
+    </customValue>
+    <masterLabel>Billing Method</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

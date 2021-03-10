@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Neal 12/19/17 Custom 1:1 email</name>
+    <style>freeForm</style>
+    <subject>Impactful News from Livongo</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Happy New Year! Despite the Holiday season, we have been busier than ever at Livongo. In recent weeks, we have received significant news coverage for our innovation and thought leadership. I believe you might find some of these articles interesting:
+
+Livongo has added Arnnon Geshuri as its new Chief People Officer. Geshuri most recently served as the Vice President of Human Resources at Tesla and oversaw the growth of the company from a 400-person startup to an industry leader with over 35,000 employees around the globe. Under Geshuri’s leadership, Livongo plans to more than double its employee base over the next nine months.
+
+Livongo has partnered with Castlight Health to integrate Livongo for Diabetes into the Castlight platform. Livongo will be offered to 250 Castlight clients and will launch the first integrated solution in 2018.
+
+Livongo Senior Vice President of Clinical and Strategic Partnerships, Dr. Bimal Shah, collaborated with leading cardiologists with the American College of Cardiology to publish a paper highlighting the future of technology-based innovations in healthcare.
+
+Hope you enjoyed the holidays and I look forward to talking soon.
+
+Thanks,
+
+Neal Lewis
+Regional Vice President
+Livongo
+m: 239.633.0482 e: nlewis@livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,85 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" title="360 View" tabStyle="CustomerSuccess360__tab" standardController="Account" extensions="JBCXM.Customer360Broker,JBCXM.NSRemoting,JBCXM.GSCommonBroker" standardStylesheets="false" >
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+     <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-1.10.2.min.js'))}"></script>
+    <script src="{!JSENCODE(URLFOR($Resource.GSMobileApp,'bootstrapbdl/jQueryMobile/js/jquery.mobile-1.4.3.min.js'))}"></script>
+    <script type='text/javascript' src='/canvas/sdk/js/29.0/publisher.js'></script>
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/jQueryMobile/css/jquery.mobile-1.4.3.min.css'))}" />
+
+    <div id="main" style="background-color:#FFF !important;">
+    <script type="text/javascript">
+        var fromTab = "{!JSENCODE($CurrentPage.parameters.fromTab)}";
+        var GS = GS || {};
+        var d = new Date();
+        GS.isMobile = true;
+        GS.remotingEndPoint     = '{!$RemoteAction.Customer360Broker.customer360RequestBroker}';
+
+        GS.packageNS            = "{!(pkgNS)}";
+        GS.isPackagedInstance   = (GS.packageNS) ? "true" : "false";
+        GS.customerName         = "{!(customerName)}";
+        GS.customerStatus       = "{!(customerStatus)}";
+        GS.custStatusSysName    = "{!(custStatusSysName)}";
+        GS.sessionId =  "{!(NSSessionId)}";
+        GS.remoting = "{!$RemoteAction.NSRemoting.apinsinvoke}";
+        GS.userConfig = {
+               userName    : "{!$User.FirstName}"+" "+"{!$User.LastName}",
+               userId      : "{!$User.Id}",
+               userEmail    : "{!$User.Email}"
+        };
+        GS.commonRemotingEndPoint   = '{!$RemoteAction.GSCommonBroker.gsCommonRequestBroker}';
+        GS.isCustomerExists = "{!(isCustomerExists)}";
+        GS.accountId  = "{!(accountId)}";
+        GS.customerId = "{!(customerId)}";
+        GS.isAccountExists = "{!(isAccountExists)}";
+        GS.isFromWidgets        = false;
+
+        GS.dataConfig = {
+                 date: d.getFullYear() + '-' + (d.getMonth()>8 ? "":"0") + (d.getMonth() + 1) + "-" + (d.getDate() > 9 ? "":"0") + (d.getDate()),
+                 interval:"days",
+                 units:"7" // last 7 days
+             }
+        GS.isPublisher=false;
+        GS.isCustomerRollupDisabled=false;
+
+        GS.isCS360 = true;
+        GS.npsDetailsData = null;
+    </script>
+
+    <div id="mainContainer" style="margin-top: -76px;"></div>
+    </div>
+
+    
+
+      <apex:outputpanel rendered="{!If($CurrentPage.parameters.env == null , true, false)}">
+        <c:AlertForm />
+        <script>
+            installResources({scripts: ["mobileSetScore/scripts/mobileSetScore.bundle.js"], styles:["mobileSetScore/styles/mobileSetScore.css"]});
+        </script>
+    </apex:outputpanel>
+
+    <apex:outputpanel rendered="{!If($CurrentPage.parameters.env == "dev" , true, false)}">
+        <apex:stylesheet value="{!IF($CurrentPage.parameters.apppath!=null,$CurrentPage.parameters.apppath,'https://localhost:9092/UI')}/mobileSetScore/styles/mobileSetScore.css" />
+        <script type="text/javascript" src="{!IF($CurrentPage.parameters.apppath!=null,$CurrentPage.parameters.apppath, "https://localhost:9092/UI")}/mobileSetScore/scripts/mobileSetScore.bundle.js"></script>
+    </apex:outputpanel>
+<script>
+        var GSGA = {
+            orgId: "{!$Organization.Id}",
+            orgName: "{!$Organization.Name}",
+            userName: "{!$User.FirstName}"+" "+"{!$User.LastName}"
+        };
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    </script>
+    <script src="{!JSENCODE(URLFOR($Resource.CustomJS,'CustomJS/analyticsWrapper.js'))}"></script>
+    <script>
+        gainsightTrackEvents.pushPageViews('GSMEditScorecard');
+    </script>
+    <script>
+        (function(){try{var a=navigator.userAgent;
+        if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1 || a.indexOf('OS/9')!=-1||a.indexOf('OS 9')!=-1||a.indexOf('OS/10')!=-1||a.indexOf('OS 10')!=-1)&&(a.indexOf('Safari')==-1)){
+        var s=document.createElement('style');
+        s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}";
+        document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})();
+  </script>
+</apex:page>

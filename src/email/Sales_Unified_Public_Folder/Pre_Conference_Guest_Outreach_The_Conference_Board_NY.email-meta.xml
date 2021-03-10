@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Pre Conference Guest Outreach: The Conference Board NY</name>
+    <style>freeForm</style>
+    <subject>Thanks for joining Livongo at The Conference Board</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+As we get closer to The Conference Board, I wanted to say thanks again for joining as our guest. If you anticipate having some free time while in New York, I would love to schedule a quick meeting over coffee. It would be great to catch up and I would love to update you on some exciting new developments at Livongo.
+
+While at the conference, we would love to see you at Livongo and PepsiCo’s session, Proving Financial Impact and Business Model for Chronic Condition Management, on March 8th from 3:00 pm - 3:50 pm. Livongo Chief Commercial Officer, Jim Pursley, will join Magda Rusinowski, PepsiCo Director of US Health Benefits, to discuss Livongo’s clinical outcomes and measurable financial impact.
+
+In addition to Jim and Magda’s session, please save the date for Livongo’s VIP event on March 7th from 6:00 - 9:00 pm. The event is hosted at the Attic, and we are co-sponsoring the evening with Castlight and Hinge Health. At the event, there will be plenty of networking opportunities, cocktails, and a fun appearance by the Bumby&apos;s. If you haven’t heard of them yet, we aren’t judging, but they might be. More about this funky New York-based anonymous duo here. We feel that this will be a fun opportunity to set the tone for a great conference and provide a chance to catch up. RSVP for the event here.
+
+Looking forward to seeing you in New York!
+
+Best regards,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

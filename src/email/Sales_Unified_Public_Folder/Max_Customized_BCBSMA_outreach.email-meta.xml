@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Max Customized BCBSMA outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo partners with Blue Cross Blue Shield of Massachusetts</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+I am excited to share that Blue Cross Blue Shield of Massachusetts will offer Livongo for Diabetes through their newly established Emerging Solutions platform.
+
+The Emerging Solutions platform provides advice to employers who want to implement digital health solutions that effectively improve their employees&apos; health. The program is available to self-insured Blue Cross Blue Shield of Massachusetts accounts with over 1,000 employees.
+
+I would love to discuss this program further and share how Livongo&apos;s chronic conditions management platform leads to improved clinical outcomes and measurable cost savings.
+
+I hope to hear back from you soon.
+
+Best regards,
+
+Max
+
+MAX BERNSTEIN
+Northeast Regional Director
+Livongo
+m: 717.649.7380 e: mbernstein@livongo.com
+a: 444 N Michigan Ave, Suite 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

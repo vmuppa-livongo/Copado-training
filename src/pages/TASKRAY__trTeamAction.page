@@ -1,0 +1,158 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" standardController="TASKRAY__Project__c"
+  extensions="TASKRAY.trChecklistActionController" applyHtmlTag="false" applyBodyTag="false" title="{!$Label.taskray__taskray_pagetitle}">
+  <html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <apex:includeScript value="{!URLFOR($Resource.TASKRAY__trplugins, 'jquery/jquery-3.5.0.min.js')}" />
+    <script type='text/javascript' src='/canvas/sdk/js/publisher.js'></script>
+    <link href="{!URLFOR($Resource.trplugins, 'css/trtaskboard.css')}" rel="stylesheet" type="text/css" />
+    <link href="{!URLFOR($Resource.trslds, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" rel="stylesheet"
+      type="text/css" />
+
+    <script>
+      window.trDebug = {};
+      var projectId = '{!HTMLENCODE(Project__c.Id)}';
+      var labels = JSON.parse("{!JSENCODE(customLabelJSON)}");
+      var currentUserInfo = JSON.parse("{!JSENCODE(currentUserInfo)}");
+      window.TASKRAY.trTaskBoardController = window.TASKRAY.trChecklistActionController;
+      var accessLevels = JSON.parse("{!JSENCODE(accessLevels)}");
+      var trProjectTaskPageURL = '{!URLFOR($Page.trprojecttaskinline)}';
+      var internalOWDIsPublic = {!isProjectInternalSharingModelPublic};
+
+      var rsldsAssetRoot = '{!URLFOR($Resource.trslds)}' + '/assets'
+
+      var sdsIconActionSprite = '{!URLFOR($Resource.trslds, "assets/icons/action-sprite/svg/symbols.svg")}';
+      var sdsIconCustomSprite = '{!URLFOR($Resource.trslds, "assets/icons/custom-sprite/svg/symbols.svg")}';
+      var sdsDoctypeCustomSprite = '{!URLFOR($Resource.trslds, "assets/icons/doctype-sprite/svg/symbols.svg")}';
+      var sdsIconStandardSprite = '{!URLFOR($Resource.trslds, "assets/icons/standard-sprite/svg/symbols.svg")}';
+      var sdsIconUtilitySprite = '{!URLFOR($Resource.trslds, "assets/icons/utility-sprite/svg/symbols.svg")}';
+      var taskrayIconSprite = '{!URLFOR($Resource.trplugins, "images/taskray-sprite.svg")}';
+      window.customJSRoot = '{!URLFOR($Resource.trplugins)}' + '/customjs/';
+      var $j = window.jQuery.noConflict();
+      window.jQuery = false;
+      $j(document).ready(function () {
+        var pageHeight = window.Sfdc.canvas.client.size().heights.pageHeight;
+        $j('body').height(pageHeight);
+      });
+    </script>
+    <style type="text/css" title="dynamic-doc-css">
+      html,
+      html body {
+        overflow: auto;
+        -webkit-overflow-scrolling: auto;
+      }
+
+      body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+      }
+
+      .tr-spinner-container {
+        opacity: 1;
+        left: -moz-calc(50% - 37px);
+        left: -webkit-calc(50% - 37px);
+        left: calc(50% - 37px);
+        top: -moz-calc(50% - 37px);
+        top: -webkit-calc(50% - 37px);
+        top: calc(50% - 37px);
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        overflow: hidden;
+      }
+
+      .tr-spinner {
+        width: 300px;
+        height: 75px;
+        background: url({!URLFOR($Resource.trplugins, 'images/loader.sprite.png')
+      }
+
+      ) left center;
+      -webkit-animation: play 2s steps(4) infinite;
+      -moz-animation: play 2s steps(4) infinite;
+      -ms-animation: play 2s steps(4) infinite;
+      -o-animation: play 2s steps(4) infinite;
+      animation: play 2s steps(4) infinite;
+      margin-left: -225px;
+      }
+
+
+      @-webkit-keyframes play {
+        from {
+          -webkit-transform: translateX(0)
+        }
+        to {
+          -webkit-transform: translateX(300px)
+        }
+      }
+
+      @-moz-keyframes play {
+        from {
+          -moz-transform: translateX(0)
+        }
+        to {
+          -moz-transform: translateX(300px)
+        }
+      }
+
+      @-ms-keyframes play {
+        from {
+          ms-transform: translateX(0)
+        }
+        to {
+          ms-transform: translateX(300px)
+        }
+      }
+
+      @-o-keyframes play {
+        from {
+          transform: translateX(0)
+        }
+        to {
+          transform: translateX(300px)
+        }
+      }
+
+      @keyframes play {
+        from {
+          transform: translateX(0)
+        }
+        to {
+          transform: translateX(300px)
+        }
+      }
+
+      .tr-spinner-text {
+        opacity: 1;
+        width: 100%;
+        text-align: center;
+        top: -moz-calc(50% + 38px);
+        top: -webkit-calc(50% + 38px);
+        top: calc(50% + 38px);
+        position: absolute;
+        padding-top: 4px;
+        color: white;
+        font-size: 20px;
+      }
+
+      .team-pane_wrapper {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id='team-app-container' />
+  </body>
+
+  </html>
+  <script src="{!URLFOR($Resource.trplugins, 'customjs/teamActionApp-bundle.js')}" />
+</apex:page>

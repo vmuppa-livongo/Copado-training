@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When an Opportunity is moved to &apos;Closed Won&apos; check any related Opps to the associated Client Overview and move the Client Overview into &apos;Implementation&apos; status if ALL Opps are &apos;Closed Won&apos;</description>
+    <masterLabel>Opportunity - Update Client Overview Status [Deprecated]</masterLabel>
+</FlowDefinition>

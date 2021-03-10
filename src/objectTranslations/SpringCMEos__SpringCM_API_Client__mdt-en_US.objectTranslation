@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Client Id --></label>
+        <name>SpringCMEos__Client_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Secret --></label>
+        <name>SpringCMEos__Client_Secret__c</name>
+    </fields>
+</CustomObjectTranslation>

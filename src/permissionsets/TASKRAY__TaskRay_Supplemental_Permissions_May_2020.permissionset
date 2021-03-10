@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>TASKRAY__trContextualViewController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trInvocableTasksClone</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trLabelService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trSearchTasksService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TASKRAY__trUserSettingsService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>ADMINS: This is assigned to users without TaskRay - Standard Access or RO permission set. This additive set will provide access to new features in this release. It may be ignored or deleted if you use a TaskRay perm set or you update profile permissions.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>TaskRay Supplemental Permissions May 2020</label>
+    <pageAccesses>
+        <apexPage>TASKRAY__trContextualView</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+</PermissionSet>

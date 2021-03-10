@@ -1,0 +1,10 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Hello&nbsp;{{{Recipient.FirstName}}},<br /> <br /> 92% of employees now report some level of anxiety, with 55% indicating a moderate or high degree of anxiety. In light of this reality, two-thirds of employers say they will prioritize access to high-quality mental health solutions for their employees in 2021.&nbsp;<br /> <br /> Livongo and Willis Towers Watson recently became partners in behavioral health through our SOA expansion, highlighted in this </span></span> 
+  <a href="https://www2.livongo.com/news/when-its-more-than-just-a-bad-day-extending-mental-wellness-resources-to" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">blog post</a>. 
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">The program offers dozens of evidence-based tools and support for managing depression, stress, anxiety, and more with personalized, interactive content.&nbsp;<br /> <br /> I'd like to connect on this exciting development and discuss how our behavioral health and other complementary solutions may be valuable to your specific clients. What does your availability look like over the next week or two?&nbsp;<br /> <br /> I look forward to hearing from you.&nbsp;<br /> <br /> Your partner in health,&nbsp;<br /> {{{Sender.FirstName}}}<br /> {{{Sender.Signature}}}</span></span>
+ </body>
+</html>

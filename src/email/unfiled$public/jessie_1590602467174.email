@@ -1,0 +1,29 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Dear&nbsp;{{{Recipient.FirstName}}} 
+  <br /> 
+  <br /> I’m sure you are busy designing and implementing your back-to-work protocols and senior leadership is looking to you and your team to identify the right strategy. I can only imagine the stress that goes along with navigating that uncharted territory.&nbsp; 
+  <br /> 
+  <br /> As you think about what that looks like for you, I thought some of the data points that I have procured might help to inform your decisions. I have highlighted one that I find very relevant: 
+  <br /> 
+  <br /> People with Chronic Conditions have never been more at-risk than they are today. Roughly 5% of all confirmed COVID cases are admitted to the ICU 6. Of those ICU admissions, 78% have been for people with an underlying health condition.2 The most common of which are hypertension (57%), diabetes (34%), and obesity (41%) 3. Furthermore, mortality rates for those admitted to the ICU have averaged 55% 5 and more generally, those with diabetes had a 3x higher mortality rate than those without.4 Simply put, people with Chronic Conditions are at a much greater risk of ending up in the hospital, ICU, and morgue should they contract COVID. 
+  <br /> 
+  <br /> The others I have included 
+  <a href="https://creative.livongo.com/transfer/b29a817423058c212075ae41c2f373b5ab610d3f6b3f6170a21ed38080103a8c">here</a>, along with the cited resources. 
+  <br /> 
+  <br /> I am speaking with employers everyday that are evaluating how they need to redesign or think about their new healthcare ecosystem to support their employees living with chronic conditions. I would love to schedule some time with you and discuss how Livongo’s proven solution is delivering results and doing so remotely. 
+  <br /> 
+  <br /> Please let me know if you have availability at any of these times: 
+  <br /> Tuesday, June 2nd between 2PM-4PM EST 
+  <br /> Wednesday, June 3rd between 1PM-3PM EST 
+  <br /> Friday, June 5th between 10-12PM EST 
+  <br /> 
+  <br /> In good health, 
+  <br /> {{{Sender.FirstName}}} 
+  <br /> 
+  <br /> {{{Sender.Signature}}}
+ </body>
+</html>

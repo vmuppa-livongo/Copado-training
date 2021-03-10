@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>181115 Glen at MATTER invite</name>
+    <style>freeForm</style>
+    <subject>Join our Fireside Chat with Livongo CEO</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I wanted to invite you to a fireside chat at MATTER (222 W Merchandise Mart Plaza) on Monday evening from 5:30 pm - 7: 30 pm where Livongo CEO, Glen Tullman, will discuss his new book, On Our Terms: Empowering the New Health Consumer. The event is free to attend, simply sign up here.
+
+The book does a great job detailing how the current healthcare system fails people living with chronic conditions and how we need to reimagine the status quo to truly empower the modern day health consumer. These principals guide Livongo as we make it easier for people with chronic conditions to stay healthy.
+
+Hope you can make it!
+
+Thanks,
+Signature</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

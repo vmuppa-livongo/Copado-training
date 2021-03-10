@@ -1,0 +1,32 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hello {{Recipient.FirstName}},</span></span> 
+   <o:p></o:p><br /> &nbsp;</p> 
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Just a brief outreach to say hello and to let you know that Livongo will be attending Aetna’s Market Momentum meeting next week in Atlanta – if you’re attending we’d love to grab a minute to say hello in person!</span></span> 
+   <o:p></o:p></p> 
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">We will be available during dinner on the opening nights of the event, please plan to come by and visit our table.&nbsp; We’ll have some fun giveaways and would love to answer any questions you have about our shared offering.</span></span> 
+   <o:p></o:p></p> 
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Please let me know if you have any specific questions in advance and I’ll be sure that we’re ready to tackle them!</span></span> 
+   <o:p></o:p></p> 
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">And if you won’t be attending Market Momentum, let us know anytime you’d like to set up a call and/or demo – just reply to this email or contact us at <span style="color:#4472C4"><a href="mailto:aetnasales@livongo.com">aetnasales@livongo.com</a></span></span></span> 
+   <o:p></o:p></p> 
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Thanks for your partnership, and we look forward to connecting soon.</span></span> 
+   <o:p></o:p></p> 
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Kim</span></span> 
+   <o:p></o:p></p> 
+  <p class="MsoNormal"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b><span style="color:#007AFD">Kim LaFontana</span></b></span></span> 
+   <o:p></o:p><br /> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b><span style="color:black">Vice President, Strategic Accounts</span></b></span></span> 
+   <o:p></o:p><br /> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black">Livongo</span></span></span> 
+   <o:p></o:p><br /> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color: rgb(70, 166, 76);">m: </span><span style="color: black;">617-513-1422 </span><span style="color: rgb(70, 166, 76);">e: </span><a href="mailto:kimberly.lafontana@livongo.com">kimberly.lafontana@livongo.com</a></span></span> 
+   <o:p></o:p><br /> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="http://www.livongo.com/">www.livongo.com</a><span style="color: black;">&nbsp;</span></span></span> 
+   <o:p></o:p></p> 
+  <p class="MsoNormal"> 
+   <o:p> 
+    <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp;</span></span> 
+   </o:p></p> 
+  <!--EndFragment-->
+ </body>
+</html>

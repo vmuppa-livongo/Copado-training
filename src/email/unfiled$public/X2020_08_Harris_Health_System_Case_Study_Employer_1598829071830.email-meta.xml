@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is to promote the Harris Health System Case study (Employer)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_08_Harris Health System Case Study_Employer</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Case Study: Managing Diabetes &amp; Hypertension to Lower Costs and Improve Employee Health</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

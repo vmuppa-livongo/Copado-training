@@ -1,0 +1,11 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Dear {{{Recipient.FirstName}}},<br /> <br /> I’m glad to see that you registered to attend The Conference Board’s 20th Annual Employee Health Care Conference! Have you chosen which sessions you will attend?<br /> <br /> I’m excited to invite you to attend our session, <i>A New Lens on Whole-Person Health with Data-Driven Remote Care</i>, on <b>June 30, at 1:00pm EDT</b>. Join experts from <b>VSP</b> and <b>Livongo</b> to explore how transforming data into actionable insights empowers and enables Members and enables staff to address both mental and physical wellness, and close gaps in care.<br /> <br /> This year’s virtual event features more than 50 presentations, but this is one you don’t want to miss!<br /> <br /> <b>Can I save you a seat? </b><br /> <br /> The complete agenda for the 20th Annual Employee Health Care Conference is available </span></span> 
+  <meta charset="utf-8" /> 
+  <meta charset="utf-8" /> 
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><b id="docs-internal-guid-b8b4a5ab-7fff-d3ae-1979-609856ebd4c5" style="font-weight:normal;"><a href="http://conference-board.org/pdf_free/agendas/B20020.pdf" style="text-decoration:none;"><span style="color: rgb(17, 85, 204); background-color: transparent; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: underline; text-decoration-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">here</span></a></b>.<br /> <br /> <br /> I hope to see you there!<br /> <br /> <br /> Stay Healthy and Safe,<br /> {{{Sender.FirstName}}}<br /> <br /> <br /> {{{Sender.Signature}}}</span></span>
+ </body>
+</html>

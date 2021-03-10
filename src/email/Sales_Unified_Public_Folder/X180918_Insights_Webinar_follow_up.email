@@ -1,0 +1,79 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif" style="" size="3">Hi {!Contact.FirstName},&nbsp;</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif" style="" size="3"><br></font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3">I am very excited to share our recent case study on how Livongo improved clinical outcomes and reduced diabetes costs for employees of Jefferson Health - Northeast. You can see the full case study <a href="https://www.livongo.com/docs/pdf/Livongo%20Jefferson%20Health%20Case%20Study.pdf">here</a>.&nbsp;</font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3"><br></font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3">Jefferson Health Employees loved the program and gave Livongo a +67 net promoter score, which rivals top consumer tech companies including Netflix and Amazon. In addition, members experienced an average A1c reduction of 1.4% and sustained that reduction for over two years. Finally, we observed a 17% decrease in overall diabetes related medical spend.&nbsp;</font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3"><br></font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3">I would love to schedule time to discuss how Livongo can empower your employees to live happier and healthier lives while reducing diabetes spend for your organization.&nbsp;</font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3"><br></font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3">Hope to hear from you soon.</font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3"><br></font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3"><br></font></p><p class="MsoNormal" style="text-size-adjust: auto;"><font face="Arial, sans-serif" size="3">[Signature]</font></p><style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073697537 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span.EmailStyle16
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>]]></td>
+</tr>
+</table>

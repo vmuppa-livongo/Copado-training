@@ -1,0 +1,3 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false" standardController="TASKRAY__Project__c" extensions="TASKRAY.trSF1ProjectLanding">
+  Deprecated Do Not Use
+</apex:page>

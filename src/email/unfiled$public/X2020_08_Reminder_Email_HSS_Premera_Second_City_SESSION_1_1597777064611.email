@@ -1,0 +1,25 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Greetings {{{Recipient.FirstName}}},&nbsp; 
+  <br /> 
+  <br /> You're signed up to attend Session 1 of 
+  <i><b>Improv Principles for Life</b></i> hosted by Livongo and The Second City! We will be meeting tomorrow from 4 - 5 pm Pacific Time on Tuesday, August 25.&nbsp; 
+  <br /> 
+  <br /> Here are a few things to know prior to the session: 
+  <ul> 
+   <li>This is not your typical webinar. Our improv professionals will be guiding you through two live exercises that require participant interaction and contribution.&nbsp;</li> 
+   <li>This webinar will be a mix of full group discussion and smaller breakout room formats. As such, we ask that you keep your cameras on and set zoom to gallery view.&nbsp;</li> 
+   <li>Be prepared for some old school show &amp; tell! Think about an object of personal significance in your home - it can be anything, but it must be appropriate&nbsp;for small group presentations.&nbsp;</li> 
+  </ul> Time for Wine!&nbsp; 
+  <br /> If you accepted the Ste Michelle Winery offer in time, please expect a delivery to your home. We welcome you to pour yourself a glass to enhance your webinar experience.&nbsp; 
+  <br /> 
+  <br /> Cheers,&nbsp; 
+  <br /> 
+  <br /> {{{Sender.Name}}} 
+  <br /> {{{Sender.Signature}}} 
+  <br /> &nbsp;
+ </body>
+</html>

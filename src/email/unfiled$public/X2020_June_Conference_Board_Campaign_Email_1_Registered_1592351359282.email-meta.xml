@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is Email #1 in the Virtual Conference Board Campaign intended for those registered and confirmed for the event</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_June_Conference Board Campaign_Email #1_Registered_And_Confirmed</name>
+    <style>none</style>
+    <subject>Join us on June 30th to hear insights on transforming data into actionable insights to keep your employees safe and healthy</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

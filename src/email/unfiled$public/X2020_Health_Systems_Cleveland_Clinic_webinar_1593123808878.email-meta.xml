@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Transformation Tuesdays hosted by Cleveland Clinic.  Jenny will join panel to discuss Telehealth and remote monitoring</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Health_Systems_Cleveland_Clinic_webinar</name>
+    <style>none</style>
+    <subject>Join Cleveland Clinic on The Versatility of Telehealth</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

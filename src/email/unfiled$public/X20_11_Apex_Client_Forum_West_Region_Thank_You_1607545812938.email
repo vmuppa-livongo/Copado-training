@@ -1,0 +1,168 @@
+<html><head>
+	<style type="text/css">html {
+   overflow-y: visible !important ;
+}
+	</style>
+	<title></title>
+	<meta content="text/html; charset=UTF-8" /><meta content="width=device-width, initialscale=1.0" name="viewport" /><meta content="IE=edge" />
+	<style type="text/css">@media screen and (max-width: 480px) {
+  .contentbuilderBaseColumnRow .columnCell {display:inline-block; width:100%}
+}
+ .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:600px}
+@media only screen and (max-width: 480px) {
+  .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:320px}
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;"><table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#E9EAEC;" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td align="Center" style=""><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><img alt="Apex Client Forum" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/ApexMeetingsHeaderImages_600x300?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="600" /></span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br />
+												<br />
+												We sincerely appreciate you taking the time to join our virtual Apex Client Forum. As you learned, the coming together of Livongo and Teladoc Health has created a new standard of care delivery. As we move forward, we place the highest value on our members, our clients that make the member experience possible, and the opportunity to hear what matters most to you and the people you serve. The event was a great opportunity to see and learn with each other, despite our distance, and mix in some fun along the way. &nbsp;<br />
+												<br />
+												We hope you enjoyed Sarah Copeland’s cooking demonstration and have new ideas to infuse into your Fall and Winter meals. &nbsp;&nbsp;<br />
+												<br />
+												As this was our inaugural Apex Client Forum, we welcome your </span></span><a href="https://www.surveymonkey.com/r/QQ8DY3J"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">feedback</span></span></a><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">. &nbsp;<br />
+												<br />
+												Thank you again for finding time for us in your busy schedule. We wish you and your families a very safe and happy holiday season and look forward to engaging with you in 2021! &nbsp;&nbsp;<br />
+												<br />
+												Best Regards,<br />
+												&nbsp;</span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="50%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"><b>Heidi Anderson</b><br />
+												SVP, Client Experience<br />
+												<br />
+												<b>Michael Reeve</b><br />
+												VP, Client Sales</span></span><br />
+												<br />
+												&nbsp;</td>
+											</tr>
+										
+									</table>
+									</td>
+									<td class="columnCell" style="vertical-align:top;" width="50%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Stacey DeWeerdt</b><br />
+												VP, Strategic Client Relationships</span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<div style="width: 600px; margin: 0 auto;">
+						<hr style="width:100%;text-align:left;margin-left:0" /></div>
+
+						<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+							
+								<tr>
+									<td align="center" width="100%">
+									<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+										
+											<tr>
+												<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+												<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+													
+														<tr valign="top">
+															<td class="columnCell" style="vertical-align:middle;" width="8.33%">
+															<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td align="Center" style="padding-right:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/livongo_mark_2020_blue?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="39" /></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="75%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="padding-left:10px;font-family:Times;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Livongo</b> | 150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041</span></span><br />
+																		<br />
+																		<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">2020 &copy; Livongo. All Rights Reserved.</span></span></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="16.66%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="font-family:Arial,Helvetica,sans-serif;"><a href="mailto:unsubscribe@e-1alg9zf3qo01qow46vkmxmslp0apnl5npfuc39907dhzsihkha.46-180lweai.na134.apex.salesforce.com?subject=Unsubscribe"><span style="color:#0060fc;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Unsubscribe</span></span></span></a><br />
+																		<br />
+																		&nbsp;</td>
+																	</tr>
+																
+															</table>
+															</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+
+<div id="" style="left: 159.097px; top: 17.9861px;">&nbsp;</div>
+
+<div id="" style="left: 159.097px; top: 17.9861px;">&nbsp;</div></body></html>

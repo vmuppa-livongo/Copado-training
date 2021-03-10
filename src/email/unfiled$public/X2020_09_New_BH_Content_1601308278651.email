@@ -1,0 +1,39 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="email header_Sept BH_Clientv3" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/email_header_Sept_BH_Clientv3?oid=00D4600000180Lw" style="max-width: 600px; width: 600px; height: 197px;" title="email header_Sept BH_Clientv3" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> As our valued partner, we want to provide you with communication materials so your team can learn about some new tools we’re about to launch. At the end of September, myStrength is releasing new content! Resources for Bipolar Disorder and Psychosis will be a new Focus Area, and Mental Fitness Resources for First Responders will augment our resources in the Life Topics support.<br /> <br /> Here’s a quick overview of our new content, including supporting materials to promote these evidence-based behavioral health resources to the people you serve.<br /> <br /> <b>Resources for Bipolar Disorder and Psychosis: </b>This new content includes 20 evidence-based activities that address emotional, spiritual, and social challenges, and offer practical tips for people living with bipolar disorder. This includes personal stories from people living and thriving with the condition through a partnership with StoryCenter.org, a nonprofit organization dedicated to the power of storytelling in public health.</span></span> 
+   <ul> 
+    <li><a href="https://creative.livongo.com/web/6b9c0ed1db23a9ae/new-bh-content--september-2020/?mediaId=7A8991C1-1EE3-4B9C-86BAED6909F1AC27"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">Product Overview</span></span></span></a><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">:</span> Appropriate for both internal and external audiences&nbsp;</span></span></li> 
+    <li><a href="https://creative.livongo.com/web/6b9c0ed1db23a9ae/new-bh-content--september-2020/?mediaId=508C1CDC-15A7-4F8B-990D0D14CC48B202"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">Member Flyer</span></span></span></a><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">:</span> Please reach out to your Client Success Manager to request a co-branded version with custom sign-up instructions</span></span></li> 
+   </ul> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Mental Fitness Resources for First Responders: </b>This new content area includes 17 clinical interventions specifically designed to help people working in jobs such as law enforcement, firefighting, corrections, dispatch, and EMS manage stress, address burnout, improve communication, and build resiliency skills.</span></span> 
+   <ul> 
+    <li><a href="https://creative.livongo.com/web/6b9c0ed1db23a9ae/new-bh-content--september-2020/?mediaId=82874FB7-A89A-4469-BB0743830840AD00"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">Product Overview</span></span></span></a><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">: </span>Appropriate for both internal and external audiences&nbsp;</span></span></li> 
+    <li><a href="https://creative.livongo.com/web/6b9c0ed1db23a9ae/new-bh-content--september-2020/?mediaId=DA1E1944-5EFF-40DC-8868F4F0E8A76A8B"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">Member Flyer</span></span></span></a><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#3498db;">: </span>Please reach out to your Client Success Manager to request a co-branded version with custom sign-up instructions&nbsp;</span></span></li> 
+   </ul> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">We appreciate your work in helping the people we all support make healthy changes! These new resources will be available on both the myStrength web experience and mobile app on September 25, and we welcome your organization’s sharing of these new tools. We also encourage you to reach out if you have any questions or comments.<br /> <br /> Stay Healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}<br /> <br /> <br /> &nbsp;&nbsp; &nbsp;<br /> <br /> <br /> &nbsp;<br /> &nbsp;<br /> &nbsp;<br /> <br /> &nbsp;&nbsp; &nbsp;<br /> <br /> <br /> &nbsp;<br /> &nbsp;<br /> &nbsp;</span></span> 
+   <br /> 
+   <br /> 
+   <br /> &nbsp; 
+  </div> 
+  <div id="" style="left: 59px; top: 26px;">
+    &nbsp; 
+  </div> 
+  <div id="" style="left: 59px; top: 26px;">
+    &nbsp; 
+  </div>
+ </body>
+</html>

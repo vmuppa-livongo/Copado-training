@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden;">
+<head>
+	<style type="text/css">html {
+   overflow-y: visible !important ;
+}
+	</style>
+	<title></title>
+	<meta content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initialscale=1.0"><meta content="IE=edge">
+	<style type="text/css">@media screen and (max-width: 480px) {
+  .contentbuilderBaseColumnRow .columnCell {display:inline-block; width:100%}
+}
+ .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:600px}
+@media only screen and (max-width: 480px) {
+  .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:320px}
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;">
+<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#E9EAEC;" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				<tbody>
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										<tbody>
+											<tr>
+												<td align="Center" style=""><img alt="" class="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/MedicationAdherencejpg?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="600" /></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										<tbody>
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:10px;padding-top:10px;padding-left:5px;"><br />
+												<span style="font-size: 16px; font-family: Arial, Helvetica, sans-serif;">Dear {{{Recipient.FirstName}}},<br />
+												<br />
+												While&nbsp;Livongo&nbsp;has consistently demonstrated improved diabetes control based on lower HbA1c and more days-in-range, we can now measure&nbsp;Livongo&#39;s&nbsp;impact on medication adherence over time, which no other such digital virtual care platform has done. Building off a 2019 third-party study showing that Members of the&nbsp;Livongo&nbsp;for Diabetes program were 42% more likely to be adherent to oral medications at Year 1</span><span style="font-size:11px;"><span style="font-family: Arial, Helvetica, sans-serif;"><sup>1</sup></span></span><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">, this new analysis finds that&nbsp;the proportion of adherent&nbsp;Livongo&nbsp;Members increases year-over-year, while the proportion of&nbsp;adherent&nbsp;non-Members decreases year-over-year, with a significant drop in Year 2.<br />
+												<br />
+												Key findings include:&nbsp; </span></span>
+
+												<ul>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>2x improvement </b>in medication adherence among Livongo for Diabetes Members at Year 2</span></span><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;"><sup>2</sup></span></span><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp;</span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>18mg/dL reduction</b> in Livongo Members&#39;&nbsp;blood glucose after 6 months in the program</span></span><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;"><sup>2</sup></span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>0.6% reduction</b> in Livongo Members&#39;&nbsp;HbA1c after 6 months in the program</span></span><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;"><sup>2</sup></span></span></li>
+												</ul>
+												<a href="https://creative.livongo.com/web/2b80492ef8c5cad7/esi-poster/?mediaId=88CCA22B-04BE-4FF5-99F8969CCE222880"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><u>See the poster presentation of the Year 1 analysis</u></span></span></a><br />
+												<br />
+												<a href="https://creative.livongo.com/web/89221a481c701b5/med-adherence-infographic---december-2020/?mediaId=0191F1B5-72EA-43EF-971351E3B9A8D0ED"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">See highlights from the new Year 2 analysis conducted by Livongo</span></span></a><br />
+												<br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Increasing adherence may have a greater effect than improvements in specific medical therapy, according to the World Health Organization</span></span><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;"><sup>3</sup></span></span><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">. It also helps offset costly hospitalizations and other types of acute care.&nbsp;<br />
+												<br />
+												Through personalized, timely, actionable outreach <span>&ndash;</span> available wherever people are, whenever they need it <span>&ndash;&nbsp;</span>Livongo is delivering better health for our Members and lower costs for the organizations that serve them.&nbsp;</span></span>
+
+												<p><br />
+												<br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Stay Healthy,<br />
+												{{{Sender.FirstName}}}<br />
+												<br />
+												{{{Sender.Signature}}}</span></span></p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										<tbody>
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:10px;padding-top:10px;padding-left:5px;">
+												<div><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:10px;"><sup>1</sup>Impact of a Diabetes Remote Monitoring Program on Medication Adherence, October 2019. Munshi K, Swift C, Carter C, Henderson R. 1640 Century Center Pkwy, Memphis, TN 38134;&nbsp;dmunshi@express-scripts.com; (901)381-7555x217693 Express Scripts&nbsp;<br />
+												<sup>2</sup></span></span><span style="font-size: 10px; font-family: Arial, Helvetica, sans-serif;">ACCP Effect of Remote Diabetes Management Program on Oral Medication Proportion of Days Covered and the Associated Impact on Self-Monitoring Blood Glucose Values. 2020&nbsp;</span><br />
+												<span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;"><sup>3</sup>World Health Organization.,&nbsp;Sabat&eacute;&nbsp;E. Adherence to long-term therapies: evidence for action. Geneva: World Health Organization, 2003.</span></span><br />
+												<br />
+												&nbsp;</div>
+
+												<div style="width: 600px; margin: 0 auto;">
+												<hr style="width:100%;text-align:left;margin-left:0" /></div>
+
+												<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+													<tbody>
+														<tr>
+															<td align="center" width="100%">
+															<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+																<tbody>
+																	<tr>
+																		<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+																		<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+																			<tbody>
+																				<tr valign="top">
+																					<td class="columnCell" style="vertical-align:middle;" width="8.33%">
+																					<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+																						<tbody>
+																							<tr>
+																								<td align="Center" style="padding-right:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/livongo_mark_2020_blue?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="39" /></td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</td>
+																					<td class="columnCell" style="vertical-align:top;" width="75%">
+																					<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																						<tbody>
+																							<tr>
+																								<td style="padding-left:10px;font-family:Times;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Livongo</b> | 150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041</span></span><br />
+																								<br />
+																								<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">2020 &copy; Livongo. All Rights Reserved.</span></span></td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</td>
+																					<td class="columnCell" style="vertical-align:top;" width="16.66%">
+																					<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																						<tbody>
+																							<tr>
+																								<td style="font-family:Arial,Helvetica,sans-serif;"><a href="mailto:unsubscribe@e-1alg9zf3qo01qow46vkmxmslp0apnl5npfuc39907dhzsihkha.46-180lweai.na134.apex.salesforce.com?subject=Unsubscribe"><span style="color:#0060fc;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Unsubscribe</span></span></span></a><br />
+																								<br />
+																								&nbsp;</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<div id="" style="left: 244.333px; top: 18px;">&nbsp;</div>
+
+<div id="" style="left: 244.333px; top: 18px;">&nbsp;</div>
+</body>
+</html>

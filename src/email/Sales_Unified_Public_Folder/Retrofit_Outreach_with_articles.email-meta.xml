@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Retrofit Outreach with articles</name>
+    <style>freeForm</style>
+    <subject>Exciting News: Livongo Acquires Retrofit</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+You might have seen yesterday’s announcement that Livongo has acquired Retrofit, a leading provider of weight-management and disease-prevention programs.
+
+Now that Livongo and Retrofit have officially become one company, I thought you would appreciate how positively the transaction was received by the market. I included some articles below that highlight the excitement around Livongo and Retrofit coming together to create one platform that truly treats the whole person and all of the health challenges they face.
+
+Retrofit Diabetes Prevention is immediately available from Livongo as Livongo DPP powered by Retrofit. The CDC-recognized DPP offering complements Livongo for Diabetes and Livongo for Hypertension.
+
+I would love to take some time to discuss Livongo DPP Powered by Retrofit and Livongo’s proven approach to managing chronic conditions.
+
+Silicon Valley Business Journal: Fresh from raising $105M, Mountain View health management startup makes an acquisition
+
+By: Cromwell Schubart
+
+Livongo Health Inc. is using some of the $105 million in new funding it got last week to buy a Chicago weight-management startup.
+
+Glen Tullman, CEO of Mountain View-based Livongo, told the Business Journal that the acquisition of Retrofit Inc. will help his company more fully address the needs of people at risk for and living with chronic health conditions.
+
+&quot;Livongo has established itself as the leader in diabetes care and more recently in hypertension,&quot; he said. &quot;But our customers are saying what they want is a single platform that treats the whole person and all of a person&apos;s conditions.&quot;
+
+Now Livongo will be able to help people manage their weight, which may help prevent the onset of diabetes and hypertension. Retrofit said that 88 percent of its clients lose weight and 78 percent maintain that weight loss one year later.
+
+Financial details of the acquisition were not disclosed.
+
+Retrofit had raised about $25 million in venture funding from investors who include Echo Health Ventures and Draper Fisher Jurvetson. Both of those companies are also investors in Livongo. Last week&apos;s funding was led by General Catalyst and Kinnevik.
+
+Retrofit&apos;s 80 employees and CEO Mary Pigatti will join Livongo, which already has an office in Chicago. About half of Livongo&apos;s 220 employees work at its Mountain View headquarters. About 30 percent were in Chicago before the deal and 20 percent work remotely from other locations.
+
+“Retrofit and Livongo are like-minded in strategy, values and culture,&quot; Pigatti said in the announcement oif the sale of her company. &quot;Together, we will provide a comprehensive set of solutions for the prevention and treatment of chronic conditions that address the whole person.&quot;
+
+Tullman said Livongo could be profitable with the revenue it is bringing in now but he plans to continue to push for more growth, both organically and through acquisitions like this one.
+
+&quot;We are really building a new industry,&quot; he said. &quot;This is not traditional chronic condition management. The industry we are building relies upon data science and a lot of R&amp;D. So we&apos;re doing a lot of hiring in those areas while we continue to build the platform, as we are with the acquisition of Retrofit.&quot;
+
+Livongo recently doubled its headquarters space in Mountain View at 150 W Evelyn Ave.
+
+Xconomy: Livongo Health Grows with Purchase of Weight Loss Startup Retrofit
+
+By: Jeff Buchanan
+
+Livongo Health, a Bay Area-based developer of devices and software for managing chronic health conditions, has acquired Retrofit, a Chicago startup that develops programs designed to help people lose weight and prevent disease.
+
+Mountain View, CA-based Livongo, which last week raised a $105 million round of outside investment, says that its purchase of Retrofit will allow Livongo to more fully address the needs of people who live with diabetes, hypertension, and other chronic conditions—and those at risk of developing one.
+
+Livongo, which also has a Chicago office, did not disclose any financial terms in a news release announcing the deal.
+
+The company says in the release that it expects to bring on Retrofit’s entire 80-person workforce, including CEO Mary Pigatti, as well as the company’s “seven-plus years of data insights.”
+
+Livongo says its clients are likely to benefit from the company’s acquisition of Retrofit. Livongo’s customer list includes health insurers, as well as large, self-insured employers like PepsiCo (NASDAQ: PEP) and US Foods (NYSE: USFD).
+
+“For our clients, we’re now addressing the comprehensive health challenges their employees face,” Glen Tullman, Livongo’s founder and CEO, says in the release. “For our members, we now have more services that make it easier to prevent individuals from getting sick and, if they do, working with them to return to health and stay healthy.”
+
+Retrofit, which launched in 2011, works with employees of Intuit (NASDAQ: INTU), Aon (NYSE: AON), and other companies to help them lose weight. The startup uses a combination of personalized coaching, group classes, and online communities to encourage healthy eating and exercise habits. Retrofit’s team of coaches includes registered dietitians, exercise physiologists, and other specialists, according to the company’s website.
+
+Livongo says that it will rebrand Retrofit’s Diabetes Prevention Program (DPP) as Livongo DPP powered by Retrofit. The program joins ones Livongo has created for diabetes and hypertension patients, the company says.
+
+Over the years, programs from companies like Weight Watchers (NYSE: WTW) have been magnets for people seeking to shed some pounds. Weight Watchers remains a popular option for people who go on diets, but some of the things it provides to participants—information from nutritionists and peer support, for example—can now be found in online communities.
+
+For example, Prescribe Nutrition was created by two nutritionists to develop wellness programs and allow its thousands of users to connect with professionals. The San Francisco-based startup also provides a forum where individuals and corporations can support and interact with one another on topics ranging from meal planning to stress management.
+
+Retrofit’s approach, meanwhile, is based on research involving tailoring weight loss regimens to each individual’s needs, Livongo says. Robert Kushner, a professor at Northwestern University’s Feinberg School of Medicine and a member of Retrofit’s clinical advisory board, is considered to be a leader in the field, Livongo says.
+
+Retrofit had raised more than $22 million in outside investment before agreeing to become part of Livongo, SEC filings show.
+
+“By joining Livongo, Retrofit strengthens its ability to deliver personalized weight management and disease prevention solutions across diverse populations at scale,” Pigatti says in a prepared statement.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

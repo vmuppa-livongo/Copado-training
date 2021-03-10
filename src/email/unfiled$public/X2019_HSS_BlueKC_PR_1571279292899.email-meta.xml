@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Announcing BlueKC fully insured partnership</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2019_HSS_BlueKC_ PR</name>
+    <style>none</style>
+    <subject>Blue KC &amp; Livongo partner to empower people living with chronic conditions</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

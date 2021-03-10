@@ -1,0 +1,124 @@
+<apex:page sidebar="false" Controller="JBCXM.ReportBuilder" extensions="JBCXM.NSRemoting" applyBodyTag="false" >
+ <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS, 'NS/newStack/js/restclient/restClient.js'))}" />
+<script  type="text/javascript"> 
+	var j$ = jQuery.noConflict();
+	onload = function(){
+	restClient.config = {remoting:"{!$RemoteAction.NSRemoting.apinsinvoke}",sessionId : "{!NSSessionId}"};
+	restClient.serveRequest("tokens/exists"
+	,"GET"
+	,""
+	,{}
+	,false
+	,(function(data){
+		if(data.result){
+			var ctrls = {btnlbl:"",msg:""}
+			if(data.data.accessKeyExists){
+				ctrls.btnlbl = "Reset Access key";
+				ctrls.msg = "Data Load access key has been generated for you already. Clicking on the button below would Invalidate the existing key and generate a new key.";
+			}
+			else {
+				ctrls.btnlbl = "Generate Access key";
+				ctrls.msg = "Clicking on this button would generate a new key to use for loading the data to Gainsight repository.";
+			}
+
+			j$("#btngenerate").val(ctrls.btnlbl);
+			j$("#atmsg").text(ctrls.msg)
+			j$("#btngenerate").show();
+		} 
+		else {
+			j$("#atlbl").text("Exception occurred : '" + data.errorDesc + "'");
+			j$("#atlbl").show();
+			j$("#btngenerate").hide();
+		}
+	}));
+	j$("#btngenerate").click( function(t){
+		restClient.serveRequest("tokens"
+				,"POST"
+				,""
+				,{}
+				,false
+				,(function(data){
+					if(data.result){
+						j$("#atlbl").html("<strong>Access key generated :</strong> '" + data.data.accessKey + "'");
+						j$("#atlbl").show();
+						j$("#btngenerate").hide();
+					}
+					else {
+						j$("#atlbl").html("<strong>Exception occurred while generating the Access Token :</strong> '" + data.errorDesc + "'");
+						j$("#atlbl").show();
+					}
+				}));
+	
+	});
+}				
+ </script>
+ <style>
+ .noSidebarCell {
+ 	padding: 0px !important;
+ }
+ .access-token h1 {
+ 	display: block;
+	background: #364451;
+	overflow: hidden;
+	border-top: solid 1px #b6b6b6; 
+	padding: 10px 15px;
+	font-size: 14px;
+	color: #fff;
+ }
+ .access-token .access-token-ctn {
+ 	 padding:10px 15px;
+ 	 min-height: 300px;
+ }
+ #atmsg {
+ 	 padding-bottom: 10px;
+ }
+ .access-token {
+ 	padding-top: 40px;
+  }
+ .btn-add {
+	color: #fff;
+	background-color: #33a6ef;
+ }
+ .gs-btn {
+	display: inline-block;
+	padding: 4px 15px;
+	margin-bottom: 0;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	outline: none !important;
+	min-width: 100px;
+ }
+ </style>
+ <body>
+	<apex:form >
+		<div class='access-token'>
+			<h1 >Generate Gainsight Repository Data Load Access key</h1> 
+			<div class='access-token-ctn'>
+	   			<div id="atmsg">
+	   	
+	   			</div>
+	 			<div class="access-token">
+		 			<input type="button" id="btngenerate" value="Access Token" style="display:none" class="gs-btn btn-add" />
+	 			</div>
+	  			<div id="atlbl">
+			
+	 			</div>
+	 		</div>
+	 	</div>
+	 </apex:form>
+ </body>
+</apex:page>

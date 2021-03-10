@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Using Remote Monitoring ﻿to Fight Coronavirus</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Using Remote Monitoring ﻿to Fight Coronavirus</name>
+    <style>none</style>
+    <subject>Using Remote Monitoring to Fight Coronavirus</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is to be leveraged for inviting Clients to the West Region Apex Client Forum. This template should only be sent on behalf of Heidi, Stacey, Mike Reeve.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>20_12_Apex Client Forum_West Region_Invite 3</name>
+    <style>none</style>
+    <subject>Last Chance: Join us for Livongo&apos;s Apex Client Forum</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

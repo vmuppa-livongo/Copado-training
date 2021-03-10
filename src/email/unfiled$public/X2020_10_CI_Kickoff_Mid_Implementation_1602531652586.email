@@ -1,0 +1,19 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="Livongo_Logo_RGB" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Livongo_Logo_RGB?oid=00D4600000180Lw" style="max-width: 165px; width: 165px; height: 30px;" title="Livongo_Logo_RGB" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> Good news -- we are already at the mid-point of the Livongo implementation process! Thank you for all the time and effort your team has already invested into this project to better support your employees’ health and wellbeing.&nbsp;<br /> <br /> In addition to our regular check-in meetings, we hope you will participate in a short survey to rate your experience with the process so far so we can be sure we’re meeting your expectations. It should take less than five minutes of your time.&nbsp;<br /> <br /> Access the survey here. <span style="color:#2980b9;">[LINK]&nbsp;</span><br /> &nbsp;<br /> We appreciate your partnership and look forward to rolling out Livongo to the people you serve.&nbsp;<br /> <br /> Stay healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  </div>
+ </body>
+</html>

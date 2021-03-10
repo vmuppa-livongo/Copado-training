@@ -1,0 +1,65 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="Fall Image" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Fall_Image?oid=00D4600000180Lw" style="max-width: 600px" title="Fall Image" /> 
+   <br /> 
+   <br /> Dear {{{Recipient.FirstName}}}, 
+   <br /> 
+   <br /> This has been a challenging year for so many of us. To keep spirits high and health on-track, we’re sharing our latest easy-to-use tools and resources&nbsp;to carry you and your employees through November and beyond.&nbsp; 
+   <br /> 
+   <br /> Check out the below sample email template, including links to resources that anyone -&nbsp;including your employees with chronic conditions -&nbsp;may find valuable. Share them via email, on your company intranet, or through other communication channels.&nbsp; 
+   <br /> 
+   <br /> We are happy to share these seasonal HR kits once a month with you and the people you serve as part of our mission to help people live better, healthier lives.&nbsp; 
+   <br /> 
+   <br /> [sample email content for your use] 
+   <br /> &nbsp; 
+   <div style="width: 400px; margin: 0 auto;"> 
+    <i>Subject line: &nbsp;The holidays are a time to be grateful and healthier, together<br /> <br /> November is National Diabetes Awareness Month Month, a time to raise awareness about the risk factors and healthy habits one can create to prevent diabetes.&nbsp;<br /> <br /> We’re sharing a few resources this month that help you enjoy delicious food while staying healthy. As you gather with friends and family either in person, or virtually, you can share these recipes and tips with them. We’re all in this together.&nbsp;</i> 
+   </div> 
+   <div style="width: 400px; margin: 0 auto;"> 
+    <ul> 
+     <li style="width: 400px; margin: 0px auto;"><i><a href="https://content.livongo.com/cp/Livongo_Calendar_November.pdf">A daily November calendar to remind us all to practice gratitude</a> </i></li> 
+     <li style="width: 400px; margin: 0px auto;"><i><a href="https://content.livongo.com/cp/PM10395.A_Tips_for_Keeping_Blood_Sugar_in_Range.pdf">Tips for keeping your blood sugar in range</a> </i></li> 
+     <li style="width: 400px; margin: 0px auto;"><i><a href="https://content.livongo.com/cp/MPLC.pdf">A guide to low-carb eating plans</a> </i></li> 
+     <li style="width: 400px; margin: 0px auto;"><i><a href="https://www.youtube.com/watch?v=vbHS6kIBZDo">10 low-carb swaps for the holidays</a> </i></li> 
+    </ul> 
+    <div style="width: 400px; margin: 0 auto;"> 
+     <i>[Livongo offers support for diabetes, blood pressure, weight, behavioral health, and more. If you’re not already a member, you can see if you’re eligible at <a href="http://enjoy.livongo.com/new">enjoy.livongo.com/new</a>]</i> 
+     <br /> &nbsp; 
+     <div style="width: 400px; margin: 0 auto;"> 
+      <i>[Livongo is offered at no cost to you and your family members with medical coverage through your medical plan.] If you have any questions, please call Livongo Member Support at (800) 945-4355.&nbsp;</i> 
+      <br /> &nbsp; 
+      <div style="width: 400px; margin: 0 auto;"> 
+       <i>Be well,&nbsp;</i> 
+       <br /> &nbsp; 
+       <div style="width: 400px; margin: 0 auto;"> 
+        <i>The HR team</i> &nbsp; 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <div style="width: 600px; margin: 0 auto;"> 
+   <br /> [end sample email content]&nbsp; 
+   <br /> 
+   <br /> We continue to receive positive feedback on these seasonal HR kits and how they are driving enrollment and usage among Members. &nbsp;We hope that you and your employees will also find them valuable. Thank you for your continued support.&nbsp; 
+   <br /> 
+   <br /> We value you as a client and continue to look for ways to help protect the health and wellbeing of the people you serve during this unique and challenging time. &nbsp; 
+   <br /> 
+   <br /> Stay safe and healthy, 
+   <br /> {{{Sender.FirstName}}} 
+   <br /> 
+   <br /> {{{Sender.Signature}}}&nbsp; 
+  </div>
+ </body>
+</html>

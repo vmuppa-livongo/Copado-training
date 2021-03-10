@@ -1,0 +1,32 @@
+<apex:page controller="PFLSFTMA.TMATransactionExtension" title="TMA Transaction" sidebar="false" showHeader="false" id="pg">
+    <script>
+    	function viewMore(){
+    		window.top.location='/'+'{!JSENCODE(prefix)}'+'?fcf='+'{!JSENCODE(listViewId)}';
+    	}
+    
+    
+    </script>
+    <style>
+    .footerClass{
+    	background-color:rgb(248,248,248);
+    }
+    </style>
+    <body class="homeTab"/>
+    <apex:form id="frm">
+        <apex:pageBlock id="details" title="TMA Transaction">
+           
+            <apex:pageblockTable value="{!swagOrders}" var="swagIQOrder" rendered="{!(swagOrders.size > 0)}" footerClass="footerClass">
+                <apex:column headerValue="Swag Recipient" value="{!swagIQOrder.PFLSFTMA__Recipient__c}"/>
+                <apex:column headerValue="Gift Info" value="{!swagIQOrder.PFLSFTMA__Gift_Info__c}"/>
+                <apex:column headerValue="Date Delivered" value="{!swagIQOrder.PFLSFTMA__Date_Delivered__c}"/>
+                <apex:column headerValue="Reason Sent" value="{!swagIQOrder.PFLSFTMA__Reason__c}"/>
+                <apex:column headerValue="Tracking Number" value="{!swagIQOrder.PFLSFTMA__Tracking_Link__c}"/>
+                <apex:facet name="footer" ><apex:commandLink value="View More >>" onClick="viewMore();" rendered="{!totalRecs > 5}" rerender="dummy"/></apex:facet>
+            </apex:pageblockTable>
+            <apex:pageBlockSection rendered="{!(swagOrders.size == 0)}">
+                    <apex:outputLabel value="No records to display" styleClass="noRowsHeader"/>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

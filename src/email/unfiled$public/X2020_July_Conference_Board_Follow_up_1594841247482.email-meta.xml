@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is follow-up Email for people who attended Conference Board</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_July_Conference Board Follow-up PA</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Recent Conference Board &amp; A New Lens on Whole-Person Health with Data-Driven Remote Care</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

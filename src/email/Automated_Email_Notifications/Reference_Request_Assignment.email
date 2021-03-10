@@ -1,0 +1,4 @@
+Hello,
+
+A new reference request for account '{!Case.Account}' has been created.
+Here is the case: {!Case.Link}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Teladoc_Health</letterhead>
+    <name>Salesforce Release Notes</name>
+    <style>freeForm</style>
+    <subject>Salesforce Sales Cloud - Dobby Sock Release Update with Notes</subject>
+    <textOnly>The Salesforce Dobby Sock Release was successfully implemented this evening and Salesforce is back to normal. Release highlights are listed below. For more detailed information on these updates and enhancements, speak to your team&apos;s Salesforce SME or review the sprint stories in JIRA.
+
+
+
+Account:
+
+
+JENGA-1654: Enrollment Communication Input Form - Phase II
+JENGA-1591: Health Score Integration (Ready to launch on 12/21)
+
+
+
+
+Opportunity:
+
+
+JENGA-1667: New Opportunity Type &quot;Price - Increase&quot;
+JENGA-1664: Remove ability to close for CI and Ops
+JENGA-1665: Updates to Oppty Close Checklist
+JENGA-1668: Opportunity Close notification on Contract Path Change Type Opportunities
+JENGA-1675: SalesOps: New Field on Opportunity &quot;Commision Notes&quot;
+
+
+Taskray:
+
+
+JENGA-1504: SPA TaskRay Redesign Improvements
+
+
+
+Questions? Send message to crmrequest@livongo.com
+
+
+
+
+
+
+
+Thank you!!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

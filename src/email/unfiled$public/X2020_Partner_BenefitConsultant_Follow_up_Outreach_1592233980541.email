@@ -1,0 +1,31 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Hi {{{Recipient.FirstName}}},</span></font> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">&nbsp;</span></font> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">By now, I'm sure you've heard the recent news about the change in Livongo's relationship with CVS. This may have prompted some questions and I'm reaching out to you in an effort to provide some clarity. Below I've outlined some key points:</span></font> 
+  <ul> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Livongo has chosen not to participate in the new TDC program from CVS as we don't believe it's in the best interest of our Clients &amp; Members;</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Livongo is no longer a part of the Point Solutions Management offering from CVS;</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">To minimize client and member disruption, Livongo and CVS will support our shared clients and will offer TDC renewals through 12/31/2021;</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Livongo will continue&nbsp;to offer our market leading solutions being used by over 1,200 clients including more than 30% for the Fortune 500, federal, state, and local governments, and our nation's leading health systems;</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Our Members and Clients love Livongo as demonstrated&nbsp;by our NPS score in the mid 60's and average client retention rate of 96%;</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">We are so confident in these results, we're guaranteeing them&nbsp;by putting our own fees at risk for clients&nbsp;with qualifications;</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">And to make it as easy as possible to access Livongo, we have many client friendly contracting paths, including a streamlined direct agreement using the <span style="color:#c0392b;"><b>[insert partner name]</b> </span>terms, over 28 health&nbsp;plans &amp; other PBMs, and several of the most popular health &amp; navigation platforms.</span></font></li> 
+  </ul> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Please don't hesitate to reach out with any questions. We value our partnership and look forward to working through this change together with a focus on helping our mutual Clients to continue to empower people with chronic conditions to live better and healthier&nbsp;lives.&nbsp;</span></font> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">&nbsp;</span></font> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Your partner in health,&nbsp;</span></font> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">{{{Sender.FirstName}}}</span></font> 
+  <br /> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">{{{Sender.Signature}}}</span></font>
+ </body>
+</html>

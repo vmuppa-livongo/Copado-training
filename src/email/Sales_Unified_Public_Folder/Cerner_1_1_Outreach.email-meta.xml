@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Cerner 1:1 Outreach</name>
+    <style>freeForm</style>
+    <subject>Join us for glassblowing and discussion in Chicago, June 20-21</subject>
+    <textOnly>Hi {!Contact.FirstName},
+ 
+On June 20-21, Livongo is partnering with Cerner for a very exciting event in Chicago to discuss how to help you to improve the health and wellness of your employees living with chronic conditions. Regardless of which EMR System or Chronic Care Management Program that you are currently using, given the information to be shared at this event and your many peers in attendance, this will be an event not to be missed!
+
+To add some additional fun, we will also spend an evening at Ignite Glass Studios, allowing you to get to know your peers during an interactive glassblowing lesson. You will leave the event with a one of a kind handcrafted memento that you&apos;ve created, allowing you to remember the great experience that you had for years to come!
+
+Please take advantage of this opportunity as soon as possible since space is very limited. If you are able to join, please register, at no cost, here.
+
+Thank you, and I look forward to seeing you in Chicago for this outstanding event!
+
+ 
+Thanks!
+
+[ Name]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

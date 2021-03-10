@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- ApiKey --></label>
+        <name>PFLSFTMA__ApiKey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Status --></label>
+        <name>PFLSFTMA__Campaign_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>PFLSFTMA__Campaign__c</name>
+        <relationshipLabel><!-- Campaign Associations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GiftId --></label>
+        <name>PFLSFTMA__GiftId__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsActive --></label>
+        <name>PFLSFTMA__IsActive__c</name>
+    </fields>
+</CustomObjectTranslation>

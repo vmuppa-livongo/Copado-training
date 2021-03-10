@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is to promote Bimal&apos;s Blood Pressure Blog (Client)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_BP Blog_Client</name>
+    <style>none</style>
+    <subject>Monitoring (and managing) high blood pressure during a pandemic</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

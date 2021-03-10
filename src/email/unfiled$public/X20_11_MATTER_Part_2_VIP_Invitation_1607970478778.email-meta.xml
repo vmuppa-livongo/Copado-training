@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is VIP Email template #1 to drive awareness and attendance for the VIP, premium-networking session for Part 2 in the MATTER series of 3 webinars for Self-Insured Employers.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>20_12_MATTER Part 2_VIP Invitation</name>
+    <style>none</style>
+    <subject>You’re Invited: Premium Networking Session</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

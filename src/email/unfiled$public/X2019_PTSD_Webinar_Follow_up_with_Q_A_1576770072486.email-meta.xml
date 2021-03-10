@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Follow up email template for webinar Q&amp;A</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2019_PTSD Webinar - Follow up with Q&amp;A</name>
+    <style>none</style>
+    <subject>Answers to Your PTSD Webinar Questions</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

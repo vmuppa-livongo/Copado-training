@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connectedApp>integrator_da__Integrator_io</connectedApp>
+    <description>Grants access to the Create NetSuite Sales Order button on the Opportunity.</description>
+    <isLicensed>false</isLicensed>
+    <label>Create NetSuite Sales Orders</label>
+</CustomPermission>

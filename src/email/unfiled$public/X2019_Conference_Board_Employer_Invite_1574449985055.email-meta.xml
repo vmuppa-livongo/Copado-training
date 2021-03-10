@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>As a sponsor of these events, we can offer complimentary badges to our clients and prospects. Please see guidelines from Ashley.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2019_Conference Board_Employer Invite</name>
+    <style>none</style>
+    <subject>Complimentary Pass to The Conference Board’s 20th Annual Employee Health Care Conference</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

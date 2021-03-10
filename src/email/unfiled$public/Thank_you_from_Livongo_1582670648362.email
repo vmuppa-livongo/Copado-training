@@ -1,0 +1,28 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <img alt="Livongo 1" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Livongo_1?oid=00D4600000180Lw" style="max-width: 324.049px; width: 264.042px; height: 221px;" title="Livongo 1" /> 
+  <br /> 
+  <br /> {{recipient.firstname}}, 
+  <br /> 
+  <br /> 
+  <br /> Thank you so much for taking the time to chat with me today! I appreciate that you took time out of your day to fill me in on what {{organization.name}} is doing for {fill in details}. 
+  <br /> 
+  <br /> As a quick recap, we covered: 
+  <ul> 
+   <li>Item number one</li> 
+   <li>Item number two</li> 
+   <li>Item number three</li> 
+  </ul> 
+  <br /> Per our chat, I will follow up {time frame} and we can take it from there. If you have any questions in the meantime, please reach out and let me know. 
+  <br /> 
+  <br /> Looking forward to reconnecting soon! 
+  <br /> &nbsp; 
+  <br /> 
+  <br /> Stay healthy, 
+  <br /> 
+  <br /> {{sender.firstname}}
+ </body>
+</html>

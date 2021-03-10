@@ -1,0 +1,36 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hello <span style="color:#3498db;">{$Account.Name}</span>,&nbsp;&nbsp;<br />
+<br />
+<span style="color:#3498db;">{Insert opening text here}</span><br />
+<br />
+A) Company's Goals
+<ol>
+	<li>Desired Outcomes</li>
+	<li>Desired Outcomes</li>
+</ol>
+B) Requests for Client
+
+<ol>
+	<li>Request</li>
+	<li>request</li>
+</ol>
+C) Livongo Responsibilities
+
+<ol>
+	<li>Verb</li>
+	<li>Provide</li>
+	<li>Attend</li>
+	<li>Review</li>
+</ol>
+D) Ideal Outcome
+
+<ol>
+	<li>Understood&nbsp;</li>
+	<li>Accepted&nbsp;</li>
+	<li>Agreed</li>
+	<li>Decisions</li>
+</ol>
+<br />
+Thank you,&nbsp;</body></html>

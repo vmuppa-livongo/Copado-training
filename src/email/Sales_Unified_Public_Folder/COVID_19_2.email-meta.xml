@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>COVID-19.2</name>
+    <style>none</style>
+    <subject>Livongo Resource Center - COVID-19</subject>
+    <textOnly>Hi {!Contact.FirstName},  
+
+These are clearly challenging times for all of us – I’m reaching out to be a resource to you if you need as our team of experts are here to provide any information or support surrounding chronic conditions and behavioral health challenges at this time.  
+
+We have information and answers about COVID-19 and chronic conditions in case your employees come to you with questions or concerns: The Livongo Coronavirus Resource Center for People with Chronic Conditions.  
+
+Here to support you, 
+Allie  
+
+ALLIE HULL
+ Product Awareness Specialist 
+Livongo m: 847.207.5519  e: allison.hull@livongo.com 
+a: 444 N. Michigan Ave., Suite 3400, Chicago IL, 60611 
+www.livongo.com  
+
+This message and its contents are confidential. If you received this message in error, do not use or rely upon it. Instead, please contact the sender by reply email and then delete it.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

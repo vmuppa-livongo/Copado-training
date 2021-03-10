@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Commercial Operations Newsletter</name>
+    <style>freeForm</style>
+    <subject>First-ever Commercial Operations Newsletter</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Inspired by Theresa&apos;s Marketing Monday campaign, I decided I&apos;d put together a weekly newsletter (via Salesforce template) featuring three commercial operations topics to highlight. Hopefully these tips, tricks and process reminders will be beneficial to you as you work to close as much business as possible.
+
+Topic #1: Opportunity Type
+As we branch out into new products, it&apos;s increasingly important to be able to identify what kind of an opportunity we are working with. I&apos;m going to show you the sell types we have below, then explain a bit more about what they are (with a particular focus on the difference between an expansion and a cross-sell).
+
+New Business: Use this when we are selling 1 or more products to a new potential customer.
+
+Renewal: Not used by the sales team. Client Success owns renewals.
+
+Expansion: Used when selling an existing product to an expanded population. For example, we have a diabetes pilot with a certain group, and we are planning on a full expansion to their entire population. Or we have a client&apos;s Cigna population on Livongo, but we are now going to offer our diabetes solution to the Anthem population.
+
+Cross-sell: We are selling a new product to an existing customer. So, for example, we are selling our hypertension solution to an existing client utilizing Livongo for Diabetes.
+
+I noticed a few exceptions - specifically on cross-sells, so I fixed them. But please make sure to tag your opportunities appropriately in the future.
+
+Topic #2: Octiv Tips &amp; Tricks
+
+I&apos;ve noticed, when walking a few of you through the Octiv tool recently, that we are not always following the best practice for creating new proposals. In the top section of the opportunity, there is a Salesforce field called &quot;Octiv Template&quot;. You should select the appropriate template, then save the opportunity before you do anything else. After the opportunity has been saved, you can then hit &quot;new document&quot; - and your proposal will automatically be built in Octiv with the correct template.
+
+Additionally, if you want to use either the ROI Case Study - Assumptions &amp; Projections or the Cost-Savings Case Study - Assumptions &amp; Projections, you need to enter the cost of diabetes testing supplies. Even if you don&apos;t know the cost of supplies, you can put a placeholder of $30 in, then speak to this being a &quot;typical&quot; spend for supplies for self-insured employers.
+
+One more Octiv tip for you... if you are working on a proposal and notice a mistake OR want to update that proposal after you&apos;ve published it, just click on the &quot;versions&quot; button on the right, then hit &quot;create new version&quot;. The document then becomes editable again and you can make any changes you want to make. When done, just click the &quot;versions&quot; button again and hit &quot;finalize version&quot;. The proposal will automatically update. You can even use this feature to add a contract as an attachment. For example, maybe you sent the proposal a week ago, but now want to get them a contract. Just go into your original proposal, create a new version, attach the contract, then finalize the new version. Then you can send a quick note to the prospect saying something along the lines of:
+
+&quot;I&apos;ve updated your proposal to include our direct agreement and BAA. You can find both in the attachments section of the proposal, located here: http://myoctivproposal.com.&quot;
+
+Topic #3: New and/or Important Dashboards
+
+There are a few important dashboards that I&apos;ve built to track everything from activity to new product traction to closed business. Below are a few of those:
+
+Commercial Team KPI Dashboard: It all starts with activity, and this is the place where we view the tactical activity you are executing to drive pipeline creation and opportunity acceleration.
+
+In-depth Total Pipeline: A customized dashboard showing just your accounts, highlighting your current pipeline (regardless of close quarter), and your top accounts that are not yet clients, sliced by partner. This dashboard also shows your top accounts that haven&apos;t had activity within the past 30 days.
+
+HTN Dashboard: How many meetings, opportunities, and closes do we have with Hypertension?
+
+DPP Dashboard: How many meetings, opportunities, and closes do we have with Livongo DPP Powered by Retrofit?
+
+Livongo Business Overview: Ever wonder how many clients we have, what&apos;s the average deal size, what industries we are working with, etc? This is a good place to look.
+
+So there you have it! Our first Commercial Operations Newsletter! I hope you find the contents of this message helpful! If you ever have specific Commercial Operations and/or Salesforce questions, be sure to join the Salesforce Office Hours meeting every other Thursday (the next one is set for 5/17 at 3pm Central Time). If you don&apos;t have the invite on your calendar, let me know and I can send it your way!
+
+
+Cheers,
+
+Adam Claypool
+Director of Commercial Operations
+Livongo
+m: 314.346.2964
+o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Ste 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

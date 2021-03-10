@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Livongo Cost Savings</name>
+    <style>freeForm</style>
+    <subject>Announcement - Livongo Demonstrates Cost Savings for Employers</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I&apos;m reaching out today with some exciting news. We&apos;re starting to get our hands on medical claims data, which allows us to truly measure the impact of Livongo - and our data science team just released a study demonstrating a cost savings of $83 per participant per month.
+
+$83 per participant per month!
+
+This is a promising proof point, and it highlights why employers like Lowe&apos;s, SAP, PepsiCo, and Iron Mountain have implemented Livongo.
+
+I&apos;d love to talk with you to learn more about how Livongo could impact {!Account.Name}.
+
+Thank you.
+
+Best regards,
+
+Adam Claypool
+Director of Commercial Operations
+Livongo
+m: 314.346.2964
+o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Ste 2880, Chicago, IL 60622
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

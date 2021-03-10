@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html style="overflow-y: hidden;">
+<head>
+	<style type="text/css">html {
+   overflow-y: visible !important ;
+}
+	</style>
+	<title></title>
+	<meta content="text/html; charset=UTF-8"><meta content="width=device-width, initialscale=1.0" name="viewport"><meta content="IE=edge">
+	<style type="text/css">@media screen and (max-width: 480px) {
+  .contentbuilderBaseColumnRow .columnCell {display:inline-block; width:100%}
+}
+ .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:600px}
+@media only screen and (max-width: 480px) {
+  .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:320px}
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;">
+<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#E9EAEC;" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				<tbody>
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										<tbody>
+											<tr>
+												<td align="Center" style="padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><img alt="December Monthly HR Assets" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Cosy_Sock_Image_December_Memember_W?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="590" /></span></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										<tbody>
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br />
+												<br />
+												For many of us, the end of the year brings joy, as well as increased stress and indulgence. We&rsquo;re sharing our latest easy-to-use tools and resources to empower you and your employees to finish the year healthy and strong.<br />
+												<br />
+												Check out the below sample email template, including links to resources that anyone - including your employees with chronic conditions - may find valuable. Share them via email, on your company intranet, or through other communication channels.<br />
+												<br />
+												We are happy to share these seasonal HR kits once a month with you and the people you serve as part of our mission to help people live better, healthier lives.&nbsp;<br />
+												<br />
+												<i>[sample email content for your use]&nbsp;</i></span></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										<tbody>
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:50px;padding-bottom:10px;padding-top:10px;padding-left:50px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i>December is a month to encourage our prospective and current members, clients, and friends to Finish Healthy, Finish Strong!<br />
+												&nbsp;<br />
+												We&rsquo;re sharing a few resources, including a video by our coaches, to round out the year.&nbsp;</i></span></span>
+
+												<ul>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://content.livongo.com/cp/PM11146.A_December_Calendar_2020.pdf">A daily December calendar to help you finish 2020 strong</a></span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://www.youtube.com/watch?v=_vCfNvrWdMM&feature=youtu.be">5 tip to relieve stress (Video by our Expert Coaches!)</a></span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://content.livongo.com/cp/PM11130.A_ColdWeatherWalkingTips.pdf">5 cold-weather walking tips</a> </span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://content.livongo.com/cp/PM11131.A_7SuperfoodRecipesforWinter.pdf">A winter produce guide, plus 7 recipes!</a></span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Extras:</span></span>
+													<ul>
+														<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://youtu.be/vbHS6kIBZDo">10 Healthy, Low-Carb Swaps for Winter Holidays</a></span></span></li>
+														<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://www.youtube.com/watch?v=lxRoL4xF4kk&feature=youtu.be">Winter Scenes with Soothing Sounds</a></span></span></li>
+													</ul>
+													</li>
+												</ul>
+												<br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i>[Livongo offers support for diabetes, blood pressure, weight, behavioral health, and more. If you&rsquo;re not already a member, you can see if you&rsquo;re eligible at <a href="http://enjoy.livongo.com/new">enjoy.livongo.com/new</a>].</i><br />
+												<br />
+												<i>[Livongo is offered at no cost to you and your family members with medical coverage through your medical plan.] If you have any questions, please call Livongo Member Support at (800) 945-4355.&nbsp;<br />
+												<br />
+												Be well,&nbsp;<br />
+												<br />
+												The HR team</i></span></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							<tbody>
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										<tbody>
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:10px;padding-left:5px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i>[end sample email content] &nbsp;</i><br />
+												<br />
+												We continue to receive positive feedback on these seasonal HR kits and how they are driving enrollment and usage among Members. &nbsp;We hope that you and your employees will also find them valuable. Thank you for your continued support.&nbsp;&nbsp;&nbsp;<br />
+												<br />
+												Stay safe and healthy,&nbsp;<br />
+												{{{Sender.FirstName}}}<br />
+												<br />
+												{{{Sender.Signature}}}</span></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

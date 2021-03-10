@@ -1,0 +1,33 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="HTN_CohortImage_header" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/HTN_CohortImage_header?oid=00D4600000180Lw" style="max-width: 600px" title="HTN_CohortImage_header" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> With hypertension affecting so many Americans from all walks of life, digital health management solutions offer scalable support that’s available whenever and wherever people need them.&nbsp;<br /> <br /> We recently analyzed the experiences of more than 1,400 participants eligible for the Livongo for Hypertension program through their employers -- including a health system, an industrial supplier, a large retailer, and a food &amp; beverage producer.&nbsp;<br /> <br /> Our rigorous analysis focused on real-world populations and the engagement challenges of a busy working population. Here’s what we found:&nbsp;</span></span> 
+   <ul> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Higher-than average Member satisfaction across multiple employee populations, which points to sustained engagement in managing this chronic condition&nbsp;</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Measurable impact on systolic and diastolic blood pressure rates among those with uncontrolled hypertension &nbsp;</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Lower medical costs incurred through reductions in inpatient care utilization, emergency department visits, and more, resulting in a positive Year 1 ROI&nbsp;</span></span></li> 
+   </ul> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Access the full case study </span></span> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://creative.livongo.com/web/c54fc0295409d61e/livongo_htn_casestudy_employer-cohort-htn-study/">here</a>.</span></span> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp;</span></span> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">The Livongo program is a data science-driven, personalized approach which aggregates real-time data to empower Members to take control of their chronic conditions where they are. To learn more about the program, please let me know. </span></span> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Stay safe and healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  </div>
+ </body>
+</html>

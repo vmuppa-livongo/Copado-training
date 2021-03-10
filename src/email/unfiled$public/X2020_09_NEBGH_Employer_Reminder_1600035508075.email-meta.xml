@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is for NEBGH targets, to remind them of the NEBGH Conference. PLEASE DO NOT CHANGE THE SUBJECT LINE</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_NEBGH_Employer_Reminder</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Complimentary Passes: Learn Ways to Provide Healthcare on Demand</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

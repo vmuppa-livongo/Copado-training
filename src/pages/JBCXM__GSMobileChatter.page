@@ -1,0 +1,74 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" id="chatterPage" controller="JBCXM.Customer360Broker">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/fonts/fonts.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/fonts/style.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/css/styles.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/css/custom.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/css/icons.css'))}" />
+    
+    <!-- Bootstrap css files -->
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/bootstrap/css/bootstrap.css'))}" />
+    <link rel="stylesheet" href="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/bootstrap/css/bootstrap-theme.css'))}" />
+    
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-1.10.2.min.js'))}"></script>
+    <script src="{!JSENCODE(URLFOR($Resource.GSMobileApp, 'bootstrapbdl/bootstrap/js/bootstrap.js'))}"></script>
+    
+    <script>
+    	var GS = GS || {};
+        GS.isMobile = true;
+        GS.packageNS            = "{!(pkgNS)}";
+    	GS.isPackagedInstance   = (GS.packageNS) ? "true" : "false";
+        
+        $(document).ready(function(){   
+            $(".publishercontainer, .feedDropDown, .feeditemfooter, .feeditemActionMenuButton").hide();
+           
+            if($(".emptyfeed").length != 0){
+            	$(".emptyfeed").addClass('messageBox');
+	            $(".emptyfeed").css('text-align','center');
+	            $(".emptyfeed").html('No Chatter comments found.');
+	            $(".cxfeedinnerwrapper").css('text-align','center');
+            }
+            
+            var accId = "{!($CurrentPage.parameters.cid)}";
+            $("#closeChatterComment").on('click', function(){
+                if( (typeof sforce != 'undefined') && (sforce != null) ) {
+                    // Salesforce1 navigation
+                    if(accId != 'undefined'){
+                        sforce.one.navigateToURL('/apex/'+GS.packageNS +'GSMobileCustomerSuccess360?cid='+accId);
+                    }else{
+                        sforce.one.navigateToURL('/apex/'+GS.packageNS +'GSMobileSearch360');
+                    }
+                    
+                }
+                else {
+                    // Set the window's URL using a Visualforce expression
+                    if(accId != 'undefined'){
+                         window.location.href = '/apex/'+GS.packageNS +'GSMobileCustomerSuccess360?cid='+accId;
+                    }else{
+                         window.location.href = '/apex/'+GS.packageNS +'GSMobileSearch360';
+                    }
+                }
+            });
+        });
+    </script>
+    <div id="subHeader" class="col-xs-12 ctaDetails">
+        <div>
+            <div class="col-xs-2 icon-utility-back" style="font-size: 2em;" id="closeChatterComment">&nbsp;</div>
+            <div class="col-xs-8 title"  style="display: block">{!HTMLENCODE($CurrentPage.parameters.customerName)}</div>
+            <div >&nbsp;</div>
+        </div>
+        <div>
+            <div class="col-xs-12" style="text-align:center;">
+                <h1>{!HTMLENCODE($CurrentPage.parameters.ctaName)}</h1>                     
+            </div>
+            
+        </div>
+    </div>
+    <br/><br/><br/>
+    <div id="ctaChatterFeed" style="padding: 5px;margin-top:20px;"> 
+        <div id="chatterDivId" >
+            <chatter:feed entityId="{!$CurrentPage.parameters.entityId}" id="chatterIdCTA" />
+        </div>
+    </div>
+    
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>EMPLOYER CLIENT: January Email Template for Monthly HR Wellness Materials</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>20_12_January Member Wellness</name>
+    <style>none</style>
+    <subject>Seasonal HR Kit: January</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

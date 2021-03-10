@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email invitation for Signum</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>190212 Signum Email Invite</name>
+    <style>freeForm</style>
+    <subject>Don’t Miss Out On Attending Signum on February 28</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You might be asking, “What is Signum?” The word Signum is Latin for a bell tower that heralds news or signals a momentous new piece of information. On February 28, Livongo will gather preeminent healthcare speakers and visionaries in San Francisco, and I want to invite you to be a part of the conversation.
+
+Why Should You Come?
+Gain insights on how leading organizations across the country are addressing chronic-condition management now and their strategies for the future.
+Find out answers to burning questions like “why is timing everything” and “what can Google teach us about ourselves?”
+Join a movement that will address our healthcare crisis and provide smarter solutions to silence noisy healthcare.
+
+
+Who’s Attending?
+Benefits leaders from some of the most innovative U.S. companies including Amazon, Microsoft, MetLife, Walgreens, US Foods, SAP, and Target.
+
+CEOs, Presidents, Chief Medical Officers, and other senior executives from leading healthcare organizations including Express-Scripts, Lockton, Anthem, the Biden Cancer Initiative, American Heart Association, and more.
+
+Speakers who include:
+
+Daniel Pink, New York Times Best-Selling Author: Sold more than two million copies of his books on work, business, and behavior.
+
+Hemant Taneja, Managing Director of General Catalyst: One of the most successful venture capitalists in Silicon Valley and author of business best-seller Unscaled.
+
+Mark Ganz, CEO of Cambia Health Systems: Named one of the Top 100 Most Influential People in Healthcare in 2018 by Modern Healthcare, he leads an organization that impacts more than two million people over four states.
+
+Dr. Stephen Klasko, CEO of Jefferson Health: Earned Fast Company’s 100 Most Creative People in Business in 2018. He’s grown Jefferson Health from three hospitals earning $2.2B in 2013 to 14 hospitals earning $5.1B in 2019.
+
+What Else is in Store?
+
+Welcome Reception (Wednesday, February 27, 5:00-8:00 p.m.) Mix and mingle with attendees.
+
+Premier Dinners (Thursday, February 28, 6:30 - 9:30 p.m.) Indulge at some of San Francisco’s culinary gems with fellow clients.
+
+Product Bar (Friday, March 1, 9:00 a.m. - Noon) Check out our latest and greatest Livongo products including our latest devices and see first hand our new behavioral health solution.
+
+Don’t miss out! To RSVP and to view the full agenda, visit livongo.com/signum
+
+
+Thanks,
+[Your Email Signature Here]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

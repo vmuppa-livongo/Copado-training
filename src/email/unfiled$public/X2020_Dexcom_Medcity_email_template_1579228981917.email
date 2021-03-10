@@ -1,0 +1,23 @@
+<html style="overflow-y: hidden;">
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><img alt="image001" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/image001?oid=00D4600000180Lw" style="max-width: 651.0667053222656px" title="image001" /><br />
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height: 107%;">Dear {{{Recipient.FirstName}}},</span></span></span><br />
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">I wanted to share some exciting coverage from Monday&rsquo;s announcement where we revealed the </span></span> <a href="https://ir.livongo.com/news-releases/news-release-details/livongo-and-dexcom-partner-integrate-dexcoms-g6-continuous"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Livongo and Dexcom</span></span></a> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"> partnership to sync data from the Dexcom G6 Continuous Glucose Monitoring System with the Livongo platform.</span></span><br />
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">MedCity News published a feature story about the partnership where Livongo President, Dr. Jennifer Schneider, shared her insights from a recent speaking engagement at the StartUp Health Festival. You can read that article using </span></span> <a href="https://medcitynews.com/2020/01/livongos-president-talks-dexcom-partnership/"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">this link</span></span></a> <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">.&nbsp;</span></span><br />
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dr. Schneider discusses how this partnership with the CGM leader will further improve Livongo&rsquo;s Member experience. Combining rich CGM data with proprietary data from our connected devices, Livongo will provide even more personalized insights to drive better clinical and financial results. &nbsp;</span></span><br />
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">As a person living with type 1 diabetes, Dr. Schneider wears a Dexcom CGM herself and referenced her Dexcom sensor during the session.&nbsp;<br />
+<br />
+We are excited for the opportunity to further empower people who are using Dexcom CGMs to live better and healthier lives. Would love to connect soon to discuss this news and other exciting developments at Livongo.<br />
+<br />
+Stay Healthy,</span></span><br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}<br />
+<br />
+{{{Sender.Signature}}}</span></span></body>
+</html>

@@ -1,0 +1,106 @@
+<!-- Removing the code
+---- Copyright (c) 2012 JBara Software, Inc. 
+---- Purpose                    : deprecated .
+---- Other comments (optional)  : . 
+-->
+<apex:page sidebar="false" showHeader="true"  title="Events">  
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/buildCalanderLabelsCls.js'))}" />
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles,'Events/eventsEntry.css'))}"/> 
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles,'Events/eventsDisplay.css'))}"/>
+     <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor, 'js/vendor/multiple-select/multiple-select.css'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor, 'js/vendor/multiple-select/jquery.multiple.select.js'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSAppCSS,'css/gsGlobal.css'))}"/>    
+    <style>
+		body #AppBodyHeader {  
+            display: none;  
+            background:transparent !important;
+        } 
+		.ui-widget-overlay {
+		    opacity: 0;
+		}
+		body {
+		    background: none !important;
+		    background:transparent !important;
+			background-color:transparent;
+		}
+		.eventFrameDialogProperties {
+		  	width:970px !important;
+ 			height:380px !important;
+ 			overflow: auto !important;
+ 			left : 10px !important;
+		}
+		div.parentDate.bulkUpdateUserDates {
+			border: 0px;
+		}
+	</style>
+ 	<script>
+ 		var j$ = jQuery.noConflict(); 
+ 		var is360 = '{!($CurrentPage.parameters.is360)}';
+ 		j$(document).ready(function() { 
+ 			j$("body").css({"background":"none !important","background-color":"transparent"});
+ 			//clickToViewEventForm('Add', null,'');
+ 			var evtId =  j$.trim('{!($CurrentPage.parameters.eventId)}') ? j$.trim('{!($CurrentPage.parameters.eventId)}') : null;
+ 			var cName = (evtId) ? '{!($CurrentPage.parameters.cname)}' : '';
+ 			var mode = (evtId) ? 'Edit' : 'Add';
+ 			clickToViewEventForm(mode, evtId, '', '{!($CurrentPage.parameters.cname)}', '{!($CurrentPage.parameters.customerId)}');
+ 			//alert(j$('.customer-name-text').length+'{!($CurrentPage.parameters.cname)}');
+ 			setTimeout(function(){
+				j$('.customer-name-text').val('{!($CurrentPage.parameters.cname)}').attr("disabled", "true");  	
+				j$('.theHiddenCustomerId').val('{!($CurrentPage.parameters.customerId)}'); 				
+			},2000);
+			if(is360 === 'false') { 
+				j$('.eventFrameDialog').addClass('eventFrameDialogProperties');
+				j$('.ga_mainEventsFrom').css('width','41%');
+				j$('.ga_mainTasksForm').css('width','44.9%');
+			}
+ 			
+ 		});
+ 		function callBackAfterEventSave(eventId) {
+ 			var parent = '{!($CurrentPage.parameters.parent)}';
+ 			var args = [eventId];
+			try {
+					if(is360 === "true") {
+	 					window.top['{!($CurrentPage.parameters.callbackAfterSave)}'](eventId);	
+ 	 			}
+	 				else {
+	 					window.parent.postMessage({
+							callback: '{!($CurrentPage.parameters.callbackAfterSave)}',
+							args:args,
+							message:"callbackAfterSave"
+						},parent);
+					}
+ 			}
+ 			catch(e){
+ 				console.error(e.message);
+ 			}			
+		}
+		
+		function callBackAfterCancel() {
+			var parent = '{!($CurrentPage.parameters.parent)}';
+			try {
+					if(is360 === "true") {
+	 					window.top['{!($CurrentPage.parameters.callBackAfterCancel)}']();
+	 				}
+	 				else {
+	 					window.parent.postMessage({
+							callback:'{!($CurrentPage.parameters.callBackAfterCancel)}',
+							message:"callBackAfterCancel"
+						},parent);
+					}
+ 			}
+ 			catch(e){
+ 				console.error(e.message);
+ 			}			
+		}
+ 	</script>
+ 	
+    <div class="eventFormShow" style="display:none;">  
+		<c:EventForm />  
+    </div>
+	<apex:form ></apex:form>
+</apex:page>

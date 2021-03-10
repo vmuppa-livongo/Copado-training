@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>HCSC VIP Event Outreach</name>
+    <style>freeForm</style>
+    <subject>Join us for a Night at the Ballpark</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+Thanks for spending an evening with us at TopGolf! We really enjoyed our time.
+
+I am excited to invite you and your clients and broker/consultant partners to an exclusive Livongo VIP event on Tuesday, May 22nd to watch the Texas Rangers play the New York Yankees. We look forward to hosting you in the Hall of Fame Warren Spahn Suite at Globe Life Park to discuss the HCSC Wellbeing Management Solution, Livongo, and a favorite pastime, baseball.
+
+Please share with your clients and broker/consultants and RSVP by May 1st at https://livongorangers.splashthat.com/
+
+Please feel free to reach out with any questions. We look forward to a night of camaraderie and fun.
+
+Thanks!
+
+KARA CARDINALE
+Vice President, Health Services Segment
+Livongo
+m: 773.551.4690 e: kcardinale@livongo.com
+a: 444 N. Michigan Ave., Suite 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

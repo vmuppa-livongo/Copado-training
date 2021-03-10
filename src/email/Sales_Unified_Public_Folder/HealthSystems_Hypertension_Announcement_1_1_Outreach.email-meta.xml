@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>HealthSystems Hypertension Announcement 1:1 Outreach</name>
+    <style>freeForm</style>
+    <subject>Exciting News: Livongo Launches Hypertension and acquires Retrofit</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+I would like to formally introduce myself. My name is Patricia Baran. I recently joined the rapidly expanding Livongo team as the Regional Vice President for the Western US.
+
+Thank you for allowing us to service your employees through the Livongo for Diabetes comprehensive program. We are continuing to see great success in clinical and financial results as well as member satisfaction!
+
+You may have seen that Livongo is expanding beyond Diabetes. In fact, we have broadened our portfolio to empower people with Hypertension, Weight Management, as well as disease prevention programs. Cardiovascular care is the most important factor in avoiding the long term, expensive complications of diabetes and nearly 65 percent of people using Livongo for Diabetes also have hypertension.
+
+We know that chronic conditions don’t live in silos especially at {!Account.Name} and by offering an integrated platform to manage both chronic conditions, we eliminate the need for members to use separate solutions. Livongo offers personalized insights on how they can better manage both chronic conditions, meeting the health needs of the whole person: mentally, physically, and emotionally.
+
+I would greatly appreciate the opportunity to share more about Livongo’s recent expansion and how together we deliver greater financial and clinical outcomes by adding the new hypertension program as well as Retrofit.
+
+I can be reached directly at Pbaran@livongo or 630-835-8777. I look forward to working with you to empower your employees.
+
+Best regards,
+
+Patti
+
+Patricia Baran
+Regional Vice President – Western US
+Livongo
+M: 630-835-8777
+E: Pbaran@Livongo.com
+A: 444 N. Michigan Ave. Ste 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

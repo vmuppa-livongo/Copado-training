@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Partnership Awareness Email Template to prospective/existing clients</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Partner_VSP Partnership Awareness Email</name>
+    <style>none</style>
+    <subject>Livongo and VSP Partner to help mutual members with chronic conditions</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

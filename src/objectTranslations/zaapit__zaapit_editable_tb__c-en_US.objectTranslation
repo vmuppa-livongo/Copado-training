@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Columns Filters2 --></label>
+        <name>zaapit__Columns_Filters2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Columns Filters3 --></label>
+        <name>zaapit__Columns_Filters3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Columns Filters --></label>
+        <name>zaapit__Columns_Filters__c</name>
+    </fields>
+    <fields>
+        <label><!-- DupeSettings --></label>
+        <name>zaapit__DupeSettings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Sort Grouping2 --></label>
+        <name>zaapit__Enable_Sort_Grouping2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable sort coloring --></label>
+        <name>zaapit__Enable_Sort_coloring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable sort grouping --></label>
+        <name>zaapit__Enable_Sort_grouping__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extra Condition Filter --></label>
+        <name>zaapit__Extra_Condition_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show as default --></label>
+        <name>zaapit__Show_as_default__c</name>
+    </fields>
+    <fields>
+        <label><!-- View Name --></label>
+        <name>zaapit__View_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- columnsWidth --></label>
+        <name>zaapit__columnsWidth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Page --></label>
+        <name>zaapit__currPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- customLinksOnReadMode --></label>
+        <name>zaapit__customLinksOnReadMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- fieldsHeaders --></label>
+        <name>zaapit__fieldsHeaders__c</name>
+    </fields>
+    <fields>
+        <label><!-- fields --></label>
+        <name>zaapit__fields__c</name>
+    </fields>
+    <fields>
+        <label><!-- maxRowsPerPage --></label>
+        <name>zaapit__maxRowsPerPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- searchSTR --></label>
+        <name>zaapit__searchSTR__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortBy2 --></label>
+        <name>zaapit__sortBy2__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortBy3 --></label>
+        <name>zaapit__sortBy3__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortBy --></label>
+        <name>zaapit__sortBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortDir2 --></label>
+        <name>zaapit__sortDir2__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortDir3 --></label>
+        <name>zaapit__sortDir3__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortDir --></label>
+        <name>zaapit__sortDir__c</name>
+    </fields>
+    <fields>
+        <label><!-- Table For Object --></label>
+        <name>zaapit__table__c</name>
+    </fields>
+    <fields>
+        <label><!-- topChartsFields --></label>
+        <name>zaapit__topChartsFields__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Go_To_VIew --></label>
+        <name>zaapit__Go_To_VIew</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Lorie Fiber: Chief Marketing Officer 1:1 outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo Launches Hypertension... and other exciting news</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+You might have seen that Livongo is expanding our platform to include a hypertension management solution. Cardiovascular care is the most important factor in avoiding the long-term, expensive complications of diabetes and nearly 65 percent of people using Livongo for Diabetes also have hypertension. By offering an integrated platform, Livongo will empower people to better understand their personal health profile and reduce the hassles of managing multiple chronic conditions.
+
+In addition to launching hypertension, we have developed a strategic partnership with Lilly to develop new insights that advances knowledge about effective interventions in diabetes care. This research will support our efforts to offer members the best support possible so they can best manage their chronic conditions.
+
+Livongo’s member-first approach is driven by our strong company values. Read a Q&amp;A with Livongo President, Andy Page, to learn more about Livongo’s clear vision.
+
+I would love to schedule time to discuss Livongo for Hypertension and other exciting developments.
+
+Best regards,
+
+RANDY FORMAN
+Head of Strategic Accounts
+Livongo
+m: 773.425.3316 e: rforman@livongo.com
+a: 444 N. Michigan Ave., Ste 3400, Chicago, IL 60622
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

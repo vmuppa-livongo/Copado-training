@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Enrollment Communications Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Enrollment Communications Surveys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Enrollment Communications Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Annual Notice of Change Content Needed --></label>
+        <name>Annual_Notice_of_Change_Content_Needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Communicates by Phone --></label>
+        <name>Client_Communicates_by_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Implementation Manager --></label>
+        <name>Client_Implementation_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Sending Announcement DMM? --></label>
+        <name>Client_Sending_Announcement_DMM__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact Email Address --></label>
+        <name>Contact_Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Types Provided for Enrollment --></label>
+        <name>Data_Types_Provided_for_Enrollment__c</name>
+        <picklistValues>
+            <masterLabel>Email addresses</masterLabel>
+            <translation><!-- Email addresses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home phone number</masterLabel>
+            <translation><!-- Home phone number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailing addresses</masterLabel>
+            <translation><!-- Mailing addresses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile phone number</masterLabel>
+            <translation><!-- Mobile phone number --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Communications Survey Type --></label>
+        <name>Enrollment_Communications_Survey_Type__c</name>
+        <picklistValues>
+            <masterLabel>Behavioral Health</masterLabel>
+            <translation><!-- Behavioral Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue Cross and Blue Shield of IL, MT, NM, OK and TX</masterLabel>
+            <translation><!-- Blue Cross and Blue Shield of IL, MT, NM, OK and TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CVS</masterLabel>
+            <translation><!-- CVS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cambia - Diabetes Management</masterLabel>
+            <translation><!-- Cambia - Diabetes Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM + HTN</masterLabel>
+            <translation><!-- DM + HTN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DPP/WM 2.0</masterLabel>
+            <translation><!-- DPP/WM 2.0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetes Management</masterLabel>
+            <translation><!-- Diabetes Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hypertension</masterLabel>
+            <translation><!-- Hypertension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independence Blue Cross</masterLabel>
+            <translation><!-- Independence Blue Cross --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medicare</masterLabel>
+            <translation><!-- Medicare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Partners</masterLabel>
+            <translation><!-- New Partners --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Enrollment Marketing Lead --></label>
+        <name>Enrollment_Marketing_Lead__c</name>
+        <relationshipLabel><!-- Enrollment Communications Surveys --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estimated Review Timeline --></label>
+        <name>Estimated_Review_Timeline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include Population &amp; Covered Dependents --></label>
+        <name>Include_Population_Covered_Dependents__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Medicare Annual Enrollment Consideration --></label>
+        <name>Medicare_Annual_Enrollment_Consideration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Medicare Enrollment Period Notes --></label>
+        <name>Medicare_Enrollment_Period_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org-specific Medicare Requirement Notes --></label>
+        <name>Org_specific_Medicare_Requirement_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Organization-specific Medicare Requireme --></label>
+        <name>Organization_specific_Medicare_Requireme__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other HR Communication --></label>
+        <name>Other_HR_Communication__c</name>
+    </fields>
+    <fields>
+        <label><!-- Populations Excluded --></label>
+        <name>Populations_Excluded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Status Updated Date --></label>
+        <name>Survey_Status_Updated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Status --></label>
+        <name>Survey_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resent</masterLabel>
+            <translation><!-- Resent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent</masterLabel>
+            <translation><!-- Sent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Survey URL --></label>
+        <name>Survey_URL__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

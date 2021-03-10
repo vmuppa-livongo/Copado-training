@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Employees</fullName>
+        <default>false</default>
+        <label>Employees</label>
+    </customValue>
+    <customValue>
+        <fullName>Spouse</fullName>
+        <default>false</default>
+        <label>Spouse</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependents U18</fullName>
+        <default>false</default>
+        <label>Dependents U18</label>
+    </customValue>
+    <customValue>
+        <fullName>Dependents 18+</fullName>
+        <default>false</default>
+        <label>Dependents 18+</label>
+    </customValue>
+    <customValue>
+        <fullName>Employees w/o Medical</fullName>
+        <default>false</default>
+        <label>Employees w/o Medical</label>
+    </customValue>
+    <customValue>
+        <fullName>Patients</fullName>
+        <default>false</default>
+        <label>Patients</label>
+    </customValue>
+    <customValue>
+        <fullName>Retirees</fullName>
+        <default>false</default>
+        <label>Retirees</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary Insurance</fullName>
+        <default>false</default>
+        <label>Secondary Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct to Consumer (D2C)</fullName>
+        <default>false</default>
+        <label>Direct to Consumer (D2C)</label>
+    </customValue>
+    <customValue>
+        <fullName>Pre-65 Retirees</fullName>
+        <default>false</default>
+        <label>Pre-65 Retirees</label>
+    </customValue>
+    <customValue>
+        <fullName>Cobra</fullName>
+        <default>false</default>
+        <label>Cobra</label>
+    </customValue>
+    <customValue>
+        <fullName>Diabetes Under 13</fullName>
+        <default>false</default>
+        <label>Diabetes Under 13</label>
+    </customValue>
+    <customValue>
+        <fullName>Union Population</fullName>
+        <default>false</default>
+        <label>Union Population</label>
+    </customValue>
+    <masterLabel>Population of Coverage</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

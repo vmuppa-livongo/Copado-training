@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Q1_Welltok/HTA PR_Email</name>
+    <style>none</style>
+    <subject>HTA/Welltok Select Livongo as First Marketplace Partner</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,125 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#E9EAEC;" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="padding: 10px 5px;"><span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},</span></span>
+												<p dir="ltr" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Managing diabetes requires people to regularly self-manage their condition -- which may include a medication regimen --&nbsp; to keep blood glucose in control. Yet it’s estimated that as little as&nbsp;<b>36% of people with diabetes are adherent to their medications</b></span></span><sup>1</sup><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">.&nbsp;</span></span></p>
+
+												<p dir="ltr" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">A new study presented at the American College of Clinical Pharmacy Conference shows that Members of the Livongo for Diabetes program achieved a <b>2x improvement in medication adherence</b> among Livongo for Diabetes Members at Year 2, compared to a matched control group.&nbsp;</span></span></p>
+
+												<ul dir="ltr">
+													<li style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Click </span></span><a href="https://creative.livongo.com/web/66ee0153d52a921a/effect-of-remote-diabetes-management-program/?mediaId=B377402D-C935-43F8-BEB8B8C68760E1AC"><span style="color:#3498db;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">here</span></span></span></a>&nbsp;t<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">o see the poster presentation.&nbsp;</span></span></li>
+												</ul>
+
+												<p dir="ltr" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Adherence contributes to improved clinical outcomes for people living with diabetes, which this study also measured, and lower medical costs. In fact, it’s estimated that every one dollar invested in adherence can <b>save $6.70 in medical costs</b></span></span><sup>2</sup><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">.&nbsp;</span></span></p>
+
+												<p dir="ltr" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Our Chief Medical Officer, Bimal Shah MD, shares what this means for organizations using digital health platforms like Livongo to manage chronic conditions within their own organizations.&nbsp;</span></span></p>
+
+												<ul dir="ltr">
+													<li style="font-family: Arial, Helvetica, sans-serif;"><a href="https://www.linkedin.com/pulse/cracking-code-diabetes-medication-adherence-bimal-shah/?trackingId=PcEyy9CwRTiqgd2q1esD7Q%3D%3D" style="font-size: 16px;">Read Dr. Shah’s commentary on &quot;Cracking the Code on Diabetes Medication Adherenc<u>e&quot;</u></a><u>.</u></li>
+												</ul>
+
+												<p dir="ltr" style=""><br />
+												<span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;"><span style="font-family:Arial,Helvetica,sans-serif;">I’d love to discuss how our approach to virtual care can do the same for your organization.</span></span><br />
+												<br />
+												<br />
+												<span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Stay Healthy,<br />
+												{{{Sender.FirstName}}}<br />
+												<br />
+												{{{Sender.Signature}}}</span></span><br />
+												<br />
+												<br />
+												<br />
+												<span style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;"><sup>1</sup></span><font face="Arial, Helvetica, sans-serif" style=""><span style="font-size: 10px;">Medication adherence among patients with&nbsp;Type 2 diabetes: A mixed methods study </span></font><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6289442/#"><font face="Arial, Helvetica, sans-serif" style=""><span style="font-size: 10px;">PLoS One</span></font></a><font face="Arial, Helvetica, sans-serif" style=""><span style="font-size: 10px;">. 2018; 13(12):e0207583. Published online 2018 Dec 11.&nbsp;</span></font><br />
+												<span style="font-family: Arial, Helvetica, sans-serif; font-size: 10px;"><sup>2</sup>Medication Adherence Leads to Lower Health Care Use And Costs Despite Increased Drug Spending. M. Christopher Roebuck, Joshua N. Liberman,&nbsp; Martin Gemmill-Toyama and Troyen A. Brennan. Health Affairs 2011 30:1, 91-99.&nbsp;</span></p>
+												</td>
+											</tr>
+											<tr>
+												<td style="padding: 10px 5px;">&nbsp;</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						&nbsp;
+
+						<div style="width: 686px; margin: 0 auto;">
+						<hr style="width:100%;text-align:left;margin-left:0" /></div>
+
+						<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+							
+								<tr>
+									<td align="center" width="100%">
+									<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+										
+											<tr>
+												<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+												<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+													
+														<tr valign="top">
+															<td class="columnCell" style="vertical-align:middle;" width="8.33%">
+															<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td align="Center" style="padding-right:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/livongo_mark_2020_blue?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="39" /></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="75%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="padding-left:10px;font-family:Times;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Livongo</b> | 150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041</span></span><br />
+																		<br />
+																		<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">2020 &copy; Livongo. All Rights Reserved.</span></span></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="16.66%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="font-family:Arial,Helvetica,sans-serif;"><a href="mailto:unsubscribe@e-1alg9zf3qo01qow46vkmxmslp0apnl5npfuc39907dhzsihkha.46-180lweai.na134.apex.salesforce.com?subject=Unsubscribe"><span style="color:#0060fc;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Unsubscribe</span></span></span></a><br />
+																		<br />
+																		&nbsp;</td>
+																	</tr>
+																
+															</table>
+															</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table></body></html>

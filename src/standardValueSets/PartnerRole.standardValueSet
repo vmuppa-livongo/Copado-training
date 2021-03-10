@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Broker</fullName>
+        <default>false</default>
+        <label>Broker</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Payer/ASO</fullName>
+        <default>false</default>
+        <label>Payer/ASO</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>TPA</fullName>
+        <default>false</default>
+        <label>TPA</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>PBM</fullName>
+        <default>false</default>
+        <label>PBM</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>MCO</fullName>
+        <default>false</default>
+        <label>MCO</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Reseller/DME</fullName>
+        <default>false</default>
+        <label>Reseller/DME</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Onsite/Nearsite Clinic</fullName>
+        <default>false</default>
+        <label>Onsite/Nearsite Clinic</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Wellness and Incentives</fullName>
+        <default>false</default>
+        <label>Wellness and Incentives</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>EHR</fullName>
+        <default>false</default>
+        <label>EHR</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Telemed</fullName>
+        <default>false</default>
+        <label>Telemed</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Care Navigation</fullName>
+        <default>false</default>
+        <label>Care Navigation</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Disease Management</fullName>
+        <default>false</default>
+        <label>Disease Management</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Group/Association</fullName>
+        <default>false</default>
+        <label>Business Group/Association</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Population Health</fullName>
+        <default>false</default>
+        <label>Population Health</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Lab/Testing</fullName>
+        <default>false</default>
+        <label>Lab/Testing</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Weight Loss/DPP</fullName>
+        <default>false</default>
+        <label>Weight Loss/DPP</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Health Plan Partner</fullName>
+        <default>false</default>
+        <label>Health Plan Partner</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Pharma</fullName>
+        <default>false</default>
+        <label>Pharma</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Medical Device</fullName>
+        <default>false</default>
+        <label>Medical Device</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Group on Health</fullName>
+        <default>false</default>
+        <label>Business Group on Health</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Digital Health Company</fullName>
+        <default>false</default>
+        <label>Other Digital Health Company</label>
+        <reverseRole>Client</reverseRole>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is customized for PBM prospects to promote the Q3 webinar.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>PBM Prospect Email_Q3 Webinar State of New Jersey</name>
+    <style>none</style>
+    <subject>Expert Webinar: Bridging the Gap to Provide Virtual, Whole Person Care Amid a Pandemic</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

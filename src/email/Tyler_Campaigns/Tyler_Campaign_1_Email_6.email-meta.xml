@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Tyler Campaign 1 Email 6</name>
+    <style>freeForm</style>
+    <subject>Beware of bears</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I&apos;ve been trying to get in touch with you to snag a quick phone call to talk about Livongo, and haven&apos;t had much luck. This leads me to believe one of three things:
+
+1) Lowering diabetes-related costs and improving the welfare of your employees is not a priority right now
+
+2) You are interested in learning how we can help you lower diabetes-related costs and improve the welfare of your employees, but you&apos;re super busy
+
+3) You&apos;ve been eaten by a bear
+
+Whether it&apos;s 1, 2, or 3 - please let me know... because I&apos;m terrified of bears and would need to keep an eye out the next time I&apos;m in your area.
+
+All the best,
+
+Tyler Vandenberg
+Sales Development Representative at Livongo
+Livongo
+o: 312.357.5540
+e: tvandenberg@livongo.com
+a: 444 N. Michigan Ave., Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

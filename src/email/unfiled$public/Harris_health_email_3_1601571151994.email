@@ -1,0 +1,24 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Dear {{recipient.firstname}}, 
+  <br /> 
+  <br /> Join us at LEAP HR next week! On October 7 during LEAP HR’s Healthcare week for a live discussion between &nbsp;Livongo’s CMO, Dr. Bimal Shah, and Harris Health’s Director of Employee Wellness &amp; EAP, Michelle Hunnicutt. Registration for healthcare professionals is free.&nbsp; 
+  <br /> 
+  <br /> Learn how Livongo worked with Harris Health System -- a fully-integrated healthcare system serving more than 4.6 million residents of Harris County, Texas -- to deliver a whole-person approach to care for its employees and spouses with diabetes and hypertension. Results include: &nbsp; 
+  <ul> 
+   <li>A coordinated experience across conditions for people living with both diabetes and hypertension delivering an NPS of +92 &nbsp;</li> 
+   <li>Multi-year impact on clinical diabetes measures, including reduced HbA1c levels and fewer hypoglycemic readings</li> 
+   <li>Measurable impact on systolic and diastolic blood pressure rates among those with uncontrolled hypertension &nbsp;&nbsp;</li> 
+   <li>Reduced spending incurred through medical care, emergency room visits, and pharmacy costs associated with managing chronic conditions, resulting in a positive ROI&nbsp;</li> 
+  </ul> The case study will be available at the event or feel free to contact me for a copy. &nbsp;Hope to see you there. 
+  <br /> 
+  <br /> Have a nice weekend! 
+  <br /> 
+  <br /> Best, 
+  <br /> 
+  <br /> {{sender.firstname}}
+ </body>
+</html>

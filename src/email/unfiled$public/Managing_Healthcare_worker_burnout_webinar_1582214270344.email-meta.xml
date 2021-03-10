@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>webinar template for Managing Healthcare worker burnout (3/5)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Managing Healthcare worker burnout webinar</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>How are you managing healthcare worker burnout? (webinar)</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

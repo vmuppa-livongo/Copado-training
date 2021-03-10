@@ -1,0 +1,75 @@
+<!-- Copyright (c) 2014 Gainsight Software, Inc. 
+---- Purpose                    : Added this page to display tasks related to events.
+---- Other comments (optional)  : 
+-->
+<apex:page sidebar="false" showHeader="true"  title="Events">  
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}" />
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/buildCalanderLabelsCls.js'))}" />
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles,'Events/eventsEntry.css'))}"/> 
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles,'Events/eventsDisplay.css'))}"/> 
+    <style>
+        body #AppBodyHeader {  
+            display: none;  
+            background:transparent !important;
+        } 
+        .ui-widget-overlay {
+            opacity: 0;
+        }
+        body {
+            background: none !important;
+            background:transparent !important;
+            background-color:transparent;
+        }
+
+    </style>
+    <script>
+        var j$ = jQuery.noConflict(); 
+        j$(document).ready(function() { 
+            j$("body").css({"background":"none !important","background-color":"transparent"});
+            //clickToViewEventForm('Add', null,'');
+            var evtId =  j$.trim('{!($CurrentPage.parameters.eventId)}') ? j$.trim('{!($CurrentPage.parameters.eventId)}') : null;
+            var cName = (evtId) ? '{!($CurrentPage.parameters.cname)}' : '';
+            var mode = (evtId) ? 'Edit' : 'Add';
+            clickToViewEventForm(mode, evtId, '', '{!($CurrentPage.parameters.cname)}', '{!($CurrentPage.parameters.customerId)}');
+            //alert(j$('.customer-name-text').length+'{!($CurrentPage.parameters.cname)}');
+            setTimeout(function(){
+                j$('.customer-name-text').val('{!($CurrentPage.parameters.cname)}').attr("disabled", "true");   
+                j$('.theHiddenCustomerId').val('{!($CurrentPage.parameters.customerId)}');              
+            },2000);
+            
+        });
+        function callBackAfterEventSave(eventId) {
+            try {
+                window.top['{!($CurrentPage.parameters.callbackAfterSave)}'](eventId);  
+            }
+            catch(e){
+                console.error(e.message);
+            }           
+        }
+        
+        function callBackAfterCancel() {
+            try {
+                window.top['{!($CurrentPage.parameters.callBackAfterCancel)}']();
+            }
+            catch(e){
+                console.error(e.message);
+            }           
+        }
+    </script>
+    <!-- 02/14 :changed the component from EventForm  to GSMobileEventTasks -->
+    <div class="eventFormShow hide" >  
+        <c:GSMobileEventTasks />  
+    </div>
+    <apex:form ></apex:form>
+    <script> 
+        (function(){try{var a=navigator.userAgent;
+        if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1 || a.indexOf('OS/9')!=-1||a.indexOf('OS 9')!=-1||a.indexOf('OS/10')!=-1||a.indexOf('OS 10')!=-1)&&(a.indexOf('Safari')==-1)){ 
+        var s=document.createElement('style'); 
+        s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+        document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+  </script>
+</apex:page>

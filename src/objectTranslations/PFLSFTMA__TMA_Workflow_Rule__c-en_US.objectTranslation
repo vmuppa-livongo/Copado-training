@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>PFLSFTMA__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To Type --></label>
+        <name>PFLSFTMA__Assigned_To_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>PFLSFTMA__Assigned_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>PFLSFTMA__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date Offset --></label>
+        <name>PFLSFTMA__Due_Date_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Field --></label>
+        <name>PFLSFTMA__Filter_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Operation --></label>
+        <name>PFLSFTMA__Filter_Operation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Value --></label>
+        <name>PFLSFTMA__Filter_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch ID --></label>
+        <name>PFLSFTMA__Gift_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Touch Name --></label>
+        <name>PFLSFTMA__Gift_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ignore If Auto Send --></label>
+        <name>PFLSFTMA__Ignore_If_Auto_Send__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metadata Message --></label>
+        <name>PFLSFTMA__Metadata_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notify Assignee --></label>
+        <name>PFLSFTMA__Notify_Assignee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object --></label>
+        <name>PFLSFTMA__Object__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offset From Field --></label>
+        <name>PFLSFTMA__Offset_From_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offset Multiplier --></label>
+        <name>PFLSFTMA__Offset_Multiplier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Install Inserted --></label>
+        <name>PFLSFTMA__Post_Install_Inserted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>PFLSFTMA__Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rules Description --></label>
+        <name>PFLSFTMA__Rules_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>PFLSFTMA__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>PFLSFTMA__Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Description --></label>
+        <name>PFLSFTMA__Task_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Name --></label>
+        <name>PFLSFTMA__Task_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trigger Type --></label>
+        <name>PFLSFTMA__Trigger_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>PFLSFTMA__Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- formula --></label>
+        <name>PFLSFTMA__formula__c</name>
+    </fields>
+</CustomObjectTranslation>

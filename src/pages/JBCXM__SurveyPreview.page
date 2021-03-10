@@ -1,0 +1,206 @@
+<apex:page sidebar="false" showHeader="false" Controller="JBCXM.SurveyResponseController" title="Survey preview">
+    <!--<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-1.7.1.min.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.SurveyJquery, 'css/redmond/jquery-ui-1.8.18.custom.css'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-ui-1.8.18.custom.min.js'))}"/>
+    
+    <style>
+	    
+        .surveyHeaderSection,.surveyFooterSection{
+            width:1024px;
+        }
+        .surveyHeader{
+            display:inline;
+            float:left;
+        }
+       .surveyLogoSection{
+           /*  background:url("/servlet/servlet.FileDownload?file={!surveyImage}") no-repeat center center;*/
+            width:250px;
+            height:100px;
+            max-width:250px;
+        }
+        .surveyLogoDescription{
+            width:574px;
+            max-height: 100px;
+            max-width: 564px;
+            padding-right:5px;
+            padding-left:5px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .surveyStatus{
+            width:200px;
+            height: 100px;
+        }
+        .surveyDescription{
+            width:100%;
+         }
+        .warningImageClass{
+            background-image: url('/img/msg_icons/error32.png');
+	        width:32px;
+	        height:32px;
+	        display:inline-block;
+        } 
+        .validationMsgClass{
+        	font-size:20px;
+        	font-weight:bold;
+        	vertical-align: text-top;
+        }
+        .jbaraErrorMessageClass{
+        	margin-bottom: 20px;
+        	margin-left: auto;
+		    margin-right: auto;
+		    width: 60%;
+		    padding: 10px;
+        }
+        #theHeaderImageDisplayId{
+			max-width:250px !important;
+			max-height:100px !important;
+		}
+		.resizeh {
+			width: 250px;
+			height : auto;
+		}
+		.resizeW {
+			width: auto;
+			height : 100px;
+		}
+		.questHeader {
+			width: 100%;
+		}
+		.questMainContainer {
+			border-bottom:1px dashed #ccc;
+			padding:0 0 10px;
+	`	}
+		.infoImageClass{
+            background-image: url('/img/msg_icons/info32.png');
+            width:32px;
+            height:32px;
+            display:inline-block;
+        } 	
+    </style>
+    <script type="text/javascript">
+		var j$ = jQuery.noConflict();
+		j$(document).ready(function () {
+			var imgWidth = j$("#theHeaderImageDisplayId").width();
+			var imgHeight = j$("#theHeaderImageDisplayId").height();
+			if(imgWidth> 250 ){
+				j$("#theHeaderImageDisplayId").addClass("resizeW");	
+				j$(".surveyLogoSection img").css({
+					"margin-top":(95 - imgHeight)/2
+				});						
+			}else if(imgHeight >100){
+				j$("#theHeaderImageDisplayId").addClass("resizeh");	
+				j$(".surveyLogoSection img").css({
+					"margin-top":(95 - imgHeight)/2
+				});
+			}else if(imgWidth> 250 && imgHeight >100){
+				j$("#theHeaderImageDisplayId").addClass("resizeW");	
+				j$("#theHeaderImageDisplayId").addClass("resizeh");	
+			}	
+			
+			j$(".surveyLogoDescription").css({"padding-top":(100 - imgHeight)/2}); 
+	    	var charLength = j$(".surveyLogoDescription").text().length;	
+	        if (charLength > 200){
+	        	j$(".surveyLogoDescription").css({"font-size":"15px"});
+        	}else if(charLength >= 100 && charLength <= 200  ){
+        		j$(".surveyLogoDescription").css({"font-size":"18px"});
+        	}else{
+        		j$(".surveyLogoDescription").css({"font-size":"22px"});
+        	}
+        	j$(".surveyLogoDescription").show();
+        	j$(".surveyDescription").html(j$("#hidDesc").val().replace(/\n/g, '<br />'));
+		});
+    
+    
+    </script>
+     <apex:outputPanel id="panelPreview" rendered="{!IF((isPermEnabledForSurvey == false) ,true,false)}">	
+     <a href="#" onClick="history.go(-1);return false;"  style="text-decoration:none; display:inline-block ;margin-left:30%; margin-top:200px;">&nbsp;«&nbsp;Back</a>  
+   		<div class="ui-widget ui-widget-content ui-corner-all noPermissionCls" style="padding:10px; margin-left:30%;  width:40%;">   		
+    		<span class="infoImageClass">&nbsp;  </span>
+           		<span style="font-size: 110%;vertical-align:bottom; font-weight: bold;line-height: 32px;">
+               		Insufficient privileges, please contact your Administrator.               	
+           	</span> 
+        </div>	
+	 </apex:outputPanel>
+	 
+	 <apex:outputPanel id="permIdPanelPreview" rendered="{!IF((isPermEnabledForSurvey == true) ,true,false)}">	 
+     <div id="surveyResponseId" style="margin-right:auto;margin-left:auto;width:1024px !important;overflow:hidden;">-->	
+	   	 <!-- Survey header starts here -->
+	     <!--<div style="max-height:100px; height:100px;" id="surveyMainLogoSection">
+	         <div class="surveyHeaderSection" align="center" style="text-align: center;	text-align: center;">
+	             <div class="surveyHeader surveyLogoSection" align="left">
+	            	<apex:outputPanel rendered="{!surveyImage != ''}" styleClass="surveylogoPanel" style="display:block;vertical-align: middle;">
+	             		<img id="theHeaderImageDisplayId" src="{!surveyImage}" class="resize"/>
+	               	</apex:outputPanel>
+	             </div>
+	             <div class="surveyHeader surveyLogoDescription" style="display:none;color:#00446A;">{!surveyName}</div>
+	              <div class="surveyHeader surveyStatus">
+	                      <apex:outputPanel rendered="{!IF((surveySDate != '' && hidePublishDate == false) ,true,false)}">
+	                     	<span style="float:right;"><b>Published on</b> :{!surveySDate}</span><br/>
+	                       </apex:outputPanel>	 
+	                       <script>
+							j$("#surveyMainLogoSection").css({"border":"none"});
+							</script>
+	             </div>
+	        </div>
+	     </div>
+	      <div class="surveyHeader surveyDescription" id="surveyDescription" style="color:#00446A;padding-bottom:10px;">
+	            <input type="hidden" id="hidDesc" value="{!surveyDescription}"></input>
+	      </div>
+	     <div style="clear:both;width:2px;"></div>-->
+	     <!-- Survey header ends here -->
+	    
+ 		<!--<div style="height:40px;"><a href="#" onClick="history.go(-1);return false;"  style="text-decoration:none;">&nbsp;«&nbsp;Back</a></div>
+	    <apex:outputPanel id="messagePanel">
+			<apex:outputPanel rendered="{!renderValidationPanel}" >
+				<div align="center" class="jbaraErrorMessageClass ui-state-error ui-corner-all">
+					<span class="warningImageClass">&nbsp;</span> 
+					<span class="validationMsgClass">
+						{!validationMessage}
+					</span>
+				</div>
+			</apex:outputPanel>
+		</apex:outputPanel>
+		<apex:outputPanel id="formPanel" rendered="{!IF((isPermEnabledForSurvey == true) ,true,false)}">
+			<apex:outputPanel rendered="{!renderSurveyResponseFormPanel}">-->
+		    	<!-- Survey view starts here -->
+		    	<!--<div style="padding:0px 0px 10px 0px;margin-top:-20px;" class="jbaraSurveyViewClass">
+			        <apex:outputPanel style="text-align:left;width:1024px;margin-right:auto;margin-left:auto;width:1024px !important;overflow:hidden;">
+			            <c:SurveyView surveyId="{!surveyId}" displayMode="preview"></c:SurveyView>
+			        </apex:outputPanel>
+		        </div>-->
+		        <!-- Survey view ends here -->
+			    	
+				<!--<div style="clear:both;width:2px;"></div>-->
+				<!-- Survey footer starts here -->
+			   	<!--<div class="surveyFooterSection" style="text-align:center;border-top:2px dashed #00446A;;margin-right:auto;margin-left:auto;width:1024px !important;overflow:hidden;">
+			   		<span class="footerMsg" style="margin-top:10px;display: inline-block;margin-bottom:20px;">{!surveyFooter}</span>
+			   	</div>-->
+			   	<!-- Survey ends starts here -->		    	
+				    	
+			<!--</apex:outputPanel>
+		</apex:outputPanel>
+
+	
+   </div>
+   	
+   	 </apex:outputPanel>
+   
+   <script>
+    	var GSGA = {
+		orgId: "{!$Organization.Id}",
+		orgName: "{!$Organization.Name}",
+		userName: "{!$User.FirstName}"+" "+"{!$User.LastName}"
+		};
+		
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+	 </script>
+     <script type = "text/javascript" src= "{!JSENCODE(URLFOR($Resource.CustomJS, 'CustomJS/analyticsWrapper.js'))}" />	
+     <script>
+     	gainsightTrackEvents.pushPageViews('Survey Preview');
+    </script>-->
+</apex:page>

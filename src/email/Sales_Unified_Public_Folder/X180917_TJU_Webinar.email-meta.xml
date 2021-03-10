@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>180917 TJU Webinar Invite</name>
+    <style>freeForm</style>
+    <subject>Livongo Webinar with Jefferson Health</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I thought you might be interested in attending our upcoming webinar on Tuesday, September 25th with Jefferson Health. During the webinar, Robin Sheldon, Sr. Vice President of Jefferson Strategic Ventures, will discuss how Jefferson Health successfully partnered with Livongo to improve clinical outcomes and reduce diabetes medical spend.
+
+If you are unable to attend, I am happy to send you a recording of the webinar or schedule some time to discuss our case study with Jefferson Health and their results in detail.
+
+Hope to connect soon!
+
+[Signature]
+
+CASE STUDY
+Livongo Improves Clinical Outcomes
+and Reduces Diabetes Costs at
+Jefferson Health — Northeast
+
+Join Our Webinar (Space is limited)
+Date: September 25, 2018
+Time: 12 - 12:30 PM CST
+Hear from Robin Sheldon, Sr. Vice President of Jefferson Strategic Ventures at Thomas Jefferson University, on how Jefferson Health successfully partnered with Livongo to improve its clinical outcomes and reduce its diabetes medical spend.
+
+
+Gary Alpert
+Sr. Vice President of Client Success at Livongo
+
+
+Robin Sheldon, JD
+Sr. Vice President, Jefferson Strategic Ventures, Thomas Jefferson University and Jefferson Health
+
+SIGN UP HERE
+
+Can’t make it? Register anyway and receive a link to the recording when it’s available.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

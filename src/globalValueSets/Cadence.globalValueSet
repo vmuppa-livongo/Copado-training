@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Craig Root (3 Emails / 5 Phone Calls over 18 days)</fullName>
+        <default>false</default>
+        <label>Craig Root (3 Emails / 5 Phone Calls over 18 days)</label>
+    </customValue>
+    <customValue>
+        <fullName>Aaryn Pure (3 Emails / 1 Phone Call / 1 hand-written note over 20 days)</fullName>
+        <default>false</default>
+        <label>Aaryn Pure (3 Emails / 1 Phone Call / 1 hand-written note over 20 days)</label>
+    </customValue>
+    <customValue>
+        <fullName>Jason Macaleer (2 Emails / 2 Phone Calls / 1 Social Media over 8 days)</fullName>
+        <default>false</default>
+        <label>Jason Macaleer (2 Emails / 2 Phone Calls / 1 Social Media over 8 days)</label>
+    </customValue>
+    <masterLabel>Cadence</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

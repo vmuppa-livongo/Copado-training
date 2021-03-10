@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Max 12/19/17 Custom 1:1 email</name>
+    <style>freeForm</style>
+    <subject>Impactful News from Livongo</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Despite the holiday season, we have been busier than ever at Livongo. In recent days, we have received a significant news coverage for our innovation and thought leadership. I believe that you might find some of these articles interesting:
+
+Livongo has partnered with Castlight Health to integrate Livongo for Diabetes into the Castlight platform. Livongo will be offered to 250 Castlight clients and will launch the first integrated solution in 2018.
+
+Livongo was featured in Employee Benefit News when Brian Marcotte, President of National Business Group on Health, cited how Livongo has built a platform that effectively leverages data to bring real-time digital engagement tools to people living with chronic conditions.
+
+Livongo has been named to FierceMedTech’s 2017 Fierce 15.The award is affirmation of the impact that the Livongo for Diabetes program has made and the excitement that is brewing as we expand to multiple chronic conditions.
+
+Hope you enjoy a happy and relaxing holidays and I look forward to hearing from you soon.
+
+Thanks,
+
+MAX BERNSTEIN
+Livongo
+m: 717.649.7380 
+e: mbernstein@livongo.com
+a: 444 N Michigan Ave, Suite 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

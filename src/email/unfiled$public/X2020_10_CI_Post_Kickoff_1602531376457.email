@@ -1,0 +1,26 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="Livongo_Logo_RGB" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Livongo_Logo_RGB?oid=00D4600000180Lw" style="max-width: 165px; width: 165px; height: 30px;" title="Livongo_Logo_RGB" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> Thank you again for selecting Livongo as your partner. We look forward to working together to empower your employees with chronic conditions to live better, healthier lives.&nbsp;<br /> <br /> As discussed in our recent kickoff meeting, we have a number of best practices for getting people &nbsp;started with our chronic condition programs quickly and efficiently -- with relatively little effort from you and your team. This seamless implementation and enrollment process includes:&nbsp;</span></span> 
+   <ul> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Pre-launch implementation activities such as identifying relevant population data, benefits verification, billing set-up, and safe sender listing confirmation&nbsp;</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Weekly check-ins to assess progress and adjust as necessary&nbsp;</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Program roll-out to employee population, including marketing efforts optimized by population type&nbsp;</span></span></li> 
+   </ul> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"> Throughout these stages, we’ll be checking in -- individually and through online surveys -- to ensure we’re aligned with your processes, goals, and expectations.&nbsp;<br /> <br /> Again, we look forward to working with you. Please contact me with any questions or concerns.&nbsp;<br /> <br /> Stay healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+   <br /> &nbsp; 
+  </div>
+ </body>
+</html>

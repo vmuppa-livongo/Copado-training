@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>CRM Requests</name>
+    <queueMembers>
+        <roles>
+            <role>Client_Strategy</role>
+            <role>Sales_Team</role>
+            <role>Commercial_Hospital_System_Sales_Admin</role>
+            <role>Commercial_Partner_Team</role>
+            <role>Commercial_Sales_Team_Admin</role>
+            <role>Health_Services_Admin</role>
+            <role>Health_Services_Team</role>
+            <role>Inside_Sales</role>
+            <role>Sales_Admin</role>
+            <role>System_Administrator</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

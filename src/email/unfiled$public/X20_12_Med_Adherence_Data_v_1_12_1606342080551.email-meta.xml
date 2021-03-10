@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template should be leveraged to share our New Med Adherence Infographic with Prospects &amp; Clients.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>20_12_Med Adherence Data_v.1.12</name>
+    <style>none</style>
+    <subject>New study: Livongo’s impact on 2-year med adherence</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template to promote the Hypertension Cohort Case Study.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_HTN Cohort Case Study_Prospect</name>
+    <style>none</style>
+    <subject>Case Study: Reducing Hypertension Across Diverse Populations</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

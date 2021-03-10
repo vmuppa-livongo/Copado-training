@@ -1,0 +1,32 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},</span></span> 
+  <br /> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Quick note to share this </span></font> 
+  <a href="https://econofact.org/the-paradox-of-medical-costs-during-the-pandemic"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">recent article</span></font></a> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;"> that I thought you would find interesting, co-authored by Willis Towers Watson Managing Director Jeff Levin-Scherz. In it, he shares his perspective on the current and projected impact of the global pandemic on health and healthcare costs.</span></font> 
+  <br /> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">In short, demand for non-emergency&nbsp;medical services has fallen dramatically during the pandemic, and failure to treat hypertension or diabetes as a result for this forgone care will lead to worse clinical outcomes and higher costs in some instances. In addition, healthcare expenditures could increase following COVID-19, such as long-term complications for COVID-19 survivors and higher rates of mental illness in the general population.</span><br /> <br /> <span style="font-size: 14px;">Livongo's mission is to empower people living with chronic conditions to live better, healthier lives. That includes remote monitoring tools that keep Members to stay on-track with their health during this usual period by:</span></font> 
+  <ul> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;"><b>Addressing immediate health needs remotely</b>, such as our rapid diabetes response service that ensures Members are called by a health coach within minutes of logging an out-of-range blood glucose reading</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;"><b>Delivering ongoing, high-quality care</b> using digital and live coaching; giving telehealth&nbsp;providers access to Members' biometric data such as blood glucose and blood pressure readings; and coordinating with the Member's care team via health summaries</span></font></li> 
+   <li><font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;"><b>Promoting mental wellness</b> through&nbsp;our Livongo for Behavioral Health by myStrength program that includes evidence-based tools and support for managing depression, stress, anxiety, and more.</span></font></li> 
+  </ul> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">And we know it works - our programs have yielded a claims-validated ROI for more than 100 clients.&nbsp;</span><br /> <br /> <span style="font-size: 14px;">So despite the impact of COVID-19 that Dr. Levin-Scherz and other industry experts anticipate, Livongo is well-positioned to help you protect the health of the people you serve, as well as the long-term health of your business. I look forward to connecting to discuss.</span></font> 
+  <br /> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">Stay Safe and Healthy,</span></font> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">{{{Sender.FirstName}}}</span></font> 
+  <br /> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 14px;">{{{Sender.Signature}}}</span></font> 
+  <br /> &nbsp;
+ </body>
+</html>

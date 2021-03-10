@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>HCSC E-Blast_050319</name>
+    <style>freeForm</style>
+    <subject>Livongo and HCSC</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+The Livongo Team is excited to work with all of you for opportunities in 2019 and 2020. As you know, HCSC and Livongo have developed a streamlined, turnkey launch process that allows your clients to easily bring a proven solution to their employees living with diabetes. With our claims-based billing and PPPM pricing, Livongo drives great value for your clients that are experiencing the high costs associated with one of the fastest growing chronic conditions.
+
+We’re also excited to announce our new hypertension partnership with HCSC. Beginning on 1/1/20 you can provide your clients with the same Livongo experience for members with hypertension. More than 70% of people living with diabetes also have hypertension, which means Livongo can now drive healthier outcomes for the most costly chronic condition (diabetes), and the most common (hypertension). The cost for Livongo for Hypertension is $65 upfront for the device, and $27 PPPM.
+
+Livongo can be launched at any time, which means now is a great time to provide an off-cycle solution. Whether it’s a pre-sale analytics report, reviewing prevalence across your book of business, or simply answering any questions, our team is available to work with you.
+
+More information can be found on Product Central and we’re happy to provide any additional support. You will also find the intake form to kick off the official launch in Product Central.
+
+We look forward to continuing to empower your members with chronic conditions to live better and healthier lives!
+
+If you have any questions, please reach out to me or Bill Manganaro within Products for digital solutions.
+
+
+Thanks for your ongoing partnership.
+
+Connor &amp; The Livongo Team
+
+Connor Nystuen
+Senior Account Executive
+Livongo
+m: 847.826.1522 e: cnystuen@livongo.com
+a: 444 N. Michigan Ave., Suite 3400 Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payer/ASO</fullName>
+        <default>false</default>
+        <label>Payer/ASO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TPA</fullName>
+        <default>false</default>
+        <label>TPA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Self Funded Employer</fullName>
+        <default>true</default>
+        <label>Self Funded Employer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hospital/Health System</fullName>
+        <default>false</default>
+        <label>Hospital/Health System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Broker</fullName>
+        <default>false</default>
+        <label>Broker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medicare Advantage</fullName>
+        <default>false</default>
+        <label>Medicare Advantage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PBM</fullName>
+        <default>false</default>
+        <label>PBM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Development</fullName>
+        <default>false</default>
+        <label>Business Development</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ops Partner</fullName>
+        <default>false</default>
+        <label>Ops Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Managed Care Organization</fullName>
+        <default>false</default>
+        <label>Managed Care Organization</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fully-Insured Employer</fullName>
+        <default>false</default>
+        <label>Fully Insured Employer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Labor/Pension Fund</fullName>
+        <default>false</default>
+        <label>Labor/Pension Fund</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Federal Government</fullName>
+        <default>false</default>
+        <label>Federal Government</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Partner</fullName>
+        <default>false</default>
+        <label>Other Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Behavioral Health Provider</fullName>
+        <default>false</default>
+        <label>Behavioral Health Provider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chronic Care Management Organization</fullName>
+        <default>false</default>
+        <label>Chronic Care Management Organization</label>
+    </standardValue>
+</StandardValueSet>

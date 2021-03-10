@@ -1,0 +1,9 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Hi&nbsp;{{{Recipient.FirstName}}},<br /> <br /> I hope you had the chance to read <i>The Paradox of Medical Costs During the Pandemic</i> (2020), an <a href="https://econofact.org/the-paradox-of-medical-costs-during-the-pandemic">article</a> co-authored by Dr. Jeff Levin-Scherz - Managing Director at Willis Towers Watson. The insightful piece discusses virtual care as a promising, new frontier emerging from the behavioral and economic implications COVID-19 has had on the traditional healthcare system.&nbsp;<br /> <br /> Livongo is already there. We are purpose-built for remote monitoring, addressing today's challenges and serving as a long-term health management solution. For a deeper dive on this opportunity, check out our latest market report: <i>Invisible Touch: The Opportunity for Remote Monitoring, Today and Tomorrow</i> (download <a href="https://creative.livongo.com/share/9BE16AC5-51B7-458A-9EF2A4E94036351A/">here</a> ).&nbsp;<br /> <br /> I would love to set up a meeting with you to discuss the market report and see if Livongo is a good fit for your population.&nbsp;<br /> <br /> Stay Safe and Healthy,&nbsp;<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  <br /> &nbsp;
+ </body>
+</html>

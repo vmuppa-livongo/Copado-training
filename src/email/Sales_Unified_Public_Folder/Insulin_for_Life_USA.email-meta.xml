@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Insulin for Life USA</name>
+    <style>freeForm</style>
+    <subject>Livongo donates to Insulin for Life USA</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+You may have seen this week’s announcement about Livongo’s charitable donation to Insulin for Life USA. After seeing the destruction from Hurricanes Harvey, Irma, and Maria, we were inspired to act and uphold our mission to empower all people with chronic conditions to live better and healthier lives. Our donation will help provide urgent relief efforts and bring insulin to people with diabetes that live in areas affected by the hurricanes.
+
+Besides this donation, Livongo implemented an emergency response plan for our members living in areas affected by hurricanes. Livongo offered these members specialized support with our certified diabetes educators to ensure they had vital information to stay safe and manage their diabetes during such trying times. We also made extra efforts to get necessary supplies to all of our members.
+
+We hope that you, your loved ones, and all the people within your company stayed safe through these trying times and hope that as a country, a company, and as individuals, that we can continue to do the right thing when tragedy strikes.
+
+Best regards,
+
+Adam Claypool
+Director of Commercial Operations
+Livongo
+m: 314.346.2964
+o: 312-357-5285 x143
+e: aclaypool@livongo.com
+a: 444 N. Michigan Ave., Ste 2880, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

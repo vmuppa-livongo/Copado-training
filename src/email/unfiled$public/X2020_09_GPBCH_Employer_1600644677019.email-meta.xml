@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email is for GPBCH targets, to remind them of the Conference. PLEASE DO NOT CHANGE THE SUBJECT LINE</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_GPBCH_Employer</name>
+    <relatedEntityType>Contact</relatedEntityType>
+    <style>none</style>
+    <subject>Don&apos;t Miss the GPBCH Conference Starting September 22nd!</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

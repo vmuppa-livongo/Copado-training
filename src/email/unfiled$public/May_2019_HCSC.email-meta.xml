@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Kara emailing HCSC account executives to remind about Livongo partnership and how to engage</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>HCSC May 2019 Business Acceleration</name>
+    <style>freeForm</style>
+    <subject>Summer and Livongo!</subject>
+    <textOnly>Happy Friday {!Contact.FirstName},
+
+It’s that time of year again, sweet signs of summer and upcoming mid-year launches. As you schedule your June/July customer conversations, keep in mind, Livongo for Diabetes and Hypertension is embedded in Enable, Empower+, and HAS.  With over 3.4 million members in a WBM package, there is a great opportunity to grow our partnership and offer an impactful solution to persons living with diabetes and hypertension.
+
+Why Livongo - Livongo brings a proven whole-person approach and delivers the critical “trifecta”:
+
+-  A demonstrated ROI of $108-$131 PPPM for diabetes and $54 PPPM for hypertension.
+-  Within 90 days, a 0.9 A1c reduction which is sustained for duration of membership.
+-  An experience members love demonstrated by an NPS score of 66, not only leading healthcare, but on par with the world’s best consumer brands like Netflix.
+
+Even better news - Livongo is priced PPPM (per participant per month), whether you have 1 or many people with diabetes and hypertension, the client is only charged for those who enroll in the program.
+
+Let’s team - to bring the impactful financial and clinical outcomes to your clients. Livongo offers support throughout the sales cycle:
+
+-  Request a pre-sale analytics report to wow the client or a Livongo led product demo.
+-  Position Livongo as an embedded feature of Enable, Empower+, and HAS with your clients so it’s easy to get started.
+-  Through Salesforce you can document the opportunity enabling HCSC and Livongo to forecast project demand for 2020.
+-  Populate the intake form to initiate the client implementation process.
+
+If you have any questions or requests, please contact myself or Connor Nystuen (contact information below).
+
+Now, go enjoy your weekend on this rare day of sunshine.  We look forward to working with you this summer.
+
+Best,
+
+Kara
+
+KARA CARDINALE
+Vice President, Health Services Segment
+Livongo
+m: 773.551.4690  e: kcardinale@livongo.com
+a: 444 N. Michigan Ave., Suite 3400, Chicago, IL 60611
+www.livongo.com
+
+CONNOR NYSTUEN
+Senior Account Executive
+Livongo
+m: 847.826.1522 e: cnystuen@livongo.com
+a: 444 N. Michigan Ave., Suite 3400 Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

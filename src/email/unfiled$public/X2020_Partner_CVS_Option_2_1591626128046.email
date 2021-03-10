@@ -1,0 +1,19 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi {{{Recipient.FirstName}}},</span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Thinking of you during these unprecedented times. <b><span style="color:#c0392b;">[LAST TIME WE SPOKE…INCLUDE A CUSTOMIZED MENTION THAT PERSONALLY RELATES TO ADDRESSEE]</span></b>.&nbsp;<br /> <br /> Based on your schedule in the next week, I would appreciate 30 minutes to connect on our partnership. &nbsp;We should be proud as our collaboration has empowered your workforce to live better and healthier lives through a diabetes management remote monitoring, digital health solution. <span style="color:#c0392b;"><b>Together we have delivered proven and sustainable results; a Net Promoter Score of [XX] and clinical outcomes of [XX].</b></span><br /> <br /> Still we strive to innovate and improve. During our discussion, I want to introduce several significant and exciting program enhancements for your consideration:</span></span> 
+  <ul> 
+   <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">New, attractive Per Participant Per Month pricing so you continue to pay only for your employees who use Livongo (our interests continue to be aligned).</span></span></li> 
+   <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">We’re providing Livongo for Behavioral Health at no additional cost.</span></span></li> 
+   <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">We’re offering our first Return-on-Investment Saving Guarantee (we guarantee you get 100% of your fees back in Year 1).</span></span></li> 
+   <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Multiple client-friendly contracting paths.</span></span></li> 
+  </ul> 
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"> I look forward to our conversation. <b><span style="color:#c0392b;">Let me know if you have availability Thursday June 11 between 1:00-3:00 pm CST</span></b> and I will send a calendar invite.<br /> <br /> All the Best and Stay Healthy,&nbsp;<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  <br /> &nbsp;
+ </body>
+</html>

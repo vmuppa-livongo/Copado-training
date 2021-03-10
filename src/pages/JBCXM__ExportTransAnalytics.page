@@ -1,0 +1,239 @@
+<apex:page sidebar="false" Controller="JBCXM.ReportBuilder" extensions="JBCXM.NSRemoting" title="Gainsight Analytics" applyBodyTag="false" > 
+     <!-- Jquery Min,jgGrid Plugin, JqueryUI, Jquery theme include -->
+    <!-- Jquery Min,jgGrid Plugin, JqueryUI, Jquery theme include -->
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'jqGridLatest/js/i18n/grid.locale-en.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'jqGridLatest/js/jquery.jqGrid.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid,'js/jqgrid.Custom.Utility.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'miscscripts/jquery.limit-1.2.source.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__jqGrid, 'css/ui.jqgrid.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+        <!-- Rest Client New Stack resources --> 
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS, 'NS/newStack/js/restclient/restClient.js'))}" />
+<style type="text/css">
+		 html,body {
+                height: 100%
+            }           
+        .btn{
+            padding: 2px 5px !important;
+            }
+            
+         .ui-corner-all {
+            -moz-border-radius: 0px !important;
+            -webkit-border-radius: 0px !important;
+            border-radius:0px  !important;
+            }
+         .ui-widget-header {
+            background:none !important;
+            background-color:#CFE4F7 !important;
+            }
+         .ui-dialog-title {
+            float: left;
+            margin:0!important;
+            color:#333;
+            }
+            
+         .ui-dialog-titlebar-close span {
+            display: block;
+            margin: 1px;
+            background-color: #8BA5C2;
+            }
+          #imgedit{
+            opacity:0.7;
+            }
+            #imgedit:hover{
+            opacity:1;
+            }
+          #imgdelete{
+            opacity:0.7;
+            }
+          #imgdelete:hover{
+            opacity:1;
+            } 
+            
+        </style>
+<script language="javascript" type="text/javascript">
+ var j$ = jQuery.noConflict();
+ var replist = {};
+ 
+	onload = function()
+	{
+		deleteimage = function(cellvalue, options, rowObject){
+			return("<img src='{!URLFOR($Resource.NS)}/NS/ReportBuilder/images/delete.png' alt='Delete' style='cursor:pointer;cursor:hand;' class='dummydelete' rid='" + options.rowId + "' title='Delete' />");
+		}
+		repnamehref = function(cellvalue,options,rowObject){
+			var rname = rowObject.repname || "";
+			return("<a href='' class='dummyrun' rid='" + options.rowId + "' title='" + rname + "'>" + rname + "</a>");
+		}
+		
+		try { 
+				  restClient.config = {remoting:"{!$RemoteAction.NSRemoting.apinsinvoke}",sessionId : "{!NSSessionId}"}; 
+                  restClient.serveRequest("reports/all"
+						 ,"GET"
+						 ,""
+						 ,{}
+						 ,false
+						 ,(function(data){
+							replist.data = data;
+							if(!replist.data.result){
+								alert("Exception occurred while retrieving the Reports list \n" + replist.griddata.errorDesc);
+								return(false);
+							}
+							replist.data = replist.data.data.Reports;
+							replist.griddata = new Array();
+							for(var i = 0, len = replist.data.length;i<len;i++){
+								replist.griddata.push({repid:replist.data[i].ReportInfo[0].ReportId,repname:replist.data[i].ReportInfo[0].reportName,collname:replist.data[i].ReportInfo[0].SchemaName});
+							}
+							replist.gridParam = {
+							                      Id: 'replist',
+							                      colnames: new Array("","","Report Name","Subject Area"),
+							                      colmodel: new Array({name:"repid", index:"repid", width:0,fixed: true,search:false,hidden:true,classes:"hideInViewExport"},
+							                      					  {name:"edit",index:"edit",width:25,fixed: true,search:false,formatter: deleteimage,classes:"hideInViewExport"},
+							                      					  {name:"repname", index:"repname", width:125,searchoptions : {sopt:["cn"]}, frozen : true,formatter: repnamehref},
+							                      					  {name:"collname", index:"collname", width:125,searchoptions : {sopt:["cn"]}}
+							                      					),
+							                      data: replist.griddata,
+							                      pagerId: 'gridcnt',
+							                      sort: {
+							                          name: "repname",
+							                          order: "asc"
+							                      },
+							                      width: j$('#divreplist').width(),
+							                      height: (j$(window).height() * 0.50),
+							                      rowNum: 20,
+							                      rowList:[20, 40, 60, 80, 100],
+							                      shrinkToFit: true
+							                  }
+							buildjqGrid("divreplist",replist.gridParam);
+							j$(".ui-pg-div").hide();
+							j$(".ui-jqgrid tr.ui-row-ltr td").css({
+			                            "overflow": "hidden",
+			                            "white-space": "nowrap"
+			                        });
+						 }));
+				
+		}
+		catch(e) {
+			alert("Exception occurred while retrieving the Reports list \n" + e);
+			return(false);
+		}
+		
+		
+         j$("#selcoll").change(function(){
+         	if(this.value != "0"){
+         		reportrun("0",this.value,"design");
+         	}
+         });
+         var robj = {};
+		 /* live event in JQuery is supported until 1.7 version, please replace this with on when upgrading to 1.7 or later */
+         j$(".dummydelete").live("click",function(event){
+         	robj = {},rowobj = this;
+         	try{
+         		robj = j$('#replist').jqGrid('getRowData',this.getAttribute('rid'));
+         		if(confirm("Delete Report '" + j$(robj.repname).html() + "' ?")){
+         			try{
+         				restClient.serveRequest("reports/" + robj.repid
+												 ,"DELETE"
+												 ,"{}"
+												 ,{}
+												 ,false
+												 ,(function(data){
+													robj.resp = data;
+													if(robj.resp.result){
+							         					j$('#replist').delRowData(rowobj.getAttribute('rid'));
+										         	}
+												 }));
+         			}
+         			catch(e){
+         				throw robj.resp;
+         			}
+         		}
+         	}
+         	catch(e){
+         		alert("Exception occurred during Report Delete \n" + e);
+         	}
+         		
+         });
+         j$(".dummyrun").live("click",function(event){
+         	var robj = {};
+         		robj = j$('#replist').jqGrid('getRowData',this.getAttribute('rid'));
+         		if(robj.repid){
+         			reportrun(robj.repid,"0","run");
+         		}
+         		return(false);
+         });
+	}
+	var runreport = function(rowid)	{
+		var report = {};
+		report.id = j$('#replist').jqGrid('getCell',rowid.split('?id=')[1],'repid');
+		var grep = j$.grep(replist.data,function(index,value){return(replist.data[value].ReportInfo[0].ReportId == report.id);})[0]
+		reportrun(report.id,"0","run");
+	}
+	var addreport = function(){
+		if(!replist.collections){
+			restClient.serveRequest("collections/all"
+								 ,"GET"
+								 ,""
+								 ,{}
+								 ,false
+								 ,(function(data){
+									replist.collections = data.data.Collections;
+									for(var i = 0, len = replist.collections.length;i<len;i++){
+										j$('#selcoll')
+								         .append(j$("<option></option>")
+								         .attr("value",replist.collections[i].CollectionDetails.CollectionID)
+								         .text(replist.collections[i].CollectionDetails.CollectionName)); 
+									}
+								 }));
+		}
+		
+		j$("#collpopup").show();
+		j$("#collpopup").dialog({
+			            title: 'Subject Area',
+			            modal: true,
+			            overlay: {
+			                background: '#000000',
+			                opacity: .2
+			            },
+			            minWidth: '50%',
+			            maxWidth: '50%',
+			            open: function(event, ui) {
+						      j$("#selcoll").show();  							
+						}
+			        });
+	  
+	}
+</script>
+<body style="width:98%;height:100%">
+<apex:form >
+	<div style="width:100%;height:100%;">
+	<div id="divtoolbar" style="float:left;padding:5px 5px;width:97.5%;">
+        <div class="btn_container" style="float:right">
+	<div id="addrep" class="btn" style="float:left;cursor:pointer;cursor:hand;margin-right: 5px;" title="Add New Report" onclick="addreport()" >
+			<img src="{!URLFOR($Resource.NS)}/NS/ReportBuilder/images/add.png" alt="Add New Report"  style="cursor:pointer;cursor:hand;vertical-align: middle;" title="Add New Report"  /> Add New
+		</div>
+        </div>
+	</div>
+	<div id="divreplist" style="height:100%;width:98%;float:left;">
+	</div>
+	<div id="gridcnt"></div>
+	<div id="collpopup" style="float:top;display:block,none;">
+		<div id="divselcoll" align="center">
+		<select id="selcoll" style="width:80%;valign:middle;display:none;" >
+			<option value="0">Select a Subject Area</option>
+		</select>
+		</div>
+	</div>
+	</div>
+	 <apex:actionFunction name="reportrun" action="{!runReport_SFSR}" rerender="emptyoutpan">
+	 <apex:param name="reportid"  value="" /> 
+	 <apex:param name="collectionid"  value="" /> 
+	 <apex:param name="option"  value="" /> 
+</apex:actionFunction>
+	<apex:outputPanel id="emptyoutpan">
+	</apex:outputPanel>
+</apex:form>
+</body>
+</apex:page>

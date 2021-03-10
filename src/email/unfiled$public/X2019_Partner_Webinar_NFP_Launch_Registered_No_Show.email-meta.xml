@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>NFP follow-up communications - Registered - No Show</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>2019 _Partner Webinar_NFP Launch - Registered - No Show</name>
+    <style>freeForm</style>
+    <subject>Sorry We Missed You at Livongo&apos;s Overview Webinar</subject>
+    <textOnly>{!Contact.FirstName},
+
+We are sorry we missed you at Livongo&apos;s Overview webinar!
+
+Good news, the webinar was recorded and has been posted to the NFP Portal for easy reference.  In addition to the webinar recording, you can also access the additional resources listed below for you and your clients to learn more about Livongo.
+
+Webinar Deck and Recording
+Livongo Overview
+Diabetes Program Overview
+Hypertension Program Overview
+Weight Management &amp; Diabetes Prevention Program Overview
+Pricing Sheet
+Referral Fees Sheet - NFP Facing Only
+
+
+At Livongo we strive to empower people living with chronic conditions to live better and healthier lives.  We are excited about our partnership with NFP and think together we all can make an impact.
+
+Should you have any additional questions, please don’t hesitate to reach out.
+
+Thank you,
+Brian
+
+Brian Kastenholz
+Sr. Account Executive, Commercial Partnerships
+Livongo
+m:312-919-6547
+e: bkastenholz@livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

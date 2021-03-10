@@ -1,0 +1,113 @@
+<apex:page docType="html-5.0" sidebar="false" title="Execution History" tabStyle="Administration__tab" Controller="JBCXM.NSRemoting">
+    
+     <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-1.10.2.min.js'))}"></script>
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-migrate-1.2.1.min.js'))}"></script>
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/jquery/jquery-UI-1.10/js/jquery.ui.min.js'))}"></script>
+    
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />
+    <script src="{!JSENCODE(URLFOR($Resource.CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" ></script> 
+ 
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__NS, 'NS/newStack/js/restclient/restClient.js'))}" />
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor, 'js/vendor/multiple-select/multiple-select.css'))}"/>
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor, 'js/vendor/multiple-select/jquery.multiple.select.js'))}"></script>
+    
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/underscore-min.js'))}"></script>
+    
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/require.min.js'))}"></script>
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/backbone-min.js'))}"></script>
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor, 'js/vendor/date/moment.min.js'))}"></script>
+     
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSVendor, 'js/vendor/growl/jquery.growl.css'))}"/>
+    <script src="{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/growl/jquery.growl.js'))}"></script>
+    
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSAppCSS, 'css/CS360/gsApps.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSAppCSS, 'bootstrap/bootstrap.css'))}"/> 
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__GSAppCSS, 'css/executionlog/executionlog.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    
+    <script type="text/javascript">
+        var j$ = $.noConflict();
+        window.jLatest = j$;
+    </script>
+    
+    <script>
+        
+        var GS = GS || {};
+            
+            GS.userConfig = {
+                userLocale  : JSON.parse('{!(dateTimeFormatByLocaleNS)}'),
+                userName    : "{!$User.FirstName}"+" "+"{!$User.LastName}", 
+                userId      : "{!$User.Id}",
+                emailId     : "{!$User.Email}"
+            };
+           
+           GS.remotingEndPoint = "{!$RemoteAction.NSRemoting.integrationRequestBroker}";
+           GS.remoting = "{!$RemoteAction.NSRemoting.apinsinvoke}";
+           GS.sessionId = "{!NSSessionId}";
+           GS.orgId = "{!$Organization.Id}";
+           GS.dateFormatMap = JSON.parse('{!(dateTimeFormatByLocaleNS)}');
+           
+            require.config({
+                baseUrl : "",
+                    paths : {
+                    'framework': "{!JSENCODE(URLFOR($Resource.GSApp,'js/Gainsight'))}",
+                    //'framework': "https://localhost:8080/GUI/GSApp/js/Gainsight",
+                    'vendor' : "{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor'))}",
+                    'text' : "{!JSENCODE(URLFOR($Resource.GSVendor,'js/vendor/text'))}"
+                },
+                config: {
+                    text: {
+                            useXhr: function(url, protocol, hostname, port) {
+                                return true;
+                            }
+                    }
+                },
+                //urlArgs: "bust=" +  (new Date()).getTime()
+                
+            });
+            
+            j$(document).ready(function() {
+                
+                require([
+                            "framework/views/integrations/ExecutionLogs/ExecutionLogsManager",
+                            "framework/utils/jQueryProxy"
+                        ], function(ExecutionLogsManager, jQ){
+                        
+                        new ExecutionLogsManager({
+                            el:jQ(".execution-log-ctn")
+                        });
+                });
+                
+            });
+
+    </script>
+ 
+    <html>
+        <body>
+            <div class="execution-log-wrpr clearfix">
+                <div class="execution-log-ctn clearfix">
+                     <div class="progress-element"></div>
+                </div>
+            </div>
+         </body> 
+    </html>
+    
+    <apex:form ></apex:form>
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=es6,Array.prototype.includes"></script>
+    <script>
+        var GSGA = {
+            orgId: "{!$Organization.Id}",
+            orgName: "{!$Organization.Name}",
+            userName: "{!$User.FirstName}"+" "+"{!$User.LastName}"
+        };
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    
+    </script>
+    <script src="{!JSENCODE(URLFOR($Resource.CustomJS,'CustomJS/analyticsWrapper.js'))}"></script>
+    <script>
+        gainsightTrackEvents.pushPageViews('ExecutionLogs');
+    </script>
+    
+</apex:page>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Salesforce new page layouts</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Livongo_Logo</letterhead>
+    <name>New Page Layouts</name>
+    <style>freeForm</style>
+    <subject>New Account and Contact Page Layouts in Salesforce Sales Cloud</subject>
+    <textOnly>New Account and Contact Page Layouts
+
+In order to improve the usability, CRM team will be launching new UI Layouts on Accounts and Contacts (courtesy of POP Project) in Salesforce as part of War Machine release scheduled for this Wednesday, 8/12. In other words, starting from 8/13 you’ll see new detail pages for accounts and contacts with data points available at the same or new locations in existing or new sections.
+
+
+
+Please feel free to browse through the new pages when available and ping us for any questions at the below exclusive slack channel meant for UI questions on accounts and contacts.
+
+
+# help-SFDC-page-layouts
+
+
+To prepare better and get ready you may please complete the bridge training “SFDC Page Layout Updates“ in advance if not already done and let us know for any questions.
+
+
+
+
+Thank you!</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

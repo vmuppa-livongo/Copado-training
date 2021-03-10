@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sending Jenny&apos;s book to select attendees to her NCQA session</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Jenny NCQA Quality Talks follow up</name>
+    <style>none</style>
+    <subject>Using remote monitoring to bring humanity to our care experience</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This email template is for Clients and/or prospects, to offer the opportunity to make a nomination for the She Powers Health Award (deadline is Oct 2), that we will be presenting at the HLTH Conference 10/12-10/16</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_HTLH_She Powers Health_Nomination</name>
+    <style>none</style>
+    <subject>She Powers Health Award Nomination</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

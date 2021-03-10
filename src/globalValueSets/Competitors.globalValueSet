@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Glooko</fullName>
+        <default>false</default>
+        <label>Glooko</label>
+    </customValue>
+    <customValue>
+        <fullName>One Drop</fullName>
+        <default>false</default>
+        <label>One Drop</label>
+    </customValue>
+    <customValue>
+        <fullName>Telcare</fullName>
+        <default>false</default>
+        <label>Telcare</label>
+    </customValue>
+    <customValue>
+        <fullName>LifeScan</fullName>
+        <default>false</default>
+        <label>LifeScan</label>
+    </customValue>
+    <customValue>
+        <fullName>Omada</fullName>
+        <default>false</default>
+        <label>Omada</label>
+    </customValue>
+    <customValue>
+        <fullName>Hello Heart</fullName>
+        <default>false</default>
+        <label>Hello Heart</label>
+    </customValue>
+    <customValue>
+        <fullName>Medtronic Engage</fullName>
+        <default>false</default>
+        <label>Medtronic Engage</label>
+    </customValue>
+    <customValue>
+        <fullName>Traditional Disease Management</fullName>
+        <default>false</default>
+        <label>Traditional Disease Management</label>
+    </customValue>
+    <masterLabel>Competitors</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

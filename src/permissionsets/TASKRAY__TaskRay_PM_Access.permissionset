@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>TASKRAY__trTemplateHubController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>TASKRAY__trAdvancedScheduler</name>
+    </customPermissions>
+    <description>Assign to TaskRay power users who manage templates and in-flight projects. This permission set grants access to the Template Hub and the Advanced Scheduler (premium edition). Users should also have the TaskRay Standard permission set.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>TASKRAY__Project__c.TASKRAY__trDraft__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>TASKRAY__Project__c.TASKRAY__trTemplateDescription__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>TaskRay - Project Manager Access</label>
+    <pageAccesses>
+        <apexPage>TASKRAY__trtemplatehub</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <tabSettings>
+        <tab>TASKRAY__TemplateHub</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Set_Account_Team_Member_Role_Commercial_Sales</name>
+        <label>Set Account Team Member Role - Commercial Sales</label>
+        <locationX>1109</locationX>
+        <locationY>120</locationY>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.TeamMemberRole</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Commercial Sales</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Rest_of_Account_Team_Member_fields</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Account_Team_Member_Role_HSS_Sales</name>
+        <label>Set Account Team Member Role - HSS Sales</label>
+        <locationX>1107</locationX>
+        <locationY>221</locationY>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.TeamMemberRole</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>HSS Sales</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Set_Rest_of_Account_Team_Member_fields</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Sets the rest of the Account Team Member fields besides Role, which is assigned in a previous step.</description>
+        <name>Set_Rest_of_Account_Team_Member_fields</name>
+        <label>Set Rest of Account Team Member fields</label>
+        <locationX>1272</locationX>
+        <locationY>171</locationY>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>FlowAccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.UserId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>User.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.AccountAccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>All</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.CaseAccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Read</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.ContactAccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>ControlledByParent</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>AccountTeamMember.OpportunityAccessLevel</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>All</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Account_Team_Member</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_to_see_if_Previous_Account_Owner_is_in_Account_Team</name>
+        <label>Check to see if Previous Account Owner is in Account Team</label>
+        <locationX>238</locationX>
+        <locationY>418</locationY>
+        <defaultConnector>
+            <targetReference>Find_User</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Previous_Account_Owner_in_Account_Team</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>PreviousAccountTeamMember</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Remove_Previous_Account_Owner_from_Account_Team</targetReference>
+            </connector>
+            <label>Previous Account Owner in Account Team</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Determine_if_New_Account</name>
+        <label>Determine if New Account</label>
+        <locationX>211</locationX>
+        <locationY>153</locationY>
+        <defaultConnector>
+            <targetReference>Find_Previous_Account_Owner_in_Account_Team</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>New_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>FlowPreviousAccountOwnerId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Find_User</targetReference>
+            </connector>
+            <label>New Account</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Set_the_Account_Team_Member_Role</name>
+        <label>Set the Account Team Member Role</label>
+        <locationX>886</locationX>
+        <locationY>156</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Commercial_Sales</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>UserRole.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Sales</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_Team_Member_Role_Commercial_Sales</targetReference>
+            </connector>
+            <label>Commercial Sales</label>
+        </rules>
+        <rules>
+            <name>HSS_Sales</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UserRole.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Health_Services</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Account_Team_Member_Role_HSS_Sales</targetReference>
+            </connector>
+            <label>HSS Sales</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>User_Role_Set</name>
+        <label>User Role Set?</label>
+        <locationX>708</locationX>
+        <locationY>155</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Role_is_Set</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UserRole</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_the_Account_Team_Member_Role</targetReference>
+            </connector>
+            <label>Yes Role is Set</label>
+        </rules>
+    </decisions>
+    <description>Adds the Account Owner as a member of the Account Team</description>
+    <interviewLabel>Add Account Owner as Account Team Member on Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Add Account Owner as Account Team Member on Account</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Creates the Account Team Member with the Account Team Member Role identified, based on their User Role, and for the Account triggering this flow.</description>
+        <name>Create_Account_Team_Member</name>
+        <label>Create Account Team Member</label>
+        <locationX>1436</locationX>
+        <locationY>175</locationY>
+        <inputReference>AccountTeamMember</inputReference>
+    </recordCreates>
+    <recordDeletes>
+        <name>Remove_Previous_Account_Owner_from_Account_Team</name>
+        <label>Remove Previous Account Owner from Account Team</label>
+        <locationX>465</locationX>
+        <locationY>400</locationY>
+        <connector>
+            <targetReference>Find_User</targetReference>
+        </connector>
+        <inputReference>PreviousAccountTeamMember</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <description>Finds the Account record that has been created for assignment of Account Owner as a member to the Account Team.</description>
+        <name>Find_Account</name>
+        <label>Find Account</label>
+        <locationX>50</locationX>
+        <locationY>151</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Determine_if_New_Account</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>FlowAccountId</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputReference>Account</outputReference>
+        <queriedFields>OwnerId</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Find_Previous_Account_Owner_in_Account_Team</name>
+        <label>Find Previous Account Owner in Account Team</label>
+        <locationX>130</locationX>
+        <locationY>290</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_to_see_if_Previous_Account_Owner_is_in_Account_Team</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>AccountId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>FlowAccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>UserId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>FlowPreviousAccountOwnerId</elementReference>
+            </value>
+        </filters>
+        <object>AccountTeamMember</object>
+        <outputReference>PreviousAccountTeamMember</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <description>Find the User Id of the Found Account Owner</description>
+        <name>Find_User</name>
+        <label>Find User</label>
+        <locationX>379</locationX>
+        <locationY>151</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Find_User_Role</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Account.OwnerId</elementReference>
+            </value>
+        </filters>
+        <object>User</object>
+        <outputReference>User</outputReference>
+        <queriedFields>UserRoleId</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Find_User_Role</name>
+        <label>Find User Role</label>
+        <locationX>530</locationX>
+        <locationY>155</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>User_Role_Set</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>User.UserRoleId</elementReference>
+            </value>
+        </filters>
+        <object>UserRole</object>
+        <outputReference>UserRole</outputReference>
+        <queriedFields>DeveloperName</queriedFields>
+    </recordLookups>
+    <startElementReference>Find_Account</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>This is the found Account record that has been created.</description>
+        <name>Account</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <description>User Id of the Account Owner</description>
+        <name>AccountOwnerId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>AccountTeamMember</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>AccountTeamMember</objectType>
+    </variables>
+    <variables>
+        <description>Account Id of the record that triggered the flow.</description>
+        <name>FlowAccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>UserId of the Previous Account Owner</description>
+        <name>FlowPreviousAccountOwnerId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Previous Account Owner of the Account; we will remove this person from the Account Team.</description>
+        <name>PreviousAccountTeamMember</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>AccountTeamMember</objectType>
+    </variables>
+    <variables>
+        <description>Found User of the Account Owner</description>
+        <name>User</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>User</objectType>
+    </variables>
+    <variables>
+        <description>User role of the Account Owner User</description>
+        <name>UserRole</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>UserRole</objectType>
+    </variables>
+</Flow>

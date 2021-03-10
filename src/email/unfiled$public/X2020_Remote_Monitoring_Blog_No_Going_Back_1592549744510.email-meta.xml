@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Bill introduced for $50M Remote Monitoring for Rural USA</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Remote Monitoring Blog-No Going Back</name>
+    <style>none</style>
+    <subject>“NO GOING BACK”: SEIZING THE REMOTE MONITORING’S MOMENT</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

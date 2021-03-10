@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>2018060 Fourth of July Insights Campaign</name>
+    <style>freeForm</style>
+    <subject>Livongo&apos;s Holiday Data Insights</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+In the weeks leading up to the Fourth of July, Livongo data scientists proactively looked at how the holidays affect our members and assessed that Fourth of July sparks a rise in blood sugar for people with diabetes.
+
+Their findings are part of a Livongo Insights Report series that recently debuted based on an analysis of approximately 20 million glucose checks. The first report, Diabetes Across America: Seasons, Regions &amp; More, sheds light on how factors such as time of year, geography and gender may influence Americans living with diabetes.
+
+Given the increase in blood sugar levels on the Fourth of July, outlined in the Insights Report, we sent the below message to all Livongo members on their Livongo meter that reminded them of some ways to enjoy the holiday while keeping their blood sugar in range.
+
+I would love to schedule some time to discuss this report and how Livongo uses data science to empower our members to live healthier lives.
+
+Thanks,
+
+[sales rep name]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

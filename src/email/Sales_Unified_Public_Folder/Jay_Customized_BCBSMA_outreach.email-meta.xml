@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Jay Customized BCBSMA outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo partners with Blue Cross Blue Shield ofMassachusetts</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Livongo is excited about the press release this morning from Blue Cross Blue Shield of Massachusetts about its launch of a portfolio of Digital Health Solutions, including Livongo.
+
+Through this partnership, Livongo will be able to empower more people with chronic conditions like diabetes to live better and healthier lives.  BCBSMA is offering this new platform, called Emerging Solution to self-insured employers with 1,000+ employees starting July 1.
+
+This partnership adds to those already in place at HCSC, Premera, Blue KC, Anthem, Highmark, FEP via the BCBSA association and two others under contract.
+
+Please let me know if I can answer questions about this announcement or how we work with other Blues.  I will plan to reach out to your office in the next few days.
+
+Jay
+
+Jay Helmer
+VP, Health Services Sales
+(203) 612 8652
+jhelmer@livongo.com
+How We Work with Health Plans</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

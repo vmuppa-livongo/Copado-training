@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is for the Laugh &amp; Learn Follow-up email #1  a part of the Protecting People Where They Are campaign.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_July_Laugh &amp; Learn Follow-up email #1_Thank You</name>
+    <style>none</style>
+    <subject>Thank you for your interest in our Laugh &amp; Learn Event</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

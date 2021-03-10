@@ -1,0 +1,222 @@
+<html><head>
+	<style type="text/css">html {
+   overflow-y: visible !important ;
+}
+	</style>
+	<title></title>
+	<meta content="text/html; charset=UTF-8" /><meta content="width=device-width, initialscale=1.0" name="viewport" /><meta content="IE=edge" />
+	<style type="text/css">@media screen and (max-width: 480px) {
+  .contentbuilderBaseColumnRow .columnCell {display:inline-block; width:100%}
+}
+ .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:600px}
+@media only screen and (max-width: 480px) {
+  .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:320px}
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;"><table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#E9EAEC;" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td align="Center" style=""><img alt="Apex Client Forum" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/ApexMeetingsHeaderImages_600x300?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="600" /></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;">&nbsp;
+												<div style="font-size: 16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">Dear {{{Recipient.FirstName}}},<br />
+												<br />
+												We’re putting the finishing touches on our upcoming invitation-only Livongo Apex Client Forum and we want to see you there!</span></span><br />
+												<br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Please join us </span></span><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">— along with a select group of other industry leaders —&nbsp;</span></span><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">for Livongo’s upcoming <b><i>virtual</i></b> Apex Client Forum on <b>December 9, from 11:00 am - 1:00 pm PST</b> for an exclusive event that will include:</span></span>
+
+												<ul>
+													<li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">Commentary from an industry thought leader and Livongo executive on the power of data-driven insights to empower your employees living with chronic conditions to live better and healthier lives</span></span></li>
+													<li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">Updates on our recently completed merger with Teladoc Health, and the opportunities our combined organizations offer</span></span></li>
+													<li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">Insights from our Data Science team that show how Livongo programs drive healthier behaviors in our Members living with chronic conditions</span></span></li>
+													<li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">The opportunity to watch a cooking demonstration with an award-winning tastemaker and curator of good living</span></span></li>
+												</ul>
+												</div>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:75px;padding-top:5px;padding-left:75px;"><b><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Meeting Details</span></span></b>
+
+												<ul>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Date: Wednesday, December 9</span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Meeting Time: 11:00 am - 1:00 pm PST</span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Attendance: By Invitation Only to Select Livongo Clients&nbsp;</span></span></li>
+												</ul>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<div style="text-align:center;word-break:break-word;margin-bottom:10px;">
+									<div style="display:inline-block;"><a href="https://livongo.zoom.us/webinar/register/4816052891734/WN_8ZxGY0sERHa8BgdqWazozQ" style="display:block;mso-padding-alt:0;margin:0;text-align:center;border:0px solid #000000;font-family:Arial,sans-serif;background-color:#0060FC;padding-right:15px;color:#FFFFFF;padding-bottom:7px;border-radius:15px;text-decoration:none;padding-top:7px;padding-left:15px;font-size:16px;" target="_blank"><span>REGISTER HERE</span></a></div>
+									</div>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">We would like to provide you with a pre-meeting package and kindly request your RSVP as soon as possible, ideally by 4pm PST December 1, to ensure the delivery arrives on time.<br />
+												<br />
+												We would be honored to have you join us for this special event! Please don’t hesitate to reach out with any questions.<br />
+												<br />
+												Stay Healthy,</span></span><br />
+												&nbsp;</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="50%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Heidi Anderson</b><br />
+												SVP, Client Experience<br />
+												<br />
+												<b>Michael Reeve</b><br />
+												VP, Client Sales</span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+									<td class="columnCell" style="vertical-align:top;" width="50%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Stacey DeWeerdt</b><br />
+												VP, Strategic Client Relationships</span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						&nbsp;
+
+						<div style="width: 600px; margin: 0 auto;">
+						<hr style="width:100%;text-align:left;margin-left:0" /></div>
+
+						<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+							
+								<tr>
+									<td align="center" width="100%">
+									<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+										
+											<tr>
+												<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+												<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+													
+														<tr valign="top">
+															<td class="columnCell" style="vertical-align:middle;" width="8.33%">
+															<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td align="Center" style="padding-right:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/livongo_mark_2020_blue?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="39" /></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="75%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="padding-left:10px;font-family:Times;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Livongo</b> | 150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041</span></span><br />
+																		<br />
+																		<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">2020 &copy; Livongo. All Rights Reserved.</span></span></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="16.66%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="font-family:Arial,Helvetica,sans-serif;"><a href="mailto:unsubscribe@e-1alg9zf3qo01qow46vkmxmslp0apnl5npfuc39907dhzsihkha.46-180lweai.na134.apex.salesforce.com?subject=Unsubscribe"><span style="color:#0060fc;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Unsubscribe</span></span></span></a><br />
+																		<br />
+																		&nbsp;</td>
+																	</tr>
+																
+															</table>
+															</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table></body></html>

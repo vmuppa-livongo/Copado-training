@@ -1,0 +1,29 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Hi {{recipient.firstname}}, 
+  <br /> 
+  <br /> I wanted to introduce you to Livongo, as we are partnering with leading provider organizations to offer our Remote Patient Monitoring Solution. Our goal is to become an extension of your care team through our at-home monitoring and overall data collection for people living with Diabetes, Hypertension, Pre-Diabetes, Weight Management, and Behavioral Health needs. I’ve attached additional information about Livongo, and please let me know if you want to schedule a time to connect.&nbsp; 
+  <br /> 
+  <br /> 
+  <span style="font-size:18px;"><a href="https://www.forbes.com/sites/leahrosenbaum/2020/04/15/exclusive-livongo-helps-hospital-staff-go-hands-free-to-help-diabetic-coronavirus-patients/#78f2d1b56c7f">Livongo Helps Hospital Staff Go Hands-Free To Help Diabetic Coronavirus Patients</a> </span> 
+  <br /> &nbsp; 
+  <br /> 
+  <b>We provide daily monitoring and identify issues proactively</b>: Our services drive maximum engagement and we are therefore able to collect data from your population on a regular basis. &nbsp;This data is analyzed and abnormal results (out of range high or low) are noted and acted upon - sometimes digitally and often with a proactive call from one of our highly qualified coaches.&nbsp; 
+  <br /> &nbsp; 
+  <br /> 
+  <b>We provide data back to your clinicians</b>: We will provide a comprehensive data set back to the PCP or specialist of record about the patients daily readings, conversations with their coaches, areas where interventions might be valuable. &nbsp;&nbsp; 
+  <br /> &nbsp; 
+  <br /> 
+  <b>We drive member engagement and satisfaction</b>: In our national dataset of over 250,000 members, we see very high engagement rates and Net Promoter Scores. &nbsp;This engagement in turn drives behavior change and positive clinical and economic outcomes for our 800+ clients.&nbsp; 
+  <br /> 
+  <br /> 
+  <a href="https://creative.livongo.com/share/67FCD859-9758-4EBC-A38C55C686213446/?mediaId=D4AEB59D-F005-4839-8DCD5C35DC52F6A3">Livongo Welcome Video</a> 
+  <br /> 
+  <br /> Stay Safe, 
+  <br /> 
+  <br /> {{sender.firstname}}
+ </body>
+</html>

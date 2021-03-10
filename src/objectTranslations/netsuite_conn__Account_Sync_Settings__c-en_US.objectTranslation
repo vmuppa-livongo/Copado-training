@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Field Ids --></label>
+        <name>netsuite_conn__Account_Field_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- Create --></label>
+        <name>netsuite_conn__Create__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable Trigger --></label>
+        <name>netsuite_conn__Disable_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Sync Level --></label>
+        <name>netsuite_conn__Parent_Sync_Level__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Sync --></label>
+        <name>netsuite_conn__Parent_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync Only With Opportunity --></label>
+        <name>netsuite_conn__Sync_Only_With_Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update --></label>
+        <name>netsuite_conn__Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Batch --></label>
+        <name>netsuite_conn__Use_Batch__c</name>
+    </fields>
+</CustomObjectTranslation>

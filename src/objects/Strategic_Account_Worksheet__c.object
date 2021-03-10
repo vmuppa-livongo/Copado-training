@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Strategic_Account_Worksheet_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ARR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Deal_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ARR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Account_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account__r.Owner.FirstName &amp;&quot; &quot;&amp; Account__r.Owner.LastName</formula>
+        <label>Account Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Adequacy_of_Current_Position__c</fullName>
+        <description>How we feel about our position with this strategic account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How we feel about our position with this strategic account</inlineHelpText>
+        <label>Adequacy of Current Position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Euphoria</fullName>
+                    <default>false</default>
+                    <label>Euphoria</label>
+                </value>
+                <value>
+                    <fullName>Great</fullName>
+                    <default>false</default>
+                    <label>Great</label>
+                </value>
+                <value>
+                    <fullName>Secure</fullName>
+                    <default>false</default>
+                    <label>Secure</label>
+                </value>
+                <value>
+                    <fullName>Comfort</fullName>
+                    <default>false</default>
+                    <label>Comfort</label>
+                </value>
+                <value>
+                    <fullName>OK</fullName>
+                    <default>false</default>
+                    <label>OK</label>
+                </value>
+                <value>
+                    <fullName>Concern</fullName>
+                    <default>false</default>
+                    <label>Concern</label>
+                </value>
+                <value>
+                    <fullName>Discomfort</fullName>
+                    <default>false</default>
+                    <label>Discomfort</label>
+                </value>
+                <value>
+                    <fullName>Worry</fullName>
+                    <default>false</default>
+                    <label>Worry</label>
+                </value>
+                <value>
+                    <fullName>Fear</fullName>
+                    <default>false</default>
+                    <label>Fear</label>
+                </value>
+                <value>
+                    <fullName>Panic</fullName>
+                    <default>false</default>
+                    <label>Panic</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buting_Influencer_1_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>Buying_Influencer_1__r.Title</formula>
+        <label>Buying Influencer 1 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_1_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 1 Action</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_1_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 1 Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Good Coverage</fullName>
+                    <default>false</default>
+                    <label>Good Coverage</label>
+                </value>
+                <value>
+                    <fullName>Moderate Coverage</fullName>
+                    <default>false</default>
+                    <label>Moderate Coverage</label>
+                </value>
+                <value>
+                    <fullName>Minimal / No Coverage</fullName>
+                    <default>false</default>
+                    <label>Minimal / No Coverage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_1_Influence__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 1 Influence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Buying Influencer 1</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_2_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 2 Action</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_2_Coverage2__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 2 Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Good Coverage</fullName>
+                    <default>false</default>
+                    <label>Good Coverage</label>
+                </value>
+                <value>
+                    <fullName>Moderate Coverage</fullName>
+                    <default>false</default>
+                    <label>Moderate Coverage</label>
+                </value>
+                <value>
+                    <fullName>Minimal / No Coverage</fullName>
+                    <default>false</default>
+                    <label>Minimal / No Coverage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_2_Influence__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 2 Influence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_2_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>Buying_Influencer_2__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Buying Influencer 2 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Buying Influencer 2</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets (Buying Influencer 2)</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_3_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 3 Action</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_3_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 3 Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Good Coverage</fullName>
+                    <default>false</default>
+                    <label>Good Coverage</label>
+                </value>
+                <value>
+                    <fullName>Moderate Coverage</fullName>
+                    <default>false</default>
+                    <label>Moderate Coverage</label>
+                </value>
+                <value>
+                    <fullName>Minimal / No Coverage</fullName>
+                    <default>false</default>
+                    <label>Minimal / No Coverage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_3_Influence__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 3 Influence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_3_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>Buying_Influencer_3__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Buying Influencer 3 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Buying Influencer 3</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets (Buying Influencer 3)</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_4_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 4 Action</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_4_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 4 Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Good Coverage</fullName>
+                    <default>false</default>
+                    <label>Good Coverage</label>
+                </value>
+                <value>
+                    <fullName>Moderate Coverage</fullName>
+                    <default>false</default>
+                    <label>Moderate Coverage</label>
+                </value>
+                <value>
+                    <fullName>Minimal / No Coverage</fullName>
+                    <default>false</default>
+                    <label>Minimal / No Coverage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_4_Influence__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 4 Influence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_4_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>Buying_Influencer_4__r.Title</formula>
+        <label>Buying Influencer 4 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Buying Influencer 4</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets (Buying Influencer 4)</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_5_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 5 Action</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_5_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 5 Coverage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Good Coverage</fullName>
+                    <default>false</default>
+                    <label>Good Coverage</label>
+                </value>
+                <value>
+                    <fullName>Moderate Coverage</fullName>
+                    <default>false</default>
+                    <label>Moderate Coverage</label>
+                </value>
+                <value>
+                    <fullName>Minimal / No Coverage</fullName>
+                    <default>false</default>
+                    <label>Minimal / No Coverage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_5_Influence__c</fullName>
+        <externalId>false</externalId>
+        <label>Buying Influencer 5 Influence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Medium</fullName>
+                    <default>false</default>
+                    <label>Medium</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_5_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>Buying_Influencer_5__r.Title</formula>
+        <label>Buying Influencer 5 Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buying_Influencer_5__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Buying Influencer 5</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets (Buying Influencer 5)</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.CloseDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Competitive_Vendor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Competitive Vendor</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Competitor Account</value>
+            </filterItems>
+            <infoMessage>Search for Competitor Account</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets (Account)</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Competitor_1__c</fullName>
+        <description>Who are we competing against?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Who are we competing against?</inlineHelpText>
+        <label>Competitor 1</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Competitors</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Competitor_2__c</fullName>
+        <description>Who are we competing against?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Who are we competing against?</inlineHelpText>
+        <label>Competitor 2</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Competitors</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contract_Path__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Contract_Path__r.Name</formula>
+        <label>Contract Path</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity__r.Contract_Status__c )</formula>
+        <label>Contract Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Current_Position_Strengths__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Position Strengths</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Current_Position_Weakness__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Position Weakness</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunities_Current_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunities Current Position</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunities_Strategy_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunities Strategy Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunities_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunities Strategy</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Update_Next_Steps__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Opportunity_Update_Next_Step__c</formula>
+        <label>Opportunity Update &amp; Next Steps</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Strategic Account Worksheets</relationshipLabel>
+        <relationshipName>Strategic_Account_Worksheets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Our_position_vs_competition__c</fullName>
+        <description>How do we position ourselves to win vs. competition?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How do we position ourselves to win vs. competition?</inlineHelpText>
+        <label>Our position vs. competition?</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PBM_Partner_Partner_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>PBM Partner Partner Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Benefit_Consultant_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Benefit Consultant Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Client_Health_Plan_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Client Health Plan Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Other_Partner_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Other Partner Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Probability__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Probability</formula>
+        <label>Probability</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Product_List__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Product_List__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product List</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risks_Current_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Risks Current Position</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Risks_Strategy_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Risks Strategy Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Risks_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Risks Strategy</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Secondary_Benefit_Consultant_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Secondary Benefit Consultant Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Secondary_Client_Health_Plan_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Secondary Client Health Plan Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Secondary_Other_Partner_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Secondary Other Partner Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Competitor Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Selling</fullName>
+                    <default>false</default>
+                    <label>Selling</label>
+                </value>
+                <value>
+                    <fullName>Proposal</fullName>
+                    <default>false</default>
+                    <label>Proposal</label>
+                </value>
+                <value>
+                    <fullName>VOC</fullName>
+                    <default>false</default>
+                    <label>VOC</label>
+                </value>
+                <value>
+                    <fullName>Contracting</fullName>
+                    <default>false</default>
+                    <label>Contracting</label>
+                </value>
+                <value>
+                    <fullName>Closed (They currently use one of our competitors)</fullName>
+                    <default>false</default>
+                    <label>Closed (They currently use one of our competitors)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Strategy_to_Win__c</fullName>
+        <externalId>false</externalId>
+        <label>1st Strategy to Win</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strenghts_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Strengths Strategy</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strengths_Current_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Strengths Current Position</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strengths_Strategy_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Strengths Strategy Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Tertiary_Client_Health_Plan_Coverage__c</fullName>
+        <externalId>false</externalId>
+        <label>Tertiary Client Health Plan Coverage</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Weakness_Current_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Weakness Current Position</label>
+        <length>3000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Weaknesses_Strategy_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Weaknesses Strategy Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Weaknesses_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Weaknesses Strategy</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X1st_Strategy_to_Win_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>1st Strategy to Win Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>X1st_Strategy_to_Win_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Strengths Strategy Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Strategic_Account_Worksheets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X2nd_Strategy_to_Win_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>2nd Strategy to Win Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>X2nd_Strategy_to_Win_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Weaknesses Strategy Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Strategic_Account_Worksheets1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X2nd_Strategy_to_Win__c</fullName>
+        <externalId>false</externalId>
+        <label>2nd Strategy to Win</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X3rd_Strategy_to_Win_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>3rd Strategy to Win Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>X3rd_Strategy_to_Win_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunities Strategy Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Strategic_Account_Worksheets2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X3rd_Strategy_to_Win__c</fullName>
+        <externalId>false</externalId>
+        <label>3rd Strategy to Win</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>X4th_Strategy_to_Win_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>4th Strategy to Win Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>X4th_Strategy_to_Win_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Risks Strategy Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Strategic_Account_Worksheets3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>X4th_Strategy_to_Win__c</fullName>
+        <externalId>false</externalId>
+        <label>4th Strategy to Win</label>
+        <length>1500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Strategic Account Worksheet</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Strategic Account Worksheet Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Strategic Account Worksheets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

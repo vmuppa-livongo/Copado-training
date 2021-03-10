@@ -1,0 +1,30 @@
+<aura:component implements="lightning:availableForFlowScreens">
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="selectedRowsCount" type="Integer" default="0"/>
+    <aura:attribute name="InputRelationshipsCollection" type="Relationship__c[]"/>
+    <aura:attribute name="OutputRelationshipsCollection" type="Relationship__c[]"/>
+    <aura:attribute name="RelationshipTypeValues" type="String[]"/>
+
+    <aura:attribute name="sortedBy" type="String"/>
+    <aura:attribute name="sortedDirection" type="Boolean" default="true"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <lightning:select aura:id="relationshipTypeDropdown" onchange="{!c.handleSelect}">
+        <aura:iteration items="{!v.RelationshipTypeValues}" var="relationshipType">
+            <option text="{!relationshipType.Name}"/>
+        </aura:iteration>
+    </lightning:select>
+    <div class="slds-box slds-p-around_small">
+        <h1>Selected Client Accounts: {!v.selectedRowsCount}</h1>
+        <lightning:datatable style="height:250px" class="slds-table slds-table_striped"
+            columns="{!v.columns}"
+            data="{!v.data}"
+            keyField="id"
+            onrowselection="{!c.handleSelection}"
+            onsort="{!c.updateColumnSorting}"
+            sortedBy="{!v.sortedBy}"
+            sortedDirection="{!v.sortedDirection}"/>
+    </div>
+</aura:component>

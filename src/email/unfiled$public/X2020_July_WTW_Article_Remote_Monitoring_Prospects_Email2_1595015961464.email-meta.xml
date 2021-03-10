@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Follow up to WTW article email with CTA to download the RM market report and schedule a meeting.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_July_WTW Article_Remote Monitoring_Prospects_Email2</name>
+    <style>none</style>
+    <subject>Invisible Touch: The Opportunity for Remote Monitoring, Today and Tomorrow</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

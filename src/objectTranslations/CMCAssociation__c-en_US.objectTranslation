@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CMC Association</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CMC Associations</value>
+    </caseValues>
+    <fields>
+        <help><!-- The account to which the Client Member Code is associated --></help>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- CMC Associations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client Member Code --></label>
+        <name>ClientMemberCode__c</name>
+        <relationshipLabel><!-- CMC Associations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client Member Code: Client Account --></label>
+        <name>Client_Member_Code_Client_Account__c</name>
+    </fields>
+    <fields>
+        <help><!-- The code from the master Client Member Code record --></help>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Program Overview associated to the parent Client Member Code --></help>
+        <label><!-- Program Overview --></label>
+        <lookupFilter>
+            <errorMessage><!-- You can only associate CMC Associations with Program Overviews --></errorMessage>
+        </lookupFilter>
+        <name>ProgramOverview__c</name>
+        <relationshipLabel><!-- Program Overview Associations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Name --></label>
+        <name>Program_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Overview Name --></label>
+        <name>Program_Overview_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Only Code --></label>
+        <lookupFilter>
+            <errorMessage><!-- You can only associate Registration Code CMCs to the Population Code CMCs. --></errorMessage>
+        </lookupFilter>
+        <name>RegistrationCode__c</name>
+        <relationshipLabel><!-- Registration Only Associations --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- CMC to Program --></label>
+        <name>CMC_to_Program</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CMC to Registration --></label>
+        <name>CMC_to_Registration</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,469 @@
+<!-- Copyright (c) 2011 JBara Software, Inc.
+---- Purpose                    : Included as a tab in JBara Customer Experience App.
+                                  Displays Adoption data across all Customers.
+----
+---- Other comments (optional)  : User can view adoption data of all customer for different measures.
+-->
+<apex:page Controller="JBCXM.UsageTrackingExtension" sidebar="false" title="Usage Tracking">
+	 <!-- Jquery Min,jgGrid Plugin, JqueryUI, Jquery theme include -->
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JSONUtil))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/date.format.js'))}" />
+    <style>
+        .container{
+            border:1px solid #A6C9E2;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px 6px 6px 6px;
+        }
+        body .bPageBlock, body #bodyCell .bResource .secondaryPalette, body .secondaryPalette.bPageBlock{
+            background-color: #FFF;
+            border-bottom: 1px solid #EAEAEA;
+            border-left: 1px solid #EAEAEA;
+            border-radius: 4px 4px 4px 4px;
+            border-right: 1px solid #EAEAEA;            
+        }
+        .jbarashowListButton {
+            background:url("/img/alohaSkin/twisty_sprite.png") no-repeat scroll 0 0 transparent;
+            height:10px;
+            width:12px;
+        }
+        .jbarahideListButton {
+            background:url("/img/alohaSkin/twisty_sprite.png") no-repeat scroll 0 -11px transparent;
+            height:10px;
+            width:12px;
+        }
+        .tdRightBorder{
+			border-right: 1px solid #A6C9E2;
+		}
+		.filterControls {
+		    background-color: #FFFFFF;
+		    border-bottom: 2px solid #BBBBBB;
+		    padding: 0px 5px 5px 0px;
+		    margin-bottom: 10px;
+		}
+		select {
+            -moz-border-radius:4px;
+            -moz-box-shadow:1px 1px 5px #cfcfcf inset;
+            border:1px solid #cfcfcf;
+            vertical-align:middle;
+            background-color:#FFFFFF;
+        }
+        option:hover, .ViewMoreButton:hover {
+        	cursor:pointer;
+        }
+        select option, select optgroup {
+	        font-size: 100%;
+	        border-right:2px solid #BEBEBE;
+        }
+        
+        .viewMoreUsageData {
+		    background-image: url("img/gradient-bg.png");
+		    background-repeat: repeat-x;
+		    background-color:#EEEEEE;
+		    color: #000000;
+		   
+		}
+		/*usageModuleName,  usageMeasureName, custNameLink, activityOwner*/
+		span.activityOwner {
+			color:#996600;
+		}
+		span.usageMeasureName {
+			color:#FFFFFF;
+			background-image: url("img/gradient-bg.png");
+			background-color: #FF6600;
+			border-radius: 4px 4px 4px 4px;
+			padding: 2px;
+		}
+		span.usageModuleName {
+			color:#FFFFFF;
+			background-image: url("img/gradient-bg.png");
+			background-color: #009966;
+			border-radius: 4px 4px 4px 4px;
+			padding: 2px;			
+		}
+		a.custNameLink {
+			color:#006699;
+			text-decoration:none;
+		}
+		#UsageTrackingInformaitonContainer, .displayText {
+			font-size:16px;
+		}
+		a.jbaraDummyLookUpIcon, a.jbaraDummyLookUpIcon:hover{
+			text-decoration:none;
+		}
+		.changeCustSelCtrl{
+			float:left;
+		}
+		 
+    </style>
+    <script type="text/javascript" language="javascript">
+    	function setFocusOnLoad() {} //To disable caleder pop by default.
+	    var j$ = jQuery.noConflict(); 
+	    var usageTrackingJsonData;
+	    var usageListHTML;
+	    var currentDateTime, numOfRecordCount, fromDate, toDate; 
+	    var serverCurDate;
+	    var month_names = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+	    var week_names  = new Array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
+	    var dateTimeFormatByLocaleMap;
+	    function onCustomerChange(custName,custId){
+	    	j$(".theHiddenCustomerName").val(custName);	
+            j$(".theHiddenCustomerId").val(custId);	
+	    	if(custId == "0") {
+	    			j$("span.displayCustSelCtrl").html("All Customers");
+	    			j$("span.jbaraCustDummyText").hide();	
+	    		}
+	    		else {
+	    			j$("span.displayCustSelCtrl").html("'"+custName+"'");
+	    			j$("span.jbaraCustDummyText").show();
+	    		}
+	    		j$("span.changeCustSelCtrl").hide();
+	    		j$("span.custChangeLookUpIcon, span.displayCustSelCtrl").show();
+	    }
+	        
+	    j$(document).ready(function(){
+	    	dateTimeFormatByLocaleMap =eval({!(dateTimeFormatByLocale)});	
+	    	j$(".viewMoreUsageData").unbind().bind('click', function() {
+	    		j$(this).parent().hide();
+	    		j$(".ajaxLoadingButton").show();
+		    	j$(".countOfRecords").val((numOfRecordCount+100));
+	    		rerenderUsageData();
+	    	});
+	    	
+	    	j$(".jbaraDummyDatePeriodSelectControl").unbind().bind('change', function() {
+	    		serverCurDate = currentDateTime.split(","); 				
+				fromDate = new Date(serverCurDate[0], serverCurDate[1]-1, serverCurDate[2], serverCurDate[3], serverCurDate[4], serverCurDate[5]);
+				toDate 	 = new Date(serverCurDate[0], serverCurDate[1]-1, serverCurDate[2], serverCurDate[3], serverCurDate[4], serverCurDate[5]);
+				
+				if(j$(this).val() == "Custom") {
+					j$("span.CustomDateSelection").show();
+				}
+				else {
+					j$("span.CustomDateSelection").hide();
+					if( isNaN(j$(this).val()) ) {
+						setFromAndToDateBySelection(j$.trim(j$(this).val()));
+					}
+					else {
+						fromDate.setDate(fromDate.getDate()-parseInt(j$(this).val()));
+					}					
+					j$(".jbaraDummyUsageTrackingEndDateInput").val(JBARAformatDate(toDate, dateTimeFormatByLocaleMap.DateFormat));
+	    			j$(".jbaraDummyUsageTrackingStartDateInput").val(JBARAformatDate(fromDate, dateTimeFormatByLocaleMap.DateFormat));
+	    			j$(".countOfRecords").val(100); //To reset the records limit to 100.
+	    			rerenderUsageData();					
+				}
+	    	});
+	    	
+	    	j$(".jbaraDummyMeasureSelectControl").unbind().bind('change', function() {	    		
+	    		if(j$(this).val() == "0") {
+	    			j$("span.displayActionsSelCtrl").html("All Actions");
+	    			j$("span.jbaraActionDummyText").hide();	
+	    		}
+	    		else {
+	    			j$("span.displayActionsSelCtrl").html("'"+j$(".jbaraDummyMeasureSelectControl option:selected").text()+"'");
+	    			j$("span.jbaraActionDummyText").show();	
+	    		}
+	    		j$("span.changeActionsSelCtrl").hide();
+	    		j$("span.actionChangeLookUpIcon, span.displayActionsSelCtrl").show();
+	    	});
+	    	
+	    	
+	    	
+	    	//displayCustSelCtrl, displayActionsSelCtrl,actionChangeLookUpIcon, custChangeLookUpIcon, 
+		//jbaraDummyMeasureSelectControl,jbaraDummyCustomerSelectControl, changeCustSelCtrl, changeActionsSelCtrl
+	    });
+	    
+	    function showUsageDataByDateRange() {	
+	    	if( (j$.trim(j$(".jbaraDummyUsageTrackingEndDateInput").val())).match(/^\d\d?\/\d\d?\/\d\d\d\d$/) == null) {
+				alert("Please select the correct To-Date!");
+				return false;
+			}
+			if( (j$.trim(j$(".jbaraDummyUsageTrackingStartDateInput").val())).match(/^\d\d?\/\d\d?\/\d\d\d\d$/) == null) {
+				alert("Please select the correct From-Date!");
+				return false;
+			}
+	    	var stDate,edDate;
+			stDate	= j$.trim(j$(".jbaraDummyUsageTrackingStartDateInput").val());
+   			stDate = JBARAgetValidDateFormat(stDate, dateTimeFormatByLocaleMap.DateFormat);
+   			
+   			edDate	= j$.trim(j$(".jbaraDummyUsageTrackingEndDateInput").val());
+   			edDate = JBARAgetValidDateFormat(edDate, dateTimeFormatByLocaleMap.DateFormat);
+   			    	
+			
+			j$(".jbaraDummyUsageTrackingStartDateInput").val(stDate);   
+			j$(".jbaraDummyUsageTrackingEndDateInput").val(edDate); 
+			stDate = JBARAformatDate(new Date(JBARA_getDateFromFormat(stDate, dateTimeFormatByLocaleMap.DateFormat)), 'M/d/yyyy');
+			edDate = JBARAformatDate(new Date(JBARA_getDateFromFormat(edDate, dateTimeFormatByLocaleMap.DateFormat)), 'M/d/yyyy');
+			if(Date.parse(stDate) > Date.parse(edDate)) {
+				alert("From-Date should less than To-Date!");
+    			return false	
+			}
+			
+			j$(".countOfRecords").val(100); //To reset the records limit to 100.
+			rerenderUsageData();
+	    }
+	    
+	    function showCustSelection() {
+			j$("span.changeCustSelCtrl").show();
+			j$(".jbaraDummyCustomerName").focus();
+			j$("span.custChangeLookUpIcon, span.displayCustSelCtrl, span.jbaraCustDummyText").hide();
+		}
+		function showActionSelection() {
+			j$("span.changeActionsSelCtrl").show();
+			j$("span.actionChangeLookUpIcon, span.displayActionsSelCtrl, span.jbaraActionDummyText").hide();
+		} 
+	    
+	    function setFromAndToDateBySelection(selectedVal) {
+	    	var dayInWeek;
+	    	switch (selectedVal) {
+				case "TW":				  			
+				  			dayInWeek = fromDate.getDay();
+				  			fromDate.setDate(fromDate.getDate()-parseInt(dayInWeek));
+				  			break;
+				case "LW":
+				  			dayInWeek = fromDate.getDay();
+				  			fromDate.setDate(fromDate.getDate()-(parseInt(dayInWeek)+7));
+				  			toDate.setDate(toDate.getDate()-(parseInt(dayInWeek)+1));
+				  			break;
+				case "TM":				  			
+				  			fromDate.setDate(1);
+				  			break;
+				case "LM":
+				  			toDate.setDate(0);
+				  			fromDate.setDate(0);
+				  			fromDate.setDate(1);				  			
+				  			break;
+	  			case "SL":
+				  			fromDate.setFullYear((new Date()).getFullYear()-5);			  			
+				  			break;  			
+			}
+	    }
+	    //To toggle page block like section in the page
+	    function toggleUsageTrackingSeaction(iconCls,containerCls) {
+	        if (j$('.'+iconCls).hasClass('jbarahideListButton')) {
+	            j$('.'+iconCls).removeClass("jbarahideListButton").addClass("jbarashowListButton");
+	            j$("."+containerCls).hide();
+	        } else {
+	            j$('.'+iconCls).removeClass("jbarashowListButton").addClass("jbarahideListButton");
+	            j$("."+containerCls).show();
+	        }
+	    }
+	    
+	    //Popup the date picker to display on form.
+		function jbaraUsageTrackingDateInputControl(id) {
+		    j$("#datePicker").css({'z-index': '5001'});
+		    DatePicker.pickDate(true, id, false);
+		}
+		
+		function getTimeLineBasedOnDate(dateString) {
+			var timeLineString = "";
+			var actionDay, presentYear;
+			var dateDetails = dateString.split("T")[0].split("-");
+			var timeDetails = (dateString.split("T")[1].split(".")[0]).split(":");		
+			var curDate = currentDateTime.split(","); 
+			var actionDate = new Date(dateDetails[0], dateDetails[1]-1, dateDetails[2], timeDetails[0], timeDetails[1], timeDetails[2]).getTime();
+			var currentDate = new Date(curDate[0], curDate[1]-1, curDate[2], curDate[3], curDate[4], curDate[5]).getTime();
+			var dateDifference = (currentDate-actionDate)/1000;
+			if(parseInt(dateDifference) <= 59 )  {
+				timeLineString += (parseInt(dateDifference) > 1) ? ""+dateDifference+" seconds ago" : ""+dateDifference+" second ago";	
+			}
+			else { 
+				dateDifference = dateDifference/60;
+				if(parseInt(dateDifference) < 60) {
+					timeLineString += (parseInt(dateDifference) > 1) ? ""+parseInt(dateDifference)+" minutes and " : "1 minute and ";	
+					timeLineString += (parseInt((dateDifference-parseInt(dateDifference))*60) > 1) ? ""+parseInt((dateDifference-parseInt(dateDifference))*60)+" seconds ago" : "1 second ago"; 
+				}
+				else {
+					dateDifference = dateDifference/60;
+					if(parseInt(dateDifference) <= 24) {
+						timeLineString += (parseInt(dateDifference) > 1) ? ""+parseInt(dateDifference)+" hours and " : "1 hour and "
+						timeLineString += (parseInt((dateDifference-parseInt(dateDifference))*60) > 1) ? ""+parseInt((dateDifference-parseInt(dateDifference))*60)+" minutes ago" : "1 minute ago"; 
+					}
+					else {
+						actionDay = new Date(dateDetails[0], dateDetails[1]-1, dateDetails[2], timeDetails[0], timeDetails[1], timeDetails[2]).getDay();
+						presentYear = new Date().getFullYear();
+						if(presentYear == parseInt(dateDetails[0])) {
+							timeLineString += ''+week_names[actionDay]+', '+month_names[dateDetails[1]-1]+' '+dateDetails[2]+','+timeDetails[0]+':'+timeDetails[1]+':'+timeDetails[2]+' (UTC)';
+						} 
+						else {
+							timeLineString += ''+week_names[actionDay]+', '+month_names[dateDetails[1]-1]+' '+dateDetails[2]+','+dateDetails[0]+' '+timeDetails[0]+':'+timeDetails[1]+':'+timeDetails[2]+' (UTC)';
+						}
+					}
+				}				
+			}
+			return timeLineString;			
+		}
+		
+		/**
+		*This function is called when you click on the Go Button in the Customer, Action selection level. 
+		*/
+		function funToCallRerenderUsageData() {
+			j$(".countOfRecords").val(100); //To reset the records limit to 100.
+			rerenderUsageData();	
+		}	
+		
+    
+    </script>
+    <apex:form >
+	    <div style="height: 50px; width: 100%;">
+	        <div style='width:40%'>
+	             <apex:sectionHeader title="Usage Tracker"/>
+	        </div>
+	        <div  style="margin-top:-30px;float:right; padding-right:30px; margin-bottom:2px;">
+	        	<div>
+					 <apex:selectList value="{!selectedNumOfDays}" size="1" StyleClass="jbaraDummyDatePeriodSelectControl">
+						<apex:selectOptions value="{!DatefilterItemsList}"/>
+					</apex:selectList>&nbsp; &nbsp;
+					
+					<span class="CustomDateSelection" style="display:none;">
+						<span class="displayText">From:&nbsp;</span>
+							<apex:inputText value="{!startDate}" maxlength="10" id="jbaraDummyUsageTrackingStartDateInput" styleClass="jbaraDummyUsageTrackingStartDateInput"
+								onfocus="jbaraUsageTrackingDateInputControl('{!$Component.jbaraDummyUsageTrackingStartDateInput}')" />
+						<span class="displayText">To:&nbsp;</span>
+							<apex:inputText value="{!endDate}" maxlength="10" id="jbaraDummyUsageTrackingEndDateInput" styleClass="jbaraDummyUsageTrackingEndDateInput"
+								onfocus="jbaraUsageTrackingDateInputControl('{!$Component.jbaraDummyUsageTrackingEndDateInput}')" />
+						&nbsp;&nbsp;<span class="styleCustomGo" style="position:relative; top:-1.5px;"><input type="button"  value="Go!" class="btn" onClick="showUsageDataByDateRange()"/></span>
+			    	</span>
+		    	</div>
+		    	
+	        </div>
+	    </div>
+    
+    
+	    <div class="UsageTrackingDataList" >    
+	    	<apex:pageMessages />
+	        <div class="bPageBlock bEditBlock secondaryPalette" style='min-width:1024px;'>
+		        <div class="pbHeader" style='height:20px;padding-left:5px;color:#000;'>
+		        </div>
+		        <div class="pbBody" style="overflow: auto;">
+		            <div class="dummyNPSResponsesDetail" style='padding:0px 4px 4px 10px'>
+	            		<!-- Action funcitons -->
+						<apex:actionFunction name="rerenderUsageData"  reRender="RerenderUsageTrackingData" />
+						<apex:inputText value="{!countOfRecords}" size="10" maxlength="10" StyleClass="countOfRecords" style="display:none;"/>
+						
+						<table width='70%' align="center" style="margin-down:10px;" class="filterControls" >
+							<tr>
+								<td><span class="displayText" style="float:left;"><b>Showing&nbsp;</b></span>
+									<span class="jbaraCustDummyText displayText" style="display:none;">Customer:&nbsp;</span>
+									<span class="displayCustSelCtrl displayText" style="color:#006699;">All Customers</span>
+									<span class="changeCustSelCtrl" style="display:none;" >
+										<c:CustomerLookup customerStatus="ActiveCustomer,InactiveCustomer,ChurnCustomer" customerId="{!customerId}"
+	                            					hasDefaultCustomText="true" defaultCustomText="All Customers" requiredIndicator="false"
+		                                       		customerName="" isDisabled="false" callBackFunctionName="onCustomerChange"> 
+										</c:CustomerLookup>
+			                   			<apex:inputText value="{!customerId}" Styleclass="theHiddenCustomerId"  style="display:none;"/>	
+			                   			
+									</span>&nbsp;
+									<span class="custChangeLookUpIcon">
+										<a href="#" class ="jbaraDummyLookUpIcon" onclick="showCustSelection()" title="Change customer">
+		                                    <img class="lookupIcon" title="Change customer" 
+		                                    onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" 
+		                                    onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" 
+		                                    onfocus="this.className = 'lookupIconOn';" onblur="this.className = 'lookupIcon';" 
+		                                    alt="Change customer" src="/s.gif" />
+	                                    </a> 
+									</span>&nbsp;&nbsp;
+									<span class="jbaraActionDummyText displayText" style="display:none;">Action:&nbsp;</span>
+									<span class="displayActionsSelCtrl displayText" style="color:#FF6600;">All Actions</span>									  
+									<span class="changeActionsSelCtrl" style="display:none;">
+										<apex:selectList value="{!MeasureName}" size="1" StyleClass="jbaraDummyMeasureSelectControl">
+											<apex:selectOptions value="{!AllAdoptionMeasureSelection}"/>
+										</apex:selectList>
+									</span>&nbsp;
+									<span class="actionChangeLookUpIcon" >
+										<a href="#" class ="jbaraDummyLookUpIcon" onclick="showActionSelection()" title="Change Action">
+		                                    <img class="lookupIcon" title="Change Action" 
+		                                    onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" 
+		                                    onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" 
+		                                    onfocus="this.className = 'lookupIconOn';" onblur="this.className = 'lookupIcon';" 
+		                                    alt="Change Action" src="/s.gif" />
+	                                    </a> 
+									</span>&nbsp;&nbsp;
+									
+									<span class="styleCustomGo" style="position:relative; top:-1.5px;"><input type="button"  value="Go!" class="btn" onClick="funToCallRerenderUsageData()"/></span>
+								</td>
+							</tr>
+						</table>
+	                    
+	                    <div id="UsageTrackingInformaitonContainer" style="font-size:16px;"> </div>
+	                    <div class="ViewMoreButton" align="center" style="display:none">
+	                    	<div class="viewMoreUsageData"  style="font-size:20px; border-radius: 4px 4px 4px 4px; min-width:100px; max-width:200px; min-height:35px; border:1px solid #EEEEEE;">
+	                    		<span style="text-align:center; display:block; margin: 4px;"> View more... </span>
+	                    	</div>
+	                    </div>
+	                    
+	                    <div class="ajaxLoadingButton" align="center" style="display:none">
+		                    <div class="waitingHolder" style="width: 74px; top: 25.8px;"><img src="/img/loading.gif" class="waitingImage" title="Please Wait..." />
+		                    	<span class="waitingDescription">Loading...</span>
+		                    </div>
+	                    </div>
+	                    
+		            </div>
+		        </div>
+		    </div>
+		</div> 	
+	</apex:form>
+	<!-- This section handle render usage Tracking List -->
+    <apex:outputPanel id="RerenderUsageTrackingData">        	
+     <script type="text/javascript" language="javascript">
+  	usageTrackingJsonData = eval({!(UsageTrackingJsonDataByFilter)});
+  	currentDateTime = "{!JSENCODE(currentDate)}";
+  	numOfRecordCount = parseInt("{!JSENCODE(countOfRecords)}");		    	
+  	usageListHTML = "";
+  	if(usageTrackingJsonData.length > 0) {
+  		usageListHTML += "<table align='center' width='70%' class='UsageTrackingDataTable'><tbody>";
+  		for(var indx = 0; indx < usageTrackingJsonData.length; indx++) {
+  			usageListHTML += "<tr><td style='border-bottom:1px dashed #A6C9E2;margin-top:6px;padding:4px;'><span class='activityOwner'>";
+  			usageListHTML += ""+usageTrackingJsonData[indx].UserName__c+"</span> from ";
+  			if(usageTrackingJsonData[indx].Account__c != null) {
+  				usageListHTML += "<a target='_top' href='CustomerSuccess360?cid="+usageTrackingJsonData[indx].Account__c+"' class='custNameLink'>";
+  				usageListHTML += ""+usageTrackingJsonData[indx].Account__r.Name+"</a>";
+  			}
+  			if(usageTrackingJsonData[indx].AdoptionMeasure__c != null) {
+  				usageListHTML += "- <span class='usageTaskArrange'><span class='usageMeasureName'>"+usageTrackingJsonData[indx].AdoptionMeasure__r.Name+"</span>";
+  				//usageListHTML += (usageTrackingJsonData[indx].AdoptionMeasure__r.ShortName__c == null || (usageTrackingJsonData[indx].AdoptionMeasure__r.ShortName__c).length <= 0) ? ""+usageTrackingJsonData[indx].AdoptionMeasure__r.Name+"</span>" : ""+usageTrackingJsonData[indx].AdoptionMeasure__r.ShortName__c+"</span>";
+  			}
+  			usageListHTML += " Module : <span class='usageModuleName'>"+usageTrackingJsonData[indx].Module__c+"</span></span>";
+  			usageListHTML += "<br /><br /> "+getTimeLineBasedOnDate(usageTrackingJsonData[indx].ActionTime__c)+"</td></tr>"	
+  		}
+  		usageListHTML +="<tbody></table>";
+  		
+    	if(j$.trim(j$(".jbaraDummyDatePeriodSelectControl").val()) == "SL" && numOfRecordCount >= 1000) {
+    		j$(".ViewMoreButton").hide();	
+    	}
+  		else if(usageTrackingJsonData.length >= numOfRecordCount) {
+  			j$(".ViewMoreButton").show();
+  		}
+  		else {
+  			j$(".ViewMoreButton").hide();
+  		}		    				    		
+  	}
+  	else {
+  		usageListHTML += "<div align='center'>No Usage data found</div>";
+  		j$(".ViewMoreButton").hide();
+  	}
+  	j$(".ajaxLoadingButton").hide();
+  	j$("#UsageTrackingInformaitonContainer").html(usageListHTML);
+  	j$("table.UsageTrackingDataTable td:last").css("border-bottom","none");
+  	//j$("span.usageTaskArrange").css({"float":"right", "position":"relative", "right":"5px"});
+     </script>
+     <apex:pageMessages />
+    </apex:outputPanel> 
+	<script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=es6,Array.prototype.includes"></script>      
+    <script>
+    	var GSGA = {
+			orgId: "{!$Organization.Id}",
+			orgName: "{!$Organization.Name}",
+			userName: "{!$User.FirstName}"+" "+"{!$User.LastName}"
+		};
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');	
+	</script>
+	<script src="{!JSENCODE(URLFOR($Resource.CustomJS,'CustomJS/analyticsWrapper.js'))}"></script>
+	<script>
+		gainsightTrackEvents.pushPageViews('Usage Tracking');
+	</script>        
+</apex:page>

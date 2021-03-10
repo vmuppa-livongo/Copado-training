@@ -1,0 +1,79 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0); margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif" style="">Hi {!Contact.FirstName},&nbsp;</font></p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0); margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif" style=""><br></font></p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; text-size-adjust: auto;">Did you receive the package that I recently sent to your office? It contains a book written by Livongo CEO, Glen Tullman, that I figured that you would enjoy.</p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; text-size-adjust: auto;"><br></p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; text-size-adjust: auto;">The book is titled “On Our Terms: Empowering the New Health Consumer” and focuses on how we address the current healthcare crisis in quality and cost, especially as it relates to chronic conditions, by empowering health consumers.&nbsp; The premise is captured in the introductory quote: “Our greatest chance of solving the chronic condition epidemic in this country and across the world requires us to look in the last pace we might imagine: the person who is living with the chronic disease on a daily basis.”</p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; text-size-adjust: auto;">&nbsp;</p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; text-size-adjust: auto;">I hope you have the chance to read it! If you would rather listen to the audio book, please let me know and I can send you a code to download it for free.&nbsp;</p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; text-size-adjust: auto;">&nbsp;</p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; text-size-adjust: auto;">Look forward to connecting soon.</p><p class="MsoNormal" style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0); text-size-adjust: auto;"><br></p><p class="MsoNormal" style="color: rgb(0, 0, 0); text-size-adjust: auto;"><font face="Arial, sans-serif" style="" size="3">[Signature]&nbsp;</font></p><div style="font-size: 12pt; font-family: arial; color: rgb(0, 0, 0);"><br></div><style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073697537 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span.EmailStyle16
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>]]></td>
+</tr>
+</table>

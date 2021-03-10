@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is west zone Email #1 in the May Mental Health Awareness Month campaign.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_May_MHA_West_Zone_Allie_Email #1</name>
+    <style>none</style>
+    <subject>Snack and learn during May Mental Health Awareness</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

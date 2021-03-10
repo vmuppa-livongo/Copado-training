@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template can be leverage for communication to Clients about a Virtual Events Platform, Brazen.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_Client Letter_Brazen</name>
+    <style>none</style>
+    <subject>Let us host your virtual benefits fair</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

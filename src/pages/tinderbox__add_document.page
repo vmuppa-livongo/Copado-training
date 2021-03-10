@@ -1,0 +1,22 @@
+<apex:page standardController="tinderbox__Document__c" extensions="tinderbox.documentExtension">
+
+    <apex:stylesheet value="{!
+        IF(($Setup.tinderbox__TinderBox__c.tinderbox__Use_HTTPS__c), 'https://', 'http://')
+        + $Setup.tinderbox__TinderBox__c.tinderbox__Company_URL__c}/assets/styles.css" />
+    <apex:stylesheet value="{!
+        IF(($Setup.tinderbox__TinderBox__c.tinderbox__Use_HTTPS__c), 'https://', 'http://')
+        + $Setup.tinderbox__TinderBox__c.tinderbox__Company_URL__c}/assets/sfdc-adapter.css" />
+
+    <div style="width:950px;margin:0px auto;padding:0px 50px;">
+        <h1 class="page-header">Add Document To {!SObjectName}</h1>
+        <div class="done-adding">
+            <apex:outputLink value="{!URLFOR($Action[SObjectType].View, $CurrentPage.parameters.recordId, [retURL=''])}" id="theLink">Done Adding</apex:outputLink>
+        </div>
+    </div>
+
+	<c:ApplicationView path="salesforce/add_document"
+                       queryString="sobject_id={!ParentID}&sobject_type={!SObjectType}"
+                       height="700px"
+                       TBAccountEndPoint="{!TBAccountEndPoint}"></c:ApplicationView>
+
+</apex:page>

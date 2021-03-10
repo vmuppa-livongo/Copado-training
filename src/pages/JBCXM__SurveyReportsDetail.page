@@ -1,0 +1,1417 @@
+<apex:page sidebar="false" showHeader="true" Controller="JBCXM.SurveyReports"
+	tabStyle="Survey__tab" title="Survey Detailed Reports">
+	<!--<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-1.7.1.min.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-ui-1.8.18.custom.min.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'jqGridLatest/js/i18n/grid.locale-en.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'jqGridLatest/js/jquery.jqGrid.min.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'js/jqgrid.Custom.Utility.js'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.jqGrid, 'css/ui.jqgrid.css'))}" />
+
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.jqGrid, 'jqGridLatest/css/ui.jqgrid.css'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.SurveyJquery, 'css/redmond/jquery-ui-1.8.18.custom.css'))}" />
+
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyUtil,'SurveyUtil.js'))}" />
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.CustomJS, 'CustomJS/date.format.js'))}" />
+
+	<style>
+	.cbox {
+		vertical-align: middle !important;
+	}
+	
+	.ui-jqgrid tr.jqgrow td {
+		white-space: nowrap;
+	}
+	
+	.ui-jqgrid .ui-jqgrid-resize-ltr {
+		float: right;
+		margin: 0;
+	}
+	
+	#gbox_dummyQuesAndAnsReportsId.ui-corner-all,#gbox_dummyQuesAndAnsReportsId.ui-corner-top,#gbox_dummyQuesAndAnsReportsId.ui-corner-left,#gbox_dummyQuesAndAnsReportsId.ui-corner-tl
+		{
+		border-top-left-radius: 0px;
+	}
+	
+	#gbox_dummyQuesAndAnsReportsId.ui-corner-all,#gbox_dummyQuesAndAnsReportsId.ui-corner-top,#gbox_dummyQuesAndAnsReportsId.ui-corner-right,#gbox_dummyQuesAndAnsReportsId.ui-corner-tr
+		{
+		border-top-right-radius: 0px;
+	}
+	
+	#gbox_dummyQuesAndAnsReportsId.ui-corner-all,#gbox_dummyQuesAndAnsReportsId.ui-corner-bottom,#gbox_dummyQuesAndAnsReportsId.ui-corner-left,#gbox_dummyQuesAndAnsReportsId.ui-corner-bl
+		{
+		border-bottom-left-radius: 0px;
+	}
+	
+	#gbox_dummyQuesAndAnsReportsId.ui-corner-all,#gbox_dummyQuesAndAnsReportsId.ui-corner-bottom,#gbox_dummyQuesAndAnsReportsId.ui-corner-left,#gbox_dummyQuesAndAnsReportsId.ui-corner-br
+		{
+		border-bottom-left-radius: 0px;
+	}
+	
+	#gbox_dummyQuesAndAnsReportsId.ui-corner-all,#gbox_dummyQuesAndAnsReportsId.ui-corner-bottom,#gbox_dummyQuesAndAnsReportsId.ui-corner-right,#gbox_dummyQuesAndAnsReportsId.ui-corner-br
+		{
+		border-bottom-right-radius: 0px;
+	}
+	
+	.ui-th-column-header {
+		overflow: hidden;
+	}
+	
+	#gview_dummyQuesAndAnsReportsId.ui-jqgrid-hdiv {
+		position: relative;
+	}
+	
+	.frozen-div {
+		overflow-y: hidden !important;
+	}
+	</style>
+	
+
+	<style>
+	.ui-icon {
+		vertical-align: text-bottom;
+	}
+	
+	.ansContent {
+		border-bottom-width: 1px;
+		border-bottom-style: dashed;
+		border-bottom-color: #A6C9E2;
+		padding: 4px 0px;
+	}
+	
+	.ansContent:hover {
+		background-color: #E3F3FF;
+	}
+	
+	.warningImageClass {
+		background-image: url('/img/msg_icons/error32.png');
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+	}
+	
+	.validationMsgClass {
+		font-size: 20px;
+		font-weight: bold;
+		vertical-align: text-top;
+	}
+	
+	.jbaraErrorMessageClass {
+		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+		padding: 10px;
+	}
+	
+	.infoImageClass {
+		background-image: url('/img/msg_icons/info32.png');
+		width: 32px;
+		height: 32px;
+		display: inline-block;
+	}
+	
+	.ui-icon-myCloseButton {
+		background-image:
+			url("{!URLFOR($Resource.appStyles)}/Events/images/close.png")
+			!important;
+		background-position: left top !important;
+		margin: 0 !important;
+	}
+	.ui-dialog .ui-dialog-titlebar-close {
+		background: none !important;
+		border: none !important;
+	}
+	
+	.ui-dialog .ui-dialog-titlebar-close,.ui-dialog .ui-dialog-titlebar-close:hover
+		{
+		padding-bottom: 0 !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		padding-top: 2px;
+	}
+	
+	.ui-widget-content .ui-widget-header {
+		border-bottom: 1px solid #FFFFFF;
+		border-radius: 0 0 0 0 !important;		
+	}
+	
+	.ui-dialog {
+		padding: 0em;
+	}
+	
+	.ui-dialog .ui-widget-content,.ui-dialog .ui-dialog-titlebar {
+		border: 0px !important;
+	}
+	
+	.taskFieldLblCls {
+		width: 150px;
+		overflow: hidden;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.taskFormElementDiv {
+		padding: 3px 0px;
+	}
+	
+	.taskLabelSep {
+		vertical-align: top;
+	}
+	
+	.requiredExample {
+		font-size: 100%;
+	}
+	
+	body {
+		overflow-x: hidden;
+	} 
+	
+	.message {
+		margin: 4px 0;
+	}
+</style>
+
+	<apex:sectionHeader title="Survey Reports" subtitle="{!surveyName}" />
+	<a href="/apex/surveyReports?surveyId={!surveyId}" style="text-decoration: none;">&nbsp;«&nbsp;Back</a>
+	<a href="/apex/SurveyList" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;&nbsp;Survey
+		List</a>
+		<div style="font-size:16px;font-weight:bold;padding-bottom:10px; padding-top:10px;" class="questionTitleClass"></div>
+	<apex:form >-->
+
+
+
+
+
+<!-- Build the Task Create Form -->
+<!--<script type="text/javascript">
+function buildTaskForm(){
+	var defaultValues, defaultVal = '';
+	var taskFormHTML = '<div class="taskFormInputClass">';
+				
+	for (var i = 0; i < createTaskJSON.length; i++) {				
+		//ignore fields Assigned To and Subject
+		if((createTaskJSON[i].fieldName != 'Subject__c') && (createTaskJSON[i].fieldName != 'Subject')) {					
+			taskFormHTML +=  '<div class="taskFormElementDiv">';				
+			taskFormHTML +=  '<span class="'+createTaskJSON[i].fieldName+'Class taskFieldLblCls">'+createTaskJSON[i].label+'</span><span class="taskLabelSep"> : </span> ';
+			
+			taskFormHTML +=  (createTaskJSON[i].isRequired == 'true' && createTaskJSON[i].ctrlType != "checkbox" ) ? '<span class="requiredExample"></span>' : '';
+			taskFormHTML +=  ((createTaskJSON[i].fieldName == 'Date__c' || createTaskJSON[i].fieldName == 'ActivityDate')) ? '<span class="requiredExample"></span>' : '';
+			defaultValues = createTaskJSON[i].value;
+			defaultVal 	=  (defaultValues.length > 0) ? defaultValues[0].value : '' ;
+			if(createTaskJSON[i].ctrlType == 'text') {					
+				taskFormHTML += '<input value="'+defaultVal+'" type="text" maxlength="'+getMaxFieldLength(createTaskJSON[i])+'" class="'+createTaskJSON[i].fieldName+'InputCls taskParamControlDataInput" size="50">';
+			}
+			else if(createTaskJSON[i].ctrlType == 'userlookup') {
+				//if it is Assigned to field then show a drop down
+				if((createTaskJSON[i].fieldName == 'Assigned__c') || (createTaskJSON[i].fieldName == 'OwnerId')) {																				
+					taskFormHTML += '<select class="'+createTaskJSON[i].fieldName+'InputValueCls '+createTaskJSON[i].ctrlType+'InputValueCls '+createTaskJSON[i].fieldName+'InputCls InputCls taskOwnerField" >';	
+					taskFormHTML +=  buildTaskOwnerDropDown(userLookupFields);						
+					taskFormHTML +=' </select>';
+					
+					
+					//Default User field
+					taskFormHTML +=  '<div class="taskFormElementDiv defaultUserDiv" style="display:none; margin-top:4px;">';
+					taskFormHTML +=  '<span class="'+createTaskJSON[i].fieldName+'Class taskFieldLblCls">Default User</span><span class="taskLabelSep"> : </span> <span class="requiredExample"></span>';
+					taskFormHTML += '<input type="text" maxlength="120" class="'+createTaskJSON[i].fieldName+'InputCls '+createTaskJSON[i].ctrlType+'Cls taskParamControlDataInput defaultUser" size="50">';
+	  				taskFormHTML += '<input style="display: none;" type="text" maxlength="60" class="'+createTaskJSON[i].fieldName+'InputValueCls '+createTaskJSON[i].ctrlType+'InputValueCls defaultUserId">';
+	  				taskFormHTML += '<img src="/img/loading.gif" class="waitingTaskUserImage" title="Please Wait..." style= "display:none; border: 0 none; margin-left: 3px;vertical-align: middle;"/>';
+	  				taskFormHTML +=  '</div>';
+					
+				}
+				else {						
+						taskFormHTML += '<input type="text" maxlength="120" class="'+createTaskJSON[i].fieldName+'InputCls '+createTaskJSON[i].ctrlType+'Cls taskParamControlDataInput" size="50">';
+	  					taskFormHTML += '<input style="display: none;" type="text" maxlength="60" class="'+createTaskJSON[i].fieldName+'InputValueCls '+createTaskJSON[i].ctrlType+'InputValueCls">';
+	  					taskFormHTML += '<img src="/img/loading.gif" class="waitingTaskUserImage" title="Please Wait..." style= "display:none; border: 0 none; margin-left: 3px;vertical-align: middle;"/>';
+				}										
+			}
+			else if(createTaskJSON[i].ctrlType == "select" || createTaskJSON[i].ctrlType == "multiselect"){
+				 var ctrlTypeHtmlSelect = (createTaskJSON[i].ctrlType == 'multiselect') ?  '<select multiple="multiple"  class="'+createTaskJSON[i].fieldName+'InputCls taskParamControlDataInput">' : '<select class="'+createTaskJSON[i].fieldName+'InputCls taskParamControlDataInput">' ;
+				 var ctrlDataEval = eval(createTaskJSON[i].ctrlData);           		
+	          		 for(var c=0 ; c< ctrlDataEval.length; c++){
+	          		 	var ctrlData = ctrlDataEval[c].key.replace(/\'/g,"'").replace(/"/g, "&quot;");
+	          		 	ctrlTypeHtmlSelect +='<option value="'+ctrlData+'" '+getOptionSelected(defaultValues, ctrlData)+'>'+ctrlDataEval[c].value+'</option>';	
+	          		 	    		 			 
+	          		 }
+	          		 ctrlTypeHtmlSelect += '</select>'; 
+	          		 taskFormHTML +=  ctrlTypeHtmlSelect;
+			}
+			else if(createTaskJSON[i].ctrlType == "datecontrol"){
+				taskFormHTML += '<input type="text" size="10" onfocus="jbaraEventDateInputControl(this)" maxlength="10" id="'+createTaskJSON[i].fieldName+'InputId" class="'+createTaskJSON[i].fieldName+'InputCls taskParamControlDataInput taskParamControlDateInput">';	
+			} 
+			else if(createTaskJSON[i].ctrlType == "checkbox"){
+				taskFormHTML += '<input type="checkbox" class="'+createTaskJSON[i].fieldName+'InputCls taskParamControlDataInput">'; 	
+			}				            				
+			else if(createTaskJSON[i].ctrlType == "textarea"){
+				taskFormHTML += '<textarea  rows="2"  maxlength="4000" class="'+createTaskJSON[i].fieldName+'InputCls taskParamControlDataInput"  style="width:280px;"/>';						
+			}
+			else{
+	           	taskFormHTML += '<input type="text" maxlength="60" class="'+createTaskJSON[i].fieldName+'InputCls taskParamControlDataInput">';
+	           }
+			taskFormHTML +=  '</div>';				
+		}//if condition to ignore subject and assigned to fields is closed
+	}
+						
+	taskFormHTML +=  '<div class="taskFormElementDiv">';				
+	taskFormHTML +=  '<span class="SendEmailClass taskFieldLblCls">Send Notification Email</span><span class="taskLabelSep"> : </span> ';								 	
+	taskFormHTML += '<input type="checkbox" class="SendEmailInputCls taskParamControlDataInput">';
+	taskFormHTML +=  '</div>';			
+					
+	taskFormHTML +=  '<div class="taskActionCls" style="text-align: center;">';
+	taskFormHTML +=  '<button type="button" class="btn taskActionBtn taskSaveBtn"><span class="ui-button-text">Create Task&nbsp;</span></button>';
+	taskFormHTML +=  '<button type="button" class="btn taskActionBtn taskCancelBtn"><span class="ui-button-text">&nbsp;Close</span></button>';
+	taskFormHTML +=  '</div>';
+	taskFormHTML +=  '</div>';						
+	return taskFormHTML;       	
+}
+
+</script>-->
+
+		<!-- validation of Task Form -->
+		<!--<script type="text/javascript">
+ function validateTaskInputs(errContainer, fldParentDiv) {
+   var validEntries = true;
+   var errorList = new Array();            
+                    
+   for (var i = 0; i < createTaskJSON.length; i++) {             	            	 
+
+       //ignoring the subject field 
+       if((createTaskJSON[i].fieldName != 'Subject__c') && (createTaskJSON[i].fieldName != 'Subject')) {        	
+			
+			if((createTaskJSON[i].isRequired == "true" && j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val()) == '') || createTaskJSON[i].ctrlType == "datecontrol") {
+           		
+           		if((createTaskJSON[i].fieldName == 'Date__c' || createTaskJSON[i].fieldName == 'ActivityDate' )) {
+           			if(j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val()) == '' ){
+           				errorItem = new JBaraErrorClass();
+                		errorItem.header = 'Task '+createTaskJSON[i].label+': ';
+                		errorItem.msg = 'Required';
+                		errorList.push(errorItem);
+                		validEntries = false;
+           			}
+           			else {
+              			var eventTaskDate =  j$.trim(j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputCls').val());
+	    				eventTaskDate = JBARAgetValidDateFormat(eventTaskDate, dateTimeFormatByLocaleMap.DateFormat);
+    					//j$('.createTask-fullDiv').find('.taskParamControlDateInput').val(eventTaskDate);
+                		if (!JBARAisDate(eventTaskDate, dateTimeFormatByLocaleMap.DateFormat)) {
+                    		errorItem = new JBaraErrorClass();
+                    		errorItem.header = 'Task '+createTaskJSON[i].label+': ';
+                    		errorItem.msg = 'Invalid date';
+                    		errorList.push(errorItem);
+                    		validEntries = false;
+                		}	                		
+              		}	              		
+           		} 
+           		else if( (createTaskJSON[i].ctrlType != "datecontrol")){
+           			errorItem = new JBaraErrorClass();
+               		errorItem.header = 'Task '+createTaskJSON[i].label+': ';
+               		errorItem.msg = 'Required';
+               		errorList.push(errorItem);
+               		validEntries = false;		
+           		}			                
+         	} //end of if no 2 from top
+         	else if(createTaskJSON[i].ctrlType == 'userlookup' && j$.trim(j$('.'+fldParentDiv).find('.InputCls').val()) == '') {
+         		errorItem = new JBaraErrorClass();
+              	errorItem.header = 'Task '+createTaskJSON[i].label+': ';
+              	errorItem.msg = 'Not valid user';
+              	errorList.push(errorItem);
+              	validEntries = false;
+         	}
+         	else if(j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val()) != '' && createTaskJSON[i].ctrlType == "datecontrol"){
+         		var eventTaskDate =  j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val());
+   				eventTaskDate = JBARAgetValidDateFormat(eventTaskDate, dateTimeFormatByLocaleMap.DateFormat);
+              	if (!JBARAisDate(eventTaskDate, dateTimeFormatByLocaleMap.DateFormat)) {
+                  errorItem = new JBaraErrorClass();
+                  errorItem.header = 'Task '+createTaskJSON[i].label+': ';
+                  errorItem.msg = 'Invalid date';
+                  errorList.push(errorItem);
+                  validEntries = false;
+              	}              
+         	}
+         	else if(j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val()) != '' && (createTaskJSON[i].fieldType == "DOUBLE" || createTaskJSON[i].fieldType == "PERCENT" || createTaskJSON[i].fieldType == "CURRENCY")){
+          		if (!isNumber(j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val()))) {
+                  errorItem = new JBaraErrorClass();
+                  errorItem.header = 'Task '+createTaskJSON[i].label+': ';
+                  errorItem.msg = 'Invalid '+createTaskJSON[i].fieldType;
+                  errorList.push(errorItem);
+                  validEntries = false;
+              	}
+         	}
+         	else if(j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val()) != '' && (createTaskJSON[i].fieldType == "EMAIL")){
+          	 	var eMailFld = j$.trim(j$('.'+fldParentDiv).find('.'+createTaskJSON[i].fieldName+'InputCls').val());
+   				if(eMailFld.match(/^([\w\.\-\+])+\@(([\w\-])+\.)+([a-zA-Z0-9]{2,6})$/) == null) {
+   					errorItem = new JBaraErrorClass();
+					errorItem.header = 'Task '+createTaskJSON[i].label+': ';
+					errorItem.msg	 =  'Invalid email';
+					errorList.push(errorItem);
+					validEntries = false;
+   				}
+         	}
+         }            	
+       }
+       
+       if((j$(".taskOwnerField").val() == 'Default')){
+       		if((j$('.createTask-fullDiv').find('.defaultUserId').val() == '') || (j$('.createTask-fullDiv').find('.defaultUser').val() == '')) {  	
+	       		errorItem = new JBaraErrorClass();
+				errorItem.header = 'Task Default User:';
+				errorItem.msg	 =  'Invalid user';
+				errorList.push(errorItem);
+				validEntries = false;
+			}
+       }
+                                 
+       if (!validEntries) {
+            showJBaraValidationErrors(errContainer, errorList);
+       }
+       return validEntries;
+    }
+    
+</script>-->
+
+		<!--  Save the Task -->
+		<!--<script type="text/javascript">
+function saveTaskItem(){
+	
+	var createTaskItem;
+  	if(validateTaskInputs('jBaraTaskErrorContainer', 'createTask-fullDiv')) {
+		
+		createTaskItem = new createTaskClass();    					
+		var taskOwnerField='';
+		var isSendEmail = false;	
+		var defaultUserId = '';	
+		
+		for (var i = 0; i < createTaskJSON.length; i++) {
+			if((createTaskJSON[i].fieldName != 'Subject__c') && (createTaskJSON[i].fieldName != 'Subject')) {
+		
+				if(createTaskJSON[i].ctrlType == "datecontrol"){	   
+					if(j$.trim(j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputCls').val()) != ''){
+						var actDate = JBARAformatDate(new Date(JBARA_getDateFromFormat(j$.trim(j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputCls').val()), dateTimeFormatByLocaleMap.DateFormat)), 'yyyy-MM-dd');
+						createTaskItem[createTaskJSON[i].fieldName] = actDate;
+					}else{
+						createTaskItem[createTaskJSON[i].fieldName] = null;	
+					}
+				} 				
+				else if(createTaskJSON[i].ctrlType == 'userlookup') { //if it is AssignedTo field then have "taskOwnerField"		    			
+			 		if((createTaskJSON[i].fieldName != 'Assigned__c') && (createTaskJSON[i].fieldName != 'OwnerId'))		    			 		 		    				
+						createTaskItem[createTaskJSON[i].fieldName] = j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputValueCls').val();
+					else
+						taskOwnerField = j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputValueCls').val();
+				}
+				else if(createTaskJSON[i].ctrlType == 'checkbox') {
+					createTaskItem[createTaskJSON[i].fieldName] = j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputCls').is(':checked') ? true : false;
+				}
+				else if(createTaskJSON[i].ctrlType == 'multiselect') {
+					var selectedValues = j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputCls').val();
+					var valSeleted = "";
+					if(selectedValues != null){
+						if(selectedValues.length > 0){
+							for(var s = 0; s < selectedValues.length; s++){
+ 								valSeleted += selectedValues[s]+';';
+ 							}
+						}		    					
+					}
+					createTaskItem[createTaskJSON[i].fieldName] = valSeleted;
+				}
+				else {
+					createTaskItem[createTaskJSON[i].fieldName] = j$('.createTask-fullDiv').find('.'+createTaskJSON[i].fieldName+'InputCls').val();
+				}
+			}	    				    					    			
+		}
+				                                                
+        isSendEmail	= j$('.createTask-fullDiv').find('.SendEmailInputCls').is(':checked') ? true : false;        
+        defaultUserId = j$('.createTask-fullDiv').find('.defaultUserId').val();
+          
+        var strNameSpace = getJbaraNameSpace();                 
+        if (strNameSpace != '' && isLinkedToSFTask == 'false') {
+              createTaskItem = pushJbaraNameSpace(createTaskItem, strNameSpace);
+        } else {
+              createTaskItem = createTaskItem;
+        }             
+        
+        //check what is the value of taskOwnerField.. if it is Not Default, then make defaultUserId = ''
+        if(taskOwnerField != 'Default') {
+        	defaultUserId = '';
+        }
+                 	
+		saveTaskAction(JSON.stringify(createTaskItem), selParticpntIds, taskOwnerField, isSendEmail, defaultUserId);			
+	}
+	else {
+		j$(".taskSaveBtn").removeAttr('disabled', 'disabled');
+       	j$(".taskSaveBtn").removeClass("btnDisabled").addClass("btn");	
+	}
+  }
+</script>-->
+
+		<!-- User lookup autocomplete build -->
+		<!--<script type="text/javascript">
+function buildTaskOwnerSearch(ownerInputCls, ownerInputValueCls, waitingImageCls){			
+	j$("."+ownerInputCls).autocomplete({
+	    source: function (request, response) {
+	        getAssigneeList(request, response);
+	        assigneeResponse = response;
+	    },
+	    minLength: 3,
+	    select: function (event, ui) {
+	        j$("."+ownerInputValueCls).val(ui.item.value);
+	        j$("."+ownerInputCls).val(ui.item.label.split("(")[0]);
+	        return false;
+	    },
+	    open: function () {
+	        j$(".ui-autocomplete").css("width", "auto");
+	        j$('.'+waitingImageCls).hide();
+	    },
+	    search  : function(){
+	    	j$('.'+waitingImageCls).show();
+	    },
+	    focus: function (event, ui) {
+		       j$("."+ownerInputValueCls).val(ui.item.value);
+	       	   j$("."+ownerInputCls).val(ui.item.label.split("(")[0]);
+		       event.preventDefault(); // Prevent the default focus behavior.
+		}
+	});
+}
+		
+function getAssigneeList(request,response) {			
+	actionGetAssignee(request.term);		
+}
+
+</script>
+
+		
+		<script type="text/javascript">
+	   		var isLinkedToSFTask = '{!(sfTaskAssociated)}';
+	   		function getJbaraNameSpace() {
+	            var strFieldName = "{!$ObjectType.CSEvent__c.Fields.Date__c.Name}";
+	            if (j$.trim(strFieldName.split('Date__c')[0]) != '') {
+	                return j$.trim(strFieldName.split('Date__c')[0]);
+	            } else {
+	                return '';
+	            }
+	        }
+	         
+		    var createTaskClass = function () {
+				    this.Id = null;
+			}	
+	    	
+	        var tasksJsonToSave = new Array();
+	    </script>
+
+
+
+
+		<script type="text/javascript">	
+    	var selParticpntIds; 
+		function clickToViewTaskForm(){					 		
+		 	selParticpntIds = getSelectedSurveyParticipantList();		 			 	
+		 	if(selParticpntIds.length > 0) {		 				 		
+		 		userLookupFields = eval({!(userRefFieldsListJson)});
+		 		openTaskCreatePopup();			
+				j$('.createTask-fullDiv').html(buildTaskForm()).show();	
+		 	}
+		 	else{		 		
+		 		alert('Select at least one participant');		 		
+		 	}	 			
+		}
+		
+		
+		function openTaskCreatePopup() {				
+			j$("#taskOverlayForm" ).dialog({
+	            title: "Add Task",
+	            modal: true,
+	            resizable : false,
+	            create: function(event, ui) {
+			        var widget = j$(this).dialog("widget");
+			        j$(".ui-dialog-titlebar-close span", widget).removeClass("ui-icon-closethick").addClass("ui-icon-myCloseButton").attr("title","Close");;
+			    },
+	            overlay: {
+	                background: "#000000",
+	                opacity: .9
+	            },
+	            beforeClose: function(event, ui ) {	            
+	            	j$("#jBaraTaskErrorContainer").html("");	            	
+	            },	            
+	            position: ['center',5],
+	            minWidth: 600,
+	            maxWidth: 600,
+	            open: function(event, ui) { j$('.ui-widget-overlay').bind('click', function(){ j$("#taskOverlayForm").dialog('close'); }); }
+	        });
+			j$(".ga_mainEventsOverlay").parent().find(".ui-corner-all:eq(0)").removeClass("ui-corner-all");
+			j$(".ui-dialog-titlebar-close span").removeClass("ui-icon-closethick").addClass("ui-icon-myCloseButton");		
+			bindEventsToTasksForm();		
+		}
+		
+		function bindEventsToTasksForm(){		
+			j$(".taskCancelBtn").die().live('click', function () {
+				j$("#jBaraTaskErrorContainer").html("");
+				j$("#taskOverlayForm").dialog('close');
+			});
+		}
+		
+		
+		
+	 	function getMaxFieldLength(taskFldJSON){
+			var maxFldLengh = 80;
+			if(taskFldJSON.fieldType == "DOUBLE" || taskFldJSON.fieldType == "CURRENCY" || taskFldJSON.fieldType == "PERCENT"){
+				maxFldLengh = 18;
+			}
+			return maxFldLengh;			
+		} 
+		
+		function jbaraEventDateInputControl(thisPointer) {
+            var obj = j$("body").find(".datePicker")[0];
+            j$("body").append(obj);
+            j$("#datePicker").css({
+            	'zIndex': '99999'
+           	});
+           DatePicker.pickDate(true, thisPointer.id, false);
+        }
+	 	
+	 	function getOptionSelected(defaultValues, ctrlData){
+			var selectedText = '';			
+			if(defaultValues.length > 0){
+				for(var zdx = 0 ; zdx < defaultValues.length; zdx++ ){
+					if(defaultValues[zdx].key == ctrlData){
+						selectedText = 'selected';
+						break;
+					}
+				}
+			}			
+			return selectedText;
+		}
+				
+		function buildTaskOwnerDropDown( $dropdownList ) {
+			var optionHTML = '';
+			optionHTML += '<option value = "" >None</option>';
+			for(props in $dropdownList) {
+				optionHTML += '<option value = "'+props+'" >'+$dropdownList[props]+'</option>';
+			}
+			optionHTML += '<option value = "Default" >Select User</option>';
+			return optionHTML; 
+		}
+		
+		function getSelectedSurveyParticipantList() {	    	
+	    	var selectedParticipantList = new Array();
+	    		    	
+			j$('#dummyQuesAndAnsReportsId_frozen .cbox:checked').each(function() {
+				
+			     selectedParticipantList.push(j$(this).parent().parent().find('.taskParticipantId').val());
+			});
+			if(selectedParticipantList.length > 0)
+				return JSON.stringify(selectedParticipantList);
+			else
+				return '';
+	    }
+    </script>
+		
+
+
+
+		<script type="text/javascript">
+        var j$ = jQuery.noConflict();
+        j$.jgrid.no_legacy_api = true;
+        j$.jgrid.useJSON = true;
+        var userLocaleDateFormatMap,jqGridDateFormat,jqGridDateTimeFormat;
+        var allDetailQuestionsListJsonData;
+        var allRespondedParticpantsListJsonData;
+       	var dummySRUIViewColumnsStr, dummyIsCustomSRView, dummySRSortableFieldsJSONStr;
+        var filteredDetailQuestionData;
+        var buildGroupHeadersPropertiesList = new Array(); 
+		var buildGroupHeadersPropertiesObj;
+		
+		
+		var createTaskJSON = eval({!(taskFieldsJson)});
+        var userLookupFields;  
+        var dateTimeFormatByLocaleMap = eval({!(userLocaleDateFormatMap)});
+        var taskMapForParticipants;
+        
+        j$(document).ready(function(){
+        	
+        	userLocaleDateFormatMap =eval({!(userLocaleDateFormatMap)});
+			jqGridDateFormat 		=JBARAjqGridDateFormat(userLocaleDateFormatMap);
+			jqGridDateTimeFormat 	=JBARAjqGridDateTimeFormat(userLocaleDateFormatMap); 
+			buildSurveyDetailViewGird();
+			
+			
+            j$('.btnToCreateTask').live("click",function () { 
+				clickToViewTaskForm();
+				j$(".loadEventStatusDiv").hide();				 
+		 	});  
+		 	
+		 	j$(".taskSaveBtn").die().live('click', function () {
+		 		j$(".taskSaveBtn").removeClass("btn").addClass("btnDisabled");
+				j$(".taskSaveBtn").attr('disabled', 'disabled');	
+				saveTaskItem();
+				
+			});
+			
+			j$(".taskOwnerField").live('change', function(){			
+			  var ownerFld = j$(this).find("option:selected").attr("value");			  
+			  if(ownerFld == 'Default') {
+			  	j$(".defaultUserDiv").show();
+			  	buildTaskOwnerSearch('defaultUser', 'defaultUserId', 'waitingTaskUserImage');			  	
+			  }
+			  else {
+			  	j$(".defaultUserDiv").hide();
+			  }			  
+			});
+			
+			//ends
+        });
+
+       //This function is used to build details report of grid
+		function buildQuestionsBySurveyId(quesList, partList, grdSortColumn, grdSortOrder){
+        	var htmltable = '';
+        	var htmlHeadertable = '';
+        	var htmlSubHeadertable='';
+        	var ansText = '';
+        	var userAnswersList ='';
+        	var matrixSubQues ='';
+        	var matrixSubQuesResponses='';
+        	respondedList= [];
+        	htmlHeadertable += '<thead><tr>';
+        	htmlSubHeadertable += '<tr>';
+        	
+	        htmlHeadertable += '<th style="width:140px;min-width:140px;">Participant</th>';
+	        htmlHeadertable += '<th style="width:140px;min-width:140px;">Account</th>';
+	        htmlHeadertable += '<th style="width:150px;min-width:150px;">Responded</th>';
+	        htmlHeadertable += '<th style="width:100px;min-width:100px;">Task</th>';
+	        htmlHeadertable += '<th style="width:100px;min-width:100px;">Task Owner</th>';
+	        
+	        	        
+	        for(var c = 0; c < dummySRUIViewColumnsStr.length; c++) {
+	        	htmlHeadertable += '<th style="width:100px;min-width:100px;">'+j$.trim(dummySRUIViewColumnsStr[c].label)+'</th>';
+	        }
+	        
+	        htmltable += '<tbody>';
+	        /**
+			*Javascript Object to store the survey paricipant details properties.
+			*/
+
+
+			function buildGroupHeadersPropClass(data) {
+			    this.startColumnName          			= data.startColumnName;
+		    	this.numberOfColumns			        = data.numberOfColumns;
+   				this.titleText                 			= data.titleText;
+			}
+
+			var viewColumnList = dummySRUIViewColumnsStr;
+			var colDataType, colFieldName, colObjectName, colFieldval, colPrefix;
+			buildGroupHeadersPropertiesList = new Array();
+			buildGroupHeadersPropertiesList.push({startColumnName: 'cb', numberOfColumns: 6, titleText: ' '});
+			
+	        for(var i = 0 ; i < partList.length; i++ ){	      
+	        		        		        	 
+	        	//if(partList[i].Participant__r != null) {	        	
+		        	respondedList = (partList[i].Participant__r) ? partList[i].Participant__r.records : new Array();		        	
+		        	htmltable += '<tr>';
+		        	//htmltable += '<td>';
+	        		//htmltable += '<span><input type="checkbox" class="taskParticipantId" value="'+respondedList[0].Participant__c+'" /></span>';
+	        		//htmltable += '</td>';
+	        		htmltable += '<td>';
+	        		htmltable += partList[i].DisplayName__c;
+	        		htmltable += '</td>';
+	        		htmltable += '<td>';
+	        		htmltable += (partList[i].Account__r.Name == null) ? '' : ('<a title=\''+ (partList[i].Account__r.Name).replace(/'/g, "&rsquo;") +'\' href=\'CustomerSuccess360?cid='+ partList[i].Account__r.Id+'\' target=\'_top\'>'+ (partList[i].Account__r.Name) +'</a>');
+	        		htmltable += '</td>';
+	        		htmltable += '<td>';
+	        		htmltable += JBARAAddOffSetTime(partList[i].ResponseDate__c, userLocaleDateFormatMap);
+	        		htmltable += '</td>';	        		
+	        		htmltable += '<td>';	     
+	        		if(taskMapForParticipants[respondedList[0].Participant__c] != null) {
+	        			if(isLinkedToSFTask == 'true') {	 
+	        				//show task subject and link to task       				   			 	        				
+	        				htmltable += '<a title=\'Task\' href=/'+ taskMapForParticipants[respondedList[0].Participant__c].Id+' target=\'_top\'>'+taskMapForParticipants[respondedList[0].Participant__c].Subject+'</a>';
+	        				htmltable += '</td>'; 
+	        				//show task owner name and link to owner id
+	        				htmltable += '<td>';
+	        				htmltable += '<a title=\'Task Owner\' href=/'+ taskMapForParticipants[respondedList[0].Participant__c].OwnerId+' target=\'_top\'>'+taskMapForParticipants[respondedList[0].Participant__c].Owner.Name+'</a>';	        					
+	        			}
+	        			else{	        			   			 	        				
+	        				htmltable += '<a title=\'Task\' href=/'+ taskMapForParticipants[respondedList[0].Participant__c].Id+' target=\'_top\'>'+taskMapForParticipants[respondedList[0].Participant__c].Subject__c+'</a>';
+	        				htmltable += '</td>';
+	        				htmltable += '<td>';
+	        				htmltable += '<a title=\'Task Owner\' href=/'+ taskMapForParticipants[respondedList[0].Participant__c].Assigned__c+' target=\'_top\'>'+taskMapForParticipants[respondedList[0].Participant__c].Assigned__r.Name+'</a>';	        				
+	        			}	        			
+	        		}
+	        		else {
+		        		htmltable += 'NA';
+		        		htmltable += '</td>';
+		        		htmltable += '<td>';
+		        		htmltable += 'NA';
+	        		}
+	        		htmltable += '<input type="text" style="display:none;" class="taskParticipantId" value="'+respondedList[0].Participant__c+'"/>';
+	        		htmltable += '</td>';
+	        		
+	        		for(var c = 0; c < viewColumnList.length; c++) {
+	        			
+	        			colDataType = viewColumnList[c].fieldType.toLowerCase();	        			
+	        			colDataType = (colDataType == "double" || colDataType == "integer") ? "number" : colDataType;
+	       				colFieldName = viewColumnList[c].name;
+	       				colObjectName = viewColumnList[c].objectName;
+	        			if(colObjectName == 'Contact' || colObjectName == 'Account' || colObjectName == 'CustomerInfo__c' || colObjectName == 'SurveyParticipant__c') {
+	        				htmltable += '<td>';
+	       					if(colFieldName.indexOf(".") > 0) {
+		       					var testStr = colFieldName.split(".");
+		       					colFieldval = (colObjectName == 'Contact') ? ((partList[i].Contact__r != null) ? ((partList[i].Contact__r[testStr[0]] != null) ?  partList[i].Contact__r[testStr[0]][testStr[1]] : null ) : null)
+		       																: ((colObjectName == 'Account') ? ((partList[i].Account__r != null) ? ( (partList[i].Account__r[testStr[0]] != null) ?  partList[i].Account__r[testStr[0]][testStr[1]] : null) : null)
+		       																: ((colObjectName == 'CustomerInfo__c') ? ((partList[i].Account__r != null) ? ((partList[i].Account__r.CustomerInfo__r != null) ? ( (partList[i].Account__r.CustomerInfo__r[testStr[0]] != null) ?  partList[i].Account__r.CustomerInfo__r[testStr[0]][testStr[1]] : null) : null) : null)
+		       																: ((partList[i][testStr[0]] != null) ? partList[i][testStr[0]][testStr[1]] : null)));	
+		       				}
+		       				else {
+		       					colFieldval = (colObjectName == 'Contact') ? ((partList[i].Contact__r != null) ? partList[i].Contact__r[colFieldName] : null)
+		       																: ((colObjectName == 'Account') ? ((partList[i].Account__r != null) ? partList[i].Account__r[colFieldName] : null)
+		       																: ((colObjectName == 'CustomerInfo__c') ? ((partList[i].Account__r != null) ? ((partList[i].Account__r.CustomerInfo__r != null) ? partList[i].Account__r.CustomerInfo__r[colFieldName] : null) : null)
+		       																: partList[i][colFieldName] ));
+		       				
+		       				}
+		       				
+		       				if(colDataType == 'date') {
+		       					htmltable += ''+((colFieldval != null) ? JBARAgetDateByUserLocal(colFieldval, userLocaleDateFormatMap) : '')+'';
+		       				}
+		       				else if(colDataType == 'datetime') {
+		       					htmltable += ''+((colFieldval != null) ? JBARAAddOffSetTime(colFieldval, userLocaleDateFormatMap) : '')+'';
+		       				}
+		   					else {
+		    					htmltable += ''+((colFieldval != null) ? colFieldval : ((colDataType == "number" || colDataType == "currency") ? '0' : ''))+''
+		   					}
+		   					htmltable += '</td>';	   					
+		   				}
+		        		
+		        	}		        	
+		        	for(var j = 0 ; j < quesList.length; j++ ){        						
+	        			matrixSubQues = j$.grep(allDetailQuestionsListJsonData, function(dt) {
+				                return (dt.ParentQuestion__c ==  quesList[j].Id);
+			            });
+	
+		        		if(i==0){							
+		        			//get the matrix subquestions.
+		        			if(quesList[j].Type__c != 'MatrixSingleAnswer' && quesList[j].Type__c != 'MatrixMultipleAnswers'){
+				        		htmlHeadertable += '<th style="width:240px;min-width:240px;">';
+				        		htmlHeadertable += quesList[j].Title__c;
+				        		htmlHeadertable += '</th>';				        		
+			        		}
+			        		if(matrixSubQues.length > 0) {
+				        		for(var l = 0 ; l <matrixSubQues.length; l++ ){
+				        			htmlHeadertable += '<th style="width:240px;min-width:240px;" >';
+				        			htmlHeadertable +=  matrixSubQues[l].Title__c;
+				        			htmlHeadertable += '</th>';			        		
+				        		}
+				        		buildGroupHeadersPropertiesObj = new buildGroupHeadersPropClass({
+									startColumnName 	:((matrixSubQues[0].Title__c)).replace(/ /g,"_"),
+									numberOfColumns 	:(quesList[j].AllowComment__c) ? matrixSubQues.length+1 : matrixSubQues.length ,
+									titleText 			:quesList[j].Title__c
+								});
+								buildGroupHeadersPropertiesList.push(buildGroupHeadersPropertiesObj);
+				        	}
+	
+			        		if(quesList[j].AllowComment__c){
+			        			htmlHeadertable += '<th style="width:240px;min-width:240px;">';
+			        			htmlHeadertable += quesList[j].CommentLabel__c;
+			        			htmlHeadertable += '</th>';
+			        		}			        		
+			        	}
+	
+	
+			            if(matrixSubQues.length > 0) {
+				          	for(var m = 0 ; m <matrixSubQues.length; m++ ){
+				          		var userAnsArr = new Array();
+			        			matrixSubQuesResponses = j$.grep(respondedList, function(dt) {
+							                return (dt.Participant__c == partList[i].Id && dt.Question__c ==  matrixSubQues[m].Id);
+					            });
+					            for(var a = 0 ; a < matrixSubQuesResponses.length; a++){
+	
+					            	if(matrixSubQuesResponses[a].Answer__r != null){
+					            		userAnsArr.push(matrixSubQuesResponses[a].Answer__r.Title__c);
+					            	}
+					            }
+					            htmltable += '<td>'+userAnsArr;
+				        		htmltable += '</td>';
+				        		userAnswersList = j$.grep(respondedList, function(dt) {
+					                return (dt.Participant__c == partList[i].Id && dt.Question__c == quesList[j].Id);
+					            });
+			        		}
+		        		}
+		        		else{
+		        			var userAnsArr = new Array();
+		        			userAnswersList = j$.grep(respondedList, function(dt) {
+				                return (dt.Participant__c == partList[i].Id && dt.Question__c ==  quesList[j].Id);
+				            });
+				            for(var k = 0 ; k < userAnswersList.length; k++){
+				            	if(userAnswersList[k].Answer__r != null && quesList[j].Type__c !='Text' &&  quesList[j].Type__c != 'Comment'){
+				            		if(userAnswersList[k].Answer__r.Title__c != null){			            						            			
+				            			userAnsArr.push(userAnswersList[k].Answer__r.Title__c);
+				            		}
+				            		else{
+				            			userAnsArr.push(userAnswersList[k].AnswerText__c);
+				            		}
+				            	}
+				            	if(quesList[j].Type__c =='Text' ||  quesList[j].Type__c == 'Comment'){
+				            		//var userAnsArr = new Array();
+				            		userAnsArr.push(userAnswersList[k].AnswerText__c);
+				            	}
+				            }
+				            htmltable += '<td>'+userAnsArr;
+			        		htmltable += '</td>';
+		        		}
+			        	if(quesList[j].AllowComment__c) {		        	
+				            if(quesList[j].Type__c =='NPS') {
+				            	ansText = '';
+				            	if(userAnswersList.length > 1) {
+				            		ansText = ( (userAnswersList[1].AnswerText__c == null) ? ((userAnswersList[0].AnswerText__c == null) ? '' : userAnswersList[0].AnswerText__c) : userAnswersList[1].AnswerText__c) ;
+				            	}	        			
+			        		}
+			        		else {
+			        			ansText = ( (userAnswersList.length == 0 || userAnswersList[0].AnswerText__c == null) ? '' : userAnswersList[0].AnswerText__c) ;
+			        		}
+				        	htmltable += '<td>'+ansText;
+				        	htmltable += '</td>';
+				        }
+	
+		        	}
+		        	htmltable += '</tr>';
+		        //}
+        	}
+        	htmlSubHeadertable += '</tr>';
+        	htmlHeadertable += '</tr></thead>';
+        	htmltable = '<table cellspacing="0" cellpadding="3" id="dummyQuesAndAnsReportsId">'+htmlHeadertable+htmltable;
+
+        	htmltable += '</tbody>';
+        	htmltable += '</table>';
+
+
+        	j$(".dummyQuestionCommentsReportsBySurvey").html(htmltable);
+        	
+        	tableToGrid("#dummyQuesAndAnsReportsId", {ignoreCase: true, multiselect: true,headertitles:true,rowNum: 100,rowList: [100,200,300], viewrecords:true,sortname:grdSortColumn,sortorder:grdSortOrder});
+        	
+        	var columnNames = j$("#dummyQuesAndAnsReportsId").jqGrid('getGridParam','colModel');
+        	
+        	j$("#dummyQuesAndAnsReportsId").jqGrid('setGridParam',{ 
+       			onSortCol: function (index, columnIndex, sortOrder) {
+       					var sorCol = {name :index, order : sortOrder };
+        				//window.top.processEntireState(sorCol);
+        				onSortColCustomerList(index, columnIndex, sortOrder)
+		        return 'stop';
+		    }});
+		  	
+		  	j$("#dummyQuesAndAnsReportsId").jqGrid('setGridParam',{ 
+       			gridComplete: function () {
+		       		ongridCompleteList();
+		        return 'stop';
+		    }});
+		  	
+		  	
+			if(buildGroupHeadersPropertiesList.length > 1){				
+	        	j$("#dummyQuesAndAnsReportsId").jqGrid('setGroupHeaders', {
+	        		useColSpanStyle: true,
+					groupHeaders: buildGroupHeadersPropertiesList
+				});
+			}
+			j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp','Participant', {frozen:true,sortable:true});
+			j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp','Account', {frozen:true,sortable:true});
+			j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp','Responded', {frozen:true,sortable:true});
+			j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp','Task', {frozen:true,sortable:true});
+			j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp','Task_Owner', {frozen:true,sortable:true});
+			
+			j$("#dummyQuesAndAnsReportsId").jqGrid('setFrozenColumns');
+			for(var c = 0; c < viewColumnList.length; c++) {
+      			j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp', j$.trim(viewColumnList[c].label), {frozen:false, sortable:false});
+       		}
+       		
+       		for(var c = 0; c < viewColumnList.length; c++) {
+      			colDataType = viewColumnList[c].fieldType.toLowerCase();
+      			colDataType = (colDataType == "double" || colDataType == "integer") ? "number" : colDataType;
+      			if(colDataType == "datetime") {
+      				j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp',j$.trim(viewColumnList[c].label),{stype:'datetime',sortable:false,datefmt:"ISO8601Long",formatter:"date",formatoptions:{srcformat: "ISO8601Long", newformat: jqGridDateTimeFormat}});
+      			}
+      			else if(colDataType == "date") {
+      				j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp',j$.trim(viewColumnList[c].label),{stype:'date',sortable:false,datefmt:"ISO8601Long",formatter:"date",formatoptions:{srcformat: "ISO8601Long", newformat: jqGridDateFormat}});
+      			}
+      			else if(colDataType == 'number' || colDataType == 'currency') {
+	           		colPrefix = (colDataType == 'currency') ? '$ ' : '';
+	           		j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp',j$.trim(viewColumnList[c].label),{stype:'number',align:'right', sortable:false,formatter:colDataType,formatoptions:{thousandsSeparator:",", decimalPlaces:0, prefix:colPrefix}});
+	           	}
+        			
+       		}
+       		j$("#dummyQuesAndAnsReportsId").jqGrid('setColProp','Responded',{stype:'datetime',sortable:true,datefmt:"ISO8601Long",formatter:"date",formatoptions:{srcformat: "ISO8601Long", newformat: jqGridDateTimeFormat}});
+
+   			j$("#dummyQuesAndAnsReportsId").jqGrid('setFrozenColumns');
+   			var screenWidth = screen.width - 60;
+			j$("#dummyQuesAndAnsReportsId").setGridWidth(screenWidth,false);
+			j$("#dummyQuesAndAnsReportsId").setGridHeight(300);
+			j$("#dummyQuesAndAnsReportsId").trigger('reloadGrid', [{current:true}]);
+			
+	        j$("#grdPageBtnContainer").show();      
+	        j$("#grdPageBtnContainer,.headerSurveyGridDivToExport").width(j$("#gbox_dummyQuesAndAnsReportsId").width());
+			//j$("#gview_dummyQuesAndAnsReportsId").find(".ui-jqgrid-bdiv").css({'border-radius':'0px !important'});
+        }
+        
+        function ongridCompleteList(){        	
+        	removeSortingCursor();
+        	hideOverLayForm();
+        }
+        
+        function removeSortingCursor(){
+       		j$("#gview_dummyQuesAndAnsReportsId").find(".ui-jqgrid-htable").find(".ui-jqgrid-labels").find("div.ui-jqgrid-sortable").each(function(){
+       			if(j$(this).attr("id")!='jqgh_dummyQuesAndAnsReportsId_Account' && j$(this).attr("id")!='jqgh_dummyQuesAndAnsReportsId_Participant' && j$(this).attr("id")!='jqgh_dummyQuesAndAnsReportsId_Responded'){       				
+        			j$(this).removeClass("ui-jqgrid-sortable");        				
+       			}
+       		});
+       	}
+        
+        
+        function onSortColCustomerList(index, columnIndex, sortOrder){
+    		var sortColumn;
+        	//showOverLayForm();
+        	if(index=='Participant' || index=='Account' || index=='Responded' || index=='Task' || index=='Task Owner'){
+        		actSortByCols(index,sortOrder); 
+        	} 
+       	}
+      
+		/**
+        *Function to export transactions list grid data.
+        */
+        function surveyDetailExportClicked() {
+        	//bringToExportPage();
+        	actSurveyDetailReportDataExport();
+        }
+				
+		
+		function offSetPageClick() {
+        //    j$("#grdPageBtnContainer").appendTo("body").hide();
+            buildSurveyDetailViewGird();
+        }
+
+        function afterSortClick() {
+          // j$("#grdPageBtnContainer").appendTo("body").hide();
+            buildSurveyDetailViewGird();
+        }
+        function showOverLayForm() {
+            var overLayHeight = j$(document).height();
+            var left = (screen.width - overLayWidth) / 2;
+            var top = (screen.height - overLayHeight) / 2;
+            var overLayWidth = j$(window).width()
+            j$(".jbaraDummyOverLayForm").css({
+                'z-index': '4999',
+                'left': 0,
+                'position': 'fixed',
+                'width': overLayWidth,
+                'height': overLayHeight + 350
+            }).show();
+        }
+		function hideOverLayForm(){
+			 j$(".jbaraDummyOverLayForm").hide();			 
+		}
+		
+		var refreshAdvanceSearchPanel=true;
+		function gridAdvanceSearchCallBackAfterSearch(strConditions){
+			if(strConditions.length == 0) {
+				j$(".searchingIndicator").hide();
+			}
+			else {
+				j$(".searchingIndicator").show();
+			}
+			j$(".hdnAdvanceSearchFilterJson").val(JSON.stringify(strConditions));
+			//j$("#grdPageBtnContainer").appendTo("body").hide();
+			j$("#grdAdvanceSearchDialog").dialog("close");
+			showOverLayForm();
+			actRefreshAfterAdvanceSearch();
+		}
+		function advancedSearchIconClicked(){		    	
+			if(refreshAdvanceSearchPanel){
+		       		actShowAdvanceSearchForm();
+		       		j$(".searchingIndicator").hide();
+		       	}
+		       	else {
+		       		showAdvanceSearchDailog();
+			}
+      
+       	}
+	   	function showAdvanceSearchDailog(){
+ 		
+ 			j$("#grdAdvanceSearchDialog").dialog({title :'Search Responses',modal: true,minWidth: 775,minHeight: 120,resizable: false});
+ 			j$("#grdAdvanceSearchDialog").show();
+        		refreshAdvanceSearchPanel=false;
+      	}
+    	function changeAdvanceSearchFrameStyles(param){
+			j$("#frmAdvanceSearch").height(param);
+		}
+		
+		
+		function buildGridAfterAdvanceSearch(){
+			j$("#grdAdvanceSearchDialog").dialog("close");
+		}
+		
+		function gridAdvanceSearchCallBackAfterClose(){
+				 j$("#grdAdvanceSearchDialog").dialog("close");
+	 }
+		 
+		 function gridAdvanceSearchCallBackAfterReset(){
+			 	j$("#grdAdvanceSearchDialog").dialog("close");
+		 }
+		 
+    </script>
+
+	<script>
+	function changeTaskFilter() {			
+		var filterString = j$(".taskFilterOption").val();
+		j$("#detailViewDetail").hide();
+		j$(".loadingSurveyReportsDetailView").show();
+		filterParticipantByTask(filterString);
+	}
+	
+	</script>	
+		<apex:outputPanel id="surveyTaskDetailJsPanel">
+			<script type="text/javascript"> 
+            function afterTaskCreate(){           
+            		j$("#taskOverlayForm").dialog('close');       
+            		j$(".taskSaveBtn").removeClass("btn").addClass("btnDisabled");
+					j$(".taskSaveBtn").attr('disabled', 'disabled');	        	             	
+            }
+         </script>
+		</apex:outputPanel>
+
+		<apex:outputPanel id="assigneeJSPanel">
+			<script>
+        		function showAssigneeList(){
+        			var assigneeList = eval({!(tasksAssigneeListJson)});
+        			if(assigneeList.length == 0){
+        				j$('.waitingTaskUserImage').hide();	        				
+        			}	        			      			
+        			assigneeResponse(j$.map(assigneeList, function( item ) {	        			
+		              return {
+		                label: item.Name + "(" + item.Email+ ")",
+		                value: item.Id
+		              }
+		            }));
+        		}
+        	</script>
+		</apex:outputPanel>
+
+		
+
+		<apex:outputPanel id="suveyJSPanel">
+			<script type="text/javascript">
+    		function buildSurveyDetailViewGird() {
+    			j$('#grdPageBtnContainer').hide();	
+				j$("#detailViewDetail").show();    						
+    			j$(".loadingSurveyReportsDetailView").hide();
+    			allDetailQuestionsListJsonData =  eval({!(QuestionsAndSubQuestionsById)});
+	        	allRespondedParticpantsListJsonData	= eval({!(AllResponsesByQuestionIdJSON)});		        	
+	        	dummySRUIViewColumnsStr				= eval({!(srUIViewColumnsStr)});
+	        	taskMapForParticipants 				= eval({!(particpantTaskDetails)});	        	
+	        	dummyIsCustomSRView					= '{!(isCustomSRView)}';
+	        	dummySRSortableFieldsJSONStr		= eval({!(srSortableFieldsJSONStr)});
+	        	j$(".questionTitleClass").html('{!(questionTitle)}');
+				var grdSortColumn='{!(clientSortColumnName)}';
+	        	var grdSortOrder='{!(grdSortOrder)}';	        	
+				filteredDetailQuestionData= j$.grep(allDetailQuestionsListJsonData, function(dt) {return (dt.ParentQuestion__c == null);});	        	
+				buildQuestionsBySurveyId(filteredDetailQuestionData, allRespondedParticpantsListJsonData, grdSortColumn,grdSortOrder);
+				j$(".headerSurveyGridDivToExport").show(); 	
+				j$(".jbaraDummyOverLayForm").hide();
+				j$('#grdPageBtnContainer').show();
+				
+    		}
+    		
+    	</script>
+		</apex:outputPanel>-->
+
+		<!-- Action function to initialize the export -->
+		<!--<apex:actionFunction name="actSurveyDetailReportDataExport"
+			action="{!initiateBatchProcessToExportSurveyDetailReport}"
+			reRender="SurveyDetailReportExportMessagePanel"
+			oncomplete="return hideApexPageMessageWithDelay('exportApexMsgId', 7500)" />
+		<apex:outputPanel id="SurveyDetailReportExportMessagePanel">
+			<div id="exportApexMsgId">
+				<apex:pageMessages rendered="{!showMsg}" />
+			</div>
+		</apex:outputPanel>
+
+		
+		<div class="actionButtonsForSurveyDistribution"
+			style="height: 30px; min-height: 25px; margin-top: 2px;">
+			<span class="actionButtonsBasedOnSelection" align="center"
+				style="position: relative; left: 30%;"> <input type="button"
+				value="Add Task" width="70px" class="btnToCreateTask btn"
+				style="display: block;" />
+			</span>
+			<span style="font-weight: bold; position: relative; left: 83.7%; bottom:20px;" class="actionButtonsBasedOnSelection" > 
+			Show Responses: 			
+				<select onchange="changeTaskFilter();" size="1" class="taskFilterOption" name="">	
+					<option selected="selected" value="ALL">All</option>
+					<option value="TASK">With Task</option>
+					<option value="NOTASK">Without Task</option>
+				</select>
+			</span>
+		</div>
+		
+		
+		
+		
+		<div class="loadingSurveyReportsDetailView" align="center" style="display:none;margin:1px 0px 1px 0px;">
+				<div class="waitingHolder" style="width: 254px; top: 100px;padding-top:50px;"><img src="/img/loading.gif" class="waitingImage" title="Please Wait..." />
+					<br/><span class="waitingDescription">Loading question detail view...</span>
+				</div> 
+		</div>
+		
+		<div id="detailViewDetail">
+			<div
+				class="headerSurveyGridDiv headerSurveyGridDivToExport ui-jqgrid-titlebar ui-widget-header ui-corner-top"
+				style="border-top-left-radius: 5px; border-top-right-radius: 5px; height: 25px; min-height: 25px; display: none;">
+				<span class="searchingIndicator"
+					style="float: left; margin-top: 3px; margin-left: 4px; display: none;"><img
+					src="/img/icon/forecasts16.png" /> Search Results</span>
+				<div
+					style="right: 20px; display: inline; float: right; cursor: pointer; font-weight: normal; padding: 5px;">
+					<span class="ui-icon ui-icon-search dummygrdAdvancedSearch"
+						onclick="advancedSearchIconClicked()"
+						style="display: inline-block; vertical-align: bottom; cursor: pointer;"
+						title="Search"></span> &nbsp;&nbsp;&nbsp;
+				</div>
+			</div>
+						
+
+			<div class="dummyQuestionCommentsReportsBySurvey"></div>
+
+			<div id="grdPageBtnContainer" style="display: none;"
+				class="ui-state-default ui-jqgrid-pager ui-corner-bottom" dir="ltr">
+				<apex:outputPanel id="pageBtnPanel"
+					StyleClass="grdHiddenDynamicPgBtn">
+					<div role="group" class="ui-pager-control" id="pg_plist">
+						<table cellspacing="0" cellpadding="0" border="0" role="row"
+							style="width: 100%; table-layout: fixed; height: 100%; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;"
+							class="ui-pg-table">
+							<tbody>
+								<tr>
+									<td align="left" id="plist_left">&nbsp;</td>
+									<td align="center" style="width: 265px;" id="plist_center">
+										<table cellspacing="0" cellpadding="0" border="0"
+											class="ui-pg-table" style="table-layout: auto;">
+											<tbody>
+												<tr>
+													<td class="ui-pg-button ui-corner-all"
+														id="grdFirstPageLink" style="cursor: pointer;"
+														onClick="queryWithOffSetByPage(1);return false;"><span
+														class="ui-icon ui-icon-seek-first"></span></td>
+													<td class="ui-pg-button ui-corner-all" id="grdPrevPageLink"
+														style="cursor: pointer;"
+														onClick="queryWithOffSetPreviousClick();return false;"><span
+														class="ui-icon ui-icon-seek-prev"></span></td>
+													<td style="width: 4px; cursor: default;"
+														class="ui-pg-button ui-state-disabled"><span
+														class="ui-separator"></span></td>
+													<td dir="ltr">Page <apex:inputText StyleClass="ui-pg-input" size="2" maxlength="7" /> of <span
+														id="pgCount" style="display: none;"></span> <apex:inputText style="display:none;" />
+													</td>
+													<td style="width: 4px; cursor: default;"
+														class="ui-pg-button ui-state-disabled"><span
+														class="ui-separator"></span></td>
+													<td class="ui-pg-button ui-corner-all" id="grdNextPageLink"
+														style="cursor: pointer;"><span
+														class="ui-icon ui-icon-seek-next"></span></td>
+													<td class="ui-pg-button ui-corner-all" id="grdLastPageLink"
+														style="cursor: pointer;"><span
+														class="ui-icon ui-icon-seek-end"></span></td>
+													<td dir="ltr">-->
+														<!-- 
+									                <select role="listbox" class="ui-pg-selbox">
+									                    <option value="100" role="option">100</option>
+									                    <option value="200" role="option">200</option>
+									                    <option value="300" role="option">300</option>
+									                </select> -->
+													<!--</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td align="right" id="plist_right">
+										<div class="ui-paging-info"
+											style="text-align: right; display: none;" dir="ltr">
+											View {!GrdPageStartRecordCounter} -
+											{!GrdPageEndRecordCounter} of <span id="pgTotalRecordCount">
+												{!GrdTotalRecordCount}</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<script>
+					var intRecordCount =parseInt('{!(GrdTotalRecordCount)}');
+					var maxPagecount =parseInt('{!(GrdOffSetTotalPages)}');
+					var offSetSize =parseInt('{!(grdOffSetListSize)}');
+					j$("#grdPageBtnContainer").find("#pgCount").html(maxPagecount);
+					if(intRecordCount>2000){
+						
+						j$("#pgTotalRecordCount").html('2000+');
+						if(offSetSize==100){
+							maxPagecount=20;
+						}
+						else if(offSetSize==200){
+							maxPagecount=10;
+						}
+						else {
+							maxPagecount=7;
+						}
+						j$("#grdPageBtnContainer").find("#pgCount").html(maxPagecount + '+');	
+						
+					}
+					
+					j$("#grdPageBtnContainer").find("#pgCount").show();	
+					  	
+					  	if('{!(GrdOffSetDisablePrevious)}'=='true'){
+					  		j$("#grdPageBtnContainer").find("#grdPrevPageLink").addClass("ui-state-disabled").removeAttr("onClick");
+					  		
+					  	}
+					  	if('{!(GrdOffSetDisableNext)}'=='true'){
+					  		j$("#grdPageBtnContainer").find("#grdNextPageLink").addClass("ui-state-disabled").removeAttr("onClick");
+					  	}
+					  	if('{!(GrdTotalRecordCount)}'=='0'){
+					  		j$("#grdPageBtnContainer").find(".ui-paging-info").html('No records to view').show();
+					  		j$("#grdPageBtnContainer").find(".ui-pg-input").val(0).attr("disabled","disabled");
+					  		j$("#grdPageBtnContainer").find(".ui-pg-selbox").val('{!(GrdoffSetListSize)}').attr("disabled","disabled");;
+					  	}
+					  	else {
+					  		j$("#grdPageBtnContainer").find(".ui-paging-info").show();
+					  		j$("#grdPageBtnContainer").find(".ui-pg-input").val('{!(GrdOffSetPageNumber)}').unbind("keyup").bind("keyup",function(event){
+					  			this.value = this.value.replace(/[^0-9\.]/g,'');
+					  			if(event.which==13 && j$.trim(this.value!='')){
+					  				if(parseInt(this.value)<=maxPagecount){
+					  					reloadGrid=true;
+					  					queryWithOffSetByPage(parseInt(this.value));
+					  				}
+					  				else {
+					  					this.value = '{!(GrdOffSetPageNumber)}';
+					  				}
+					  			}
+					  			
+					  			
+					  		});
+					  		j$("#grdPageBtnContainer").find(".ui-pg-selbox").bind("change",function(){
+					  			reloadGrid=true;
+					  			queryWithOffSetChangePageSize(j$(this).val());
+					  		});
+					  		j$("#grdPageBtnContainer").find(".ui-pg-selbox").val('{!(GrdoffSetListSize)}');
+					  	}
+					  	if(maxPagecount==parseInt(j$("#grdPageBtnContainer").find(".ui-pg-input").val())){
+					  		j$("#grdPageBtnContainer").find("#grdNextPageLink").addClass("ui-state-disabled").removeAttr("onClick");
+					  		j$("#grdPageBtnContainer").find("#grdLastPageLink").addClass("ui-state-disabled").removeAttr("onClick");
+					  	}
+					  	else {
+					  		j$("#grdPageBtnContainer").find("#grdNextPageLink").unbind("click").bind("click",function(){
+					  			queryWithOffSetNextClick();
+					  			return false;
+					  		});
+					  		j$("#grdPageBtnContainer").find("#grdLastPageLink").unbind("click").bind("click",function(){
+					  			queryWithOffSetByPage(maxPagecount);
+					  			return false;
+					  		});
+					  	}
+		 			</script>
+				</apex:outputPanel>
+			</div>
+
+			
+			<div class="ga_mainEventsOverlay" id="taskOverlayForm">
+				<div class="ga_tasksList" style="max-height: 350px; overflow: auto;">
+					<span Id="jBaraTaskErrorContainer"></span>
+					<div class="createTask-fullDiv" style="display: none;"></div>
+					<div class="tasksListViewDiv"></div>
+				</div>
+			</div>
+			<apex:actionFunction action="{!createTasksBySurveyResponse}"
+				name="saveTaskAction"
+				reRender="surveyTaskDetailJsPanel,suveyJSPanel,pageBtnPanel, SurveyDetailReportExportMessagePanel"
+				onComplete="afterTaskCreate(); buildSurveyDetailViewGird(); return hideApexPageMessageWithDelay('exportApexMsgId', 7500);">
+				<apex:param name="taskJson" value="" assignTo="{!taskObjectJson}" />
+				<apex:param name="participList" value=""
+					assignTo="{!selectedPartIds}" />
+				<apex:param name="taskOwner" value=""
+					assignTo="{!taskOwnerFieldName}" />
+				<apex:param name="sendEmail" value=""
+					assignTo="{!responseTaskEmail}" />
+				<apex:param name="defaulter" value="" assignTo="{!defaultUserId}" />
+			</apex:actionFunction>
+			
+			<apex:actionFunction action="{!refreshAfterTaskFilter}"
+				name="filterParticipantByTask"
+				reRender="suveyJSPanel,pageBtnPanel"
+				onComplete="buildSurveyDetailViewGird();">
+				<apex:param name="taskFilterType" value="" />
+			</apex:actionFunction>
+
+
+			<apex:actionFunction name="actionGetAssignee"
+				action="{!getAssignedToList}" reRender="assigneeJSPanel"
+				onComplete="return showAssigneeList();">
+				<apex:param name="filterText" value="" />
+			</apex:actionFunction>
+
+			<apex:actionFunction action="{!grdWithOffSetRefreshGrid}"
+				name="queryWithOffSetByPage"
+				reRender="suveyJSPanel, suveyResponseJSPanel, pageBtnPanel"
+				onComplete="offSetPageClick();">
+				<apex:param name="grdPageNumber" value="" />
+			</apex:actionFunction>
+			<apex:actionFunction action="{!grdWithOffSetChangePageSize}"
+				name="queryWithOffSetChangePageSize"
+				reRender="suveyJSPanel,suveyResponseJSPanel, pageBtnPanel"
+				onComplete="offSetPageClick();">
+				<apex:param name="grdPageSize" value="" />
+			</apex:actionFunction>
+			<apex:actionFunction action="{!grdOffSetPreviousClick}"
+				name="queryWithOffSetPreviousClick"
+				reRender="suveyJSPanel,suveyResponseJSPanel,pageBtnPanel"
+				onComplete="offSetPageClick();" />
+			<apex:actionFunction action="{!grdOffSetNextClick}"
+				name="queryWithOffSetNextClick"
+				reRender="suveyJSPanel,suveyResponseJSPanel, pageBtnPanel"
+				onComplete="offSetPageClick();" />
+
+
+			<apex:actionFunction action="{!grdWithOffSetSortByColumn}"
+				name="actSortByCols"
+				reRender="suveyJSPanel,suveyResponseJSPanel,pageBtnPanel"
+				onComplete="afterSortClick();">
+				<apex:param name="sortColumn" value="" />
+				<apex:param name="sortOrder" value="" />
+			</apex:actionFunction>
+
+			<apex:InputText StyleClass="hdnAdvanceSearchFilterJson"
+				value="{!advanceSearchFilterJsonString}" style="display:none;" />			
+			<apex:actionFunction action="{!refreshAfterAdvanceSearchForQuestionById}"
+				name="actRefreshAfterAdvanceSearch"
+				reRender="suveyJSPanel,pageBtnPanel"
+				onComplete="buildSurveyDetailViewGird();">
+			</apex:actionFunction>
+			<apex:actionFunction action="{!showAdvanceSearch}"
+				name="actShowAdvanceSearchForm"
+				reRender="grdAdvanceSearchPanelContainer"
+				onComplete="showAdvanceSearchDailog();">
+			</apex:actionFunction>
+
+		</div>
+
+	</apex:form>
+
+
+	<div id="grdAdvanceSearchDialog">
+		<apex:outputPanel id="grdAdvanceSearchPanelContainer">
+			<apex:outputpanel rendered="{!renderAdvanceSearchPanel}">
+				<iframe id="frmAdvanceSearch"
+					src="apex/AdvanceSearchIFrame?inline=1&SearchtabName=SurveyReports&externalObjectName={!externalObjectName}&externalObjectLookupFieldName={!externalObjectLookupFieldName}&callbackAfterSearch=gridAdvanceSearchCallBackAfterSearch&callbackAfterReset=gridAdvanceSearchCallBackAfterReset&callbackAfterClose=gridAdvanceSearchCallBackAfterClose"
+					width="735" height="120" frameborder="0"></iframe>
+		</apex:outputPanel>
+		</apex:outputPanel>
+	</div>
+
+
+	<div class="overlayBackground jbaraDummyOverLayForm"
+		style="position: absolute; display: none;" align="center">
+		<div class="waitingHolder"
+			style="margin-top: 200px; width: 174px; height: 25px;" align="center">
+			<img src="/img/loading.gif" class="waitingImage"
+				title="Please Wait..." /> <span class="waitingDescription"
+				style="color: #FFFFFF;">Loading...</span>
+		</div>
+	</div>-->
+</apex:page>

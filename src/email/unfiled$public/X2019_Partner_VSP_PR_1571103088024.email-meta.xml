@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>announcing Livongo&apos;s VSP strategic partnership</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2019_Partner_VSP_ PR</name>
+    <style>none</style>
+    <subject>Combating Gaps-in-Care thru VSP partnership</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

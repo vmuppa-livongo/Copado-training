@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Announcing ESI Digital Formulary partnership</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2019_Commercial_Prospect_Opp_ESI_ Partnership_Announcement</name>
+    <style>none</style>
+    <subject>Livongo  Preferred Vendor on Express Scripts Digital Formulary</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

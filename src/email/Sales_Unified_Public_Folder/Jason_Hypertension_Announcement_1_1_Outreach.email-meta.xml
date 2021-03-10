@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Jason Hypertension Announcement 1:1 Outreach</name>
+    <style>freeForm</style>
+    <subject>Exciting News: Livongo Launches Hypertension</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+You may have seen this morning’s announcement about Livongo’s expansion to hypertension. Cardiovascular care is the most important factor in avoiding the long term, expensive complications of diabetes and nearly 65 percent of people using Livongo for Diabetes also have hypertension.
+
+We know that chronic conditions don’t live in silos, and by offering an integrated platform to manage both chronic conditions, we eliminate the need for members to use separate solutions. Livongo offers personalized insights on how they can better manage both chronic conditions, meeting the health needs of the whole person: mentally, physically, and emotionally.
+
+I’d love the chance to share more about Livongo’s overall vision and expansion to hypertension.
+
+Stay Healthy,
+___________________________
+
+JASON MACALEER
+Vice President, Mid-Atlantic
+Livongo
+o: 267.324.5802 m: 610.724.8266
+e: jmacaleer@livongo.com
+a: 1804 Green Street, Philadelphia, PA 19130
+www.livongo.com
+
+The information contained in this transmission is confidential (including any attachments) and contains privileged information. It is intended only for the use of the person(s) named above. If you are not the intended recipient, you are hereby notified that any review, dissemination, distribution or duplication of this communication is strictly prohibited. If you are not the intended recipient, please contact the sender by reply email and destroy all copies of the original message. To reply to our email administrator directly, please send an email to admin@livongo.com.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

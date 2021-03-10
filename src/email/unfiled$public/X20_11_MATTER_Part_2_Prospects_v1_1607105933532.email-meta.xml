@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is Email template #1 to drive awareness and attendance for Part 2 in the MATTER series of 3 webinars for Self-Insured Employers.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>20_11_MATTER Part 2_Prospects_v1</name>
+    <style>none</style>
+    <subject>Webinar: Assessing Digital Healthcare Solutions That Drive Engagement</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

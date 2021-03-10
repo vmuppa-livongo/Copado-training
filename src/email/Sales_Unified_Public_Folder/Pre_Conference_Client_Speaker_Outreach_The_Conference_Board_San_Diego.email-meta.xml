@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Pre Conference Client Speaker Outreach: The Conference Board San Diego</name>
+    <style>freeForm</style>
+    <subject>Congrats on Speaking Opportunity</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+First off, congrats on being selected to present a the Conference Board. We recognize that this is an exciting opportunity and further proof of your thought leadership in the benefits community. [Insert sentence on recent client specific Livongo success]
+
+We would love to see you at Livongo&apos;s session, Proving Financial Impact and Business Model for Chronic Condition Management, on March 27th from 3:00 pm - 3:50 pm. Livongo Chief Commercial Officer, Jim Pursley, will join Magda Rusinowski, PepsiCo Director of US Health Benefits, to discuss Livongo&apos;s clinical outcomes and measurable financial impact.
+
+We also wanted to sit down with you for an on-camera interview while at the conference to discuss your experience with Livongo. Our past testimonial videos have been extremely impactful with prospective clients and we would love to feature your feedback on the program.
+
+Best regards,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

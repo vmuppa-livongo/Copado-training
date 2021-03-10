@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Spring Update template</name>
+    <style>freeForm</style>
+    <subject>Exciting Updates and Great News</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+The last few months have been extremely exciting here at Livongo. We attended major events across the country including SALGBA, the 2018 National Summit, NBGH, and HLTH.
+
+We also announced our partnership with Cambia Health Solutions and our acquisition of Retrofit, a Chicago-based weight loss and diabetes prevention solutions. We now offer Livongo DPP Powered by Retrofit and are excited bring this solution to the market to more fully address the needs of people living with and at risk for chronic conditions.
+
+In order to keep you up to date on the latest Livongo news, I wanted to ask if you would be willing to share your shipping address. As we continue to attend more events and broaden our product offering, we would love to send you packages including informational pieces along with the latest Livongo swag.
+
+Thanks for your consideration and I would love to schedule some time to connect further.
+
+Thanks!
+
+[Name]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

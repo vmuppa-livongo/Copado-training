@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Higi 1.9.2020 Press Release</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_PR_Higi_partnership_announcement</name>
+    <relatedEntityType>MarketingForm</relatedEntityType>
+    <style>none</style>
+    <subject>Livongo Diabetes and Hypertension Solutions Now Available via Higi Smart Stations at Major Retailers</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

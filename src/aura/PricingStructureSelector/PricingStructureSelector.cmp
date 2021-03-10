@@ -1,0 +1,27 @@
+<aura:component implements="lightning:availableForFlowScreens">
+    <aura:attribute name="pricingStructures" type="Pricing_Structure__c[]"/>
+    <aura:attribute name="pricingStructureOptions" type="List"/>
+    <aura:attribute name="placeholder" type="String" default="-- Select Pricing Structure --"/>
+    <aura:attribute name="selectedPricingStructure" type="Pricing_Structure__c"/>
+    <aura:attribute name="validate" type="Aura.Action"/> 
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <lightning:select aura:id="pricingStructureDropdown" onchange="{!c.handleSelect}">
+        <aura:iteration items="{!v.pricingStructureOptions}" var="pricingStructure">
+            <option text="{!pricingStructure.Name}"/>
+        </aura:iteration>
+    </lightning:select>
+    <br/>
+    <aura:if isTrue="{!!empty(v.selectedPricingStructure.Id)}">
+        <div>
+            <ul>
+                <li>List Price              : ${!v.selectedPricingStructure.List_Price__c}</li>
+                <li>Up Front Per Member     : ${!v.selectedPricingStructure.Up_Front_Per_Member__c}</li>
+                <li>At Risk PPPM            : ${!v.selectedPricingStructure.Estimated_At_Risk_PPPM__c}</li>
+                <li>Partner Admin Fees      : ${!v.selectedPricingStructure.Estimated_Partner_Admin_Fees__c}</li>
+                <li>Pricing Stipulations    : {!v.selectedPricingStructure.Pricing_Stipulations__c}</li>
+            </ul>
+        </div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>HSA Contribution</fullName>
+        <default>false</default>
+        <label>HSA Contribution</label>
+    </customValue>
+    <customValue>
+        <fullName>Payroll Inclusion</fullName>
+        <default>false</default>
+        <label>Payroll Inclusion</label>
+    </customValue>
+    <customValue>
+        <fullName>No Copay for all Diabetes Meds</fullName>
+        <default>false</default>
+        <label>No Copay for all Diabetes Meds</label>
+    </customValue>
+    <customValue>
+        <fullName>No Copay for all Generic Meds</fullName>
+        <default>false</default>
+        <label>No Copay for all Generic Meds</label>
+    </customValue>
+    <customValue>
+        <fullName>Reduced Copay for Diabetes Meds</fullName>
+        <default>false</default>
+        <label>Reduced Copay for Diabetes Meds</label>
+    </customValue>
+    <customValue>
+        <fullName>Required Participation for Premium Health Plan</fullName>
+        <default>false</default>
+        <label>Required Participation for Premium Health Plan</label>
+    </customValue>
+    <customValue>
+        <fullName>Wellness Points</fullName>
+        <default>false</default>
+        <label>Wellness Points</label>
+    </customValue>
+    <masterLabel>Client Incentive Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

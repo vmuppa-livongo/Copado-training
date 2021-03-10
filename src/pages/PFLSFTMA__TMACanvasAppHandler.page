@@ -1,0 +1,80 @@
+<apex:page standardController="PFLSFTMA__Rule__c" extensions="PFLSFTMA.CanvasAppHandlerExtension" standardStylesheets="false"
+           showHeader="false" sidebar="false">
+    <script type="text/javascript" src="/canvas/sdk/js/32.0/controller.js"></script>
+    <script type="text/javascript" src="/soap/ajax/32.0/connection.js"></script>
+    <apex:stylesheet value="{!URLFOR($Resource.PFLSFTMA__boostrapsf1, 'css/bootstrap-namespaced.css')}"/>
+    <style type="text/css">
+        #canvas {
+            min-width: 800px;
+            margin: auto;
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+
+        Sfdc.canvas.controller.subscribe({
+            name: 'PFLSFTMA.apiNavigation',
+            onData: function (payload) {
+                if (window.opener.setTouchInfo) {
+                    window.opener.location += window.opener.location.href.indexOf('?') === -1 ? '?touchConfig=1' : '&touchConfig=1';
+                } else {
+                    window.opener.location.reload();
+                }
+                window.close();
+            }
+        });
+
+        window.setInterval(function () {
+            try {
+                Sfdc.canvas.controller.resize({
+                    "width": "100%"
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        }, 1000);
+
+        // add event listener to resize canvas app on screen resize
+        window.addEventListener("resize", function () {
+            try {
+                Sfdc.canvas.controller.resize({
+                    "width": "100%"
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        });
+
+    </script>
+    <div id="canvas">
+        <apex:canvasApp canvasId="canvas" applicationName="{!$Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Canvas_App_Name__c}"
+                        entityFields="Id" parameters=""
+                        maxHeight="infinite" width="100%" maxWidth="100%"
+                        rendered="{!AND($Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Canvas_App_Name__c!=null,$Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Is_Api_User_Set__c,isCanvasAppAdminApproved)}"/>
+        <!--   <apex:canvasApp applicationName="{!$Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Canvas_App_Name__c}"  entityFields="Id" parameters="" width="100%" maxHeight="5000px"/> -->
+    </div>
+    <div class="bootstrap-sf1" style="background-color: #fff;">
+        <apex:outputPanel rendered="{!OR($Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Canvas_App_Name__c==null,NOT($Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Is_Api_User_Set__c),NOT(isCanvasAppAdminApproved))}">
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert alert-danger">
+
+                        <ul>
+                            <apex:outputPanel rendered="{!NOT($Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Is_Api_User_Set__c)}">
+                                <li><strong>API User is not set.</strong></li>
+                            </apex:outputPanel>
+
+                            <apex:outputPanel rendered="{!OR($Setup.PFLSFTMA__TMA_Constants__c.PFLSFTMA__Canvas_App_Name__c==null,NOT(isCanvasAppAdminApproved))}">
+                                <li><strong>Canvas app is not configured properly.</strong></li>
+                            </apex:outputPanel>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </apex:outputPanel>
+    </div>
+
+</apex:page>

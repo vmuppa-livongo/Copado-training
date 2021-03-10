@@ -1,0 +1,873 @@
+<apex:page Controller="JBCXM.SurveyScheduler"  sidebar="false" showHeader="true" title="Survey Scheduler" tabStyle="Survey__tab">
+	<!--<apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-1.7.1.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyJquery,'js/jquery-ui-1.8.18.custom.min.js'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'jqGridLatest/js/i18n/grid.locale-en.js'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'jqGridLatest/js/jquery.jqGrid.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.jqGrid,'js/jqgrid.Custom.Utility.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.SurveyUtil,'SurveyUtil.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.jqGrid, 'css/ui.jqgrid.css'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.CustomJS, 'CustomJS/date.format.js'))}" />
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.SurveyJquery, 'css/redmond/jquery-ui-1.8.18.custom.css'))}"/>
+    
+    <style type="text/css">
+    	.ui-jqgrid tr.jqgrow td {
+		    white-space: normal !important;
+		}		
+        .validationMsgClass{
+        	font-size:20px;
+        	font-weight:bold;
+        	vertical-align: text-top;
+        }
+        .errorMedium {
+        	 display:inline-block;
+        }
+        .jbaraErrorMessageClass{
+        	margin-bottom: 20px;
+        	margin-left: auto;
+		    margin-right: auto;
+		    width: 60%;
+		    padding: 10px;
+        }
+        
+        .requiredExample {
+		    border-left: 3px solid #CC0000;
+		    font-size: 100%;
+		    padding-bottom: 3px;
+		    padding-top: 2px;
+		    vertical-align: 1px;
+		    width: 100%;
+		    margin-right: 1px;
+		}
+		
+		form.form div.form-row {
+		    margin-bottom: 15px;
+		    position: relative;
+		}
+		
+		div.form-field-view input,  p.text input, p.text textarea {
+		    -moz-border-bottom-colors: none;
+		    -moz-border-image: none;
+		    -moz-border-left-colors: none;
+		    -moz-border-right-colors: none;
+		    -moz-border-top-colors: none;
+		    border-color: #AAAAAA #CCCCCC #CCCCCC #AAAAAA;
+		    border-radius: 1px 1px 1px 1px;
+		    border-style: solid;
+		    border-width: 1px;
+		    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1) inset;
+		    font-size: 13px;
+		    padding:2px;
+		}
+		
+		
+		div.form-field-view input:focus, div.form-field-view input.focus, div.form-field-view textarea:focus {
+		    border: 1px solid #5695DB;
+		    box-shadow: 0 1px 2px #DDDDDD inset, 0 0 5px #5695DB;
+		    outline: medium none;
+		}
+		.form-field-view{
+		  margin-bottom:3px;
+		}
+		
+		#containerForCreateNEdit {
+			display: block;
+			width: 80%;
+			max-width: 80%;
+			position:relative;
+			left:10%;
+		}
+		
+		#containerForCreateNEdit label {
+		    color: #444;
+		    font-size: 13px;
+		    line-height: 25px;
+		    text-shadow: 0 1px 0 #FFFFFF;
+		    width: 110px;
+		}
+		
+		.surveyParticipantResponsePreview {
+			background:url("/img/icon/contracts16.png") no-repeat;
+		    background-position:center;	
+		    padding:10px;
+		    cursor:pointer;		     
+		}
+		
+		
+		
+		a.surveyParticipantResponsePreviewLInk {
+			text-decoration:none;
+		}
+	</style> 
+	<apex:sectionHeader title="Survey Scheduler" subtitle="{!surveyObj.Title__c}" />
+	<a href="#" onClick="history.go(-1);return false;" style="text-decoration:none;">&nbsp;«&nbsp;Back</a>	       
+	<apex:outputPanel style="text-align:left;margin-right:auto;margin-left:auto;" rendered="{!!validSurvey}">
+		<div align="center" class="jbaraErrorMessageClass ui-state-error ui-corner-all" style="margin-top:20px;">
+			<span class="errorMedium ">&nbsp;</span> 
+			<span class="validationMsgClass"> Invalid Survey Id</span>
+		</div>
+	</apex:outputPanel>
+	<script>
+			var userLocaleDateFormatMap,jqGridDateFormat,jqGridDateTimeFormat;
+			userLocaleDateFormatMap =eval({!(userLocaleDateFormatMap)});
+			jqGridDateFormat 		=JBARAjqGridDateFormat(userLocaleDateFormatMap);
+			jqGridDateTimeFormat 	=JBARAjqGridDateTimeFormat(userLocaleDateFormatMap);
+	</script>
+	<apex:outputPanel rendered="{!validSurvey}">
+		<apex:form >
+		<script type="text/javascript">
+			var j$ = jQuery.noConflict();
+	        j$.jgrid.no_legacy_api = true;
+	        j$.jgrid.useJSON = true;
+			var surveyParticipantListToSchedule, surveyParticipantsListBySchedule, surveyDistributionScheduleListBySurvey, selSurveyId;
+			var surveyParticipantPropertiesObjList, surveyParticipantPropertiesObj, surveyDistributionSchedulePropertiesObjList, surveyDistributionSchedulePropertiesObj;
+			var distStatus, lastActivity, lastActivityTime, cust_link, accName;
+			var hideCreateButton, numOfParticipantsSelected;
+			var selSurveyStatus;
+			
+			function jbaraDateInputControl(thisPointer) {
+		     	var obj=j$("body").find(".datePicker")[0];
+		      	j$("body").append(obj);
+		      	j$("#datePicker").css({
+		            'zIndex': '15001'
+		        });
+		      	DatePicker.pickDate(true, thisPointer.id, false);
+		    }
+		     
+		     
+		     /**
+			*Javascript Object to store the survey paricipant details properties.
+			*/ 
+			function SurveyParticipantPropertiesClass(data) {
+				this.Id									= data.Id
+			    this.Customer_link          			= data.Customer_link;
+			    this.Participant			         	= data.Participant;
+			    this.Email                 				= data.Email;
+			    this.Role					        	= data.Role;
+			    this.Distribution_status        	    = data.Distribution_status;
+			    this.Distribution_time                	= data.Distribution_time;
+			    this.Last_activity                		= data.Last_activity;
+			    this.Last_activity_time                 = data.Last_activity_time;
+			    this.User_response_preview              = data.User_response_preview;
+			}			
+			
+			
+			/**
+			*This function returns the survey paricipant details list.
+			*/ 
+			function getSurveyParticipantDetailsDataToSchedule(rawData) {
+				surveyParticipantPropertiesObjList = new Array();
+				for(var p = 0; p < rawData.length; p++) {				
+					cust_link = (rawData[p].Account__r == null) ? '' : ('<a title=\''+ (rawData[p].Account__r.Name).replace(/'/g, "&rsquo;") +'\' href=\'CustomerSuccess360?cid='+ rawData[p].Account__c +'\' target=\'_top\'>'+ (rawData[p].Account__r.Name) +'</a>');				
+					surveyParticipantPropertiesObj = new SurveyParticipantPropertiesClass({
+						Id						: rawData[p].Id,
+						Customer_link			: cust_link,
+						Participant				: ((rawData[p].DisplayName__c != null) ? rawData[p].DisplayName__c : ''),
+						Email					: ((rawData[p].Email__c != null) ? rawData[p].Email__c : ((rawData[p].SentEmail__c != null) ? rawData[p].SentEmail__c : '')),
+						Role					: ((rawData[p].Role__c != null) ? rawData[p].Role__c : 'User') 				
+					});
+					surveyParticipantPropertiesObjList.push(surveyParticipantPropertiesObj); 								 
+				}
+				return surveyParticipantPropertiesObjList;
+			}
+	        
+	        /***
+	        *This function renders the survey disrtibution list grid.
+	        */
+		    function bindSurveyParticipantListGrid(data, container) {
+		    	var selSchBatchSize = parseInt(j$.trim(j$(".scheduleBatchSize").val()));
+		    	var rowListArray = new Array();
+		    	rowListArray.push(parseInt(j$.trim(j$(".scheduleBatchSize").val())));
+		        var listData = data;
+		        var arrCols = getParticipantListColumnsToSchedule();
+		        var screenWidth = screen.width - 60;
+		        var gridParam = {
+		            'Id': ''+container+'_id',
+		            'colnames': arrCols[0],
+		            'colmodel': arrCols[1],
+		            'data': listData,
+		            'rowNum': selSchBatchSize,
+		            'rowList': rowListArray,
+		            'pagerId': 'plist_'+container+'',
+		            'sort': {
+		                'name': arrCols[2].name,
+		                'order': arrCols[2].order
+		            },
+		            'width': ((screenWidth*0.7)),
+		            'height': '250px',
+		            'Multiselect':true,
+		            'gridComplete':multiSelectionHandlingToSchedule,
+		            'userLocaleDateFormatMap' : userLocaleDateFormatMap
+		        }
+		        
+		        j$(".AjaxLoadingButtonForshowParticipantsToSchedule").hide(); //to hide ajax loading image.
+		        
+		        j$("#"+container+"_id").html("");
+		        buildjqGrid(container, gridParam);
+		        
+		        j$(".ui-pg-div").hide();
+		        j$("#"+container+"_id").find("td").css({
+		            "overflow": "hidden",
+		            "white-space": "pre"
+		        });
+		                
+		        j$("#gbox_"+container+"_id").addClass("ui-corner-all ui-corner-bottom ui-corner-right");
+		        
+		        j$(".showPartcipantsToSchedule, .scheduleCreateActionbtns").removeAttr("disabled"); //To Enable the show participant button. 
+		        
+		    }
+	    
+		    /***
+	        *This function returns the column model for survey distribution grid.
+	        */
+		    function getParticipantListColumnsToSchedule() {
+		        var colArray = new Array();
+		        var colNames, colModel;
+		        colNames=['Id', 'Account', 'Participant', 'Email', 'Role']; 
+		        colModel=[
+		                  {name:'Id', index:'Id', hidden:true},
+		                  {name:'Customer_link', index:'Customer_link', width:150, searchoptions :{sopt:['cn']}},
+		                  {name:'Participant', index:'Participant', width:120, searchoptions :{sopt:['cn']}},
+		                  {name:'Email', index:'Email', width:180, searchoptions :{sopt:['cn']}},
+		                  {name:'Role', index:'Role', width:90, searchoptions :{sopt:['cn']}}
+		        ];
+		        sort={'name':'Customer_link','order':'desc'};        
+		        colArray.push(colNames);
+		        colArray.push(colModel);
+		        colArray.push(sort);
+		        return colArray;
+		        
+		    }
+		    function gsEncodeHtml(inValue) {
+				if(inValue === null || inValue === undefined) {
+					return '';
+				}
+				else if(typeof inValue === 'string') {
+					inValue = inValue.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+				} 
+				return inValue;
+			}
+			
+			function gsRemoveNameSpace(inValue) {
+				return inValue.replace(/JBCXM__/g, "");
+			}
+		    /***
+		    *below code to show the participants list by Schedule job.
+		    */
+		    /**
+			*This function returns the survey paricipant details list.
+			*/ 
+			function getSurveyParticipantDetailsDataBySchedule(rawData) {
+				surveyParticipantPropertiesObjList = new Array();
+				for(var p = 0; p < rawData.length; p++) {
+					distStatus = (rawData[p].Scheduled__c && rawData[p].Sent__c) ? ((rawData[p].EmailSentCount__c > 1) ? 'Email resent' :  'Email sent') : (rawData[p].Scheduled__c && !rawData[p].Sent__c) ? 'Scheduled' : 
+										(!rawData[p].Scheduled__c && rawData[p].Sent__c) ? ((rawData[p].EmailSentCount__c > 1) ? 'Email resent' :  'Email sent') : 'Not contacted'; //we have to think for Email resent.
+					lastActivity 	 = 'NA'; 
+					lastActivityTime = null; 
+					if(rawData[p].Opened__c) { 
+						lastActivity 	 = 'Email opened';
+						lastActivityTime = (rawData[p].EmailOpenDate__c != null) ? JBARAAddOffSetTime(rawData[p].EmailOpenDate__c,userLocaleDateFormatMap) : rawData[p].EmailOpenDate__c; 
+					}
+					if(rawData[p].SurveyOpened__c) { 
+						lastActivity 	 = 'Survey page opened'; 
+						lastActivityTime = (rawData[p].SurveyOpenedDate__c != null) ? JBARAAddOffSetTime(rawData[p].SurveyOpenedDate__c,userLocaleDateFormatMap) : rawData[p].SurveyOpenedDate__c; 
+					}
+					if(rawData[p].Responsed__c) {
+						lastActivity 	 = 'Responded'; 
+						lastActivityTime = (rawData[p].ResponseDate__c != null) ? JBARAAddOffSetTime(rawData[p].ResponseDate__c,userLocaleDateFormatMap) : rawData[p].ResponseDate__c; 
+					}
+					cust_link = (rawData[p].Account__r == null) ? '' : ('<a title=\''+ (rawData[p].Account__r.Name).replace(/'/g, "&rsquo;") +'\' href=\'CustomerSuccess360?cid='+ rawData[p].Account__c +'\' target=\'_top\'>'+ (rawData[p].Account__r.Name) +'</a>');				
+					surveyParticipantPropertiesObj = new SurveyParticipantPropertiesClass({
+						Id						: rawData[p].Id,
+						Customer_link			: cust_link,
+						Participant				: ((rawData[p].DisplayName__c != null) ? rawData[p].DisplayName__c : ''),
+						Email					: ((rawData[p].Email__c != null) ? rawData[p].Email__c : ((rawData[p].SentEmail__c != null) ? rawData[p].SentEmail__c : '')),
+						Role					: ((rawData[p].Role__c != null) ? rawData[p].Role__c : 'User'),
+						Distribution_status		: distStatus,
+						Distribution_time		: (rawData[p].EmailSentDate__c != null) ? JBARAAddOffSetTime(rawData[p].EmailSentDate__c,userLocaleDateFormatMap) : rawData[p].EmailSentDate__c,
+						Last_activity			: lastActivity,
+						Last_activity_time		: lastActivityTime,
+						User_response_preview	: (rawData[p].Responsed__c) ? "<a href=SurveyResponsePreview?surveyId="+selSurveyId+"&participantId="+rawData[p].Id+" title='Preview' class='surveyParticipantResponsePreviewLInk'><span class='surveyParticipantResponsePreview'>&nbsp;</span></a>" : "NA" 				
+					});
+					surveyParticipantPropertiesObjList.push(surveyParticipantPropertiesObj); 								 
+				}
+				return surveyParticipantPropertiesObjList;
+			}
+			
+			
+			/***
+	        *This function renders the survey disrtibution list grid.
+	        */
+		    function bindSurveyParticipantListGridBySchedule(data, container) {
+		        var listData = data;
+		        var arrCols = getSurveyParticipantListColumnsBySchedule();
+		        var screenWidth = screen.width - 60;
+		        var gridParam = {
+		            'Id': ''+container+'_id',
+		            'colnames': arrCols[0],
+		            'colmodel': arrCols[1],
+		            'data': listData,
+		            'pagerId': 'plist_'+container+'',
+		            'sort': {
+		                'name': arrCols[2].name,
+		                'order': arrCols[2].order
+		            },
+		            'width': screenWidth-20,
+		            'height': '300px',
+		            'Multiselect':true,
+		            'gridComplete':multiSelectionHandlingBySchedule,
+		            'userLocaleDateFormatMap' : userLocaleDateFormatMap
+		        }
+		        j$(".AjaxLoadingButtonForshowParticipantsBySchedule").hide();
+		        j$(".btnToDeleteParticipantsFromSchedule").show();
+		        
+		        j$("#"+container+"_id").html("");
+		        buildjqGrid(container, gridParam);
+		        
+		        j$(".ui-pg-div").hide();
+		        j$("#"+container+"_id").find("td").css({
+		            "overflow": "hidden",
+		            "white-space": "pre"
+		        });
+		                
+		        j$("#gbox_"+container+"_id").addClass("ui-corner-all ui-corner-bottom ui-corner-right");      
+		        
+		    }
+	    
+		    /***
+	        *This function returns the column model for survey distribution grid.
+	        */
+		    function getSurveyParticipantListColumnsBySchedule() {
+		        var colArray = new Array();
+		        var colNames, colModel;
+		        colNames=['Id', 'Account', 'Participant', 'Email', 'Role', 'Distribution Status', 'Distribution Time', 'Last Activity', 'Last Activity Time']; 
+		        colModel=[
+		                  {name:'Id', index:'Id', hidden:true},
+		                  {name:'Customer_link', index:'Customer_link', width:150, searchoptions :{sopt:['cn']}},
+		                  {name:'Participant', index:'Participant', width:120, searchoptions :{sopt:['cn']}},
+		                  {name:'Email', index:'Email', width:180, searchoptions :{sopt:['cn']}},
+		                  {name:'Role', index:'Role', width:90, searchoptions :{sopt:['cn']}},
+		                  {name:'Distribution_status', index:'Distribution_status', width:100, searchoptions :{sopt:['cn']}},
+		                  {name:'Distribution_time', index:'Distribution_time', width:135, sorttype:'datetime',datefmt:"ISO8601Long", "formatter":"date","formatoptions":{"srcformat": "ISO8601Long", "newformat":jqGridDateTimeFormat},searchoptions :{sopt:['cn']}},
+		                  {name:'Last_activity', index:'Last_activity', width:100, searchoptions :{sopt:['cn']}},	                  
+		                  {name:'Last_activity_time', index:'Last_activity_time', width:135, sorttype:'datetime', datefmt:"ISO8601Long", "formatter":"date","formatoptions":{"srcformat": "ISO8601Long", "newformat":jqGridDateTimeFormat},searchoptions :{sopt:['cn']}}	                  
+		        ];
+		        var pushObjForNonAnony = {name:'User_response_preview', index:'User_response_preview', width:70, sortable: false, search:false, resizable:false, align:'center'};
+		        if(isAnonyFlag != 'true') {
+		        	colNames.push('View');	
+		        	colModel.push(pushObjForNonAnony);
+		        }
+		        sort={'name':'Customer_link','order':'desc'};        
+		        colArray.push(colNames);
+		        colArray.push(colModel);
+		        colArray.push(sort);
+		        return colArray;
+		        
+		    }	
+			     
+			/**
+			*Javascript Object to store the survey paricipant details properties.
+			*/ 
+			function SurveyDistributionSchedulePropertiesClass(data) {
+				this.Id									= data.Id
+			    this.Name			          			= data.Name;
+			    this.ScheduledDate						= data.ScheduledDate
+			    this.BatchSize			         		= data.BatchSize;			    
+			    this.ScheduleParticipantsCount          = data.ScheduleParticipantsCount;
+			    this.EmailSent					        = data.EmailSent;
+			    this.EmailFailed	        	    	= data.EmailFailed;
+			    this.Status               			 	= data.Status;
+			    this.Description						= data.Description;
+			    this.Action		                		= data.Action;
+			}
+			
+			/**
+			*This function returns the survey distribution schedule details.
+			*/ 
+			function getSurveyDistributionSchedulesListBySurvey(rawData) {
+				surveyDistributionSchedulePropertiesObjList = new Array();
+				for(var p = 0; p < rawData.length; p++) {
+								
+					surveyDistributionSchedulePropertiesObj = new SurveyDistributionSchedulePropertiesClass({
+						Id							: rawData[p].Id,
+						Name						: rawData[p].Name,
+						ScheduledDate				: (rawData[p].StartDate__c != null) ? JBARAAddOffSetTime(rawData[p].StartDate__c,userLocaleDateFormatMap) : rawData[p].StartDate__c,
+						BatchSize					: rawData[p].EmailBatchSize__c,
+						ScheduleParticipantsCount	: rawData[p].PartcipantCount__c,
+						EmailSent					: (rawData[p].ProcessedCount__c != null) ? ((rawData[p].EmailFailCount__c != null) ? (rawData[p].ProcessedCount__c-rawData[p].EmailFailCount__c) : rawData[p].ProcessedCount__c) : null,
+						EmailFailed					: rawData[p].EmailFailCount__c,
+						Status						: rawData[p].Status__c,
+						Description					: rawData[p].Description__c,
+						Action						: (rawData[p].Status__c == 'Scheduled') ? ('<a href=\'#\' onclick=\'editScheduleClicked(\"'+ rawData[p].Id +'\"); return false;\'>Edit</a>&nbsp;&nbsp;<a href=\'#\' onclick=\'confirmScheduleDelete(\"'+ rawData[p].Id +'\"); return false;\'>Delete</a>') : ('<a href=\'#\' onclick=\'confirmScheduleDelete(\"'+ rawData[p].Id +'\"); return false;\'>Delete</a>')			
+					});
+					surveyDistributionSchedulePropertiesObjList.push(surveyDistributionSchedulePropertiesObj); 								 
+				}
+				return surveyDistributionSchedulePropertiesObjList;
+			}
+			
+			/***
+	        *This function returns the column model for survey distribution grid.
+	        */
+		    function getSurveyDistributionScheduleListColumnsBySurvey() {
+		        var colArray = new Array();
+		        var colNames, colModel;
+		        colNames=['Id', 'Name', 'Scheduled Time ', 'Batch Size', 'Scheduled Count', 'Email Sent', 'Email Failed', 'Status', 'Description', 'Action']; 
+		        colModel=[
+		                  {name:'Id', index:'Id', hidden:true},
+		                  {name:'Name', index:'Name', width:150, searchoptions :{sopt:['cn']}},
+		                  {name:'ScheduledDate', index:'ScheduledDate', width:135, sorttype:'datetime', datefmt:"ISO8601Long", "formatter":"date","formatoptions":{"srcformat": "ISO8601Long", "newformat":jqGridDateTimeFormat},searchoptions :{sopt:['cn']}},
+		                  {name:'BatchSize',index:'BatchSize',align:'right',sorttype:'number',width:90,searchoptions :{sopt:['cn']}, formatoptions:{thousandsSeparator: ",", decimalPlaces: 0}},
+		                  {name:'ScheduleParticipantsCount',index:'ScheduleParticipantsCount',align:'right',sorttype:'number',width:90,searchoptions :{sopt:['cn']}, formatoptions:{thousandsSeparator: ",", decimalPlaces: 0}},
+		                  {name:'EmailSent',index:'EmailSent',align:'right',sorttype:'number',width:90,searchoptions :{sopt:['cn']}, formatoptions:{thousandsSeparator: ",", decimalPlaces: 0}},
+		                  {name:'EmailFailed',index:'EmailFailed',align:'right',sorttype:'number',width:90,searchoptions :{sopt:['cn']}, formatoptions:{thousandsSeparator: ",", decimalPlaces: 0}},
+		                  {name:'Status', index:'Status', width:120, searchoptions :{sopt:['cn']}},
+		                  {name:'Description', index:'Description', width:120, searchoptions :{sopt:['cn']}},
+		                  {name:'Action', align:"center", width:105, sortable:false, search:false, resizable:false}		                  
+		        ];
+		        sort={'name':'ScheduledDate','order':'desc'};        
+		        colArray.push(colNames);
+		        colArray.push(colModel);
+		        colArray.push(sort);
+		        return colArray;		        
+		    }
+		    
+		    /***
+	        *This function renders the survey disrtibution list grid.
+	        */
+		    function bindSurveyDistributionScheduleListGridBySurvey(data, container) {
+		        var listData = data;
+		        var arrCols = getSurveyDistributionScheduleListColumnsBySurvey();
+		        var screenWidth = screen.width - 60;
+		        var gridParam = {
+		            'Id': ''+container+'_id',
+		            'colnames': arrCols[0],
+		            'colmodel': arrCols[1],
+		            'data': listData,
+		            'pagerId': 'plist_'+container+'',
+		            'sort': {
+		                'name': arrCols[2].name,
+		                'order': arrCols[2].order
+		            },
+		            'width': screenWidth-20,
+		            'height': '200px'
+		        }
+		        		        
+		        j$("#"+container+"_id").html("");
+		        buildjqGrid(container, gridParam);
+		        
+		        j$(".ui-pg-div").hide();
+		        j$("#"+container+"_id").find("td").css({
+		            "overflow": "hidden",
+		            "white-space": "pre"
+		        });
+		        
+		        j$("#"+container+"_id").setGridParam({
+	              'onSelectRow': function(id) {
+	                  var scheduledJobId = j$("#"+container+"_id").jqGrid('getCell', id, 'Id');
+	                  j$("#containerToShowParticipantsListBySchedule").html('');
+	                  j$(".AjaxLoadingButtonForshowParticipantsBySchedule span.waitingDescription").text("Loading...");
+	                  j$(".AjaxLoadingButtonForshowParticipantsBySchedule").show();
+	                  j$(".btnToDeleteParticipantsFromSchedule").hide();
+	                  actionShowSurveyParticipantsBySchedule(scheduledJobId);
+	              }
+	          	}); 
+		                
+		        j$("#gbox_"+container+"_id").addClass("ui-corner-all ui-corner-bottom ui-corner-right");      
+		        
+		    }
+		    
+		    
+			     
+			function showParticipantsToSchedule() {
+				j$(".showPartcipantsToSchedule, .scheduleCreateActionbtns").attr("disabled", true);
+				
+				if(parseInt(j$.trim(j$(".scheduleBatchSize").val())) >=1) {
+					j$("#containerToLoadParticipantsToSchedule").html('');
+					j$(".AjaxLoadingButtonForshowParticipantsToSchedule").show();
+					showSurveyParticipantsToSchedule();
+				}
+				else {
+					alert("Batch size should be greater than 0.");
+					j$(".showPartcipantsToSchedule, .scheduleCreateActionbtns").removeAttr("disabled");
+				}
+				
+			}
+			
+			/***
+			*After clicked on Create
+			*/     
+		    
+			/**
+	    	*function to delete the selected participants list.
+	    	*/
+		    function createScheduleOnSelectedParticipants() {
+		    	j$(".scheduleCreateActionbtns, .showPartcipantsToSchedule").attr("disabled", true); 
+		    	if( "{!(hasExternalService)}" == "true" )  {
+		    		actionToCreateSchedule();
+		    		return;		    	
+		    	}
+		    	var selectedparticipantsList = getSelectedSurveyParticipantList("Scheduling...", "containerToLoadParticipantsToSchedule_id");
+		    	if(selectedparticipantsList.length > 0) {
+		    		if(isNaN(j$.trim(j$(".scheduleBatchSize").val())) || (j$.trim(j$(".scheduleBatchSize").val()).length == 0) || (((j$.trim(j$(".scheduleBatchSize").val())).split(".")).length > 1) ) {
+		    			alert("Batch size should be an integer between 0 and 750");
+		    			j$(".scheduleCreateActionbtns, .showPartcipantsToSchedule").removeAttr("disabled");
+		    		}
+		    		else {
+		    			if(numOfParticipantsSelected <= parseInt(j$.trim(j$(".scheduleBatchSize").val()))) {
+			    			j$(".SelectedParticipantsListToSchedule").val(selectedparticipantsList);
+			    			actionToCreateSchedule();
+			    		}
+			    		else {
+			    			alert('You cannot add more than '+j$(".scheduleBatchSize").val()+''+((parseInt(j$.trim(j$(".scheduleBatchSize").val())) > 1) ? " participants" : "participant")+'');
+			    			j$(".scheduleCreateActionbtns, .showPartcipantsToSchedule").removeAttr("disabled");
+			    		}
+		    		}
+		    	}
+		    	else {
+		    		alert("Select participants to schedule");
+		    		j$(".scheduleCreateActionbtns, .showPartcipantsToSchedule").removeAttr("disabled");
+		    	}
+		    }    
+	        
+	        /**
+	    	*This function gets called when click on edit.
+	    	*/
+	        function editScheduleClicked(scheduleId) {
+	        	actionEditClicked(scheduleId);
+	        }
+	        
+	        /**
+	        *This function is used to reset the schedule datetime and some properties like Batch size, Name.....
+	        */
+	        function updateSchedule() {
+	        	actionUpdateClicked()
+	        } 
+	        
+	        /**
+	    	*This function gets called when click on delete.
+	    	*/
+	        function confirmScheduleDelete(scheduleId) {
+	        	if (confirm("Are you sure you want to delete?")) {
+	        		j$(".AjaxLoadingButtonWhileDeletingShedule").show();
+	        		actionDeleteClicked(scheduleId);
+	        	}	
+	        }
+	        
+	        /**
+	    	*This function removes the participants from the schedule.
+	    	*/
+	        function removeParticipantsFormSchedule() {
+	        	var selectedparticipantsList = getSelectedSurveyParticipantList("Removing...", "containerToShowParticipantsListBySchedule_id");
+		    	if(selectedparticipantsList.length > 0) {
+		    		var dummyPartMsg = (numOfParticipantsSelected == 1) ? 'participant' : 'participants'; 	
+		    	    if (confirm("Are you sure you want to remove the "+dummyPartMsg+" from the schedule")) {
+		    	   		j$(".AjaxLoadingButtonForshowParticipantsBySchedule span.waitingDescription").text("Removing...");
+						j$(".AjaxLoadingButtonForshowParticipantsBySchedule").show(); 
+			    		j$(".SelectedParticipantsListToSchedule").val(selectedparticipantsList);
+			    		actionToRemovePartcipantsFromSchedule();	
+		    	    }	
+		    	}
+		    	else {
+		    		alert("Select participants to remove from schedule");
+		    	}
+	        }
+	    
+		    /**
+	    	*function to get the selected participant list.
+	    	*/
+		    function getSelectedSurveyParticipantList(operation, gridId) {
+		    	var selectedRowList = jQuery("#"+gridId+"").jqGrid('getGridParam','selarrrow');
+		    	var selparticipantsList = "";
+		    	numOfParticipantsSelected = selectedRowList.length;
+		    	if(selectedRowList.length > 0) {
+					//j$(".AjaxLoadingButtonForProcessingSurveyDistribution span.waitingDescription").text(operation);
+					//j$(".AjaxLoadingButtonForProcessingSurveyDistribution").show();     	
+		    		for(var i=0; i<selectedRowList.length; i++) {
+		    			selparticipantsList += jQuery("#"+gridId+"").jqGrid('getCell', selectedRowList[i], 'Id')+((i == selectedRowList.length-1) ?  '' : ',');
+		    		}	    		
+		    	}
+		    	return selparticipantsList;
+		    }
+		    
+		    function createSurveyShedule() {
+		    	if(selSurveyStatus != "Publish") {
+		    		alert("This survey is not published yet. You need to publish the survey for scheduling");
+		    		return false;
+		    	}
+		    	hideCreateButton = true;
+		    	actionToCreateSurveyShedule(); 
+		    }
+		    
+		    function loadParticipantsByScheduleType() {
+		    	if(j$.trim(j$("#containerToLoadParticipantsToSchedule").html()).length > 0) {
+		    		j$("#containerToLoadParticipantsToSchedule").html('');
+					j$(".AjaxLoadingButtonForshowParticipantsToSchedule").show();
+					showSurveyParticipantsToSchedule();
+		    	}
+		    }
+		    
+		    /**
+		    *The below two functions is used to handle the multi selection check boxes.
+		    **/
+		    function multiSelectionHandlingBySchedule() {
+				j$("#containerToShowParticipantsListBySchedule_id").find(".cbox").bind("click",function(){
+					if(j$("#containerToShowParticipantsListBySchedule_id").find(".cbox:checked").length != j$("#containerToShowParticipantsListBySchedule_id").find(".cbox").length){
+						j$("#cb_containerToShowParticipantsListBySchedule_id").removeAttr("checked");
+					}
+					else {
+						j$("#cb_containerToShowParticipantsListBySchedule_id").attr("checked","checked");
+					}
+					
+				});
+			}
+			
+			function multiSelectionHandlingToSchedule() {
+				j$("#containerToLoadParticipantsToSchedule_id").find(".cbox").bind("click",function(){
+					if(j$("#containerToLoadParticipantsToSchedule_id").find(".cbox:checked").length != j$("#containerToLoadParticipantsToSchedule_id").find(".cbox").length){
+						j$("#cb_containerToLoadParticipantsToSchedule_id").removeAttr("checked");
+					}
+					else {
+						j$("#cb_containerToLoadParticipantsToSchedule_id").attr("checked","checked");
+					}
+					
+				});
+			}
+		       	   
+		</script>-->
+		<!-- To Show the scheduled List -->
+		<!--<apex:actionFunction name="actionToCreateSurveyShedule" action="{!createSchedule}" reRender="dummyPanelToPerformScheduleOperations" />
+		<apex:actionFunction name="showSurveyParticipantsToSchedule" action="{!showSurveyParticipantsToSchedule}" reRender="dummyPanelToshowParticipantsToSchedule" />
+		<apex:actionFunction name="actionShowSurveyParticipantsBySchedule" action="{!showSurveyParticipantsBySchedule}" reRender="dummyPanelToshowParticipantsBySchedule">
+            <apex:param name="schId" value="" />
+        </apex:actionFunction>       
+        <apex:actionFunction name="actionDeleteClicked" action="{!deleteSchedule}" reRender="dummyPanelToPerformScheduleOperations">
+            <apex:param name="schJobIdToDelete" value="" />
+        </apex:actionFunction>
+        <apex:actionFunction name="actionEditClicked" action="{!loadScheduleById}" reRender="dummyPanelToPerformScheduleOperations">
+            <apex:param name="schJobIdToEdit" value="" />
+        </apex:actionFunction>
+        <apex:actionFunction name="actionToCreateSchedule" action="{!saveSchedule}" reRender="dummyPanelToPerformScheduleOperations" />
+        <apex:actionFunction name="cancelClicked" action="{!resetSchedule}" reRender="dummyPanelToPerformScheduleOperations" />
+        <apex:actionFunction name="actionUpdateClicked" action="{!updateSchedule}" reRender="dummyPanelToPerformScheduleOperations" />
+        <apex:actionFunction name="actionToRemovePartcipantsFromSchedule" action="{!deleteParticipantsFromSchedule}" reRender="dummyPanelToshowParticipantsBySchedule" />        
+        
+        <apex:inputTextarea id="SelectedParticipantsListToSchedule" value="{!participantIdsToSchedule}" styleClass="SelectedParticipantsListToSchedule" style="display:none"/>
+        
+		<apex:outputPanel Id="dummyPanelToPerformScheduleOperations">-->
+			<!-- To create a new schedule or edit an existing schedule -->
+			<!--<apex:outputPanel rendered="{!!showScheduleList}">
+				
+				<div id="containerForCreateNEdit" align="center" >
+					<apex:pageMessages rendered="{!showMsg}"/>
+					<table>
+					<caption align="top" style="font-weight:bold; font-size:15px;">{!HTMLENCODE(scheduleOperation)}</caption>
+						<tr>
+							<td align="right">
+								<div class="form-field-view form-row">
+					            	<label for="scheduleName">Schedule Name:</label>
+				                </div>
+			                </td>
+			                <td align="left">
+				                <div class="form-field-view form-row">
+				                	&nbsp;&nbsp;<span class="requiredExample"></span>
+					                <apex:inputText value="{!schedulerBussObj.schName}" maxlength="60"  size="60" styleClass="scheduleProperties scheduleName" />
+					            </div>    
+			                </td>
+			            </tr>
+			            <tr>
+							<td align="right">
+								<div class="form-field-view form-row">
+					            	<label for="scheduleName">Schedule Type:</label>
+				                </div>
+			                </td>
+			                <td align="left">
+				                <div class="form-field-view form-row">
+				                	&nbsp;&nbsp;<span class="requiredExample"></span>
+					                <apex:selectList value="{!scheduleType}" size="1" StyleClass="jbaraDummyScheduleTypeSelectControl" onChange="loadParticipantsByScheduleType()">
+					                    <apex:selectOptions value="{!ScheduleTypeOptionsList}"/>
+					                </apex:selectList>
+					            </div>    
+			                </td>
+			            </tr>
+		                <tr>
+			                <td align="right">
+			                	<div class="form-field-view form-row form-row-inline schedule-StartDate">
+					               	<label for="scheduleStartDate" class="schedule-StartDateLbl" >Schedule Date:</label>
+			               		</div>
+			                </td>	                
+			                <td align="left">
+				                <div class="form-field-view form-row form-row-inline schedule-StartDate">
+					               	&nbsp;&nbsp;<span class="requiredExample"></span>
+					               	<apex:inputText value="{!schedulerBussObj.schDate}" maxlength="10" size="11" id="scheduleDate" onfocus="jbaraDateInputControl(this)" styleClass="scheduleProperties scheduleStartDateDate"/>
+				                </div>
+			                </td>
+		                </tr>
+		                <tr class ="fromAddressRow">
+							<td align="right">
+								<div class="form-field-view form-row">
+					            	<label for="fromEmailAddress">From Address:</label>
+				                </div>
+			                </td>
+			                <td align="left">
+				                <div class="form-field-view form-row">
+				                	&nbsp;&nbsp;<span class="requiredExample"></span>
+					                <apex:selectList value="{!fromAddress}" size="1" StyleClass="fromAddress" >
+					                    <apex:selectOptions value="{!fromEmailAddresses}"/>
+					                </apex:selectList>
+					            </div>    
+			                </td>
+			            </tr>
+		              	<tr>
+			              	<td align="right">
+				              	<div class="form-field-view form-row">
+					            	<label for="scheduleTime">Schedule Time:</label>
+				                </div>
+			              	</td>	              	
+			              	
+			                <td align="left">
+				                <div class="form-field-view form-row">
+				                	&nbsp;&nbsp;<span class="requiredExample"></span>
+					                <apex:selectList value="{!schedulerBussObj.schHours}" size="1" StyleClass="jbaraDummyScheduleHoursSelectControl">
+					                    <apex:selectOptions value="{!ScheduleHoursOptionsList}"/>
+					                </apex:selectList><span style="font-style: italic;">Hours</span> &nbsp;
+					                <apex:selectList value="{!schedulerBussObj.schMinutes}" size="1" StyleClass="jbaraDummyScheduleMinutesSelectControl">
+					                    <apex:selectOptions value="{!ScheduleMinutesOptionsList}"/>
+					                </apex:selectList><span style="font-style: italic;">Minutes</span> &nbsp;<apex:outputtext value="({!userLocaleTimeZone})" />
+					                
+				                </div>
+			                </td>
+		                </tr>
+		                <tr class="scheduleBatch">
+			                <td align="right">
+			                	<div class="form-field-view form-row">
+					            	<label for="scheduleBatchSize">Schedule BatchSize:</label>
+				                </div>
+			                </td>
+				                
+			                <td align="left">
+			                	<div class="form-field-view form-row">
+					                &nbsp;&nbsp;<span class="requiredExample"></span>
+					                <apex:inputText value="{!schedulerBussObj.schBatchSize}" maxlength="10"  size="10" styleClass="scheduleProperties scheduleBatchSize" />
+				                </div>
+			                </td>
+		                </tr>
+	                </table>              
+              	  <apex:outputpanel rendered="{!createScheduler}">	
+		              <input type="button" value="Show Participants" class="showPartcipantsToSchedule" onclick="showParticipantsToSchedule();return false;" width="70px" style="margin:5px 0px 5px 0px;"/>
+		              <input type="button" class="scheduleCreateActionbtns" value="Create" onclick="createScheduleOnSelectedParticipants();return false;" width="70px" style="margin:5px 0px 5px 0px;" />
+		              <input type="button" class="scheduleCreateActionbtns123" value="Cancel" onclick="cancelClicked();return false;" width="70px" style="margin:5px 0px 5px 0px;" />
+		              <div class="AjaxLoadingButtonForshowParticipantsToSchedule" align="center" style="margin:50px 0px 50px 0px; display:none;">
+		              	<div class="waitingHolder" style="width: 254px; top: 25.8px;"><img src="/img/loading.gif" class="waitingImage" title="Please Wait..." />
+		                 		<br/><span class="waitingDescription">Loading...</span>
+		               	</div> 
+		              </div>
+		              <script type="text/javascript">
+		              	if(hideCreateButton) { j$(".scheduleCreateActionbtns").hide(); }
+		              	if( "{!(hasExternalService)}" == "true" ) {
+		              		j$(".scheduleBatch, .scheduleTypeRow").hide();
+		              		j$(".showPartcipantsToSchedule, .fromAddressRow").hide();
+		              		j$(".scheduleCreateActionbtns").show();
+		              	}
+		              	else {
+		              		j$(".requiredExample").val(100);
+		              		j$(".scheduleBatch, .scheduleTypeRow").show();
+		              		j$(".showPartcipantsToSchedule").show();
+		              		j$(".scheduleCreateActionbtns").hide();
+		              	}
+		              </script>		              
+	              </apex:outputpanel>
+	              
+	              <apex:outputpanel rendered="{!editScheduler}">	              
+		              <input type="button" value="Save" onclick="updateSchedule();return false;" width="70px" style="margin:5px 0px 5px 0px;" />
+		              <input type="button" value="Cancel" onclick="cancelClicked();return false;" width="70px" style="margin:5px 0px 5px 0px;" />
+		              <script type="text/javascript">
+		              		j$(".jbaraDummyScheduleTypeSelectControl, .scheduleBatchSize").attr("disabled", true);
+		              		if( "{!(hasExternalService)}" == "true" ) {
+		              			j$(".scheduleBatch, .scheduleTypeRow").hide();
+		              		}
+		              		else {
+		              			j$(".scheduleBatch, .scheduleTypeRow").show();
+		              		}
+		              </script>	
+	              </apex:outputpanel>
+              </div>                
+              
+			</apex:outputPanel>-->
+			
+			
+			
+			<!-- To display schedule list -->
+			<!--<apex:outputPanel rendered="{!showScheduleList}">
+				
+				<apex:outputpanel id="rerenderApexMessages">
+					<div class="AjaxLoadingButtonWhileDeletingShedule" align="center" style="margin:1px 0px 1px 0px; display:none;">
+	                	<div class="waitingHolder" style="width: 254px; top: 25.8px;"><img src="/img/loading.gif" class="waitingImage" title="Please Wait..." />
+	                  		<br/><span class="waitingDescription">Deleting...</span>
+	                	</div> 
+	                </div>
+	   	 			<apex:pageMessages rendered="{!showMsg}"/>
+	   	 		</apex:outputpanel>
+	   	 		
+	   	 		<div id="schedulerCreateBtn" align="center" style="margin-bottom:2px;"> <input type="button" value="Create schedule" onclick="createSurveyShedule();return false;" width="70px" class="actionBtnToCreateSchedule"/> </div>
+				<div id="containerToShowScheduleJobsBySurvey" align="center"></div>
+				<div class="dummyContainerForSpace" style="margin:5px;"></div>
+				<div class="AjaxLoadingButtonForshowParticipantsBySchedule" align="center" style="margin:100px 0px 100px 0px; display:none;">
+	            	<div class="waitingHolder" style="width: 254px; top: 25.8px;"><img src="/img/loading.gif" class="waitingImage" title="Please Wait..." />
+	               		<br/><span class="waitingDescription">Loading...</span>
+	             	</div> 
+	            </div>
+	            <div align="center">
+	            	<input type="button" class="btnToDeleteParticipantsFromSchedule" value="Remove from schedule" onclick="removeParticipantsFormSchedule();return false;" width="70px" style="margin:5px 0px 5px 0px; display:none;" />
+	            </div>
+	                          
+				<div id="containerToShowParticipantsListBySchedule" align="center"></div>
+				
+				<script type="text/javascript">
+					j$(".scheduleCreateActionbtns, .showPartcipantsToSchedule").removeAttr("disabled"); //To enable to schedule create button.
+					j$("#containerToLoadParticipantsToSchedule").html('');
+					selSurveyStatus = "{!(surveyObj.Status__c)}";
+					surveyDistributionScheduleListBySurvey = eval({!(SurveyDistributionScheduleJobsBySurvey)});
+					surveyDistributionScheduleListBySurvey = getSurveyDistributionSchedulesListBySurvey(surveyDistributionScheduleListBySurvey);
+					//alert(JSON.stringify(surveyDistributionScheduleListBySurvey));
+					bindSurveyDistributionScheduleListGridBySurvey(surveyDistributionScheduleListBySurvey, "containerToShowScheduleJobsBySurvey");				
+				</script>
+			</apex:outputPanel>
+			
+		</apex:outputPanel>
+				<div id="containerToLoadParticipantsToSchedule" align="center"></div>
+		</apex:form>
+	</apex:outputPanel>
+	
+	<apex:outputPanel id="dummyPanelToshowParticipantsBySchedule"> 
+		<apex:outputpanel rendered="{!showParticipantBySchedule}">
+			<script type="text/javascript">
+				
+           		var isAnonyFlag = '{!(isAnonyFlag)}';
+           		selSurveyId = "{!(surveyObj.Id)}";								
+				surveyParticipantsListBySchedule = eval({!(AllSurveyParticipantsListBySchedule)});
+				surveyParticipantsListBySchedule = getSurveyParticipantDetailsDataBySchedule(surveyParticipantsListBySchedule);
+				bindSurveyParticipantListGridBySchedule(surveyParticipantsListBySchedule, "containerToShowParticipantsListBySchedule");
+			</script>
+		</apex:outputpanel>
+	</apex:outputPanel>			
+	
+	<apex:outputPanel id="dummyPanelToshowParticipantsToSchedule"> 
+		<apex:outputpanel rendered="{!showParticipantToSchedule}">
+			<script type="text/javascript">
+				
+				surveyParticipantListToSchedule        = '{!JSINHTMLENCODE(AllSurveyParticipantsListToSchedule)}';
+                		  	
+                surveyParticipantListToSchedule		=  j$("<\div>").html(surveyParticipantListToSchedule).text();
+        		
+        		surveyParticipantListToSchedule       = JSON.parse(gsRemoveNameSpace(gsEncodeHtml(surveyParticipantListToSchedule)));
+								
+				surveyParticipantListToSchedule = getSurveyParticipantDetailsDataToSchedule(surveyParticipantListToSchedule);
+				//alert(JSON.stringify(surveyParticipantListToSchedule));
+				bindSurveyParticipantListGrid(surveyParticipantListToSchedule, "containerToLoadParticipantsToSchedule");				
+				j$(".scheduleCreateActionbtns").show();
+				hideCreateButton = false;
+			</script>
+		</apex:outputpanel>
+	</apex:outputPanel>-->
+	
+	
+</apex:page>

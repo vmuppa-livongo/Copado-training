@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template to use after a meeting with a prospective client.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Post-First Meeting Email Template</name>
+    <style>freeForm</style>
+    <subject>Thank you!</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+Thank you for taking the time to meet with the Livongo team! We enjoyed learning about [prospect] and [custom purpose/client needs].
+
+We hope you see the value Livongo brings to our 600+ clients but don&apos;t take it from just us!  Check out this video of US Foods, Iron Mountain, and Windstream talking about ease of implementation, industry-leading member engagement, clinical results and cost savings with Livongo.
+Link:https://www.livongo.com/clientexperience.html
+
+[Insert customized next steps with prospect].
+
+
+I look forward to working with you on silencing noisy healthcare for our members.
+Link:https://www.youtube.com/watch?v=1hryo0JN-rA&amp;feature=youtu.be
+
+Best,
+[Insert Email Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

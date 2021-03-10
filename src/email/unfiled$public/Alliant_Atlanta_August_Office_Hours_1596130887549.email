@@ -1,0 +1,32 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <style type="text/css">p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'}
+span.s1 {text-decoration: underline}
+span.s2 {text-decoration: underline ; color: #DCA10D}
+
+
+  </style> 
+  <p class="p1">Hello&nbsp;{{{Recipient.FirstName}}},&nbsp;<br /> &nbsp;</p> 
+  <p class="p1">Since we can’t meet up in your office for a traditional lunch-and-learn and provide the Alliant Atlanta office an update on Livongo’s products, pricing and innovations, etc. we’re scheduling exclusive&nbsp;<span class="s1">virtual office hours</span>&nbsp;for your office in the month of August. These are informal, drop-in styles meetings to help you and your team stay abreast of Livongo and what’s happening in the diabetes, DPP, hypertension and behavioral health space.</p> 
+  <p class="p1">&nbsp;</p> 
+  <p class="p1"><b>What</b>: The virtual meetings would last for 45 minutes and the format would be as follows:</p> 
+  <p class="p1">15 minutes – quick intros and market updates&nbsp;</p> 
+  <p class="p1">15 minutes – Livongo updates (product, pricing, demos)</p> 
+  <p class="p1">15 minutes – Q&amp;A</p> 
+  <p class="p1">&nbsp;</p> 
+  <p class="p1"><b>When:</b>&nbsp;Wednesday, August 12<sup>th</sup>&nbsp;at 10am EST and Wednesday, August 19, at 10am EST</p> 
+  <p class="p1">&nbsp;</p> 
+  <p class="p1"><b>Why:&nbsp;</b>We’re adapting to these crazy times and want to provide you with relevant &amp; actionable information on Livongo to help your customers and prospects better manage chronic conditions.</p> 
+  <p class="p1">&nbsp;</p> 
+  <p class="p1"><b>How:&nbsp;</b><a href="https://forms.gle/srrMLYASMZJJvtN67"><span class="s2">Click this link</span></a>&nbsp;to sign up.&nbsp;</p> 
+  <p class="p1">&nbsp;</p> 
+  <p class="p1"><b>Questions</b>? Feel free to reach out to either Heather Wakefield (404.664.6048) or Jim Robson (980.225.4488).</p> 
+  <p class="p1">&nbsp;</p> 
+  <p class="p1">We are looking forward to working with you and the rest of the Alliant team in the 2<sup>nd</sup>&nbsp;half of 2020 and beyond!</p> 
+  <p class="p1"><br /> Stay healthy,</p> 
+  <p class="p1">Jim Robson and Heather Wakefield</p>
+ </body>
+</html>

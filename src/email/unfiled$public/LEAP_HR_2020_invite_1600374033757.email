@@ -1,0 +1,23 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="white-space:pre-wrap"><span style="color:black">Dear {{recipient.firstname}},</span></span><br /> <br /> <span style="white-space:pre-wrap"><span style="color:black">I'd like to invite you to join us on October 7 during</span></span></span><a href="https://leaphr-healthcare-week.com/"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="white-space:pre-wrap"><span style="color:black"> </span></span>LEAP HR’s Healthcare week</span></a> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"> for a live discussion between Livongo’s CMO, Dr. Bimal Shah and Harris Health’s Director of Employee Wellness &amp; EAP, Michele Hunnicutt. Registration for healthcare professionals is free!&nbsp;</span><br /> <br /> <span style="white-space:pre-wrap"><span style="color:black">Learn how Livongo worked with Harris Health System -- a fully-integrated healthcare system serving more than 4.6 million residents of Harris County, Texas -- to deliver a whole-person approach to care for its employees and spouses with diabetes and hypertension. Results include:&nbsp;&nbsp;</span></span></span></span> 
+  <ul> 
+   <li style="margin-top:16px"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><span style="vertical-align:baseline"><span style="white-space:pre-wrap">A coordinated experience across conditions for people living with both diabetes and hypertension delivering an NPS of +92&nbsp;&nbsp;</span></span></span></span></span></li> 
+  </ul> 
+  <ul> 
+   <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><span style="vertical-align:baseline"><span style="white-space:pre-wrap">Multi-year impact on clinical diabetes measures, including reduced HbA1c levels and fewer hypoglycemic readings</span></span></span></span></span></li> 
+  </ul> 
+  <ul> 
+   <li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><span style="vertical-align:baseline"><span style="white-space:pre-wrap">Measurable impact on systolic and diastolic blood pressure rates among those with uncontrolled hypertension&nbsp;&nbsp;&nbsp;</span></span></span></span></span></li> 
+  </ul> 
+  <ul> 
+   <li style="margin-bottom:16px"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:black"><span style="vertical-align:baseline"><span style="white-space:pre-wrap">Reduced spending incurred through medical care, emergency room visits, and pharmacy costs associated with managing chronic conditions, resulting in a positive ROI&nbsp;</span></span></span></span></span></li> 
+  </ul> 
+  <span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="white-space:pre-wrap"><span style="color:black">The case study will be available at the event or feel free to contact me for a copy.&nbsp; Hope to see you there!</span></span><br /> <br /> <span style="white-space:pre-wrap"><span style="color:black">Best,</span></span><br /> <br /> <span style="white-space:pre-wrap"><span style="color:black">{{sender.firstname}}</span></span></span></span> 
+  <br /> 
+  <br /> &nbsp;
+ </body>
+</html>

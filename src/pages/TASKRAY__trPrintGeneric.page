@@ -1,0 +1,31 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false">
+  <html>
+
+  <body>
+    <div id="print-container" class="slds">
+      <h4 id="print-header"></h4>
+      <div id="print-content-container"></div>
+    </div>
+  </body>
+  <link href="{!URLFOR($Resource.trslds, 'assets/styles/salesforce-lightning-design-system-vf.min.css')}" rel="stylesheet"
+    type="text/css" />
+  <link href="{!URLFOR($Resource.trplugins, 'css/trtaskboard.css')}" rel="stylesheet" type="text/css" />
+  <apex:includeScript value="{!URLFOR($Resource.TASKRAY__trplugins, 'plugins/plotly-basic.min.js')}" />
+  <apex:includeScript value="{!URLFOR($Resource.TASKRAY__trplugins, 'plugins/FileSaver.js')}" />
+  <style>
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+      }
+      .no-print,
+      .no-print * {
+        display: none !important;
+      }
+    }
+  </style>
+  <style id="dynamicStyleSheet">
+  </style>
+  <script src="{!URLFOR($Resource.jshelper, 'trPrintGeneric.js')}" type="text/javascript" />
+
+  </html>
+</apex:page>

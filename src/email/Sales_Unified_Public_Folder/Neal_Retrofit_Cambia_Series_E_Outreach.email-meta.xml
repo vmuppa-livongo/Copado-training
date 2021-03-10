@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Neal Retrofit, Cambia, Series E Outreach</name>
+    <style>freeForm</style>
+    <subject>Exciting News From Livongo</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+The past few weeks have been quite exciting here at Livongo.
+
+Last week, we announced our $105 Million Series E funding round to support our rapid market growth, continued investment in data science, deeper integration with our clients and partners, and the development of our comprehensive consumer platform.
+
+Additionally, we announced our new strategic partnership with Cambia Health Solution to personalize healthcare for people in simple, meaningful, and tangible ways. We will utilize the partnership and all of the insights that Cambia brings to co-develop solutions that personalize care for conditions such as hypertension and integrated behavioral health to improve consumers’ lives nationwide.
+
+Earlier this week, we announced our acquisition of Retrofit, a leading provider of weight-management and disease-prevention programs. Retrofit Diabetes Prevention is immediately available from Livongo as Livongo DPP powered by Retrofit. The CDC-recognized DPP offering complements Livongo for Diabetes and Livongo for Hypertension.
+
+Most importantly, these new developments will help us continue to provide the best possible experience for our members. I would love to schedule some time to discuss further.
+
+Best regards,
+
+Neal Lewis
+Vice President, Southeast, Livongo
+m: 239.633.0482 e: nlewis@livongo.com
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

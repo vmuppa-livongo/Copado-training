@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Advanced Text Search --></label>
+        <name>zaapit__Advanced_Text_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount field For Graphs --></label>
+        <name>zaapit__Amount_field_For_Graphs__c</name>
+    </fields>
+    <fields>
+        <help><!-- format: link-Text~https://na14.salesforce.com/{0}/e?close=1~tool tip text(optional)
+{0} is the rowID --></help>
+        <label><!-- CustomActionLink --></label>
+        <name>zaapit__CustomActionLink__c</name>
+    </fields>
+    <fields>
+        <help><!-- Custom CSS  to control view / edit mode fields columns etc. --></help>
+        <label><!-- Custom CSS --></label>
+        <name>zaapit__Custom_CSS__c</name>
+    </fields>
+    <fields>
+        <label><!-- DisableGeoMaps --></label>
+        <name>zaapit__DisableGeoMaps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disable formula fields groupings --></label>
+        <name>zaapit__Disable_formula_fields_groupings__c</name>
+    </fields>
+    <fields>
+        <label><!-- DupeSettings --></label>
+        <name>zaapit__DupeSettings__c</name>
+    </fields>
+    <fields>
+        <label><!-- EnableFieldValueCss --></label>
+        <name>zaapit__EnableFieldValueCss__c</name>
+    </fields>
+    <fields>
+        <label><!-- EnableHorizontalScroll --></label>
+        <name>zaapit__EnableHorizontalScroll__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Sort Grouping2 --></label>
+        <name>zaapit__Enable_Sort_Grouping2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enable Sort coloring: use Sort_color1 &amp; Sort_color2 custom labels to change the colors --></help>
+        <label><!-- Enable Sort coloring --></label>
+        <name>zaapit__Enable_Sort_coloring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Sort Grouping --></label>
+        <name>zaapit__Enable_Sort_grouping__c</name>
+    </fields>
+    <fields>
+        <help><!-- Exclude Fields From Total - use # as a sepeartor --></help>
+        <label><!-- Exclude Fields From Total --></label>
+        <name>zaapit__Exclude_Fields_From_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- FilterReplaceLabelName --></label>
+        <name>zaapit__FilterReplaceLabelName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide Scroll Buttons --></label>
+        <name>zaapit__Hide_Scroll_Buttons__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide graph link on filter --></label>
+        <name>zaapit__Hide_graph_link_on_filter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hierarchy Relation for {PID} parameter 
+Format: table~SON Field API FIELD NAME~Father Field API FIELD NAME
+Example: account~id~parentid --></help>
+        <label><!-- HierarchyRelation --></label>
+        <name>zaapit__HierarchyRelation__c</name>
+    </fields>
+    <fields>
+        <help><!-- EventName~classNameSpace~ClassName#EventName2~classNameSpace2~ClassName2
+The Class must Implement ZPTableHandler --></help>
+        <label><!-- LogicExtend --></label>
+        <name>zaapit__LogicExtend__c</name>
+    </fields>
+    <fields>
+        <help><!-- The maximum number of rows for calculating filter-groupings (large values may take more time to calculate). --></help>
+        <label><!-- Max rows for formula grouping --></label>
+        <name>zaapit__Max_rows_for_formula_grouping__c</name>
+    </fields>
+    <fields>
+        <label><!-- MaximumRowsMassDeleteAll --></label>
+        <name>zaapit__MaximumRowsMassDeleteAll__c</name>
+    </fields>
+    <fields>
+        <label><!-- More Actions Link --></label>
+        <name>zaapit__More_Actions_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- More Actions win width --></label>
+        <name>zaapit__More_Actions_win_width__c</name>
+    </fields>
+    <fields>
+        <label><!-- NumberOfNewRows --></label>
+        <name>zaapit__NumberOfNewRows__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open TextArea in a dialog --></label>
+        <name>zaapit__Open_TextArea_in_a_dialog__c</name>
+    </fields>
+    <fields>
+        <label><!-- PutFieldOnRowCSSClass --></label>
+        <name>zaapit__PutFieldOnRowCSSClass__c</name>
+    </fields>
+    <fields>
+        <label><!-- ShowRefreshLink --></label>
+        <name>zaapit__ShowRefreshLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show All Rows in query --></label>
+        <name>zaapit__Show_All_Rows_in_query__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show hover preview on name field --></label>
+        <name>zaapit__Show_Hover_Preview_On_Name_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Mass Updae on view mode --></label>
+        <name>zaapit__Show_Mass_Updae_on_view_mode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show column filter --></label>
+        <name>zaapit__Show_column_filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort By #3 --></label>
+        <name>zaapit__SortBy3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Using Scope --></label>
+        <name>zaapit__Using_Scope__c</name>
+    </fields>
+    <fields>
+        <help><!-- add custom javascript buttons --></help>
+        <label><!-- buttons2 --></label>
+        <name>zaapit__buttons2__c</name>
+    </fields>
+    <fields>
+        <help><!-- add custom javascript buttons --></help>
+        <label><!-- buttons --></label>
+        <name>zaapit__buttons__c</name>
+    </fields>
+    <fields>
+        <label><!-- columnsWidth --></label>
+        <name>zaapit__columnsWidth__c</name>
+    </fields>
+    <fields>
+        <label><!-- customLinksOnReadMode2 --></label>
+        <name>zaapit__customLinksOnReadMode2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Format: salesforce_field~salesforce_field_ID#salesforce_field~salesforce_field_ID..
+The &quot;salesforce_field_ID&quot; will be the link on the text of &quot;salesforce_field&quot; --></help>
+        <label><!-- customLinksOnReadMode --></label>
+        <name>zaapit__customLinksOnReadMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- disable_autosave_views --></label>
+        <name>zaapit__disable_autosave_views__c</name>
+    </fields>
+    <fields>
+        <label><!-- export_to_url --></label>
+        <name>zaapit__export_to_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- external_CSS_include --></label>
+        <name>zaapit__external_CSS_include__c</name>
+    </fields>
+    <fields>
+        <label><!-- external_JS_include --></label>
+        <name>zaapit__external_JS_include__c</name>
+    </fields>
+    <fields>
+        <label><!-- extraConditionFilter2 --></label>
+        <name>zaapit__extraConditionFilter2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Write a SQL (SOQL) optional condition.
+Example: price&gt;0 --></help>
+        <label><!-- extraConditionFilter --></label>
+        <name>zaapit__extraConditionFilter__c</name>
+    </fields>
+    <fields>
+        <label><!-- fields2 --></label>
+        <name>zaapit__fields2__c</name>
+    </fields>
+    <fields>
+        <label><!-- fieldsHeaders2 --></label>
+        <name>zaapit__fieldsHeaders2__c</name>
+    </fields>
+    <fields>
+        <help><!-- Specify your own first row headers - leave empty to use the default, a must: number of fields=number of field headers. format: salesforce_field~new header#salesforce_field~new header#.... --></help>
+        <label><!-- fieldsHeaders --></label>
+        <name>zaapit__fieldsHeaders__c</name>
+    </fields>
+    <fields>
+        <help><!-- The field to display in the editable table, use &apos;#&apos; as a field separator, use the original field API name --></help>
+        <label><!-- fields --></label>
+        <name>zaapit__fields__c</name>
+    </fields>
+    <fields>
+        <label><!-- freezeColumnNum --></label>
+        <name>zaapit__freezeColumnNum__c</name>
+    </fields>
+    <fields>
+        <label><!-- freezeColumn --></label>
+        <name>zaapit__freezeColumn__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideAddRow --></label>
+        <name>zaapit__hideAddRow__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideChooseATableLink --></label>
+        <name>zaapit__hideChooseATableLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideCustomizeLink --></label>
+        <name>zaapit__hideCustomizeLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideEditButton --></label>
+        <name>zaapit__hideEditButton__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideEditDelColumn --></label>
+        <name>zaapit__hideEditDelColumn__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideItemsPerPage --></label>
+        <name>zaapit__hideItemsPerPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideNewAndDelete --></label>
+        <name>zaapit__hideNewAndDelete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hide page number confirm pop up when in related list mode --></help>
+        <label><!-- hidePageNumberConfirm --></label>
+        <name>zaapit__hidePageNumberConfirm__c</name>
+    </fields>
+    <fields>
+        <label><!-- hidePageNumbers --></label>
+        <name>zaapit__hidePageNumbers__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideTopFilterSave --></label>
+        <name>zaapit__hideTopFilterSave__c</name>
+    </fields>
+    <fields>
+        <label><!-- hideTotalsRow --></label>
+        <name>zaapit__hideTotalsRow__c</name>
+    </fields>
+    <fields>
+        <label><!-- hide_chatter --></label>
+        <name>zaapit__hide_chatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hide multi value filters --></label>
+        <name>zaapit__hide_multi_value_filters__c</name>
+    </fields>
+    <fields>
+        <label><!-- include page load params --></label>
+        <name>zaapit__include_page_load_params__c</name>
+    </fields>
+    <fields>
+        <help><!-- Page to include on the top of the table. --></help>
+        <label><!-- include page name --></label>
+        <name>zaapit__include_page_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Edit - Default --></label>
+        <name>zaapit__isEdit__c</name>
+    </fields>
+    <fields>
+        <label><!-- loadfilter maxResRows --></label>
+        <name>zaapit__loadfilter_maxResRows__c</name>
+    </fields>
+    <fields>
+        <label><!-- mainFieldSubQueryPre --></label>
+        <name>zaapit__mainFieldSubQueryPre__c</name>
+    </fields>
+    <fields>
+        <label><!-- maxRowToExport --></label>
+        <name>zaapit__maxRowToExport__c</name>
+    </fields>
+    <fields>
+        <label><!-- maxRowsOnPage --></label>
+        <name>zaapit__maxRowsOnPage__c</name>
+    </fields>
+    <fields>
+        <help><!-- Maximum displayed rows --></help>
+        <label><!-- maxRowsPerPage --></label>
+        <name>zaapit__maxRowsPerPage__c</name>
+    </fields>
+    <fields>
+        <label><!-- newRecordLinkNum --></label>
+        <name>zaapit__newRecordLinkNum__c</name>
+    </fields>
+    <fields>
+        <help><!-- use {ID} in the url for the current parentid (usefull for related lists) --></help>
+        <label><!-- new record link --></label>
+        <name>zaapit__new_record_link__c</name>
+    </fields>
+    <fields>
+        <label><!-- removeAutoNameFromExport --></label>
+        <name>zaapit__removeAutoNameFromExport__c</name>
+    </fields>
+    <fields>
+        <help><!-- show Check Boxes next to the actions --></help>
+        <label><!-- showCheckBoxes --></label>
+        <name>zaapit__showCheckBoxes__c</name>
+    </fields>
+    <fields>
+        <label><!-- showCountOnExport --></label>
+        <name>zaapit__showCountOnExport__c</name>
+    </fields>
+    <fields>
+        <label><!-- showDeleteSelectedViewMode --></label>
+        <name>zaapit__showDeleteSelectedViewMode__c</name>
+    </fields>
+    <fields>
+        <label><!-- showExport --></label>
+        <name>zaapit__showExport__c</name>
+    </fields>
+    <fields>
+        <label><!-- showMassDeleteAll --></label>
+        <name>zaapit__showMassDeleteAll__c</name>
+    </fields>
+    <fields>
+        <label><!-- showMassDuplicate --></label>
+        <name>zaapit__showMassDuplicate__c</name>
+    </fields>
+    <fields>
+        <label><!-- showQuarterField --></label>
+        <name>zaapit__showQuarterField__c</name>
+    </fields>
+    <fields>
+        <label><!-- showRegButtons --></label>
+        <name>zaapit__showRegButtons__c</name>
+    </fields>
+    <fields>
+        <label><!-- showTopTaskLinksSAM --></label>
+        <name>zaapit__showTopTaskLinksSAM__c</name>
+    </fields>
+    <fields>
+        <label><!-- showUserGuideLink --></label>
+        <name>zaapit__showUserGuideLink__c</name>
+    </fields>
+    <fields>
+        <label><!-- soqlSubQueryPre --></label>
+        <name>zaapit__soqlSubQueryPre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort By #2 --></label>
+        <name>zaapit__sortBy2__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortBy --></label>
+        <name>zaapit__sortBy__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortDir2 --></label>
+        <name>zaapit__sortDir2__c</name>
+    </fields>
+    <fields>
+        <label><!-- sortDir3 --></label>
+        <name>zaapit__sortDir3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Sort direction ascending / descending.
+Put asc/desc --></help>
+        <label><!-- sortDir --></label>
+        <name>zaapit__sortDir__c</name>
+    </fields>
+    <fields>
+        <label><!-- table --></label>
+        <name>zaapit__table__c</name>
+    </fields>
+    <fields>
+        <label><!-- table_ref --></label>
+        <name>zaapit__table_ref__c</name>
+    </fields>
+    <fields>
+        <help><!-- The table title --></help>
+        <label><!-- title --></label>
+        <name>zaapit__title__c</name>
+    </fields>
+    <fields>
+        <label><!-- tools link --></label>
+        <name>zaapit__tools_link__c</name>
+    </fields>
+    <fields>
+        <label><!-- topChartsFields --></label>
+        <name>zaapit__topChartsFields__c</name>
+    </fields>
+    <fields>
+        <label><!-- turnOnScrollModeForRLNTabs --></label>
+        <name>zaapit__turnOnScrollModeForRLNTabs__c</name>
+    </fields>
+    <fields>
+        <help><!-- When &quot;marked&quot; that entire table will be displayed in small font (8pt). --></help>
+        <label><!-- useSmallTableFont --></label>
+        <name>zaapit__useSmallTableFont__c</name>
+    </fields>
+</CustomObjectTranslation>

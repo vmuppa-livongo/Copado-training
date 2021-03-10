@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="RelationshipTypeValues" label="Relationship Type Values"/>
+    <design:attribute name="InputRelationshipsCollection" label="Input List of Relationships"/>
+    <design:attribute name="OutputRelationshipsCollection" label="Output List of Relationships"/>
+</design:component>

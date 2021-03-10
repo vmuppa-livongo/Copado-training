@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Industry expert on the cost implications of COVID-19</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_WTW Article_Remote Monitoring_July 2020 - EXISTING CLIENTS</name>
+    <style>none</style>
+    <subject>Livongo of interest: Industry expert on the cost implications of COVID-19</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

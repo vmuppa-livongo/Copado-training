@@ -1,0 +1,33 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="HTN_CohortImage_header" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/HTN_CohortImage_header?oid=00D4600000180Lw" style="max-width: 600px" title="HTN_CohortImage_header" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> We hope you found the <span style="color:#cc0000;">[recent blog post on Managing High Blood Pressure and case study on hypertension valuable]</span>. As a follow on to those pieces, I thought you might find this hypertension case study of value.&nbsp; Collectively, the data demonstrate the prevalence, and severity, of hypertension and the need offer digital health management solutions to people to support them whenever and wherever they need it.&nbsp;<br /> <br /> In this case study, we analyzed the experiences of more than 1,400 participants eligible for the Livongo for Hypertension program through their employers -- including a health system, an industrial supplier, a large retailer, and a food &amp; beverage producer.&nbsp;<br /> <br /> Our rigorous analysis focused on real-world populations and the engagement challenges of a busy working population. Here’s what we found:&nbsp;</span></span> 
+   <ul> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Higher-than average Member satisfaction across multiple employee populations, which points to sustained engagement in managing this chronic condition&nbsp;</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Measurable impact on systolic and diastolic blood pressure rates among those with uncontrolled hypertension &nbsp;</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Lower medical costs incurred through reductions in inpatient care utilization, emergency department visits, and more, resulting in a positive Year 1 ROI&nbsp;</span></span></li> 
+   </ul> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Access the full case study </span></span> 
+   <a href="https://creative.livongo.com/web/c54fc0295409d61e/livongo_htn_casestudy_employer-cohort-htn-study/" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;">here</a>. 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp;</span></span> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">We value you as a client and continue to look for ways to help protect the health and wellbeing of the people you serve during this unique and challenging time.</span><span style="font-family:Arial,Helvetica,sans-serif;"> </span></span> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Stay safe and healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  </div>
+ </body>
+</html>

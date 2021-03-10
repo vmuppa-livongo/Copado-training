@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Health System Team use- FCC Funding Application for Telehealth and Remote Monitoring Funding</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>FCC Grant $- Application Guide</name>
+    <style>none</style>
+    <subject>FCC grant expands remote monitoring - Application Guide</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,128 @@
+<apex:page controller="TASKRAY.trExternalFormController" action="{!incrementPageLoad}" docType="html-5.0" standardStylesheets="false"
+  showHeader="false" sidebar="false">
+  <apex:slds />
+  <apex:outputPanel layout="none" rendered="{!hasAccessError}">
+    <apex:pageMessages ></apex:pageMessages>
+  </apex:outputPanel>
+  <apex:outputPanel layout="none" rendered="{!!hasAccessError}">
+    <apex:includeLightning />
+    <style>
+      .slds-scope .uiButton--default {
+        text-shadow: none;
+      }
+
+      .uiButton--default .label {
+        white-space: normal;
+        color: inherit;
+      }
+
+      .uiButton--default:hover,
+      .uiButton--default:focus,
+      .uiButton--default.is-selected {
+        background: none;
+        text-shadow: none;
+      }
+
+      .slds-scope .uiScrollerWrapper .uiInput--textarea {
+        min-width: 70%;
+        min-height: 100px;
+      }
+
+      /*.slds-scope .uiButton--default {
+          font-weight: inherit;
+          font-size: inherit;
+          margin: inherit;
+          padding: inherit;
+          text-decoration: inherit;
+          text-align: inherit;
+          border-radius: inherit;
+          border: inherit;
+          border-top: inherit;
+          background: inherit;
+          background: inherit;
+          box-shadow: inherit;
+          text-shadow: inherit;
+        }
+    
+        .slds-scope .uiButton--default:hover,
+        .slds-scope .uiButton--default:focus,
+        .slds-scope .uiButton--default.is-selected {
+          background: inherit;
+          background: inherit;
+          text-shadow: inherit;
+        }
+    
+        .slds-scope .uiButton--default .label {
+          white-space: inherit;
+          color: inherit;
+        }
+    
+        .slds-scope .uiButton--default:hover .label,
+        .slds-scope .uiButton--default:focus .label {
+          color: inherit;
+        }
+    
+        .slds-scope .uiButton--default:disabled {
+          cursor: inherit;
+          background: inherit;
+          box-shadow: inherit;
+          text-shadow: inherit;
+        }
+    
+        .slds-scope .uiButton--default:disabled .label {
+          color: inherit;
+        }
+    
+        .slds-scope .uiButton--default:disabled .label:hover {
+          color: inherit;
+        }*/
+    </style>
+    <script>
+      function GetUrlArguments() {
+        var urlParams = {};
+        (function () {
+          var e,
+            a = /\+/g, // Regex for replacing addition symbol with a space
+            r = /([^&=]+)=?([^&]*)/g,
+            d = function (s) {
+              return decodeURIComponent(s.replace(a, ' '));
+            },
+            q = window.location.search.substring(1);
+
+          while ((e = r.exec(q))) urlParams[d(e[1])] = d(e[2]);
+        })();
+        return urlParams;
+      }
+      var urlArguments = GetUrlArguments();
+      var ltngOutAppName = 'TASKRAY:trExternalFormsOutApp';
+      window.addEventListener(
+        'load',
+        function () {
+          window.$Lightning.use(
+            window.ltngOutAppName,
+            function () {
+              $Lightning.createComponent("lightning:flow",
+                {},
+                "lightning",
+                function (cmp) {
+                  var inputVariables = Object.keys(urlArguments).filter(function (key) { return key !== 'flowname'; }).map(function (key) {
+                    return {
+                      name: key,
+                      type: 'String',
+                      value: urlArguments[key]
+                    }
+                  });
+                  //Init the flow component
+                  cmp.startFlow('{!JSENCODE($CurrentPage.parameters.flowname)}', inputVariables);
+                }
+              );
+            },
+            false
+          );
+        })
+    </script>
+    <div class="slds-scope" style="max-width: 700px; margin: auto;">
+      <div id="lightning"></div>
+    </div>
+  </apex:outputPanel>
+</apex:page>

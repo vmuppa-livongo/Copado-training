@@ -1,0 +1,23 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear&nbsp;{{{Recipient.FirstName}}},<br /> <br /> I hope this note finds you healthy, safe, and successfully navigating the many challenges all of us are facing in the world today. The role of healthcare and empowering our most vulnerable populations, people struggling with chronic conditions, to get and stay healthy has never been more important. At Livongo, our commitment has always been to deliver measurable value for our Clients and better health for our Members and fortunately, our solutions are fulfilling that commitment every single day.<br /> <br /> With your support, we’ve built the fastest growing consumer digital health company based on measurable and sustainable results paired with an experience health consumers . . . your people . . . actually love. &nbsp;<br /> <br /> In fact, here are the results we are seeing with your people and for your business:&nbsp;</span></span> 
+  <ul> 
+   <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#c0392b;"><b>[ACCOUNT NAME]</b></span> has a <b><span style="color:#c0392b;">XX</span></b> Net Promoter Score;</span></span></li> 
+   <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#c0392b;"><b>XX</b></span> Clinical Outcomes;</span></span></li> 
+   <li><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">and Demonstrated Savings: for payers, providers, and large self-insured employers. On average, our clients save between $1,000 - $1,800 per year per participating employee. We would be happy to conduct &nbsp;a claims based analysis for <span style="color:#c0392b;"><b>[Company]</b></span>.</span></span></li> 
+  </ul> 
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"> As a result, more than 1,200 organizations like yours, including more than a third of the Fortune 500, trust Livongo to empower their people to stay healthy. &nbsp;&nbsp;<br /> <br /> Never satisfied, Livongo constantly strives to enhance our market leading programs, identify methods to design simpler, better Member experience and improve and sustain our outcomes. &nbsp;To that end, beginning in January, we’re introducing a number of exciting enhancements to our current offering including:&nbsp;</span></span> 
+  <ul> 
+   <li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">New, attractive Per Participant Per Month pricing so you continue to pay only for your employees who use Livongo (our interests continue to be aligned).</span></span></li> 
+   <li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">We’re providing Livongo for Behavioral Health at no additional cost.</span></span></li> 
+   <li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">We’re offering our first Return-on-Investment Saving Guarantee (we guarantee you get 100% of your fees back in Year 1).</span></span></li> 
+   <li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Multiple client-friendly contracting paths.</span></span></li> 
+  </ul> 
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"> We’ll be reaching out today to set up a call with you to walk you through the changes and how you can take advantage of them.<br /> &nbsp;<br /> Your people with chronic conditions, like diabetes, hypertension, obesity, and behavioral health challenges, represent the most significant part of your healthcare spend. They are also the most impacted by the risks of Coronavirus. Now more than ever is the time to invest in a solution that drives better health and lower costs . . . guaranteed.<br /> &nbsp;<br /> Thank you for the opportunity to serve you and your members and I look forward to talking with you soon.<br /> &nbsp;<br /> Your partner in health,<br /> {{{Sender.FirstName}}},<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  <br /> 
+  <br /> &nbsp;
+ </body>
+</html>

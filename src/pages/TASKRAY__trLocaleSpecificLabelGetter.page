@@ -1,0 +1,5 @@
+<apex:page language="{!$CurrentPage.parameters.lang}" controller="TASKRAY.trTaskBoardController" docType="html-5.0" standardStylesheets="false"
+  showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false">
+  <div id="custom-label-container">{!customLabelJSON}</div>
+  <div id="board-metadata-describe-container">{!boardDescribeDataJSON}</div>
+</apex:page>

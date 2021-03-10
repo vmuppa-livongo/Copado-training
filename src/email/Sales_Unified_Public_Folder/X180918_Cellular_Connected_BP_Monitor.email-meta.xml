@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>180918 Cellular-Enabled BP Monitoring System</name>
+    <style>freeForm</style>
+    <subject>Livongo Announces First Cellular-Enabled Blood Pressure Cuff</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+This week, Livongo announced that we will offer the first cellular-enabled blood pressure monitoring system in the U.S. This system will make it even easier for Livongo members to check their blood pressure in the comfort of their own homes and allows us to offer real-time insights and Health Nudges.
+
+In addition to this exciting new technology, we have seen amazing results from our initial Livongo for Hypertension cohort. Eighty-one percent of people reduced their blood pressure and individuals with mean blood pressures greater than 130/80 decreased their systolic blood pressure by nine mmHg on average, lowering their risk of stroke and heart attacks by at least 35%.
+
+Most importantly, people love Livongo for Hypertension. The program currently has a net promoter score of +76, which is higher than top consumer tech companies like Amazon and Netflix.
+
+I would love to schedule some time to discuss Livongo for Hypertension further.
+
+Thanks,
+
+[Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

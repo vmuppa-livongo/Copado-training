@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Whole Person Solution Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Whole Person Solution Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Program Type --></label>
+        <name>Program_Type__c</name>
+        <picklistValues>
+            <masterLabel>WP Anchor</masterLabel>
+            <translation><!-- WP Anchor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP Non-Anchor</masterLabel>
+            <translation><!-- WP Non-Anchor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <picklistValues>
+            <masterLabel>Behavioral Health</masterLabel>
+            <translation><!-- Behavioral Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetes</masterLabel>
+            <translation><!-- Diabetes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hypertension</masterLabel>
+            <translation><!-- Hypertension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prediabetes</masterLabel>
+            <translation><!-- Prediabetes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weight Management</masterLabel>
+            <translation><!-- Weight Management --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Solution --></label>
+        <name>Solution__c</name>
+        <picklistValues>
+            <masterLabel>CV Solution</masterLabel>
+            <translation><!-- CV Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM Solution</masterLabel>
+            <translation><!-- DM Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DP Solution</masterLabel>
+            <translation><!-- DP Solution --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

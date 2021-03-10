@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>SetMyAccountFields</name>
+        <label>SetMyAccountFields</label>
+        <locationX>718</locationX>
+        <locationY>107</locationY>
+        <assignmentItems>
+            <assignToReference>MyAccount.Covered_Lives__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Total_Lives</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>MyAccount.Prospect_Update_Next_Steps__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Prospect_Update_Next_Steps</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>MyAccount.Description__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Company_Overview</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>MyAccount.Target_payer_close_date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Target_Contract_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UpdateMyAccount</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SetNewLinkFields</name>
+        <label>SetNewLinkFields</label>
+        <locationX>1068</locationX>
+        <locationY>336</locationY>
+        <assignmentItems>
+            <assignToReference>NewContentDocLink.ContentDocumentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>NewNote.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewContentDocLink.LinkedEntityId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewContentDocLink.Visibility</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>AllUsers</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewContentDocLink.ShareType</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>I</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>LinkNotetoAccount</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>SetNoteFields</name>
+        <label>SetNoteFields</label>
+        <locationX>894</locationX>
+        <locationY>216</locationY>
+        <assignmentItems>
+            <assignToReference>NewNote.Content</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DiscoveryNote</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewNote.Title</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DiscoveryNoteTitle</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CreateNote</targetReference>
+        </connector>
+    </assignments>
+    <choices>
+        <name>Discovery</name>
+        <choiceText>Discovery</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Discovery</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Other</name>
+        <choiceText>Other</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Other</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Proposal</name>
+        <choiceText>Proposal</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Proposal</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Choose_Meeting</name>
+        <label>Choose Meeting</label>
+        <locationX>396</locationX>
+        <locationY>296</locationY>
+        <defaultConnector>
+            <targetReference>Under_Construction</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>ChooseDiscovery</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Meeting_Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Discovery</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>DiscoveryScreen</targetReference>
+            </connector>
+            <label>ChooseDiscovery</label>
+        </rules>
+    </decisions>
+    <description>Flow to create meeting notes associated with an Account Debug version</description>
+    <formulas>
+        <description>Unescape input text fields to allow special characters into content note</description>
+        <name>Company_Overview_Formula</name>
+        <dataType>String</dataType>
+        <expression>JSINHTMLENCODE({!Company_Overview})</expression>
+    </formulas>
+    <formulas>
+        <description>Unescape input text fields to allow special characters into content note</description>
+        <name>Key_Contacts_Name_Title_Email_Phone_Formula</name>
+        <dataType>String</dataType>
+        <expression>JSINHTMLENCODE({!Key_Contacts_Name_Title_Email_Phone})</expression>
+    </formulas>
+    <formulas>
+        <description>Unescape input text fields to allow special characters into content note</description>
+        <name>Partner_and_Health_Plan_information_Formula</name>
+        <dataType>String</dataType>
+        <expression>JSINHTMLENCODE({!Partner_and_Health_Plan_information})</expression>
+    </formulas>
+    <formulas>
+        <description>Unescape input text fields to allow special characters into content note</description>
+        <name>Prospect_Update_Next_Steps_Formula</name>
+        <dataType>String</dataType>
+        <expression>JSINHTMLENCODE({!Prospect_Update_Next_Steps})</expression>
+    </formulas>
+    <interviewLabel>Create Meeting Notes - Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create Meeting Notes - Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>CreateNote</name>
+        <label>CreateNote</label>
+        <locationX>890</locationX>
+        <locationY>320</locationY>
+        <connector>
+            <targetReference>SetNewLinkFields</targetReference>
+        </connector>
+        <inputReference>NewNote</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>LinkNotetoAccount</name>
+        <label>LinkNotetoAccount</label>
+        <locationX>1204</locationX>
+        <locationY>341</locationY>
+        <connector>
+            <targetReference>Done</targetReference>
+        </connector>
+        <inputReference>NewContentDocLink</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <name>GetMyAccount</name>
+        <label>GetMyAccount</label>
+        <locationX>48</locationX>
+        <locationY>296</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Meeting_Picker</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputReference>MyAccount</outputReference>
+        <queriedFields>Name</queriedFields>
+        <queriedFields>Covered_Lives__c</queriedFields>
+        <queriedFields>Prospect_Update_Next_Steps__c</queriedFields>
+        <queriedFields>Description__c</queriedFields>
+        <queriedFields>Estimated_Diabetes__c</queriedFields>
+        <queriedFields>Target_payer_close_date__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>UpdateMyAccount</name>
+        <label>UpdateMyAccount</label>
+        <locationX>892</locationX>
+        <locationY>103</locationY>
+        <connector>
+            <targetReference>SetNoteFields</targetReference>
+        </connector>
+        <inputReference>MyAccount</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>DiscoveryScreen</name>
+        <label>Guided Meeting Notes - Discovery</label>
+        <locationX>576</locationX>
+        <locationY>111</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>SetMyAccountFields</targetReference>
+        </connector>
+        <fields>
+            <name>HelloDiscovery</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Discovery&lt;/B&gt;&lt;FONT STYLE=&quot;font-size:12px&quot;&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Please walk through the following with your prospect as a part of discovery.  Existing data will be pulled in from the Account.  Updates to certain fields will update the Account record.&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Total_Lives</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <elementReference>MyAccount.Covered_Lives__c</elementReference>
+            </defaultValue>
+            <fieldText># Total Lives</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Prospect_Update_Next_Steps</name>
+            <defaultValue>
+                <stringValue>{!MyAccount.Prospect_Update_Next_Steps__c}</stringValue>
+            </defaultValue>
+            <fieldText>Prospect Update &amp; Next Steps</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>Please input 255 characters or fewer.</errorMessage>
+                <formulaExpression>LEN({!Prospect_Update_Next_Steps}) &lt;= 255</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>Partner_and_Health_Plan_information</name>
+            <fieldText>Partner and Health Plan information</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Company_Overview</name>
+            <defaultValue>
+                <stringValue>{!MyAccount.Description__c}</stringValue>
+            </defaultValue>
+            <fieldText>Company Overview</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+            <validationRule>
+                <errorMessage>Please input 32,768 characters or fewer.</errorMessage>
+                <formulaExpression>LEN({!Company_Overview}) &lt;= 32768</formulaExpression>
+            </validationRule>
+        </fields>
+        <fields>
+            <name>EstimatedPwDs</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <elementReference>MyAccount.Estimated_Diabetes__c</elementReference>
+            </defaultValue>
+            <fieldText>Estimated PwDs</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Key_Contacts_Name_Title_Email_Phone</name>
+            <fieldText>Key Contacts (Name/Title/Email/Phone)</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Target_Contract_Date</name>
+            <dataType>Date</dataType>
+            <defaultValue>
+                <elementReference>MyAccount.Target_payer_close_date__c</elementReference>
+            </defaultValue>
+            <fieldText>Target Contract Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Total_Health_Care_Spend</name>
+            <dataType>Currency</dataType>
+            <fieldText>Total Health Care Spend</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Done</name>
+        <label>Done</label>
+        <locationX>1203</locationX>
+        <locationY>235</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>YouAreFinished</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Your notes have been saved!&lt;/B&gt;&lt;FONT STYLE=&quot;font-size:18px&quot;&gt;&lt;/FONT&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Your account has been updated and a new Note has been created with a summary of your input.  Check out the Account record for {!MyAccount.Name}.&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Meeting_Picker</name>
+        <label>Meeting Picker</label>
+        <locationX>221</locationX>
+        <locationY>296</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Choose_Meeting</targetReference>
+        </connector>
+        <fields>
+            <name>Meeting_Type</name>
+            <choiceReferences>Discovery</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Meeting Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Under_Construction</name>
+        <label>Under Construction</label>
+        <locationX>576</locationX>
+        <locationY>479</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ComeBackLater</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:18px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;1&quot;&gt;&lt;B&gt;Sorry!  This flow is not yet completed.  &lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;1&quot;&gt;Livongo is very busy adding this soon.&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>GetMyAccount</startElementReference>
+    <status>Active</status>
+    <textTemplates>
+        <description>Note created from a discovery meeting.</description>
+        <name>DiscoveryNote</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Here is the summary of your notes taken, {!$Flow.CurrentDate}:&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Total # Covered Lives: &lt;/b&gt;{!Total_Lives}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Access to Direct Mail: &lt;/b&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Access to Employee Emails: &lt;/b&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Prospect Update and Next Steps: &lt;/b&gt;{!Prospect_Update_Next_Steps_Formula}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Partner and Health Plan information: &lt;/b&gt;{!Partner_and_Health_Plan_information_Formula}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Company Overview: &lt;/b&gt;{!Company_Overview_Formula}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Estimated PwDs: &lt;/b&gt;{!EstimatedPwDs}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Key Contacts (Name/Title/Email/Phone): &lt;/b&gt;{!Key_Contacts_Name_Title_Email_Phone_Formula}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Target Contract Date: &lt;/b&gt;{!Target_Contract_Date}&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Target Launch Date: &lt;/b&gt;&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;&lt;b&gt;Total Health Care Spend: &lt;/b&gt;{!Total_Health_Care_Spend}&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>DiscoveryNoteTitle</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>Discovery - {!$Flow.CurrentDate}</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>MyAccount</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>NewContentDocLink</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>ContentDocumentLink</objectType>
+    </variables>
+    <variables>
+        <name>NewNote</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>ContentNote</objectType>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>test</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>IF(  = TRUE, &quot;Yes&quot;, &quot;No&quot;)</stringValue>
+        </value>
+    </variables>
+</Flow>

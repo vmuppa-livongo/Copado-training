@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Contact Filter Fields --></label>
+        <name>MC4SF__Contact_Filter_Fields</name>
+    </fieldSets>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Work Phone</value>
+        </caseValues>
+        <name>phone_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <help><!-- Is the account owner of this contact the same as the currently logged-in Salesforce user? --></help>
+        <label><!-- Account Owner Equals Logged In User? --></label>
+        <name>Account_Owner_Equals_Logged_In_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Record Type --></label>
+        <name>Account_Record_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Relationship --></label>
+        <name>Account_Relationship__c</name>
+        <relationshipLabel><!-- Contacts2 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Relationship --></label>
+        <name>Account_Relationship_del__c</name>
+        <relationshipLabel><!-- Contacts1 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account State --></label>
+        <name>Account_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Type_From Account --></label>
+        <name>Account_Type_From_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 1 --></label>
+        <name>Address_Line_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 2 --></label>
+        <name>Address_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assign Lead --></label>
+        <name>Assign_Lead__c</name>
+        <relationshipLabel><!-- Contacts (Assign Lead) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assistant Email --></label>
+        <name>AssistantEmail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assistant Email --></label>
+        <name>Assistant_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- CSM Equals Logged In User? --></label>
+        <name>CSM_Equals_Logged_In_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- CSM ID_From Account --></label>
+        <name>CSM_ID_From_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- CSM --></label>
+        <name>CSM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Looks to email field and parses email domain information from the email address. This is utilized in automation surrounding new leads with no accounts. --></help>
+        <label><!-- Contact Email Parse --></label>
+        <name>Contact_Email_Parse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Grouping --></label>
+        <name>Contact_Grouping__c</name>
+        <picklistValues>
+            <masterLabel>Dr Bimal&apos;s CMO list</masterLabel>
+            <translation><!-- Dr Bimal&apos;s CMO list --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact ID_Long --></label>
+        <name>Contact_ID_Long__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Owner 2 --></label>
+        <name>Contact_Owner_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Account Status --></label>
+        <name>Current_Account_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Of Birth --></label>
+        <name>Date_Of_Birth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include in pre-event email marketing? --></label>
+        <name>Did_we_interact_with_prospect_at_event__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employees_From Account --></label>
+        <name>Employees_From_Account__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the contact needs to be approved for an event by Chief Commercial Officer - -  mark this box --></help>
+        <label><!-- Event approval --></label>
+        <name>Event_approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude from Inside Sales_From Account --></label>
+        <name>Exclude_from_Inside_Sales_From_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fortune 100 --></label>
+        <name>Fortune_100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fortune 500 --></label>
+        <name>Fortune_500__c</name>
+    </fields>
+    <fields>
+        <label><!-- Functional Area --></label>
+        <name>Functional_Area__c</name>
+        <picklistValues>
+            <masterLabel>Clinical</masterLabel>
+            <translation><!-- Clinical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Service</masterLabel>
+            <translation><!-- Customer Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HR</masterLabel>
+            <translation><!-- HR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Goes By --></label>
+        <name>Goes_By__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check this box if the contact is no longer with this organization.  Do not delete contacts in SF.com as we want to retain the account history. --></help>
+        <label><!-- Inactive/Left Company --></label>
+        <name>Inactive_Left_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive phone number --></label>
+        <name>Inactive_phone_number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include in Client Newsletter? --></label>
+        <name>Include_in_Client_Newsletter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Include in Client Strategy Calls/Emails? --></label>
+        <name>Include_in_Client_Strategy_Calls_Emails__c</name>
+    </fields>
+    <fields>
+        <label><!-- LinkedIn Company Id --></label>
+        <name>LID__LinkedIn_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- LinkedIn Member Token --></label>
+        <name>LID__LinkedIn_Member_Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Activity Date --></label>
+        <name>Last_Activity_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Task/Event by Livongo Rep_From Acct --></label>
+        <name>Last_Task_Event_by_Livongo_Rep_From_Acct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Email Parse --></label>
+        <name>Lead_Email_Parse__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead No Acct Found Via Email Parse Flow --></label>
+        <name>Lead_No_Acct_Found_Via_Email_Parse_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Source Details --></label>
+        <name>Lead_Source_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Type --></label>
+        <name>Lead_Type__c</name>
+        <picklistValues>
+            <masterLabel>Employer</masterLabel>
+            <translation><!-- Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Influencer</masterLabel>
+            <translation><!-- Influencer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payer</masterLabel>
+            <translation><!-- Payer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provider</masterLabel>
+            <translation><!-- Provider --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LinkedIn --></label>
+        <name>LinkedIn__c</name>
+    </fields>
+    <fields>
+        <label><!-- MC Subscriber --></label>
+        <name>MC4SF__MC_Subscriber__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Management Level --></label>
+        <name>Management_Level__c</name>
+        <picklistValues>
+            <masterLabel>C-Suite</masterLabel>
+            <translation><!-- C-Suite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Department</masterLabel>
+            <translation><!-- Department --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Division</masterLabel>
+            <translation><!-- Division --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Marketing Relationship Strength --></label>
+        <name>Marketing_Relationship_Strength__c</name>
+        <picklistValues>
+            <masterLabel>Distant</masterLabel>
+            <translation><!-- Distant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friendly</masterLabel>
+            <translation><!-- Friendly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional</masterLabel>
+            <translation><!-- Professional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Strategic</masterLabel>
+            <translation><!-- Strategic --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Marketing Suppressed --></label>
+        <name>Marketing_Suppressed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Middle name or initial --></help>
+        <label><!-- Middle --></label>
+        <name>Middle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrated myStrength Contact --></label>
+        <name>Migrated_myStrength_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migration ID --></label>
+        <name>Migration_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Opp Count_From Acct --></label>
+        <name>Open_Opp_Count_From_Acct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opt Into Latest Event Invite --></label>
+        <name>Opt_In__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please check this box if a contact has instructed you to not send him/her email marketing communciations --></help>
+        <label><!-- Opt out of commercial marketing? --></label>
+        <name>Opt_out_of_commercial_marketing__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner_From Account --></label>
+        <name>Owner_From_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Birthday --></label>
+        <name>PFLSFTMA__Next_Birthday__c</name>
+    </fields>
+    <fields>
+        <label><!-- Swaggable --></label>
+        <name>PFLSFTMA__Swaggable__c</name>
+    </fields>
+    <fields>
+        <label><!-- TMA CM Trigger Value --></label>
+        <name>PFLSFTMA__TMA_CM_Trigger_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- TMA Last Sent --></label>
+        <name>PFLSFTMA__TMA_Last_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Account_From Account --></label>
+        <name>Parent_Account_From_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Next Step Due Date --></label>
+        <name>Playbooks_Next_Step_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Play Name --></label>
+        <name>Playbooks_Play_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Play Status --></label>
+        <name>Playbooks_Play_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Step Number --></label>
+        <name>Playbooks_Step_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Contacts_PO1 --></label>
+        <name>Power_of_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred Shipping Address --></label>
+        <name>Preferred_Shipping_Address__c</name>
+        <picklistValues>
+            <masterLabel>Mailing Address</masterLabel>
+            <translation><!-- Mailing Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Address</masterLabel>
+            <translation><!-- Other Address --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Is this contact an advocate for Livongo, or an obstacle? --></help>
+        <label><!-- Promoter or Detractor? --></label>
+        <name>Promoter_or_Detractor__c</name>
+        <picklistValues>
+            <masterLabel>Detractor</masterLabel>
+            <translation><!-- Detractor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neutral</masterLabel>
+            <translation><!-- Neutral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promoter</masterLabel>
+            <translation><!-- Promoter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Provider_Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- Referenceable? --></label>
+        <name>Referenceable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Override DupeCatcher --></label>
+        <name>SFSSDupeCatcher__Override_DupeCatcher__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Email --></label>
+        <name>Secondary_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suffix --></label>
+        <name>Suffix__c</name>
+        <picklistValues>
+            <masterLabel>(Ret.)</masterLabel>
+            <translation><!-- (Ret.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2nd</masterLabel>
+            <translation><!-- 2nd --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPA</masterLabel>
+            <translation><!-- CPA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DDS</masterLabel>
+            <translation><!-- DDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Esq.</masterLabel>
+            <translation><!-- Esq. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>II</masterLabel>
+            <translation><!-- II --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>III</masterLabel>
+            <translation><!-- III --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IV</masterLabel>
+            <translation><!-- IV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JD</masterLabel>
+            <translation><!-- JD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jr.</masterLabel>
+            <translation><!-- Jr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PhD</masterLabel>
+            <translation><!-- PhD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr.</masterLabel>
+            <translation><!-- Sr. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USA</masterLabel>
+            <translation><!-- USA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USA (Ret.)</masterLabel>
+            <translation><!-- USA (Ret.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USAF</masterLabel>
+            <translation><!-- USAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USAF (Ret.)</masterLabel>
+            <translation><!-- USAF (Ret.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USMC</masterLabel>
+            <translation><!-- USMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USMCR</masterLabel>
+            <translation><!-- USMCR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USN</masterLabel>
+            <translation><!-- USN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USN (Ret.)</masterLabel>
+            <translation><!-- USN (Ret.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V</masterLabel>
+            <translation><!-- V --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VI</masterLabel>
+            <translation><!-- VI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VM</masterLabel>
+            <translation><!-- VM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type_From Account --></label>
+        <name>Type_From_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Contacts (User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sourced from Data.com --></label>
+        <name>ddc_prospector__Sourced_from_Data_com__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Contact Close Score Updated --></label>
+        <name>isdc_closedate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Contact Close Score --></label>
+        <name>isdc_closescore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playbooks Contact Close Score Grade --></label>
+        <name>isdc_closescoregrade__c</name>
+    </fields>
+    <fields>
+        <label><!-- myStrengthContactExternalId --></label>
+        <name>myStrengthContactExternalId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Celigo Update --></label>
+        <name>netsuite_conn__Celigo_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Customer Id --></label>
+        <name>netsuite_conn__NetSuite_Customer_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Id --></label>
+        <name>netsuite_conn__NetSuite_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Sync Error --></label>
+        <name>netsuite_conn__NetSuite_Sync_Err__c</name>
+    </fields>
+    <fields>
+        <label><!-- Push To NetSuite --></label>
+        <name>netsuite_conn__Push_To_NetSuite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pushed From Opportunity --></label>
+        <name>netsuite_conn__Pushed_From_Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sync In Progress --></label>
+        <name>netsuite_conn__Sync_In_Progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Needs Score Synced --></label>
+        <name>pi__Needs_Score_Synced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Scored At --></label>
+        <name>pi__Pardot_Last_Scored_At__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Campaign --></label>
+        <name>pi__campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Comments --></label>
+        <name>pi__comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Date --></label>
+        <name>pi__conversion_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Name --></label>
+        <name>pi__conversion_object_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Conversion Object Type --></label>
+        <name>pi__conversion_object_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Created Date --></label>
+        <name>pi__created_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Activity --></label>
+        <name>pi__first_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Query --></label>
+        <name>pi__first_search_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer Type --></label>
+        <name>pi__first_search_type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot First Referrer --></label>
+        <name>pi__first_touch_url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Grade --></label>
+        <name>pi__grade__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Last Activity --></label>
+        <name>pi__last_activity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Notes --></label>
+        <name>pi__notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Hard Bounced --></label>
+        <name>pi__pardot_hard_bounced__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot Score --></label>
+        <name>pi__score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pardot URL --></label>
+        <name>pi__url__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Campaign --></label>
+        <name>pi__utm_campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Content --></label>
+        <name>pi__utm_content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Medium --></label>
+        <name>pi__utm_medium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Source --></label>
+        <name>pi__utm_source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Analytics Term --></label>
+        <name>pi__utm_term__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Close Score Last Updated --></label>
+        <name>qbdialer__CloseDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Close Score --></label>
+        <name>qbdialer__CloseScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Contactability Last Updated --></label>
+        <name>qbdialer__ContactDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Hourly Contactability ID --></label>
+        <name>qbdialer__ContactScoreId__c</name>
+        <relationshipLabel><!-- Contact Score Items_C --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- NeuralView: Contactability Score --></label>
+        <name>qbdialer__ContactScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dials --></label>
+        <name>qbdialer__Dials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Call Time --></label>
+        <name>qbdialer__LastCallTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Time --></label>
+        <name>qbdialer__ResponseTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency Test --></label>
+        <name>rh2__Currency_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Describe --></label>
+        <name>rh2__Describe__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Formula Test --></label>
+        <name>rh2__Formula_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integer Test --></label>
+        <name>rh2__Integer_Test__c</name>
+    </fields>
+    <fields>
+        <help><!-- Displays ZoomInfo Has Moved data point. Denotes whether the lead/contact has moved from the current company. Values are Yes, Uncertain, No. --></help>
+        <label><!-- Person Has Moved --></label>
+        <name>zisf__Person_Has_Moved__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Complete Status --></label>
+        <name>zisf__ZoomInfo_Complete_Status__c</name>
+    </fields>
+    <fields>
+        <help><!-- ZoomInfo Email address for the Contact record. --></help>
+        <label><!-- ZoomInfo Email --></label>
+        <name>zisf__ZoomInfo_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Date/time refers to last time ZoomInfo Clean ran for record. --></help>
+        <label><!-- ZoomInfo Last Clean Run --></label>
+        <name>zisf__ZoomInfo_Last_Clean_Run__c</name>
+    </fields>
+    <fields>
+        <help><!-- ZoomInfo Phone for the Contact record. --></help>
+        <label><!-- ZoomInfo Phone --></label>
+        <name>zisf__ZoomInfo_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Clean Status --></label>
+        <name>zisf__Zoom_Clean_Status__c</name>
+        <picklistValues>
+            <masterLabel>Clean</masterLabel>
+            <translation><!-- Clean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company Clean Only</masterLabel>
+            <translation><!-- Company Clean Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Different</masterLabel>
+            <translation><!-- Different --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Sync</masterLabel>
+            <translation><!-- In Sync --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Compared</masterLabel>
+            <translation><!-- Not Compared --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Found</masterLabel>
+            <translation><!-- Not Found --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo ID --></label>
+        <name>zisf__zoom_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZoomInfo Last Updated --></label>
+        <name>zisf__zoom_lastupdated__c</name>
+    </fields>
+    <recordTypes>
+        <description><!-- A Client Strategy contact who was not involved pre-sale, but gets involved post-sale --></description>
+        <label><!-- CS Contact --></label>
+        <name>CS_Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal Contact --></label>
+        <name>Internal_Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Sales Contact would be associated with the Sales Application and would ideally be handled by users of &apos;Sales Team&apos;. A Sales Contact would be associated to a Sales Account. --></description>
+        <label><!-- Sales Contact --></label>
+        <name>Sales_Contact</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Enter the A1c test value as per the status selected. Leave blank if not &apos;Yes&apos; --></errorMessage>
+        <name>A1c_Values</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot Edit this field if Promo-Code is not Humana Study --></errorMessage>
+        <name>Assigned_be_edited_only_for_HUMANA</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Other Biggest DM challenge should be empty --></errorMessage>
+        <name>Biggest_DM_Challenge</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- External CDE cannot be a child of Client / Sub-Client --></errorMessage>
+        <name>CDE_cannot_be_child_of_Client_SubClient</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change it to Unknown from Yes / No. --></errorMessage>
+        <name>Cannot_change_CGM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change it to Unknown from Yes / No. --></errorMessage>
+        <name>Cannot_change_GLP</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change it to Unknown from Yes / No. --></errorMessage>
+        <name>Cannot_change_Language</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change it to Unknown from Yes / No. --></errorMessage>
+        <name>Cannot_change_Oral_Medications</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change it to Unknown from Yes / No. --></errorMessage>
+        <name>Cannot_change_insulin_pump</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change it to Unknown from Yes / No. --></errorMessage>
+        <name>Cannot_change_otherMedication</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- First Name field cannot contain any special characters except apostrophes. --></errorMessage>
+        <name>FirstName_NoSpecialChar</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- First Name cannot be empty --></errorMessage>
+        <name>First_Name_cannot_be_empty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CompanyId should be a numeric value --></errorMessage>
+        <name>LID__Check_CompanyId_Value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Other learning preference should be empty --></errorMessage>
+        <name>Learning_Preference_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Mailing street length should not exceed 70 --></errorMessage>
+        <name>MailingStreet</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Mailing street should not include PO boxes --></errorMessage>
+        <name>Mailing_Street_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contact preference is mandatory if night time is set --></errorMessage>
+        <name>Mandating_Contact_Preference_at_night</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Night time is mandatory if contact preference is set --></errorMessage>
+        <name>Mandating_Night_Starts_and_Ends_Time</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Member cannot be a child of Care --></errorMessage>
+        <name>Member_cannot_be_child_of_Care</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The night time should be between 6PM and 7AM --></errorMessage>
+        <name>Night_Start_Time</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter both night start and night end time --></errorMessage>
+        <name>Night_Time_not_Set_correctly</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter the value for Other Biggest DM challenge --></errorMessage>
+        <name>Other_Biggest_DM_Challenge</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter the value for other learning preference --></errorMessage>
+        <name>Other_Learning_Preference_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Other Phone Owner should  be mentioned only when Phone Owner was set to “Other” --></errorMessage>
+        <name>Other_Phone_Owner_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter the value for other variables affecting learning --></errorMessage>
+        <name>Other_variables_affecting_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- At least one of the primary or secondary phone number must be present. --></errorMessage>
+        <name>Phone_number_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter 10 digit number. --></errorMessage>
+        <name>Primary_Phone_length_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Secondary Other Phone Owner should  be mentioned only when Secondary Phone Owner was set to “Other” --></errorMessage>
+        <name>Secondary_Other_Phone_Owner_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Enter 10 digit number. --></errorMessage>
+        <name>Secondary_Phone_length_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Other variables affecting learning should be empty --></errorMessage>
+        <name>Variables_affecting_learning_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Zip code cannot be greater than 10 characters. --></errorMessage>
+        <name>Zip_code_length_check</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_detail --></label>
+        <name>MC4SF__MailChimp_Subscriptions_detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MailChimp_Subscriptions_list --></label>
+        <name>MC4SF__MailChimp_Subscriptions_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Email --></label>
+        <name>pi__Send_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Pardot_Emails --></label>
+        <name>pi__Send_Pardot_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Single_Pardot_Email --></label>
+        <name>pi__Send_Single_Pardot_Email</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Prospect_Insight --></label>
+        <name>pi__Send_to_Prospect_Insight</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_List --></label>
+        <name>qbdialer__Create_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Launch_Click_to_Call --></label>
+        <name>qbdialer__Launch_Click_to_Call</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Lists --></label>
+        <name>qbdialer__Manage_Lists</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Existing_Document --></label>
+        <name>tinderbox__Add_Existing_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contract --></label>
+        <name>tinderbox__New_Contract</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Presentation --></label>
+        <name>tinderbox__New_Presentation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_TinderBox_Document --></label>
+        <name>tinderbox__New_TinderBox_Document</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_to_Campaign --></label>
+        <name>zaapit__Add_to_Campaign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Auto_Mark --></label>
+        <name>zaapit__Auto_Mark</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Emails --></label>
+        <name>zaapit__Mass_Emails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Emails2 --></label>
+        <name>zaapit__Mass_Emails2</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Merge --></label>
+        <name>zaapit__Mass_Merge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Merge_Contacts1 --></label>
+        <name>zaapit__Merge_Contacts1</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Merge_Contacts_L --></label>
+        <name>zaapit__Merge_Contacts_L</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- zp_actions --></label>
+        <name>zaapit__zp_actions</name>
+    </webLinks>
+</CustomObjectTranslation>

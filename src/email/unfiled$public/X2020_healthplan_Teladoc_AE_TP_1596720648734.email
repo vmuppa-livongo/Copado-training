@@ -1,0 +1,15 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},<br /> <br /> I hope this message finds you healthy. I wanted to share some exciting news with you that was announced earlier today. Livongo has entered into an agreement to merge with Teladoc Health to create the only consumer centered virtual care platform which addresses the full spectrum of health and care needs. Please find a video introducing the partnership </span></span> 
+  <a href="https://vimeo.com/444828186/a696a51280"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#2980b9;"><b>HERE</b></span></span></span></a> 
+  <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">.<br /> <br /> With this news, we want to assure you that nothing changes with our ability to serve you and your clients. Our combination with Teladoc Health increases our ability to provide Members with a comprehensive, virtual healthcare solution, helping to give them more control over their health options and improve their experience. As always, we value the partnership we have with you and your clients by working together to empower people with chronic conditions to live better and healthier lives.<br /> <br /> This announcement is only the first step in what is a very exciting development for Livongo and the partners and members we serve. The agreement is expected to close by the end of Q4 2020, pending regulatory approvals and meeting closing conditions. There are still details that need to be worked out over the coming months and we will keep you informed along the way.<br /> <br /> If you have any questions, please don’t hesitate to reach out to me. Thank you again for being a trusted Livongo partner and for your continued support!<br /> <br /> Your partner in health,</span></span> 
+  <br /> 
+  <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">{{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  <div style="font-size: 12px;">
+    &nbsp; 
+  </div>
+ </body>
+</html>

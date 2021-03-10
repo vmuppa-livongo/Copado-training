@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Holiday and Livongo Update 1:1 Update</name>
+    <style>freeForm</style>
+    <subject>Happy Holidays and Exciting News from Livongo</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I thought it would be a great time to reach out before we get into the full swing of the holiday season. This past week we have received a significant amount of news coverage for our innovation and thought leadership. I believe that you might find some of these articles interesting:
+
+Livongo was featured in an article by Employee Benefit News discussing how innovations in data and technology can be leveraged to provide consumers with a real-time personalized digital engagement platform.
+
+Livongo was also featured for thought leadership across the healthcare ecosystem. The first article highlights the fact that Livongo was actively involved in discussions that shaped the new CMS remote monitoring reimbursement. The second article is about a paper published by the American College of Cardiology that discusses the future of technology in healthcare. The paper was co-written by Livongo Senior Vice President of Clinical and Strategic Partnerships, Dr. Bimal Shah, who collaborated with other leading cardiologists to draw conclusions about digital innovations.
+
+Hope you enjoy a happy and relaxing holiday season and I look forward to hearing from you soon.
+
+Thanks,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

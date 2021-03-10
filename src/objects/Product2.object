@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Add</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DisplayUrl</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ExternalDataSourceId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ExternalId</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Family</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>QuantityUnitOfMeasure</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StockKeepingUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Whole_Person_Solution__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check only if the program is a WP Solution.</inlineHelpText>
+        <label>Whole Person Solution</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Celigo_Update__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Celigo Update</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Item_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Item Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__NetSuite_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>NetSuite Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__NetSuite_Item_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>NetSuite Item Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inventory Item</fullName>
+                    <default>false</default>
+                    <label>Inventory Item</label>
+                </value>
+                <value>
+                    <fullName>Inventory Lot Numbered</fullName>
+                    <default>false</default>
+                    <label>Inventory Lot Numbered</label>
+                </value>
+                <value>
+                    <fullName>Inventory Serialized</fullName>
+                    <default>false</default>
+                    <label>Inventory Serialized</label>
+                </value>
+                <value>
+                    <fullName>Non Inventory Purchase</fullName>
+                    <default>false</default>
+                    <label>Non Inventory Purchase</label>
+                </value>
+                <value>
+                    <fullName>Non Inventory ReSale</fullName>
+                    <default>false</default>
+                    <label>Non Inventory ReSale</label>
+                </value>
+                <value>
+                    <fullName>Non Inventory Sale</fullName>
+                    <default>false</default>
+                    <label>Non Inventory Sale</label>
+                </value>
+                <value>
+                    <fullName>Service Purchase</fullName>
+                    <default>false</default>
+                    <label>Service Purchase</label>
+                </value>
+                <value>
+                    <fullName>Service ReSale</fullName>
+                    <default>false</default>
+                    <label>Service ReSale</label>
+                </value>
+                <value>
+                    <fullName>Service Sale</fullName>
+                    <default>false</default>
+                    <label>Service Sale</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__NetSuite_Sync_Err__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>NetSuite Sync Error</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Push_To_NetSuite__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Push To NetSuite</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Sub_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sub Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Sync_In_Progress__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sync In Progress</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Term_Contract_Pricing_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Term / Contract Pricing Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>AllProducts</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.CUSTOMER_PRODUCT_ID</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>PRODUCT2.RECORD_TYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Programs</label>
+    </listViews>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Primary_Product</fullName>
+        <active>true</active>
+        <description>Primary product, such as Livongo for Diabetes</description>
+        <label>Primary Product</label>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Behavioral Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hypertension</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nutrition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prediabetes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teladoc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weight Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whole Person</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>QuantityUnitOfMeasure</picklist>
+            <values>
+                <fullName>Each</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>netsuite_conn__NetSuite_Item_Type__c</picklist>
+            <values>
+                <fullName>Inventory Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Lot Numbered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Serialized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Inventory Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Inventory ReSale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Inventory Sale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service ReSale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Sale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Secondary_Product</fullName>
+        <active>true</active>
+        <description>Secondary product, such as Upfront Meter</description>
+        <label>Secondary Product</label>
+        <picklistValues>
+            <picklist>Family</picklist>
+            <values>
+                <fullName>Behavioral Health</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Diabetes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hypertension</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prediabetes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Teladoc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weight Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whole Person</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>QuantityUnitOfMeasure</picklist>
+            <values>
+                <fullName>Each</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>netsuite_conn__NetSuite_Item_Type__c</picklist>
+            <values>
+                <fullName>Inventory Item</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Lot Numbered</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inventory Serialized</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Inventory Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Inventory ReSale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Inventory Sale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service ReSale</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Sale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>PRODUCT2.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PRODUCT2.DESCRIPTION</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>PRODUCT2.FAMILY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.DESCRIPTION</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>PRODUCT2.FAMILY</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.CUSTOMER_PRODUCT_ID</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.DESCRIPTION</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PRODUCT2.FAMILY</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>netsuite_conn__sync_to_netsuite</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Sync To NetSuite</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var Celigo = {}; 
+Celigo.SFDC = (function() { 
+var productSyncManager = function() { 
+this.triggerSync = function() { 
+this.openPopup(); 
+}; 
+
+this.openPopup = function() { 
+var button = document.getElementsByName(&apos;netsuite_conn__sync_to_netsuite&apos;)[0]; 
+button.value = &apos;Processing...&apos;; 
+button.disabled = true; 
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)} 
+var resultProdSetting = sforce.connection.query(&quot;select netsuite_conn__Flow_Select_Field__c from netsuite_conn__Product_Sync_Settings__c where Name = \&apos;Product Sync Settings\&apos;&quot;); 
+var recordsProdSetting = resultProdSetting.getArray(&quot;records&quot;); 
+if (recordsProdSetting[0].netsuite_conn__Flow_Select_Field__c == &apos;&apos; || recordsProdSetting[0].netsuite_conn__Flow_Select_Field__c == null) {
+	alert(&quot;Please map Salesforce Products with NetSuite Item types in the Connector settings before initiating the sync.&quot;); 
+	window.location.reload(); 
+	return; 
+}
+var selectedId = recordsProdSetting[0].netsuite_conn__Flow_Select_Field__c.split(&quot;$$$&quot;)[0];
+var selectedValue = recordsProdSetting[0].netsuite_conn__Flow_Select_Field__c.split(&quot;$$$&quot;)[1];
+var oppRecQuery = &quot;select &quot;+selectedId+&quot; from Product2 where Id = &apos;&quot;+ &quot;{!Product2.Id}&quot; +&quot;&apos;&quot;; 
+var oppRec = sforce.connection.query(oppRecQuery); 
+var resultProdRec = oppRec.getArray(&quot;records&quot;); 
+if (!resultProdRec[0][selectedId]) { 
+	alert(&quot;Please select a value for &quot;+selectedValue+&quot; to start the sync.&quot;); 
+	window.location.reload(); 
+	return; 
+} 
+
+
+var prod = new sforce.SObject(&quot;Product2&quot;); 
+prod.id = &quot;{!Product2.Id}&quot;; 
+
+// make the field change 
+prod.netsuite_conn__Push_to_NetSuite__c = true; 
+
+// save the change 
+sforce.connection.update([prod]); 
+
+window.location.reload(); 
+}; 
+}; 
+
+return { 
+main : function() { 
+Celigo.productSyncMgr = new productSyncManager(); 
+Celigo.productSyncMgr.triggerSync(); 
+} 
+}; 
+})(); 
+Celigo.SFDC.main();</url>
+    </webLinks>
+</CustomObject>

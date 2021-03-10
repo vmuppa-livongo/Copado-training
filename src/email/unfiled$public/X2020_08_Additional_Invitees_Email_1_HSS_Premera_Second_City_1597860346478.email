@@ -1,0 +1,10 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},&nbsp;<br /> <br /> Yesterday, you <span style="font-size:16px;">received</span> a calendar invite to join Livongo for an interactive discussion with The Second City on how simple improv principles catalyze virtual selling.&nbsp;<br /> <br /> <b>RSVP* BY 4 PM TODAY TO RECEIVE A BOTTLE OF WINE FROM STE MICHELLE WINERY</b>. Simply complete </span> 
+  <a href="https://www.surveymonkey.com/r/L32DTV3"><span style="font-family:Arial,Helvetica,sans-serif;">this survey</span></a> 
+  <span style="font-family:Arial,Helvetica,sans-serif;"> and we'll take care of the rest!&nbsp;<br /> <br /> Stay Healthy and Safe,&nbsp;<br /> <br /> Livongo&nbsp;<br /> <br /> {{{Sender.Signature}}}<br /> <br /> <span style="font-size:16px;">*We are offering two sessions to accommodate various schedules. Calendar invites for both sessions have been shared with you. To RSVP, please ACCEPT the invite that works best with your schedule.&nbsp;</span></span>
+ </body>
+</html>

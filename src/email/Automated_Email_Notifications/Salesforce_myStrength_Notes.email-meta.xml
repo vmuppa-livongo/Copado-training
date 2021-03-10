@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Salesforce Maintenance Notice - myStrength migration</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Livongo_Logo</letterhead>
+    <name>Salesforce Maintenance Notice after myStrength migration</name>
+    <style>freeForm</style>
+    <subject>Salesforce Sales Cloud - Captain America Release Update with Notes</subject>
+    <textOnly>Accounts
+
+JENGA-493 – New Calculated Field: Client ARR
+
+JENGA-1323 – Handle Split Billing
+
+
+
+Contact
+
+JENGA-1334 – New Field: Contact Owner 2
+
+
+
+Client Overview
+
+JENGA-1325 – Email Notifications when Billing Fields Change
+
+JENGA-1104 – Email Notifications when Client Overview are Close to Expire
+
+JENGA-1095 – Update Lapse Criteria attribute in SpringCM to support HTN
+
+JENGA-1326 – Update to Salesforce Billing Fields
+
+
+Opportunity
+
+JENGA-1375 – Combine BH2.0 and Coaching into 1 Program
+
+
+Partner Agreements
+
+JENGA-528 – Capture Partner Agreements in SpringCM (may not launch in time)
+
+
+Program Overview
+
+JENGA-1325 – Client Success: Email Notifications when Fields Change
+
+JENGA-1104 – Email Notifications when Program Overview are Close to Expire
+
+JENGA-1272 – Remove Project tab from Gainsight’s Program Overview
+
+JENGA-1346 – BH2.0 Enhancements: New Field: True-up Frequency
+
+JENGA-1309 – Automatic Date Populations from Closed Won Opportunity
+
+JENGA-1346 – BH2.0 Enhancements: New Field: PMPM Rate
+
+JENGA-1375 – Prevent creation of more than 1 BH2.0 Program Overview
+
+
+Task Ray Project
+
+JENGA-1311 – Information Technology branch (may not launch in time)
+
+JENGA-1346  – BH2.0 Enhancements: Added a Population Statistics - Behavioral Health section
+
+
+Others
+
+JENGA-1270 – Email Opt Out button for SF list emails
+
+JENGA-1321 – Commercial Sales Home Page
+
+Rebuild of the Eligibility Tracker report (Pending approval on Thursday)
+
+
+
+Questions? Send message to crmrequest@livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

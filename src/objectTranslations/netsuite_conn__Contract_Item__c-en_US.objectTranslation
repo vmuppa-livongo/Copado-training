@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Bill To Customer Discount --></label>
+        <name>netsuite_conn__Bill_To_Customer_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill To Customer --></label>
+        <name>netsuite_conn__Bill_To_Customer__c</name>
+        <relationshipLabel><!-- Contract Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contract Item End Date --></label>
+        <name>netsuite_conn__Contract_Item_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Item Order Type --></label>
+        <name>netsuite_conn__Contract_Item_Order_Type__c</name>
+        <picklistValues>
+            <masterLabel>Contract - Downsell</masterLabel>
+            <translation><!-- Contract - Downsell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract - New</masterLabel>
+            <translation><!-- Contract - New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract - Renewal</masterLabel>
+            <translation><!-- Contract - Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract - Upsell</masterLabel>
+            <translation><!-- Contract - Upsell --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contract Item Start Date --></label>
+        <name>netsuite_conn__Contract_Item_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Item State --></label>
+        <name>netsuite_conn__Contract_Item_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Item Status --></label>
+        <name>netsuite_conn__Contract_Item_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Item Term --></label>
+        <name>netsuite_conn__Contract_Item_Term__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract --></label>
+        <name>netsuite_conn__Contract__c</name>
+        <relationshipLabel><!-- Contract Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End User --></label>
+        <name>netsuite_conn__End_User__c</name>
+        <relationshipLabel><!-- Contract Items (End User) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Item Category --></label>
+        <name>netsuite_conn__Item_Category__c</name>
+        <picklistValues>
+            <masterLabel>Hardware</masterLabel>
+            <translation><!-- Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>License - Perpetual</masterLabel>
+            <translation><!-- License - Perpetual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>License - Term</masterLabel>
+            <translation><!-- License - Term --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance - New</masterLabel>
+            <translation><!-- Maintenance - New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance - Renewal</masterLabel>
+            <translation><!-- Maintenance - Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parent Item</masterLabel>
+            <translation><!-- Parent Item --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Perpetual</masterLabel>
+            <translation><!-- Services - Perpetual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support - New</masterLabel>
+            <translation><!-- Support - New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support - Renewal</masterLabel>
+            <translation><!-- Support - Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Item --></label>
+        <name>netsuite_conn__Item__c</name>
+        <relationshipLabel><!-- Contract Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- NetSuite Id --></label>
+        <name>netsuite_conn__NetSuite_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Line Number --></label>
+        <name>netsuite_conn__Original_Line_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity Type --></label>
+        <name>netsuite_conn__Quantity_Type__c</name>
+        <picklistValues>
+            <masterLabel>CPU License</masterLabel>
+            <translation><!-- CPU License --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M/S Entitlement</masterLabel>
+            <translation><!-- M/S Entitlement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Module License</masterLabel>
+            <translation><!-- Module License --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parent</masterLabel>
+            <translation><!-- Parent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product License</masterLabel>
+            <translation><!-- Product License --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User License - Other</masterLabel>
+            <translation><!-- User License - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User License - Production</masterLabel>
+            <translation><!-- User License - Production --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>netsuite_conn__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renew With --></label>
+        <name>netsuite_conn__Renew_With__c</name>
+        <relationshipLabel><!-- Contract Items (Renew With) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Renewal Processed On --></label>
+        <name>netsuite_conn__Renewal_Processed_On__c</name>
+    </fields>
+</CustomObjectTranslation>

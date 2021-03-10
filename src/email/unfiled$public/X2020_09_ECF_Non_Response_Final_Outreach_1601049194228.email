@@ -1,0 +1,29 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  &nbsp; 
+  <div style="width: 600px; margin: 0px auto; text-align: center;"> 
+   <img alt="2020_Livongo_Executive_Client_Forum" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/X2020_Livongo_Executive_Client_Forum?oid=00D4600000180Lw" style="max-width: 600px" title="2020_Livongo_Executive_Client_Forum" /> 
+  </div> &nbsp; 
+  <div style="width: 600px; margin: 0px auto;"> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},&nbsp;<br /> <br /> We’re days away from Livongo's invitation-only Executive Client Forum&nbsp;on&nbsp;<b>September 29, from 2:00 – 6:00 PM CDT</b>.&nbsp; It promises to be an informative, educational, and even entertaining event. I would hate for you to miss it, but haven’t seen your name on the list of confirmed participants.&nbsp;<br /> <br /> <b>Please kindly RSVP as soon as possible using </b></span><b><a href="https://livongoecf.splashthat.com/"><span style="font-family:Arial,Helvetica,sans-serif;">this link</span></a></b><span style="font-family:Arial,Helvetica,sans-serif;"><b>.&nbsp;</b><br /> <br /> This will ensure you have access to the full program, including updates from Livongo's executive team, clinical insights, a client case study, and&nbsp;discussions on future opportunities.&nbsp;We will also take time for a little entertainment and have several interactive experiences including a cooking demonstration with an award-winning writer, tastemaker and curator of good living and enjoy a performance by a famous, well known artist. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></span> 
+  </div> 
+  <div style="width: 600px; margin: 0px auto;"> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Meeting Details</b></span></span> 
+   <ul> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Date: Tuesday, September 29</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Meeting Time: 2:00 PM – 6:00 PM CDT</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Attendance: By Invitation Only&nbsp;</span></span></li> 
+   </ul> 
+   <span style="font-size:12px;"> <span style="font-family:Arial,Helvetica,sans-serif;"> We would be honored to have you join us for this special event! &nbsp;Please don’t hesitate to reach out with any questions.<br /> <br /> Stay Healthy,&nbsp;<br /> {{{Sender.FirstName}}}</span><br /> <br /> <span style="font-family: Arial, Helvetica, sans-serif;">{{{Sender.Signature}}}&nbsp;</span></span> 
+  </div>
+ </body>
+</html>

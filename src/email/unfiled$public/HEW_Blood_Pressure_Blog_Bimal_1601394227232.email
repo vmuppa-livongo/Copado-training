@@ -1,0 +1,9 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <p>Hello {{{Recipient.FirstName}}}<br /> <br /> I thought you find this blog post interesting.&nbsp; Livongo launched a National Blood Pressure Tracker, analyzing how the COVID-19 pandemic has impacted nationwide blood pressure trends.&nbsp; You can view the map and analysis from Livongo Chief Medical Officer Dr. Bimal Shah <a href="https://urldefense.proofpoint.com/v2/url?u=https-3A__bit.ly_31K6yty&amp;d=DwMFAg&amp;c=xu_5lAfKHjInGFR3ndoZrw&amp;r=qunY7QbQNdMKEnWNHSo4nEAGMzEhSFw_gfpds5luuN4&amp;m=p1sgiDEFQjwf8CM6hNOtYoBZgpT5D3_Bu65Pzw7-dlQ&amp;s=zY2CHxCQioDkH-wej84JMcuQMmIfROfPf8gCWeOHFe4&amp;e=">here</a>.<br /> <br /> The map uses Livongo’s unique real-time blood pressure data to show how major events during the pandemic have compromised downstream health and wellbeing.&nbsp; Livongo is actively using these insights to apply personalized geo-targeted Health Nudges and better care for our Members.</p> 
+  <p>I was wondering, how do you support your employees that are living with high blood pressure? Livongo's solutions are delivering results for our clients. On average we are seeing a 10&nbsp;mmHg drop in systolic blood pressure for those with Stage 1&nbsp;Hypertension and a 12 mmHg drop for those with Stage 2&nbsp;Hypertension. That reduction&nbsp;equates to approximately $700 per person per year savings in healthcare costs.<br /> <br /> Would you have some time in the next couple of weeks to discuss how Livongo can support your employees and their family members?<br /> <br /> In good health,<br /> <br /> {{{Sender.Signature}}}</p>
+ </body>
+</html>

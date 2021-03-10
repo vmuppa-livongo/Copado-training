@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Perry Broeseker Dean Foods Case Study 1:1 Email</name>
+    <style>freeForm</style>
+    <subject>Livongo Intro/Year One ROI Case Study</subject>
+    <textOnly>Good Morning {!Contact.FirstName},
+
+
+Hi Shara, 
+ 
+These messages are always fun for me to send. As Livongo continues to serve more of the population (now over 76,000 members using our diabetes solution) we&apos;ve conducted more studies demonstrating the results our clients have been hoping for. 
+
+I’m excited to share our latest case study that shows how Livongo helped Dean Foods achieve a positive Year-1 ROI of 1.4x on their investment in Livongo with $70 per participant per month cost savings. People on the Livongo program achieved a 5 percent medical savings while people who were not on Livongo program had a 7 percent increase in costs.
+While we expect costs savings in three years, we’re thrilled we achieved this in one year. See the full study here.
+
+I’d love to further discuss how Livongo can drive these types of results for with your clients.
+
+Thank you,
+
+Perry Broeseker
+Regional Director, Southeast
+Livongo
+m: 727.631.5347 e: pbroeseker@livongo.com
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

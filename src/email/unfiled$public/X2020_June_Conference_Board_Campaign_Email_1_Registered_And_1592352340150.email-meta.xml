@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template is Email #1 in the Virtual Conference Board Campaign intended for those registered but NOT confirmed for the event</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_June_Conference Board Campaign_Email_Registered_And_Not_Confirmed virtual</name>
+    <style>none</style>
+    <subject>Join the Conference Board’s virtual event June 24-July 2 with your current complimentary pass</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

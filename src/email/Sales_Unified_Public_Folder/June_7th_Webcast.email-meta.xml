@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>June 7th Webcast</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>June 7th Webcast</name>
+    <style>freeForm</style>
+    <subject>Webinar:  Livongo for Diabetes Mission and Results</subject>
+    <textOnly>Good afternoon {!Contact.FirstName}. I hope this note finds you well.
+
+Diabetes is likely one of the highest cost drivers in your health plan, and growing at an alarming rate.  Please join Dr. Jennifer Schneider and myself as we provide a brief overview of the Livongo for Diabetes Program, our Outcomes and Guidance on how we can help you control these costs while empowering your employees, struggling with diabetes to live better.
+
+To attend:  email me and I&apos;ll forward the link!
+
+
+Neal Lewis
+Regional Vice President
+Livongo
+m: 239.633.0482 e: nlewis@livongo.com
+a:  3960 Deep Passage Way, Naples, FL 34109
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

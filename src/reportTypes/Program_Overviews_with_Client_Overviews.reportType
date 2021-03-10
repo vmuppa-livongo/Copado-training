@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Contract</baseObject>
+    <category>busop</category>
+    <deployed>true</deployed>
+    <description>Program Overviews with Client Overviews</description>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>ProgramOverviews__r</relationship>
+    </join>
+    <label>Program Overviews with Client Overviews</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Account</displayNameOverride>
+            <field>Account</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract_Effective_Date__c</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CO Name</displayNameOverride>
+            <field>Name</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CO Contract Number</displayNameOverride>
+            <field>ContractNumber</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Path Name</displayNameOverride>
+            <field>Contract_Path__c</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>RecordType</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CO Contract Term</displayNameOverride>
+            <field>Contract_Term__c</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract_Termination_Date__c</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CO Status</displayNameOverride>
+            <field>Status</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Downmarket__c</field>
+            <table>Contract</table>
+        </columns>
+        <masterLabel>Client Overviews</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Auto_Renewal__c</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Overview__c</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PO Name</displayNameOverride>
+            <field>Name</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PO Contract Number</displayNameOverride>
+            <field>ContractNumber</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>RecordType</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PO Contract Term</displayNameOverride>
+            <field>Contract_Term__c</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Program_Name__c</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Program_End_Date__c</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>ContractRenewalDate__c</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Program_Start_Date__c</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PO Status</displayNameOverride>
+            <field>Status</field>
+            <table>Contract.ProgramOverviews__r</table>
+        </columns>
+        <masterLabel>Program Overviews</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.Name</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.RecordType</field>
+            <table>Contract</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account.Account_Type__c</field>
+            <table>Contract</table>
+        </columns>
+        <masterLabel>Accounts</masterLabel>
+    </sections>
+</ReportType>

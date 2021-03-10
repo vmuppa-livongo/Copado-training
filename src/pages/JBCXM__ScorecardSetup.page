@@ -1,0 +1,101 @@
+<apex:page docType="html-5.0" sidebar="false" controller="JBCXM.ScorecardBroker" title="Scorecard Configuration" extensions="JBCXM.NSRemoting,JBCXM.AdminBroker,JBCXM.GSCommonBroker" tabStyle="Administration__tab">
+   
+    
+    <apex:form ></apex:form>
+
+    <script>
+
+        var GS = GS || {};
+
+        GS.remotingEndPoint     = '{!$RemoteAction.ScorecardBroker.scorecardRequestBroker}';
+        GS.commonRemotingEndPoint = '{!$RemoteAction.GSCommonBroker.gsCommonRequestBroker}';
+        GS.remoting             = "{!$RemoteAction.NSRemoting.apinsinvoke}";
+        GS.nsParams             = eval({!(scnsParams)});
+
+        var GSGA = {
+            orgId: "{!$Organization.Id}",
+            orgName: "{!$Organization.Name}",
+            userName: "{!$User.FirstName}"+" "+"{!$User.LastName}"
+        };
+
+    </script>
+
+
+<!-- //configure maintab-->
+<!-- Score configuration-->
+ <div id="gs-app-container">
+  <div class="gs-module-container">
+   <div class="gs-sc-scorecard-container">
+
+   <div class="Score-configuration-tab clearfix">
+        <div class="config-maintab accordianClass aClassForTop" style = "position: relative; overflow : hidden; height: auto;">
+            <!--  Here this Custom setting Templates is loaded -->
+            <div class="header clearfix">
+                    <div class="left steps">Step 1</div>
+                   <div class="left"><h1>Global Settings</h1></div>
+                   <div class="left step1loading" >
+                    
+                  </div>
+                   <div class="h_hide right arrowClass"></div>
+            </div>
+            
+        </div>
+    </div>
+      <!-- Score-scheme-MENU-->
+    
+    
+    <div class = "parentMiddleSection accordianClass" style = "position: relative; margin-bottom : 1px; overflow: hidden; height: 32px;"> 
+        <div class="header clearfix">
+            <div class="left steps">Step 2</div>
+           <div class="left"><h1>Grading Scheme</h1></div>
+           <div class="left step2loading" >
+             
+           </div>
+           <div class="h_hide right arrowClass"></div>
+        </div>
+        <div class = "middleSection" ></div>
+            
+    </div>
+    
+    
+    
+    
+    
+    <!-- //color-scheme-->
+    <div id="bottomSection" class = "accordianClass aClassForLast" style = "overflow: hidden;height: 32px;">
+        <div class="Measure-Group-configuration clearfix">
+        <div class="header clearfix">
+           <div class="left steps">Step 3</div>
+           <div class="left"><h1>Measure and Group Configuration</h1></div>
+           <div class="left step3loading" >
+             
+           </div>
+           <div class="h_hide right arrowClass"></div>
+        </div>
+        <div class = "groupView">
+            
+        </div>
+        </div>
+    
+    
+    </div>
+    </div>
+    </div>
+</div>
+
+<apex:outputpanel rendered="{!If($CurrentPage.parameters.env == null , true, false)}">
+        <c:AlertForm />
+    <script>
+        installResources({scripts: ["scorecardsetup/scripts/scorecardsetup.bundle.js"], styles:["scorecardsetup/styles/scorecardsetup.css"]});
+    </script>
+</apex:outputpanel>
+
+<apex:outputpanel rendered="{!If($CurrentPage.parameters.env == "dev" , true, false)}">
+    <apex:stylesheet value="{!IF($CurrentPage.parameters.apppath!=null,$CurrentPage.parameters.apppath,'https://localhost:8080/UI')}/scorecardsetup/styles/scorecardsetup.css" />
+    <script type="text/javascript" src="{!IF($CurrentPage.parameters.apppath!=null,$CurrentPage.parameters.apppath, "https://localhost:8080/UI")}/scorecardsetup/scripts/scorecardsetup.bundle.js"></script>
+</apex:outputpanel>
+<!-- Score configuration-->
+    <script>
+    
+    </script>
+</apex:page>

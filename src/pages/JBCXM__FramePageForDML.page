@@ -1,0 +1,32 @@
+<apex:page sidebar="false" showHeader="false" Controller="JBCXM.DMLActions" >
+  <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__SurveyJquery,'js/jquery-1.7.1.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__SurveyJquery,'js/jquery-ui-1.8.18.custom.min.js'))}"/>
+  <apex:form >
+  		<script type="text/javascript">
+  			var j$ = jQuery.noConflict();
+						
+			//To handle the user state preservation details on readonly pages.
+			function loadUserStateByTab(stateJSONStr, usrSSId, tabOrAreaName) {
+				actionFunToUserStateByTab(stateJSONStr, usrSSId, tabOrAreaName);
+			}
+  		</script> 
+  		
+  		<apex:outputPanel id="JsFrameToresetStateDetails">
+  			<apex:outputPanel rendered="{!renderUserStatePanel}">
+	  			<script type="text/javascript">  				
+					function resetUserStatePreservationDetails() {
+						window.top.{!($CurrentPage.parameters.callAfterStateSave)}(eval({!(userStateDetailsJsonbyTab)}), '{!(isSameUserSessionByTab)}');
+					}
+	  			</script>
+  			</apex:outputPanel>	
+  		</apex:outputPanel>
+  		
+  		<!-- To store the user state -->
+  		<apex:actionFunction name="actionFunToUserStateByTab" action="{!saveUserStateByTab}" reRender="JsFrameToresetStateDetails" oncomplete="resetUserStatePreservationDetails();" >
+  			<apex:param name="stateJSON" value=""/>
+  			<apex:param name="userSnId" value=""/>
+  			<apex:param name="tabName" value=""/>
+  		</apex:actionFunction>
+  		 
+  </apex:form>
+</apex:page>

@@ -1,0 +1,39 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div (
+max-width: 600px;
+min-width: 300px;
+)
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <meta content="text/html; charset=utf-8" /> 
+   <meta name="ProgId" content="OneNote.File" /> 
+   <meta name="Generator" content="Microsoft OneNote 15" /> 
+   <p style="margin:0in;font-family:Arial;font-size:11.0pt;color:black"> 
+    <meta content="text/html; charset=utf-8" /> 
+    <meta name="ProgId" content="OneNote.File" /> 
+    <meta name="Generator" content="Microsoft OneNote 15" /></p> 
+   <p style="margin:0in;font-family:Arial;font-size:11.0pt"> 
+    <meta /> 
+    <meta /></p> 
+   <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Hi {{{Recipient.FirstName}}},</span></span></p> 
+   <p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">While utilization of virtual care accelerated as a response to pandemic conditions, most experts agree this growing trend is here to stay due to the extensive benefits. Recent analysis indicates that 60% of respondents want to use technology more for communicating with providers and managing their conditions, based on their experiences during the pandemic.&nbsp;</span></span></p> 
+   <p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Join Christin Deacon, Assistant Director of Health Benefit Operations and Policy Planning for the State of New Jersey, and Dr. Jennifer Schneider, President of Livongo, for a dynamic discussion on leveraging digital- and human-based healthcare interventions to improve health outcomes and reduce care costs.</span></span></p> 
+   <p style="text-align: center;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><b>Bridging the Gap to Provide Virtual, Whole Person Care Amid a Pandemic<br /> 3:00 p.m. ET on Wednesday, September 2</b></span></span></p> 
+   <p style="text-align: center;"><span style="display: none;">&nbsp;</span><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:18px;"><a href="https://livongo.zoom.us/webinar/register/3115968232619/WN_F2ecK24wQIepHgo3vbQRrQ">Click here to register</a> </span><br /> <span style="font-size:14px;">Can’t attend live? You should still register!&nbsp;<br /> We’ll send out the recording after the webinar to registrants.</span></span></p> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><span style="display: none;">&nbsp;</span></span></span> 
+   <p><br /> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><b>This dynamic expert discussion will explore:</b></span></span></p> 
+   <ul> 
+    <li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">The implications and opportunities of a consumer centered virtual care model.&nbsp;</span></span></li> 
+    <li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">How employers, multi-employer trusts, government entities and health plans can work together to provide accessible, affordable care for the most vulnerable populations.</span></span></li> 
+    <li><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Strategies to improve health outcomes for covered populations and reduce care costs – despite pandemic conditions.&nbsp;</span></span></li> 
+   </ul> 
+   <p><br /> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Stay Healthy and Safe,<br /> {{{Sender.FirstName}}}<br /> <br /> <br /> {{{Sender.Signature}}}</span></span></p> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:10px;">1. https://www.accenture.com/us-en/insights/life-sciences/coronavirus-patient-behavior-research</span></span> 
+  </div>
+ </body>
+</html>

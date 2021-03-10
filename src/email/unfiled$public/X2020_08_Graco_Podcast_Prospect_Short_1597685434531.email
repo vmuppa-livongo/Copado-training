@@ -1,0 +1,25 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="Graco Podcast Screen shot" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Graco_Podcast_Screen_shot?oid=00D4600000180Lw" style="max-width: 650.9149627685547px" title="Graco Podcast Screen shot" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},<br /> <br /> I thought you would enjoy listening to <a href="https://www.youtube.com/watch?v=jUKxgWXr1CM&amp;feature=youtu.be">this podcast </a> where Jodi Morris, Global Benefits Manager at Graco and Amar Kendale, Livongo Chief Product Officer share insights on Graco’s approach to:</span></span> 
+   <ol> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Helping their employees better manage their chronic conditions by offering Livongo’s personalized tools and support.&nbsp;</span></span></li> 
+    <li><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Bending the cost curve on their diabetes spend.</span></span></li> 
+   </ol> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">I hope you are able to gain some value from it.&nbsp;<br /> &nbsp;<br /> If you are interested in learning more about what Livongo is doing to provide a Consumer Directed Virtual Care experience that empowers people with remote monitoring, telehealth integration, coaching and behavioral health support, please let me know.&nbsp;<br /> &nbsp;<br /> Thank you for your consideration and I look forward to connecting soon.<br /> &nbsp;<br /> &nbsp;<br /> Stay healthy and safe, &nbsp;<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+   <br /> &nbsp; 
+  </div>
+ </body>
+</html>

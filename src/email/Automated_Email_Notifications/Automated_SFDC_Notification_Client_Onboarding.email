@@ -1,0 +1,21 @@
+Congratulations {!Opportunity.OwnerFullName} - {!Opportunity.Name} {!Opportunity.Type} has just closed!
+
+
+Products Sold: {!Opportunity.Product_List__c}
+Closed Date: {!Opportunity.CloseDate}
+Target Launch Date: {!Opportunity.Launch_Date__c}
+PwDs: {!Opportunity.Livongo_for_Diabetes_PwDs__c}
+PwHs: {!Opportunity.Livongo_for_Hypertension_PwHs__c}
+PwPDs: {!Opportunity.Livongo_DPP_PwPDs__c}
+PwWMs: {!Opportunity.Livongo_for_Weight_Management_DP_PwOs__c}
+PwBHs: {!Opportunity.Livongo_Behavioral_Health_PwBHs__c}
+Contract Path: {!Opportunity.Pre_Contracting_Contract_Paper__c}
+Billing Partner: {!Opportunity.BillingPartner__c}
+Assigned CIM: {!Opportunity.CIM__c}
+Assigned CSM: {!Account.CSM__c}
+Opportunity Type: {!Opportunity.Type}
+Account Record Type: {!Account.RecordType}
+Account Owner: {!Account.OwnerFullName}
+Opportunity Link: {!Opportunity.Link} 
+
+A link to the fully-executed agreement can be found here: {!Opportunity.Box_Contract_URL__c}

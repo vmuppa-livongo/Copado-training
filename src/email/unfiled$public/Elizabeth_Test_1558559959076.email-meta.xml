@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email promoting testimonial video and requesting a call</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Client Testimonial Video Email Template</name>
+    <style>none</style>
+    <subject>Hear What Clients Are Saying About Livongo</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,144 @@
+<apex:page showHeader="true" sidebar="true" controller="TASKRAY.trIterateManagement">
+  <h1 style="font-size:20px;">TaskRay Task + Checklist: Trickle Available External from Project</h1>
+  <br />
+  <br />
+  <span>TaskRay introduced a available external checkbox on the Task and Checklist Group objects in the February Release to address
+    Salesforce Site Guest User Sharing updates. This job will set the available external checkbox to true on all tasks and
+    checklists within projects with an available external checkbox checked.</span>
+  <br />
+  <br />
+  <apex:form >
+    <apex:commandButton action="{!executeTrickleAvailableExternal}" value="Trickle Available External from Project" id="excecuteBatchButton"
+    />
+  </apex:form>
+
+  <apex:outputPanel rendered="{!trickleAvailableExternalBatchId!=null}">
+    <br />
+    <span>Your Migration is running. To view the status of job id
+      <strong>{!HTMLENCODE(trickleAvailableExternalBatchId)}</strong> at:
+      <apex:outputLink target="_blank" value="{!HTMLENCODE(apexJobUrl)}">Apex Jobs</apex:outputLink> ( Setup | Monitoring | Apex Jobs).
+    </span>
+  </apex:outputPanel>
+  <br/>
+  <br/>
+  <br/>
+  <h1 style="font-size:20px;">TaskRay Project: Complete Projects with 100% Progress</h1>
+  <br />
+  <br />
+  <span>TaskRay introduced a Completed checkbox on the Project object in the June 2019 Release. This job will set the completed
+    checkbox to true on all projects with 100% Progress.</span>
+  <br />
+  <br />
+  <apex:form >
+    <apex:commandButton action="{!executeComplete100PctProjects}" value="Complete Projects with 100% Progress" id="excecuteBatchButton"
+    />
+  </apex:form>
+
+  <apex:outputPanel rendered="{!complete100PctProjectsBatchId!=null}">
+    <br />
+    <span>Your Migration is running. To view the status of job id
+      <strong>{!HTMLENCODE(complete100PctProjectsBatchId)}</strong> at:
+      <apex:outputLink target="_blank" value="{!HTMLENCODE(apexJobUrl)}">Apex Jobs</apex:outputLink> ( Setup | Monitoring | Apex Jobs).
+    </span>
+  </apex:outputPanel>
+  <br/>
+  <br/>
+  <br/>
+  <h1 style="font-size:20px;">TaskRay Team: Resync from Owners and Shares</h1>
+  <br />
+  <br />
+  <span>TaskRay introduced automation to add Project, Task, and open Checklist Item owners and shares to a project team.
+    <br/>
+    <br/> During the upgrade process TaskRay automatically populated these team members. If this operation failed, it is possible
+    to manually run the migration from this page.</span>
+  <br/>
+  <br/>
+  <apex:form >
+    <apex:commandButton action="{!executeOwnerToContribMigrationBatch}" value="Run Team Resync from Owners and Shares" id="executeOwnerToContribMigrationBatch"
+    />
+  </apex:form>
+
+  <apex:outputPanel rendered="{!ownerToContribBatchId!=null}">
+    <br />
+    <span>Your Migration is running. To view the status of job id
+      <strong>{!HTMLENCODE(ownerToContribBatchId)}</strong> at:
+      <apex:outputLink target="_blank" value="{!HTMLENCODE(apexJobUrl)}">Apex Jobs</apex:outputLink> ( Setup | Monitoring | Apex Jobs).
+    </span>
+  </apex:outputPanel>
+  <br/>
+  <br/>
+  <br/>
+  <h1 style="font-size:20px;">TaskRay Team: Name Resync</h1>
+  <br />
+  <br />
+  <span>TaskRay introduced automation to populate the Name field on the Team object from the corresponding user or group id.
+    <br/>
+    <br/> During the upgrade process TaskRay automatically populates the name field with the appropriate value. If this operation
+    failed, it is possible to manually run the migration from this page.</span>
+  <br/>
+  <br/>
+  <apex:form >
+    <apex:commandButton action="{!executeContribNameMigrationBatch}" value="Run Team Name sync" id="executeContribNameMigrationBatch"
+    />
+  </apex:form>
+
+  <apex:outputPanel rendered="{!contribNameBatchId!=null}">
+    <br />
+    <span>Your Migration is running. To view the status of job id
+      <strong>{!HTMLENCODE(contribNameBatchId)}</strong> at:
+      <apex:outputLink target="_blank" value="{!HTMLENCODE(apexJobUrl)}">Apex Jobs</apex:outputLink> ( Setup | Monitoring | Apex Jobs).
+    </span>
+  </apex:outputPanel>
+  <br/>
+  <br/>
+  <br/>
+  <h1 style="font-size:20px;">TaskRay Project: Completion Percentage Resync</h1>
+  <br />
+  <br />
+  <span>TaskRay version 1.403 introduced a new percentage field on the Project object called Completion Percentage (API Name: TASKRAY__trCompletionPercentage__c).
+    This field rolls up the overall completion for a project including the project's tasks and sub project's tasks.
+    <br/>
+    <br/> During the upgrade process TaskRay automatically populates the percentage complete field. If this operation failed,
+    it is possible to manually run the migration from this page.</span>
+  <br/>
+  <br/>
+  <!-- <span><strong>This tool will be unable to convert Public Tags to Chatter topics on objects that are not Topics for Objects enabled</strong></span>
+    <br /><br />     -->
+  <apex:form >
+    <apex:commandButton action="{!executeCompletionPctBatch}" value="Run Completion Percentage sync" id="excecuteCompletionPctBatchButton"
+    />
+  </apex:form>
+
+  <apex:outputPanel rendered="{!pctBatchId!=null}">
+    <br />
+    <span>Your Migration is running. To view the status of job id
+      <strong>{!HTMLENCODE(pctBatchId)}</strong> at:
+      <apex:outputLink target="_blank" value="{!HTMLENCODE(apexJobUrl)}">Apex Jobs</apex:outputLink> ( Setup | Monitoring | Apex Jobs).
+    </span>
+  </apex:outputPanel>
+  <br/>
+  <br/>
+  <br/>
+  <h1 style="font-size:20px;">TaskRay Task: Completed Checkbox Migration</h1>
+  <br />
+  <br />
+  <span>TaskRay version 1.276 introduced a new checkbox field on the Task object called Completed (API Name: TASKRAY__trCompleted__c).
+    This field will allow users to track and report on a completed status across multiple business processes.
+    <br/>
+    <br/> Running this utility will attempt to check the Completed checkbox on Tasks which have List values that have been defined
+    as complete.</span>
+  <br/>
+  <br/>
+  <apex:form >
+    <apex:commandButton action="{!executeBatch}" value="Run Completed checkbox migration" id="excecuteBatchButton" />
+  </apex:form>
+
+  <apex:outputPanel rendered="{!batchId!=null}">
+    <br />
+    <span>Your Migration is running. To view the status of job id
+      <strong>{!HTMLENCODE(batchId)}</strong> at:
+      <apex:outputLink target="_blank" value="{!HTMLENCODE(apexJobUrl)}">Apex Jobs</apex:outputLink> ( Setup | Monitoring | Apex Jobs).
+    </span>
+  </apex:outputPanel>
+
+</apex:page>

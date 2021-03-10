@@ -1,0 +1,96 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <div style="width: 600px; margin: 0 auto;"> 
+   <img alt="Hypertension Image" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/Hypertension_Image?oid=00D4600000180Lw" style="max-width: 683.05px" title="Hypertension Image" /> 
+   <br /> 
+   <br /> 
+   <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},</span></span> 
+   <p dir="ltr"><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;">High blood pressure is a condition that affects 46% of Americans and uncontrolled, may result in cardiovascular events over time. Managing blood pressure to keep it within healthy ranges, reduces the strain on one’s heart, arteries, and kidneys which keeps people healthier longer.&nbsp;<br /> &nbsp;<br /> Harris Health System is not only a health system but an employer who was looking to help its employees manage their chronic conditions while also managing their costs. The employer was experiencing high medication spend related to treating employees with diabetes - and trending upwards. Furthermore, they realized a high number of their people living with diabetes also have hypertension. &nbsp;<br /> <br /> Learn how we worked with Harris Health System -- a fully-integrated healthcare system serving more than 4.6 million residents of Harris County, Texas -- to deliver a whole-person approach to care for its employees and spouses with chronic conditions. Results include: &nbsp;</span></span></p> 
+   <ul dir="ltr"> 
+    <li><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;">Multi-year impact on clinical diabetes measures, including reduced HbA1c levels and a fewer hypoglycemic readings</span></span></li> 
+    <li><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;">Measurable impact on systolic and diastolic blood pressure rates among those with uncontrolled hypertension &nbsp;</span></span></li> 
+    <li><span style="font-family: Arial, Helvetica, sans-serif; font-size: 11px;">Bending the cost curve through medical care, emergency room visits, and pharmacy costs associated with managing chronic conditions, resulting in a positive ROI&nbsp;</span></li> 
+   </ul> 
+   <p dir="ltr"><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;">Click </span></span><a href="https://creative.livongo.com/share/32AFA6BD-4740-49FC-996AA7EAF6F3E355/"><span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;">here</span></span></a>&nbsp;<span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;">to&nbsp;read more about how the Livongo platform is providing value to Harris Health System and their employees.&nbsp;<br /> <br /> The Livongo program provides a unique ability to aggregate real-time data to offer more personalized recommendations to Members where they are. To learn more about the program, please let me know.&nbsp;</span></span></p> 
+   <span style="font-size:11px;"><span style="font-family:Arial,Helvetica,sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /> Stay safe and healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> <br /> {{{Sender.Signature}}}&nbsp;</span></span> 
+   <style type="text/css"><!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:"Times New Roman \(Body CS\)";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:auto;
+	mso-font-signature:0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+span.EmailStyle15
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman \(Body CS\)";
+	color:black;
+	mso-themecolor:text1;
+	font-weight:normal;
+	font-style:normal;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+
+ 
+   </style> 
+  </div>
+ </body>
+</html>

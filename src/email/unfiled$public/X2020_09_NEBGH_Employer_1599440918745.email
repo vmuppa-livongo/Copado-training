@@ -1,0 +1,27 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; caret-color: rgb(0, 0, 0);"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">Dear {{{Recipient.FirstName}}},</span></span></span></span></span></span></span></span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; caret-color: rgb(0, 0, 0);"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">Life as we know it has changed due to recent events, resulting in different ways in which people think about work and wellbeing.&nbsp; Join industry leaders, and your peers, to learn how they're adapting to be prepared for an uncertain future while focusing on delivering better health outcomes and more engaging experiences for their employees through the use of technology.&nbsp;&nbsp;</span></span></span></span></span></span></span></span></span></span></span> 
+  <br /> 
+  <br /> 
+  <span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; caret-color: rgb(0, 0, 0);"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">We'd like to offer you a complimentary pass to attend NEBGH's virtual Conference being held on September 10th and 17th, 2020.&nbsp;</span></span></span></span></span></span></span></span></span></span></span> 
+  <br /> 
+  <span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; caret-color: rgb(0, 0, 0);"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span> 
+  <br /> 
+  <span style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; caret-color: rgb(0, 0, 0);"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">On <b>September 17th at 9:20am EDT</b>, hear </span></span></span></span></span></span></span></span></span></span></span> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 12px;">a dynamic panel discussion with Dr. Bimal Shah, Livongo's Chief Medical Officer, and other industry experts on approaches to effectively deliver care through the use of remote and virtual care solutions.&nbsp; &nbsp;</span></font> 
+  <br /> 
+  <br /> 
+  <font face="Arial, Helvetica, sans-serif"><span style="font-size: 12px;">If you are interested in joining this event, please let me know and I will coordinate&nbsp;with the&nbsp;Conference&nbsp;organizers to issue you a pass.&nbsp;</span></font> 
+  <br /> 
+  <br /> 
+  <span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">We hope you will join us for the conference. Thank you!</span></span></span></span></span></span></span></span></span></span></span><br /> <span style="caret-color:#000000"><span style="color:#000000"><span style="font-style:normal"><span style="font-variant-caps:normal"><span style="font-weight:normal"><span style="letter-spacing:normal"><span style="text-transform:none"><span style="white-space:normal"><span style="word-spacing:0px"><span style="-webkit-text-size-adjust:auto"><span style="text-decoration:none">&nbsp;</span></span></span></span></span></span></span></span></span></span></span><br /> Stay safe and healthy,<br /> {{{Sender.FirstName}}}<br /> <br /> {{{Sender.Signature}}}</span></span> 
+  <br /> 
+  <br /> &nbsp;
+ </body>
+</html>

@@ -1,0 +1,9 @@
+<p>A Client Overview record has been created for opportunity " {!Opportunity.Name}." Please navigate to the Opportunity in order to review the details and link the Client Overview with SpringCM.</p>
+<p>Sales Rep: {!Opportunity.OwnerFullName}</p>
+<p>Opportunity Type: {!Opportunity.Type}</p>
+<p>Close Date: {!Opportunity.CloseDate}</p>
+<p>Target Launch Date: {!Opportunity.Launch_Date__c}</p>
+<p>Billing Partner: {!Opportunity.BillingPartner__c}</p>
+<p>Contract Path: {!Opportunity.Contract_Path__c}</p>
+<p>Opportunity Link: {!Opportunity.Link}</p>
+<p>Client Overview: {!Opportunity.Contract}</p>

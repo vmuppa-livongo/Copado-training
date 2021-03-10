@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>PFLSFTMA__Account__c</name>
+        <relationshipLabel><!-- Attribution --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Campaign Name --></label>
+        <name>PFLSFTMA__Campaign_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Type --></label>
+        <name>PFLSFTMA__Campaign_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>PFLSFTMA__Campaign__c</name>
+        <relationshipLabel><!-- Attribution --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>PFLSFTMA__Contact__c</name>
+        <relationshipLabel><!-- Attribution --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Influence - Pipeline --></label>
+        <name>PFLSFTMA__Influence_Pipeline2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Influence - Pipeline Count --></label>
+        <name>PFLSFTMA__Influence_Pipeline_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Influence - Pipeline --></label>
+        <name>PFLSFTMA__Influence_Pipeline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Influence - Revenue --></label>
+        <name>PFLSFTMA__Influence_Revenue2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Influence - Revenue Count --></label>
+        <name>PFLSFTMA__Influence_Revenue_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Influence - Revenue --></label>
+        <name>PFLSFTMA__Influence_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsWon --></label>
+        <name>PFLSFTMA__IsWon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Member Status --></label>
+        <name>PFLSFTMA__Member_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Amount --></label>
+        <name>PFLSFTMA__Opportunity_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Close Date --></label>
+        <name>PFLSFTMA__Opportunity_Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Count --></label>
+        <name>PFLSFTMA__Opportunity_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Create Date --></label>
+        <name>PFLSFTMA__Opportunity_Create_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>PFLSFTMA__Opportunity__c</name>
+        <relationshipLabel><!-- Attribution --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Overall Influence - Pipeline --></label>
+        <name>PFLSFTMA__Overall_Influence_Pipeline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overall Influence - Revenue --></label>
+        <name>PFLSFTMA__Overall_Influence_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- PFL Send Count --></label>
+        <name>PFLSFTMA__PFL_Send_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- PFL Send Date --></label>
+        <name>PFLSFTMA__PFL_Send_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pipeline Influence $ --></label>
+        <name>PFLSFTMA__Pipeline_Influence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product ID --></label>
+        <name>PFLSFTMA__Product_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>PFLSFTMA__Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Influence $ --></label>
+        <name>PFLSFTMA__Revenue_Influence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>PFLSFTMA__Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>PFLSFTMA__Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- TMA_Transactions --></label>
+        <name>PFLSFTMA__TMA_Transactions__c</name>
+        <relationshipLabel><!-- Attribution --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>PFLSFTMA__Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>PFLSFTMA__User__c</name>
+        <relationshipLabel><!-- Attribution --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

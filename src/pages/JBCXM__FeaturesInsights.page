@@ -1,0 +1,72 @@
+<apex:page sidebar="false" showHeader="true" title="Feature Usage" tabStyle="Insights__tab">
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+	
+	<script type="text/javascript" >
+        var j$ = jQuery.noConflict();
+        
+        //Code to handle the change event on Survey Selection.
+        j$(document).ready(function() {
+	        j$('.jbaraInsightsSelectList').unbind().bind("change",function() {
+	        	var queryStringParam = encodeURIComponent(j$(this).val());
+	        	window.top.location.href=encodeURI('/apex/'+queryStringParam+'');
+	        });
+       });  
+     </script>
+	
+	
+	<div style="height: 70px; width: 100%;">
+        <div style='width: 60%' class="insightsSectionHeader360">
+            <apex:sectionHeader title="Insights" subtitle="Feature Usage"/>
+        </div>
+        <div style="margin-top: -50px;display: inline; float: right;margin-right:20px;" class="insightsSelectionClass">
+			<b>View Insights :</b>
+			<select class="jbaraInsightsSelectList">
+			  <option value="CustomerSuccessInsights">Customer Success</option>
+			  <option value="FeaturesInsights" selected="selected">Feature Usage</option>
+			</select>
+        </div> 
+  	</div>
+	
+	
+		
+	<div class="bPageBlock bEditBlock secondaryPalette" style='min-width:500px;max-width:100%;background-color: #FFFFFF;'
+		 	 id="jbaraFeatureUsageGraphPage">
+            <div class="pbHeader" style='height:30px;padding-left:5px;color:#000;background-color: #FFFFFF;'>
+            	<img class="jbarahideListButton dummyHideFeatureUsageGraphIcon" title="Hide Feature Usage Summary"
+				            style="cursor: pointer;" onclick="togglePanels('dummyHideFeatureUsageGraphIcon','dummyFeatureUsageGraphDetail');"
+				            src="/s.gif" />                
+                <h2>
+                   Feature Usage
+                </h2>
+            </div>
+            <div class="pbBody dummyFeatureUsageGraphDetail" style="height:auto;max-width:100%;padding: 10px;background-color: #FFFFFF;">
+					<iframe src="apex/FeatureUsageGraph?inline=1" width="100%" height="420px" frameborder="0">
+                             		</iframe> 
+     		 </div>              
+        </div>
+	
+		<div> 
+	 		<apex:include pageName="JBCXM__FeatureUsage" />
+     	 </div>
+     
+   
+        
+         <div class="bPageBlock bEditBlock secondaryPalette" style='min-width:250px;max-width:100%;background-color: #FFFFFF;'
+		 	 id="jbaraFeaturetopbottomPage">
+            <div class="pbHeader" style='height:30px;padding-left:5px;color:#000;background-color: #FFFFFF;'>
+            	<img class="jbarahideListButton dummyHidefeaturestopbottomIcon" title="Hide Top Bottom Unused Features"
+				            style="cursor: pointer;" onclick="togglePanels('dummyHidefeaturestopbottomIcon','dummyfeaturestopbottomDetail');"
+				            src="/s.gif" />                
+                <h2>
+                   Top-Bottom Features
+                </h2>
+            </div>
+            <div class="pbBody dummyfeaturestopbottomDetail" style="max-width:100%;padding: 10px;background-color: #FFFFFF;">
+			    <iframe src="apex/featurestopbottom?inline=1" width="100%" height="250px" frameborder="0">
+			    </iframe>
+             </div>              
+        </div>
+      
+</apex:page>

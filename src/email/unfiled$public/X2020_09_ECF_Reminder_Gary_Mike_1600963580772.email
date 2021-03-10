@@ -1,0 +1,39 @@
+<html>
+ <head> 
+  <title></title> 
+  <style type="text">div {
+     max-width: 600px;
+     min-width: 300px;
+}
+	
+  </style> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  &nbsp; 
+  <div style="width: 600px; margin: 0px auto; text-align: center;"> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><img alt="2020_Livongo_Executive_Client_Forum" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/X2020_Livongo_Executive_Client_Forum?oid=00D4600000180Lw" style="max-width: 600px" title="2020_Livongo_Executive_Client_Forum" /></span></span> 
+  </div> 
+  <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">&nbsp;</span></span> 
+  <div style="width: 600px; margin: 0px auto;"> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Dear {{{Recipient.FirstName}}},<br /> <br /> We may be meeting virtually, but we’ll be learning together. We’re thrilled to have you join our exclusive group of leaders at Livongo’s upcoming Executive Client Forum on Tuesday, September 29 from 2:00 – 6:00 PM CDT.&nbsp;<br /> <br /> At this invitation-only event, you’ll hear first hand from Livongo’s leaders who will share the latest insights and future plans to further our mission of empowering people with chronic conditions to live better and healthier lives. This interactive forum means we’ll also get to hear what’s most important to you and your employees today and in the year ahead. We’ll also add in some fun breaks to shake us all out of our Zoom routine.&nbsp;<br /> <br /> <b>In advance of the meeting, please take a moment to review a few logistical items to maximize your experience:&nbsp;</b></span></span> 
+  </div> 
+  <ul> 
+   <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Keep an eye out for a package that will arrive in the coming days - a signature may be required.&nbsp;&nbsp;</span></span></li> 
+   <li style="width: 600px; margin: 0px auto;"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 12px;">Sign and return the photography consent and distribution document. This will come in a separate email through Docusign.</span></font></li> 
+   <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Review the agenda:&nbsp;</span></span> 
+    <ul> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>Welcome:</b> Jim Pursley, Chief Commercial Officer &amp; Heidi Anderson, SVP, Client Experience</span></span></li> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>Executive Leadership Kickoff: </b>Jenny Schneider, MD, President</span></span></li> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>Insights Sharing: Managing in this New Era:</b> Amy Cosler, VP, Channel Marketing &amp; Corey&nbsp;Luecht, Director, Benefits Design and Planning, Allstate Insurance&nbsp;</span></span></li> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>Virtual Cooking Demonstration:</b> Sarah Copeland, Award-WInning Author and Chef</span></span></li> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>Clinical Study Insights:</b> Bimal Shah, MD, Chief Medical Officer&nbsp;</span></span></li> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>New Product Innovation and Discussion:</b> Amar Kendale, Chief Product Officer</span></span></li> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>Closing Remarks and Next Steps: </b>Courtnee LeClaire, Chief Marketing Officer &amp; Gary Alpert, SVP Client Success</span></span></li> 
+     <li style="width: 600px; margin: 0px auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;"><b>Virtual Cocktail Hour:</b> Featuring an exclusive performance with a surprise musical guest&nbsp;</span></span></li> 
+    </ul> </li> 
+  </ul> 
+  <div style="width: 600px; margin: 0px auto;"> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">As a reminder, the agenda and additional details can be found <a href="https://livongoecf.splashthat.com/">here</a> . &nbsp;<br /> <br /> We’re excited you’ll be joining us for this special event! Please don’t hesitate to reach out with any questions.<br /> <br /> Stay Healthy,&nbsp;<br /> <br /> Gary Alpert<br /> SVP, Client Success&nbsp; &nbsp; &nbsp;<br /> <b id="docs-internal-guid-893b7bb9-7fff-3b24-2f47-353efff0a46a">&nbsp; </b> </span></span> 
+  </div>
+ </body>
+</html>

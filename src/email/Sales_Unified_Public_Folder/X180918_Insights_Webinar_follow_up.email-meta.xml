@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>180918 TJU Case Study</name>
+    <style>freeForm</style>
+    <subject>Case Study: Livongo Improves Clinical Outcomes and Reduces Cost</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I am very excited to share our recent case study on how Livongo improved clinical outcomes and reduced diabetes costs for employees of Jefferson Health - Northeast. You can see the full case study here.
+
+Jefferson Health Employees loved the program and gave Livongo a +67 net promoter score, which rivals top consumer tech companies including Netflix and Amazon. In addition, members experienced an average A1c reduction of 1.4% and sustained that reduction for over two years. Finally, we observed a 17% decrease in overall diabetes-related medical spend.
+
+I would love to schedule time to discuss how Livongo can empower your employees to live happier and healthier lives while reducing diabetes spend for your organization.
+
+Hope to hear from you soon.
+
+[Signature]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

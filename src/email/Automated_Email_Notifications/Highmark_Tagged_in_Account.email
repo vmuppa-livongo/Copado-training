@@ -1,0 +1,7 @@
+Highmark has been tagged as either the Primary, Secondary or Tertiary Client Health Plan for {!Account.Name}.
+
+Primary Client Health Plan: {!Account.00N46000009jXub}
+
+Secondary Client Health Plan: {!Account.00N46000009jXur}
+
+Tertiary Client Health Plan: {!Account.00N46000009jXuy}

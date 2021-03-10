@@ -1,0 +1,139 @@
+<html><head>
+	<style type="text/css">html {
+   overflow-y: visible !important ;
+}
+	</style>
+	<title></title>
+	<meta content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initialscale=1.0" /><meta content="IE=edge" />
+	<style type="text/css">@media screen and (max-width: 480px) {
+  .contentbuilderBaseColumnRow .columnCell {display:inline-block; width:100%}
+}
+ .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:600px}
+@media only screen and (max-width: 480px) {
+  .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:320px}
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;"><table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td align="Center" style="padding-bottom:10px;padding-top:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/MATTER_Header1?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="600" /></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-bottom:5px;padding-top:10px;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear {{{Recipient.FirstName}}},&nbsp;<br />
+												<br />
+												We would like to invite you to a <i><b>private, premium networking</b></i> session immediately following the second program in the virtual series: <i>Insights on Innovation for Self-Insured Employers</i>, which is hosted by MATTER and Livongo, now part of Teladoc Health. During the session, you’ll have an opportunity to connect with the speakers and engage in a virtual conversation while enjoying gourmet snacks that we will send directly to you.&nbsp;<br />
+												<br />
+												The session will take place from <b>1:30pm - 2:30pm CT</b>. If you are interested in joining, please send me your contact information and current mailing address. Once registered, you will receive a meeting invite for this invitation-only event from Casey Sheridan at MATTER.&nbsp;<br />
+												&nbsp;<br />
+												In case you missed the first program of the series, you can access the takeaways from the session </span></span><a href="https://matter.health/posts/aon-boeing-and-livongo-share-innovation-strategies-for-self-insured-employer-groups/?utm_source=livongo&amp;utm_medium=social&amp;utm_campaign=self-insured-pt1"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">here</span></span></a><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">. We look forward to your participation and feedback.<br />
+												&nbsp;<br />
+												Stay healthy,<br />
+												{{{Sender.FirstName}}}<br />
+												<br />
+												{{{Sender.Signature}}}</span></span> <span style="overflow-y: visible;"> </span></td>
+											</tr>
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-bottom:5px;padding-top:10px;"><br />
+												&nbsp;</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<div style="width: 600px; margin: 0 auto;">
+						<hr style="width:100%;text-align:left;margin-left:0" /></div>
+
+						<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+							
+								<tr>
+									<td align="center" width="100%">
+									<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+										
+											<tr>
+												<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+												<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+													
+														<tr valign="top">
+															<td class="columnCell" style="vertical-align:middle;" width="8.33%">
+															<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td align="Center" style="padding-right:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/livongo_mark_2020_blue?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="39" /></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="75%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="padding-left:10px;font-family:Times;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Livongo</b> | 150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041</span></span><br />
+																		<br />
+																		<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">2020 &copy; Livongo. All Rights Reserved.</span></span></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="16.66%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="font-family:Arial,Helvetica,sans-serif;"><a href="mailto:unsubscribe@e-1alg9zf3qo01qow46vkmxmslp0apnl5npfuc39907dhzsihkha.46-180lweai.na134.apex.salesforce.com?subject=Unsubscribe"><span style="color:#0060fc;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Unsubscribe</span></span></span></a><br />
+																		<br />
+																		&nbsp;</td>
+																	</tr>
+																
+															</table>
+															</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			<img src="https://livongohealth2ndorg.my.salesforce.com/servlet/servlet.ImageServer?oid=00D4600000180Lw&amp;esid=0184R00000hCc08" />
+			<div id="" style="left: 69px; top: 28px;">&nbsp;</div>
+
+			<div id="" style="left: 69px; top: 28px;">&nbsp;</div>
+			</td>
+		</tr>
+	
+</table></body></html>

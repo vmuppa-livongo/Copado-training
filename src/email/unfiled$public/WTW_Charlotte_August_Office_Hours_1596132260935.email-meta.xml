@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>consultant office hours</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>WTW Charlotte_August Office Hours</name>
+    <style>none</style>
+    <subject>Livongo Virtual Office Hours for WTW Charlotte coming in August</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

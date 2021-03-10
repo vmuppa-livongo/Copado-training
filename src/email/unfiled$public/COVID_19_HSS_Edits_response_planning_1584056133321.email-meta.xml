@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>sales tool to engage clients/prospects in Livongo&apos;s response to COVID-19</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>COVID-19 HSS Edits response planning</name>
+    <style>none</style>
+    <subject>Invitation: COVID-19 response planning</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

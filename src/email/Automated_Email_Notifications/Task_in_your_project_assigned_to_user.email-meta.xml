@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Task in your project assigned to user</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Task in your project assigned to user</name>
+    <style>none</style>
+    <subject>Task In Your Project Assigned To User</subject>
+    <textOnly>Hello {!TASKRAY__Project_Task__c.CreatedBy}, 
+
+The following TaskRay Task in your project has been assigned from a queue to {!TASKRAY__Project_Task__c.OwnerFullName}: 
+
+Project: {!TASKRAY__Project_Task__c.Project_Name__c} 
+Task(s): {!TASKRAY__Project_Task__c.Name} (Due: {!TASKRAY__Project_Task__c.TASKRAY__Deadline__c}) 
+Task Owner: {!TASKRAY__Project_Task__c.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notify Enrollment Marketing when DOPS tasks are completed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notify Enrollment Marketing when DOPS tasks are completed</name>
+    <style>none</style>
+    <subject>Data Ops has completed data file processing for client {!TASKRAY__Project_Task__c.TASKRAY__trAccount__c}</subject>
+    <textOnly>Hello!
+
+You are listed as the assigned CIM / CSM, or Enrollment Marketing Lead  for Account {!TASKRAY__Project_Task__c.TASKRAY__trAccount__c}. The Data Operations team has complete processing new data file(s) for this client as a part of the below project. Please take the appropriate action to complete your enrollment marketing and pre-reg activities.
+
+Project Name: {!TASKRAY__Project_Task__c.TASKRAY__Project__c}
+Related Client Overview: {!TASKRAY__Project_Task__c.Client_Overview__c}
+Launch Date: {!TASKRAY__Project_Task__c.Launch_Date_Due_Date__c}
+Targeted Marketing Start Date: {!TASKRAY__Project_Task__c.Targeted_Marketing_Start_Date__c}
+Task Name: {!TASKRAY__Project_Task__c.Name}
+Task Owner: {!TASKRAY__Project_Task__c.OwnerFullName}
+Link to Salesforce record: {!TASKRAY__Project_Task__c.Link}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

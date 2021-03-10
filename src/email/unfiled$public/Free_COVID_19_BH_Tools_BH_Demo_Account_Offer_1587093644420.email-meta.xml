@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Please use this template to share the free COVID-19 BH resources with your contacts, including an offer to set up a full demo account for your contact.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Free COVID-19 BH Tools_BH Demo Account Offer</name>
+    <style>none</style>
+    <subject>Complimentary COVID-19 Mental Wellness Tools</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

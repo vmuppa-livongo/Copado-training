@@ -1,0 +1,135 @@
+<!-- Copyright (c) 2011 JBara Software, Inc.  
+---- Purpose                    : Displays all TOp Bottom features of a customer.
+---- Other comments (optional)  : 
+----
+-->
+<apex:page sidebar="false" tabStyle="Insights__tab" Controller="JBCXM.CustomerFeatures">
+     <!-- Static Resource Includes: Jquery and css files  -->
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+    
+    <style>
+      	/*body #AppBodyHeader {  
+	            display: none;  
+	        }*/
+	    .featuresAlign{
+	    	 text-align: center;
+	    } 
+	    .topBottomUnusedThead{
+	    	padding:3px;
+	    }
+	    .TopBottomUnusedFeatureDivs{
+	    	display: inline-block;
+	    	width:33%;
+	    	*display:inline;
+	    	vertical-align:top;
+	    }
+	    .topBottomUnusedTdName{
+	    	width:50%;	
+	    	padding:2px 4px;    	
+	    }
+	    .topBottomUnusedTdCount{
+	    	width:50%;
+	    	text-align:center;
+	    	padding:2px 4px;	
+	    }
+    </style> 
+    <script type="text/javascript" >
+    	var j$ = jQuery.noConflict();
+    	j$(document).ready(function() {
+    		
+    		var mainData=eval('{!(TopFeaturesEnabled)}');
+    		var topFeaturesData=mainData.slice();
+    		var bottomFeaturesData=mainData.slice();
+    		var unusedFeaturesData = mainData.slice();
+    		topFeaturesData = topFeaturesData.sort(function(a,b) { return parseFloat(b.enabCustCount) - parseFloat(a.enabCustCount) } );
+    	    bottomFeaturesData = bottomFeaturesData.sort(function(a,b) { return parseFloat(a.enabCustCount) - parseFloat(b.enabCustCount) } );
+    	    
+    	    unusedFeaturesData =j$.grep(unusedFeaturesData, function(dt) {
+                    return eval(dt.licCustCount == '0' && dt.enabCustCount == '0' );
+                });
+    		generateFeatureSortTable("topFeaturesId",topFeaturesData,10);
+    	    generateFeatureSortTable("bottomFeaturesId",bottomFeaturesData,10);
+    	    
+    	    generateFeatureSortTable("unusedFeaturesId",unusedFeaturesData);
+    	    
+    		j$("#topFeaturesId tr:odd,#bottomFeaturesId tr:odd,#unusedFeaturesId tr:odd").css("background-color", "#F5FAFE");
+    	});
+    	function generateFeatureSortTable(container,data,limit){
+    		j$('#'+container).html("");    			
+    			j$(data).each(function(index, element){
+    				if(container==='unusedFeaturesId'){
+    					j$('#'+container).append('<tr><td width="100%"> '+element["feature"]+' </td></tr>'); 
+    				}
+    				else{    					
+						if(limit> index+1){
+							j$('#'+container).append('<tr><td class="topBottomUnusedTdName"> '+element["feature"]+' </td> <td class="topBottomUnusedTdCount"> '+element["enabCustCount"]+' </td></tr>');  
+						}else{
+							return false;
+						} 
+			       }  
+			  });
+    	}
+    	
+    </script>
+
+  			<div>
+	            <div class="TopBottomUnusedFeatureDivs">
+	            	<table class="ui-state-default" align="center" width="100%" style="border-collapse:collapse;table-layout:fixed ;">
+                            <thead>
+                            	<tr>                                    
+                                    <td class="featuresAlign topBottomUnusedThead" colspan="2" style="border-bottom: 1px solid #C5DBEC;" >Top Features </td>
+                                </tr>
+                                <tr>                                    
+                                    <td class="featuresAlign topBottomUnusedThead" style="border-right: 1px solid #C5DBEC;" width="65%">Feature</td>
+                                    <td class="featuresAlign topBottomUnusedThead" width="35%"># Customers</td>
+                                </tr>
+                            </thead>
+                  	</table>
+	            		<table id='topFeaturesId' border="0" width="100%" style="border-collapse:collapse;table-layout:fixed ;border: 1px solid #C5DBEC;border-top: none;">
+						</table>
+					
+				</div>
+				<div class="TopBottomUnusedFeatureDivs">
+					
+					<table class="ui-state-default" align="center" width="100%" style="border-collapse:collapse;table-layout:fixed ;">
+                            <thead>
+                            	<tr>                                    
+                                    <td class="featuresAlign topBottomUnusedThead" colspan="2" style="border-bottom: 1px solid #C5DBEC;" width="100%">Bottom Features</td>
+                                </tr>
+                                <tr>                                    
+                                    <td class="featuresAlign topBottomUnusedThead" style="border-right: 1px solid #C5DBEC;" width="65%">Feature</td>
+                                    <td class="featuresAlign topBottomUnusedThead" width="35%"># Customers</td>
+                                </tr>
+                            </thead>
+                  	</table>
+					<table id='bottomFeaturesId' border="0" width="100%" style="border-collapse:collapse;table-layout:fixed ;border: 1px solid #C5DBEC;border-top: none;">
+						</table>
+					</div>
+				<div class="TopBottomUnusedFeatureDivs">
+					<table class="ui-state-default" align="center" width="100%" style="border-collapse:collapse;table-layout:fixed ;">
+                            <thead>
+                            	<tr>                                    
+                                    <td class="featuresAlign" colspan="2" style="border-bottom: 1px solid #C5DBEC;padding:0px" height="44px">Unused Features</td>
+                                </tr>
+                               
+                            </thead>
+                  	</table>
+					<div  style="border-collapse:collapse;max-height:171px;overflow:auto; border-bottom: 1px solid #C5DBEC;">
+                      	<table id='unusedFeaturesId' border="0" width="100%" style="border-collapse:collapse;table-layout:fixed ;border: 1px solid #C5DBEC;border-top: none;">
+						</table>                                   
+                    </div>
+					
+				</div>
+				<br/><br/>
+				<div style="clear:both;float:left;Font-weight:bold;">
+					<apex:outputText value="Active Customers Without Data : {0}">
+						<apex:param value="{!ActiveCustomersCount - ActiveCustomersCountWithFeatures}" />
+					</apex:outputText>
+                </div> 
+                   
+        	</div>
+        	
+</apex:page>

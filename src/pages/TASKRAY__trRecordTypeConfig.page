@@ -1,0 +1,8 @@
+<apex:page docType="html-5.0" standardStylesheets="false" showHeader="false" sidebar="false" controller="TASKRAY.trTaskBoardController"
+  applyHtmlTag="false" applyBodyTag="false">
+  <html>
+  Deprecated Do Not Use
+
+  </html>
+
+</apex:page>

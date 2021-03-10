@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>MedCity article on Livongo/Dexcom partnership as well as fireside chat with Jenny Schneider</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_Dexcom_Medcity_email_template</name>
+    <style>none</style>
+    <subject>Dexcom and Livongo Partner to Offer Members More</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

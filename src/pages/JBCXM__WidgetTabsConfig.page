@@ -1,0 +1,311 @@
+<!-- Copyright (c) 2011 JBara Software, Inc.
+---- Purpose                    : Included as section under administration tab in UI settings tab.
+----                              User can Add labels and change display order for tabs
+---- Other comments (optional)  : None
+-->
+
+<apex:page Controller="JBCXM.UsageTracking" sidebar="false" title="Widgets Tab Config Settings" tabStyle="Administration__tab">
+ 	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+    <apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-ui-1.8.13.custom.min.js'))}"/>
+    <apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery, 'css/redmond/jquery-ui-1.8.11.custom.css'))}"/>
+  	<style type = "text/css">
+		li{
+			padding: 0px;
+			list-style: none;
+		}
+		.jbDummyLiCls{
+			padding-right:20px;
+		}
+		.moveUpIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/a_up_act.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;
+		}
+		.moveTopIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/go-top-3.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;
+		}
+		.moveDownIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/a_down_act.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;		
+		}
+		.moveBottomIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/go-bottom-3.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;
+		}
+		.moveUpDownIconClass{
+			background:url("{!URLFOR($Resource.SurveyImg)}/Icons/dragupdown.png") no-repeat center center;
+			height:16px;
+			width:16px;
+			display:inline-block;		
+		}
+		table.list tr.headerRow td, table.list tr.headerRow th {
+		    background: url("/img/alohaSkin/grid_headerbg.gif") repeat-x scroll 0 bottom #FFFFFF;
+		    border-width: 0 0 1px 1px;
+		    color: #000000;
+		    font-size: 0.9em;
+		    font-weight: bold;
+		    padding: 5px 2px 4px 5px;
+		}
+		.jbaraErrorMessageClass{
+        	margin-top:20px;
+        	margin-bottom: 20px;
+        	margin-left: auto;
+		    margin-right: auto;
+		    width: 60%;
+		    padding: 10px;
+        }
+      .warningImageClass{
+            background-image: url('/img/msg_icons/error32.png');
+	        width:32px;
+	        height:32px;
+	        display:inline-block;
+        } 
+  	</style>
+    
+                  
+	<apex:sectionHeader title="Widget  Configuration"/>	
+	<a href="/apex/Administration?sfdc.tabName={!JSENCODE($CurrentPage.parameters.tabId)}#Administration-UIViews" style="text-decoration:none;">&nbsp;«&nbsp;Back</a>
+
+		
+		<script type="text/javascript">
+			var j$ = jQuery.noConflict();
+			var widgetJson;
+			var tabNameHeader;
+			var oppJsonList;
+			var accJsonList;
+			
+			var isCheckWidgetTab;
+		
+			var widgetName;
+			var emptyFldsLen;
+			
+			j$(document).ready(function(){			
+				widgetJson = eval({!(WidgetConfigJsonList)});
+				widgetName = "{!($CurrentPage.parameters.widget)}";
+				
+				if(widgetName=='opp'|| widgetName=='account'){
+					j$(".jbaraWidgetTabsMainCls").show();
+				}else{
+					j$("#errorMessageDiv").show();
+				}
+				
+				accJsonList = getWidgetJsonTabs('JBAccountWidget');
+				oppJsonList = getWidgetJsonTabs('JBOpportunityWidget');		
+				
+				if(widgetName =='opp'){												
+					buildWidgetJsonTable(oppJsonList,'jbaraWidgetTabsConfigTbody');
+				}else if(widgetName=='account'){				
+					buildWidgetJsonTable(accJsonList,'jbaraWidgetTabsConfigTbody');
+				}
+				
+				//drag and drop table row 
+				j$("#jbaraWidgetTabsConfigTable tbody,#jbaraOppTabsConfigTable tbody").sortable({ 
+	     	 		containment: 'parent',
+	     	 		axis:'y',
+	     	 		handle:'.moveUpDownSelectedFieldIcon',
+	     	 		cursor: 'move',
+				    helper: function(e, tr) {
+				        var j$originals = tr.children();
+				        var j$helper = tr.clone();
+				        j$helper.children().each(function(index)  {
+				          // Set helper cell sizes to match the original sizes 
+				          j$(this).width(j$originals.eq(index).width())
+				        });
+				        return j$helper;
+				    }	     	 
+	     	  	});	     	  
+	     		
+	     		// All the below evnts bind move the table rows for display order 
+	     		j$('.moveUpIconClass').live("click",function () {
+					if (j$(this).prev()){ j$(this).parent().parent().insertBefore(j$(this).parent().parent().prev());}
+				});
+				j$('.moveDownIconClass').live("click",function () {
+				    if (j$(this).next()){ j$(this).parent().parent().insertAfter(j$(this).parent().parent().next());}
+				});
+				j$('.moveTopIconClass').live("click",function () {
+					if (j$(this).prev()){j$(this).parent().parent().parent().prepend(j$(this).parent().parent());}
+				});
+				j$('.moveBottomIconClass').live("click",function () {
+					if (j$(this).next()){j$(this).parent().parent().parent().append(j$(this).parent().parent());}
+				});	
+					
+				
+			});
+			
+			function getWidgetJsonTabs(widgetName){	
+				var returnList  =   j$.grep(widgetJson,function(index,element){				
+						return index.widgetName == widgetName;
+				});				
+				return returnList;
+			}
+			
+			//Construct widget tables to display 
+			function buildWidgetJsonTable(jsonList,containerId){			
+				var htmlList = '';
+				for(var i = 0 ;i < jsonList.length; i++ ){
+					blnChecked =(jsonList[i].visibilityMode==true)?'Checked':'';
+					htmlList += '<tr style="cursor:pointer;">';
+					htmlList += '<td class="jbDummyLiCls jbWidgetName" style="display:none;">'+jsonList[i].widgetName+'</td>';	
+					htmlList += '<td class="jbDummyLiCls jbName">'+jsonList[i].name+'</td>';						
+					htmlList += '<td class="jbDummyLiCls"><input class="jbLabel" type = "text" maxlength="15" value = "'+(jsonList[i].label)+'"></input></td>';
+					htmlList += '<td class="jbDummyLiCls"><input class="jbCheckBox" type ="checkbox" '+blnChecked+'></td>';
+					htmlList += '<td>';
+					htmlList += '<span title="Move Top" class="moveTopIconClass moveTopSelectedFieldIcon">&nbsp;&nbsp;</span>';
+					htmlList += '<span title="Move Up" class="moveUpIconClass moveUpSelectedFieldIcon">&nbsp;</span>';
+					htmlList += '<span title="Move Down" class="moveDownIconClass moveDownSelectedFieldIcon">&nbsp;</span>';
+					htmlList += '<span title="Move Bottom" class="moveBottomIconClass moveBottomSelectedFieldIcon">&nbsp;&nbsp;</span>';
+					htmlList += '<span title="Drag Up and Down" class="moveUpDownIconClass  moveUpDownSelectedFieldIcon">&nbsp;</span>';
+					htmlList += '</td>';					
+					htmlList += '</tr>';
+				}
+				tabNameHeader = (widgetName=='account') ? 'Account' : 'Opportunity';
+				j$(".mainTitle").html(tabNameHeader+' Widget Settings');  	
+				j$('#'+containerId).html(htmlList);
+				
+			}
+			
+			
+			var widgetDisplayOrderClass = function () {
+			        this.widgetName = null;
+			        this.name = null;
+			        this.label = null;
+			        this.displayOrder = null;
+			        this.visibilityMode = null;			           
+			}
+			
+			function saveWidgetTabsSettings() {				
+				var tabsConfig = new Array();
+				var widgetTabs= buildWidgetConfigJson(j$("#jbaraWidgetTabsConfigTbody tr"));
+				if(isCheckWidgetTab ){
+					if(emptyFldsLen == 0){
+						tabsConfig = (widgetName=='account') ? widgetTabs.concat(oppJsonList) : widgetTabs.concat(accJsonList) 
+					    j$(".jbaraDummyTabsConfigId").val(JSON.stringify(tabsConfig));
+					    actionSaveWidgetSettings();
+					}else{
+						alert("Labels are required.");
+						j$(".dummyWidgetTabsSettingsSaveBtn").removeAttr("disabled");
+						j$(".dummyWidgetTabsSettingsSaveBtn").removeClass("btnDisabled").addClass("btn");	  
+						return false;
+					}				    
+				}else{
+					alert("Please check display mode true for at least one tab.");
+					j$(".dummyWidgetTabsSettingsSaveBtn").removeAttr("disabled");
+					j$(".dummyWidgetTabsSettingsSaveBtn").removeClass("btnDisabled").addClass("btn");	  
+					return false;
+				}				 
+			}
+			
+			function disableBtn(obj) {
+                j$(obj).attr("disabled", true);
+                j$(obj).removeClass("btn").addClass("btnDisabled");
+            }
+		
+			function buildWidgetConfigJson(listItemsRedorder){
+				var itemsWidgetArray = new Array();			    
+			    listItemsRedorder.each(function (idx, tr) {
+			        var widgetItem 				= new widgetDisplayOrderClass();
+			        widgetItem.widgetName 		= j$(tr).find(".jbWidgetName").text();
+			        widgetItem.name 			= j$(tr).find(".jbName").text();
+			        widgetItem.label 			= j$(tr).find(".jbLabel").val();
+			        widgetItem.displayOrder  	= idx + parseInt(1);
+			        widgetItem.visibilityMode 	= j$(tr).find(".jbCheckBox").is(':checked') ? true: false ;			       
+			        itemsWidgetArray.push(widgetItem);
+			    });
+			    isCheckWidgetTab = j$("#jbaraWidgetTabsConfigTbody input").is(":checked");
+				emptyFldsLen = 0;
+			    j$("#jbaraWidgetTabsConfigTbody :text:not(':hidden')").each(function() {
+				    if(j$.trim(j$(this).val()) === ""){
+				    	emptyFldsLen++;
+				    }
+				});
+			    return itemsWidgetArray;			
+			}
+			function cancelWidgetTabsSettings(){
+		       	window.top.location.href='/apex/Administration#Administration-UIViews';
+		    }
+		    
+		    function afterWidgetSaveClick(){
+		    	if(isCheckWidgetTab && (emptyFldsLen == 0) ){
+					window.top.location.href='/apex/Administration?sfdc.tabName={!JSENCODE($CurrentPage.parameters.tabId)}#Administration-UIViews';
+				}
+				return false;		    
+		    }
+		    
+		</script>
+  
+  
+	<apex:form >  
+	<div class="apexp jbaraWidgetTabsMainCls" style="display:none;">
+		<div class="bPageBlock brndScnBrd apexDefaultPageBlock secondaryPalette">
+	    	<div class="pbHeader">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr>
+							<td class="pbTitle">
+								<h2 class="mainTitle"></h2>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	
+			<div class="pbBody">	
+		      
+				<div id="jbaraWidgetTabsConfig">
+					<table id="jbaraWidgetTabsConfigTable" class="list" style="border: 1px solid #DDDDDD; border-collapse: collapse;width:100%">
+				  		<thead class="rich-table-thead">
+				  			<tr class="headerRow">
+				  				<td class="headerRow" style="display:none;"></td>
+				  				<td class="headerRow">Tab Name</td>
+				  				<td class="headerRow">Label</td>
+				  				<td class="headerRow">Display Mode</td>
+				  				<td class="headerRow">Reorder</td>
+				  			</tr>
+				  		</thead>
+				  		<tbody id="jbaraWidgetTabsConfigTbody">
+				  		
+				  		</tbody>
+				  	
+					</table>
+				</div>
+		
+			</div>
+			<div class="pbBottomButtons">
+			    <table border="0" cellspacing="0" cellpadding="0">
+			        <tbody>
+			            <tr>
+			                <td class="pbTitle">&nbsp;</td>
+			                <td class="pbButtonb ">
+								<input type="button" onclick="disableBtn(this);saveWidgetTabsSettings()" value="Save" class="btn dummyWidgetTabsSettingsSaveBtn" />
+								<input type="button" onclick="cancelWidgetTabsSettings()" value="Cancel" class="btn" />																
+			                </td>
+			            </tr>
+			        </tbody>
+			  </table>
+			</div>		
+		</div>
+	</div>
+  
+  
+
+	
+		<div align="center" style="margin-top: 20px;display:none;" id="errorMessageDiv" class="jbaraErrorMessageClass ui-widget ui-widget-content ui-state-error ui-corner-all">
+			<span class="warningImageClass">&nbsp;</span> 
+			<span style="vertical-align: text-top;font-size:15px;vertical-align: sub;" class="validationMsgClass">
+				No widget tabs found.
+				<a href="/apex/Administration?sfdc.tabName={!JSENCODE($CurrentPage.parameters.tabId)}#Administration-UIViews" style="text-decoration:none;color:#015BA7;">&nbsp;«&nbsp;Go back to Administration page</a>			
+			</span>
+		</div>
+			
+		<apex:actionFunction name="actionSaveWidgetSettings" action="{!saveWidgetConfigSettings}" oncomplete="return afterWidgetSaveClick()"></apex:actionFunction>													
+		<apex:inputTextarea value="{!getTabsConfig}" style="display:none;" styleClass="jbaraDummyTabsConfigId"/>	
+	</apex:form>
+</apex:page>

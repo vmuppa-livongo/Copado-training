@@ -1,0 +1,130 @@
+<apex:page sidebar="false" showHeader="true" tabStyle="Insights__tab" controller="JBCXM.CustomerSuccessInsights" title="Customer Success">
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__JQuery,'js/jquery-1.5.2.min.js'))}"/>
+	<apex:includeScript value="{!JSENCODE(URLFOR($Resource.JBCXM__CustomJS, 'CustomJS/jbaraCustomUtility.js'))}" />
+	<apex:stylesheet value="{!JSENCODE(URLFOR($Resource.JBCXM__appStyles, 'main.css'))}" />
+	
+	<script type="text/javascript" >
+        var j$ = jQuery.noConflict();
+        
+        //Code to handle the change event on Survey Selection.
+        j$(document).ready(function() {
+	        j$('.jbaraInsightsSelectList').unbind().bind("change",function() {
+	        	var queryStringParam = encodeURIComponent(j$(this).val());
+	        	window.top.location.href=encodeURI('/apex/'+queryStringParam+'');
+	        });
+       });  
+     </script>
+	
+	
+	<div style="height: 70px; width: 100%;">
+        <div style='width: 60%' class="insightsSectionHeader360">
+            <apex:sectionHeader title="Insights" subtitle="Customer Success"/>
+        </div>
+        <div style="margin-top: -50px;display: inline; float: right;margin-right:20px;" class="insightsSelectionClass">
+			<b>View Insights :</b>
+			<select class="jbaraInsightsSelectList">
+			  <option value="CustomerSuccessInsights" selected="selected">Customer Success</option>
+			  <option value="FeaturesInsights">Feature Usage</option>
+			</select>
+        </div> 
+  	</div>
+  	
+   	
+  	<style>	    
+		.jbCustomerSnapDiv{
+			padding: 5px 5px;
+			text-align:center;
+			font-size:1.1em;
+			width:150px;
+			border-right: 2px dashed #95C838;		
+		}
+		.customerSnapValues{
+			font-weight:bold;
+			font-size:1.2em;
+		}
+    </style>        
+        
+		<div class="bPageBlock bEditBlock secondaryPalette" style='min-width:500px; background-color: #FFFFFF;'>
+			<div class="pbHeader" style='height:30px;padding-left:5px;color:#000;'>
+				<img class="jbarahideListButton dummyHideCustomerSuccessIcon" title="Hide Customer Success Summary"
+				style="cursor: pointer;" onclick="togglePanels('dummyHideCustomerSuccessIcon','dummyCustomerSuccessDetail');"
+				src="/s.gif" />
+				<h3>Summary</h3>
+			</div>
+		    <div class="pbBody" id="jbarasummaryScroller" style="max-height:400px;">
+				<div class="dummyCustomerSuccessDetail" style='padding:0px 4px 4px 10px;display: inline;'>
+			
+					<!--Displays page block section for customer summary-->
+	                        <div id="jbCustomerSnapshot" style="display: inline;">
+	                        
+	                        	<div class="jbCustomerSnapDiv"  style="display: inline; float: left;">   
+			                   			<apex:outputText value="{! IF((ROUND((custCount),0))== 0, '', '{0}')}"  styleClass="customerSnapValues">
+			                            	<apex:param value="{!(ROUND((custCount),0))}" />
+			                            </apex:outputText><br/>
+			                          Total Customers
+			                    </div>
+	                      
+			                    <div class="jbCustomerSnapDiv"  style="display: inline; float: left;">   
+			                   			<apex:outputText value="{! IF((ROUND((ASVTotal),0))== 0, '', '{1} {0}')}"  styleClass="customerSnapValues">
+			                            	<apex:param value="{!(ROUND((ASVTotal),0))}" />
+			                            	<apex:param value="{!(currencyConfig['symbol'])}" />
+			                            </apex:outputText><br/>
+			                          {!(customLabelsMap['ASV'])}
+			                    </div>
+			                    
+			                    <div class="jbCustomerSnapDiv"  style="display: inline; float: left; ">   
+			                   		  <apex:outputText value="{! IF((ROUND((MRRTotal),0))== 0, '', '{1} {0}')}" styleClass="customerSnapValues">
+			                              <apex:param value="{!(ROUND((MRRTotal),0))}" />
+			                              <apex:param value="{!(currencyConfig['symbol'])}" />
+			                          </apex:outputText><br/>
+			                          {!(customLabelsMap['MRR'])}
+			                    </div>
+			                    
+			                    <div class="jbCustomerSnapDiv"  style="display: inline; float: left; ">   
+			                   		  <apex:outputText value="{! IF((ROUND((usersTotal),0))== 0, '', '{0}')}" styleClass="customerSnapValues">
+	                                      <apex:param value="{!(ROUND((usersTotal),0))}" />
+	                                  </apex:outputText><br/>
+			                          {!(customLabelsMap['Users'])}
+			                    </div>
+			                    
+			                    <div class="jbCustomerSnapDiv"  style="display: inline; float: left;border-right: medium none;padding-left:5px;">
+			                    	 <span> 
+			                    	  <apex:outputText value="{! IF(custARPU== 0, '',  '{1} {0}' )}" styleClass="customerSnapValues">
+	                                     <apex:param value="{!custARPU}" />
+	                                     <apex:param value="{!(currencyConfig['symbol'])}" />
+	                                 </apex:outputText><br/>	                   		  
+			                          {!(customLabelsMap['ARPU'])}
+			                         </span>		                        
+			                    </div>
+			                      
+	                        </div>
+	                        
+	                  
+	                        
+	          
+					<div class="dummysummaryForSpace" style='clear:both;padding:1px'></div>
+	
+		    	</div>	       
+			</div>
+		</div>
+  	
+  		<div class="bPageBlock bEditBlock secondaryPalette" style='min-width:500px; background-color: #FFFFFF;'>
+			<div class="pbHeader" style='height:30px;padding-left:5px;color:#000;'>
+				<img class="jbarahideListButton dummyHideCustomerAnalyticsIcon" title="Hide Customer Analytics"
+				style="cursor: pointer;" onclick="togglePanels('dummyHideCustomerAnalyticsIcon','dummyCustomerAnalyticsDetail');"
+				src="/s.gif" />
+				<h3>Customer Analytics</h3>
+			</div>
+		    <div class="pbBody" id="jbarasummaryScroller" style="max-height:600px;">
+				<div class="dummyCustomerAnalyticsDetail" style='padding:0px 4px 4px 10px;display: inline;'>			
+					<iframe src="apex/CustomerAnalytics?inline=1" width="100%" height="600px" frameborder="0">
+			    	</iframe>
+					<div class="dummysummaryForSpace" style='clear:both;padding:1px'></div>
+	
+		    	</div>	       
+			</div>
+		</div>
+  	
+  	
+      
+</apex:page>

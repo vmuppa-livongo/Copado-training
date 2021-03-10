@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>Jim Customized Highmark outreach</name>
+    <style>freeForm</style>
+    <subject>Livongo partners with Highmark</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+You might have seen our recent announcement that Livongo has partnered with Highmark to offer the Livongo for Diabetes program to all Highmark employees and self-funded commercial clients.
+
+We recognized that Pennsylvania, Delaware, and West Virginia has a diabetes prevalence of 9.3% and is one of the most highly impacted regions in the country. We are excited to partner with Highmark to give 2.5 million people across the region access to the Livongo for diabetes program.
+
+This partnership is another example of the momentum that we are building in the region and across the country to empower people to better manage their chronic conditions. I would love to take some time and further discuss this partnership and more about the Livongo program.
+
+Best regards,
+
+Jim Hartman
+Vice President of Sales, Health Systems
+Livongo
+m: 813-476-4188
+e: jhartman@livongo.com
+a:  444 N. Michigan Ave. Ste 3400, Chicago, IL 60611
+www.livongo.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

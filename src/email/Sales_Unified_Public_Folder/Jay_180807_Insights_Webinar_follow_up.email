@@ -1,0 +1,81 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif" style="">Hi {!Contact.FirstName},&nbsp;</font></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif" style=""><br></font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif">I hope you were able to attend the webinar hosted by Livongo Chief Medical Officer, Dr. Jenny Schneider. If you missed it, you can watch the recording <a href="https://www.livongo.com/webinars/hiddentrends?utm_source=webinar&amp;utm_medium=email&amp;utm_campaign=hidden-trends&amp;mkt_tok=eyJpIjoiWXpjMU5tTXlZbVEzT1dJMyIsInQiOiJcLzVVUTZDcWtEY2V0eVBXako5czB3SmhNbWJybk05YW0wS085MDlLazdzd1lncG5ZTlwvZzNlbXpFdURNMVwvem1JY0FiV3lmODFTdlVzWm8zTFk5RDU1Zz09In0%3D">here</a>.&nbsp;</font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif"><br></font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif">The webinar covered the Livongo’s recently debuted Insights Report that is based on an analysis of approximately 20 million glucose checks. You can view the initial report <a href="https://www.livongo.com/insightreport/seasonality.html">here</a>.&nbsp;</font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif"><br></font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif">This report is one example of Livongo’s world-class data science platform that allows us to offer a personalized experience to all of our members. We will continue to use these insights to craft messages around seasonality and other blood glucose trends.</font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif"><br></font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif">I hope you have a chance to watch the webinar and I would love to connect soon.</font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif"><br></font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif">Thanks,&nbsp;</font></p><p class="MsoNormal" style="margin: 0in 0in 0.0001pt; text-size-adjust: auto;"><font face="Arial, sans-serif"><br></font></p><p class="MsoNormal">Jay Helmer<br>
+VP, Health Services Sales<u1:p></u1:p><o:p></o:p></p><p class="MsoNormal">(203) 612 8652<u1:p></u1:p><o:p></o:p></p><p class="MsoNormal"><a href="mailto:jhelmer@livongo.com"><span style="color:
+#0563C1">jhelmer@livongo.com</span></a><u1:p></u1:p><o:p></o:p></p><p class="MsoNormal"><a href="https://www.livongo.com/getting-started-hphs.html"><span style="color:#0563C1">How We Work with Health Plans </span></a><o:p></o:p></p><p class="MsoNormal"><br></p><style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073697537 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+span.EmailStyle16
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>]]></td>
+</tr>
+</table>

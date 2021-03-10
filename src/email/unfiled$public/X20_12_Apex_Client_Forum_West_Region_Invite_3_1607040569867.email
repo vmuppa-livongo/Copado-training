@@ -1,0 +1,209 @@
+<html><head>
+	<style type="text/css">html {
+   overflow-y: visible !important ;
+}
+	</style>
+	<title></title>
+	<meta content="text/html; charset=UTF-8" /><meta content="width=device-width, initialscale=1.0" name="viewport" /><meta content="IE=edge" />
+	<style type="text/css">@media screen and (max-width: 480px) {
+  .contentbuilderBaseColumnRow .columnCell {display:inline-block; width:100%}
+}
+ .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:600px}
+@media only screen and (max-width: 480px) {
+  .contentpageDefaultEmailTemplatePageTemplate .contentRoot {width:320px}
+}
+	</style>
+</head>
+<body style="height: auto; min-height: auto;"><table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#E9EAEC;" width="100%">
+	
+		<tr>
+			<td align="center" width="100%">
+			<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+				
+					<tr>
+						<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td align="Center" style=""><img alt="Apex Client Forum" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/ApexMeetingsHeaderImages_600x300?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="600" /></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;">&nbsp;
+												<div style="font-size: 16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">Dear {{{Recipient.FirstName}}},<br />
+												<br />
+												I hope your week is going well.<br />
+												<br />
+												Livongo’s upcoming Apex Client Forum is right around the corner and we want to see you there! Please join us </span></span>—&nbsp;<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;">along with other industry leaders </span></span>—<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"> for this exclusive <i><b>virtual</b></i> event on <b>December 9, from 11:00 AM - 1:00 PM PST</b>.<br />
+												<br />
+												During our time together, we’ll bring you up to speed on the latest news at Livongo and hear from an industry leader and a Livongo executive on the power of data-driven insights to empower your employees living with chronic conditions to live better and healthier lives.&nbsp;<br />
+												<br />
+												We will be sharing the latest updates on our recently completed merger with Teladoc Health, and the opportunities our combined organizations offer. Most importantly, we want to hear from you about what matters most &nbsp;to you and your employees, today and in the year ahead.<br />
+												<br />
+												As we close out the year, join us to “uncork” the season and learn about festive cuisine </span></span>—<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"> from an award winning tastemaker and curator of good living </span></span>—<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"> to showcase on your table during the winter months.</span></span><br />
+												&nbsp;</div>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:75px;padding-top:5px;padding-left:75px;"><b><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Meeting Details</span></span></b>
+
+												<ul>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Date: Wednesday, December 9</span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Meeting Time: 11:00 am - 1:00 pm PST</span></span></li>
+													<li><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Attendance: By Invitation Only to Select Livongo Clients&nbsp;</span></span></li>
+												</ul>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="100%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;padding-right:5px;padding-bottom:5px;padding-top:5px;padding-left:5px;"><br />
+												<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">We would like to provide you with a special experience package and kindly request your RSVP as soon as possible to ensure the delivery arrives on time.&nbsp;<br />
+												<br />
+												Please click </span></span><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><a href="https://livongo.zoom.us/webinar/register/4016070206668/WN_8ZxGY0sERHa8BgdqWazozQ">here</a>&nbsp;</span></span>t<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">o register and provide your preferred mailing address.<br />
+												<br />
+												Stay Healthy,</span></span><br />
+												&nbsp;</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+
+						<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+							
+								<tr valign="top">
+									<td class="columnCell" style="vertical-align:top;" width="50%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Heidi Anderson</b><br />
+												SVP, Client Experience<br />
+												<br />
+												<b>Michael Reeve</b><br />
+												VP, Client Sales</span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+									<td class="columnCell" style="vertical-align:top;" width="50%">
+									<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+										
+											<tr>
+												<td style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Stacey DeWeerdt</b><br />
+												VP, Strategic Client Relationships</span></span></td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						&nbsp;
+
+						<div style="width: 600px; margin: 0 auto;">
+						<hr style="width:100%;text-align:left;margin-left:0" /></div>
+
+						<table cellpadding="0" cellspacing="0" class="contentpageDefaultEmailTemplatePageTemplate" id="contentpage_emailTemplateBodyContent" style="background-color:#FFFFFF;" width="100%">
+							
+								<tr>
+									<td align="center" width="100%">
+									<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="contentRoot" width="600">
+										
+											<tr>
+												<td style="padding-right:10px;padding-bottom:10px;padding-top:10px;padding-left:10px;">
+												<table bgcolor="" cellpadding="0" cellspacing="0" class="contentbuilderBaseColumnRow" width="100%">
+													
+														<tr valign="top">
+															<td class="columnCell" style="vertical-align:middle;" width="8.33%">
+															<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td align="Center" style="padding-right:10px;"><img alt="" src="https://livongohealth2ndorg--c.na134.content.force.com/file-asset-public/livongo_mark_2020_blue?oid=00D4600000180Lw" style="max-width:100%;width:100%;display:block;border:none;" width="39" /></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="75%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="padding-left:10px;font-family:Times;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><b>Livongo</b> | 150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041</span></span><br />
+																		<br />
+																		<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">2020 &copy; Livongo. All Rights Reserved.</span></span></td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td class="columnCell" style="vertical-align:top;" width="16.66%">
+															<table cellpadding="0" cellspacing="0" style="font-size:14px;width:100%;border-collapse:collapse;word-break:break-word;">
+																
+																	<tr>
+																		<td style="font-family:Arial,Helvetica,sans-serif;"><a href="mailto:unsubscribe@e-1alg9zf3qo01qow46vkmxmslp0apnl5npfuc39907dhzsihkha.46-180lweai.na134.apex.salesforce.com?subject=Unsubscribe"><span style="color:#0060fc;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:12px;">Unsubscribe</span></span></span></a><br />
+																		<br />
+																		&nbsp;</td>
+																	</tr>
+																
+															</table>
+															</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table></body></html>

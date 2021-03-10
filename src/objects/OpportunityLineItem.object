@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Program_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>Opp_Program_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Opp_Program_Compact_Layout</fullName>
+        <fields>OpportunityProductName__c</fields>
+        <fields>OpportunityId</fields>
+        <fields>Quantity</fields>
+        <fields>UnitPrice</fields>
+        <fields>TotalPrice</fields>
+        <fields>ProductCode</fields>
+        <label>Opp Program Compact Layout</label>
+    </compactLayouts>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Bypass_Sales_Price_Validation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bypass Sales Price Validation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Currently_Enrolled_Members__c</fullName>
+        <description>JENGA:1589: WP Transition. This field will have the existing enrolled program participants</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please refer to the ipos daily snapshot email.</inlineHelpText>
+        <label>Currently Enrolled Members</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>Estimated_At_Risk_PPPM__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated At-Risk PPPM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Estimated_Partner_Admin_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Partner Admin Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Exclude_Enrollment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>JENGA-1465</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Do not use this field unless this is either a renewal opportunity, or a Whole Person Solution upgrade of an existing client to the Whole Person Solution of that product. Ex. Current DM customer is upgrading to DM 360</inlineHelpText>
+        <label>Exclude Enrollment %</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Program_ARR_Copy__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Program ARR Copy</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Program_ARR__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+    Program_Family__c,
+
+    &apos;Diabetes&apos;, IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), (0.25 * Product_Participants__c * (UnitPrice * 12)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+                (0.20 * Product_Participants__c * (UnitPrice * 12)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12),
+    
+    &apos;Hypertension&apos;, IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), (0.10 * Product_Participants__c * (UnitPrice * 12)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+                    (0.08 * Product_Participants__c * (UnitPrice * 12)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12),
+
+    &apos;Weight Management&apos;, IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), UnitPrice == 1.00), 608 * Product_Participants__c * 0.10,
+                         IF(UnitPrice == 1.00, 608 * Product_Participants__c * 0.08,
+                         IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), 0.10 * Product_Participants__c * UnitPrice * 12 + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+                         0.08 * Product_Participants__c * UnitPrice * 12 + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12))),
+    
+    &apos;Prediabetes&apos;, IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), UnitPrice == 1.00), 608 * Product_Participants__c * 0.10,
+                    IF(UnitPrice == 1.00, 608 * Product_Participants__c * 0.08,
+                    IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), 0.10 * Product_Participants__c * UnitPrice * 12 + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+                    0.08 * Product_Participants__c * UnitPrice * 12 + Currently_Enrolled_Members__c* Incremental_Sales_Price__c * 12))),
+
+    Product_Participants__c * UnitPrice * 12 + Product_Participants__c * 0.02 * PMPM__c * 6
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gross Program ARR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Program_TCV_Copy__c</fullName>
+        <description>Renamed to EVA - JENGA-1540</description>
+        <externalId>false</externalId>
+        <label>Gross Program EVA Copy</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Program_TCV__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Program_Family__c,
+        &apos;Diabetes&apos;, Product_Participants__c * 0.25 * UnitPrice * Quantity + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * Quantity,
+        &apos;Hypertension&apos;, Product_Participants__c * 0.10 * UnitPrice * Quantity + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * Quantity,
+        &apos;Weight Management&apos;, IF(UnitPrice == 1.00, 
+                                (500 * Product_Participants__c * 0.10 + Product_Participants__c * 0.10 * Year_2_Price__c * MAX(Quantity - 12, 0)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * Quantity, 
+                                (Product_Participants__c * 0.10 * UnitPrice * 12 + Product_Participants__c * 0.10 * Year_2_Price__c * MAX(Quantity - 12, 0)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * Quantity), 
+        &apos;Prediabetes&apos;, IF(UnitPrice == 1.00, 
+                            (500 * Product_Participants__c * 0.10 + Product_Participants__c * 0.10 * Year_2_Price__c * MAX(Quantity - 12, 0)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * Quantity, 
+                            (Product_Participants__c * 0.10 * UnitPrice * 12 + Product_Participants__c * 0.10 * Year_2_Price__c * MAX(Quantity - 12, 0)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * Quantity),
+        Product_Participants__c * UnitPrice * Quantity + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * Quantity)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Gross Program EVA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Incremental_Sales_Price__c</fullName>
+        <description>JENGA-1589: WP transitions, this field will capture the the delta between the new sales price and standalone sales price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The delta between the new WP Sales Price and Standalone Sales Price</inlineHelpText>
+        <label>Incremental Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IntegrateProgram__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When checked (the default), this field signals to both Redshift and NetSuite that this Program is to be integrated.  When unchecked, neither Redshift nor Netsuite will sync this Program. If an Opportunity with a Program is added to a Contract with an existing Opportunity and matching Program (Renewals, Expansions), UNCHECK this field on the OLD Opportunity Program.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked by default.  When checked, will sync with Redshift &amp; Netsuite.  If an Opportunity with a Program is added to a Contract with an existing Opportunity and matching Program (Renewals, Expansions), UNCHECK this field on the OLD Opportunity Program.</inlineHelpText>
+        <label>Integrate Program</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Migrated_myStrength_OLI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Migrated myStrength OLI</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
+        <fullName>Net_Program_TCV_Copy__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Program TCV Copy</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Net_Program_TCV__c</fullName>
+        <description>Not Used - JENGA-1540</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(Program_Family__c == &apos;Behavioral Health&apos;, NOT(Exclude_Enrollment__c)), (Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * Quantity + Up_Front_Per_Member__c) +
+((Product_Participants__c * 0.02) * PMPM__c * Quantity / 2)),
+IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), OR(Program_Family__c == &apos;Prediabetes&apos;, Program_Family__c == &apos;Weight Management&apos;), UnitPrice == 1.00, NOT(Exclude_Enrollment__c)), (608.00 * (Product_Participants__c * 0.10) * Quantity / 12 ),
+IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Health Servic&apos;), OR(Program_Family__c == &apos;Prediabetes&apos;, Program_Family__c == &apos;Weight Management&apos;), UnitPrice == 1.00, NOT(Exclude_Enrollment__c)), (608.00 * (Product_Participants__c * 0.08) * Quantity /12),
+IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), Program_Family__c == &apos;Diabetes&apos;, NOT(Exclude_Enrollment__c)), (0.25 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * Quantity + Up_Front_Per_Member__c)),
+IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), NOT(Program_Family__c == &apos;Diabetes&apos;), NOT(Exclude_Enrollment__c)), (0.1 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * Quantity + Up_Front_Per_Member__c)),
+IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Health Servic&apos;), Program_Family__c == &apos;Diabetes&apos;, NOT(Exclude_Enrollment__c)), (0.2 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * Quantity + Up_Front_Per_Member__c)),
+IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Health Servic&apos;), NOT(Program_Family__c == &apos;Diabetes&apos;), NOT(Exclude_Enrollment__c)), (0.08 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * Quantity + Up_Front_Per_Member__c)),
+(Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * Quantity + Up_Front_Per_Member__c))
+)))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Program TCV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityProductName__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Owner Role</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Id</formula>
+        <label>Opportunity Product ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_of_Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Owner.FirstName &amp;&quot; &quot;&amp; Opportunity.Owner.LastName</formula>
+        <label>Owner of Opportunity</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PMPM__c</fullName>
+        <description>JENGA-1357</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Only used for BH 2.0 product</inlineHelpText>
+        <label>PMPM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PO_WholePerson__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>If 1, then the OLI is Whole Person. Updated by workflow rule</description>
+        <externalId>false</externalId>
+        <label>PO#_WholePerson</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_Book_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Price Book ID</label>
+        <referenceTo>Pricebook2</referenceTo>
+        <relationshipLabel>Opportunity Program</relationshipLabel>
+        <relationshipName>Opportunity_Program</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_Structure__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Updating Pricing Structure will overwrite the Sales Price, Estimated At-Risk PPPM, Estimated Partner Admin Fees, and Up Front Per Member fields.</inlineHelpText>
+        <label>Pricing Structure</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Pricing Structure is not available.</errorMessage>
+            <filterItems>
+                <field>Pricing_Structure__c.Program__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Program_ID__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Pricing_Structure__c.Price_Book__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Price_Book_ID__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Pricing_Structure__c</referenceTo>
+        <relationshipLabel>Opportunity Program</relationshipLabel>
+        <relationshipName>Opportunity_Program</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>ProductRecordType__c</fullName>
+        <description>Record type of the Program (e.g. Livongo for Diabetes is a &apos;Primary&apos; program; Livongo for Diabetes - Upfront Meter is a &apos;Secondary&apos; program).</description>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.RecordType.DeveloperName</formula>
+        <inlineHelpText>Record type of the Program (e.g. Livongo for Diabetes is a &apos;Primary&apos; program; Livongo for Diabetes - Upfront Meter is a &apos;Secondary&apos; program).</inlineHelpText>
+        <label>Product Record Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Participants__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For new opportunities, enter estimated recruitables or rPwX. For renewals, enter enrolled members.</inlineHelpText>
+        <label>Program Participants (rPwX or Enrolled)</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Record_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Record Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_ARR_Copy__c</fullName>
+        <description>Workflow field update will populate this field with the value from Program ARR; this field will then be rolled up into value on Opportunity</description>
+        <externalId>false</externalId>
+        <label>Program ARR Copy</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Program_ARR__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+Program_Family__c,
+
+&apos;Diabetes&apos;, IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), (0.25 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+(0.20 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12),
+
+&apos;Hypertension&apos;, IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), (0.10 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+(0.08 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12),
+
+&apos;Weight Management&apos;, IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), UnitPrice == 1.00), 608 * Product_Participants__c * 0.10,
+IF(UnitPrice == 1.00, 608 * Product_Participants__c * 0.08,
+IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), (0.10 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+(0.08 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12))),
+
+&apos;Prediabetes&apos;, IF(AND(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), UnitPrice == 1.00), 608 * Product_Participants__c * 0.10,
+IF(UnitPrice == 1.00, 608 * Product_Participants__c * 0.08,
+IF(CONTAINS(Opportunity.Opp_Owner_Role__c, &apos;Commercial&apos;), (0.10 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12,
+(0.08 * Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Currently_Enrolled_Members__c * Incremental_Sales_Price__c * 12))),
+
+(Product_Participants__c * ((UnitPrice - (Estimated_At_Risk_PPPM__c + Estimated_Partner_Admin_Fees__c)) * 12 + Up_Front_Per_Member__c)) + Product_Participants__c * 0.02 * PMPM__c * 6
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Program ARR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Program_Family__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PricebookEntry.Product2.Family)</formula>
+        <label>Program Family</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Program ID</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Opportunity Program</relationshipLabel>
+        <relationshipName>Opportunity_Program</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Sales_Commissionable_Price__c</fullName>
+        <description>Price used for commission considerations, not for billing</description>
+        <externalId>false</externalId>
+        <label>Sales Commissionable Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+        <inlineHelpText>For all Whole Person opportunities, input the Whole Person PPPM for the solution. Do not input the incremental sales price. To capture a Whole Person upgrade populate the section below titled &apos;Whole Person Upgrade</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>Up_Front_Per_Member__c</fullName>
+        <externalId>false</externalId>
+        <label>Up Front Per Member</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Year_2_Price__c</fullName>
+        <description>This is the year 2+ maintenance price. This currently only applies to Weight Management/Diabetes Prevention</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the year 2+ maintenance price. This currently only applies to Weight Management/Diabetes Prevention. You need to enter this in order for the DPP ROI model to properly populate</inlineHelpText>
+        <label>Year 2+ Price</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Discount_Item__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Discount Item</label>
+        <referenceTo>netsuite_conn__Discount_Item__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__From_Contract_Item_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>From Contract Item Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Item_Category__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Item Category</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__List_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>List Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__NetSuite_Item_Id_Import__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>NetSuite Item Id [Import]</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__NetSuite_Item_Key_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>NetSuite Item Key Id</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Pushed_From_NetSuite__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Pushed From NetSuite</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Term_Contract_Pricing_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Term / Contract Pricing Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__Terms__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contract Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>netsuite_conn__User_Entered_Sales_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>User Entered Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>tinderbox__Include_Content__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked it will include the associated TinderBox content for this product.</description>
+        <externalId>false</externalId>
+        <label>Include Content</label>
+        <type>Checkbox</type>
+    </fields>
+    <validationRules>
+        <fullName>Cannot_Change_Price_without_Structure</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+ISCHANGED( UnitPrice ),
+ISBLANK( Pricing_Structure__c )
+)</errorConditionFormula>
+        <errorMessage>Please add a Pricing Structure to update the sales price</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Update_Incre_Price_Enrolled_Parti</fullName>
+        <active>true</active>
+        <description>Cannot update incremental sales price and existing enrolled program participants if the the program is not a WP program</description>
+        <errorConditionFormula>AND(
+OR(ISCHANGED(Currently_Enrolled_Members__c),
+ISCHANGED(Incremental_Sales_Price__c)),
+NOT(Product2.Whole_Person_Solution__c))</errorConditionFormula>
+        <errorMessage>Existing Enrolled Program Participants and Incremental Sales Price cannot be edited for non Whole Person Solutions.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Initial_Price_must_be_0</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+ ISNEW(),
+ UnitPrice != 0
+)</errorConditionFormula>
+        <errorMessage>Initial Sales Price must be 0. Please use the lookup &quot;Pricing Structure&quot; to alter this Sales price. Prices can be updated after creation.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PMPM_only_for_BH_Product</fullName>
+        <active>true</active>
+        <description>PMPM rate can only be edited for BH 2.0 product</description>
+        <errorConditionFormula>AND(ISCHANGED(PMPM__c), 
+NOT(ISPICKVAL(Product2.Family, &apos;Behavioral Health&apos;)))</errorConditionFormula>
+        <errorDisplayField>PMPM__c</errorDisplayField>
+        <errorMessage>PMPM should only be entered for Behavioral Health products</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Pricing_Must_be_in_Range</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR(
+ AND(
+  !ISNEW(),
+  !ISBLANK( PricebookEntry.Price_Floor__c ),
+  UnitPrice &lt;= PricebookEntry.Price_Floor__c,
+  $User.ProfileId != &quot;00e46000001QIv0&quot;
+ ),
+ AND(
+  !ISNEW(),
+  !ISBLANK( PricebookEntry.Price_Ceiling__c ),
+  UnitPrice &gt;= PricebookEntry.Price_Floor__c,
+  $User.ProfileId != &quot;00e46000001QIv0&quot;
+ )
+)</errorConditionFormula>
+        <errorDisplayField>UnitPrice</errorDisplayField>
+        <errorMessage>You&apos;re attempting to update the Sales Price outside of the defined range for this program. Please contact your Sales Admin to request an exception.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>WP_Programs_Pricing_Must_be_in_Range</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(Bypass_Sales_Price_Validation__c), !ISNEW(), ISCHANGED(UnitPrice),
+    OR(
+        AND(
+            Product2.Name = &apos;DM Solution&apos;,
+            UnitPrice &lt; 89.00
+        ),
+        AND(
+            Product2.Name = &apos;DM Solution&apos;,
+            UnitPrice &gt; 99.00
+        ),
+        AND(
+            Product2.Name = &apos;CV Solution&apos;,
+            UnitPrice &lt; 51.00
+        ),
+        AND(
+            Product2.Name = &apos;CV Solution&apos;,
+            UnitPrice &gt; 57.00
+        ),
+        AND(
+            Product2.Name = &apos;DP Solution&apos;,
+            UnitPrice &lt; 57.00
+        ),
+        AND(
+            Product2.Name = &apos;DP Solution&apos;,
+            UnitPrice &gt; 77.00
+        )
+    )
+)</errorConditionFormula>
+        <errorDisplayField>UnitPrice</errorDisplayField>
+        <errorMessage>You&apos;re attempting to update the Sales Price outside of the defined range for this program.</errorMessage>
+    </validationRules>
+</CustomObject>

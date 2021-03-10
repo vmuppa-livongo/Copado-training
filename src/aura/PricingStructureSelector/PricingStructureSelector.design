@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="pricingStructures" label="Pricing Structures"/>
+    <design:attribute name="selectedPricingStructure" label="Selected Pricing Structure"/>
+</design:component>

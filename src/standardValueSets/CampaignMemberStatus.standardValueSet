@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Accept</fullName>
+        <default>false</default>
+        <label>Accept</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accepted - Tues</fullName>
+        <default>false</default>
+        <label>Accepted - Tues</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accepted - Wed</fullName>
+        <default>false</default>
+        <label>Accepted - Wed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Active Opportunity</fullName>
+        <default>false</default>
+        <label>Active Opportunity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Added To Campaign</fullName>
+        <default>false</default>
+        <label>Added To Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>All Electronic card emailed</fullName>
+        <default>false</default>
+        <label>All Electronic card emailed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Alliant</fullName>
+        <default>false</default>
+        <label>Alliant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>All Printed card mailed</fullName>
+        <default>false</default>
+        <label>All Printed card mailed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Analysis Request</fullName>
+        <default>false</default>
+        <label>Analysis Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Aon - Keep</fullName>
+        <default>false</default>
+        <label>Aon - Keep</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Appointment Set</fullName>
+        <default>false</default>
+        <label>Appointment Set</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Asked Question</fullName>
+        <default>false</default>
+        <label>Asked Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attempting Contact</fullName>
+        <default>false</default>
+        <label>Attempting Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended</fullName>
+        <default>false</default>
+        <label>Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended, not on registered list</fullName>
+        <default>false</default>
+        <label>Attended, not on registered list</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended Conference</fullName>
+        <default>false</default>
+        <label>Attended Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended ECF</fullName>
+        <default>false</default>
+        <label>Attended ECF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended Ignyte</fullName>
+        <default>false</default>
+        <label>Attended Ignyte</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended - Light Industrial</fullName>
+        <default>false</default>
+        <label>Attended - Light Industrial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended - West Region</fullName>
+        <default>false</default>
+        <label>Attended - West Region</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attending</fullName>
+        <default>false</default>
+        <label>Attending</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attending Office Hours</fullName>
+        <default>false</default>
+        <label>Attending Office Hours</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Atteneded - West</fullName>
+        <default>false</default>
+        <label>Atteneded - West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BenCon - Target</fullName>
+        <default>false</default>
+        <label>BenCon - Target</label>
+    </standardValue>
+    <standardValue>
+        <fullName>book delivered</fullName>
+        <default>false</default>
+        <label>book delivered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Booth Visitor</fullName>
+        <default>false</default>
+        <label>Booth Visitor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bounced</fullName>
+        <default>false</default>
+        <label>Bounced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Canceled</fullName>
+        <default>false</default>
+        <label>Canceled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled</fullName>
+        <default>false</default>
+        <label>Cancelled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancelled Meeting</fullName>
+        <default>false</default>
+        <label>Cancelled Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked</fullName>
+        <default>false</default>
+        <label>Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked, Didn&apos;t Register</fullName>
+        <default>false</default>
+        <label>Clicked, Didn&apos;t Register</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked - Light Industrial</fullName>
+        <default>false</default>
+        <label>Clicked - Light Industrial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked Recording Email</fullName>
+        <default>false</default>
+        <label>Clicked Recording Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked - West Region</fullName>
+        <default>false</default>
+        <label>Clicked - West Region</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client</fullName>
+        <default>false</default>
+        <label>Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Newsletter Contact</fullName>
+        <default>false</default>
+        <label>Client Newsletter Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client - Target</fullName>
+        <default>false</default>
+        <label>Client - Target</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Opportunity</fullName>
+        <default>false</default>
+        <label>Closed Opportunity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ComPar - Call Placed</fullName>
+        <default>false</default>
+        <label>ComPar - Call Placed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ComPar - Email Sent</fullName>
+        <default>false</default>
+        <label>ComPar - Email Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ComPar - Meeting Complete</fullName>
+        <default>false</default>
+        <label>ComPar - Meeting Complete</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ComPar - Meeting Scheduled</fullName>
+        <default>false</default>
+        <label>ComPar - Meeting Scheduled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Complained</fullName>
+        <default>false</default>
+        <label>Complained</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Connected</fullName>
+        <default>false</default>
+        <label>Connected</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contact Responded</fullName>
+        <default>false</default>
+        <label>Contact Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contracted</fullName>
+        <default>false</default>
+        <label>Contracted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contracting</fullName>
+        <default>false</default>
+        <label>Contracting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CVS Client</fullName>
+        <default>false</default>
+        <label>CVS Client</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Decline</fullName>
+        <default>false</default>
+        <label>Decline</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined</fullName>
+        <default>false</default>
+        <label>Declined</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Declined Office Hour invite</fullName>
+        <default>false</default>
+        <label>Declined Office Hour invite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Did Not Open Recording Email</fullName>
+        <default>false</default>
+        <label>Did Not Open Recording Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+        <label>Disqualified</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Do Not Touch</fullName>
+        <default>false</default>
+        <label>Do Not Touch</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Electronic card</fullName>
+        <default>false</default>
+        <label>Electronic card</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Electronic card with gift</fullName>
+        <default>false</default>
+        <label>Electronic card with gift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email 1</fullName>
+        <default>false</default>
+        <label>Email 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employer - Target</fullName>
+        <default>false</default>
+        <label>Employer - Target</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged</fullName>
+        <default>false</default>
+        <label>Engaged</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged with Stephanie</fullName>
+        <default>false</default>
+        <label>Engaged with Stephanie</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ESI_Electronic card with gift</fullName>
+        <default>false</default>
+        <label>ESI_Electronic card with gift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EXCLUDE FROM CAMPAIGN</fullName>
+        <default>false</default>
+        <label>EXCLUDE FROM CAMPAIGN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Contact</fullName>
+        <default>false</default>
+        <label>Existing Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>F/U Call 1</fullName>
+        <default>false</default>
+        <label>F/U Call 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>F/U Call 2</fullName>
+        <default>false</default>
+        <label>F/U Call 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>F/U Call 3</fullName>
+        <default>false</default>
+        <label>F/U Call 3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>F/U sent</fullName>
+        <default>false</default>
+        <label>F/U sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Failed</fullName>
+        <default>false</default>
+        <label>Failed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Followed up</fullName>
+        <default>false</default>
+        <label>Followed up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow up</fullName>
+        <default>false</default>
+        <label>Follow up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up: Email</fullName>
+        <default>false</default>
+        <label>Follow-up: Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up: Phone Call</fullName>
+        <default>false</default>
+        <label>Follow-up: Phone Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow up call</fullName>
+        <default>false</default>
+        <label>Follow up call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow Up Email</fullName>
+        <default>false</default>
+        <label>Follow Up Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gift redemption email sent</fullName>
+        <default>false</default>
+        <label>Gift redemption email sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gov - Target</fullName>
+        <default>false</default>
+        <label>Gov - Target</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hard Bounce</fullName>
+        <default>false</default>
+        <label>Hard Bounce</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hard Bounced</fullName>
+        <default>false</default>
+        <label>Hard Bounced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Hard Bounced - Email Invite 1</fullName>
+        <default>false</default>
+        <label>Hard Bounced - Email Invite 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Identified</fullName>
+        <default>false</default>
+        <label>Identified</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inactive</fullName>
+        <default>false</default>
+        <label>Inactive</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Included</fullName>
+        <default>false</default>
+        <label>Included</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Initiating Outreach</fullName>
+        <default>false</default>
+        <label>Initiating Outreach</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In-Person Meeting</fullName>
+        <default>false</default>
+        <label>In-Person Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inquired</fullName>
+        <default>false</default>
+        <label>Inquired</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Interested</fullName>
+        <default>false</default>
+        <label>Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invite</fullName>
+        <default>false</default>
+        <label>Invite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invite - Client Success</fullName>
+        <default>false</default>
+        <label>Invite - Client Success</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invite - Commercial</fullName>
+        <default>false</default>
+        <label>Invite - Commercial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invited</fullName>
+        <default>false</default>
+        <label>Invited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invited Jenny</fullName>
+        <default>false</default>
+        <label>Invited Jenny</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invited to Ignyte</fullName>
+        <default>false</default>
+        <label>Invited to Ignyte</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invite - HSS</fullName>
+        <default>false</default>
+        <label>Invite - HSS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Labor - Sent</fullName>
+        <default>false</default>
+        <label>Labor - Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Labor - Target</fullName>
+        <default>false</default>
+        <label>Labor - Target</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lockton</fullName>
+        <default>false</default>
+        <label>Lockton</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mail Failure</fullName>
+        <default>false</default>
+        <label>Mail Failure</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Cancelled</fullName>
+        <default>false</default>
+        <label>Meeting Cancelled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Complete</fullName>
+        <default>false</default>
+        <label>Meeting Complete</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Ran</fullName>
+        <default>false</default>
+        <label>Meeting Ran</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting request</fullName>
+        <default>false</default>
+        <label>Meeting request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Requested</fullName>
+        <default>false</default>
+        <label>Meeting Requested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Scheduled</fullName>
+        <default>false</default>
+        <label>Meeting Scheduled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Set</fullName>
+        <default>false</default>
+        <label>Meeting Set</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting Setup</fullName>
+        <default>false</default>
+        <label>Meeting Setup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mercer</fullName>
+        <default>false</default>
+        <label>Mercer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Met</fullName>
+        <default>false</default>
+        <label>Met</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Needs Approval</fullName>
+        <default>false</default>
+        <label>Needs Approval</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Needs to be Vetted</fullName>
+        <default>false</default>
+        <label>Needs to be Vetted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Net New</fullName>
+        <default>false</default>
+        <label>Net New</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Interaction</fullName>
+        <default>false</default>
+        <label>No Interaction</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nominate</fullName>
+        <default>false</default>
+        <label>Nominate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Outreach</fullName>
+        <default>false</default>
+        <label>No Outreach</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Response</fullName>
+        <default>false</default>
+        <label>No Response</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Show</fullName>
+        <default>false</default>
+        <label>No Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Showed</fullName>
+        <default>false</default>
+        <label>No Showed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <label>Not Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Not Real Lead</fullName>
+        <default>false</default>
+        <label>Not Real Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened</fullName>
+        <default>false</default>
+        <label>Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened, Didn&apos;t Register</fullName>
+        <default>false</default>
+        <label>Opened, Didn&apos;t Register</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened email 2</fullName>
+        <default>false</default>
+        <label>Opened email 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened - Email Invite 1</fullName>
+        <default>false</default>
+        <label>Opened - Email Invite 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened - Light Industrial</fullName>
+        <default>false</default>
+        <label>Opened - Light Industrial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened Recording Email</fullName>
+        <default>false</default>
+        <label>Opened Recording Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened - West Region</fullName>
+        <default>false</default>
+        <label>Opened - West Region</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Open - Needs to be Vetted</fullName>
+        <default>false</default>
+        <label>Open - Needs to be Vetted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opp Created</fullName>
+        <default>false</default>
+        <label>Opp Created</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opportunity Created</fullName>
+        <default>false</default>
+        <label>Opportunity Created</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opt out</fullName>
+        <default>false</default>
+        <label>Opt out</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outreach Initiated</fullName>
+        <default>false</default>
+        <label>Outreach Initiated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Paul Sent Follow up email</fullName>
+        <default>false</default>
+        <label>Paul Sent Follow up email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Post event F/U</fullName>
+        <default>false</default>
+        <label>Post event F/U</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Printed card</fullName>
+        <default>false</default>
+        <label>Printed card</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Printed card with gift</fullName>
+        <default>false</default>
+        <label>Printed card with gift</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Awareness - Call placed</fullName>
+        <default>false</default>
+        <label>Product Awareness - Call placed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Awareness - Email Sent</fullName>
+        <default>false</default>
+        <label>Product Awareness - Email Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Awareness - Meeting Completed</fullName>
+        <default>false</default>
+        <label>Product Awareness - Meeting Completed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Awareness - Meeting Scheduled</fullName>
+        <default>false</default>
+        <label>Product Awareness - Meeting Scheduled</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Real Lead</fullName>
+        <default>false</default>
+        <label>Real Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Recieved</fullName>
+        <default>false</default>
+        <label>Recieved</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redeemed</fullName>
+        <default>false</default>
+        <label>Redeemed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redeemed Book</fullName>
+        <default>false</default>
+        <label>Redeemed Book</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redeemed Snack Box</fullName>
+        <default>false</default>
+        <label>Redeemed Snack Box</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered</fullName>
+        <default>false</default>
+        <label>Registered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered for Webinar</fullName>
+        <default>false</default>
+        <label>Registered for Webinar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered - LI</fullName>
+        <default>false</default>
+        <label>Registered - LI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered - Light Industrial</fullName>
+        <default>false</default>
+        <label>Registered - Light Industrial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered - St. Louis</fullName>
+        <default>false</default>
+        <label>Registered - St. Louis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered - West</fullName>
+        <default>false</default>
+        <label>Registered - West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered - West Region Invite 2</fullName>
+        <default>false</default>
+        <label>Registered - West Region Invite 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered - West Region Invite 3</fullName>
+        <default>false</default>
+        <label>Registered - West Region Invite 3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Remove</fullName>
+        <default>false</default>
+        <label>Remove</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Requested Follow Up</fullName>
+        <default>false</default>
+        <label>Requested Follow Up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded, Not Interested</fullName>
+        <default>false</default>
+        <label>Responded, Not Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded, waiting to set meeting</fullName>
+        <default>false</default>
+        <label>Responded, waiting to set meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded - Appointment Set</fullName>
+        <default>false</default>
+        <label>Responded - Appointment Set</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded - Chicago</fullName>
+        <default>false</default>
+        <label>Responded - Chicago</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded - No Meeting</fullName>
+        <default>false</default>
+        <label>Responded - No Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded - Not Interested</fullName>
+        <default>false</default>
+        <label>Responded - Not Interested</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded - Schedule for Later</fullName>
+        <default>false</default>
+        <label>Responded - Schedule for Later</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Response</fullName>
+        <default>false</default>
+        <label>Response</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RSVP&apos;d, Attending</fullName>
+        <default>false</default>
+        <label>RSVP&apos;d, Attending</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RSVPed - NO</fullName>
+        <default>false</default>
+        <label>RSVPed - NO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RSVPed - YES</fullName>
+        <default>false</default>
+        <label>RSVPed - YES</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RSVP Yes to Ignyte</fullName>
+        <default>false</default>
+        <label>RSVP Yes to Ignyte</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales 1:1 Call Follow Up</fullName>
+        <default>false</default>
+        <label>Sales 1:1 Call Follow Up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales 1:1 Email Follow Up</fullName>
+        <default>false</default>
+        <label>Sales 1:1 Email Follow Up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduled Meeting</fullName>
+        <default>false</default>
+        <label>Scheduled Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send</fullName>
+        <default>false</default>
+        <label>Send</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Invite</fullName>
+        <default>false</default>
+        <label>Send Invite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Swag</fullName>
+        <default>false</default>
+        <label>Send Swag</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Email Invite 1</fullName>
+        <default>false</default>
+        <label>Sent - Email Invite 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Email Invite 2</fullName>
+        <default>false</default>
+        <label>Sent - Email Invite 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Email Invite 3</fullName>
+        <default>false</default>
+        <label>Sent - Email Invite 3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Glen</fullName>
+        <default>false</default>
+        <label>Sent - Glen</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Into WP Email</fullName>
+        <default>false</default>
+        <label>Sent Into WP Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Invite</fullName>
+        <default>false</default>
+        <label>Sent Invite</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Invite 1</fullName>
+        <default>false</default>
+        <label>Sent Invite 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Invite 1 &amp; 2</fullName>
+        <default>false</default>
+        <label>Sent Invite 1 &amp; 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Jason M</fullName>
+        <default>false</default>
+        <label>Sent - Jason M</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Jim P</fullName>
+        <default>false</default>
+        <label>Sent - Jim P</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Kit</fullName>
+        <default>false</default>
+        <label>Sent Kit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Lee</fullName>
+        <default>false</default>
+        <label>Sent - Lee</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Light Industrial</fullName>
+        <default>false</default>
+        <label>Sent - Light Industrial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Michael</fullName>
+        <default>false</default>
+        <label>Sent - Michael</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Offer_Outlook</fullName>
+        <default>false</default>
+        <label>Sent Offer_Outlook</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Offer_SFDC</fullName>
+        <default>false</default>
+        <label>Sent Offer_SFDC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Personalized FU email</fullName>
+        <default>false</default>
+        <label>Sent Personalized FU email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Session 2 (Wed 8/26)</fullName>
+        <default>false</default>
+        <label>Sent - Session 2 (Wed 8/26)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent Snack Box</fullName>
+        <default>false</default>
+        <label>Sent Snack Box</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - Steve S</fullName>
+        <default>false</default>
+        <label>Sent - Steve S</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent via SFDC</fullName>
+        <default>false</default>
+        <label>Sent via SFDC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - West Region</fullName>
+        <default>false</default>
+        <label>Sent - West Region</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - West Region Invite 1</fullName>
+        <default>false</default>
+        <label>Sent - West Region Invite 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - West Region Invite 2</fullName>
+        <default>false</default>
+        <label>Sent - West Region Invite 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent - West Region Invite 3</fullName>
+        <default>false</default>
+        <label>Sent - West Region Invite 3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Set Demo</fullName>
+        <default>false</default>
+        <label>Set Demo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Set up Demo Account</fullName>
+        <default>false</default>
+        <label>Set up Demo Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Taregt</fullName>
+        <default>false</default>
+        <label>Taregt</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target</fullName>
+        <default>false</default>
+        <label>Target</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Andy</fullName>
+        <default>false</default>
+        <label>Target - Andy</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Attended</fullName>
+        <default>false</default>
+        <label>Target - Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - BenCon</fullName>
+        <default>false</default>
+        <label>Target - BenCon</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target- BenCon</fullName>
+        <default>false</default>
+        <label>Target- BenCon</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Bob</fullName>
+        <default>false</default>
+        <label>Target - Bob</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Chicago</fullName>
+        <default>false</default>
+        <label>Target - Chicago</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Targeted</fullName>
+        <default>false</default>
+        <label>Targeted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Targeted (CVS)</fullName>
+        <default>false</default>
+        <label>Targeted (CVS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Employer</fullName>
+        <default>false</default>
+        <label>Target - Employer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Gov&apos;t/Labor</fullName>
+        <default>false</default>
+        <label>Target - Gov&apos;t/Labor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Health Systems</fullName>
+        <default>false</default>
+        <label>Target - Health Systems</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - HSS</fullName>
+        <default>false</default>
+        <label>Target - HSS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Light Industrial</fullName>
+        <default>false</default>
+        <label>Target - Light Industrial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - New</fullName>
+        <default>false</default>
+        <label>Target - New</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Other (ACAP/Homes Murphy, USI)</fullName>
+        <default>false</default>
+        <label>Target - Other (ACAP/Homes Murphy, USI)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - PBM</fullName>
+        <default>false</default>
+        <label>Target - PBM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - PBM (ESI)</fullName>
+        <default>false</default>
+        <label>Target - PBM (ESI)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Platforms</fullName>
+        <default>false</default>
+        <label>Target - Platforms</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Q3</fullName>
+        <default>false</default>
+        <label>Target - Q3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Segal</fullName>
+        <default>false</default>
+        <label>Target - Segal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Sent</fullName>
+        <default>false</default>
+        <label>Target - Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Shawn</fullName>
+        <default>false</default>
+        <label>Target - Shawn</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - St. Louis</fullName>
+        <default>false</default>
+        <label>Target - St. Louis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Vitality</fullName>
+        <default>false</default>
+        <label>Target - Vitality</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - Welltok</fullName>
+        <default>false</default>
+        <label>Target - Welltok</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - West</fullName>
+        <default>false</default>
+        <label>Target - West</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Target - West Region</fullName>
+        <default>false</default>
+        <label>Target - West Region</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Thank you response received</fullName>
+        <default>false</default>
+        <label>Thank you response received</label>
+    </standardValue>
+    <standardValue>
+        <fullName>To Send</fullName>
+        <default>false</default>
+        <label>To Send</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TP 1 (Email) - Meeting Set</fullName>
+        <default>false</default>
+        <label>TP 1 (Email) - Meeting Set</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TP 1 (Email) - Responded</fullName>
+        <default>false</default>
+        <label>TP 1 (Email) - Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TP 1 (Email) - Sent</fullName>
+        <default>false</default>
+        <label>TP 1 (Email) - Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TP 2 (Call) - Contact</fullName>
+        <default>false</default>
+        <label>TP 2 (Call) - Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TP 2 (Call) - Contact Achieved</fullName>
+        <default>false</default>
+        <label>TP 2 (Call) - Contact Achieved</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TP 2 (Call) - Contact Attempted</fullName>
+        <default>false</default>
+        <label>TP 2 (Call) - Contact Attempted</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribe</fullName>
+        <default>false</default>
+        <label>Unsubscribe</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribed</fullName>
+        <default>false</default>
+        <label>Unsubscribed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribed_Recording Email</fullName>
+        <default>false</default>
+        <label>Unsubscribed_Recording Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribed - Email Invite 1</fullName>
+        <default>false</default>
+        <label>Unsubscribed - Email Invite 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Unsubscribed - Light Industrial</fullName>
+        <default>false</default>
+        <label>Unsubscribed - Light Industrial</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VIP</fullName>
+        <default>false</default>
+        <label>VIP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Booth</fullName>
+        <default>false</default>
+        <label>Visited Booth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>VOC</fullName>
+        <default>false</default>
+        <label>VOC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>w/o Partner</fullName>
+        <default>false</default>
+        <label>w/o Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>With Partner</fullName>
+        <default>false</default>
+        <label>With Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Won Opportunity</fullName>
+        <default>false</default>
+        <label>Won Opportunity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WTW</fullName>
+        <default>false</default>
+        <label>WTW</label>
+    </standardValue>
+</StandardValueSet>

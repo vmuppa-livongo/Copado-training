@@ -1,0 +1,212 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <meta content="text/html; charset=utf-8" /> 
+  <meta name="ProgId" content="Word.Document" /> 
+  <meta name="Generator" content="Microsoft Word 15" /> 
+  <meta name="Originator" content="Microsoft Word 15" /> 
+  <style type="text/css"><!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;}
+span.EmailStyle17
+	{mso-style-type:personal;
+	mso-style-noshow:yes;
+	mso-style-unhide:no;
+	mso-ansi-font-size:11.0pt;
+	mso-bidi-font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:2009862937;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1109733896 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l0:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+
+
+  </style> 
+  <p class="MsoNormal"><span style="display: none;">&nbsp;</span><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:11.0pt;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">Hi Donna – How are you doing?&nbsp; My son is at school in Seattle so we're closely watching to see when the city will reopen.&nbsp; I hope you are healthy and remain safe.&nbsp;&nbsp;Wanted to quickly share some info that I’ve been sharing with ESI colleagues in case might be of some value as you meet with clients for SPARC meetings.&nbsp; Disney maybe?&nbsp;&nbsp;</span></span><br /> <br /> <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; display: inline !important; float: none;">The latest CDC MMWR reported 90% of people hospitalized related to COVID-19 had at least one underlying condition and&nbsp;</span><a href="https://jamanetwork.com/journals/jama/fullarticle/2765184" style="color: rgb(5, 99, 193); text-decoration: underline; font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;" title="https://jamanetwork.com/journals/jama/fullarticle/2765184">JAMA&nbsp;</a><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; display: inline !important; float: none;">reported that of the US cases studied the most common comorbid conditions were&nbsp;</span><b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">hypertension</b><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; display: inline !important; float: none;">&nbsp;at 57%,&nbsp;</span><b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">obesity</b><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; display: inline !important; float: none;">&nbsp;at 42% and&nbsp;</span><b style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;">diabetes</b><span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: Calibri, sans-serif; font-size: 14.666666984558105px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none; display: inline !important; float: none;">&nbsp;at 34%.&nbsp; People with underlying conditions are top priority and need additional attention today.&nbsp;<span class="Apple-converted-space">&nbsp;</span></span><br /> <br /> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="font-size:11.0pt;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
+color:black">At Livongo, we've seen a 2-3 fold increase in members tagging &quot;stressed out&quot; to their glucose readings and 3x higher utilization of behavioral health services through myStrength.&nbsp; We're learning that while these most vulnerable populations are sheltering at home, avoiding exposure, and using telehealth more, healthcare providers need to be able to monitor them remotely in order to optimize those telehealth visits, a message that aligns with this blog post&nbsp;</span></span><span style="font-size:14px;"><a href="https://www.express-scripts.com/corporate/articles/how-remote-monitoring-tackles-hypertension" style="font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+text-align:start;widows: 2;-webkit-text-stroke-width: 0px;word-spacing:0px">Express&nbsp;Scripts' article on remote monitoring to tackle hypertension</a><span style="color:black"><span style="font-variant-ligatures: normal;font-variant-caps: normal;orphans: 2;
+text-align:start;widows: 2;-webkit-text-stroke-width: 0px;text-decoration-style: initial;
+text-decoration-color: initial;float:none;word-spacing:0px">.&nbsp;&nbsp;&nbsp;</span></span><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="color: black;">Attached are a couple samples of Health Summary Reports that our members can use in their ongoing care.&nbsp; </span></span></span><br /> <br /> <span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="font-size:11.0pt;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
+color:black">I know you are very familiar with our programs, but just a quick reminder of how Livongo helps members during this time when the healthcare system is completely overwhelmed: </span></span></span></p> 
+  <ol start="1" style="margin-top:0in" type="1"> 
+   <li class="MsoListParagraph" style="color:black;margin-left:0in;mso-list:l0 level1 lfo1"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="font-size:11.0pt;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+     minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+     mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin">Delivery of supplies and connected cuffs, glucometer and scale to your members doorsteps</span></span></span></li> 
+   <li class="MsoListParagraph" style="color:black;margin-left:0in;mso-list:l0 level1 lfo1"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px">Ability to share data electronically with your provider and</span>&nbsp;reduce physical visits to the Doctor</span></span></li> 
+  </ol> 
+  <div class="MsoListParagraph" style="color:black;margin-left:0in;mso-list:l0 level1 lfo1"> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="font-size:11.0pt;mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:
+minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin;
+color:black">Finally, here’s a couple of my most favorite member videos:&nbsp;</span></span></span> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="font-size:11.0pt;color:black"><a href="https://youtu.be/4NKLvr0I4wQ" title="https://youtu.be/4NKLvr0I4wQ">Diabetes Management</a>,&nbsp;&nbsp;</span></span></span> 
+   <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="font-size:11.0pt;
+color:black"><a href="https://youtu.be/CNtRaPIyxIM">Hypertension</a> </span></span></span> 
+  </div> 
+  <p class="MsoNormal"><br /> <span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant-ligatures: normal;font-variant-caps: normal;
+orphans: 2;text-align:start;widows: 2;-webkit-text-stroke-width: 0px;
+text-decoration-style: initial;text-decoration-color: initial;word-spacing:
+0px"><span style="font-size:11.0pt;color:black">Thanks so much for recommending Livongo in you upcoming strategy meetings.&nbsp; Talk to you on the next Amazon call!<br /> <br /> Jane</span></span></span><br /> &nbsp;</p> 
+  <p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><b><span style="font-size: 11pt; color: rgb(0, 122, 253);">JANE LEE CHOE</span></b><span style="font-size: 11pt;"> </span></p> 
+  <p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><b><span style="font-size: 11pt; color: black;">Regional VP, West</span></b><span style="font-size: 11pt;"> </span></p> 
+  <p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><span style="font-size: 11pt; color: black;">Livongo</span><span style="font-size: 11pt;"> </span></p> 
+  <p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><span style="font-size: 10pt; color: rgb(70, 166, 76);">m:<span class="Apple-converted-space">&nbsp;</span></span><span style="font-size: 10pt; color: black;">669.224.5150 &nbsp;</span><span style="font-size: 10pt; color: rgb(70, 166, 76);">e:<span class="Apple-converted-space">&nbsp;</span></span><span style="font-size: 10pt; color: rgb(5, 99, 193);"><a href="mailto:jane.leechoe@livongo.com" style="color: rgb(5, 99, 193); text-decoration: underline;" title="mailto:jane.leechoe@livongo.com">jane.leechoe@livongo.com</a></span><span style="font-size: 11pt;"> </span></p> 
+  <p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><span style="font-size: 10pt; color: rgb(70, 166, 76);">a:<span class="Apple-converted-space">&nbsp;</span></span><span style="font-size: 10pt; color: black;">150 W. Evelyn Ave., Suite 150, Mountain View, CA 94041</span><span style="font-size: 11pt;"> </span></p> 
+  <p class="MsoNormal" style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: Calibri, sans-serif; caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; text-decoration: none;"><span style="font-size: 11pt;"><a href="http://www.livongo.com/" style="color: rgb(5, 99, 193); text-decoration: underline;"><span style="font-size: 10pt;">www.livongo.com</span></a></span></p> 
+  <span style="display: none;">&nbsp;</span>
+ </body>
+</html>

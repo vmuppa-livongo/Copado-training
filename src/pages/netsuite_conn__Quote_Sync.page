@@ -1,0 +1,121 @@
+<apex:page id="quote_sync" controller="netsuite_conn.QuoteSync" tabStyle="Quote" showHeader="false">
+    <style>
+        h1 {
+            color: #205d8b;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            padding: 10px 0 0 0;
+        }
+
+        img.loader {
+            padding-top: 5px;
+            margin: 0em;
+            align: middle;
+        }
+
+        div.background {
+            border-style: none;
+            padding-left: 20px;
+            margin: 40px 20px;
+        }
+    </style>
+
+    <script>
+        var checkSyncStatus = function() {
+            var isSyncComplete = '{!renderSyncComplete}';
+            if (isSyncComplete) {
+                window.location.href = window.location.href;
+            }
+        };
+
+        var confirmClose = function () {
+            return "The sync process will stop if this window is closed.";
+        }
+		var waitAndClosePopUp = function () {
+            setTimeout(function() {
+                window.close();
+            },5000);
+        }
+        setInterval(function() {
+            var errorOccured = document.getElementById('{!$Component.formid.errorOccured}').value;
+            var syncDoneElement = document.getElementById('{!$Component.formid.syncContent.syncDone}');
+            var syncDoneElement0 = document.getElementById('{!$Component.formid.syncContent.syncDone0}');
+            var syncNotDoneElement = document.getElementById('{!$Component.formid.syncContent.syncNotDone}');
+            if (syncDoneElement && syncDoneElement.innerHTML == 'Sync has been completed, you can close this window. It will close automatically in 5 seconds.') {
+                window.onbeforeunload = null;
+                window.clearInterval();
+                if(errorOccured != 'true')
+                    waitAndClosePopUp();
+            }
+            else if (syncDoneElement0 && syncDoneElement0.innerHTML == 'You can close this window now, Contacts will continue syncing in the background. This window will close automatically in 5 seconds.') {
+				window.onbeforeunload = null;
+				window.clearInterval();
+                if(errorOccured != 'true')
+                    waitAndClosePopUp();
+			}
+			else if (syncNotDoneElement && syncNotDoneElement.innerHTML == 'Sync did not complete successfully. Please see the error message for more details.') {
+				window.onbeforeunload = null;
+				window.clearInterval();
+			}
+			else {
+                window.onbeforeunload = confirmClose;
+            }
+        },1000);
+    </script>
+
+    <apex:form id="formid" >
+        <apex:inputHidden value="{!shouldContactSync}" id="shouldContactSync"/>
+        <apex:inputHidden value="{!maxContactLimitExceeded}" id="maxContactLimitExceeded"/>
+        <apex:inputHidden value="{!errorOccured}" id="errorOccured"/>
+        <apex:actionStatus id="status"
+            onStart="document.body.style.cursor = 'wait'; return true;"
+            onStop="document.body.style.cursor = 'default'; return true;">
+        </apex:actionStatus>
+
+        <apex:actionPoller action="{!startQuoteSync}" rerender="syncContent" status="status" interval="5" timeout="60000"/>
+        <apex:PageBlock id="syncContent">
+            <script>
+                if ({!isApexJobNull}) {
+                    alert('Sync could not be initiated, please check settings.');
+                    window.close();
+                }
+                else if({!maxContactLimitExceeded}) {
+					var res = confirm('A maximum of 45 Contacts can be synced in one flow. Do you want to sync 45 Contacts in this flow. The remaining will sync the next time Contact flow is triggered.');
+					document.getElementById('{!$Component.shouldContactSync}').value = res;
+					document.getElementById('{!$Component.maxContactLimitExceeded}').value = false;
+				}
+				var errorOccured1 = {!errorOccured};
+                console.log('errorOccured1 ----'+ errorOccured1);
+                if({!errorOccured}) {
+                    document.getElementById('{!$Component.errorOccured}').value = true;
+                    console.log('errorOccured ----');
+                }
+            </script>
+            <center>
+            <apex:outputLabel value="Sync in progress. Please keep this window open until the sync has been completed. It will close automatically when the sync is complete." rendered="{!AND(!renderSyncComplete, !!renderPageBlockTable)}"/>
+            <apex:outputLabel value="You can close this window now, Contacts will continue syncing in the background. This window will close automatically in 5 seconds." rendered="{!(renderSyncComplete && contactsToSync != null && contactsToSync.size>0 && !errorOccured)}" id="syncDone0"/>
+			<apex:outputLabel value="Sync has been completed, you can close this window. It will close automatically in 5 seconds." rendered="{!(renderSyncComplete && (contactsToSync == null || contactsToSync.size < 1) && !errorOccured)}" id="syncDone"/>
+            <apex:outputLabel value="Sync did not complete successfully. Please see the error message for more details." rendered="{!(renderSyncComplete && errorOccured)}" id="syncNotDone"/>
+            <apex:outputLabel value="Please wait while sync is starting..." rendered="{!!renderPageBlockTable}"/>
+            </center>
+            <hr></hr>
+            <apex:outputText value="Contact Sync initiated for:" rendered="{!AND(OR(AND(!renderSyncComplete, !!renderPageBlockTable), !!renderSyncComplete), AND(contactsToSync != null, contactsToSync.size>0))}"/>
+            <apex:dataList Title="Contact Sync initiated" value="{!contactsToSync}" var="contact" rendered="{!OR(AND(!renderSyncComplete, !!renderPageBlockTable), !!renderSyncComplete)}">
+                <apex:outputText value="{!contact.Name}"/>
+            </apex:dataList>
+            <apex:PageBlockTable title="Sync Status" value="{!syncDSList}" var="syncDS" rendered="{!renderPageBlockTable}">
+                <apex:column value="{!syncDS.recordType}" headerValue="Record Type"/>
+                <apex:column value="{!syncDS.recordName}" headerValue="Record Name"/>
+                <apex:column value="{!syncDS.jobStatus}" headerValue="Sync Status"/>
+                <apex:column headerValue="Messages" >
+                      <apex:outputLabel value="{!syncDS.syncError}" rendered="{!syncDS.syncError != null}">
+                        <apex:outputLabel value="<br><br>For more information please visit our online " escape="false" />
+                        <apex:outputLink value="https://celigosuccess.zendesk.com/hc/en-us/categories/203964847" target="_blank">Help.</apex:outputLink>
+                      </apex:outputLabel>
+                </apex:column>
+            </apex:PageBlockTable>
+        </apex:PageBlock>
+    </apex:form>
+
+</apex:page>

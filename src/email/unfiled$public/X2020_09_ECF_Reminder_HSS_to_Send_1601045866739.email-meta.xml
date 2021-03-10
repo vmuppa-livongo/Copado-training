@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>NOT FOR PUBLIC USE!!!  Specifically to be sent by HSS</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>2020_09_ECF Reminder_HSS to Send</name>
+    <style>none</style>
+    <subject>Get Ready for the Livongo Executive Client Forum</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

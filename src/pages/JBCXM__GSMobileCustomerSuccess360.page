@@ -1,0 +1,204 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" title="360 View" tabStyle="CustomerSuccess360__tab" controller="JBCXM.Customer360Broker" standardStylesheets="false" extensions="JBCXM.NSRemoting,JBCXM.GSCommonBroker">	
+    <meta name="viewport" content="width=device-width, user-scalable=no" />	
+    <style>
+    	 .bldCls{
+            font-weight:bold;
+            color: #2a6496 !important;
+        }
+        #mainContainer {            
+            z-index: 2 !important;
+        }
+        .paddingTop{
+            padding-top: 20px;
+        }
+        .paddingBottom{
+            padding-bottom: 20px;
+        }
+        .panel {
+            margin-bottom: 5px !important;
+        }
+        .ctaDetails{
+            margin-top: -86px !important;
+        }
+        .ctaDetailsTimeline{
+            margin-top: -106px !important;
+        }
+        .searchResult {
+            overflow : auto;
+        }
+        .bldCls {
+            display : none;
+        }
+        .leftPanelUI {
+            height : auto;
+            list-style: none;
+            display : flex;
+            flex-wrap: wrap;
+            padding: 0px 11px;
+        }
+        .leftPanelUI li {
+            width: 100%;
+            display: flex;
+            font-size : 16px !important;
+            padding : 0px;
+        }
+        .leftPanelUI li:nth-child(even) {
+            background-color:#F7F7F7;
+        }
+        .leftPanelUI li:nth-child(odd) {
+            background-color:#ededed;   
+        }
+        .leftPanelUI li span, .leftPanelUI li a {
+            width : 50%;
+            margin-left : 3px;
+            border-right : 1px solid #ddd;
+            overflow: hidden;
+        }
+        .mCS360-ctn { opacity: 0; transform : translate3d(-100px, 0px, 0px); transition : 0.5s all; }
+        .mCS360-ctn-loaded { opacity: 1; transform : translate3d(0px, 0px, 0px); }
+        #casesDivId {margin-bottom: 44px;}
+        .gs_section:first-child {
+            padding-top : 0px !important;
+        }
+        .gs_section, .gs_section * {
+            -webkit-overflow-scrolling: touch;
+        }
+        .leftPanelUI li span, .leftPanelUI li a { 
+          word-wrap: break-word;
+          color : black;
+        }
+        .leftPanelUI .gs-sum-value, .leftPanelUI .gs-sum-value a {color : #33a6e5 !important; font-weight : normal !important;}
+        .leftPanelUI .gs-sum-value a { border-right : none; }
+        .leftPanelUI .gs-label-name {font-weight: bold; display:flex; align-items : center;}
+        .trend_data_viz {pointer-events : none;}
+        body, html {
+            overflow-y : scroll;
+        }
+    </style>
+    
+    <script type="text/javascript">    	
+        var fromPA = "{!JSENCODE($CurrentPage.parameters.fromPA)}";
+        var GS = GS || {};
+        var d = new Date();
+        	GS.isMobile = true;
+        	GS.milestoneDefaultImg = "{!URLFOR($Resource.GSMobileApp, 'bootstrapbdl/img/milestoneIcon.png')}";
+        	
+            GS.commonRemotingEndPoint   = '{!$RemoteAction.GSCommonBroker.gsCommonRequestBroker}';
+            GS.remotingEndPoint     = '{!$RemoteAction.Customer360Broker.customer360RequestBroker}';
+            GS.remotingBulkEndPoint     = '{!$RemoteAction.Customer360Broker.customer360BulkRequestBroker}';
+            
+            GS.packageNS            = "{!(pkgNS)}";
+    		GS.isPackagedInstance   = (GS.packageNS) ? "true" : "false";
+            
+            GS.customerName         = "{!(customerName)}";
+            GS.customerStatus       = "{!(customerStatus)}";
+            GS.custStatusSysName    = "{!(custStatusSysName)}";
+            GS.sessionId =  "{!(NSSessionId)}";
+            GS.remoting = "{!$RemoteAction.NSRemoting.apinsinvoke}";            
+		    GS.userConfig = {
+		        userName    : "{!$User.FirstName}"+" "+"{!$User.LastName}",
+		        userId      : "{!$User.Id}",
+		        userEmail	: "{!$User.Email}"    
+		    };
+		    
+		    GS.isCustomerExists = "{!(isCustomerExists)}";
+		    GS.accountId  = "{!(accountId)}";		    
+		    GS.customerId = "{!(customerId)}";
+		    GS.isAccountExists = "{!(isAccountExists)}";
+		    
+		    GS.isFromWidgets		= false;
+		    GS.newStackAccountid = '';
+            GS.isChatterEnabled = {!(feedEnabled)};
+		    GS.dataConfig = {
+               date: d.getFullYear() + '-' + (d.getMonth()>8 ? "":"0") + (d.getMonth() + 1) + "-" + (d.getDate() > 9 ? "":"0") + (d.getDate()),
+               interval:"days",
+               units:"7" // last 7 days
+           }
+
+            var currencyConfigObject = GS.currencyConfig;
+            
+            GS.isCS360 = true;
+            GS.npsDetailsData = null;
+    </script>
+    
+    <div id="main" style="display:none">
+		<header id="mainHeader">
+	        <div class="row">          
+	            <div class="col-xs-12 headerRow2" style="padding:9px;">
+	                <div class="col-xs-1"><div id="backBtnDrillin" class="icon-utility-back" style="display:none;margin-top:3px;margin-left:7px;font-size:1.8em;" ></div></div>
+	                <div class="col-xs-10">
+	                    <div class="input-group" id="searchDivId">
+	                        <span class="input-group-addon"><div class="icon-utility-search"></div></span>
+	                        <input type="text" class="form-control searchInput" placeholder="Search for a Customer" />
+	                        <span class="input-group-addon"><a href="#" id="closeCustomer"><div class="icon-utility-close" style="display: none;'"></div></a></span>
+	                    </div>
+	                </div>
+	                <div class="col-xs-1"></div>            
+	            </div>              
+	        </div>
+	        
+	        <section id="navigation">
+	            <div>
+	                <div id='btnCustomer' class="col-xs-6">Customer360</div>
+	                <div id='btnCockpit' class="col-xs-6">
+	                    <div class="cockpitButtonCaption">Cockpit</div>
+	                    <div class="showNumbers BackRed" style="display:none;"></div>
+	                </div>           
+	            </div>
+	        </section>           
+	    </header>
+		
+		<div id="mainContainer">	
+			<div class="customer-detail">
+				<div class="searchResult">
+					<a href="javascript:void(0);" id="summaryLnk" class="bldCls">Back</a>
+					<a href="javascript:void(0);" id="timelineLnk" style="float: right">Timeline<span id="timelineIconId" style="line-height: 1em !important;" class="icon-utility-right summaryIcon"></span></a>
+				</div>
+			    
+			    <div class="customer360-view"> 
+			    </div>
+			    <div class="timeline-view">
+                </div>
+			</div>
+			
+			<div id="cockpit">
+	        </div>
+		</div>
+	</div>
+    
+   
+    
+    <apex:outputpanel rendered="{!If($CurrentPage.parameters.env == null , true, false)}">
+        <c:AlertForm />
+        <script>
+            installResources({scripts: ["mobileC360/scripts/mobileC360.bundle.js"], styles:["mobileC360/styles/mobileC360.css"]});
+        </script>
+    </apex:outputpanel>
+
+    <apex:outputpanel rendered="{!If($CurrentPage.parameters.env == "dev" , true, false)}">
+        <apex:stylesheet value="{!IF($CurrentPage.parameters.apppath!=null,$CurrentPage.parameters.apppath,'https://localhost:9091/UI')}/mobileC360/styles/mobileC360.css" />
+        <script type="text/javascript" src="{!IF($CurrentPage.parameters.apppath!=null,$CurrentPage.parameters.apppath, "https://localhost:9091/UI")}/mobileC360/scripts/mobileC360.bundle.js"></script>
+    </apex:outputpanel>
+     <script>
+        var GSGA = {
+            orgId: "{!$Organization.Id}",
+            orgName: "{!$Organization.Name}",
+            userName: "{!$User.FirstName}"+" "+"{!$User.LastName}"
+        };
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    
+    </script>
+    <script src="{!JSENCODE(URLFOR($Resource.CustomJS,'CustomJS/analyticsWrapper.js'))}"></script>
+    <script>
+        gainsightTrackEvents.pushPageViews('GSMobileCustomerSuccess360');
+    </script>
+    <script> 
+		(function(){try{var a=navigator.userAgent; 
+        if((a.indexOf('Salesforce')!=-1)&&(a.indexOf('iPhone')!=-1||a.indexOf('iPad')!=-1)&&(a.indexOf('OS/8')!=-1||a.indexOf('OS 8')!=-1 || a.indexOf('OS/9')!=-1||a.indexOf('OS 9')!=-1||a.indexOf('OS/10')!=-1||a.indexOf('OS 10')!=-1)&&(a.indexOf('Safari')==-1)){ 
+		var s=document.createElement('style'); 
+		s.innerHTML="html,html body{overflow: auto;-webkit-overflow-scrolling:touch;}body{position:absolute;left:0;right:0;top:0;bottom:0;}"; 
+		document.getElementsByTagName('head')[0].appendChild(s);}}catch(e){}})(); 
+  </script>
+</apex:page>

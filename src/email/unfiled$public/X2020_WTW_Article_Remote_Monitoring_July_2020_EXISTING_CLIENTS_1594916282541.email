@@ -1,0 +1,14 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  <span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;">Hi&nbsp;{{{Recipient.FirstName}}},</span></span> 
+  <p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;">&nbsp;</p> 
+  <span style="font-size:14px;"><font face="Arial, Helvetica, sans-serif">As COVID-19 and its impact continue to be top of mind, a quick note to share this </font> <a href="https://econofact.org/the-paradox-of-medical-costs-during-the-pandemic"><font face="Arial, Helvetica, sans-serif">recent article</font></a> <font face="Arial, Helvetica, sans-serif"> that I thought you would find interesting, co-authored by Willis Towers Watson Managing Director Jeff Levin-Scherz. In it, he shares his perspective on the current and projected impact of the global pandemic on health and healthcare costs.</font></span> 
+  <br /> 
+  <br /> 
+  <span style="font-size:14px;"><font face="Arial, Helvetica, sans-serif">In short, demand for non-emergency&nbsp;medical services has fallen dramatically during the pandemic, and failure to treat hypertension or diabetes as a result for this forgone care will lead to worse clinical outcomes and higher costs in some instances. In addition, healthcare expenditures could increase following COVID-19, such as long-term complications for COVID-19 survivors and higher rates of mental illness in the general population.The U.S. Census Department recently reported that one in three Americans is suffering from depression or anxiety now, a dramatic increase since they last asked this question in 2014.&nbsp;</font><br /> <br /> <font face="Arial, Helvetica, sans-serif">Fortunately our partnership supports your employees living with chronic conditions - who are at greater risk of serious illness from COVID-19 - with remote monitoring tools that keep them on-track with their health from the relative safety of home.<br /> <br /> And we know it works - our programs have yielded a claims-validated ROI for more than 100 clients.&nbsp;<br /> <br /> Despite the impact of COVID-19 that Dr. Levin-Scherz and other industry experts anticipate, Livongo is well-positioned to help you protect the health of the people you serve, as well as the long-term health of your business.</font><br /> <br /> <font face="Arial, Helvetica, sans-serif">Stay Safe and Healthy,</font><br /> <font face="Arial, Helvetica, sans-serif">{{{Sender.FirstName}}}</font><br /> <br /> <font face="Arial, Helvetica, sans-serif">{{{Sender.Signature}}}</font></span> 
+  <br /> &nbsp;
+ </body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>General_Sales_No_Logo</letterhead>
+    <name>181206 Signum Speaker Invitation</name>
+    <style>freeForm</style>
+    <subject>Speak at Signum</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+We hope you will join us for our inaugural Signum event where we will gather renowned speakers and industry leaders to discuss the latest research and technologies that will herald a new age in health.
+
+
+
+We value your perspective and invite you to join the conversation as a panelist during our afternoon session. You are among a select group of individuals invited to share your point of view. Are you available and interested in participating?
+
+
+
+This one-day, invitation-only event will bring together 300 leading CEOs and thought leaders from healthcare into an interdisciplinary conversation with renowned behavioral economists, data scientists and people with chronic conditions to discuss new approaches to address the health crisis in our country.  Here are the event details:
+
+
+
+The Village
+
+969 Market St, San Francisco, CA
+
+February 28, 2019 from 10 a.m. - 6:30 p.m.
+
+Full agenda at livongo.com/signum
+
+
+
+Additional details about the panel topic, fellow panelists, and the specific time will be provided once we confirm your availability and interest. Travel and hotel accommodations will be provided by Livongo.
+
+
+
+Please let me know if you are interested in participating.
+
+
+
+I hope to see you in San Francisco!
+
+
+
+Thanks,
+
+
+[INSERT NAME]</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

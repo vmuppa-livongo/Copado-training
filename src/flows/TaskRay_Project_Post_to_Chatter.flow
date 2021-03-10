@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Chatter_UAT_Complete</name>
+        <label>Chatter - UAT Complete</label>
+        <locationX>849</locationX>
+        <locationY>543</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>@[{!Get_IT_Client_Setup.OwnerId}] UAT is complete.</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Get_Project.Id</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>IT_Client_Setup_Chatter</name>
+        <label>IT Client Setup Chatter CIM</label>
+        <locationX>1163</locationX>
+        <locationY>77</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>@[{!Get_Project.OwnerId}] The IT Client Setup Task is complete and is ready for UAT.  If UAT does not pass and changes are needed: {!LineBreak}{!LineBreak}  1. Document changes in IT Client Setup task description {!LineBreak}{!LineBreak}  2. Reset IT Client Setup task to &quot;Not Started&quot; so TechOps can review. {!LineBreak}{!LineBreak}  3. Update Estimated End date to reflect a new, realistic date for work to be completed</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>Get_Project.Id</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <constants>
+        <name>LineBreak</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Found_IT_Client_Setup</name>
+        <label>Found IT Client Setup</label>
+        <locationX>835</locationX>
+        <locationY>428</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Found_Task</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_IT_Client_Setup</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Chatter_UAT_Complete</targetReference>
+            </connector>
+            <label>Found Task</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Process_Builder_Nodes</name>
+        <label>Process Builder Nodes</label>
+        <locationX>833</locationX>
+        <locationY>80</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IT_Client_Set_Up_Complete</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_TaskRay_Task.TASKRAY__trTemplateSource__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>IT Client Setup</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_TaskRay_Task.TASKRAY__List__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Complete</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>IT_Client_Setup_Chatter</targetReference>
+            </connector>
+            <label>IT Client Set Up - Complete</label>
+        </rules>
+        <rules>
+            <name>UAT_Complete</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_TaskRay_Task.TASKRAY__trTemplateSource__r.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>UAT</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_TaskRay_Task.TASKRAY__List__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Complete</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_IT_Client_Setup</targetReference>
+            </connector>
+            <label>UAT - Complete</label>
+        </rules>
+    </decisions>
+    <description>Triggered by TaskRay Task Management Process Builder</description>
+    <interviewLabel>TaskRay Project - Post to Chatter {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>TaskRay Project - Post to Chatter</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_IT_Client_Setup</name>
+        <label>Get IT Client Setup</label>
+        <locationX>843</locationX>
+        <locationY>280</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found_IT_Client_Setup</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>IT Client Setup</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>TASKRAY__Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Project.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>TASKRAY__Project_Task__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Project</name>
+        <label>Get Project</label>
+        <locationX>655</locationX>
+        <locationY>76</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Process_Builder_Nodes</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_TaskRay_Task.TASKRAY__Project__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>TASKRAY__Project__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_TaskRay_Task</name>
+        <label>Get  TaskRay Task</label>
+        <locationX>463</locationX>
+        <locationY>73</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Project</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>TASKRAY__Project_Task__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_TaskRay_Task</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>
