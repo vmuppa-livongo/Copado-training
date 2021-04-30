@@ -4212,6 +4212,15 @@ TASKRAY__trOnboardingEndDate__c - TASKRAY__trOnboardingStartDate__c)</formula>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>copado_test_checkbox__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>copado test checkbox</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>dba__c</fullName>
         <caseSensitive>false</caseSensitive>
         <description>Doing business as</description>
@@ -4743,6 +4752,24 @@ IMAGE(&quot;https://livongohealth2ndorg--c.na63.content.force.com/sfc/servlet.sh
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>test_check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>test check</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>test_with_vijay__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>test with vijay</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>zaapit__Hierarchy_Level__c</fullName>
