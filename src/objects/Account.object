@@ -4754,6 +4754,15 @@ IMAGE(&quot;https://livongohealth2ndorg--c.na63.content.force.com/sfc/servlet.sh
         <type>Currency</type>
     </fields>
     <fields>
+        <fullName>test_check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>test check</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>zaapit__Hierarchy_Level__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
