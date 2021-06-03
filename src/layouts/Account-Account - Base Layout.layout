@@ -27,6 +27,10 @@
                 <behavior>Edit</behavior>
                 <field>Reference_Client__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>testing__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
