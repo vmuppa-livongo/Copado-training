@@ -1578,6 +1578,15 @@ IF( Total_Closed_Lost_Opps__c &gt;=1, &quot;Discussions Currently Stalled&quot;,
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
+        <fullName>Copado_test__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Copado test</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Cost_of_diabetes_testing_supplies__c</fullName>
         <description>Cost of diabetes testing supplies for the Account - will map to the Opportunity field</description>
         <externalId>false</externalId>
@@ -4752,6 +4761,15 @@ IMAGE(&quot;https://livongohealth2ndorg--c.na63.content.force.com/sfc/servlet.sh
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>testing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>testing</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>zaapit__Hierarchy_Level__c</fullName>
